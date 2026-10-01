@@ -1,0 +1,30 @@
+# Copy to paradigms/<family>/<ID>.yaml. Remove any field you cannot fill with verified information.
+# 复制到 paradigms/<范式族>/<ID>.yaml。无法核实的字段请删除，不要猜测。
+schema_version: "0.1"
+id: XXX-NAME-001
+name: {en: "", zh: ""}
+aliases: []
+family: perception
+bci_category: [reactive]          # active | reactive | passive | none
+recording_modality: [EEG]
+stimulus_modality: [visual]
+markers: [MK.example]             # must exist in knowledge/markers/
+description: {en: "", zh: ""}
+trial_structure:
+  phases:
+    - {name: fixation, duration_ms: 500}
+  typical_trials: 0
+  conditions: []
+first_source:
+  citation: ""
+  doi: ""
+  year: 2000
+  verified: false
+variants: []
+datasets: []
+interop:
+  bids_task: ""
+  hed_tags: []
+notes: ""
+status: draft
+contributors: []

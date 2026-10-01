@@ -1,0 +1,41 @@
+schema_version: "0.1"
+id: MOT-MI-001
+name: {en: Cued motor imagery, zh: 提示性运动想象}
+aliases: [motor imagery, MI, kinesthetic motor imagery]
+family: motor
+bci_category: [active]
+recording_modality: [EEG, MEG, ECoG, fNIRS, fMRI]
+stimulus_modality: [mental_imagery, visual]
+markers: [MK.SMR_ERD]
+description:
+  en: >-
+    On each trial a visual cue instructs the participant to imagine a specific movement (e.g. left hand, right hand,
+    feet, tongue) without executing it. Class-specific, lateralised ERD of sensorimotor rhythms is used as the control
+    signal in active BCIs.
+  zh: >-
+    每个试次由视觉提示指示被试想象特定动作（如左手、右手、双脚、舌头），但不实际执行。不同类别的想象引起具有偏侧性的
+    感觉运动节律 ERD，用作主动式脑机接口的控制信号。
+trial_structure:
+  phases:
+    - {name: fixation, duration_ms: 2000}
+    - {name: cue, duration_ms: 1250}
+    - {name: imagery, duration_ms: 4000}
+    - {name: rest, duration_ms: "1500-2500"}
+  typical_trials: "40-100 per class"
+  conditions: [left hand, right hand, feet, tongue]
+first_source:
+  citation: "Pfurtscheller G, Neuper C. Motor imagery activates primary sensorimotor area in humans. Neurosci Lett. 1997;239(2-3):65-68."
+  doi: "10.1016/S0304-3940(97)00889-6"
+  year: 1997
+  verified: false
+datasets:
+  - name: BCI Competition IV, dataset 2a
+    url: https://www.bbci.de/competition/iv/
+    subjects: 9
+interop:
+  bids_task: motorimagery
+notes: >-
+  Origin attribution under review; earlier work by the same group and others on imagery-related EEG changes should be
+  assessed. Trial timing above reflects a common cue-based design and varies across studies.
+status: draft
+contributors: [savorcode01]

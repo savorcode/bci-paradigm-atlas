@@ -1,0 +1,33 @@
+schema_version: "0.1"
+id: MK.P3b
+name: {en: P3b (P300), zh: P3b（P300）}
+aliases: [P300, P3]
+type: erp_component
+recording_modality: [EEG, MEG]
+signature:
+  latency_ms: "300-600"
+  polarity: positive
+  topography: centro-parietal maximum
+description:
+  en: Late positive ERP component elicited by rare, task-relevant stimuli. Amplitude increases as target probability decreases; latency is associated with stimulus evaluation time.
+  zh: 由低频、与任务相关的刺激诱发的晚期正成分。靶刺激概率越低，波幅越大；潜伏期与刺激评估时间相关。
+generators:
+  - region: BR.temporoparietal_junction
+    evidence: B
+    sources:
+      - &polich2007
+        citation: "Polich J. Updating P300: an integrative theory of P3a and P3b. Clin Neurophysiol. 2007;118(10):2128-2148."
+        doi: "10.1016/j.clinph.2007.04.019"
+        year: 2007
+        verified: false
+indexes:
+  - construct: CN.context_updating
+    relation: amplitude increases with the need to update the stimulus context
+    evidence: B
+    sources: [*polich2007]
+  - construct: CN.attention_allocation
+    relation: amplitude decreases when attentional resources are diverted to a concurrent task
+    evidence: B
+    sources: [*polich2007]
+status: draft
+contributors: [savorcode01]

@@ -1,0 +1,7 @@
+# Evidence grades / 证据等级. See docs/methodology.md §5.
+version: 0.1
+terms:
+  - {id: A, en: Meta-analysis, systematic review, or replication across labs and modalities, zh: 元分析、系统综述或跨实验室与模态重复}
+  - {id: B, en: Multiple independent studies, zh: 多项独立研究}
+  - {id: C, en: Single study or indirect evidence, zh: 单项研究或间接证据}
+  - {id: D, en: Proposed or theoretical, zh: 理论推测}

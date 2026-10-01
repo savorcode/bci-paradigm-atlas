@@ -1,0 +1,160 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://github.com/savorcode/bci-paradigm-atlas/schema/marker.schema.json",
+  "title": "Neural marker",
+  "description": "A neural marker with its generators and the constructs it indexes. Schema v0.1 (draft).",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schema_version",
+    "id",
+    "name",
+    "type",
+    "recording_modality",
+    "description",
+    "status"
+  ],
+  "properties": {
+    "schema_version": {
+      "const": "0.1"
+    },
+    "id": {
+      "type": "string",
+      "pattern": "^MK\\.[A-Za-z0-9_]+$"
+    },
+    "name": {
+      "$ref": "common.schema.json#/$defs/bilingual"
+    },
+    "aliases": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "uniqueItems": true
+    },
+    "type": {
+      "type": "string"
+    },
+    "recording_modality": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "minItems": 1,
+      "uniqueItems": true
+    },
+    "signature": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "latency_ms": {
+          "type": "string"
+        },
+        "frequency_hz": {
+          "type": "string"
+        },
+        "polarity": {
+          "type": "string"
+        },
+        "topography": {
+          "type": "string"
+        }
+      }
+    },
+    "description": {
+      "$ref": "common.schema.json#/$defs/bilingual"
+    },
+    "generators": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "region",
+          "evidence",
+          "sources"
+        ],
+        "additionalProperties": false,
+        "properties": {
+          "region": {
+            "type": "string",
+            "pattern": "^BR\\.[A-Za-z0-9_]+$"
+          },
+          "evidence": {
+            "enum": [
+              "A",
+              "B",
+              "C",
+              "D"
+            ]
+          },
+          "relation": {
+            "type": "string",
+            "description": "e.g. amplitude increases with, latency increases with, power decreases with"
+          },
+          "sources": {
+            "type": "array",
+            "items": {
+              "$ref": "common.schema.json#/$defs/source"
+            },
+            "minItems": 1
+          },
+          "note": {
+            "type": "string"
+          }
+        }
+      }
+    },
+    "indexes": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "construct",
+          "evidence",
+          "sources"
+        ],
+        "additionalProperties": false,
+        "properties": {
+          "construct": {
+            "type": "string",
+            "pattern": "^CN\\.[A-Za-z0-9_]+$"
+          },
+          "evidence": {
+            "enum": [
+              "A",
+              "B",
+              "C",
+              "D"
+            ]
+          },
+          "relation": {
+            "type": "string",
+            "description": "e.g. amplitude increases with, latency increases with, power decreases with"
+          },
+          "sources": {
+            "type": "array",
+            "items": {
+              "$ref": "common.schema.json#/$defs/source"
+            },
+            "minItems": 1
+          },
+          "note": {
+            "type": "string"
+          }
+        }
+      }
+    },
+    "notes": {
+      "type": "string"
+    },
+    "status": {
+      "$ref": "common.schema.json#/$defs/status"
+    },
+    "contributors": {
+      "$ref": "common.schema.json#/$defs/contributors"
+    },
+    "reviewed_by": {
+      "$ref": "common.schema.json#/$defs/contributors"
+    }
+  }
+}

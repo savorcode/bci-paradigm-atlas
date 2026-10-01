@@ -1,0 +1,16 @@
+# Stimulus / task modality / 刺激与任务模态 (draft)
+version: 0.1
+terms:
+  - {id: visual, en: Visual, zh: 视觉}
+  - {id: auditory, en: Auditory, zh: 听觉}
+  - {id: somatosensory, en: Somatosensory / tactile, zh: 体感 / 触觉}
+  - {id: olfactory, en: Olfactory, zh: 嗅觉}
+  - {id: gustatory, en: Gustatory, zh: 味觉}
+  - {id: electrical_stimulation, en: Electrical stimulation, zh: 电刺激}
+  - {id: magnetic_stimulation, en: Magnetic stimulation, zh: 磁刺激}
+  - {id: ultrasound_stimulation, en: Ultrasound stimulation, zh: 超声刺激}
+  - {id: motor_execution, en: Motor execution, zh: 运动执行}
+  - {id: mental_imagery, en: Mental imagery (motor, visual, auditory, speech), zh: 心理想象（运动、视觉、听觉、言语）}
+  - {id: cognitive_task, en: Cognitive task without external stimulus, zh: 无外部刺激的认知任务}
+  - {id: resting_state, en: Resting state, zh: 静息态}
+  - {id: naturalistic, en: Naturalistic (film, narrative, game), zh: 自然场景（影片、叙事、游戏）}

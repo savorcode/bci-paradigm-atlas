@@ -1,0 +1,207 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://github.com/savorcode/bci-paradigm-atlas/schema/paradigm.schema.json",
+  "title": "BCI paradigm",
+  "description": "One experimental paradigm. Schema v0.1 (draft). See docs/methodology.md.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schema_version",
+    "id",
+    "name",
+    "family",
+    "bci_category",
+    "recording_modality",
+    "stimulus_modality",
+    "markers",
+    "description",
+    "first_source",
+    "status"
+  ],
+  "properties": {
+    "schema_version": {
+      "const": "0.1"
+    },
+    "id": {
+      "type": "string",
+      "pattern": "^[A-Z]{3}-[A-Z0-9]{2,8}-[0-9]{3}$"
+    },
+    "name": {
+      "$ref": "common.schema.json#/$defs/bilingual"
+    },
+    "aliases": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "uniqueItems": true
+    },
+    "family": {
+      "type": "string"
+    },
+    "bci_category": {
+      "type": "array",
+      "items": {
+        "enum": [
+          "active",
+          "reactive",
+          "passive",
+          "none"
+        ]
+      },
+      "minItems": 1,
+      "uniqueItems": true
+    },
+    "recording_modality": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "minItems": 1,
+      "uniqueItems": true
+    },
+    "stimulus_modality": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "minItems": 1,
+      "uniqueItems": true
+    },
+    "markers": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "pattern": "^MK\\.[A-Za-z0-9_]+$"
+      },
+      "minItems": 1,
+      "uniqueItems": true,
+      "description": "Neural markers elicited, ids from knowledge/markers/"
+    },
+    "description": {
+      "$ref": "common.schema.json#/$defs/bilingual"
+    },
+    "trial_structure": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "phases": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "required": [
+              "name"
+            ],
+            "additionalProperties": false,
+            "properties": {
+              "name": {
+                "type": "string"
+              },
+              "duration_ms": {
+                "type": [
+                  "number",
+                  "string"
+                ]
+              },
+              "note": {
+                "type": "string"
+              }
+            }
+          }
+        },
+        "typical_trials": {
+          "type": [
+            "integer",
+            "string"
+          ]
+        },
+        "conditions": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        }
+      }
+    },
+    "first_source": {
+      "$ref": "common.schema.json#/$defs/source"
+    },
+    "variants": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "name",
+          "source"
+        ],
+        "additionalProperties": false,
+        "properties": {
+          "name": {
+            "type": "string"
+          },
+          "source": {
+            "$ref": "common.schema.json#/$defs/source"
+          },
+          "note": {
+            "type": "string"
+          }
+        }
+      }
+    },
+    "datasets": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "name"
+        ],
+        "additionalProperties": false,
+        "properties": {
+          "name": {
+            "type": "string"
+          },
+          "url": {
+            "type": "string"
+          },
+          "identifier": {
+            "type": "string"
+          },
+          "subjects": {
+            "type": "integer",
+            "minimum": 0
+          }
+        }
+      }
+    },
+    "interop": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "bids_task": {
+          "type": "string"
+        },
+        "hed_tags": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "cognitive_atlas_task": {
+          "type": "string"
+        }
+      }
+    },
+    "notes": {
+      "type": "string"
+    },
+    "status": {
+      "$ref": "common.schema.json#/$defs/status"
+    },
+    "contributors": {
+      "$ref": "common.schema.json#/$defs/contributors"
+    },
+    "reviewed_by": {
+      "$ref": "common.schema.json#/$defs/contributors"
+    }
+  }
+}

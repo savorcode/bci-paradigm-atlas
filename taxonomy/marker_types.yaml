@@ -1,0 +1,10 @@
+# Neural marker types / 神经标记物类型 (draft)
+version: 0.1
+terms:
+  - {id: erp_component, en: Event-related potential / field component, zh: 事件相关电位 / 磁场成分}
+  - {id: oscillatory, en: Oscillatory modulation (ERD/ERS, power, phase), zh: 节律调制（ERD/ERS、功率、相位）}
+  - {id: steady_state, en: Steady-state evoked response, zh: 稳态诱发响应}
+  - {id: hemodynamic, en: Hemodynamic response (BOLD, HbO/HbR), zh: 血流动力学响应（BOLD、HbO/HbR）}
+  - {id: single_unit, en: Single-unit or multi-unit activity, zh: 单 / 多神经元放电}
+  - {id: field_potential, en: Local field potential or high-gamma activity, zh: 局部场电位或高 gamma 活动}
+  - {id: connectivity, en: Functional connectivity pattern, zh: 功能连接模式}

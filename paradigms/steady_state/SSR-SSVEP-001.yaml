@@ -1,0 +1,40 @@
+schema_version: "0.1"
+id: SSR-SSVEP-001
+name: {en: Steady-state visual evoked potential paradigm, zh: 稳态视觉诱发电位范式}
+aliases: [SSVEP, frequency-tagged visual stimulation]
+family: steady_state
+bci_category: [reactive]
+recording_modality: [EEG, MEG]
+stimulus_modality: [visual]
+markers: [MK.SSVEP]
+description:
+  en: >-
+    Visual stimuli flicker or reverse at distinct frequencies. The attended stimulus is identified from the frequency
+    content of occipital responses, which makes the paradigm one of the fastest non-invasive BCI control schemes.
+  zh: >-
+    多个视觉刺激以不同频率闪烁或翻转，根据枕区响应的频率成分识别被注视的刺激，是速度最快的无创脑机接口控制方式之一。
+trial_structure:
+  phases:
+    - {name: cue, duration_ms: 500}
+    - {name: flicker, duration_ms: "1000-5000"}
+    - {name: rest, duration_ms: 500}
+  conditions: [one target per stimulation frequency]
+first_source:
+  citation: "Regan D. Some characteristics of average steady-state and transient responses evoked by modulated light. Electroencephalogr Clin Neurophysiol. 1966;20(3):238-248."
+  doi: "10.1016/0013-4694(66)90088-5"
+  year: 1966
+  verified: false
+variants:
+  - name: SSVEP-based BCI
+    source:
+      citation: "Middendorf M, McMillan G, Calhoun G, Jones KS. Brain-computer interfaces based on the steady-state visual-evoked response. IEEE Trans Rehabil Eng. 2000;8(2):211-214."
+      doi: "10.1109/86.847819"
+      year: 2000
+      verified: false
+interop:
+  bids_task: ssvep
+notes: >-
+  Origin attribution under review. Earlier BCI implementations based on visual evoked responses should be assessed
+  as candidate first sources for the BCI variant.
+status: draft
+contributors: [savorcode01]

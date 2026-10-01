@@ -1,0 +1,32 @@
+schema_version: "0.1"
+id: MK.P3a
+name: {en: P3a, zh: P3a}
+aliases: [novelty P3]
+type: erp_component
+recording_modality: [EEG, MEG]
+signature:
+  latency_ms: "250-350"
+  polarity: positive
+  topography: fronto-central maximum
+description:
+  en: Positive ERP component with a more anterior distribution and shorter latency than P3b, elicited by rare distractor or novel stimuli, including when they are not task-relevant.
+  zh: 较 P3b 分布更靠前、潜伏期更短的正成分，由低频干扰刺激或新异刺激诱发，即使刺激与任务无关亦可出现。
+generators:
+  - region: BR.frontal_cortex
+    evidence: B
+    sources:
+      - citation: "Polich J. Updating P300: an integrative theory of P3a and P3b. Clin Neurophysiol. 2007;118(10):2128-2148."
+        doi: "10.1016/j.clinph.2007.04.019"
+        year: 2007
+        verified: false
+indexes:
+  - construct: CN.novelty_orienting
+    relation: elicited by unexpected or novel stimuli
+    evidence: B
+    sources:
+      - citation: "Polich J. Updating P300: an integrative theory of P3a and P3b. Clin Neurophysiol. 2007;118(10):2128-2148."
+        doi: "10.1016/j.clinph.2007.04.019"
+        year: 2007
+        verified: false
+status: draft
+contributors: [savorcode01]

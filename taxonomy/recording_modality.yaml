@@ -1,0 +1,13 @@
+# Recording modality / 记录模态 (draft)
+version: 0.1
+terms:
+  - {id: EEG, en: Electroencephalography, zh: 脑电图}
+  - {id: MEG, en: Magnetoencephalography, zh: 脑磁图}
+  - {id: fNIRS, en: Functional near-infrared spectroscopy, zh: 功能近红外光谱}
+  - {id: fMRI, en: Functional magnetic resonance imaging, zh: 功能磁共振成像}
+  - {id: ECoG, en: Electrocorticography, zh: 皮层脑电}
+  - {id: sEEG, en: Stereo-electroencephalography, zh: 立体定向脑电}
+  - {id: intracortical, en: Intracortical microelectrode recording, zh: 皮层内微电极记录}
+  - {id: fUS, en: Functional ultrasound, zh: 功能超声}
+  - {id: PET, en: Positron emission tomography, zh: 正电子发射断层成像}
+  - {id: other, en: Other, zh: 其他}

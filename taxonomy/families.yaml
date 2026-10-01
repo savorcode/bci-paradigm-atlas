@@ -1,0 +1,16 @@
+# Paradigm families / 范式族 (draft)
+# Directory names under paradigms/ use these ids. paradigms/ 下的目录名使用这些 id。
+version: 0.1
+terms:
+  - {id: perception, prefix: PER, en: Perception and attention, zh: 感知与注意}
+  - {id: motor, prefix: MOT, en: Motor execution and imagery, zh: 运动执行与想象}
+  - {id: steady_state, prefix: SSR, en: Steady-state responses, zh: 稳态响应}
+  - {id: error, prefix: ERR, en: Error monitoring and feedback, zh: 错误监测与反馈}
+  - {id: language, prefix: LAN, en: Language, zh: 语言}
+  - {id: memory, prefix: MEM, en: Memory, zh: 记忆}
+  - {id: emotion, prefix: EMO, en: Emotion and affect, zh: 情绪与情感}
+  - {id: control, prefix: CTL, en: Cognitive control, zh: 认知控制}
+  - {id: imagery, prefix: IMG, en: Non-motor imagery, zh: 非运动想象}
+  - {id: social, prefix: SOC, en: Social cognition, zh: 社会认知}
+  - {id: state, prefix: STA, en: Brain state (rest, sleep, vigilance), zh: 脑状态（静息、睡眠、警觉）}
+  - {id: stimulation, prefix: STM, en: Stimulation-evoked, zh: 刺激诱发}

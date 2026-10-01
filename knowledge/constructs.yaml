@@ -1,0 +1,28 @@
+# Cognitive constructs / 认知构念 (seed, draft)
+schema_version: "0.1"
+prefix: CN
+terms:
+  - id: CN.context_updating
+    en: Context updating
+    zh: 情境更新
+    definition: Revision of the internal representation of the environment when task-relevant information changes.
+  - id: CN.attention_allocation
+    en: Attention allocation
+    zh: 注意资源分配
+    definition: Distribution of limited attentional resources across stimuli or tasks.
+  - id: CN.novelty_orienting
+    en: Novelty orienting
+    zh: 新异性定向
+    definition: Involuntary orienting of attention toward unexpected or novel stimuli.
+  - id: CN.motor_imagery
+    en: Motor imagery
+    zh: 运动想象
+    definition: Mental rehearsal of a movement without overt execution.
+  - id: CN.motor_execution
+    en: Motor execution
+    zh: 运动执行
+    definition: Preparation and performance of an overt voluntary movement.
+  - id: CN.sustained_visual_attention
+    en: Sustained visual attention
+    zh: 持续视觉注意
+    definition: Maintenance of attention on a visual stimulus or location over time.

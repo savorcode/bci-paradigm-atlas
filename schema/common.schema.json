@@ -1,0 +1,72 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://github.com/savorcode/bci-paradigm-atlas/schema/common.schema.json",
+  "title": "Shared definitions",
+  "$defs": {
+    "source": {
+      "type": "object",
+      "required": [
+        "citation"
+      ],
+      "additionalProperties": false,
+      "properties": {
+        "citation": {
+          "type": "string",
+          "minLength": 1
+        },
+        "doi": {
+          "type": "string",
+          "pattern": "^10\\.\\d{4,9}/\\S+$"
+        },
+        "pmid": {
+          "type": "string",
+          "pattern": "^\\d+$"
+        },
+        "arxiv": {
+          "type": "string"
+        },
+        "year": {
+          "type": "integer",
+          "minimum": 1800,
+          "maximum": 2100
+        },
+        "verified": {
+          "type": "boolean",
+          "description": "true only after a maintainer has checked the original publication"
+        }
+      }
+    },
+    "bilingual": {
+      "type": "object",
+      "required": [
+        "en",
+        "zh"
+      ],
+      "additionalProperties": false,
+      "properties": {
+        "en": {
+          "type": "string",
+          "minLength": 1
+        },
+        "zh": {
+          "type": "string",
+          "minLength": 1
+        }
+      }
+    },
+    "status": {
+      "enum": [
+        "draft",
+        "reviewed",
+        "deprecated"
+      ]
+    },
+    "contributors": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "uniqueItems": true
+    }
+  }
+}

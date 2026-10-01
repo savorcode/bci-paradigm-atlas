@@ -1,0 +1,42 @@
+schema_version: "0.1"
+id: PER-ODD-001
+name: {en: Oddball paradigm, zh: Oddball 范式（怪球范式）}
+aliases: [two-stimulus oddball, three-stimulus oddball, P300 oddball]
+family: perception
+bci_category: [reactive, none]
+recording_modality: [EEG, MEG, fMRI]
+stimulus_modality: [auditory, visual, somatosensory]
+markers: [MK.P3b, MK.P3a]
+description:
+  en: >-
+    A sequence of frequent standard stimuli is interrupted by infrequent deviant stimuli. Attended, task-relevant
+    deviants (targets) elicit a P3b; in the three-stimulus version, infrequent non-target distractors elicit a P3a.
+    The paradigm underlies P300-based BCIs.
+  zh: >-
+    在高频出现的标准刺激序列中插入低频的偏差刺激。被注意的、与任务相关的偏差刺激（靶刺激）诱发 P3b；
+    在三刺激版本中，低频非靶干扰刺激诱发 P3a。该范式是基于 P300 的脑机接口的基础。
+trial_structure:
+  phases:
+    - {name: stimulus, duration_ms: "50-200"}
+    - {name: inter-stimulus interval, duration_ms: "800-1500"}
+  typical_trials: "200-600"
+  conditions: [standard (p ≈ 0.8), target (p ≈ 0.1-0.2), distractor (three-stimulus version)]
+first_source:
+  citation: "Sutton S, Braren M, Zubin J, John ER. Evoked-potential correlates of stimulus uncertainty. Science. 1965;150(3700):1187-1188."
+  doi: "10.1126/science.150.3700.1187"
+  year: 1965
+  verified: false
+variants:
+  - name: P300 speller (row/column matrix)
+    source:
+      citation: "Farwell LA, Donchin E. Talking off the top of your head: toward a mental prosthesis utilizing event-related brain potentials. Electroencephalogr Clin Neurophysiol. 1988;70(6):510-523."
+      doi: "10.1016/0013-4694(88)90149-6"
+      year: 1988
+      verified: false
+interop:
+  bids_task: oddball
+notes: >-
+  Origin attribution under review. Sutton et al. (1965) first reported the late positive component in relation to
+  stimulus uncertainty; the canonical two-stimulus oddball design is frequently attributed to subsequent work.
+status: draft
+contributors: [savorcode01]

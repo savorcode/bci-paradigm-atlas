@@ -1,0 +1,10 @@
+# Brain regions / 脑区 (seed, draft). Granularity is coarse in v0.1 and will be refined
+# with mappings to standard atlases. v0.1 粒度较粗，后续将细化并映射到标准脑图谱。
+schema_version: "0.1"
+prefix: BR
+terms:
+  - {id: BR.frontal_cortex, en: Frontal cortex, zh: 额叶皮层}
+  - {id: BR.parietal_cortex, en: Parietal cortex, zh: 顶叶皮层}
+  - {id: BR.temporoparietal_junction, en: Temporoparietal junction, zh: 颞顶联合区, parent: BR.parietal_cortex}
+  - {id: BR.sensorimotor_cortex, en: Sensorimotor cortex, zh: 感觉运动皮层, includes: [primary motor cortex, primary somatosensory cortex]}
+  - {id: BR.visual_cortex, en: Visual cortex, zh: 视觉皮层, includes: [V1, extrastriate visual areas]}

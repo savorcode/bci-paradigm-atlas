@@ -1,0 +1,63 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://github.com/savorcode/bci-paradigm-atlas/schema/vocabulary.schema.json",
+  "title": "Knowledge vocabulary",
+  "description": "List of brain regions or cognitive constructs. Schema v0.1 (draft).",
+  "type": "object",
+  "required": [
+    "schema_version",
+    "prefix",
+    "terms"
+  ],
+  "additionalProperties": false,
+  "properties": {
+    "schema_version": {
+      "const": "0.1"
+    },
+    "prefix": {
+      "enum": [
+        "BR",
+        "CN"
+      ]
+    },
+    "terms": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "id",
+          "en",
+          "zh"
+        ],
+        "additionalProperties": false,
+        "properties": {
+          "id": {
+            "type": "string",
+            "pattern": "^(BR|CN)\\.[A-Za-z0-9_]+$"
+          },
+          "en": {
+            "type": "string"
+          },
+          "zh": {
+            "type": "string"
+          },
+          "definition": {
+            "type": "string"
+          },
+          "includes": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "cognitive_atlas": {
+            "type": "string"
+          },
+          "parent": {
+            "type": "string"
+          }
+        }
+      }
+    }
+  }
+}

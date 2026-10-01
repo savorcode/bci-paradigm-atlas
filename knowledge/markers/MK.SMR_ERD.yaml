@@ -1,0 +1,37 @@
+schema_version: "0.1"
+id: MK.SMR_ERD
+name: {en: Sensorimotor rhythm ERD/ERS, zh: 感觉运动节律 ERD/ERS}
+aliases: [mu ERD, beta ERD, mu/beta desynchronization, post-movement beta rebound]
+type: oscillatory
+recording_modality: [EEG, MEG, ECoG]
+signature:
+  frequency_hz: "mu 8-13; beta 13-30"
+  topography: contralateral sensorimotor cortex (C3/C4), somatotopic
+description:
+  en: Event-related desynchronization (power decrease) of mu and beta rhythms over sensorimotor cortex during movement preparation, execution and imagery, followed by beta synchronization (rebound) after movement offset.
+  zh: 运动准备、执行和想象过程中，感觉运动皮层上 mu 与 beta 节律的事件相关去同步化（功率下降），运动结束后出现 beta 同步化（反弹）。
+generators:
+  - region: BR.sensorimotor_cortex
+    evidence: A
+    sources:
+      - &pfurt1999
+        citation: "Pfurtscheller G, Lopes da Silva FH. Event-related EEG/MEG synchronization and desynchronization: basic principles. Clin Neurophysiol. 1999;110(11):1842-1857."
+        doi: "10.1016/S1388-2457(99)00141-8"
+        year: 1999
+        verified: false
+indexes:
+  - construct: CN.motor_execution
+    relation: power decreases during movement preparation and execution
+    evidence: A
+    sources: [*pfurt1999]
+  - construct: CN.motor_imagery
+    relation: power decreases over the contralateral hemisphere during imagined movement
+    evidence: B
+    sources:
+      - *pfurt1999
+      - citation: "Pfurtscheller G, Neuper C. Motor imagery activates primary sensorimotor area in humans. Neurosci Lett. 1997;239(2-3):65-68."
+        doi: "10.1016/S0304-3940(97)00889-6"
+        year: 1997
+        verified: false
+status: draft
+contributors: [savorcode01]
