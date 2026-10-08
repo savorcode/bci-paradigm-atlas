@@ -19,3 +19,7 @@ The homepage numbers describe the **v0.1.0 / 2026-10-08** release, not live coun
 Validate JavaScript syntax, relative asset paths, local anchors and GitHub source paths. Preview desktop and narrow mobile widths, exercise each example tab, and preserve animation pause, reduced-motion, and offscreen behavior. The hero animation is artistic and does not represent measured data.
 
 Brand artwork and fonts are supplied by SavorCode. Repository licenses do not grant trademark rights to the SavorCode identity.
+
+## Editorial scope
+
+The page introduces **BCI Paradigm Atlas**, not the company service offering. The hero title is 脑机范式图谱. Sections cover project motivation, the two-layer data model, real Oddball/MI/SSVEP records, all 12 families, validation and export usage, evidence grading and review status, version roadmap, and contribution instructions. Sources: README.zh-CN.md, docs/methodology.zh-CN.md, taxonomy/families.yaml and evidence_grades.yaml, the linked paradigm/marker YAML records, scripts/build_graph.py, CONTRIBUTING.md, and the v0.1.0 release/coverage reports. Paradigm Factory is only described in a brief relationship note. Hero rendering and motion controls remain unchanged.

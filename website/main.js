@@ -7,12 +7,72 @@ document.addEventListener('keydown',e=>{if(e.key==='Escape'&&!mobileNav.hidden){
 document.querySelector('#year').textContent=new Date().getFullYear();
 
 const tasks=[
- {source:'perception/PER-ODD-001.yaml',en:'ATTENTION & PERCEPTION',stage:'范式示例',title:'一个不同，如何被大脑发现？',description:'在重复出现的刺激中，偶尔加入一个目标。通过 Oddball 等范式，研究人如何分配注意、识别目标，以及这些过程如何体现在脑电中。',question:'同样的任务，在不同的人与设备上能否重现？刺激出现的时刻，能否与脑电记录准确对齐？',label:'任务事件',events:['常见刺激','罕见目标','观察响应'],path:'M0 95H180C195 95 200 104 212 95S230 90 240 95H285C315 95 325 130 348 108S380 22 409 30S442 98 475 95H660',point:[409,30]},
- {source:'motor/MOT-MI-001.yaml',en:'MOVEMENT & INTENT',stage:'范式示例',title:'动作尚未发生，意图已经开始。',description:'按提示想象左手或右手运动，并记录相应的脑电变化。运动想象范式帮助研究者探索意图识别与人机控制中的信号特征。',question:'如何区分想象与真实动作？训练与检验分开后，识别结果能否在新的人与设备上成立？',label:'任务事件',events:['准备静息','运动想象','恢复静息'],path:'M0 78H130L140 55L150 100L160 52L170 101L180 66L190 80H235L245 72L255 86L265 75L275 81H390L400 74L410 84L420 78H470L480 57L490 101L500 51L510 100L520 68L530 78H660',point:[275,81]},
- {source:'control/CTL-FLK-001.yaml',en:'ERRORS & FEEDBACK',stage:'范式示例',title:'在一次偏差里，观察纠正的起点。',description:'通过 Flanker 等任务引入一致与冲突条件，记录选择、错误和反馈，研究人在察觉偏差时的认知与行为过程。',question:'错误与意外分别带来什么变化？预先确定的分析标准，能否支持对反馈过程的解释？',label:'任务事件',events:['作出选择','发现偏差','反馈纠正'],path:'M0 75H190C215 75 245 20 280 20S320 125 350 125S385 60 425 60S475 75 505 75H660',point:[350,125]}
+ {
+  "source": "perception/PER-ODD-001.yaml",
+  "marker": "MK.P3b",
+  "en": "PER-ODD-001 / ODDBALL",
+  "stage": "draft · 具体范式",
+  "title": "Oddball：检测低频目标",
+  "description": "高频标准刺激与低频靶刺激随机出现，被试对靶刺激计数或按键。仓库将这一具体范式关联到 P3b，并记录视觉、听觉刺激及 EEG、MEG、fMRI 记录模态。",
+  "question": "两类刺激；目标检测或计数；刺激与间隔组成试次。完整条目保留参数范围、变体与源头文献。",
+  "knowledge": "P3b 的产生脑区：颞顶联合区（B）；关联认知构念：上下文更新与注意分配（B）。这些是知识库当前记录的关联，尚未完成内容核实。",
+  "label": "概念时间线",
+  "events": [
+   "标准刺激",
+   "低频靶刺激",
+   "目标响应"
+  ],
+  "path": "M0 95H180C195 95 200 104 212 95S230 90 240 95H285C315 95 325 130 348 108S380 22 409 30S442 98 475 95H660",
+  "point": [
+   409,
+   30
+  ]
+ },
+ {
+  "source": "motor/MOT-MI-001.yaml",
+  "marker": "MK.SMR_ERD",
+  "en": "MOT-MI-001 / MOTOR IMAGERY",
+  "stage": "draft · 具体范式",
+  "title": "运动想象：左手与右手",
+  "description": "视觉箭头提示被试想象左手或右手动作，不实际执行。条目关注感觉运动 mu／β 节律的偏侧化去同步化，用于研究两类运动想象的信号差异。",
+  "question": "左／右手二分类；视觉箭头提示；同步试次；试次内无反馈。四分类、连续反馈和异步设计分别记录为同类下的其他具体范式。",
+  "knowledge": "SMR ERD 的产生脑区：感觉运动皮层（A）；关联认知构念：运动想象（B）。脑区关联与认知关联分别评级，条目当前仍为 draft。",
+  "label": "概念时间线",
+  "events": [
+   "视觉提示",
+   "左／右手想象",
+   "无反馈休息"
+  ],
+  "path": "M0 78H130L140 55L150 100L160 52L170 101L180 66L190 80H235L245 72L255 86L265 75L275 81H390L400 74L410 84L420 78H470L480 57L490 101L500 51L510 100L520 68L530 78H660",
+  "point": [
+   275,
+   81
+  ]
+ },
+ {
+  "source": "steady_state/SSR-SSVEP-002.yaml",
+  "marker": "MK.SSVEP",
+  "en": "SSR-SSVEP-002 / FREQUENCY CODING",
+  "stage": "draft · 具体范式",
+  "title": "SSVEP：用频率区分目标",
+  "description": "多个目标以不同频率同时闪烁。用户注视期望目标，系统依据枕区脑电中的频率特征完成选择，再向用户反馈结果。",
+  "question": "多目标频率编码；同步试次；离散反馈。与单光源被动观察的 -001、联合频率与相位编码的 -005 分别记录。",
+  "knowledge": "SSVEP 的产生脑区：视觉皮层（B）；关联认知构念：持续性视觉注意（B）。记录刺激频率及谐波响应，文献与审核状态可在标记物条目中追溯。",
+  "label": "概念时间线",
+  "events": [
+   "目标提示",
+   "频率编码刺激",
+   "选择反馈"
+  ],
+  "path": "M0 75H100C110 30 120 30 130 75S150 120 160 75S180 30 190 75S210 120 220 75S240 30 250 75S270 120 280 75S300 30 310 75S330 120 340 75S360 30 370 75S390 120 400 75S420 30 430 75S450 120 460 75S480 30 490 75H660",
+  "point": [
+   340,
+   75
+  ]
+ }
 ];
 const taskButtons=[...document.querySelectorAll('[data-task]')];
-function selectTask(index){const t=tasks[index];document.querySelector('#task-source').href='https://github.com/savorcode/bci-paradigm-atlas/blob/main/paradigms/'+t.source;taskButtons.forEach((b,i)=>{b.setAttribute('aria-selected',String(i===index));b.tabIndex=i===index?0:-1;b.querySelector('.task-symbol').textContent=i===index?'−':'＋'});document.querySelector('#task-panel').setAttribute('aria-labelledby','task-tab-'+index);for(const [id,value] of Object.entries({'task-en':t.en,'task-stage':t.stage,'task-title':t.title,'task-description':t.description,'task-question':t.question,'signal-label':t.label}))document.getElementById(id).textContent=value;document.querySelector('#signal-events').replaceChildren(...t.events.map(text=>{const s=document.createElement('span');s.textContent=text;return s}));document.querySelector('#signal-path').setAttribute('d',t.path);document.querySelector('#signal-point').setAttribute('cx',t.point[0]);document.querySelector('#signal-point').setAttribute('cy',t.point[1]);document.querySelector('#task-signal').setAttribute('aria-label',t.events.join('、')+'的概念时间线，不代表实测数据')}
+function selectTask(index){const t=tasks[index];document.querySelector('#task-source').href='https://github.com/savorcode/bci-paradigm-atlas/blob/main/paradigms/'+t.source;document.querySelector('#marker-source').href='https://github.com/savorcode/bci-paradigm-atlas/blob/main/knowledge/markers/'+t.marker+'.yaml';document.querySelector('#task-knowledge').textContent=t.knowledge;taskButtons.forEach((b,i)=>{b.setAttribute('aria-selected',String(i===index));b.tabIndex=i===index?0:-1;b.querySelector('.task-symbol').textContent=i===index?'−':'＋'});document.querySelector('#task-panel').setAttribute('aria-labelledby','task-tab-'+index);for(const [id,value] of Object.entries({'task-en':t.en,'task-stage':t.stage,'task-title':t.title,'task-description':t.description,'task-question':t.question,'signal-label':t.label}))document.getElementById(id).textContent=value;document.querySelector('#signal-events').replaceChildren(...t.events.map(text=>{const s=document.createElement('span');s.textContent=text;return s}));document.querySelector('#signal-path').setAttribute('d',t.path);document.querySelector('#signal-point').setAttribute('cx',t.point[0]);document.querySelector('#signal-point').setAttribute('cy',t.point[1]);document.querySelector('#task-signal').setAttribute('aria-label',t.events.join('、')+'的概念时间线，不代表实测数据')}
 taskButtons.forEach((b,i)=>{b.addEventListener('click',()=>selectTask(i));b.addEventListener('keydown',e=>{let next;if(e.key==='ArrowDown'||e.key==='ArrowRight')next=(i+1)%3;if(e.key==='ArrowUp'||e.key==='ArrowLeft')next=(i+2)%3;if(e.key==='Home')next=0;if(e.key==='End')next=2;if(next!==undefined){e.preventDefault();selectTask(next);taskButtons[next].focus()}})});
 
 selectTask(0);
