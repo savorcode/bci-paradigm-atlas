@@ -77,6 +77,53 @@ taskButtons.forEach((b,i)=>{b.addEventListener('click',()=>selectTask(i));b.addE
 
 selectTask(0);
 
+// The static catalog is generated from the same YAML records as the atlas tools.
+const catalogQuery=document.querySelector('#catalog-query'),catalogFamily=document.querySelector('#catalog-family'),catalogModality=document.querySelector('#catalog-modality');
+const catalogResults=document.querySelector('#catalog-results'),catalogCount=document.querySelector('#catalog-count'),catalogPrev=document.querySelector('#catalog-prev'),catalogNext=document.querySelector('#catalog-next'),catalogClear=document.querySelector('#catalog-clear');
+let catalogItems=[],catalogPage=0;
+const catalogPageSize=6;
+function renderCatalog(){
+ const words=catalogQuery.value.trim().toLowerCase().split(/\s+/).filter(Boolean);
+ const filtered=catalogItems.filter(item=>(!catalogFamily.value||item.family===catalogFamily.value)&&(!catalogModality.value||item.modalities.includes(catalogModality.value))&&words.every(word=>item.search.includes(word)));
+ const pages=Math.max(1,Math.ceil(filtered.length/catalogPageSize));catalogPage=Math.min(catalogPage,pages-1);
+ catalogResults.replaceChildren();
+ for(const item of filtered.slice(catalogPage*catalogPageSize,(catalogPage+1)*catalogPageSize)){
+  const card=document.createElement('article');card.className='catalog-card';
+  const id=document.createElement('span');id.className='record-id';id.textContent=item.id+' / '+item.status;
+  const title=document.createElement('h4');title.textContent=item.name;
+  const description=document.createElement('p');description.textContent=item.description;
+  const tags=document.createElement('div');tags.className='record-tags';
+  for(const value of [...item.modalities,...item.markers]){const tag=document.createElement('span');tag.textContent=value;tags.append(tag)}
+  const link=document.createElement('a');link.textContent='查看协议与出处 ↗';link.href='https://github.com/savorcode/bci-paradigm-atlas/blob/main/'+item.path;
+  link.setAttribute('aria-label','查看 '+item.id+' '+item.name+' 的协议与出处');
+  card.append(id,title,description,tags,link);catalogResults.append(card);
+ }
+ catalogCount.textContent=filtered.length+' / '+catalogItems.length+' 个有效协议';
+ document.querySelector('#catalog-empty').hidden=filtered.length!==0;
+ document.querySelector('#catalog-page').textContent=filtered.length?(catalogPage+1)+' / '+pages:'0 / 0';
+ catalogPrev.disabled=catalogPage===0;catalogNext.disabled=catalogPage>=pages-1;
+}
+for(const control of [catalogQuery,catalogFamily,catalogModality])control.addEventListener(control===catalogQuery?'input':'change',()=>{catalogPage=0;renderCatalog()});
+catalogClear.addEventListener('click',()=>{catalogQuery.value='';catalogFamily.value='';catalogModality.value='';catalogPage=0;renderCatalog();catalogQuery.focus()});
+catalogPrev.addEventListener('click',()=>{catalogPage--;renderCatalog()});catalogNext.addEventListener('click',()=>{catalogPage++;renderCatalog()});
+async function loadCatalog(){
+ try{
+  const response=await fetch('./catalog.json');if(!response.ok)throw new Error('Catalog unavailable');
+  const data=await response.json();
+  catalogItems=data.items.map(item=>({...item,search:[item.id,item.name,item.english,...item.aliases,...item.markers,...item.modalities].join(' ').toLowerCase()}));
+  for(const family of data.families){const option=document.createElement('option');option.value=family.id;option.textContent=family.name+' ('+family.count+')';catalogFamily.append(option)}
+  for(const modality of [...new Set(catalogItems.flatMap(item=>item.modalities))].sort()){const option=document.createElement('option');option.value=modality;option.textContent=modality;catalogModality.append(option)}
+  for(const control of [catalogQuery,catalogFamily,catalogModality,catalogClear])control.disabled=false;
+  renderCatalog();
+ }catch{catalogCount.textContent='目录暂时无法加载，请刷新重试或打开下方完整源目录。'}
+}
+loadCatalog();
+document.querySelector('#copy-setup').addEventListener('click',async()=>{
+ const status=document.querySelector('#copy-status');
+ try{await navigator.clipboard.writeText(document.querySelector('#setup-code').textContent);status.textContent='命令已复制。';}
+ catch{status.textContent='未能访问剪贴板，请选中下方命令手动复制。';}
+});
+
 // One continuous ink form: smoke, neural impulse, an idea taking shape, a falling apple.
 const canvas=document.querySelector('#cognition'),gl=canvas.getContext('webgl',{alpha:true,antialias:false});
 const reduced=matchMedia('(prefers-reduced-motion: reduce)');

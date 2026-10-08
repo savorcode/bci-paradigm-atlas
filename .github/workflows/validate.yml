@@ -24,3 +24,7 @@ jobs:
         run: python scripts/validate.py
       - name: Build graph
         run: python scripts/build_graph.py
+      - name: Check website catalog is up to date
+        run: |
+          python scripts/build_website_catalog.py
+          git diff --exit-code -- website/catalog.json
