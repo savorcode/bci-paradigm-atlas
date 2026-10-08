@@ -1,0 +1,52 @@
+schema_version: '0.2'
+id: SOC-TPP-001
+class: SOC-TPP
+name:
+  en: Third-party punishment
+  zh: 第三方惩罚
+aliases:
+- third-party punishment
+family: social
+bci_category:
+- none
+recording_modality:
+- fMRI
+- EEG
+stimulus_modality:
+- visual
+markers:
+- MK.BOLD_dlPFC
+description:
+  en: An unaffected third party observes a distribution decision between two other players, for example a dictator and a recipient,
+    and can spend own resources to punish unfair behaviour. Punishment decisions engage dorsolateral prefrontal BOLD.
+  zh: 未受影响的第三方观察另外两名玩家之间的分配决策（如独裁者与接受者），并可花费自己的资源惩罚不公平行为。惩罚决策激活背外侧前额叶 BOLD。
+protocol:
+  n_classes: 2
+  classes:
+  - fair allocation observed
+  - unfair allocation observed
+  cue: allocation decision between two other players, then the third party's punishment decision
+  paradigm_timing: synchronous
+  feedback: none
+  distinguishing: 'Standard configuration (earliest published or canonical; D-057 -001): third-party punishment of a dictator
+    (behavioural origin, R1174).'
+first_source:
+  citation: Fehr E, Fischbacher U. Third-party punishment and social norms. Evolution and Human Behavior. 2004;25(2):63-87.
+  doi: 10.1016/S1090-5138(04)00005-4
+  year: 2004
+  verified: false
+interop:
+  bids_task: tpp
+notes: 'Lead refs (curation/literature.csv): R0906 [method], R1058 [method]. Sources found by curator_e (curation/work/pkg_E/search_log.md):
+  S24 = https://www.merlin.uzh.ch/publication/show/5664. first_source note: Authors not displayed on the fetched record (search
+  query: Fehr & Fischbacher); add at verification. Behavioural origin; neural TPP studies not surfaced. Leads R0906 (ERP,
+  three-person ultimatum game) and R1058 are method papers. S24 is the behavioural origin; neural TPP lead with dlPFC (e.g.
+  Buckholtz et al.) not surfaced. First-pass skeleton (curator_e, 2026-10-03); all sources unverified. D-031 (maintainer,
+  2026-10-03): first_source currently holds the earliest neural recording study found, not the paradigm origin; in sprint
+  2 move it to a "First neural recording:" line and fill first_source with the origin. Sprint 2 (curator_e, 2026-10-03): protocol
+  block added per D-057; see curation/work/pkg_E/sprint2/split_log.csv. Sprint 3 (curator_d, 2026-10-05): bibliography corrected
+  (OpenAlex, 2026-10-05): doi, authors, issue added. [maintainer sprint 3, 2026-10-07, D-073] origin candidate recalled, record
+  confirmed via OpenAlex.'
+status: draft
+contributors:
+- curator_e

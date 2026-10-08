@@ -1,0 +1,53 @@
+schema_version: '0.2'
+id: MEM-META-002
+class: MEM-META
+name:
+  en: Judgment of learning
+  zh: 学习判断（JOL）
+aliases:
+- JOL
+- judgment of learning
+- delayed JOL
+family: memory
+bci_category:
+- none
+recording_modality:
+- fMRI
+stimulus_modality:
+- visual
+markers:
+- MK.BOLD_frontopolar
+description:
+  en: Participants study items such as word pairs and, after each item (immediately or after a delay), predict how likely
+    they are to remember it on a later test; a cued-recall test follows. The accuracy of the predictions is measured against
+    recall, and delayed judgments are typically more accurate than immediate ones.
+  zh: 被试学习词对等项目，每项学完后（立即或延迟）预测自己在之后测试中记住它的可能性，随后进行线索回忆测试。以回忆成绩衡量预测准确性，延迟判断通常比立即判断更准确。
+trial_structure:
+  conditions:
+  - immediate JOL
+  - delayed JOL
+  - later recalled
+  - later forgotten
+protocol:
+  n_classes: 2
+  classes:
+  - JOL rating
+  - later recall (correct/incorrect)
+  cue: word pairs at study; cue word for the JOL prompt and the recall test
+  stimulus_coding: study-judgment-recall procedure
+  paradigm_timing: synchronous
+  feedback: none
+  distinguishing: 准则 1;3：判断对象与时序改变——学习后预测之后能否回忆（学习—判断—回忆），而不是回忆失败后预测能否再认（MEM-META-001 回忆—判断—再认）。
+first_source:
+  citation: 'Nelson TO, Dunlosky J. When People''s Judgments of Learning (JOLs) are Extremely Accurate at Predicting Subsequent
+    Recall: The "Delayed-JOL Effect". Psychological Science. 1991;2(4):267-271.'
+  doi: 10.1111/j.1467-9280.1991.tb00147.x
+  year: 1991
+  verified: false
+notes: 'Former variant of MEM-META-001. first_source is the variant''s source (Nelson & Dunlosky 1991, delayed-JOL effect);
+  earlier JOL studies may exist. MK.BOLD_frontopolar is the class marker; R0493 (Reggev et al. 2011, fMRI of metamemory predictions)
+  is the neural lead to check. Leads: R0098, R0099, R0148, R0493, R0517. (R#### = curation/literature.csv; DN## = curation/work/pkg_D/new_leads.csv.)
+  Numbering criterion (D-057): 1;3. bibliography corrected (Crossref, 2026-10-05)'
+status: draft
+contributors:
+- curator_d

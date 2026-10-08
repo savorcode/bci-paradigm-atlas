@@ -1,0 +1,11 @@
+schema_version: "0.2"
+id: MK.high_gamma
+name: {en: High-gamma activity (70-150 Hz), zh: 高 γ 活动（70–150 Hz）}
+aliases: [high gamma, HGA, broadband high-frequency activity]
+type: field_potential
+recording_modality: [ECoG, sEEG, intracortical]
+signature: {frequency_hz: 70-150, topography: 'focal, at task-engaged cortex'}
+description: {en: 'Broadband power increase in roughly the 70-150 Hz range in intracranial recordings, spatially focal and closely time-locked to local cortical engagement in motor, sensory, speech and memory tasks.', zh: 颅内记录中约 70–150 Hz 范围的宽频功率升高，空间上局灶，并与运动、感觉、言语、记忆任务中的局部皮层参与紧密锁时。}
+notes: Signature values are textbook-level characteristics and await source checking (first pass, curator_b). Intracranial; distinct from scalp MK.gamma_power (D-028). Generating regions are to be distinguished in generators (second pass). Generators and indexes to be added in the second pass.
+status: draft
+contributors: [maintainer, curator_b]

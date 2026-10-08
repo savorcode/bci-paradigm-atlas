@@ -1,0 +1,51 @@
+schema_version: '0.2'
+id: PER-PRVEP-001
+class: PER-PRVEP
+name:
+  en: Pattern-reversal VEP
+  zh: 棋盘格翻转 VEP
+aliases:
+- P100
+- PR-VEP
+- checkerboard VEP
+- pattern reversal VEP
+family: perception
+bci_category:
+- none
+recording_modality:
+- EEG
+stimulus_modality:
+- visual
+markers:
+- MK.P100_PRVEP
+description:
+  en: A black-and-white checkerboard reverses contrast at a fixed rate while the participant fixates its centre. Each reversal
+    evokes a VEP with a robust occipital P100, whose latency is the standard clinical measure of optic nerve conduction.
+  zh: 被试注视棋盘格中心，棋盘格以固定速率进行黑白翻转。每次翻转诱发一个 VEP，其稳定的枕区 P100 潜伏期是临床评估视神经传导的标准指标。
+protocol:
+  n_classes: 1
+  classes:
+  - pattern reversal
+  cue: black-and-white checkerboard reversing at a fixed rate, central fixation
+  stimulus_coding: 翻转率、方格大小为参数。本类暂无其他具体范式（no sibling protocol yet）。
+  paradigm_timing: synchronous
+  feedback: none
+  distinguishing: 标准配置（最早发表，即 first_source）：黑白棋盘格以固定速率翻转，注视中心。本类暂无其他具体范式（no sibling protocol yet）。
+first_source:
+  citation: Halliday AM, McDonald WI, Mushin J. Delayed visual evoked response in optic neuritis. Lancet. 1972;299(7758):982-985.
+  doi: 10.1016/S0140-6736(72)91155-5
+  year: 1972
+  verified: false
+interop:
+  bids_task: prvep
+notes: 'Leads used: R0678, R0827, R1084. first_source: no origin source identified in this pass (blocker, see curation/work/pkg_A/status.csv).
+  Leads are ISCEV standards (2016, 2025) and EyeWiki; a search for the commonly cited optic-neuritis paper (SA40) did not
+  surface it. [curator_a sprint 2, 2026-10-03] D-057: protocol block added for the canonical configuration; no other concrete
+  paradigm identified for this class in sprint 2. [curator_e sprint 3, 2026-10-05] candidate origin found by bibliographic
+  search (OpenAlex, 2026-10-05); content unverified. [maintainer sprint 3, 2026-10-07] bibliography confirmed (OpenAlex, 2026-10-05;
+  origin candidate, content unverified). [maintainer sprint 3, 2026-10-07, D-073] origin candidate recalled, record confirmed
+  via OpenAlex.'
+status: draft
+contributors:
+- curator_a
+- curator_e

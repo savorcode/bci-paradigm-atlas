@@ -1,0 +1,48 @@
+Closes #
+
+## 内容 / Summary
+
+- 范式 / Paradigm：`MOT-ME-001` 运动执行 / Motor execution
+- 工作包 / Package：B
+- 类型 / Kind：第一遍骨架
+- 新增或修改的标记物 / Markers touched：`MK.BOLD_motor_network`
+- 写入的变体（含被并入候选，D-030）/ Variants added：Individual finger movements (ECoG/intracortical finger decoding); Overground / treadmill walking; Paced finger tapping (visual or auditory pacing)
+
+## 出处核对表 / Source verification table
+
+所有原文页码与原句均为“待核对原文”：本条为第一遍骨架，出处来自自动线索或检索结果页面，尚未对照原文。
+
+| 字段 / Field | 文献（线索编号或 DOI）/ Source | 页码 / Page | 原文 / Verbatim quote |
+|---|---|---|---|
+| first_source | R0928: Event-related variations in the activity of EEG-rhythms. Application to the physiology and the pathology of movements. | 待核对原文 | 待核对原文 |
+| description | R0928; R0928; R0959; R0145（描述为策展人据线索标题/摘要撰写，需对照原文） | 待核对原文 | 待核对原文 |
+| markers: MK.SMR_ERD | curation/registry/paradigm_markers.csv | 待核对原文 | 待核对原文 |
+| markers: MK.high_gamma | curation/registry/paradigm_markers.csv | 待核对原文 | 待核对原文 |
+| markers: MK.BOLD_motor_network | curation/registry/paradigm_markers.csv | 待核对原文 | 待核对原文 |
+| variants[0] Individual finger movements (ECoG/intracortical finger decoding) | R0871: Classification of multichannel ECoG related to individual finger movements with redundant spatial projections. | 待核对原文 | 待核对原文 |
+| variants[1] Overground / treadmill walking | R0955: Identification of Lower-Limb Motor Tasks via Brain–Computer Interfaces: A Topical Overview. | 待核对原文 | 待核对原文 |
+| variants[2] Paced finger tapping (visual or auditory pacing) | R0189: Jancke, L., Loose, R., Lutz, K., Specht, K., & Shah, N. J. Cortical activations during paced finger-tapping applying visual and auditory pacing stimuli. Cognitive Brain Research, 10(1-2), 51-66. 2000. | 待核对原文 | 待核对原文 |
+| datasets | candidates.csv datasets column (lead) | 待核对原文 | 待核对原文 |
+
+## 线索核对 / Lead check
+
+- 使用的线索 / Leads used：R0145, R0189, R0280, R0405, R0837, R0871, R0878, R0908, R0928, R0946, R0955, R0959, R0960, R0994
+- 本次检索补充的出处 / Sources added by search (see `curation/work/pkg_B/search_log.md`)：—
+- 线索有误之处 / Errors found in leads：未发现（未对照原文）
+
+## 自查 / Checklist
+
+- [x] 本地 `python scripts/validate.py` 0 problem(s)
+- [x] 只修改了本包写入范围内的文件（`paradigms/<本包族>/`、owner 为本包的 `knowledge/markers/`、`curation/work/pkg_B/`；D-029）
+- [x] `markers` 只使用 `curation/registry/paradigm_markers.csv` 中的 ID，或已在 `marker_requests.csv` 中申请
+- [x] 所有出处 `verified: false`（由审核人核实后改为 true）
+- [x] 查不到的字段已删除或留空，没有根据记忆或推测填写任何文献、DOI、数字
+- [ ] 没有转引：每条出处都对照原文核对过（第一遍未对照原文，待审核人核实）
+- [x] 混合 BCI / 超扫描变体使用 `Hybrid:` / `Hyperscanning:` 前缀（D-022、D-021）（本条无此类变体）
+- [x] 已更新本包 `status.csv`、`worklog.md`
+- [ ] 提交已签署（`git commit -s`，DCO）
+
+## 审核人 / Reviewer
+
+- 交叉审核包 / Cross-review package：A（A 审 B）
+- [ ] 审核人已对照原文核实源头文献与描述

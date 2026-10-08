@@ -1,0 +1,11 @@
+schema_version: "0.2"
+id: MK.interhemispheric_coherence
+name: {en: Interhemispheric coherence, zh: 半球间相干}
+aliases: [interhemispheric functional coupling, C3-C4 coherence]
+type: connectivity
+recording_modality: [EEG, MEG]
+signature: {frequency_hz: alpha and beta bands, topography: bilateral sensorimotor cortices}
+description: {en: 'Coherence between homologous regions of the two hemispheres, most often the left and right sensorimotor cortices, which changes with the demands of bimanual coordination.', zh: 两半球同源区域（最常见为左右感觉运动皮层）之间的相干，随双手协调的需求而变化。}
+notes: Signature values are textbook-level characteristics and await source checking (first pass, curator_b). Generators and indexes to be added in the second pass.
+status: draft
+contributors: [maintainer, curator_b]

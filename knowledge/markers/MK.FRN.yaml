@@ -1,0 +1,33 @@
+schema_version: "0.2"
+id: MK.FRN
+name:
+  en: Feedback-related negativity / reward positivity
+  zh: 反馈相关负波 / 奖赏正波
+aliases:
+- FRN
+- feedback-related negativity
+- feedback ERN
+- RewP
+- reward positivity
+- MFN
+- medial frontal negativity
+type: erp_component
+recording_modality:
+- EEG
+- MEG
+signature:
+  latency_ms: 200-350 after feedback onset
+  polarity: more negative for losses / negative feedback than for gains
+  topography: fronto-central
+description:
+  en: Feedback-locked deflection that is more negative after losses or negative performance feedback than after gains or positive
+    feedback; the difference is equivalently described as a reward positivity for gains. It is sensitive to outcome valence
+    and to the unexpectedness of the outcome (reward prediction error).
+  zh: 反馈锁时的波形，损失或负性表现反馈后比获益或正性反馈后更负；这一差异也可等价地描述为获益诱发的奖赏正波（RewP）。它对结果效价及结果的意外程度（奖赏预测误差）敏感。
+notes: 'Signature values are textbook-level approximations and await checking against sources (pass 2). Generators and indexes
+  not yet written. Used by (registry): ERR-ADAPT-001, ERR-BANDIT-001, ERR-GAM-001, ERR-PRL-001, ERR-PSEL-001, ERR-TE-001,
+  ERR-INST-001, ERR-TS-001, CTL-IGT-001, CTL-BART-001, EMO-MID-001, SOC-TRUST-001, SOC-UG-001.'
+status: draft
+contributors:
+- maintainer
+- curator_c

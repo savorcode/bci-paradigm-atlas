@@ -1,0 +1,25 @@
+schema_version: "0.2"
+id: MK.vMMN
+name:
+  en: Visual mismatch negativity
+  zh: 视觉失匹配负波
+aliases:
+- vMMN
+- visual mismatch negativity
+type: erp_component
+recording_modality:
+- EEG
+- MEG
+signature:
+  latency_ms: ~150-350
+  polarity: negative
+  topography: posterior (occipito-temporal)
+description:
+  en: Posterior negativity in the deviant-minus-standard difference wave elicited by infrequent visual deviants in an unattended
+    stimulus sequence; considered the visual counterpart of the auditory MMN.
+  zh: 在未被注意的视觉刺激序列中，低频视觉偏差刺激诱发的、偏差减标准差异波中的后部负波；被视为听觉 MMN 的视觉对应物。
+notes: First-pass skeleton by package A (2026-10-03). No generators/indexes yet. Signature values are textbook-level approximations
+  and await source checking. New marker requested by package A (curation/work/pkg_A/marker_requests.csv); not yet in curation/registry/markers.csv.
+status: draft
+contributors:
+- curator_a

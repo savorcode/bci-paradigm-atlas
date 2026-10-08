@@ -1,0 +1,53 @@
+schema_version: '0.2'
+id: PER-AMASK-001
+class: PER-AMASK
+name:
+  en: Auditory masking
+  zh: 听觉掩蔽
+aliases:
+- Energetic Masking
+- Speech-in-Noise
+- Tone-in-Noise Detection
+family: perception
+bci_category:
+- none
+recording_modality:
+- EEG
+- MEG
+stimulus_modality:
+- auditory
+markers:
+- MK.N1_auditory
+- MK.MMN
+description:
+  en: Target tones or speech are presented in background noise or with competing maskers at varying signal-to-noise ratios.
+    Masking reduces and delays the auditory N1 and the MMN to changes in the target, in parallel with detection thresholds.
+  zh: 在背景噪声或竞争掩蔽声中以不同信噪比呈现目标纯音或语音。掩蔽使听觉 N1 及目标变化诱发的 MMN 减小、延迟，与检测阈限的变化相平行。
+protocol:
+  n_classes: 2
+  classes:
+  - target in quiet
+  - target in masker
+  cue: target tones or speech with or without background noise / competing masker at varying SNR
+  paradigm_timing: synchronous
+  feedback: none
+  distinguishing: 标准配置（最早发表，即 first_source）：靶声在安静与掩蔽噪声条件下呈现，信噪比为参数。本类暂无其他具体范式（no sibling protocol yet）。
+first_source:
+  citation: Wegel RL, Lane CE. The auditory masking of one pure tone by another and its probable relation to the dynamics
+    of the inner ear. Phys Rev. 1924;23(2):266-285.
+  doi: 10.1103/PhysRev.23.266
+  year: 1924
+  verified: false
+interop:
+  bids_task: auditorymasking
+notes: 'HED task page: https://www.hedtags.org/hed-task/tasks/hedtsk_auditory_masking.html. Leads used: R0415, R0532. first_source:
+  no origin source identified in this pass (blocker, see curation/work/pkg_A/status.csv). Leads are a review and a textbook;
+  no origin paper. [curator_a sprint 2, 2026-10-03] D-057: protocol block added for the canonical configuration; no other
+  concrete paradigm identified for this class in sprint 2. [curator_e sprint 3, 2026-10-05] candidate origin found by bibliographic
+  search (OpenAlex, 2026-10-05); content unverified. [maintainer sprint 3, 2026-10-07] bibliography confirmed (OpenAlex, 2026-10-05;
+  origin candidate, content unverified). [maintainer sprint 3, 2026-10-07, D-073] origin candidate recalled, record confirmed
+  via OpenAlex.'
+status: draft
+contributors:
+- curator_a
+- curator_e

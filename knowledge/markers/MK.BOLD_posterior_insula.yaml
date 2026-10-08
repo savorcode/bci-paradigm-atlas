@@ -1,0 +1,21 @@
+schema_version: "0.2"
+id: MK.BOLD_posterior_insula
+name:
+  en: Posterior insula BOLD
+  zh: 后岛叶 BOLD
+aliases:
+- posterior insular cortex activation
+type: hemodynamic
+recording_modality:
+- fMRI
+signature:
+  topography: posterior insular cortex
+description:
+  en: Task-evoked BOLD signal change in the posterior insular cortex. It increases to slow, gentle stroking that activates
+    C-tactile afferents, and to other interoceptive and thermal-pain stimulation.
+  zh: 后岛叶皮层的任务诱发 BOLD 信号变化。对激活 C 触觉传入纤维的缓慢轻柔抚触，以及其他内感受和温度/疼痛刺激，响应增强。
+notes: Signature values are textbook-level characteristics entered in the first pass and await source checking. New marker
+  requested by package E for EMO-TOUCH-001 (see curation/work/pkg_E/marker_requests.csv); distinct from MK.BOLD_anterior_insula.
+status: draft
+contributors:
+- curator_e

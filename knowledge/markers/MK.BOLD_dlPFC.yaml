@@ -1,0 +1,24 @@
+schema_version: "0.2"
+id: MK.BOLD_dlPFC
+name:
+  en: Dorsolateral prefrontal BOLD
+  zh: 背外侧前额叶 BOLD
+aliases:
+- dlPFC BOLD
+- dorsolateral prefrontal activation
+type: hemodynamic
+recording_modality:
+- fMRI
+- PET
+description:
+  en: BOLD activity in dorsolateral prefrontal cortex during tasks that require planning, rule-based reasoning, maintenance
+    of task rules and executive control. Used in this atlas as a grouped regional marker (D-028 §5).
+  zh: 在需要计划、基于规则的推理、任务规则保持和执行控制的任务中，背外侧前额叶皮层的 BOLD 活动。本图谱中作为按脑区分组的标记物使用（D-028 第 5 条）。
+notes: 'No signature given in pass 1 (hemodynamic marker; region described in the description). Generators and indexes not
+  yet written. Used by (registry): ERR-CAUS-001, CTL-TOL-001, CTL-WCST-001, CTL-BART-001, CTL-WASON-001, MEM-DF-001, SOC-TPP-001.
+  D-050 (maintainer, 2026-10-03): PET regional blood-flow (rCBF) effects in the same region are grouped under this marker,
+  as fNIRS HbO is under D-028 item 5.'
+status: draft
+contributors:
+- maintainer
+- curator_c

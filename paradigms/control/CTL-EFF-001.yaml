@@ -1,0 +1,57 @@
+schema_version: '0.2'
+id: CTL-EFF-001
+class: CTL-EFF
+name:
+  en: Effort-based decision making
+  zh: 努力决策
+aliases:
+- EEfRT
+- Effort Choice Task
+- Effort Discounting Task
+- Effort Expenditure for Rewards Task
+- Effort-Cost Paradigm
+family: control
+bci_category:
+- none
+recording_modality:
+- fMRI
+- EEG
+stimulus_modality:
+- visual
+- motor_execution
+markers:
+- MK.BOLD_dACC
+description:
+  en: Participants choose between a low-effort option with a small reward and a high-effort option (e.g., more button presses
+    or a harder cognitive task) with a larger reward, often under varying reward probability. Effort-cost valuation is associated
+    with dorsal anterior cingulate BOLD activity.
+  zh: 被试在低努力、低奖赏选项与高努力（如更多按键或更难的认知任务）、高奖赏选项之间选择，奖赏概率常被同时操纵。努力代价的评估与背侧前扣带 BOLD 活动相关。
+trial_structure:
+  conditions:
+  - low effort
+  - high effort
+protocol:
+  n_classes: 2
+  classes:
+  - low-effort / low-reward option
+  - high-effort / high-reward option
+  cue: choice screen with reward magnitude and probability; effort is button pressing
+  paradigm_timing: synchronous
+  feedback: discrete
+  distinguishing: 标准配置（最早发表）：EEfRT，按键努力程度不同的两选项在不同奖赏概率下选择（Treadway et al. 2009，R0451）。本包仅此一个配置；认知努力折扣（R0437、R0639）未拆分，待核对。
+first_source:
+  citation: Treadway MT, Buckholtz JW, Schwartzman AN, Lambert WE, Zald DH. Worth the 'EEfRT'? The Effort Expenditure for
+    Rewards Task as an Objective Measure of Motivation and Anhedonia. PLoS ONE. 2009;4(8):e6598.
+  doi: 10.1371/journal.pone.0006598
+  pmid: '19672310'
+  year: 2009
+  verified: false
+interop:
+  bids_task: effort
+notes: 'HED task page: https://www.hedtags.org/hed-task/tasks/hedtsk_effort_based_decision_making.html. Leads used: R0451;
+  R0437; R0809. first_source lead: R0451. R0451 and R0437 are both 2009; R0451 (EEfRT) chosen as first_source. Meta-analysis:
+  R0809. Pass 1 skeleton (curator_c, 2026-10-03); all sources unverified. Sprint 2 (D-057): protocol added; single configuration,
+  no split. bibliography corrected (Crossref, 2026-10-05)'
+status: draft
+contributors:
+- curator_c

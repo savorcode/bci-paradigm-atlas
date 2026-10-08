@@ -1,0 +1,130 @@
+﻿marker_id,name_en,name_zh,type,recording_modality,owner_pkg,used_by_class,used_by,n_classes,n_concrete,notes
+MK.ABR,Auditory brainstem response (waves I-V),听觉脑干反应（I-V 波）,erp_component,EEG,A,PER-ABR,PER-ABR-001,1,1,
+MK.alpha_lateralization,Posterior alpha lateralization,后部 α 偏侧化,oscillatory,EEG;MEG,A,MEM-RC;PER-CVA,MEM-RC-001;PER-CVA-001;PER-CVA-002,2,3,空间注意与回溯线索共用
+MK.ASSR,Auditory steady-state response,听觉稳态响应,steady_state,EEG;MEG,A,SSR-ASSR,SSR-ASSR-001;SSR-ASSR-002,1,2,
+MK.AV_interaction_ERP,Early audiovisual interaction ERP,早期视听交互 ERP,erp_component,EEG;MEG,A,PER-MSI,PER-MSI-001;PER-MSI-002,1,2,AV − (A+V) 加性模型差异
+MK.BOLD_auditory_cortex,Auditory cortex BOLD response,听皮层 BOLD 响应,hemodynamic,fMRI;PET,A,IMG-AUD;PER-TON;PER-VOICE,IMG-AUD-001;IMG-AUD-002;PER-TON-001;PER-VOICE-001,3,4,含音调拓扑、听觉想象激活
+MK.BOLD_category_selective,"Category-selective ventral visual cortex BOLD (FFA, PPA, etc.)",腹侧视觉皮层类别选择性 BOLD（FFA、PPA 等）,hemodynamic,fMRI;PET,A,IMG-VIS;LAN-VWFA;MEM-CFMT;MEM-RIF;MEM-RPRIM;PER-BODY;PER-CAT;PER-FACE,IMG-VIS-001;IMG-VIS-002;LAN-VWFA-001;MEM-CFMT-001;MEM-RIF-001;MEM-RPRIM-001;PER-BODY-001;PER-CAT-001;PER-FACE-001,8,9,含类别可解码模式（MVPA）、类别特异性想象（D-007）
+MK.BOLD_frontoparietal,Frontoparietal network BOLD,额顶网络 BOLD,hemodynamic,fMRI;fNIRS,A,CTL-RAVEN;CTL-SYLL;ERR-AWARE;IMG-ROT;MEM-NBK;MEM-SWM;MOT-SACC;PER-MOT,CTL-RAVEN-001;CTL-SYLL-001;ERR-AWARE-003;IMG-ROT-001;MEM-NBK-001;MEM-NBK-002;MEM-NBK-003;MEM-NBK-004;MEM-SWM-001;MOT-SACC-002;PER-MOT-001,8,11,fNIRS 测得的顶叶/额顶 HbO 归入此标记物
+MK.BOLD_hippocampus,Hippocampal BOLD response,海马 BOLD 响应,hemodynamic,fMRI,A,MEM-EFT;MEM-MST;MEM-NAV;MEM-PA;MEM-RMEM;MEM-SME;MEM-TMR;MEM-TNT;PER-CTXC,MEM-EFT-001;MEM-MST-001;MEM-MST-002;MEM-NAV-001;MEM-NAV-002;MEM-NAV-003;MEM-PA-001;MEM-PA-002;MEM-RMEM-001;MEM-SME-001;MEM-TMR-002;MEM-TNT-001;PER-CTXC-001,9,13,含 DG/CA3 亚区模式分离信号
+MK.BOLD_premotor_parietal,Premotor-parietal BOLD (action observation / body representation),前运动-顶叶 BOLD（动作观察/身体表征）,hemodynamic,fMRI,A,MOT-OBS;PER-BOI,MOT-OBS-001;PER-BOI-001,2,2,含镜像系统激活、身体拥有感相关激活
+MK.BOLD_visual_cortex,Visual cortex BOLD response,视皮层 BOLD 响应,hemodynamic,fMRI;PET,A,IMG-VIS;PER-BR;PER-NAT;PER-RET,IMG-VIS-001;PER-BR-001;PER-NAT-001;PER-RET-001;PER-RET-002,4,5,含视网膜拓扑图、视觉想象激活、自然影片编码模型响应
+MK.CDA,Contralateral delay activity,对侧延迟活动,erp_component,EEG,A,MEM-CD;MEM-SWM;PER-MOT,MEM-CD-001;MEM-CD-002;MEM-CD-003;PER-MOT-001,3,4,
+MK.cVEP,Code-modulated visual evoked potential,编码调制视觉诱发电位,steady_state,EEG,A,SSR-CVEP,SSR-CVEP-001;SSR-CVEP-002;SSR-CVEP-003,1,3,
+MK.FFR,Frequency-following response,频率跟随响应,steady_state,EEG;MEG,A,SSR-FFR,SSR-FFR-001;SSR-FFR-002,1,2,
+MK.flash_VEP,Flash visual evoked potential,闪光视觉诱发电位,erp_component,EEG,A,PER-FVEP,PER-FVEP-001,1,1,
+MK.FPVS_oddball,FPVS oddball-frequency response,快速周期视觉刺激 oddball 频率响应,steady_state,EEG;MEG,A,SSR-FPVS,SSR-FPVS-001,1,1,与 SSVEP（基频）区分
+MK.HEP,Heartbeat-evoked potential,心跳诱发电位,erp_component,EEG;MEG,A,PER-HBD,PER-HBD-001;PER-HBD-002,1,2,
+MK.ISC,Inter-subject correlation,被试间相关,connectivity,EEG;MEG;fMRI;fNIRS,A,PER-NAT;STA-ENG,PER-NAT-001;STA-ENG-001,2,2,自然刺激与投入度共用
+MK.LEP,Laser-evoked potentials (N2-P2),激光诱发电位（N2-P2）,erp_component,EEG,A,PER-LEP,PER-LEP-001,1,1,
+MK.MMN,Mismatch negativity,失匹配负波,erp_component,EEG;MEG,A,LAN-PHA;PER-AMASK;PER-LG;PER-MMN;PER-STREAM,LAN-PHA-001;PER-AMASK-001;PER-LG-001;PER-MMN-001;PER-MMN-002;PER-MMN-003;PER-STREAM-001,5,7,含语音/音位 MMN（D-017）
+MK.mVEP,Motion-onset visual evoked potential (N2),运动起始视觉诱发电位（N2）,erp_component,EEG,A,PER-MVEP,PER-MVEP-001;PER-MVEP-002,1,2,
+MK.N140_somatosensory,Somatosensory N140,体感 N140,erp_component,EEG,A,PER-TACT,PER-TACT-001,1,1,触觉空间注意调制
+MK.N170,N170 (M170),N170（M170）,erp_component,EEG;MEG,A,EMO-FACE;LAN-VWFA;MEM-CFMT;PER-BODY;PER-CAT;PER-FACE;SOC-BIO;SOC-GAZE;SOC-SELF,EMO-FACE-001;LAN-VWFA-001;MEM-CFMT-001;PER-BODY-001;PER-CAT-001;PER-FACE-001;SOC-BIO-001;SOC-GAZE-001;SOC-SELF-001,9,9,面孔/身体/类别选择性 N1/N170
+MK.N1_auditory,Auditory N1 (N100),听觉 N1（N100）,erp_component,EEG;MEG,A,ERR-AAF;LAN-SIS;MOT-IB;PER-AAD;PER-ACC;PER-AEP;PER-AMASK,ERR-AAF-001;LAN-SIS-001;LAN-SIS-002;MOT-IB-001;PER-AAD-001;PER-ACC-001;PER-AEP-001;PER-AMASK-001,7,8,含选择性注意 N1 增强（Nd）、自身产生声音的 N1 抑制（感觉衰减）、掩蔽效应
+MK.N1_visual,Visual N1,视觉 N1,erp_component,EEG;MEG,A,CTL-ANT;PER-CUE;PER-IC,CTL-ANT-001;CTL-ANT-002;PER-CUE-001;PER-CUE-002;PER-IC-001,3,5,空间注意 N1 调制
+MK.N2_posterior,"Posterior N2 (N2c, occipitotemporal N2)",后部 N2（N2c、枕颞 N2）,erp_component,EEG,A,PER-NAVON;SOC-BIO,PER-NAVON-001;SOC-BIO-001,2,2,
+MK.N2pc,N2pc,N2pc,erp_component,EEG;MEG,A,EMO-DOT;PER-CTXC;PER-VS,EMO-DOT-001;PER-CTXC-001;PER-VS-001,3,3,
+MK.OERP,Olfactory event-related potential,嗅觉事件相关电位,erp_component,EEG,A,PER-OLF,PER-OLF-001,1,1,含 N1/P2/P3
+MK.omission_response,Omission response,刺激遗漏响应,erp_component,EEG;MEG,A,PER-OMIT,PER-OMIT-001;PER-OMIT-002,1,2,
+MK.P100_PRVEP,Pattern-reversal VEP P100,图形翻转 VEP P100,erp_component,EEG,A,PER-PRVEP,PER-PRVEP-001,1,1,临床 VEP 标准成分
+MK.P1_visual,Visual P1,视觉 P1,erp_component,EEG;MEG,A,EMO-DOT;PER-CUE;SOC-GAZE,EMO-DOT-001;PER-CUE-001;PER-CUE-002;SOC-GAZE-001,3,4,空间注意 P1 调制、注意偏向 P1
+MK.P2_auditory,Auditory P2 (P200),听觉 P2（P200）,erp_component,EEG;MEG,A,EMO-SOUND;ERR-AAF;PER-ACC;PER-AEP,EMO-SOUND-001;ERR-AAF-001;PER-ACC-001;PER-AEP-001,4,4,含情绪韵律 P200
+MK.P3a,P3a,P3a,erp_component,EEG;MEG,A,PER-ODD,PER-ODD-002,1,1,已有文件
+MK.P3b,P3b (P300),P3b（P300）,erp_component,EEG;MEG,A,CTL-ANT;CTL-CPT;CTL-DT;CTL-WCST;ERR-ADAPT;ERR-CHGPT;MEM-CIT;MEM-NBK;PER-AB;PER-IB;PER-LG;PER-MASK;PER-NAVON;PER-ODD;PER-TACT;SOC-CYB;SOC-NAME;SOC-SELF;STA-MW;STM-TAVNS,CTL-ANT-001;CTL-ANT-002;CTL-CPT-001;CTL-CPT-002;CTL-DT-001;CTL-WCST-001;ERR-ADAPT-002;ERR-CHGPT-001;ERR-CHGPT-002;MEM-CIT-001;MEM-CIT-002;MEM-NBK-001;MEM-NBK-002;PER-AB-001;PER-IB-001;PER-LG-001;PER-MASK-001;PER-NAVON-001;PER-ODD-001;PER-ODD-002;PER-ODD-003;PER-ODD-004;PER-ODD-005;PER-ODD-006;PER-ODD-007;PER-ODD-008;PER-ODD-009;PER-TACT-001;SOC-CYB-001;SOC-NAME-001;SOC-NAME-002;SOC-SELF-001;STA-MW-001;STA-MW-002;STM-TAVNS-001,20,35,已有文件；同义：P300、P3、自我面孔 P300、Cyberball P3
+MK.P50_gating,P50 sensory gating,P50 感觉门控,erp_component,EEG;MEG,A,PER-GATE,PER-GATE-001,1,1,配对短声 S2/S1 比
+MK.speech_envelope_tracking,Cortical speech envelope tracking,皮层语音包络跟踪,oscillatory,EEG;MEG;ECoG,A,LAN-NAT;PER-AAD,LAN-NAT-001;PER-AAD-001,2,2,同义：TRF、neural tracking、听觉注意解码
+MK.SSEP_beat,Beat-related steady-state evoked potential,节拍相关稳态诱发电位,steady_state,EEG;MEG,A,SSR-BEAT,SSR-BEAT-001,1,1,
+MK.SSMVEP,Steady-state motion visual evoked potential,稳态运动视觉诱发电位,steady_state,EEG,A,SSR-SSMVEP,SSR-SSMVEP-001,1,1,D-013：与 SSVEP 分立
+MK.SSSEP,Steady-state somatosensory evoked potential,稳态体感诱发电位,steady_state,EEG;MEG,A,SSR-SSSEP,SSR-SSSEP-001;SSR-SSSEP-002,1,2,
+MK.SSVEP,Steady-state visual evoked potential,稳态视觉诱发电位,steady_state,EEG;MEG,A,PER-BR;SSR-SSVEP;SSR-SWEEP,PER-BR-002;SSR-SSVEP-001;SSR-SSVEP-002;SSR-SSVEP-003;SSR-SSVEP-004;SSR-SSVEP-005;SSR-SSVEP-007;SSR-SSVEP-008;SSR-SWEEP-001,3,9,已有文件；同义：光驱动响应、频率标记（视觉闪烁）、高频 SSVEP、扫描 VEP
+MK.VAN,Visual awareness negativity,视觉觉知负波,erp_component,EEG;MEG,A,PER-CB;PER-IB;PER-MASK,PER-CB-001;PER-IB-001;PER-MASK-001,3,3,
+MK.alpha_posterior,Posterior alpha power,后部 α 功率,oscillatory,EEG;MEG,B,CTL-AUT;CTL-RAT;CTL-SART;IMG-ROT;IMG-VIS;MEM-DF;MEM-DMS;MEM-NBK;MEM-SB;SOC-VPT;STA-DRV;STA-ENG;STA-MATB;STA-MED;STA-MW;STA-NF;STA-PSY;STA-PVT;STA-REST;STM-PBM,CTL-AUT-001;CTL-RAT-001;CTL-SART-001;IMG-ROT-001;IMG-VIS-001;MEM-DF-001;MEM-DF-002;MEM-DMS-001;MEM-NBK-001;MEM-NBK-002;MEM-SB-001;SOC-VPT-001;STA-DRV-001;STA-DRV-002;STA-ENG-001;STA-MATB-001;STA-MED-001;STA-MW-001;STA-MW-002;STA-NF-001;STA-PSY-001;STA-PVT-001;STA-REST-001;STA-REST-002;STM-PBM-001,20,25,同义：α 调制、顶叶 α、静息 α；与 α 偏侧化、额叶 α 不对称分立
+MK.BOLD_motor_network,"Motor network BOLD (M1, SMA, premotor, cerebellum)",运动网络 BOLD（M1、SMA、前运动区、小脑）,hemodynamic,fMRI;fNIRS,B,IMG-CMD;MOT-ME;MOT-MIRR;MOT-MSL;MOT-SMS;STM-VIB,IMG-CMD-001;IMG-CMD-003;MOT-ME-001;MOT-ME-004;MOT-MIRR-001;MOT-MSL-001;MOT-SMS-001;STM-VIB-001,6,8,含运动学习相关 BOLD、指令跟随网球想象 SMA 激活
+MK.BOLD_oculomotor,"Oculomotor network BOLD (FEF, SEF, IPS)",眼动网络 BOLD（额眼区、辅助眼区、顶内沟）,hemodynamic,fMRI,B,CTL-AS;MOT-PURS;MOT-SACC,CTL-AS-001;MOT-PURS-001;MOT-SACC-001;MOT-SACC-002,3,4,
+MK.BOLD_parahippocampal,Parahippocampal / navigation network BOLD,海马旁回/导航网络 BOLD,hemodynamic,fMRI;fNIRS,B,IMG-CMD,IMG-CMD-001;IMG-CMD-003,1,2,含空间导航想象（D-008）
+MK.BOLD_stimulated_region,Hemodynamic response at the stimulated region,受刺激脑区血流动力学响应,hemodynamic,fMRI;fNIRS,B,STM-TDCS;STM-TI;STM-TMSFMRI;STM-TUS,STM-TDCS-001;STM-TI-001;STM-TMSFMRI-001;STM-TUS-001,4,4,tDCS、TUS 共用
+MK.CCEP,Cortico-cortical evoked potential,皮层-皮层诱发电位,erp_component,ECoG;sEEG,B,STM-CCEP,STM-CCEP-001,1,1,
+MK.corticomuscular_coherence,Corticomuscular coherence,皮层-肌肉相干,connectivity,EEG;MEG,B,MOT-FORCE,MOT-FORCE-001,1,1,
+MK.DBS_cortical_EP,DBS-evoked cortical potential,深部脑刺激诱发皮层电位,erp_component,EEG,B,STM-DBSEP,STM-DBSEP-001,1,1,
+MK.ERNA,Evoked resonant neural activity,诱发共振神经活动,field_potential,other,B,STM-DBSEP,STM-DBSEP-001,1,1,DBS 电极记录（D-027）
+MK.frontal_midline_theta,Frontal midline theta,额中线 θ,oscillatory,EEG;MEG,B,CTL-DT;CTL-SW;EMO-FC;ERR-OGNG;ERR-PSEL;IMG-MA;MEM-DS;MEM-NBK;MEM-SB;STA-MATB;STA-MED,CTL-DT-001;CTL-SW-001;CTL-SW-002;CTL-SW-003;EMO-FC-003;ERR-OGNG-001;ERR-PSEL-001;IMG-MA-001;IMG-MA-002;MEM-DS-001;MEM-DS-002;MEM-NBK-001;MEM-NBK-002;MEM-SB-001;STA-MATB-001;STA-MED-001,11,16,
+MK.HbO_prefrontal,Prefrontal HbO task response,前额叶 HbO 任务响应,hemodynamic,fNIRS,B,CTL-TOL;CTL-WCST;EMO-STRESS;IMG-MA;LAN-VF;MEM-NBK;STA-MATB,CTL-TOL-001;CTL-WCST-001;EMO-STRESS-001;EMO-STRESS-002;IMG-MA-001;LAN-VF-001;LAN-VF-002;LAN-VF-003;MEM-NBK-001;MEM-NBK-002;STA-MATB-001,7,11,同义：额叶 HbO、前额 HbO
+MK.high_gamma,High-gamma activity (70-150 Hz),高 γ 活动（70–150 Hz）,field_potential,ECoG;sEEG;intracortical,B,IMG-AUD;IMG-SPI;LAN-OVS;LAN-PCAT;LAN-PN;LAN-SIS;MEM-FR;MOT-GRASP;MOT-ME;MOT-REACH;MOT-TRACK,IMG-AUD-001;IMG-SPI-001;IMG-SPI-002;IMG-SPI-003;LAN-OVS-001;LAN-OVS-002;LAN-OVS-003;LAN-PCAT-001;LAN-PN-001;LAN-SIS-001;MEM-FR-001;MOT-GRASP-001;MOT-GRASP-002;MOT-ME-001;MOT-ME-002;MOT-REACH-001;MOT-TRACK-001,11,17,颅内高频活动；脑区在 generators 中区分
+MK.interhemispheric_coherence,Interhemispheric coherence,半球间相干,connectivity,EEG;MEG,B,MOT-BIMAN,MOT-BIMAN-001,1,1,
+MK.low_freq_kinematics,Low-frequency EEG tracking of movement kinematics,低频脑电运动学跟踪,oscillatory,EEG;ECoG,B,MOT-ATT;MOT-GRASP;MOT-HW;MOT-ME;MOT-MI;MOT-REACH;MOT-TRACK,MOT-ATT-003;MOT-GRASP-003;MOT-HW-002;MOT-ME-005;MOT-MI-003;MOT-REACH-002;MOT-TRACK-001;MOT-TRACK-002,7,8,
+MK.LRP,Lateralized readiness potential,偏侧化准备电位,erp_component,EEG;MEG,B,CTL-FLK;CTL-MRP;CTL-SIM;MOT-RT;MOT-SRT,CTL-FLK-002;CTL-MRP-001;CTL-SIM-001;CTL-SIM-002;MOT-RT-001;MOT-SRT-001,5,6,
+MK.motor_cortical_spiking,Motor / premotor cortical spiking activity,运动/前运动皮层神经元放电,single_unit,intracortical,B,LAN-OVS;MOT-ATT;MOT-CURSOR;MOT-GRASP;MOT-HW;MOT-REACH,LAN-OVS-003;MOT-ATT-001;MOT-CURSOR-001;MOT-CURSOR-003;MOT-GRASP-001;MOT-HW-001;MOT-REACH-001,6,7,含方向调谐、运动学编码、言语运动皮层放电
+MK.MRCP,Movement-related cortical potential (Bereitschaftspotential),运动相关皮层电位（准备电位）,erp_component,EEG;MEG,B,MOT-IB;MOT-LIBET;MOT-MRCP,MOT-IB-001;MOT-LIBET-001;MOT-MRCP-001;MOT-MRCP-002;MOT-MRCP-003,3,5,同义：BP、readiness potential
+MK.oscillatory_entrainment,Oscillatory entrainment by rhythmic stimulation,节律刺激引起的节律夹带,oscillatory,EEG,B,SSR-RVS;STM-TACS,SSR-RVS-001;STM-TACS-001,2,2,
+MK.presaccadic_potential,Presaccadic potential,眼跳前电位,erp_component,EEG,B,CTL-AS;MOT-SACC,CTL-AS-001;MOT-SACC-001,2,2,
+MK.SEP_N20,Median nerve SEP N20,正中神经体感诱发电位 N20,erp_component,EEG;MEG,B,STM-PAS;STM-SEP;STM-TUS,STM-PAS-001;STM-SEP-001;STM-TUS-001,3,3,
+MK.SMR_ERD,Sensorimotor rhythm ERD/ERS,感觉运动节律 ERD/ERS,oscillatory,EEG;MEG;ECoG,B,IMG-CMD;IMG-SAO;IMG-TACT;MOT-ATT;MOT-BIMAN;MOT-CURSOR;MOT-FORCE;MOT-GRASP;MOT-ME;MOT-MI;MOT-MSL;MOT-MVF;MOT-OBS;MOT-PASS;MOT-SMS;MOT-SRT;SOC-IMIT;SOC-JA;STA-NF;STM-PHTMS,IMG-CMD-001;IMG-CMD-002;IMG-SAO-001;IMG-SAO-002;IMG-TACT-001;MOT-ATT-001;MOT-ATT-002;MOT-ATT-003;MOT-BIMAN-001;MOT-CURSOR-001;MOT-CURSOR-002;MOT-FORCE-001;MOT-GRASP-003;MOT-GRASP-004;MOT-ME-001;MOT-ME-002;MOT-ME-003;MOT-ME-005;MOT-MI-001;MOT-MI-002;MOT-MI-003;MOT-MI-004;MOT-MI-005;MOT-MI-006;MOT-MI-007;MOT-MI-008;MOT-MI-009;MOT-MI-010;MOT-MI-011;MOT-MSL-001;MOT-MVF-001;MOT-OBS-001;MOT-PASS-001;MOT-SMS-001;MOT-SRT-001;SOC-IMIT-001;SOC-JA-001;STA-NF-001;STM-PHTMS-001,20,39,已有文件；同义：mu ERD、beta ERD、mu 抑制（动作观察/社会任务）、中线（足区）SMR ERD、运动相关 β 调制；社会认知相关 indexes 由使用包提请 owner 补充
+MK.TEP,TMS-evoked potential,TMS 诱发电位,erp_component,EEG,B,STM-PAS;STM-TEP,STM-PAS-001;STM-TEP-001,2,2,
+MK.tES_power_aftereffect,Band-power aftereffect of transcranial electrical stimulation,经颅电刺激后功率改变,oscillatory,EEG,B,STM-TACS;STM-TDCS,STM-TACS-001;STM-TDCS-001,2,2,tACS 与 tDCS 共用
+MK.BOLD_dACC,Dorsal anterior cingulate BOLD,背侧前扣带 BOLD,hemodynamic,fMRI,C,CTL-EFF;CTL-FORAGE;CTL-MSIT;SOC-CONF;SOC-CYB;SOC-SFB;STA-HYPN,CTL-EFF-001;CTL-FORAGE-001;CTL-MSIT-001;SOC-CONF-001;SOC-CYB-001;SOC-SFB-001;STA-HYPN-001,7,7,
+MK.BOLD_dlPFC,Dorsolateral prefrontal BOLD,背外侧前额叶 BOLD,hemodynamic,fMRI;PET,C,CTL-BART;CTL-RNG;CTL-TOL;CTL-WASON;CTL-WCST;ERR-CAUS;MEM-DF;SOC-TPP,CTL-BART-001;CTL-RNG-001;CTL-TOL-001;CTL-WASON-001;CTL-WCST-001;ERR-CAUS-001;MEM-DF-001;SOC-TPP-001,8,8,计划、规则推理、执行控制
+MK.BOLD_frontopolar,Frontopolar cortex BOLD,额极皮层 BOLD,hemodynamic,fMRI,C,CTL-ANAL;ERR-BANDIT;MEM-META;MEM-PM,CTL-ANAL-001;ERR-BANDIT-001;MEM-META-001;MEM-META-002;MEM-PM-001;MEM-PM-002,4,6,探索决策、元记忆、前瞻记忆
+MK.BOLD_striatum_reward,Striatal reward/prediction-error BOLD,纹状体奖赏/预测误差 BOLD,hemodynamic,fMRI,C,CTL-AMBIG;CTL-DD;CTL-MIXG;EMO-HUMOR;EMO-MID;ERR-APC;ERR-INST;ERR-PCL;ERR-PRL;ERR-TS;MEM-RMEM;SOC-CONF;SOC-GAZE;SOC-TRUST,CTL-AMBIG-001;CTL-DD-001;CTL-MIXG-001;EMO-HUMOR-001;EMO-MID-001;EMO-MID-002;ERR-APC-001;ERR-INST-001;ERR-PCL-001;ERR-PRL-001;ERR-TS-001;ERR-TS-002;MEM-RMEM-001;SOC-CONF-001;SOC-GAZE-002;SOC-TRUST-001;SOC-TRUST-002;SOC-TRUST-003,14,18,
+MK.BOLD_vmPFC_value,Ventromedial prefrontal value BOLD,腹内侧前额叶价值 BOLD,hemodynamic,fMRI,C,CTL-DD;CTL-IGT;CTL-MIXG;CTL-VBC;SOC-DICT,CTL-DD-001;CTL-IGT-001;CTL-MIXG-001;CTL-VBC-001;SOC-DICT-001;SOC-DICT-002,5,6,
+MK.CNV,Contingent negative variation,关联性负变,erp_component,EEG;MEG,C,CTL-ANT;CTL-CNV;CTL-CPT,CTL-ANT-001;CTL-ANT-002;CTL-CNV-001;CTL-CPT-002,3,4,
+MK.CPP,Centro-parietal positivity,中央顶正波,erp_component,EEG,C,CTL-PDM,CTL-PDM-001;CTL-PDM-002,1,2,证据累积信号
+MK.ERN,Error-related negativity,错误相关负波,erp_component,EEG;MEG,C,CTL-FLK;ERR-AWARE,CTL-FLK-001;CTL-FLK-002;ERR-AWARE-002,2,3,
+MK.ErrP,Interaction error-related potential,交互式错误电位,erp_component,EEG,C,ERR-ADAPT;ERR-ERRP;ERR-OBS;ERR-VRPE,ERR-ADAPT-001;ERR-ERRP-001;ERR-ERRP-002;ERR-ERRP-003;ERR-ERRP-004;ERR-OBS-001;ERR-VRPE-001,4,7,
+MK.FRN,Feedback-related negativity / reward positivity,反馈相关负波 / 奖赏正波,erp_component,EEG;MEG,C,CTL-BART;CTL-IGT;EMO-MID;ERR-ADAPT;ERR-BANDIT;ERR-GAM;ERR-INST;ERR-PRL;ERR-PRT;ERR-PSEL;ERR-TE;ERR-TS;SOC-TRUST;SOC-UG,CTL-BART-001;CTL-IGT-001;EMO-MID-001;ERR-ADAPT-001;ERR-ADAPT-002;ERR-BANDIT-001;ERR-GAM-001;ERR-GAM-002;ERR-GAM-003;ERR-INST-001;ERR-PRL-001;ERR-PRT-001;ERR-PSEL-001;ERR-TE-001;ERR-TS-001;SOC-TRUST-001;SOC-TRUST-002;SOC-UG-001,14,18,同义：RewP、MFN
+MK.N2_frontocentral,Fronto-central N2 (conflict/inhibition),额中央 N2（冲突/抑制）,erp_component,EEG,C,CTL-FLK;CTL-GNG;CTL-SIM;EMO-EST;LAN-SWITCH;MEM-TNT;SOC-WIT,CTL-FLK-001;CTL-FLK-002;CTL-GNG-001;CTL-SIM-001;CTL-SIM-002;EMO-EST-001;LAN-SWITCH-001;LAN-SWITCH-002;MEM-TNT-001;SOC-WIT-001,7,10,
+MK.N450,N450 (Stroop interference),N450（Stroop 干扰）,erp_component,EEG,C,CTL-STR,CTL-STR-001;CTL-STR-002,1,2,
+MK.NoGo_P3,NoGo/stop P3 (inhibition P3),NoGo/停止 P3（抑制 P3）,erp_component,EEG,C,CTL-GNG;CTL-SART;CTL-SST,CTL-GNG-001;CTL-SART-001;CTL-SST-001,3,3,
+MK.oERN,Observed error-related negativity,观察性错误相关负波,erp_component,EEG,C,ERR-OBS,ERR-OBS-001;ERR-OBS-002;ERR-OBS-003,1,3,
+MK.Pe,Error positivity,错误正波,erp_component,EEG,C,CTL-CONF;CTL-FLK;ERR-AWARE,CTL-CONF-001;CTL-FLK-001;CTL-FLK-002;ERR-AWARE-001;ERR-AWARE-002,3,5,
+MK.rIFG_beta,Right inferior frontal beta (stopping),右额下回 β（停止）,oscillatory,EEG;ECoG,C,CTL-SST,CTL-SST-001,1,1,
+MK.switch_positivity,Switch-related positivity,切换相关正波,erp_component,EEG,C,CTL-SW,CTL-SW-001;CTL-SW-002,1,2,
+MK.BOLD_language_network,Language network BOLD,语言网络 BOLD,hemodynamic,fMRI,D,LAN-LOC;LAN-PHA;LAN-PN;LAN-SC;LAN-SEMD;LAN-VG,LAN-LOC-001;LAN-LOC-002;LAN-PHA-001;LAN-PN-001;LAN-PN-002;LAN-SC-001;LAN-SC-002;LAN-SEMD-001;LAN-VG-001,6,9,含左额下回
+MK.BOLD_mPFC,Medial prefrontal BOLD (self/mentalizing),内侧前额叶 BOLD（自我/心智化）,hemodynamic,fMRI;PET,D,MEM-EFT;MEM-SRE;SOC-ANIM;SOC-MORAL;SOC-RME,MEM-EFT-001;MEM-SRE-001;SOC-ANIM-001;SOC-MORAL-001;SOC-RME-001,5,5,
+MK.Dm,Subsequent memory effect (Dm),后续记忆效应（Dm）,erp_component,EEG;MEG,D,MEM-FR;MEM-SME,MEM-FR-001;MEM-FR-002;MEM-SME-001,2,3,
+MK.ERAN,Early right anterior negativity (ERAN),早期右前负波（ERAN）,erp_component,EEG;MEG,D,LAN-AGL;LAN-MUS,LAN-AGL-001;LAN-MUS-001,2,2,
+MK.FN400,FN400 (mid-frontal old/new effect),FN400（额中部新旧效应）,erp_component,EEG,D,MEM-DRM;MEM-ON,MEM-DRM-001;MEM-ON-001;MEM-ON-002,2,3,
+MK.FRP,Fixation-related potential,注视相关电位,erp_component,EEG,D,LAN-READ,LAN-READ-001,1,1,
+MK.gamma_power,Scalp gamma power (30-100 Hz),头皮 γ 功率（30–100 Hz）,oscillatory,EEG;MEG,D,MEM-DMS,MEM-DMS-001,1,1,与颅内 MK.high_gamma 区分
+MK.hippocampal_theta,Hippocampal theta,海马 θ,oscillatory,sEEG;MEG,D,MEM-NAV;MEM-PA,MEM-NAV-001;MEM-NAV-003;MEM-PA-001,2,3,
+MK.left_anterior_negativity,Left anterior negativity (LAN),左前负波（LAN）,erp_component,EEG,D,LAN-P600,LAN-P600-001,1,1,
+MK.linguistic_structure_tracking,Cortical tracking of linguistic structure,语言层级结构的皮层跟踪,steady_state,MEG;EEG;ECoG,D,LAN-HIER;LAN-SL,LAN-HIER-001;LAN-SL-001,2,2,
+MK.N300_prospective,Prospective-memory N300,前瞻记忆 N300,erp_component,EEG,D,MEM-PM,MEM-PM-001,1,1,
+MK.N400,N400,N400,erp_component,EEG;MEG,D,EMO-APRIME;LAN-GEST;LAN-LDT;LAN-N400;LAN-NWL;LAN-PRIME;LAN-SC;MEM-RPRIM;SOC-IAT,EMO-APRIME-001;LAN-GEST-001;LAN-LDT-001;LAN-N400-001;LAN-N400-002;LAN-NWL-001;LAN-PRIME-001;LAN-PRIME-002;LAN-SC-001;MEM-RPRIM-001;SOC-IAT-001,9,11,
+MK.P600,P600,P600,erp_component,EEG;MEG,D,LAN-AGL;LAN-P600;LAN-SC,LAN-AGL-001;LAN-P600-001;LAN-P600-002;LAN-SC-001,3,4,
+MK.parietal_old_new,Left parietal old/new effect,左顶叶新旧效应,erp_component,EEG,D,MEM-DRM;MEM-ON,MEM-DRM-001;MEM-ON-001;MEM-ON-002,2,3,
+MK.right_frontal_old_new,Late right frontal old/new effect,晚期右额新旧效应,erp_component,EEG,D,MEM-SRC,MEM-SRC-001,1,1,
+MK.sleep_spindle,Sleep spindle,睡眠纺锤波,oscillatory,EEG,D,MEM-TMR;STA-CLAS;STA-SLP,MEM-TMR-001;STA-CLAS-001;STA-SLP-001;STA-SLP-002,3,4,
+MK.slow_wave,Slow waves / slow oscillation,慢波 / 慢振荡,oscillatory,EEG,D,MEM-TMR;STA-ANES;STA-CLAS;STA-DREAM;STA-SLP,MEM-TMR-001;STA-ANES-001;STA-CLAS-001;STA-DREAM-001;STA-SLP-001;STA-SLP-002,5,6,睡眠与麻醉共用
+MK.affective_band_power,Affect-related band-power pattern,情绪相关频段功率模式,oscillatory,EEG,E,EMO-AUTO;EMO-FILM,EMO-AUTO-001;EMO-FILM-001;EMO-FILM-002;EMO-FILM-003;EMO-FILM-004,2,5,情绪诱发中的多频段功率（如颞区 β/γ）
+MK.BOLD_amygdala,Amygdala BOLD response,杏仁核 BOLD 响应,hemodynamic,fMRI,E,CTL-AMBIG;EMO-AUTO;EMO-FACE;EMO-FC;EMO-IAPS;EMO-REG;EMO-THREAT;STA-NF,CTL-AMBIG-001;EMO-AUTO-001;EMO-FACE-001;EMO-FACE-002;EMO-FC-001;EMO-FC-002;EMO-FC-003;EMO-IAPS-001;EMO-REG-002;EMO-THREAT-001;STA-NF-002,8,11,
+MK.BOLD_anterior_insula,Anterior insula BOLD,前岛叶 BOLD,hemodynamic,fMRI,E,EMO-THREAT;SOC-PAIN;SOC-UG,EMO-THREAT-001;SOC-PAIN-001;SOC-PAIN-002;SOC-UG-001,3,4,
+MK.BOLD_pSTS,Posterior superior temporal sulcus BOLD,后颞上沟 BOLD,hemodynamic,fMRI,E,SOC-BIO;SOC-GAZE,SOC-BIO-001;SOC-GAZE-001;SOC-GAZE-002,2,3,
+MK.BOLD_TPJ,Temporoparietal junction BOLD,颞顶联合区 BOLD,hemodynamic,fMRI;PET,E,SOC-ANIM;SOC-IMIT;SOC-RME;SOC-TOM;SOC-VPT,SOC-ANIM-001;SOC-IMIT-001;SOC-RME-001;SOC-TOM-001;SOC-TOM-002;SOC-VPT-001,5,6,
+MK.DMN_connectivity,Default mode network connectivity,默认模式网络连接,connectivity,fMRI;EEG;MEG,E,CTL-CPT;STA-HYPN;STA-MW;STA-PSY;STA-REST,CTL-CPT-003;STA-HYPN-001;STA-MW-001;STA-PSY-001;STA-REST-001,5,5,
+MK.EPN,Early posterior negativity,早期后部负波,erp_component,EEG,E,EMO-FACE;EMO-IAPS;EMO-WORD,EMO-FACE-001;EMO-IAPS-001;EMO-WORD-001,3,3,
+MK.frontal_alpha_anesthesia,Anteriorized frontal alpha under anesthesia,麻醉相关额区 α,oscillatory,EEG,E,STA-ANES,STA-ANES-001,1,1,
+MK.frontal_alpha_asymmetry,Frontal alpha asymmetry,额叶 α 不对称,oscillatory,EEG,E,EMO-FILM;EMO-STRESS,EMO-FILM-001;EMO-FILM-002;EMO-FILM-003;EMO-FILM-004;EMO-STRESS-001,2,5,
+MK.interbrain_synchrony,Inter-brain synchrony,脑间同步,connectivity,EEG;fNIRS,E,SOC-EYE;SOC-JA,SOC-EYE-001;SOC-JA-001,2,2,超扫描（D-021）
+MK.LPP,Late positive potential,晚期正电位,erp_component,EEG,E,EMO-APRIME;EMO-EST;EMO-IAPS;EMO-REG;EMO-SOUND;EMO-WORD;SOC-IAT;SOC-PAIN,EMO-APRIME-001;EMO-EST-001;EMO-IAPS-001;EMO-REG-001;EMO-REG-002;EMO-SOUND-001;EMO-WORD-001;SOC-IAT-001;SOC-PAIN-001;SOC-PAIN-002,8,10,
+MK.P2_visual,Visual P2,视觉 P2,erp_component,EEG,E,SOC-RACE;SOC-WIT,SOC-RACE-001;SOC-WIT-001,2,2,
+MK.SCP,Slow cortical potential,慢皮层电位,erp_component,EEG,E,STA-SCP,STA-SCP-001;STA-SCP-002,1,2,
+MK.theta_drowsiness,Theta power increase with drowsiness,困倦相关 θ 功率升高,oscillatory,EEG,E,STA-DRV;STA-PVT,STA-DRV-001;STA-DRV-002;STA-PVT-001,2,3,与额中线 θ 区分
+MK.FPAS_oddball,FPAS oddball-frequency response,快速周期听觉刺激 oddball 频率响应,steady_state,EEG,A,SSR-FPAS,SSR-FPAS-001,1,1,sprint 1 新增：包 A 按 D-028 第 7 条申请并建文件（SSR-FPAS-001），D-050 登记
+MK.GEP,Gustatory evoked potential,味觉诱发电位,erp_component,EEG,A,PER-GEP,PER-GEP-001,1,1,sprint 1 新增：包 A 按 D-028 第 7 条申请并建文件（PER-GEP-001），D-050 登记
+MK.MLR,Auditory middle-latency response,听觉中潜伏期反应,erp_component,EEG;MEG,A,PER-MLR,PER-MLR-001,1,1,sprint 1 新增：包 A 按 D-028 第 7 条申请并建文件（PER-MLR-001），D-050 登记
+MK.ORN,Object-related negativity,客体相关负波,erp_component,EEG;MEG,A,PER-ORN,PER-ORN-001,1,1,sprint 1 新增：包 A 按 D-028 第 7 条申请并建文件（PER-ORN-001），D-050 登记
+MK.Pd,Distractor positivity,干扰正波,erp_component,EEG,A,PER-ADDS,PER-ADDS-001,1,1,sprint 1 新增：包 A 按 D-028 第 7 条申请并建文件（PER-ADDS-001），D-050 登记
+MK.RREP,Respiratory-related evoked potential,呼吸相关诱发电位,erp_component,EEG,A,PER-RREP,PER-RREP-001,1,1,sprint 1 新增：包 A 按 D-028 第 7 条申请并建文件（PER-RREP-001），D-050 登记
+MK.SPN,Sustained posterior negativity,持续性后部负波,erp_component,EEG,A,PER-SPN,PER-SPN-001,1,1,sprint 1 新增：包 A 按 D-028 第 7 条申请并建文件（PER-SPN-001），D-050 登记
+MK.SSEP_nociceptive,Nociceptive steady-state evoked potential,伤害性稳态诱发电位,steady_state,EEG,A,SSR-NSSEP,SSR-NSSEP-001,1,1,sprint 1 新增：包 A 按 D-028 第 7 条申请并建文件（SSR-NSSEP-001），D-050 登记
+MK.intermodulation,Intermodulation frequency response,互调频率响应,steady_state,EEG;MEG,A,SSR-IM,SSR-IM-001,1,1,sprint 1 新增：包 A 按 D-028 第 7 条申请并建文件（SSR-IM-001），D-050 登记
+MK.vMMN,Visual mismatch negativity,视觉失匹配负波,erp_component,EEG;MEG,A,PER-VMMN,PER-VMMN-001,1,1,sprint 1 新增：包 A 按 D-028 第 7 条申请并建文件（PER-VMMN-001），D-050 登记
+MK.BOLD_olfactory_cortex,Olfactory (piriform) cortex BOLD,嗅觉（梨状）皮层 BOLD,hemodynamic,fMRI,B,IMG-OLF,IMG-OLF-001,1,1,sprint 1 新增：包 B 按 D-028 第 7 条申请并建文件（IMG-OLF-001），D-050 登记
+MK.BOLD_vestibular_cortex,Vestibular cortex BOLD,前庭皮层 BOLD,hemodynamic,fMRI,B,STM-GVS,STM-GVS-001,1,1,sprint 1 新增：包 B 按 D-028 第 7 条申请并建文件（STM-GVS-001），D-050 登记
+MK.corticokinematic_coherence,Corticokinematic coherence,皮层-运动学相干,connectivity,MEG;EEG,B,MOT-PASS,MOT-PASS-001,1,1,sprint 1 新增：包 B 按 D-028 第 7 条申请并建文件（MOT-PASS-001），D-050 登记
+MK.perturbation_N1,Perturbation-evoked N1,扰动诱发 N1,erp_component,EEG,B,MOT-PERT,MOT-PERT-001,1,1,sprint 1 新增：包 B 按 D-028 第 7 条申请并建文件（MOT-PERT-001），D-050 登记
+MK.subthalamic_beta,Subthalamic beta activity,丘脑底核 β 活动,oscillatory,other,B,STM-ADBS,STM-ADBS-001,1,1,sprint 1 新增：包 B 按 D-028 第 7 条申请并建文件（STM-ADBS-001），D-050 登记
+MK.BOLD_left_IFG,Left inferior frontal gyrus BOLD (interference resolution),左侧额下回 BOLD（干扰解决）,hemodynamic,fMRI,D,MEM-RPT,MEM-RPT-001,1,1,sprint 1 新增：包 D 按 D-028 第 7 条申请并建文件（MEM-RPT-001），D-050 登记
+MK.CPS,Closure positive shift (CPS),闭合正漂移（CPS）,erp_component,EEG,D,LAN-CPS,LAN-CPS-001;LAN-CPS-002,1,2,sprint 1 新增：包 D 按 D-028 第 7 条申请并建文件（LAN-CPS-001），D-050 登记
+MK.BOLD_posterior_insula,Posterior insula BOLD,后岛叶 BOLD,hemodynamic,fMRI,E,EMO-TOUCH,EMO-TOUCH-001,1,1,sprint 1 新增：包 E 按 D-028 第 7 条申请并建文件（EMO-TOUCH-001），D-050 登记

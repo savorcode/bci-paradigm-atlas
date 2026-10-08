@@ -1,0 +1,55 @@
+schema_version: '0.2'
+id: STM-SEP-001
+class: STM-SEP
+name:
+  en: Median-nerve somatosensory evoked potential
+  zh: 正中神经体感诱发电位
+aliases:
+- SEP
+- SSEP
+- somatosensory evoked potential
+- N20
+family: stimulation
+bci_category:
+- none
+recording_modality:
+- EEG
+- MEG
+stimulus_modality:
+- electrical_stimulation
+- somatosensory
+markers:
+- MK.SEP_N20
+description:
+  en: >-
+    Brief electrical pulses are applied to the median nerve at the wrist at a low repetition rate, and EEG/MEG responses are
+    averaged over hundreds of stimuli. The earliest cortical response, the N20 over the contralateral parietal scalp, reflects
+    activation of primary somatosensory cortex and is used clinically and as a timing reference.
+  zh: 以低重复频率在腕部向正中神经施加短暂电脉冲，对数百次刺激的 EEG/MEG 响应进行平均。最早的皮层响应——对侧顶区头皮上的 N20——反映初级体感皮层的激活，用于临床评估并作为时间参照。
+protocol:
+  n_classes: 1
+  classes:
+  - median-nerve stimulation at the wrist
+  cue: none
+  stimulus_coding: brief electrical pulses at a low repetition rate
+  paradigm_timing: synchronous
+  feedback: none
+  distinguishing: >-
+    Standard configuration (earliest published) / 标准配置（最早发表）: low-rate median-nerve pulses averaged for the N20 (Dawson 1947).
+    No sibling protocol yet.
+first_source:
+  citation: >-
+    Dawson GD. Cerebral responses to electrical stimulation of peripheral nerve in man. Journal of Neurology, Neurosurgery
+    and Psychiatry. 1947;10(3):134-140.
+  doi: 10.1136/jnnp.10.3.134
+  year: 1947
+  verified: false
+interop:
+  bids_task: sep
+notes: >-
+  Leads: R0163, R0169, R0181. Search sources (curation/work/pkg_B/search_log.md): S10 https://jnnp.bmj.com/content/10/3. first_source
+  found by search (S10); leads R0163/R0169/R0181 are clinical overviews. Memory lead (unverified): IFCN SEP standards (Cruccu
+  et al. 2008). bibliography corrected (OpenAlex, 2026-10-05)
+status: draft
+contributors:
+- curator_b

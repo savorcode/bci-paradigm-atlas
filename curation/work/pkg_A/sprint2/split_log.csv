@@ -1,0 +1,98 @@
+﻿class_id,new_id,criterion,distinguishing,source_ref,lead_url,status,note
+PER-AAD,PER-AAD-001,,标准配置（最早发表，即 first_source）：两路同时呈现（双耳分听）的连续语音，指示注意其中一路，按刺激包络重建解码被注意者，开环。本类暂无其他具体范式（no sibling protocol yet）。,Attentional Selection in a Cocktail Party Environment Can Be Decoded from Single,,已建文件,-001 标准配置
+PER-AB,PER-AB-001,,标准配置（最早发表，即 first_source）：RSVP 流中两个靶，T1–T2 间隔（lag）为参数，按 T2 报告与否分类。本类暂无其他具体范式（no sibling protocol yet）。,"Raymond, J. E., Shapiro, K. L., & Arnell, K. M. Temporary suppression of visual ",,已建文件,-001 标准配置
+PER-ABR,PER-ABR-001,,标准配置（最早发表，即 first_source）：高速率短声/短纯音，被动聆听，平均前 10 ms 响应。本类暂无其他具体范式（no sibling protocol yet）。,TBD,,已建文件,-001 标准配置
+PER-ACC,PER-ACC-001,,标准配置（最早发表，即 first_source）：每个试次的持续声音中都含一次声学变化，无 oddball 结构。本类暂无其他具体范式（no sibling protocol yet）。,TBD,,已建文件,-001 标准配置
+PER-ADDS,PER-ADDS-001,,标准配置（最早发表，即 first_source）：形状单例搜索，部分试次出现颜色单例干扰物。本类暂无其他具体范式（no sibling protocol yet）。,TBD,,已建文件,-001 标准配置
+PER-AEP,PER-AEP-001,,标准配置（最早发表，即 first_source）：被动聆听纯音/短声，ISI ≥ 1 s，测 N1–P2。本类暂无其他具体范式（no sibling protocol yet）。,TBD,,已建文件,-001 标准配置
+PER-AEP,,2,D-041：若 PER-ACC 并入 PER-AEP，则取 PER-AEP 新序号,,,待例会,D-041
+PER-AMASK,PER-AMASK-001,,标准配置（最早发表，即 first_source）：靶声在安静与掩蔽噪声条件下呈现，信噪比为参数。本类暂无其他具体范式（no sibling protocol yet）。,TBD,,已建文件,-001 标准配置
+PER-BODY,PER-BODY-001,,标准配置（最早发表，即 first_source）：组块呈现无头身体图像与物体图像对比（定位器）。本类暂无其他具体范式（no sibling protocol yet）。,A cortical area selective for visual processing of the human body.,,已建文件,-001 标准配置
+PER-BOI,PER-BOI-001,,标准配置（最早发表，即 first_source）：橡胶手与真手同步/异步触刷的组块对比。本类暂无其他具体范式（no sibling protocol yet）。,"Botvinick, M., & Cohen, J. Rubber hands 'feel' touch that eyes see. Nature, 391(",,已建文件,-001 标准配置
+PER-BR,PER-BR-001,,标准配置（最早发表，即 first_source）：双眼分视不同图像，被试连续按键报告当前主导知觉。本类暂无其他具体范式（no sibling protocol yet）。,TBD,,已建文件,-001 标准配置（收窄，见拆分行）
+PER-BR,PER-BR-002,2,两眼图像各带频率标记，稳态响应读出,R0346,,已建文件,first_source TBD
+PER-BR,,2,歧义图形（如 Necker 立方体）的双稳态知觉，单眼/双眼同一图像,,,提议,-001 原描述提到；无专门线索，未建文件
+PER-CAT,PER-CAT-001,,标准配置（最早发表，即 first_source）：多类别物体图像逐一呈现，按类别对比/解码。本类暂无其他具体范式（no sibling protocol yet）。,"Ungerleider, L.G., Mishkin, M. Two cortical visual systems. Analysis of Visual B",,已建文件,-001 标准配置
+PER-CB,PER-CB-001,,标准配置（最早发表，即 first_source）：两版场景以空屏间隔交替（闪烁范式），报告是否有变化。本类暂无其他具体范式（no sibling protocol yet）。,TBD,,已建文件,-001 标准配置
+PER-CTXC,PER-CTXC-001,,标准配置（最早发表，即 first_source）：重复与新异的搜索布局在组间交替出现。本类暂无其他具体范式（no sibling protocol yet）。,"Chun, M. M., & Jiang, Y. Contextual cueing: Implicit learning and memory of visu",,已建文件,-001 标准配置
+PER-CUE,PER-CUE-001,,标准配置（最早发表，即 first_source）：中央符号（箭头）线索，有效/无效/中性三种条件（内源性线索）。本类暂无其他具体范式（no sibling protocol yet）。,"Posner, M. I. Orienting of attention. Quarterly Journal of Experimental Psycholo",,已建文件,-001 标准配置（收窄，见拆分行）
+PER-CUE,PER-CUE-002,2,外周突显线索（外源性）,R0049; R0793; R0618,https://doi.org/10.1038/s41598-020-78172-x,已建文件,first_source 与 -001 同篇，待核对
+PER-CVA,PER-CVA-001,,标准配置（最早发表，即 first_source）：中央线索指引隐蔽注意左/右视野，测线索–靶间期 α 偏侧化，开环。本类暂无其他具体范式（no sibling protocol yet）。,"Thut G, Nietzel A, Brandt SA, Pascual-Leone A. α-Band Electroencephalographic Ac",,已建文件,-001 标准配置（收窄，见拆分行）
+PER-CVA,PER-CVA-002,4,单试次在线分类与反馈（闭环）,R0937,https://www.frontiersin.org/journals/human-neuroscience/articles/10.3389/fnhum.2010.00186,已建文件,first_source TBD（van Gerven & Jensen 2009）
+PER-FACE,PER-FACE-001,,标准配置（最早发表，即 first_source）：面孔与非面孔物体图像逐一呈现的事件相关设计（ERP）。本类暂无其他具体范式（no sibling protocol yet）。,Electrophysiological Studies of Face Perception in Humans.,,已建文件,-001 标准配置
+PER-FVEP,PER-FVEP-001,,标准配置（最早发表，即 first_source）：弥散闪光刺激，被动观察。本类暂无其他具体范式（no sibling protocol yet）。,TBD,,已建文件,-001 标准配置
+PER-GATE,PER-GATE-001,,标准配置（最早发表，即 first_source）：成对短声（约 500 ms 间隔），比较 S2/S1 的 P50。本类暂无其他具体范式（no sibling protocol yet）。,TBD,,已建文件,-001 标准配置
+PER-GEP,PER-GEP-001,,标准配置（最早发表，即 first_source）：味觉仪在恒定冲洗流中给短味觉脉冲。本类暂无其他具体范式（no sibling protocol yet）。,TBD,,已建文件,-001 标准配置
+PER-HBD,PER-HBD-001,,标准配置（最早发表，即 first_source）：心跳辨别：外部声音与心跳同步或延迟，被试判断是否同步。本类暂无其他具体范式（no sibling protocol yet）。,"Whitehead, W. E., Drescher, V. M., Heiman, P., & Blackwell, B. Relation of heart",,已建文件,-001 标准配置（收窄，见拆分行）
+PER-HBD,PER-HBD-002,2;3,无外部刺激的默数心跳（时段组块）,R0052,https://doi.org/10.1111/j.1469-8986.1981.tb02486.x,已建文件,-001 原描述混合两种版本
+PER-IB,PER-IB-001,,标准配置（最早发表，即 first_source）：多阶段设计，每阶段后问卷判定是否察觉无关图形。本类暂无其他具体范式（no sibling protocol yet）。,TBD,,已建文件,-001 标准配置
+PER-IC,PER-IC-001,,标准配置（最早发表，即 first_source）：Kanizsa 诱导物构成/不构成错觉图形。本类暂无其他具体范式（no sibling protocol yet）。,TBD,,已建文件,-001 标准配置
+PER-LEP,PER-LEP-001,,标准配置（最早发表，即 first_source）：短激光热脉冲刺激皮肤。本类暂无其他具体范式（no sibling protocol yet）。,Bromm B. Laser-evoked cerebral potentials in the assessment of cutaneous pain se,,已建文件,-001 标准配置
+PER-LG,PER-LG-001,,标准配置（最早发表，即 first_source）：五音序列，组块内某一序列类型高频，局部 × 全局 2×2 条件。本类暂无其他具体范式（no sibling protocol yet）。,Neural signature of the conscious processing of auditory regularities.,,已建文件,-001 标准配置
+PER-MASK,PER-MASK-001,,标准配置（最早发表，即 first_source）：后向掩蔽，靶–掩蔽 SOA 围绕阈限变化，按看见/未看见分类。本类暂无其他具体范式（no sibling protocol yet）。,"Del Cul, A., Baillet, S., & Dehaene, S. Brain dynamics underlying the nonlinear ",,已建文件,-001 标准配置
+PER-MASK,,2,元对比掩蔽（掩蔽物包围而不重叠靶）,R0923; R1015,,提议,-001 原描述提到；无专门源头线索，未建文件
+PER-MLR,PER-MLR-001,,标准配置（最早发表，即 first_source）：中等速率短声/短纯音，分析 10–80 ms。本类暂无其他具体范式（no sibling protocol yet）。,TBD,,已建文件,-001 标准配置
+PER-MMN,PER-MMN-001,,标准配置（最早发表，即 first_source）：被动 oddball：纯音序列中单一物理特征的低频偏差，被试忽略声音。本类暂无其他具体范式（no sibling protocol yet）。,"Naatanen, R., Gaillard, A. W. K., & Mantysalo, S. Early selective-attention effe",,已建文件,-001 标准配置（收窄，见拆分行）
+PER-MMN,PER-MMN-002,2,语音音节/元音取代纯音,R0988,https://pubmed.ncbi.nlm.nih.gov/7342998/,已建文件,原 -001 变体（D-017，并入候选 LAN-PHON-001）
+PER-MMN,PER-MMN-003,1,同一序列 5 种偏差类型交替,PMID:14706481,https://read.qxmd.com/read/14706481/the-mismatch-negativity-mmn-towards-the-optimal-paradigm,已建文件,作者待补
+PER-MOT,PER-MOT-001,,标准配置（最早发表，即 first_source）：若干相同物体运动，追踪事先高亮的靶子，负荷水平为条件。本类暂无其他具体范式（no sibling protocol yet）。,"Pylyshyn, Z. W., & Storm, R. W. Tracking multiple independent targets: Evidence ",,已建文件,-001 标准配置
+PER-MSI,PER-MSI-001,,标准配置（最早发表，即 first_source）：视听音节，口型与语音一致或不一致（McGurk）。本类暂无其他具体范式（no sibling protocol yet）。,"McGurk, H.; MacDonald, J. Hearing lips and seeing voices. Nature 264 (5588): 746",,已建文件,-001 标准配置（收窄，见拆分行）
+PER-MSI,PER-MSI-002,1;2,A、V、AV 三条件加性模型，非言语简单刺激,R0293,,已建文件,first_source TBD；-001 原描述混合两种配置
+PER-MVEP,PER-MVEP-001,,标准配置（最早发表，即 first_source）：短暂运动起始刺激，被动观察（临床视觉检查）。本类暂无其他具体范式（no sibling protocol yet）。,TBD,,已建文件,-001 标准配置（收窄，见拆分行）
+PER-MVEP,PER-MVEP-002,1;4,屏幕多目标，运动起始轮流出现，逐次离散选择反馈,search SA45/SA47 (Guo et al. 2008),,已建文件,原 -001 变体 Motion-onset VEP BCI
+PER-MVEP,,2,单一刺激，按刺激相对注视点的视网膜位置编码多目标,R0836,https://fis.uke.de/portal/de/publications/a-singlestimulus-multitarget-bci-based,提议,仅 1 条线索且无年份，未建文件
+PER-NAT,PER-NAT-001,,标准配置（最早发表，即 first_source）：自由观看连续影片，无任务，计算被试间相关。本类暂无其他具体范式（no sibling protocol yet）。,Intersubject synchronization of cortical activity during natural vision. Science,,已建文件,-001 标准配置
+PER-NAT,,1;2,静态自然图像观看（逐张呈现）vs 连续影片,,,提议,与 PER-CAT 边界待议，未建文件
+PER-NAVON,PER-NAVON-001,,标准配置（最早发表，即 first_source）：层级字母刺激，分别判断整体或局部层级。本类暂无其他具体范式（no sibling protocol yet）。,"Navon, D. Forest before trees: The precedence of global features in visual perce",,已建文件,-001 标准配置
+PER-ODD,PER-ODD-001,,标准配置（最早发表，即 first_source）：两刺激 oddball：高频标准刺激与低频靶刺激，被试计数或按键。本类暂无其他具体范式（no sibling protocol yet）。,"Sutton S, Braren M, Zubin J, John ER. Evoked-potential correlates of stimulus un",,已建文件,-001 标准配置（收窄，见拆分行）
+PER-ODD,PER-ODD-002,1,比 -001 多一个低频非靶干扰/新异刺激条件,R1022,https://en.wikipedia.org/wiki/P3a,已建文件,原 -001 别名 three-stimulus/novelty oddball 移入
+PER-ODD,PER-ODD-003,1;2;4,字符矩阵选择，行/列闪烁编码，逐字符离散反馈,R1052,https://pubmed.ncbi.nlm.nih.gov/2461285/,已建文件,原 -001 变体 P300 speller (row/column matrix)（种子）
+PER-ODD,PER-ODD-004,2;3,同一位置高速图像流，连续呈现，二类开环检测,R0038,,已建文件,原 -001 变体 RSVP（D-011，并入候选 PER-RSVP-001）
+PER-ODD,PER-ODD-005,1;4,中央 RSVP 字母流，字母表选择，逐字母离散反馈,doi:10.1016/j.clinph.2012.12.050,https://moabb.neurotechx.com/docs/generated/moabb.datasets.BNCI2015_010.html,已建文件,原 RSVP 变体中的 RSVP typing 部分
+PER-ODD,PER-ODD-006,1;2,棋盘格分组闪烁取代行/列闪烁（8×9 矩阵）,PMID:20347387,https://pmc.ncbi.nlm.nih.gov/articles/PMC2879474,已建文件,D-057 典型例子（行/列 vs 棋盘格）
+PER-ODD,PER-ODD-007,1;2,6 个图像指令，单项闪烁,doi:10.1016/j.jneumeth.2007.03.005,https://moabb.neurotechx.com/docs/generated/moabb.datasets.EPFLP300.html,已建文件,
+PER-ODD,PER-ODD-008,1;2,听觉空间方向编码（8 扬声器），无视觉刺激,doi:10.3389/fnins.2011.00112,https://moabb.neurotechx.com/docs/generated/moabb.datasets.BNCI2015_009.html,已建文件,first_source 为数据集文献，可能不是最早
+PER-ODD,PER-ODD-009,1;2,振动触觉刺激，类别为振动器位置,doi:10.3389/fnins.2010.00019,https://doaj.org/article/d7904c0274894787a310c430873f84c4,已建文件,D-012（sprint 1 阻塞项）
+PER-OLF,PER-OLF-001,,标准配置（最早发表，即 first_source）：嗅觉仪在恒定气流中给短气味脉冲。本类暂无其他具体范式（no sibling protocol yet）。,TBD,,已建文件,-001 标准配置
+PER-OMIT,PER-OMIT-001,,标准配置（最早发表，即 first_source）：外部定时的规则声音序列中偶尔遗漏刺激。本类暂无其他具体范式（no sibling protocol yet）。,TBD,,已建文件,-001 标准配置（收窄，见拆分行）
+PER-OMIT,PER-OMIT-002,2;3,按键自定步调触发声音（运动–听觉）,R0585; R0792,https://doaj.org/article/dd01270b01fb4f17a135a6057f9a8dde,已建文件,
+PER-ORN,PER-ORN-001,,标准配置（最早发表，即 first_source）：谐波复合音中某一谐波失谐或不失谐。本类暂无其他具体范式（no sibling protocol yet）。,Neural activity associated with distinguishing concurrent auditory objects.,,已建文件,-001 标准配置
+PER-PRVEP,PER-PRVEP-001,,标准配置（最早发表，即 first_source）：黑白棋盘格以固定速率翻转，注视中心。本类暂无其他具体范式（no sibling protocol yet）。,TBD,,已建文件,-001 标准配置
+PER-RET,PER-RET-001,,标准配置（最早发表，即 first_source）：旋转楔形与扩张环，相位编码（行波）设计。群体感受野（pRF）模型配置拆为 PER-RET-002（准则 2）。,"DeYoe EA, Carman GJ, Bandettini P, Glickman S, Wieser J, Cox R, Miller D, Neitz ",,已建文件,-001 标准配置（收窄，见拆分行）
+PER-RET,PER-RET-002,2,基于模型的孔径序列（pRF），含空白期,doi:10.1016/j.neuroimage.2007.09.034,https://research-portal.uu.nl/en/publications/population-receptive-field-estimates-in-human-visual-cortex/,已建文件,
+PER-RREP,PER-RREP-001,,标准配置（最早发表，即 first_source）：吸气起始时经口器短暂阻断气道。本类暂无其他具体范式（no sibling protocol yet）。,TBD,,已建文件,-001 标准配置
+PER-SPN,PER-SPN-001,,标准配置（最早发表，即 first_source）：对称与随机点阵/多边形图案对比。本类暂无其他具体范式（no sibling protocol yet）。,TBD,,已建文件,-001 标准配置
+PER-STREAM,PER-STREAM-001,,标准配置（最早发表，即 first_source）：ABA- 交替音序列，频率间隔/速率决定是否分流，流内偏差诱发 MMN。本类暂无其他具体范式（no sibling protocol yet）。,An investigation of the auditory streaming effect using event-related brain pote,,已建文件,-001 标准配置
+PER-TACT,PER-TACT-001,,标准配置（最早发表，即 first_source）：左右手触觉刺激，注意一侧检测低频靶。本类暂无其他具体范式（no sibling protocol yet）。,TBD,,已建文件,-001 标准配置
+PER-TON,PER-TON-001,,标准配置（最早发表，即 first_source）：纯音/窄带声按频率递进呈现。本类暂无其他具体范式（no sibling protocol yet）。,"Talavage TM, et al. Tonotopic organization in human auditory cortex revealed by ",,已建文件,-001 标准配置
+PER-VMMN,PER-VMMN-001,,标准配置（最早发表，即 first_source）：视觉 oddball，被试执行无关任务。本类暂无其他具体范式（no sibling protocol yet）。,TBD,,已建文件,-001 标准配置
+PER-VOICE,PER-VOICE-001,,标准配置（最早发表，即 first_source）：嗓音与非嗓音环境声的组块对比（定位器）。本类暂无其他具体范式（no sibling protocol yet）。,TBD,,已建文件,-001 标准配置
+PER-VS,PER-VS-001,,标准配置（最早发表，即 first_source）：特征搜索与联合搜索，靶有/无，集合大小为参数。本类暂无其他具体范式（no sibling protocol yet）。,"Treisman, A., & Gelade, G. A feature-integration theory of attention. Cognitive ",,已建文件,-001 标准配置
+SSR-ASSR,SSR-ASSR-001,,标准配置（最早发表，即 first_source）：约 40 Hz 短声串/调幅音，被动聆听。本类暂无其他具体范式（no sibling protocol yet）。,40-Hz auditory potential recorded from the human scalp (Alzforum paper record).,,已建文件,-001 标准配置（收窄，见拆分行）
+SSR-ASSR,SSR-ASSR-002,1;2;4,左右两路不同速率声流，注意其一，在线反馈,doi:10.1016/j.jneumeth.2011.02.007,https://scholar.korea.ac.kr/handle/2021.sw.korea/112660?mode=full,已建文件,
+SSR-BEAT,SSR-BEAT-001,,标准配置（最早发表，即 first_source）：聆听节律声音，有/无想象节拍（二拍/三拍）。本类暂无其他具体范式（no sibling protocol yet）。,"Nozaradan S, Peretz I, Missal M, Mouraux A. Tagging the neuronal entrainment to ",,已建文件,-001 标准配置
+SSR-CVEP,SSR-CVEP-001,,标准配置（最早发表，即 first_source）：各目标使用同一 m 序列的循环移位编码，模板匹配，逐次选择反馈。Gold 码拆为 -002（准则 2），burst 码拆为 -003（准则 2）。,TBD,,已建文件,-001 标准配置（收窄，见拆分行）
+SSR-CVEP,SSR-CVEP-002,1;2,各目标独立的调制 Gold 码，重卷积模板,doi:10.1371/journal.pone.0133797,https://moabb.neurotechx.com/docs/generated/moabb.datasets.Thielen2015.html,已建文件,
+SSR-CVEP,SSR-CVEP-003,2,稀疏突发码,doi:10.1016/j.neuroimage.2023.120446,https://moabb.neurotechx.com/docs/generated/moabb.datasets.CastillosBurstVEP100.html,已建文件,幅度深度 40% 记为参数级变体
+SSR-FFR,SSR-FFR-001,,标准配置（最早发表，即 first_source）：低频纯音重复呈现，平均锁相响应。本类暂无其他具体范式（no sibling protocol yet）。,"Worden FG, Marsh JT. Frequency-following (microphonic-like) neural responses evo",,已建文件,-001 标准配置（收窄，见拆分行）
+SSR-FFR,SSR-FFR-002,2,语音音节/复杂声取代纯音,R0770; search S2A20/S2A21,https://production.wordpress.uconn.edu/skoe/wp-content/uploads/sites/278/2013/11/Skoe_Kraus_EarHear_2010.pdf,已建文件,first_source TBD
+SSR-FPAS,SSR-FPAS-001,,标准配置（最早发表，即 first_source）：快速固定速率声音序列中按较慢周期插入目标类别声音。本类暂无其他具体范式（no sibling protocol yet）。,"Barbero F, Calce RP, Rossion B, Collignon O. Fast periodic auditory stimulation ",,已建文件,-001 标准配置
+SSR-FPVS,SSR-FPVS-001,,标准配置（最早发表，即 first_source）：快速固定速率图像序列中按较慢周期插入 oddball 图像。本类暂无其他具体范式（no sibling protocol yet）。,TBD,,已建文件,-001 标准配置
+SSR-FPVS,,1,面孔类别辨别 vs 面孔身份辨别（oddball 条件集不同）,R0814; R1014,,提议,无源头线索，未建文件
+SSR-IM,SSR-IM-001,,标准配置（最早发表，即 first_source）：刺激两部分以 f1、f2 闪烁，比较对齐与错位。本类暂无其他具体范式（no sibling protocol yet）。,"Boremanse A, Norcia AM, Rossion B. Dissociation of part-based and integrated neu",,已建文件,-001 标准配置
+SSR-NSSEP,SSR-NSSEP-001,,标准配置（最早发表，即 first_source）：皮肤快速周期性激光热刺激。本类暂无其他具体范式（no sibling protocol yet）。,"Mouraux A, Iannetti GD, Colon E, Nozaradan S, Legrain V, Plaghki L. Nociceptive ",,已建文件,-001 标准配置
+SSR-RVS,SSR-RVS-001,,标准配置（最早发表，即 first_source）：近 α 频率的节律视觉流后呈现近阈靶，靶相位为条件。本类暂无其他具体范式（no sibling protocol yet）。,TBD,,已建文件,-001 标准配置
+SSR-SSMVEP,SSR-SSMVEP-001,,标准配置（最早发表，即 first_source）：牛顿环周期性收缩–扩张运动，各目标不同运动频率。本类暂无其他具体范式（no sibling protocol yet）。,Steady-State Motion Visual Evoked Potentials Produced by Oscillating Newton's Ri,,已建文件,-001 标准配置
+SSR-SSSEP,SSR-SSSEP-001,,标准配置（最早发表，即 first_source）：单一部位恒定频率振动刺激，被动。本类暂无其他具体范式（no sibling protocol yet）。,TBD,,已建文件,-001 标准配置（收窄，见拆分行）
+SSR-SSSEP,SSR-SSSEP-002,1;2,双侧不同频率振动并存，注意左/右,R1048,https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4712271/,已建文件,原 -001 变体（D-012）；first_source 为综述
+SSR-SSVEP,SSR-SSVEP-001,,标准配置（最早发表，即 first_source）：单一调制光源，按运行改变频率，被动观察，开环（Regan 1966）。多目标频率编码 BCI -002（准则 1;4）、临床光驱动 -003（准则 1;3）、多刺激频率标记注意 -004（准则 1;2）、JFPM 40 目标拼写 -005、JFPM 12 目标 -006、含静息类 -007、异步 -008。,Regan D. Some characteristics of average steady-state and transient responses ev,,已建文件,-001 标准配置（收窄，见拆分行）
+SSR-SSVEP,SSR-SSVEP-002,1;4,多目标同时闪烁，频率编码，逐次离散选择反馈,seed (Middendorf et al. 2000),,已建文件,原 -001 变体 SSVEP-based BCI（种子）
+SSR-SSVEP,SSR-SSVEP-003,1;3,阶梯频率闪光串组块（睁/闭眼），临床判读,R1090,,已建文件,原 -001 变体（D-002，并入候选 SSR-PD-001）
+SSR-SSVEP,SSR-SSVEP-004,1;2,多个并存频率标记刺激，隐蔽注意其一，开环,PMID:8643478,https://buscaintegrada.ufrj.br/Record/pubmed-39354,已建文件,原 -001 变体（D-003，并入候选 SSR-FT-001）；高频变体（D-004）作为本文件参数级变体
+SSR-SSVEP,SSR-SSVEP-004,,高频/不可见闪烁：仅刺激频率改变,search SA32,,保留为变体,D-004；从 -001 移到 -004（出处为空间注意频率标记研究）
+SSR-SSVEP,SSR-SSVEP-005,1;2,联合频率–相位编码，固定 40 字符键盘,search S2A14/S2A17 (PNAS 2015),https://www.kurzweilai.net/fastest-brain-computer-interface-speller-developed,已建文件,D-057 典型例子（频率编码 vs 联合频率–相位编码）；作者待补
+SSR-SSVEP,SSR-SSVEP-006,1;2,12 目标联合频率–相位编码,doi:10.1371/journal.pone.0140703,https://moabb.neurotechx.com/docs/generated/moabb.datasets.Nakanishi2015.html,已作废,D-058（专家裁定，2026-10-05）：同质目标个数为参数，降为 SSR-SSVEP-005 的参数级变体；文件保留，status deprecated，序号不复用（维护者）
+SSR-SSVEP,SSR-SSVEP-007,1,频率类之外加入静息/非控制类（同步提示）,doi:10.1016/j.neucom.2016.01.007,https://moabb.neurotechx.com/docs/generated/moabb.datasets.Kalunga2016.html,已建文件,待例会：静息类是否足以构成准则 1
+SSR-SSVEP,SSR-SSVEP-008,3,异步自定步调，空闲/控制状态检测,search S2A28/S2A29,https://robot.sia.cn/article/doi/10.3724/SP.J.1218.2013.00045,已建文件,first_source TBD
+SSR-SWEEP,SSR-SWEEP-001,,标准配置（最早发表，即 first_source）：固定翻转率的图形在单试次内扫描空间频率。本类暂无其他具体范式（no sibling protocol yet）。,TBD,,已建文件,-001 标准配置
+SSR-SWEEP,,1,对比度扫描 vs 空间频率扫描,R0787,,提议,可能为参数级，待例会

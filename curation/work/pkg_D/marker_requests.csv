@@ -1,0 +1,3 @@
+﻿marker_id,name_en,name_zh,type,recording_modality,requested_by_paradigm,reason
+MK.CPS,Closure positive shift (CPS),闭合正漂移（CPS）,erp_component,EEG,LAN-CPS-001,No CPS or prosodic-boundary ERP in registry; distinct from P600 (boundary-locked; prosodic phrasing). File created by pkg D (owner D).
+MK.BOLD_left_IFG,Left inferior frontal gyrus BOLD (interference resolution),左侧额下回 BOLD（干扰解决）,hemodynamic,fMRI,MEM-RPT-001,Registry has no IFG/vlPFC control marker; MK.BOLD_dlPFC is a different region; MK.BOLD_language_network includes left IFG but indexes language - maintainer to decide whether to merge into MK.BOLD_language_network instead. File created by pkg D (owner D).

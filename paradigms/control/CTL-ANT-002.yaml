@@ -1,0 +1,65 @@
+schema_version: '0.2'
+id: CTL-ANT-002
+class: CTL-ANT
+name:
+  en: Attention Network Test - Interactions (ANT-I)
+  zh: 注意网络测试-交互版（ANT-I）
+aliases:
+- ANT-I
+- ANT-I (interaction variant)
+- Attention Network Test - Interaction
+family: control
+bci_category:
+- none
+recording_modality:
+- EEG
+- fMRI
+stimulus_modality:
+- visual
+- auditory
+markers:
+- MK.N1_visual
+- MK.P3b
+- MK.CNV
+description:
+  en: A version of the Attention Network Test in which alerting is manipulated with an auditory warning tone and orienting
+    with valid or invalid peripheral visual cues, combined with congruent or incongruent arrow flankers, so that interactions
+    among alerting, orienting and executive control can be measured.
+  zh: 注意网络测试的一个版本：警觉由听觉提示音操纵，定向由有效或无效的外周视觉线索操纵，再与一致或不一致的箭头 flanker 组合，从而测量警觉、定向与执行控制之间的交互。
+trial_structure:
+  conditions:
+  - tone / no tone
+  - valid / invalid / no cue
+  - congruent / incongruent
+protocol:
+  n_classes: 7
+  classes:
+  - warning tone
+  - no tone
+  - valid cue
+  - invalid cue
+  - no cue
+  - congruent flankers
+  - incongruent flankers
+  cue: auditory alerting tone and peripheral visual cues of varying validity preceding arrow flankers
+  paradigm_timing: synchronous
+  feedback: none
+  distinguishing: 准则 2：警觉信号改为听觉提示音；准则 1：定向线索引入有效/无效条件（CTL-ANT-001 为视觉警觉线索、只有有效的空间线索）。
+first_source:
+  citation: 'Callejas A, Lupiáñez J, Tudela P. The three attentional networks: on their independence and interactions. Brain
+    and Cognition 54(3): 225-227. 2004.'
+  doi: 10.1016/j.bandc.2004.02.012
+  year: 2004
+  verified: false
+interop:
+  bids_task: anti
+notes: 'Leads used: R1312 (bibliographic record, no abstract), R1313 (as cited on https://www.millisecond.com/library/ant_i:
+  auditory alerting signal and cue validity), R0476, HED ANT page. The 2004 Brain and Cognition item is 3 pages and may be
+  a short report; if the maintainer prefers the full 2005 paper as first_source, swap it. Markers inherited from the class.
+  D-061 (maintainer, 2026-10-05): marker inherited from class - MK.N1_visual, MK.P3b, MK.CNV measured in the sibling CTL-ANT-001
+  (standard ANT), not in the behavioural ANT-I configuration. Sprint 2 (D-057, curator_c, 2026-10-03): new concrete paradigm
+  of class CTL-ANT; numbering criterion 1;2 relative to CTL-ANT-001; all sources unverified. bibliography confirmed (Crossref,
+  2026-10-05)'
+status: draft
+contributors:
+- curator_c

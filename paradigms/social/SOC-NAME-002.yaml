@@ -1,0 +1,50 @@
+schema_version: '0.2'
+id: SOC-NAME-002
+class: SOC-NAME
+name:
+  en: Active own-name counting paradigm
+  zh: 主动计数自身名字范式
+aliases:
+- active own-name paradigm
+- count-your-name paradigm
+family: social
+bci_category:
+- reactive
+- none
+recording_modality:
+- EEG
+stimulus_modality:
+- auditory
+markers:
+- MK.P3b
+description:
+  en: Sequences of spoken names that include the participant's own name are presented, and in different blocks the participant
+    is instructed to count their own name, to count another target name, or to listen passively. The P3 to a voluntarily counted
+    name is larger than during passive listening, which is used to detect command following in patients with disorders of
+    consciousness.
+  zh: 呈现包含被试自身名字的口语名字序列；在不同组块中，指示被试数自己的名字、数另一个目标名字或被动聆听。被主动计数的名字所诱发的 P3 大于被动聆听，可用于检测意识障碍患者能否执行指令。
+protocol:
+  n_classes: 3
+  classes:
+  - count own name
+  - count another target name
+  - passive listening
+  cue: spoken name sequences with an instruction before each block
+  paradigm_timing: block
+  feedback: none
+  distinguishing: 'Criterion 1 versus SOC-NAME-001: instruction conditions (count own name, count other name, passive) are
+    added, so the contrast is voluntary attention to a name rather than self-relevance alone (Schnakers et al. 2009).'
+first_source:
+  citation: 'Schnakers C, Perrin F, Schabus M, Hustinx R, Majerus S, Moonen G, Boly M, Vanhaudenhuyse A, Bruno MA, Laureys
+    S. Detecting consciousness in a total locked-in syndrome: an active event-related paradigm. Neurocase. 2009;15(4):271-277.'
+  doi: 10.1080/13554790902724904
+  year: 2009
+  verified: false
+notes: 'Source: sprint-2 S2-12 [=R1341] (https://orbi.uliege.be/handle/2268/32997). An earlier group study by the same team
+  (searched as ''Voluntary brain processing in disorders of consciousness'', Neurology 2008) was not confirmed by any fetched
+  page; first_source is the earliest seen. Lead refs: R1185, R1264. New concrete paradigm (curator_e, sprint 2, 2026-10-03,
+  D-057); all sources unverified. Sprint 3 (curator_d, 2026-10-05): bibliography corrected (OpenAlex, 2026-10-05): volume,
+  issue, pages added.'
+status: draft
+contributors:
+- curator_e

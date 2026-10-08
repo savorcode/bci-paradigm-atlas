@@ -1,0 +1,26 @@
+schema_version: "0.2"
+id: MK.HEP
+name:
+  en: Heartbeat-evoked potential
+  zh: 心跳诱发电位
+aliases:
+- HEP
+- heartbeat-evoked potential
+- heartbeat-evoked response
+- HER
+type: erp_component
+recording_modality:
+- EEG
+- MEG
+signature:
+  latency_ms: ~200-600 after R-peak
+  topography: fronto-central
+description:
+  en: Cortical potential time-locked to the R-peak of the electrocardiogram, reflecting cortical processing of cardiac afferent
+    signals; its amplitude is modulated by attention to the heartbeat.
+  zh: 与心电 R 波锁时的皮层电位，反映皮层对心脏传入信号的加工；其波幅受对心跳的注意调制。
+notes: First-pass skeleton by package A (2026-10-03). No generators/indexes yet. Signature values are textbook-level approximations
+  and await source checking.
+status: draft
+contributors:
+- curator_a

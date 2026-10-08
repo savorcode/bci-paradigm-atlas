@@ -1,0 +1,54 @@
+schema_version: '0.2'
+id: MEM-PM-002
+class: MEM-PM
+name:
+  en: Time-based prospective memory
+  zh: 时间型前瞻记忆
+aliases:
+- time-based prospective memory
+- TBPM
+family: memory
+bci_category:
+- none
+recording_modality:
+- fMRI
+stimulus_modality:
+- visual
+markers:
+- MK.BOLD_frontopolar
+description:
+  en: Participants perform an ongoing task and must make a prospective-memory response at specified times (for example every
+    minute), usually with the option of checking a clock; there is no external event cue. fMRI shows transient anterior prefrontal
+    activity that increases before clock checks, in contrast to the sustained activity reported for event-based prospective
+    memory.
+  zh: 被试执行进行中任务，同时须在指定时刻（如每隔一分钟）作出前瞻记忆反应，通常可以查看时钟；没有外部事件线索。fMRI 显示前部前额叶的短暂活动在查看时钟之前增加，与事件型前瞻记忆中报告的持续活动不同。
+trial_structure:
+  conditions:
+  - ongoing trial
+  - clock check
+  - time-based PM response
+protocol:
+  n_classes: 3
+  classes:
+  - ongoing-task trial
+  - clock check
+  - PM response at target time
+  cue: ongoing-task stimuli; a clock that can be checked on request
+  paradigm_timing: synchronous
+  feedback: none
+  distinguishing: 准则 2：前瞻记忆线索由外部事件（MEM-PM-001）变为时间（自我监控时钟），条件集相应增加“查看时钟”。
+first_source:
+  citation: 'Einstein GO, McDaniel MA, Richardson SL, Guynn MJ, Cunfer AR. Aging and prospective memory: Examining the influences
+    of self-initiated retrieval processes. Journal of Experimental Psychology: Learning, Memory, and Cognition. 1995;21(4):996-1007.'
+  doi: 10.1037/0278-7393.21.4.996
+  year: 1995
+  verified: false
+notes: 'New configuration (sprint 2). Leads: R1326 (Oksanen, Waldum, McDaniel & Braver 2014, PLoS ONE, fMRI of time-based
+  prospective memory; WebSearch S2-07), R0651 (Cona et al. 2015 meta-analysis covering event- and time-based tasks), R0092.
+  (R#### = curation/literature.csv; DN## = curation/work/pkg_D/new_leads.csv.) Numbering criterion (D-057): 2. first_source
+  TBD resolved by bibliographic search (OpenAlex, 2026-10-05; curator_c): candidate origin found by bibliographic search;
+  content unverified. Previous entry: "TBD: origin of the time-based prospective memory procedure not retrieved" [maintainer
+  sprint 3, 2026-10-07] bibliography confirmed (OpenAlex, 2026-10-05; origin candidate, content unverified).'
+status: draft
+contributors:
+- curator_d

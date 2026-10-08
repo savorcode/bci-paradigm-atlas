@@ -1,0 +1,57 @@
+schema_version: '0.2'
+id: STA-HYPN-001
+class: STA-HYPN
+name:
+  en: Hypnotic induction
+  zh: 催眠诱导
+aliases:
+- hypnosis
+- hypnotic state
+- hypnotic induction
+family: state
+bci_category:
+- none
+recording_modality:
+- fMRI
+- EEG
+stimulus_modality:
+- auditory
+markers:
+- MK.BOLD_dACC
+- MK.DMN_connectivity
+description:
+  en: Highly and low hypnotizable participants listen to a standardized hypnotic induction and are compared with rest or control
+    conditions such as memory recall. The hypnotic state is accompanied by reduced dorsal anterior cingulate activity and
+    altered connectivity between prefrontal cortex and the default mode network.
+  zh: 高、低催眠易感性的被试聆听标准化的催眠诱导，并与静息或对照条件（如记忆回忆）比较。催眠状态伴随背侧前扣带活动降低，以及前额叶与默认模式网络之间连接的改变。
+protocol:
+  n_classes: 3
+  classes:
+  - hypnosis
+  - rest
+  - control (e.g. memory recall)
+  cue: recorded standardised hypnotic induction
+  paradigm_timing: block
+  feedback: none
+  distinguishing: 'Standard configuration (earliest published or canonical; D-057 -001): induction versus rest and control
+    conditions in high and low hypnotizables; origin publication TBD (first_source holds an fMRI study, D-031).'
+first_source:
+  citation: Jiang H, White MP, Greicius MD, Waelde LC, Spiegel D. Brain activity and functional connectivity associated with
+    hypnosis. Cerebral Cortex. 2017;27(8):4083-4093.
+  doi: 10.1093/cercor/bhw220
+  year: 2017
+  verified: false
+interop:
+  bids_task: hypnosis
+notes: 'Sources found by curator_e (curation/work/pkg_E/search_log.md): S22 = https://researchers.evms.edu/display/pub27469596.
+  first_source note: Search query named Jiang H, White MP, Greicius MD, Waelde LC, Spiegel D; author list to be verified.
+  Not an origin paper; earlier hypnosis EEG/PET work not surfaced. New candidate (curator_e). S22 is not an origin paper;
+  earlier EEG/PET hypnosis studies not surfaced. First-pass skeleton (curator_e, 2026-10-03); all sources unverified. D-031
+  (maintainer, 2026-10-03): first_source currently holds the earliest neural recording study found, not the paradigm origin;
+  in sprint 2 move it to a "First neural recording:" line and fill first_source with the origin. Sprint 2 (curator_e, 2026-10-03):
+  protocol block added per D-057; see curation/work/pkg_E/sprint2/split_log.csv. Sprint 3 (curator_d, 2026-10-05): bibliography
+  corrected (OpenAlex, 2026-10-05): first author (Jiang H, not Spiegel), author list expanded, doi added. [maintainer sprint
+  3, 2026-10-07, D-073] origin candidate recalled, record confirmed via OpenAlex.'
+status: draft
+contributors:
+- curator_e

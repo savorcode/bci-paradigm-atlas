@@ -1,0 +1,54 @@
+schema_version: '0.2'
+id: PER-BOI-001
+class: PER-BOI
+name:
+  en: Body ownership illusion
+  zh: 身体拥有错觉（橡胶手）
+aliases:
+- Body Transfer Illusion
+- Enfacement Illusion
+- Full Body Illusion
+- Multisensory Body Illusion
+- RHI
+- Rubber Hand Illusion
+- Virtual Hand Illusion
+family: perception
+bci_category:
+- none
+recording_modality:
+- fMRI
+- EEG
+stimulus_modality:
+- visual
+- somatosensory
+markers:
+- MK.BOLD_premotor_parietal
+description:
+  en: A rubber or virtual hand in view is stroked synchronously with the participant's hidden real hand, which induces a feeling
+    of ownership of the fake hand; asynchronous stroking serves as control. The illusion is associated with BOLD increases
+    in premotor and posterior parietal cortex.
+  zh: 在被试视野中的橡胶手或虚拟手与其被遮挡的真手同步受到刷触，诱发对假手的拥有感；异步刷触作为对照。该错觉与前运动皮层和后顶叶的 BOLD 增加相关。
+protocol:
+  n_classes: 2
+  classes:
+  - synchronous stroking
+  - asynchronous stroking
+  cue: visuo-tactile stroking of a seen rubber hand and the hidden real hand
+  paradigm_timing: block
+  feedback: none
+  distinguishing: 标准配置（最早发表，即 first_source）：橡胶手与真手同步/异步触刷的组块对比。本类暂无其他具体范式（no sibling protocol yet）。
+first_source:
+  citation: Botvinick, M., & Cohen, J. Rubber hands 'feel' touch that eyes see. Nature, 391(6669), 756. 1998.
+  doi: 10.1038/35784
+  pmid: '9486643'
+  year: 1998
+  verified: false
+interop:
+  bids_task: rubberhand
+notes: 'HED task page: https://www.hedtags.org/hed-task/tasks/hedtsk_body_ownership_illusion.html. Leads used: R0168, R0407,
+  R0417, R0471, R0655, R0656. [curator_a sprint 2, 2026-10-03] D-057: protocol block added for the canonical configuration;
+  no other concrete paradigm identified for this class in sprint 2. [curator_e sprint 3, 2026-10-05] bibliography confirmed
+  (OpenAlex, 2026-10-05).'
+status: draft
+contributors:
+- curator_a

@@ -1,0 +1,55 @@
+schema_version: '0.2'
+id: ERR-TS-002
+class: ERR-TS
+name:
+  en: Two-stage task with deterministic transitions
+  zh: 确定性转移两阶段任务
+aliases:
+- Kool two-step task
+- Deterministic two-step task
+family: error
+bci_category:
+- none
+recording_modality:
+- fMRI
+- EEG
+stimulus_modality:
+- visual
+markers:
+- MK.BOLD_striatum_reward
+description:
+  en: A modified two-stage task in which each first-stage choice leads deterministically to one second-stage state and trials
+    start from one of two different first-stage states, while second-stage rewards drift as graded points. Model-based control
+    is revealed by generalisation of reward across start states, and the design makes model-based control pay off more than
+    in the original task.
+  zh: 改良的两阶段任务：每个第一阶段选择确定地通向某个第二阶段状态，试次从两种不同的第一阶段状态之一开始，第二阶段奖赏以分数形式漂移。基于模型的控制表现为奖赏在不同起始状态间的泛化；该设计使基于模型的控制比原任务更有收益。
+trial_structure:
+  conditions:
+  - same start state as previous trial
+  - different start state
+protocol:
+  n_classes: 2
+  classes:
+  - first-stage state 1
+  - first-stage state 2
+  cue: two alternative first-stage states, each with two options leading deterministically to second-stage states with drifting
+    point rewards
+  paradigm_timing: synchronous
+  feedback: discrete
+  distinguishing: 准则 1、2：去掉常见/罕见转移（确定性转移），引入两个起始状态，奖赏为连续分数（ERR-TS-001 为概率转移与二值奖赏）。
+first_source:
+  citation: Kool W, Cushman FA, Gershman SJ. When Does Model-Based Control Pay Off?. PLOS Computational Biology. 2016;12(8):e1005090.
+  doi: 10.1371/journal.pcbi.1005090
+  year: 2016
+  verified: false
+interop:
+  bids_task: twostep
+notes: 'Leads used: R0692 (literature.csv). Task details from memory of R0692, not re-read in sprint 2 - to be checked against
+  the original. The source is behavioural; markers and recording modalities are inherited from the class (D-057: markers are
+  class-level) and need a neural lead for this configuration in pass 2. D-061 (maintainer, 2026-10-05): marker inherited from
+  class - MK.BOLD_striatum_reward measured in the sibling ERR-TS-001 (fMRI two-step task), not in this behavioural configuration.
+  Sprint 2 (D-057, curator_c, 2026-10-03): new concrete paradigm of class ERR-TS; numbering criterion 1;2 relative to ERR-TS-001;
+  all sources unverified. bibliography corrected (Crossref, 2026-10-05)'
+status: draft
+contributors:
+- curator_c

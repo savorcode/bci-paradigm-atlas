@@ -1,0 +1,56 @@
+schema_version: '0.2'
+id: MEM-RIF-001
+class: MEM-RIF
+name:
+  en: Retrieval-induced forgetting
+  zh: 提取诱发遗忘
+aliases:
+- RIF
+- retrieval-practice paradigm
+family: memory
+bci_category:
+- none
+recording_modality:
+- fMRI
+- EEG
+stimulus_modality:
+- visual
+markers:
+- MK.BOLD_category_selective
+description:
+  en: Participants study category-exemplar pairs, then repeatedly retrieve a subset of exemplars from some categories (retrieval
+    practice), and finally recall all items. Unpractised exemplars from practised categories are recalled worse than items
+    from unpractised categories, and fMRI shows that the cortical activity patterns of competing memories are progressively
+    suppressed in category-selective visual cortex across retrieval practice.
+  zh: 被试学习类别—样例词对，然后对部分类别中的部分样例反复进行提取练习，最后回忆全部项目。被练习类别中未被练习的样例，其回忆成绩低于未被练习类别的项目；fMRI 显示，在提取练习过程中，竞争记忆在类别选择性视觉皮层中的激活模式逐渐受到抑制。
+trial_structure:
+  conditions:
+  - Rp+
+  - Rp-
+  - Nrp
+protocol:
+  n_classes: 3
+  classes:
+  - practised item (Rp+)
+  - unpractised item of practised category (Rp-)
+  - item of unpractised category (Nrp)
+  cue: category-exemplar word pairs; category plus word-stem cues for retrieval practice
+  paradigm_timing: synchronous
+  feedback: none
+  distinguishing: 标准配置（最早发表）：学习—提取练习—最终测试三阶段（Anderson, Bjork & Bjork 1994, R1159）。本类只有这一配置。
+first_source:
+  citation: 'Anderson MC, Bjork RA, Bjork EL. Remembering can cause forgetting: Retrieval dynamics in long-term memory. Journal
+    of Experimental Psychology: Learning, Memory, and Cognition. 1994;20(5):1063-1087.'
+  doi: 10.1037/0278-7393.20.5.1063
+  year: 1994
+  verified: false
+interop:
+  bids_task: rif
+notes: 'Leads: DN12, DN13, DN14 (R#### = curation/literature.csv; DN## = curation/work/pkg_D/new_leads.csv). New candidate
+  (curator_d). Marker chosen to reflect cortical pattern suppression of competing memories in ventral visual cortex (DN12);
+  EEG measures (DN13) may later justify an additional marker. Leads: DN12, DN13, DN14. Sprint 2 (D-057, curator_d, 2026-10-03):
+  protocol block added (-001 = earliest/standard configuration). bibliography corrected (Crossref, 2026-10-05) [maintainer
+  sprint 3, 2026-10-07, D-073] origin candidate recalled, record confirmed via Crossref.'
+status: draft
+contributors:
+- curator_d

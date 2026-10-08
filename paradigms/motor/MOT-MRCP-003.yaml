@@ -1,0 +1,53 @@
+schema_version: '0.2'
+id: MOT-MRCP-003
+class: MOT-MRCP
+name:
+  en: Self-paced online MRCP detection triggering peripheral stimulation
+  zh: 自定步调在线 MRCP 检测触发外周刺激
+aliases:
+- self-paced associative BCI
+- MRCP brain switch
+family: motor
+bci_category:
+- active
+recording_modality:
+- EEG
+stimulus_modality:
+- mental_imagery
+- motor_execution
+- electrical_stimulation
+markers:
+- MK.MRCP
+description:
+  en: >-
+    Without any external cue, the participant imagines ankle dorsiflexions at self-chosen times while the MRCP is detected
+    continuously from EEG (e.g. with a matched filter); each detection immediately triggers electrical stimulation of the
+    common peroneal nerve, closing the loop between movement intention and afferent input.
+  zh: 没有外部提示，被试在自选时刻想象踝背屈，同时从脑电中连续检测 MRCP（如用匹配滤波器）；每次检测到即触发腓总神经电刺激，在运动意图与传入输入之间形成闭环。
+protocol:
+  n_classes: 2
+  classes:
+  - self-paced imagined ankle dorsiflexion
+  - idle
+  cue: none (self-paced)
+  paradigm_timing: asynchronous
+  feedback: discrete
+  distinguishing: >-
+    Criterion 4 vs MOT-MRCP-001: online detection of each self-paced MRCP triggers peripheral nerve stimulation (discrete,
+    closed loop) instead of offline averaging; criterion 1 also differs (idle class).
+first_source:
+  citation: >-
+    Jochumsen M, Navid MS, Nedergaard RW, Signal N, Rashid MU, Hassan A, Haavik H, Taylor D, Niazi IK. Self-paced online vs.
+    cue-based offline brain-computer interfaces for inducing neural plasticity. Brain Sciences 9(6):127. 2019.
+  doi: 10.3390/brainsci9060127
+  year: 2019
+  verified: false
+interop:
+  bids_task: mrcp
+notes: >-
+  Leads: WS-B2-04 [=R1298], WF-B2-19 (self-paced paradigm 'based on earlier protocols from Niazi et al. [14]'; about 75% true
+  positives, about 1 false positive per minute). Origin (Niazi et al.) not read; first_source is the paper seen. bibliography
+  confirmed (Crossref, 2026-10-05)
+status: draft
+contributors:
+- curator_b

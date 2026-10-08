@@ -1,0 +1,51 @@
+schema_version: '0.2'
+id: STA-DREAM-001
+class: STA-DREAM
+name:
+  en: Serial awakening dream report paradigm
+  zh: 系列唤醒梦境报告范式
+aliases:
+- serial awakening paradigm
+- dream reports
+- no-report vs report of dreaming
+family: state
+bci_category:
+- none
+recording_modality:
+- EEG
+stimulus_modality:
+- auditory
+markers:
+- MK.slow_wave
+description:
+  en: Participants are repeatedly awakened from different sleep stages by a sound and asked whether they were experiencing
+    anything, and EEG preceding awakenings with and without dream reports is compared. Dream experience is associated with
+    local decreases in low-frequency (slow-wave) activity over posterior cortex.
+  zh: 被试在不同睡眠阶段被声音反复唤醒，并被询问醒前是否有任何体验，比较有梦与无梦报告之前的脑电。梦境体验与后部皮层局部低频（慢波）活动降低有关。
+protocol:
+  n_classes: 3
+  classes:
+  - experience reported
+  - experience without recall
+  - no experience
+  cue: awakening sound followed by a structured experience interview
+  paradigm_timing: synchronous
+  feedback: none
+  distinguishing: 'Standard configuration (earliest published or canonical; D-057 -001): serial awakening paradigm (Siclari
+    et al. 2017, R1193).'
+first_source:
+  citation: Siclari F, Baird B, Perogamvros L, Bernardi G, LaRocque JJ, Riedner B, Boly M, Postle BR, Tononi G. The neural
+    correlates of dreaming. Nature Neuroscience 20(6):872-878. 2017.
+  doi: 10.1038/nn.4545
+  pmid: '28394322'
+  year: 2017
+  verified: false
+interop:
+  bids_task: dream
+notes: 'Sources found by curator_e (curation/work/pkg_E/search_log.md): S20 = https://archive-ouverte.unige.ch/unige:96505.
+  New candidate (curator_e). First-pass skeleton (curator_e, 2026-10-03); all sources unverified. Sprint 2 (curator_e, 2026-10-03):
+  protocol block added per D-057; see curation/work/pkg_E/sprint2/split_log.csv. Sprint 3 (curator_d, 2026-10-05): bibliography
+  confirmed (OpenAlex, 2026-10-05).'
+status: draft
+contributors:
+- curator_e

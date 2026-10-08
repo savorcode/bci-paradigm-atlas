@@ -1,0 +1,59 @@
+schema_version: '0.2'
+id: LAN-PN-002
+class: LAN-PN
+name:
+  en: Picture-word interference
+  zh: 图词干扰
+aliases:
+- PWI
+- picture-word interference paradigm
+- semantic interference in naming
+family: language
+bci_category:
+- none
+recording_modality:
+- fMRI
+- EEG
+stimulus_modality:
+- visual
+- auditory
+- motor_execution
+markers:
+- MK.BOLD_language_network
+description:
+  en: Participants name pictures while ignoring a written or spoken distractor word that is semantically related, phonologically
+    related or unrelated to the picture name, presented at different stimulus onset asynchronies. Semantically related distractors
+    slow naming (semantic interference) and phonologically related ones speed it (phonological facilitation), with associated
+    activity in left temporal and frontal language regions.
+  zh: 被试命名图片，同时忽略书面或口语干扰词；干扰词与图片名称语义相关、语音相关或无关，并以不同的刺激起始间隔呈现。语义相关干扰词使命名变慢（语义干扰），语音相关干扰词使命名变快（语音促进），并伴随左侧颞叶与额叶语言区活动。
+trial_structure:
+  conditions:
+  - semantically related distractor
+  - phonologically related distractor
+  - unrelated distractor
+  - SOA (parameter)
+protocol:
+  n_classes: 3
+  classes:
+  - semantically related
+  - phonologically related
+  - unrelated
+  cue: picture with a superimposed written (or simultaneous spoken) distractor word
+  paradigm_timing: synchronous
+  feedback: none
+  distinguishing: 准则 2（及 1）：刺激由单纯图片（LAN-PN-001）变为图片 + 干扰词，条件集按干扰词与目标名称的关系划分。
+first_source:
+  citation: Rosinski RR, Golinkoff RM, Kukish KS. Automatic Semantic Processing in a Picture-Word Interference Task. Child
+    Development. 1975;46(1):247.
+  doi: 10.2307/1128859
+  year: 1975
+  verified: false
+notes: 'Former variant of LAN-PN-001; its source (R1000, systematic review and meta-analysis) is not an origin (D-031 §1),
+  so first_source is TBD. Leads: R1000, R0173, R0782. (R#### = curation/literature.csv; DN## = curation/work/pkg_D/new_leads.csv.)
+  Numbering criterion (D-057): 2;1. first_source TBD resolved by bibliographic search (OpenAlex, 2026-10-05; curator_c): candidate
+  origin found by bibliographic search; content unverified. Previous entry: "TBD: origin of the picture-word interference
+  paradigm not retrieved; R1000 is a 2024 systematic review" [maintainer sprint 3, 2026-10-07] bibliography confirmed (OpenAlex,
+  2026-10-05; origin candidate, content unverified).'
+status: draft
+contributors:
+- curator_d

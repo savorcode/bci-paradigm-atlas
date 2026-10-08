@@ -1,0 +1,56 @@
+schema_version: '0.2'
+id: MOT-MRCP-001
+class: MOT-MRCP
+name:
+  en: Self-paced movement (movement-related cortical potential)
+  zh: 自主运动准备（准备电位）
+aliases:
+- MRCP
+- movement-related cortical potential
+- Bereitschaftspotential
+- BP
+- readiness potential
+family: motor
+bci_category:
+- active
+- none
+recording_modality:
+- EEG
+- MEG
+stimulus_modality:
+- motor_execution
+markers:
+- MK.MRCP
+description:
+  en: >-
+    Participants perform brief voluntary movements (e.g. finger flexion or ankle dorsiflexion) at self-chosen times, and EEG
+    is averaged backwards from movement onset. A slowly rising negativity (Bereitschaftspotential) begins over central midline
+    sites before the movement and steepens contralaterally just before onset.
+  zh: 被试在自选时刻完成短暂的自主动作（如手指屈曲或踝背屈），以动作起始为零点向前平均脑电。动作前中央中线区出现缓慢上升的负电位（准备电位），临近起始时在对侧变陡。
+protocol:
+  n_classes: 1
+  classes:
+  - self-paced voluntary movement
+  cue: none (self-initiated)
+  paradigm_timing: asynchronous
+  feedback: none
+  distinguishing: >-
+    Standard configuration (earliest published) / 标准配置（最早发表）: self-paced brief voluntary movements, EEG back-averaged to movement
+    onset (Kornhuber & Deecke 1965). Siblings: -002 visually cued movements (criteria 2, 3), -003 online self-paced detection
+    triggering peripheral stimulation (criterion 4).
+first_source:
+  citation: >-
+    Kornhuber HH, Deecke L. Hirnpotentialänderungen bei Willkürbewegungen und passiven Bewegungen des Menschen: Bereitschaftspotential
+    und reafferente Potentiale. Pflügers Archiv für die gesamte Physiologie des Menschen und der Tiere. 1965;284(1):1-17.
+  doi: 10.1007/bf00412364
+  year: 1965
+  verified: false
+interop:
+  bids_task: selfpacedmovement
+notes: >-
+  Leads: R0012, R0835, R0860, R0896, R0930. R0930 is a 50th-anniversary historical account (secondary). Task sheet: the Springer
+  DOI for R0012 surfaced without the title displayed; verify. Sprint 2 (D-057): single-trial detection for BCIs moved to the
+  cue-based (MOT-MRCP-002) and online closed-loop (MOT-MRCP-003) protocols. bibliography corrected (OpenAlex, 2026-10-05)
+status: draft
+contributors:
+- curator_b

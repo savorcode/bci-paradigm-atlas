@@ -1,0 +1,60 @@
+schema_version: '0.2'
+id: MOT-ME-005
+class: MOT-ME
+name:
+  en: Upper-limb multi-joint movement execution (six movements + rest)
+  zh: 单侧上肢多关节运动执行（6 类动作 + 休息）
+aliases:
+- executed upper limb movements
+family: motor
+bci_category:
+- active
+recording_modality:
+- EEG
+stimulus_modality:
+- motor_execution
+- visual
+markers:
+- MK.low_freq_kinematics
+- MK.SMR_ERD
+description:
+  en: >-
+    After a beep and fixation cross, a visual cue instructs the participant to execute one of six movements of the right arm
+    (elbow flexion or extension, forearm supination or pronation, hand opening or closing) or to rest. The movements are decoded
+    from low-frequency time-domain EEG.
+  zh: 提示音与注视十字之后，视觉提示指示被试执行右上肢 6 种动作之一（肘屈/伸、前臂旋后/旋前、手张开/握拳）或休息。依据低频时域脑电解码这些动作。
+protocol:
+  n_classes: 7
+  classes:
+  - elbow flexion
+  - elbow extension
+  - forearm supination
+  - forearm pronation
+  - hand open
+  - hand close
+  - rest
+  cue: visual cue on screen after beep and fixation cross
+  paradigm_timing: synchronous
+  feedback: none
+  distinguishing: >-
+    Criterion 1 vs MOT-ME-001: six movements of one upper limb plus rest instead of a single movement vs rest. Executed counterpart
+    of MOT-MI-003 (same session design).
+first_source:
+  citation: >-
+    Ofner P, Schwarz A, Pereira J, Müller-Putz GR. Upper limb movements can be decoded from the time-domain of low-frequency
+    EEG. PLoS ONE 12(8):e0182578. 2017.
+  doi: 10.1371/journal.pone.0182578
+  year: 2017
+  verified: false
+datasets:
+- name: Ofner2017 (MOABB; motor execution sessions)
+  url: https://moabb.neurotechx.com/docs/generated/moabb.datasets.Ofner2017.html
+  subjects: 15
+interop:
+  bids_task: motor
+notes: >-
+  Lead: WF-B2-03 [=R1288] (MOABB Ofner2017 page: ME and MI conditions, seven classes). New concrete paradigm (public dataset).
+  bibliography confirmed (OpenAlex, 2026-10-05)
+status: draft
+contributors:
+- curator_b

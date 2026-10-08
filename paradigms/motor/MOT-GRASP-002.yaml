@@ -1,0 +1,51 @@
+schema_version: '0.2'
+id: MOT-GRASP-002
+class: MOT-GRASP
+name:
+  en: Complex hand gestures
+  zh: 复杂手势
+aliases:
+- hand gesture decoding
+- sign gestures
+family: motor
+bci_category:
+- active
+recording_modality:
+- ECoG
+stimulus_modality:
+- motor_execution
+- visual
+markers:
+- MK.high_gamma
+description:
+  en: >-
+    Participants form one of four complex hand gestures after a visual cue, and the gesture is classified from high-density
+    electrocorticography over hand sensorimotor cortex. Gesture-specific high-gamma patterns carry the information.
+  zh: 被试按视觉提示做出 4 种复杂手势之一，依据覆盖手部感觉运动皮层的高密度皮层脑电对手势分类。手势特异的高 γ 模式提供信息。
+protocol:
+  n_classes: 4
+  classes:
+  - gesture 1
+  - gesture 2
+  - gesture 3
+  - gesture 4
+  cue: visual cue (gesture picture)
+  paradigm_timing: synchronous
+  feedback: none
+  distinguishing: 'Criterion 1 vs MOT-GRASP-001: four static hand gestures (postures) instead of object-directed grasp types.'
+first_source:
+  citation: >-
+    Bleichner MG, Freudenburg ZV, Jansma JM, Aarnoutse EJ, Vansteensel MJ, Ramsey NF. Give me a sign: decoding four complex
+    hand gestures based on high-density ECoG. Brain Structure and Function. 2016;221(1):203-216.
+  doi: 10.1007/s00429-014-0902-x
+  pmid: '25273279'
+  year: 2016
+  verified: false
+interop:
+  bids_task: grasp
+notes: >-
+  Lead: R0943 (title + PMID). Gesture identities and cue type to be filled from the original (placeholders 'gesture 1-4').
+  bibliography corrected (OpenAlex, 2026-10-05)
+status: draft
+contributors:
+- curator_b

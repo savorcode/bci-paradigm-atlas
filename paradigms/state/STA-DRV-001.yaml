@@ -1,0 +1,54 @@
+schema_version: '0.2'
+id: STA-DRV-001
+class: STA-DRV
+name:
+  en: Simulated driving and sustained vigilance
+  zh: 模拟驾驶与持续警觉
+aliases:
+- driving simulator fatigue
+- lane-keeping drowsiness task
+- sustained-attention driving
+family: state
+bci_category:
+- passive
+recording_modality:
+- EEG
+stimulus_modality:
+- visual
+- motor_execution
+markers:
+- MK.alpha_posterior
+- MK.theta_drowsiness
+description:
+  en: Participants drive in a simulator for a prolonged session, keeping the vehicle in lane while random lane-departure events
+    occur, and the reaction time to each event indexes drowsiness. Increasing drowsiness is accompanied by higher theta and
+    posterior alpha power.
+  zh: 被试在驾驶模拟器中长时间驾驶，在随机出现的车道偏移事件中保持车辆居中；对每次偏移的反应时作为困倦程度的指标。困倦加深伴随 θ 与后部 α 功率升高。
+protocol:
+  n_classes: 2
+  classes:
+  - alert (short response time)
+  - drowsy (long response time)
+  cue: random lane-departure events in a driving simulator, corrected by steering
+  paradigm_timing: synchronous
+  feedback: none
+  distinguishing: 'Standard configuration (earliest published or canonical; D-057 -001): event-related lane-departure task
+    where response time to each deviation labels drowsiness (Lin et al. 2005, R1176). Differs from STA-DRV-002 (continuous
+    driving with an eye-tracking vigilance label).'
+first_source:
+  citation: 'Lin CT, Wu RC, Liang SF, Chao WH, Chen YJ, Jung TP. EEG-based drowsiness estimation for safety driving using
+    independent component analysis. IEEE Transactions on Circuits and Systems I: Regular Papers 52(12):2726-2738. 2005.'
+  doi: 10.1109/TCSI.2005.857555
+  year: 2005
+  verified: false
+datasets:
+- name: Multi-channel EEG recordings during a sustained-attention driving task (figshare)
+interop:
+  bids_task: driving
+notes: 'Lead refs (curation/literature.csv): R0854 [method], R0907 [review]. Sources found by curator_e (curation/work/pkg_E/search_log.md):
+  S23 = https://opus.lib.uts.edu.au/handle/10453/123837. Existing leads R0854, R0907 are a method paper and a review. First-pass
+  skeleton (curator_e, 2026-10-03); all sources unverified. Sprint 2 (curator_e, 2026-10-03): protocol block added per D-057;
+  see curation/work/pkg_E/sprint2/split_log.csv. Sprint 3 (curator_d, 2026-10-05): bibliography confirmed (OpenAlex, 2026-10-05).'
+status: draft
+contributors:
+- curator_e

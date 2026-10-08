@@ -1,0 +1,53 @@
+schema_version: '0.2'
+id: LAN-PRIME-002
+class: LAN-PRIME
+name:
+  en: Masked semantic priming
+  zh: 掩蔽语义启动
+aliases:
+- masked priming
+- subliminal semantic priming
+family: language
+bci_category:
+- none
+recording_modality:
+- EEG
+stimulus_modality:
+- visual
+markers:
+- MK.N400
+description:
+  en: A briefly presented prime word is forward- and/or backward-masked so that it is hardly or not consciously seen, and
+    is followed by a related or unrelated target word. Comparing N400 priming effects for masked and unmasked primes is used
+    to test whether the N400 reflects automatic lexical-semantic access or post-lexical integration.
+  zh: 短暂呈现的启动词前后被掩蔽，几乎或完全不能被意识到，随后呈现相关或无关的目标词。比较掩蔽与非掩蔽启动的 N400 启动效应，用于检验 N400 反映的是自动的词汇—语义通达还是词汇后整合。
+trial_structure:
+  conditions:
+  - related masked
+  - unrelated masked
+  - SOA / prime duration (parameter)
+protocol:
+  n_classes: 2
+  classes:
+  - related
+  - unrelated
+  cue: pattern-masked brief prime followed by a visible target
+  stimulus_coding: forward/backward pattern masking of the prime
+  paradigm_timing: synchronous
+  feedback: none
+  distinguishing: 准则 2：启动刺激由可见（LAN-PRIME-001）变为被图形掩蔽、几乎不可见的短暂呈现。
+first_source:
+  citation: 'Marcel AJ. Conscious and unconscious perception: Experiments on visual masking and word recognition. Cognitive
+    Psychology. 1983;15(2):197-237.'
+  doi: 10.1016/0010-0285(83)90009-9
+  year: 1983
+  verified: false
+notes: 'New configuration (sprint 2). Leads: R0926 (ERP indices of semantic priming using masked and unmasked words; title
+  and PMID only), R0537 (Jones & Golonka 2012, masked/unmasked priming procedures). (R#### = curation/literature.csv; DN##
+  = curation/work/pkg_D/new_leads.csv.) Numbering criterion (D-057): 2. first_source TBD resolved by bibliographic search
+  (OpenAlex, 2026-10-05; curator_c): candidate origin found by bibliographic search; content unverified. Previous entry: "TBD:
+  origin of masked semantic priming not retrieved" [maintainer sprint 3, 2026-10-07] bibliography confirmed (OpenAlex, 2026-10-05;
+  origin candidate, content unverified).'
+status: draft
+contributors:
+- curator_d

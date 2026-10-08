@@ -1,0 +1,54 @@
+schema_version: '0.2'
+id: IMG-VIS-002
+class: IMG-VIS
+name:
+  en: Category-specific visual imagery (faces vs places)
+  zh: 类别特异视觉想象（面孔对场景）
+aliases:
+- face imagery
+- place imagery
+- category-specific imagery
+family: imagery
+bci_category:
+- none
+recording_modality:
+- fMRI
+stimulus_modality:
+- mental_imagery
+- visual
+- auditory
+markers:
+- MK.BOLD_category_selective
+description:
+  en: >-
+    Participants imagine familiar faces or familiar places on cue, compared with perceiving the same categories. Imagery activates
+    the category-selective ventral regions (fusiform face area for faces, parahippocampal place area for places) in proportion
+    to, but weaker than, perception.
+  zh: 被试按提示想象熟悉的面孔或熟悉的场所，与实际看到同类刺激比较。想象激活类别选择性的腹侧区域（面孔对应梭状回面孔区，场所对应海马旁回位置区），模式与知觉一致但较弱。
+protocol:
+  n_classes: 2
+  classes:
+  - face imagery
+  - place imagery
+  cue: cue naming a familiar face or place
+  paradigm_timing: block
+  feedback: none
+  distinguishing: >-
+    Criterion 1 vs IMG-VIS-001: two stimulus categories (faces vs places) contrasted with each other instead of imagery vs
+    perception of simple patterns.
+first_source:
+  citation: >-
+    O'Craven KM, Kanwisher N. Mental imagery of faces and places activates corresponding stimulus-specific brain regions.
+    Journal of Cognitive Neuroscience. 2000;12(6):1013-1023.
+  doi: 10.1162/08989290051137549
+  year: 2000
+  verified: false
+interop:
+  bids_task: visualimagery
+notes: >-
+  Lead: S15 from sprint 1 (https://news.mit.edu/2000/mindseye). Converted from the IMG-VIS-001 variant 'Category-specific
+  imagery (faces / places)' (D-007, merged candidate IMG-FACE-001, ID stays void). Cue modality to be checked. [maintainer,
+  sprint 2] Lead registered as R1307 (literature.csv). bibliography corrected (OpenAlex, 2026-10-05)
+status: draft
+contributors:
+- curator_b

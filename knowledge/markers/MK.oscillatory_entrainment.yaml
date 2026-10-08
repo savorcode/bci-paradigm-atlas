@@ -1,0 +1,11 @@
+schema_version: "0.2"
+id: MK.oscillatory_entrainment
+name: {en: Oscillatory entrainment by rhythmic stimulation, zh: 节律刺激引起的节律夹带}
+aliases: [entrainment, phase alignment to stimulation]
+type: oscillatory
+recording_modality: [EEG]
+signature: {frequency_hz: stimulation frequency}
+description: {en: 'Phase alignment of ongoing brain oscillations to an external rhythmic drive, such as transcranial alternating current, observed as increased phase locking or power at the stimulation frequency during stimulation.', zh: 进行中的脑节律与外部节律性驱动（如经颅交流电）的相位对齐，表现为刺激期间刺激频率处相位锁定或功率增强。}
+notes: Signature values are textbook-level characteristics and await source checking (first pass, curator_b). Measurement during tACS is confounded by stimulation artefacts. Generators and indexes to be added in the second pass.
+status: draft
+contributors: [maintainer, curator_b]

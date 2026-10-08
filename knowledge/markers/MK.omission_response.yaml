@@ -1,0 +1,22 @@
+schema_version: "0.2"
+id: MK.omission_response
+name:
+  en: Omission response
+  zh: 刺激遗漏响应
+aliases:
+- omission response
+- omitted stimulus potential
+- OSP
+- omission MMN
+type: erp_component
+recording_modality:
+- EEG
+- MEG
+description:
+  en: Evoked activity at the time an expected stimulus would have occurred but is omitted, taken as a neural signature of
+    sensory prediction because no physical input is present.
+  zh: 在预期刺激本应出现却被省略的时刻产生的诱发活动；由于没有物理输入，被视为感觉预测的神经特征。
+notes: First-pass skeleton by package A (2026-10-03). No generators/indexes yet.
+status: draft
+contributors:
+- curator_a

@@ -1,0 +1,2203 @@
+TY  - GEN
+AU  - Javal
+AU  - É
+TI  - Essai sur la physiologie de la lecture
+PY  - 1878
+JO  - Annales d'oculistique
+KW  - MOT-SACC-001
+KW  - R0001
+KW  - family:motor
+KW  - role:first_source_candidate
+N1  - BCI Paradigm Atlas 自动收集（wikipedia），未核实
+ER  - 
+
+TY  - JOUR
+AU  - Kornhuber, Hans H.
+AU  - Deecke, Lüder
+TI  - Hirnpotentialänderungen bei Willkürbewegungen und passiven Bewegungen des Menschen: Bereitschaftspotential und reafferente Potentiale
+PY  - 1965
+JO  - Pflügers Archiv für die gesamte Physiologie des Menschen und der Tiere
+DO  - 10.1007/bf00412364
+UR  - https://link.springer.com/doi/10.1007/BF00412364
+KW  - MOT-MRCP-001
+KW  - R0012
+KW  - family:motor
+KW  - role:first_source_candidate
+N1  - BCI Paradigm Atlas 自动收集（web_search, wikipedia），未核实
+ER  - 
+
+TY  - JOUR
+AU  - Shepard, R. N.
+AU  - Metzler, J.
+TI  - Mental rotation of three-dimensional objects
+PY  - 1971
+JO  - Science, 171(3972), 701-703
+DO  - 10.1126/science.171.3972.701
+UR  - https://doi.org/10.1126/science.171.3972.701
+AN  - PMID:5540314
+KW  - IMG-ROT-001
+KW  - IMG-VIS-001
+KW  - R0024
+KW  - family:imagery
+KW  - role:first_source_candidate
+KW  - role:key_reference
+KW  - role:other
+N1  - BCI Paradigm Atlas 自动收集（hed_catalog, web_search, wikipedia），未核实
+ER  - 
+
+TY  - JOUR
+AU  - Bahill, A. Terry
+AU  - Clark, Michael R.
+AU  - Stark, Lawrence
+TI  - The Main Sequence, A Tool for Studying Human Eye Movements
+PY  - 1975
+JO  - Mathematical Biosciences
+DO  - 10.1016/0025-5564(75)90075-9
+UR  - https://doi.org/10.1016/0025-5564(75)90075-9
+KW  - MOT-SACC-001
+KW  - R0034
+KW  - family:motor
+KW  - role:other
+N1  - BCI Paradigm Atlas 自动收集（wikipedia），未核实
+ER  - 
+
+TY  - JOUR
+AU  - Fischer, B.
+AU  - Boch, R.
+TI  - Saccadic eye movements after extremely short reaction times in the monkey
+PY  - 1983
+JO  - Brain Research
+DO  - 10.1016/0006-8993(83)90760-6
+UR  - https://doi.org/10.1016/0006-8993(83)90760-6
+AN  - PMID:6402272
+KW  - MOT-SACC-001
+KW  - R0062
+KW  - family:motor
+KW  - role:other
+N1  - BCI Paradigm Atlas 自动收集（wikipedia），未核实
+ER  - 
+
+TY  - JOUR
+AU  - Nissen, M. J.
+AU  - Bullemer, P.
+TI  - Attentional requirements of learning: Evidence from performance measures
+PY  - 1987
+JO  - Cognitive Psychology
+DO  - 10.1016/0010-0285(87)90002-8
+UR  - https://doi.org/10.1016/0010-0285(87)90002-8
+KW  - MOT-SRT-001
+KW  - R0078
+KW  - family:motor
+KW  - role:key_reference
+N1  - BCI Paradigm Atlas 自动收集（hed_catalog），未核实
+ER  - 
+
+TY  - JOUR
+AU  - Petersen, S. E.
+AU  - Fox, P. T.
+AU  - Posner, M. I.
+AU  - Mintun, M.
+AU  - Raichle, M. E.
+TI  - Positron emission tomographic studies of the cortical anatomy of single-word processing
+PY  - 1988
+JO  - Nature
+DO  - 10.1038/331585a0
+UR  - https://doi.org/10.1038/331585a0
+AN  - PMID:3277066
+KW  - IMG-WORD-001
+KW  - R0082
+KW  - family:imagery
+KW  - role:first_source_candidate
+N1  - BCI Paradigm Atlas 自动收集（hed_catalog, web_search），未核实
+ER  - 
+
+TY  - JOUR
+AU  - Salzman, C. Daniel
+AU  - Britten, Kenneth H.
+AU  - Newsome, William T.
+TI  - Cortical microstimulation influences perceptual judgements of motion direction
+PY  - 1990
+JO  - Nature
+DO  - 10.1038/346174a0
+UR  - https://doi.org/10.1038/346174a0
+AN  - PMID:2366872
+KW  - R0090
+KW  - STM-ICMS-001
+KW  - family:stimulation
+KW  - role:other
+N1  - BCI Paradigm Atlas 自动收集（wikipedia），未核实
+ER  - 
+
+TY  - JOUR
+AU  - Gabrieli, J. D. E.
+AU  - Corkin, S.
+AU  - Mickel, S. F.
+AU  - Growdon, J. H.
+TI  - Intact acquisition and long-term retention of mirror-tracing skill in Alzheimer's disease and in global amnesia
+PY  - 1993
+JO  - Behavioral Neuroscience, 107(6), 899–910
+DO  - 10.1037/0735-7044.107.6.899
+UR  - https://doi.org/10.1037/0735-7044.107.6.899
+AN  - PMID:8136066
+KW  - MOT-MIRR-001
+KW  - R0106
+KW  - family:motor
+KW  - role:key_reference
+N1  - BCI Paradigm Atlas 自动收集（hed_catalog），未核实
+ER  - 
+
+TY  - JOUR
+AU  - Grafton, S. T.
+AU  - Hazeltine, E.
+AU  - Ivry, R. B.
+TI  - Functional mapping of sequence learning in normal humans
+PY  - 1995
+JO  - Journal of Cognitive Neuroscience
+DO  - 10.1162/jocn.1995.7.4.497
+UR  - https://doi.org/10.1162/jocn.1995.7.4.497
+AN  - PMID:23961907
+KW  - MOT-SRT-001
+KW  - R0125
+KW  - family:motor
+KW  - role:key_reference
+N1  - BCI Paradigm Atlas 自动收集（hed_catalog），未核实
+ER  - 
+
+TY  - GEN
+AU  - Zatorre, R. J.
+AU  - Halpern, A. R.
+AU  - Perry, D. W.
+AU  - Meyer, E.
+AU  - Evans, A. C.
+TI  - Hearing in the mind's ear: A PET investigation of musical imagery and perception
+PY  - 1996
+JO  - Journal of Cognitive Neuroscience, 8(1), 29-46
+KW  - IMG-AUD-001
+KW  - R0131
+KW  - family:imagery
+KW  - role:other
+N1  - BCI Paradigm Atlas 自动收集（wikipedia），未核实
+ER  - 
+
+TY  - GEN
+AU  - Levitin, D. J.
+AU  - Cook, P. R.
+TI  - Memory for musical tempo: Additional evidence that auditory memory is absolute
+PY  - 1996
+JO  - Attention, Perception, & Psychophysics, 58(6), 927-935
+KW  - IMG-AUD-001
+KW  - R0133
+KW  - family:imagery
+KW  - role:other
+N1  - BCI Paradigm Atlas 自动收集（wikipedia），未核实
+ER  - 
+
+TY  - JOUR
+AU  - Rao, S. M.
+AU  - Harrington, D. L.
+AU  - Haaland, K. Y., et al.
+TI  - Distributed neural systems underlying the timing of movements
+PY  - 1997
+JO  - Journal of Neuroscience, 17(14), 5528-5535
+DO  - 10.1523/jneurosci.17-14-05528.1997
+UR  - https://doi.org/10.1523/jneurosci.17-14-05528.1997
+AN  - PMID:9204934
+KW  - MOT-ME-001
+KW  - R0145
+KW  - family:motor
+KW  - role:key_reference
+N1  - BCI Paradigm Atlas 自动收集（hed_catalog），未核实
+ER  - 
+
+TY  - JOUR
+AU  - Nuwer
+AU  - Marc R
+TI  - Fundamentals of evoked potentials and common clinical applications today
+PY  - 1998
+JO  - Electroencephalography and Clinical Neurophysiology 106 (2): 142–148
+DO  - 10.1016/s0013-4694(97)00117-x
+UR  - https://doi.org/10.1016/s0013-4694(97)00117-x
+KW  - R0163
+KW  - STM-SEP-001
+KW  - family:stimulation
+KW  - role:other
+N1  - BCI Paradigm Atlas 自动收集（wikipedia），未核实
+ER  - 
+
+TY  - JOUR
+AU  - Lesser, Ronald P.
+AU  - Arroyo, Santiago
+AU  - Crone, Nathan
+AU  - Gordon, Barry
+TI  - Motor and Sensory Mapping of the Frontal and Occipital Lobes
+PY  - 1998
+JO  - Epilepsia 39: S69–80
+DO  - 10.1111/j.1528-1157.1998.tb05127.x
+UR  - https://doi.org/10.1111/j.1528-1157.1998.tb05127.x
+AN  - PMID:9637595
+KW  - R0166
+KW  - STM-ECS-001
+KW  - family:stimulation
+KW  - role:other
+N1  - BCI Paradigm Atlas 自动收集（wikipedia），未核实
+ER  - 
+
+TY  - JOUR
+AU  - Nuwer, Marc R.
+TI  - Spinal Cord Monitoring With Somatosensory Techniques
+PY  - 1998
+JO  - Journal of Clinical Neurophysiology 15 (3): 183–193
+DO  - 10.1097/00004691-199805000-00002
+UR  - https://doi.org/10.1097/00004691-199805000-00002
+AN  - PMID:9681556
+KW  - R0169
+KW  - STM-SEP-001
+KW  - family:stimulation
+KW  - role:other
+N1  - BCI Paradigm Atlas 自动收集（wikipedia），未核实
+ER  - 
+
+TY  - JOUR
+AU  - Karni, A.
+AU  - Meyer, G.
+AU  - Rey-Hipolito, C., et al.
+TI  - The acquisition of skilled motor performance: Fast and slow experience-driven changes in primary motor cortex
+PY  - 1998
+JO  - Proceedings of the National Academy of Sciences, 95(3), 861-868
+DO  - 10.1073/pnas.95.3.861
+UR  - https://doi.org/10.1073/pnas.95.3.861
+AN  - PMID:9448252
+KW  - MOT-MSL-001
+KW  - R0170
+KW  - family:motor
+KW  - role:key_reference
+N1  - BCI Paradigm Atlas 自动收集（hed_catalog），未核实
+ER  - 
+
+TY  - JOUR
+AU  - Treutwein, B.
+AU  - Strasburger, H.
+TI  - Fitting the psychometric function
+PY  - 1999
+JO  - Perception & Psychophysics, 61(1), 87–106
+DO  - 10.3758/bf03211951
+UR  - https://doi.org/10.3758/bf03211951
+AN  - PMID:10070202
+KW  - MOT-MIRR-001
+KW  - R0176
+KW  - family:motor
+KW  - role:further_reference
+N1  - BCI Paradigm Atlas 自动收集（hed_catalog），未核实
+ER  - 
+
+TY  - GEN
+AU  - Mauguiere
+AU  - F
+TI  - Somatosensory evoked potentials
+PY  - 1999
+JO  - Electroencephalography: basic principles, clinical applications and related fields (Williams and Wilkins)
+KW  - R0181
+KW  - STM-SEP-001
+KW  - family:stimulation
+KW  - role:other
+N1  - BCI Paradigm Atlas 自动收集（wikipedia），未核实
+ER  - 
+
+TY  - JOUR
+AU  - Kosslyn, Stephen M.
+AU  - Pascual-Leone, A.
+AU  - Felician, O.
+AU  - et al.
+TI  - The Role of Area 17 in Visual Imagery: Convergent Evidence from PET and RTMS
+PY  - 1999
+JO  - Science 284(5411): 167–170
+DO  - 10.1126/science.284.5411.167
+UR  - https://doi.org/10.1126/science.284.5411.167
+AN  - PMID:10102821
+KW  - IMG-VIS-001
+KW  - R0183
+KW  - family:imagery
+KW  - role:other
+N1  - BCI Paradigm Atlas 自动收集（wikipedia），未核实
+ER  - 
+
+TY  - GEN
+AU  - Halpern, A. R.
+AU  - Zatorre, R. J.
+TI  - When that tune runs through your head: a PET investigation of auditory imagery for familiar melodies
+PY  - 1999
+JO  - Cerebral Cortex, 9(7), 697-704
+KW  - IMG-AUD-001
+KW  - R0186
+KW  - family:imagery
+KW  - role:other
+N1  - BCI Paradigm Atlas 自动收集（wikipedia），未核实
+ER  - 
+
+TY  - JOUR
+AU  - Jancke, L.
+AU  - Loose, R.
+AU  - Lutz, K.
+AU  - Specht, K.
+AU  - Shah, N. J.
+TI  - Cortical activations during paced finger-tapping applying visual and auditory pacing stimuli
+PY  - 2000
+JO  - Cognitive Brain Research, 10(1-2), 51-66
+DO  - 10.1016/s0926-6410(00)00022-7
+UR  - https://doi.org/10.1016/s0926-6410(00)00022-7
+AN  - PMID:10978692
+KW  - MOT-ME-001
+KW  - R0189
+KW  - family:motor
+KW  - role:key_reference
+N1  - BCI Paradigm Atlas 自动收集（hed_catalog），未核实
+ER  - 
+
+TY  - JOUR
+AU  - Nitsche MA
+AU  - Paulus W
+TI  - Excitability changes induced in the human motor cortex by weak transcranial direct current stimulation
+PY  - 2000
+JO  - The Journal of Physiology
+DO  - 10.1111/j.1469-7793.2000.t01-1-00633.x
+UR  - https://doi.org/10.1111/j.1469-7793.2000.t01-1-00633.x
+AN  - PMID:10990547
+KW  - R0192
+KW  - STM-TDCS-001
+KW  - family:stimulation
+KW  - role:other
+N1  - BCI Paradigm Atlas 自动收集（wikipedia），未核实
+ER  - 
+
+TY  - JOUR
+AU  - McIntyre, Cameron C.
+AU  - Grill, Warren M.
+TI  - Selective Microstimulation of Central Nervous System Neurons
+PY  - 2000
+JO  - Annals of Biomedical Engineering
+DO  - 10.1114/1.262
+UR  - https://doi.org/10.1114/1.262
+AN  - PMID:10784087
+KW  - R0196
+KW  - STM-ICMS-001
+KW  - family:stimulation
+KW  - role:other
+N1  - BCI Paradigm Atlas 自动收集（wikipedia），未核实
+ER  - 
+
+TY  - JOUR
+AU  - Kosslyn, Stephen M.
+AU  - Ganis, Giorgio
+AU  - Thompson, William L.
+TI  - Neural foundations of imagery
+PY  - 2001
+JO  - Nature Reviews Neuroscience 2(9): 635–642
+DO  - 10.1038/35090055
+UR  - https://doi.org/10.1038/35090055
+AN  - PMID:11533731
+KW  - IMG-VIS-001
+KW  - R0209
+KW  - family:imagery
+KW  - role:review
+N1  - BCI Paradigm Atlas 自动收集（wikipedia），未核实
+ER  - 
+
+TY  - JOUR
+AU  - Hikosaka, O.
+AU  - Nakamura, K.
+AU  - Sakai, K.
+AU  - Nakahara, H.
+TI  - Central mechanisms of motor skill learning
+PY  - 2002
+JO  - Current Opinion in Neurobiology, 12(2), 217–222
+DO  - 10.1016/s0959-4388(02)00307-0
+UR  - https://doi.org/10.1016/s0959-4388(02)00307-0
+AN  - PMID:12015240
+KW  - MOT-MSL-001
+KW  - R0220
+KW  - family:motor
+KW  - role:further_reference
+N1  - BCI Paradigm Atlas 自动收集（hed_catalog），未核实
+ER  - 
+
+TY  - JOUR
+AU  - Walker, M. P.
+AU  - Brakefield, T.
+AU  - Morgan, A.
+AU  - Hobson, J. A.
+AU  - Stickgold, R.
+TI  - Practice with sleep makes perfect: Sleep-dependent motor skill learning
+PY  - 2002
+JO  - Neuron, 35(1), 205-211
+DO  - 10.1016/s0896-6273(02)00746-8
+UR  - https://doi.org/10.1016/s0896-6273(02)00746-8
+AN  - PMID:12123620
+KW  - MOT-MSL-001
+KW  - R0231
+KW  - family:motor
+KW  - role:key_reference
+N1  - BCI Paradigm Atlas 自动收集（hed_catalog），未核实
+ER  - 
+
+TY  - JOUR
+AU  - Domkin, D.
+AU  - Laczko, J.
+AU  - Jaric, S.
+AU  - Johansson, H.
+AU  - Latash, ML.
+TI  - Structure of joint variability in bimanual pointing tasks
+PY  - 2002
+JO  - Exp Brain Res
+DO  - 10.1007/s00221-001-0944-1
+UR  - https://doi.org/10.1007/s00221-001-0944-1
+AN  - PMID:11907686
+KW  - MOT-BIMAN-001
+KW  - R0233
+KW  - family:motor
+KW  - role:other
+N1  - BCI Paradigm Atlas 自动收集（wikipedia），未核实
+ER  - 
+
+TY  - JOUR
+AU  - Haggard, P.
+AU  - Clark, S.
+AU  - Kalogeras, J.
+TI  - Voluntary action and conscious awareness
+PY  - 2002
+JO  - Nature Neuroscience, 5(4), 382-385
+DO  - 10.1038/nn827
+UR  - https://doi.org/10.1038/nn827
+AN  - PMID:11896397
+KW  - MOT-IB-001
+KW  - R0241
+KW  - family:motor
+KW  - role:key_reference
+N1  - BCI Paradigm Atlas 自动收集（hed_catalog），未核实
+ER  - 
+
+TY  - JOUR
+AU  - Sanes, J. N.
+TI  - Neocortical mechanisms in motor learning
+PY  - 2003
+JO  - Current Opinion in Neurobiology, 13(2), 225–231
+DO  - 10.1016/s0959-4388(03)00046-1
+UR  - https://doi.org/10.1016/s0959-4388(03)00046-1
+AN  - PMID:12744978
+KW  - MOT-MIRR-001
+KW  - R0256
+KW  - family:motor
+KW  - role:key_reference
+N1  - BCI Paradigm Atlas 自动收集（hed_catalog），未核实
+ER  - 
+
+TY  - JOUR
+AU  - Boyd, L. A.
+AU  - Winstein, C. J.
+TI  - Cerebellar stroke impairs temporal but not spatial accuracy during implicit motor learning
+PY  - 2004
+JO  - Neurorehabilitation and Neural Repair, 18(3), 134–143
+DO  - 10.1177/0888439004269072
+UR  - https://doi.org/10.1177/0888439004269072
+AN  - PMID:15375273
+KW  - MOT-MIRR-001
+KW  - R0273
+KW  - family:motor
+KW  - role:further_reference
+N1  - BCI Paradigm Atlas 自动收集（hed_catalog），未核实
+ER  - 
+
+TY  - JOUR
+AU  - Haaland, K. Y.
+AU  - Elsinger, C. L.
+AU  - Mayer, A. R.
+AU  - Durgerian, S.
+AU  - Rao, S. M.
+TI  - Motor sequence complexity and performing hand produce differential patterns of hemispheric lateralization
+PY  - 2004
+JO  - Journal of Cognitive Neuroscience, 16(4), 621–636
+DO  - 10.1162/089892904323057344
+UR  - https://doi.org/10.1162/089892904323057344
+AN  - PMID:15165352
+KW  - MOT-ME-001
+KW  - R0280
+KW  - family:motor
+KW  - role:further_reference
+N1  - BCI Paradigm Atlas 自动收集（hed_catalog），未核实
+ER  - 
+
+TY  - JOUR
+AU  - Salter, Jennifer E.
+AU  - Laurie R. Wishart
+AU  - Timothy D. Lee
+AU  - Dominic Simon
+TI  - Perceptual and motor contributions to bimanual coordination
+PY  - 2004
+JO  - Neuroscience Letters
+DO  - 10.1016/j.neulet.2004.03.071
+UR  - https://doi.org/10.1016/j.neulet.2004.03.071
+AN  - PMID:15172094
+KW  - MOT-BIMAN-001
+KW  - R0286
+KW  - family:motor
+KW  - role:other
+N1  - BCI Paradigm Atlas 自动收集（wikipedia），未核实
+ER  - 
+
+TY  - JOUR
+AU  - Hopp, J.Johanna
+AU  - Fuchs, Albert F
+TI  - The characteristics and neuronal substrate of saccadic eye movement plasticity
+PY  - 2004
+JO  - Progress in Neurobiology
+DO  - 10.1016/j.pneurobio.2003.12.002
+UR  - https://doi.org/10.1016/j.pneurobio.2003.12.002
+AN  - PMID:15019175
+KW  - MOT-SACC-001
+KW  - R0291
+KW  - family:motor
+KW  - role:other
+N1  - BCI Paradigm Atlas 自动收集（wikipedia），未核实
+ER  - 
+
+TY  - JOUR
+AU  - Li, Y.
+AU  - Levin, O.
+AU  - Forner-Cordero, A.
+AU  - Swinnen, SP.
+TI  - Interactions between interlimb and intralimb coordination during the performance of bimanual multijoint movements
+PY  - 2005
+JO  - Exp Brain Res
+DO  - 10.1007/s00221-004-2206-5
+UR  - https://doi.org/10.1007/s00221-004-2206-5
+AN  - PMID:15657696
+KW  - MOT-BIMAN-001
+KW  - R0314
+KW  - family:motor
+KW  - role:other
+N1  - BCI Paradigm Atlas 自动收集（wikipedia），未核实
+ER  - 
+
+TY  - GEN
+AU  - Zatorre, R. J.
+AU  - Halpern, A. R.
+TI  - Mental concerts: musical imagery and auditory cortex
+PY  - 2005
+JO  - Neuron, 47(1), 9-12
+KW  - IMG-AUD-001
+KW  - R0316
+KW  - family:imagery
+KW  - role:other
+N1  - BCI Paradigm Atlas 自动收集（wikipedia），未核实
+ER  - 
+
+TY  - JOUR
+AU  - Tehovnik, E. J.
+AU  - Tolias, A. S.
+AU  - Sultan, F.
+AU  - Slocum, W. M.
+AU  - Logothetis, N. K.
+TI  - Direct and Indirect Activation of Cortical Neurons by Electrical Microstimulation
+PY  - 2006
+JO  - Journal of Neurophysiology
+DO  - 10.1152/jn.00126.2006
+UR  - https://doi.org/10.1152/jn.00126.2006
+AN  - PMID:16835359
+KW  - R0340
+KW  - STM-ICMS-001
+KW  - family:stimulation
+KW  - role:other
+N1  - BCI Paradigm Atlas 自动收集（wikipedia），未核实
+ER  - 
+
+TY  - JOUR
+AU  - Siegert, R. J.
+AU  - Taylor, K. D.
+AU  - Weatherall, M.
+AU  - Abernethy, D. A.
+TI  - Is implicit sequence learning impaired in Parkinson's disease? A meta-analysis
+PY  - 2006
+JO  - Neuropsychology
+DO  - 10.1037/0894-4105.20.4.490
+UR  - https://doi.org/10.1037/0894-4105.20.4.490
+AN  - PMID:16846267
+KW  - MOT-SRT-001
+KW  - R0342
+KW  - family:motor
+KW  - role:review
+N1  - BCI Paradigm Atlas 自动收集（hed_catalog），未核实
+ER  - 
+
+TY  - JOUR
+AU  - Halsband, U.
+AU  - Lange, R. K.
+TI  - Motor learning in man: A review of functional and clinical studies
+PY  - 2006
+JO  - Journal of Physiology-Paris, 99(4-6), 414–424
+DO  - 10.1016/j.jphysparis.2006.03.007
+UR  - https://doi.org/10.1016/j.jphysparis.2006.03.007
+AN  - PMID:16730432
+KW  - MOT-MIRR-001
+KW  - R0345
+KW  - family:motor
+KW  - role:review
+N1  - BCI Paradigm Atlas 自动收集（hed_catalog），未核实
+ER  - 
+
+TY  - JOUR
+AU  - Erickson, Kirstin M.
+AU  - Cole, Daniel J.
+TI  - Anesthetic Considerations for Awake Craniotomy for Epilepsy
+PY  - 2007
+JO  - Anesthesiology Clinics 25 (3): 535–55, ix
+DO  - 10.1016/j.anclin.2007.06.001
+UR  - https://doi.org/10.1016/j.anclin.2007.06.001
+AN  - PMID:17884707
+KW  - R0357
+KW  - STM-ECS-001
+KW  - family:stimulation
+KW  - role:other
+N1  - BCI Paradigm Atlas 自动收集（wikipedia），未核实
+ER  - 
+
+TY  - JOUR
+AU  - Robertson, E. M.
+TI  - The serial reaction time task: Implicit motor skill learning?
+PY  - 2007
+JO  - Journal of Neuroscience
+DO  - 10.1523/jneurosci.2747-07.2007
+UR  - https://doi.org/10.1523/jneurosci.2747-07.2007
+AN  - PMID:17881512
+KW  - MOT-SRT-001
+KW  - R0386
+KW  - family:motor
+KW  - role:key_reference
+N1  - BCI Paradigm Atlas 自动收集（hed_catalog），未核实
+ER  - 
+
+TY  - JOUR
+AU  - Rommelse, Nanda N.J.
+AU  - Van Der Stigchel, Stefan
+AU  - Sergeant, Joseph A.
+TI  - A review on eye movement studies in childhood and adolescent psychiatry
+PY  - 2008
+JO  - Brain and Cognition
+DO  - 10.1016/j.bandc.2008.08.025
+UR  - https://doi.org/10.1016/j.bandc.2008.08.025
+AN  - PMID:18835079
+KW  - MOT-SACC-001
+KW  - R0394
+KW  - family:motor
+KW  - role:review
+N1  - BCI Paradigm Atlas 自动收集（wikipedia），未核实
+ER  - 
+
+TY  - JOUR
+AU  - Witt, S. T.
+AU  - Laird, A. R.
+AU  - Meyerand, M. E.
+TI  - Functional neuroimaging correlates of finger-tapping task variations: An ALE meta-analysis
+PY  - 2008
+JO  - NeuroImage, 42(1), 343-356
+DO  - 10.1016/j.neuroimage.2008.04.025
+UR  - https://doi.org/10.1016/j.neuroimage.2008.04.025
+AN  - PMID:18511305
+KW  - MOT-ME-001
+KW  - R0405
+KW  - family:motor
+KW  - role:review
+N1  - BCI Paradigm Atlas 自动收集（hed_catalog），未核实
+ER  - 
+
+TY  - JOUR
+AU  - Zacks, J. M.
+TI  - Neuroimaging studies of mental rotation: A meta-analysis and review
+PY  - 2008
+JO  - Journal of Cognitive Neuroscience, 20(1), 1-19
+DO  - 10.1162/jocn.2008.20.1.1
+UR  - https://doi.org/10.1162/jocn.2008.20.1.1
+AN  - PMID:17919082
+KW  - IMG-ROT-001
+KW  - R0414
+KW  - family:imagery
+KW  - role:review
+N1  - BCI Paradigm Atlas 自动收集（hed_catalog），未核实
+ER  - 
+
+TY  - JOUR
+AU  - Nitsche MA, Cohen LG, Wassermann EM, Priori A, Lang N, Antal A, et al.
+TI  - Transcranial direct current stimulation: State of the art 2008
+PY  - 2008
+JO  - Brain Stimulation
+DO  - 10.1016/j.brs.2008.06.004
+UR  - https://doi.org/10.1016/j.brs.2008.06.004
+AN  - PMID:20633386
+KW  - R0422
+KW  - STM-TDCS-001
+KW  - family:stimulation
+KW  - role:review
+N1  - BCI Paradigm Atlas 自动收集（wikipedia），未核实
+ER  - 
+
+TY  - JOUR
+AU  - Doyon, J.
+AU  - Bellec, P.
+AU  - Amsel, R., et al.
+TI  - Contributions of the basal ganglia and functionally related brain structures to motor learning
+PY  - 2009
+JO  - Behavioural Brain Research, 199(1), 61-72
+DO  - 10.1016/j.bbr.2008.11.012
+UR  - https://doi.org/10.1016/j.bbr.2008.11.012
+AN  - PMID:19061920
+KW  - MOT-MSL-001
+KW  - R0432
+KW  - family:motor
+KW  - role:key_reference
+N1  - BCI Paradigm Atlas 自动收集（hed_catalog），未核实
+ER  - 
+
+TY  - JOUR
+AU  - Voss, M.
+AU  - Moore, J.
+AU  - Hauser, M.
+AU  - Gallinat, J.
+AU  - Heinz, A.
+AU  - Haggard, P.
+TI  - Altered awareness of action in schizophrenia: A specific deficit in predicting action consequences
+PY  - 2010
+JO  - Brain, 133(10), 3104-3112
+DO  - 10.1093/brain/awq152
+UR  - https://doi.org/10.1093/brain/awq152
+AN  - PMID:20685805
+KW  - MOT-IB-001
+KW  - R0455
+KW  - family:motor
+KW  - role:further_reference
+N1  - BCI Paradigm Atlas 自动收集（hed_catalog），未核实
+ER  - 
+
+TY  - GEN
+AU  - Hubbard, T. L.
+TI  - Auditory imagery: Empirical findings
+PY  - 2010
+JO  - Psychological Bulletin, 136(2), 302
+KW  - IMG-AUD-001
+KW  - R0457
+KW  - family:imagery
+KW  - role:other
+N1  - BCI Paradigm Atlas 自动收集（wikipedia），未核实
+ER  - 
+
+TY  - JOUR
+AU  - Jobst, Barbara C.
+AU  - Darcey, Terrance M.
+AU  - Thadani, Vijay M.
+AU  - Roberts, David W.
+TI  - Brain stimulation for the treatment of epilepsy
+PY  - 2010
+JO  - Epilepsia 51: 88–92
+DO  - 10.1111/j.1528-1167.2010.02618.x
+UR  - https://doi.org/10.1111/j.1528-1167.2010.02618.x
+AN  - PMID:20618409
+KW  - R0458
+KW  - STM-ECS-001
+KW  - family:stimulation
+KW  - role:other
+N1  - BCI Paradigm Atlas 自动收集（wikipedia），未核实
+ER  - 
+
+TY  - JOUR
+AU  - Abrahamse, E. L.
+AU  - Jiménez, L.
+AU  - Verwey, W. B.
+AU  - Clegg, B. A.
+TI  - Representing serial action and perception
+PY  - 2010
+JO  - Psychonomic Bulletin & Review
+DO  - 10.3758/pbr.17.5.603
+UR  - https://doi.org/10.3758/pbr.17.5.603
+AN  - PMID:21037157
+KW  - MOT-SRT-001
+KW  - R0477
+KW  - family:motor
+KW  - role:further_reference
+N1  - BCI Paradigm Atlas 自动收集（hed_catalog），未核实
+ER  - 
+
+TY  - JOUR
+AU  - Swinnen, SP.
+AU  - Vangheluwe, S.
+AU  - Wagemans, J.
+AU  - Coxon, JP.
+AU  - Goble, DJ.
+AU  - Van Impe, A.
+AU  - Sunaert, S.
+AU  - Peeters, R.
+AU  - Wenderoth, N.
+TI  - Shared neural resources between left and right interlimb coordination skills: the neural substrate of abstract motor representations
+PY  - 2010
+JO  - NeuroImage
+DO  - 10.1016/j.neuroimage.2009.10.052
+UR  - https://doi.org/10.1016/j.neuroimage.2009.10.052
+AN  - PMID:19874897
+KW  - MOT-BIMAN-001
+KW  - R0481
+KW  - family:motor
+KW  - role:other
+N1  - BCI Paradigm Atlas 自动收集（wikipedia），未核实
+ER  - 
+
+TY  - JOUR
+AU  - Logothetis, Nikos K.
+AU  - Augath, Mark
+AU  - Murayama, Yusuke
+AU  - et al.
+TI  - The effects of electrical microstimulation on cortical signal propagation
+PY  - 2010
+JO  - Nature Neuroscience
+DO  - 10.1038/nn.2631
+UR  - https://doi.org/10.1038/nn.2631
+AN  - PMID:20818384
+KW  - R0488
+KW  - STM-ICMS-001
+KW  - family:stimulation
+KW  - role:other
+N1  - BCI Paradigm Atlas 自动收集（wikipedia），未核实
+ER  - 
+
+TY  - JOUR
+AU  - Hamberger, Marla J.
+AU  - Cole, Jeffrey
+TI  - Language Organization and Reorganization in Epilepsy
+PY  - 2011
+JO  - Neuropsychology Review 21 (3): 240–51
+DO  - 10.1007/s11065-011-9180-z
+UR  - https://doi.org/10.1007/s11065-011-9180-z
+AN  - PMID:21842185
+KW  - R0506
+KW  - STM-ECS-001
+KW  - family:stimulation
+KW  - role:other
+N1  - BCI Paradigm Atlas 自动收集（wikipedia），未核实
+ER  - 
+
+TY  - JOUR
+AU  - Groppa S, Oliviero A, Eisen A, Quartarone A, Cohen LG, Mall V, et al.
+TI  - A practical guide to diagnostic transcranial magnetic stimulation: report of an IFCN committee
+PY  - 2012
+JO  - Clinical Neurophysiology
+DO  - 10.1016/j.clinph.2012.01.010
+UR  - https://doi.org/10.1016/j.clinph.2012.01.010
+AN  - PMID:22349304
+KW  - R0529
+KW  - STM-TEP-001
+KW  - family:stimulation
+KW  - role:other
+N1  - BCI Paradigm Atlas 自动收集（wikipedia），未核实
+ER  - 
+
+TY  - JOUR
+AU  - Moore, J. W.
+AU  - Obhi, S. S.
+TI  - Intentional binding and the sense of agency: A review
+PY  - 2012
+JO  - Consciousness and Cognition, 21(1), 546-561
+DO  - 10.1016/j.concog.2011.12.002
+UR  - https://doi.org/10.1016/j.concog.2011.12.002
+AN  - PMID:22240158
+KW  - MOT-IB-001
+KW  - R0543
+KW  - family:motor
+KW  - role:review
+N1  - BCI Paradigm Atlas 自动收集（hed_catalog），未核实
+ER  - 
+
+TY  - JOUR
+AU  - Silverstein
+AU  - Justin
+TI  - Mapping the Motor and Sensory Cortices: A Historical Look and a Current Case Study in Sensorimotor Localization and Direct Cortical Motor Stimulation
+PY  - 2012
+JO  - The Neurodiagnostic Journal 52 (1): 54–68
+AN  - PMID:22558647
+KW  - R0544
+KW  - STM-ECS-001
+KW  - family:stimulation
+KW  - role:other
+N1  - BCI Paradigm Atlas 自动收集（wikipedia），未核实
+ER  - 
+
+TY  - GEN
+AU  - Herholz, S. C.
+AU  - Halpern, A. R.
+AU  - Zatorre, R. J.
+TI  - Neuronal correlates of perception, imagery, and memory for familiar tunes
+PY  - 2012
+JO  - Journal of Cognitive Neuroscience, 24(6), 1382-1397
+KW  - IMG-AUD-001
+KW  - R0549
+KW  - family:imagery
+KW  - role:other
+N1  - BCI Paradigm Atlas 自动收集（wikipedia），未核实
+ER  - 
+
+TY  - JOUR
+AU  - Janacsek, K.
+AU  - Nemeth, D.
+TI  - Predicting the future: From implicit learning to consolidation
+PY  - 2012
+JO  - International Journal of Psychophysiology
+DO  - 10.1016/j.ijpsycho.2011.11.012
+UR  - https://doi.org/10.1016/j.ijpsycho.2011.11.012
+AN  - PMID:22154521
+KW  - MOT-SRT-001
+KW  - R0553
+KW  - family:motor
+KW  - role:further_reference
+N1  - BCI Paradigm Atlas 自动收集（hed_catalog），未核实
+ER  - 
+
+TY  - JOUR
+AU  - Tarapore, Phiroz E.
+AU  - Tate, Matthew C.
+AU  - Findlay, Anne M.
+AU  - et al.
+TI  - Preoperative multimodal motor mapping: A comparison of magnetoencephalography imaging, navigated transcranial magnetic stimulation, and direct cortical stimulation
+PY  - 2012
+JO  - Journal of Neurosurgery 117 (2): 354–62
+DO  - 10.3171/2012.5.jns112124
+UR  - https://doi.org/10.3171/2012.5.jns112124
+AN  - PMID:22702484
+KW  - R0554
+KW  - STM-ECS-001
+KW  - family:stimulation
+KW  - role:other
+N1  - BCI Paradigm Atlas 自动收集（wikipedia），未核实
+ER  - 
+
+TY  - JOUR
+AU  - Ibbotson
+AU  - Michael
+TI  - Visual Perception and Saccadic Eye Movements
+PY  - 2012
+JO  - Current Opinion in Neurobiology
+DO  - 10.1016/j.conb.2011.05.012
+UR  - https://doi.org/10.1016/j.conb.2011.05.012
+AN  - PMID:21646014
+KW  - MOT-SACC-001
+KW  - R0560
+KW  - family:motor
+KW  - role:other
+N1  - BCI Paradigm Atlas 自动收集（wikipedia），未核实
+ER  - 
+
+TY  - JOUR
+AU  - Hardwick, R. M.
+AU  - Rottschy, C.
+AU  - Miall, R. C.
+AU  - Eickhoff, S. B.
+TI  - A quantitative meta-analysis and review of motor learning in the human brain
+PY  - 2013
+JO  - NeuroImage, 67, 283–297
+DO  - 10.1016/j.neuroimage.2012.11.020
+UR  - https://doi.org/10.1016/j.neuroimage.2012.11.020
+AN  - PMID:23194819
+KW  - MOT-MIRR-001
+KW  - R0564
+KW  - family:motor
+KW  - role:review
+N1  - BCI Paradigm Atlas 自动收集（hed_catalog），未核实
+ER  - 
+
+TY  - JOUR
+AU  - Wolpe, N.
+AU  - Haggard, P.
+AU  - Siebner, H. R.
+AU  - Rowe, J. B.
+TI  - Cue integration and the perception of action in intentional binding
+PY  - 2013
+JO  - Experimental Brain Research, 229(3), 467-474
+DO  - 10.1007/s00221-013-3419-2
+UR  - https://doi.org/10.1007/s00221-013-3419-2
+AN  - PMID:23371752
+KW  - MOT-IB-001
+KW  - R0569
+KW  - family:motor
+KW  - role:key_reference
+N1  - BCI Paradigm Atlas 自动收集（hed_catalog），未核实
+ER  - 
+
+TY  - JOUR
+AU  - Edwards D, Cortes M, Datta A, et al.
+TI  - Physiological and modeling evidence for focal transcranial electrical brain stimulation in humans: a basis for high-definition tDCS
+PY  - 2013
+JO  - NeuroImage
+DO  - 10.1016/j.neuroimage.2013.01.042
+UR  - https://doi.org/10.1016/j.neuroimage.2013.01.042
+AN  - PMID:23370061
+KW  - R0584
+KW  - STM-TDCS-001
+KW  - family:stimulation
+KW  - role:other
+N1  - BCI Paradigm Atlas 自动收集（wikipedia），未核实
+ER  - 
+
+TY  - JOUR
+AU  - Clark, G. M.
+AU  - Lum, J. A.
+AU  - Ullman, M. T.
+TI  - A meta-analysis and meta-regression of serial reaction time task performance in Parkinson's disease
+PY  - 2014
+JO  - Neuropsychology
+AN  - PMID:24999755
+KW  - MOT-SRT-001
+KW  - R0594
+KW  - family:motor
+KW  - role:review
+N1  - BCI Paradigm Atlas 自动收集（hed_catalog），未核实
+ER  - 
+
+TY  - JOUR
+AU  - Kavirajan HC
+AU  - Lueck K
+AU  - Chuang K
+TI  - Alternating current cranial electrotherapy stimulation (CES) for depression
+PY  - 2014
+JO  - Cochrane Database Syst Rev. 2014 (7) CD010521
+DO  - 10.1002/14651858.cd010521.pub2
+UR  - https://doi.org/10.1002/14651858.cd010521.pub2
+AN  - PMID:25000907
+KW  - R0596
+KW  - STM-TACS-001
+KW  - family:stimulation
+KW  - role:other
+N1  - BCI Paradigm Atlas 自动收集（wikipedia），未核实
+ER  - 
+
+TY  - JOUR
+AU  - Verwey, W. B.
+AU  - Shea, C. H.
+AU  - Wright, D. L.
+TI  - A cognitive framework for explaining serial processing and sequence execution strategies
+PY  - 2015
+JO  - Psychonomic Bulletin & Review, 22(1), 54–77
+DO  - 10.3758/s13423-014-0773-4
+UR  - https://doi.org/10.3758/s13423-014-0773-4
+KW  - MOT-MSL-001
+KW  - R0634
+KW  - family:motor
+KW  - role:further_reference
+N1  - BCI Paradigm Atlas 自动收集（hed_catalog），未核实
+ER  - 
+
+TY  - GEN
+AU  - Diedrichsen, J.
+AU  - Kornysheva, K.
+TI  - Motor skill learning between selection and execution
+PY  - 2015
+JO  - Trends in Cognitive Sciences, 19(4), 227–233
+KW  - MOT-MSL-001
+KW  - R0650
+KW  - family:motor
+KW  - role:further_reference
+N1  - BCI Paradigm Atlas 自动收集（hed_catalog），未核实
+ER  - 
+
+TY  - JOUR
+AU  - Flesher, Sharlene N.
+AU  - Collinger, Jennifer L.
+AU  - et al.
+TI  - Intracortical microstimulation of human somatosensory cortex
+PY  - 2016
+JO  - Science Translational Medicine
+DO  - 10.1126/scitranslmed.aaf8083
+UR  - https://doi.org/10.1126/scitranslmed.aaf8083
+AN  - PMID:27738096
+KW  - R0680
+KW  - STM-ICMS-001
+KW  - family:stimulation
+KW  - role:other
+N1  - BCI Paradigm Atlas 自动收集（wikipedia），未核实
+ER  - 
+
+TY  - JOUR
+AU  - Brunoni AR, Moffa AH, Fregni F, et al.
+TI  - Transcranial direct current stimulation for acute major depressive episodes: meta-analysis of individual patient data
+PY  - 2016
+JO  - The British Journal of Psychiatry
+DO  - 10.1192/bjp.bp.115.164715
+UR  - https://doi.org/10.1192/bjp.bp.115.164715
+AN  - PMID:27056623
+KW  - R0691
+KW  - STM-TDCS-001
+KW  - family:stimulation
+KW  - role:review
+N1  - BCI Paradigm Atlas 自动收集（wikipedia），未核实
+ER  - 
+
+TY  - JOUR
+AU  - Borhani, K.
+AU  - Beck, B.
+AU  - Haggard, P.
+TI  - Choosing, doing, and controlling: Implicit sense of agency over somatosensory events
+PY  - 2017
+JO  - Psychological Science, 28(7), 882-893
+DO  - 10.1177/0956797617697693
+UR  - https://doi.org/10.1177/0956797617697693
+AN  - PMID:28488908
+KW  - MOT-IB-001
+KW  - R0697
+KW  - family:motor
+KW  - role:further_reference
+N1  - BCI Paradigm Atlas 自动收集（hed_catalog），未核实
+ER  - 
+
+TY  - JOUR
+AU  - Lefaucheur JP, Antal A, Ayache SS, et al.
+TI  - Evidence-based guidelines on the therapeutic use of transcranial direct current stimulation (tDCS)
+PY  - 2017
+JO  - Clinical Neurophysiology
+DO  - 10.1016/j.clinph.2016.10.087
+UR  - https://doi.org/10.1016/j.clinph.2016.10.087
+AN  - PMID:27866120
+KW  - R0702
+KW  - STM-TDCS-001
+KW  - family:stimulation
+KW  - role:other
+N1  - BCI Paradigm Atlas 自动收集（wikipedia），未核实
+ER  - 
+
+TY  - JOUR
+AU  - Antal A, Alekseichuk I, Bikson M, et al.
+TI  - Low intensity transcranial electric stimulation: Safety, ethical, legal regulatory and application guidelines
+PY  - 2017
+JO  - Clinical Neurophysiology
+DO  - 10.1016/j.clinph.2017.06.001
+UR  - https://doi.org/10.1016/j.clinph.2017.06.001
+AN  - PMID:28709880
+KW  - R0708
+KW  - STM-TDCS-001
+KW  - family:stimulation
+KW  - role:other
+N1  - BCI Paradigm Atlas 自动收集（wikipedia），未核实
+ER  - 
+
+TY  - JOUR
+AU  - King, B. R.
+AU  - Hoedlmoser, K.
+AU  - Hirschauer, F.
+AU  - Dolfen, N.
+AU  - Albouy, G.
+TI  - Sleeping on the motor engram: The multifaceted nature of sleep-related motor memory consolidation
+PY  - 2017
+JO  - Neuroscience & Biobehavioral Reviews, 80, 1–22
+DO  - 10.1016/j.neubiorev.2017.04.026
+UR  - https://doi.org/10.1016/j.neubiorev.2017.04.026
+AN  - PMID:28465166
+KW  - MOT-MSL-001
+KW  - R0718
+KW  - family:motor
+KW  - role:further_reference
+N1  - BCI Paradigm Atlas 自动收集（hed_catalog），未核实
+ER  - 
+
+TY  - JOUR
+TI  - Corticomuscular Coherence and Its Applications: A Review
+PY  - 2019
+JO  - Frontiers in Human Neuroscience
+DO  - 10.3389/fnhum.2019.00100
+UR  - https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6435838/
+KW  - MOT-FORCE-001
+KW  - R0762
+KW  - family:motor
+KW  - role:review
+N1  - BCI Paradigm Atlas 自动收集（web_search），未核实
+ER  - 
+
+TY  - JOUR
+AU  - Suzuki, K.
+AU  - Lush, P.
+AU  - Seth, A. K.
+AU  - Roseboom, W.
+TI  - Intentional binding without intentional action
+PY  - 2019
+JO  - Psychological Science, 30(6), 842-853
+DO  - 10.1177/0956797619842191
+UR  - https://doi.org/10.1177/0956797619842191
+AN  - PMID:31023161
+KW  - MOT-IB-001
+KW  - R0769
+KW  - family:motor
+KW  - role:further_reference
+N1  - BCI Paradigm Atlas 自动收集（hed_catalog），未核实
+ER  - 
+
+TY  - JOUR
+AU  - di Biase L
+AU  - Falato E
+AU  - Di Lazzaro V
+TI  - Transcranial Focused Ultrasound (tFUS) and Transcranial Unfocused Ultrasound (tUS) Neuromodulation: From Theoretical Principles to Stimulation Practices
+PY  - 2019
+JO  - Front Neurol
+DO  - 10.3389/fneur.2019.00549
+UR  - https://doi.org/10.3389/fneur.2019.00549
+AN  - PMID:31244747
+KW  - R0784
+KW  - STM-TUS-001
+KW  - family:stimulation
+KW  - role:other
+N1  - BCI Paradigm Atlas 自动收集（wikipedia），未核实
+ER  - 
+
+TY  - JOUR
+AU  - Bartolomeo, Paolo
+AU  - Hajhajate, Dounia
+AU  - Liu, Jianghao
+AU  - Spagna, Alfredo
+TI  - Assessing the causal role of early visual areas in visual mental imagery
+PY  - 2020
+JO  - Nature Reviews Neuroscience 21(9): 517
+DO  - 10.1038/s41583-020-0348-5
+UR  - https://doi.org/10.1038/s41583-020-0348-5
+AN  - PMID:32665712
+KW  - IMG-VIS-001
+KW  - R0786
+KW  - family:imagery
+KW  - role:other
+N1  - BCI Paradigm Atlas 自动收集（wikipedia），未核实
+ER  - 
+
+TY  - JOUR
+AU  - Rossi
+AU  - et al.
+TI  - Safety and recommendations for TMS use in healthy subjects and patient populations, with updates on training, ethical and regulatory issues: Expert Guidelines
+PY  - 2021
+JO  - Clinical Neurophysiology
+DO  - 10.1016/j.clinph.2020.10.003
+UR  - https://doi.org/10.1016/j.clinph.2020.10.003
+AN  - PMID:33243615
+KW  - R0808
+KW  - STM-TEP-001
+KW  - family:stimulation
+KW  - role:other
+N1  - BCI Paradigm Atlas 自动收集（wikipedia），未核实
+ER  - 
+
+TY  - JOUR
+AU  - Spagna, Alfredo
+AU  - Hajhajate, Dounia
+AU  - Liu, Jianghao
+AU  - Bartolomeo, Paolo
+TI  - Visual mental imagery engages the left fusiform gyrus, but not the early visual cortex: A meta-analysis of neuroimaging evidence
+PY  - 2021
+JO  - Neurosci Biobehav Rev 122: 201–217
+DO  - 10.1016/j.neubiorev.2020.12.029
+UR  - https://doi.org/10.1016/j.neubiorev.2020.12.029
+AN  - PMID:33040678
+KW  - IMG-VIS-001
+KW  - R0811
+KW  - family:imagery
+KW  - role:review
+N1  - BCI Paradigm Atlas 自动收集（wikipedia），未核实
+ER  - 
+
+TY  - JOUR
+AU  - Baek H, Lockwood D, Mason EJ, et al.
+TI  - Clinical Intervention Using Focused Ultrasound (FUS) Stimulation of the Brain in Diverse Neurological Disorders
+PY  - 2022
+JO  - Front Neurol
+DO  - 10.3389/fneur.2022.880814
+UR  - https://doi.org/10.3389/fneur.2022.880814
+AN  - PMID:35614924
+KW  - R0813
+KW  - STM-TUS-001
+KW  - family:stimulation
+KW  - role:other
+N1  - BCI Paradigm Atlas 自动收集（wikipedia），未核实
+ER  - 
+
+TY  - JOUR
+AU  - Darmani G, Bergmann TO, Butts Pauly K, et al.
+TI  - Non-invasive transcranial ultrasound stimulation for neuromodulation
+PY  - 2022
+JO  - Clinical Neurophysiology
+DO  - 10.1016/j.clinph.2021.12.010
+UR  - https://doi.org/10.1016/j.clinph.2021.12.010
+AN  - PMID:35033772
+KW  - R0816
+KW  - STM-TUS-001
+KW  - family:stimulation
+KW  - role:other
+N1  - BCI Paradigm Atlas 自动收集（wikipedia），未核实
+ER  - 
+
+TY  - JOUR
+AU  - Tabi, Younes Adam
+AU  - et al.
+TI  - Vividness of visual imagery questionnaire scores and their relationship to visual short-term memory performance
+PY  - 2022
+JO  - Cortex 146: 186–199
+DO  - 10.1016/j.cortex.2021.10.011
+UR  - https://doi.org/10.1016/j.cortex.2021.10.011
+AN  - PMID:34894605
+KW  - IMG-VIS-001
+KW  - R0818
+KW  - family:imagery
+KW  - role:other
+N1  - BCI Paradigm Atlas 自动收集（wikipedia），未核实
+ER  - 
+
+TY  - JOUR
+AU  - Milivojevic, B., et al.
+TI  - Imaging the spin: Disentangling the core processes underlying mental rotation by meta-analysis
+PY  - 2023
+JO  - Neuroscience & Biobehavioral Reviews, 147, 105131
+DO  - 10.1016/j.neubiorev.2023.105187
+UR  - https://doi.org/10.1016/j.neubiorev.2023.105187
+KW  - IMG-ROT-001
+KW  - R0820
+KW  - family:imagery
+KW  - role:review
+N1  - BCI Paradigm Atlas 自动收集（hed_catalog），未核实
+ER  - 
+
+TY  - JOUR
+AU  - Keihani A, Sanguineti C, Chaichian O, et al.
+TI  - Transcranial Focused Ultrasound Neuromodulation in Psychiatry: Main Characteristics, Current Evidence, and Future Directions
+PY  - 2024
+JO  - Brain Sci
+DO  - 10.3390/brainsci14111095
+UR  - https://doi.org/10.3390/brainsci14111095
+AN  - PMID:39595858
+KW  - R0822
+KW  - STM-TUS-001
+KW  - family:stimulation
+KW  - role:other
+N1  - BCI Paradigm Atlas 自动收集（wikipedia），未核实
+ER  - 
+
+TY  - JOUR
+AU  - Murphy KR, Nandi T, Kop B, et al.
+TI  - A practical guide to transcranial ultrasonic stimulation from the IFCN-endorsed ITRUSST consortium
+PY  - 2025
+JO  - Clinical Neurophysiology
+DO  - 10.1016/j.clinph.2025.01.004
+UR  - https://doi.org/10.1016/j.clinph.2025.01.004
+KW  - R0823
+KW  - STM-TUS-001
+KW  - family:stimulation
+KW  - role:other
+N1  - BCI Paradigm Atlas 自动收集（wikipedia），未核实
+ER  - 
+
+TY  - JOUR
+AU  - Aubry JF, Attali D, Schafer ME, et al.
+TI  - ITRUSST consensus on biophysical safety for transcranial ultrasound stimulation
+PY  - 2025
+JO  - Brain Stimulation
+DO  - 10.1016/j.brs.2025.10.007
+UR  - https://doi.org/10.1016/j.brs.2025.10.007
+KW  - R0828
+KW  - STM-TUS-001
+KW  - family:stimulation
+KW  - role:other
+N1  - BCI Paradigm Atlas 自动收集（wikipedia），未核实
+ER  - 
+
+TY  - JOUR
+TI  - A Review of Motor Brain-Computer Interfaces Using Intracranial Electroencephalography Based on Surface Electrodes and Depth Electrodes
+UR  - https://pubmed.ncbi.nlm.nih.gov/38949928/
+AN  - PMID:38949928
+KW  - MOT-REACH-001
+KW  - R0834
+KW  - family:motor
+KW  - role:review
+N1  - BCI Paradigm Atlas 自动收集（web_search），未核实
+ER  - 
+
+TY  - GEN
+TI  - A Review of Techniques for Detection of Movement Intention Using Movement-Related Cortical Potentials
+UR  - https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4735988/
+KW  - MOT-MRCP-001
+KW  - R0835
+KW  - family:motor
+KW  - role:review
+N1  - BCI Paradigm Atlas 自动收集（web_search），未核实
+ER  - 
+
+TY  - JOUR
+TI  - A brain-computer typing interface using finger movements
+UR  - https://pubmed.ncbi.nlm.nih.gov/37465143/
+AN  - PMID:37465143
+KW  - MOT-FING-001
+KW  - R0837
+KW  - family:motor
+KW  - role:method
+N1  - BCI Paradigm Atlas 自动收集（web_search），未核实
+ER  - 
+
+TY  - GEN
+TI  - A new mode of EEG based communication
+UR  - https://research.monash.edu/en/publications/a-new-mode-of-eeg-based-communication/
+KW  - IMG-MA-001
+KW  - R0842
+KW  - family:imagery
+KW  - role:first_source_candidate
+N1  - BCI Paradigm Atlas 自动收集（web_search），未核实
+ER  - 
+
+TY  - JOUR
+TI  - Activation of human primary motor cortex during action observation: a neuromagnetic study
+UR  - https://pubmed.ncbi.nlm.nih.gov/9844015/
+AN  - PMID:9844015
+KW  - MOT-OBS-001
+KW  - R0845
+KW  - family:motor
+KW  - role:first_source_candidate
+N1  - BCI Paradigm Atlas 自动收集（web_search），未核实
+ER  - 
+
+TY  - JOUR
+TI  - Assessing human mirror activity with EEG mu rhythm: A meta-analysis
+UR  - https://pubmed.ncbi.nlm.nih.gov/26689088/
+AN  - PMID:26689088
+KW  - MOT-OBS-001
+KW  - R0851
+KW  - family:motor
+KW  - role:review
+N1  - BCI Paradigm Atlas 自动收集（web_search），未核实
+ER  - 
+
+TY  - JOUR
+TI  - Assessing movement factors in upper limb kinematics decoding from EEG signals
+UR  - https://pubmed.ncbi.nlm.nih.gov/26020525/
+AN  - PMID:26020525
+KW  - MOT-TRACK-001
+KW  - R0852
+KW  - family:motor
+KW  - role:method
+N1  - BCI Paradigm Atlas 自动收集（web_search），未核实
+ER  - 
+
+TY  - JOUR
+TI  - Bedside detection of awareness in the vegetative state: a cohort study
+UR  - https://pubmed.ncbi.nlm.nih.gov/22078855/
+AN  - PMID:22078855
+KW  - IMG-CMD-001
+KW  - R0858
+KW  - family:imagery
+KW  - role:method
+N1  - BCI Paradigm Atlas 自动收集（web_search），未核实
+ER  - 
+
+TY  - JOUR
+TI  - Bereitschaftspotential and lateralized readiness potential in children with attention deficit hyperactivity disorder: altered motor system activation and effects of methylphenidate
+UR  - https://pubmed.ncbi.nlm.nih.gov/31280897/
+AN  - PMID:31280897
+KW  - MOT-RT-001
+KW  - R0859
+KW  - family:motor
+KW  - role:method
+N1  - BCI Paradigm Atlas 自动收集（web_search），未核实
+ER  - 
+
+TY  - JOUR
+TI  - Beyond the "Bereitschaftspotential": Action preparation behind cognitive functions
+UR  - https://pubmed.ncbi.nlm.nih.gov/28445742/
+AN  - PMID:28445742
+KW  - MOT-MRCP-001
+KW  - R0860
+KW  - family:motor
+KW  - role:review
+N1  - BCI Paradigm Atlas 自动收集（web_search），未核实
+ER  - 
+
+TY  - GEN
+TI  - Brain–Computer Interfacing Using Functional Near-Infrared Spectroscopy (fNIRS)
+UR  - https://pmc.ncbi.nlm.nih.gov/articles/PMC8534036/
+KW  - IMG-MA-001
+KW  - R0868
+KW  - family:imagery
+KW  - role:review
+N1  - BCI Paradigm Atlas 自动收集（web_search），未核实
+ER  - 
+
+TY  - JOUR
+TI  - Characterization of EEG signals revealing covert cognition in the injured brain
+UR  - https://pubmed.ncbi.nlm.nih.gov/29562312/
+AN  - PMID:29562312
+KW  - IMG-CMD-001
+KW  - R0870
+KW  - family:imagery
+KW  - role:method
+N1  - BCI Paradigm Atlas 自动收集（web_search），未核实
+ER  - 
+
+TY  - JOUR
+TI  - Classification of multichannel ECoG related to individual finger movements with redundant spatial projections
+UR  - https://pubmed.ncbi.nlm.nih.gov/22255564/
+AN  - PMID:22255564
+KW  - MOT-FING-001
+KW  - R0871
+KW  - family:motor
+KW  - role:method
+N1  - BCI Paradigm Atlas 自动收集（web_search），未核实
+ER  - 
+
+TY  - JOUR
+TI  - Cognitive Motor Dissociation in Disorders of Consciousness: An Individual Participant Data Meta-Analysis
+UR  - https://pubmed.ncbi.nlm.nih.gov/42538749/
+AN  - PMID:42538749
+KW  - IMG-CMD-001
+KW  - R0874
+KW  - family:imagery
+KW  - role:review
+N1  - BCI Paradigm Atlas 自动收集（web_search），未核实
+ER  - 
+
+TY  - GEN
+TI  - Comparison of Brain Activation during Motor Imagery and Motor Movement Using fNIRS
+UR  - https://www.ncbi.nlm.nih.gov/pmc/articles/PMC5435907/
+KW  - MOT-ME-001
+KW  - R0878
+KW  - family:motor
+KW  - role:method
+N1  - BCI Paradigm Atlas 自动收集（web_search），未核实
+ER  - 
+
+TY  - GEN
+TI  - Cortical activity during motor execution, motor imagery, and imagery-based online feedback
+UR  - https://neurotechcenter.org/node/2199
+KW  - MOT-CURSOR-001
+KW  - R0880
+KW  - family:motor
+KW  - role:method
+N1  - BCI Paradigm Atlas 自动收集（web_search），未核实
+ER  - 
+
+TY  - JOUR
+TI  - Cortical control of human motoneuron firing during isometric contraction
+UR  - https://pubmed.ncbi.nlm.nih.gov/9212286/
+AN  - PMID:9212286
+KW  - MOT-FORCE-001
+KW  - R0881
+KW  - family:motor
+KW  - role:first_source_candidate
+N1  - BCI Paradigm Atlas 自动收集（web_search），未核实
+ER  - 
+
+TY  - JOUR
+TI  - Could the beta rebound in the EEG be suitable to realize a "brain switch"?
+UR  - https://pubmed.ncbi.nlm.nih.gov/19028138/
+AN  - PMID:19028138
+KW  - MOT-GAIT-001
+KW  - R0883
+KW  - family:motor
+KW  - role:first_source_candidate
+N1  - BCI Paradigm Atlas 自动收集（web_search），未核实
+ER  - 
+
+TY  - GEN
+TI  - Decoding Covert Speech From EEG-A Comprehensive Review
+UR  - https://pmc.ncbi.nlm.nih.gov/articles/PMC8116487/
+KW  - IMG-SPI-001
+KW  - R0884
+KW  - family:imagery
+KW  - role:review
+N1  - BCI Paradigm Atlas 自动收集（web_search），未核实
+ER  - 
+
+TY  - GEN
+TI  - Decoding Different Reach-and-Grasp Movements Using Noninvasive Electroencephalogram
+UR  - https://www.ncbi.nlm.nih.gov/pmc/articles/PMC8505714/
+KW  - MOT-GRASP-001
+KW  - R0885
+KW  - family:motor
+KW  - role:review
+N1  - BCI Paradigm Atlas 自动收集（web_search），未核实
+ER  - 
+
+TY  - GEN
+TI  - Decoding Imagined Handwriting from EEG
+UR  - https://arxiv.org/html/2503.11202v1
+KW  - MOT-HW-001
+KW  - R0886
+KW  - family:motor
+KW  - role:method
+N1  - BCI Paradigm Atlas 自动收集（web_search），未核实
+ER  - 
+
+TY  - GEN
+TI  - Decoding Inner Speech Using Electrocorticography: Progress and Challenges Toward a Speech Prosthesis
+UR  - https://pmc.ncbi.nlm.nih.gov/articles/PMC6021529/
+KW  - IMG-SPI-001
+KW  - R0887
+KW  - family:imagery
+KW  - role:review
+N1  - BCI Paradigm Atlas 自动收集（web_search），未核实
+ER  - 
+
+TY  - JOUR
+TI  - Decoding natural grasp types from human ECoG
+UR  - https://pubmed.ncbi.nlm.nih.gov/21763434/
+AN  - PMID:21763434
+KW  - MOT-GRASP-001
+KW  - R0888
+KW  - family:motor
+KW  - role:first_source_candidate
+N1  - BCI Paradigm Atlas 自动收集（web_search），未核实
+ER  - 
+
+TY  - JOUR
+TI  - Decoding three-dimensional hand kinematics from electroencephalographic signals
+UR  - https://pubmed.ncbi.nlm.nih.gov/19965033/
+AN  - PMID:19965033
+KW  - MOT-TRACK-001
+KW  - R0889
+KW  - family:motor
+KW  - role:first_source_candidate
+N1  - BCI Paradigm Atlas 自动收集（web_search），未核实
+ER  - 
+
+TY  - JOUR
+TI  - Detecting awareness in the vegetative state
+UR  - https://pubmed.ncbi.nlm.nih.gov/16959998/
+AN  - PMID:16959998
+KW  - IMG-CMD-001
+KW  - IMG-NAV-001
+KW  - R0893
+KW  - family:imagery
+KW  - role:first_source_candidate
+N1  - BCI Paradigm Atlas 自动收集（web_search），未核实
+ER  - 
+
+TY  - JOUR
+TI  - Detecting awareness in the vegetative state: electroencephalographic evidence for attempted movements to command
+UR  - https://pubmed.ncbi.nlm.nih.gov/23185489/
+AN  - PMID:23185489
+KW  - MOT-ATT-001
+KW  - R0894
+KW  - family:motor
+KW  - role:method
+N1  - BCI Paradigm Atlas 自动收集（web_search），未核实
+ER  - 
+
+TY  - JOUR
+TI  - Detection of mental imagery and attempted movements in patients with disorders of consciousness using EEG
+UR  - https://pubmed.ncbi.nlm.nih.gov/25566029/
+AN  - PMID:25566029
+KW  - MOT-ATT-001
+KW  - R0895
+KW  - family:motor
+KW  - role:method
+N1  - BCI Paradigm Atlas 自动收集（web_search），未核实
+ER  - 
+
+TY  - GEN
+TI  - Detection of movement intention from single-trial movement-related cortical potentials
+UR  - https://publications.goettingen-research-online.de/ID-21451
+KW  - MOT-MRCP-001
+KW  - R0896
+KW  - family:motor
+KW  - role:method
+N1  - BCI Paradigm Atlas 自动收集（web_search），未核实
+ER  - 
+
+TY  - JOUR
+TI  - ECoG Beta Suppression and Modulation During Finger Extension and Flexion
+UR  - https://pubmed.ncbi.nlm.nih.gov/32116497/
+AN  - PMID:32116497
+KW  - MOT-FING-001
+KW  - R0908
+KW  - family:motor
+KW  - role:method
+N1  - BCI Paradigm Atlas 自动收集（web_search），未核实
+ER  - 
+
+TY  - JOUR
+TI  - Event-related EEG/MEG synchronization and desynchronization: basic principles
+UR  - https://pubmed.ncbi.nlm.nih.gov/10576479/
+AN  - PMID:10576479
+KW  - MOT-MI-001
+KW  - R0921
+KW  - family:motor
+KW  - role:method
+N1  - BCI Paradigm Atlas 自动收集（web_search），未核实
+ER  - 
+
+TY  - JOUR
+TI  - Event-related beta EEG-changes during passive and attempted foot movements in paraplegic patients
+UR  - https://pubmed.ncbi.nlm.nih.gov/17229403/
+AN  - PMID:17229403
+KW  - MOT-ATT-001
+KW  - MOT-GAIT-001
+KW  - R0922
+KW  - family:motor
+KW  - role:first_source_candidate
+N1  - BCI Paradigm Atlas 自动收集（web_search），未核实
+ER  - 
+
+TY  - JOUR
+TI  - Event-related variations in the activity of EEG-rhythms. Application to the physiology and the pathology of movements
+UR  - https://pubmed.ncbi.nlm.nih.gov/11781201/
+AN  - PMID:11781201
+KW  - MOT-ME-001
+KW  - R0928
+KW  - family:motor
+KW  - role:first_source_candidate
+N1  - BCI Paradigm Atlas 自动收集（web_search），未核实
+ER  - 
+
+TY  - GEN
+TI  - Experiments Into Readiness for Action: 50th Anniversary of the Bereitschaftspotential
+UR  - https://worldneurologyonline.com/article/experiments-readiness-action-50th-anniversary-bereitschaftspotential/
+KW  - MOT-MRCP-001
+KW  - R0930
+KW  - family:motor
+KW  - role:first_source_candidate
+N1  - BCI Paradigm Atlas 自动收集（web_search），未核实
+ER  - 
+
+TY  - JOUR
+TI  - Functional Neuroimaging in Patients With Disorders of Consciousness: Caution Advised
+UR  - https://pubmed.ncbi.nlm.nih.gov/37217437/
+AN  - PMID:37217437
+KW  - IMG-CMD-001
+KW  - R0938
+KW  - family:imagery
+KW  - role:review
+N1  - BCI Paradigm Atlas 自动收集（web_search），未核实
+ER  - 
+
+TY  - JOUR
+TI  - Give me a sign: decoding four complex hand gestures based on high-density ECoG
+UR  - https://pubmed.ncbi.nlm.nih.gov/25273279/
+AN  - PMID:25273279
+KW  - MOT-GRASP-001
+KW  - R0943
+KW  - family:motor
+KW  - role:first_source_candidate
+N1  - BCI Paradigm Atlas 自动收集（web_search），未核实
+ER  - 
+
+TY  - JOUR
+TI  - High gamma coherence between task-responsive sensory-motor cortical regions in a motor reaction-time task
+UR  - https://pubmed.ncbi.nlm.nih.gov/37584101/
+AN  - PMID:37584101
+KW  - MOT-RT-001
+KW  - R0944
+KW  - family:motor
+KW  - role:method
+N1  - BCI Paradigm Atlas 自动收集（web_search），未核实
+ER  - 
+
+TY  - JOUR
+TI  - High performance communication by people with paralysis using an intracortical brain-computer interface
+UR  - https://pubmed.ncbi.nlm.nih.gov/28220753/
+AN  - PMID:28220753
+KW  - MOT-CURSOR-001
+KW  - R0945
+KW  - family:motor
+KW  - role:method
+N1  - BCI Paradigm Atlas 自动收集（web_search），未核实
+ER  - 
+
+TY  - JOUR
+TI  - High-frequency gamma oscillations and human brain mapping with electrocorticography
+UR  - https://pubmed.ncbi.nlm.nih.gov/17071238/
+AN  - PMID:17071238
+KW  - MOT-ME-001
+KW  - R0946
+KW  - family:motor
+KW  - role:review
+N1  - BCI Paradigm Atlas 自动收集（web_search），未核实
+ER  - 
+
+TY  - GEN
+TI  - High-performance brain-to-text communication via handwriting
+UR  - https://pmc.ncbi.nlm.nih.gov/articles/PMC8163299/
+KW  - MOT-HW-001
+KW  - R0947
+KW  - family:motor
+KW  - role:first_source_candidate
+N1  - BCI Paradigm Atlas 自动收集（web_search），未核实
+ER  - 
+
+TY  - JOUR
+TI  - High-performance brain-to-text communication via handwriting (bioRxiv preprint)
+DO  - 10.1101/2020.07.01.183384
+UR  - https://www.biorxiv.org/content/10.1101/2020.07.01.183384v1
+KW  - MOT-HW-001
+KW  - R0948
+KW  - family:motor
+KW  - role:first_source_candidate
+N1  - BCI Paradigm Atlas 自动收集（web_search），未核实
+ER  - 
+
+TY  - JOUR
+TI  - Home Use of a Percutaneous Wireless Intracortical Brain-Computer Interface by Individuals With Tetraplegia
+UR  - https://pubmed.ncbi.nlm.nih.gov/33784612/
+AN  - PMID:33784612
+KW  - MOT-CURSOR-001
+KW  - R0949
+KW  - family:motor
+KW  - role:method
+N1  - BCI Paradigm Atlas 自动收集（web_search），未核实
+ER  - 
+
+TY  - JOUR
+TI  - Human cortical muscle coherence is directly related to specific motor parameters
+UR  - https://pubmed.ncbi.nlm.nih.gov/11102492/
+AN  - PMID:11102492
+KW  - MOT-FORCE-001
+KW  - R0952
+KW  - family:motor
+KW  - role:method
+N1  - BCI Paradigm Atlas 自动收集（web_search），未核实
+ER  - 
+
+TY  - GEN
+TI  - Identification of Lower-Limb Motor Tasks via Brain–Computer Interfaces: A Topical Overview
+UR  - https://pmc.ncbi.nlm.nih.gov/articles/PMC8914806
+KW  - MOT-GAIT-001
+KW  - R0955
+KW  - family:motor
+KW  - role:review
+N1  - BCI Paradigm Atlas 自动收集（web_search），未核实
+ER  - 
+
+TY  - JOUR
+TI  - Imagined Speech Brain-Computer Interface: A Task-Oriented Review of Neural Decoding
+UR  - https://pubmed.ncbi.nlm.nih.gov/42198020/
+AN  - PMID:42198020
+KW  - IMG-SPI-001
+KW  - R0956
+KW  - family:imagery
+KW  - role:review
+N1  - BCI Paradigm Atlas 自动收集（web_search），未核实
+ER  - 
+
+TY  - JOUR
+TI  - Imagined speech can be decoded from low- and cross-frequency intracranial EEG features
+UR  - https://pubmed.ncbi.nlm.nih.gov/35013268/
+AN  - PMID:35013268
+KW  - IMG-SPI-001
+KW  - R0957
+KW  - family:imagery
+KW  - role:method
+N1  - BCI Paradigm Atlas 自动收集（web_search），未核实
+ER  - 
+
+TY  - JOUR
+TI  - Increased gamma-range activity in human sensorimotor cortex during performance of visuomotor tasks
+UR  - https://pubmed.ncbi.nlm.nih.gov/10363776/
+AN  - PMID:10363776
+KW  - MOT-ME-001
+KW  - R0959
+KW  - family:motor
+KW  - role:first_source_candidate
+N1  - BCI Paradigm Atlas 自动收集（web_search），未核实
+ER  - 
+
+TY  - JOUR
+TI  - Individual finger control of a modular prosthetic limb using high-density electrocorticography in a human subject
+UR  - https://pubmed.ncbi.nlm.nih.gov/26863276/
+AN  - PMID:26863276
+KW  - MOT-FING-001
+KW  - R0960
+KW  - family:motor
+KW  - role:method
+N1  - BCI Paradigm Atlas 自动收集（web_search），未核实
+ER  - 
+
+TY  - JOUR
+TI  - Induced EEG alpha oscillations are related to mental rotation ability: the evidence for neural efficiency and serial processing
+UR  - https://pubmed.ncbi.nlm.nih.gov/20637833/
+AN  - PMID:20637833
+KW  - IMG-ROT-001
+KW  - R0961
+KW  - family:imagery
+KW  - role:method
+N1  - BCI Paradigm Atlas 自动收集（web_search），未核实
+ER  - 
+
+TY  - JOUR
+TI  - Lighting up word retrieval: A scoping review of fNIRS studies on lexical access in healthy and neurodegenerative populations
+UR  - https://pubmed.ncbi.nlm.nih.gov/42435827/
+AN  - PMID:42435827
+KW  - IMG-WORD-001
+KW  - R0972
+KW  - family:imagery
+KW  - role:review
+N1  - BCI Paradigm Atlas 自动收集（web_search），未核实
+ER  - 
+
+TY  - GEN
+TI  - Measuring prefrontal brain activity during verbal fluency tasks using functional near infrared spectroscopy
+UR  - https://pmc.ncbi.nlm.nih.gov/articles/PMC13038428/
+KW  - IMG-WORD-001
+KW  - R0979
+KW  - family:imagery
+KW  - role:review
+N1  - BCI Paradigm Atlas 自动收集（web_search），未核实
+ER  - 
+
+TY  - JOUR
+TI  - Mental rotation: an event-related potential study with a validated mental rotation task
+UR  - https://pubmed.ncbi.nlm.nih.gov/2923718/
+AN  - PMID:2923718
+KW  - IMG-ROT-001
+KW  - R0981
+KW  - family:imagery
+KW  - role:method
+N1  - BCI Paradigm Atlas 自动收集（web_search），未核实
+ER  - 
+
+TY  - JOUR
+TI  - Mirror activity in the human brain while observing hand movements: a comparison between EEG desynchronization in the mu-range and previous fMRI results
+UR  - https://pubmed.ncbi.nlm.nih.gov/19500557/
+AN  - PMID:19500557
+KW  - MOT-OBS-001
+KW  - R0987
+KW  - family:motor
+KW  - role:method
+N1  - BCI Paradigm Atlas 自动收集（web_search），未核实
+ER  - 
+
+TY  - JOUR
+TI  - Modulation of mu rhythm desynchronization during motor imagery by transcranial direct current stimulation
+UR  - https://pubmed.ncbi.nlm.nih.gov/20540721/
+AN  - PMID:20540721
+KW  - R0990
+KW  - STM-TDCS-001
+KW  - family:stimulation
+KW  - role:method
+N1  - BCI Paradigm Atlas 自动收集（web_search），未核实
+ER  - 
+
+TY  - GEN
+TI  - Most Popular Signal Processing Methods in Motor-Imagery BCI: A Review and Meta-Analysis
+UR  - https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6232268/
+KW  - MOT-MI-001
+KW  - R0991
+KW  - family:motor
+KW  - role:review
+N1  - BCI Paradigm Atlas 自动收集（web_search），未核实
+ER  - 
+
+TY  - GEN
+TI  - Motor Imagery and Motor Execution: A Narrative Review of Electroencephalographic (EEG) Signatures, Methodological Consistency, and Translational Applications
+UR  - https://www.ncbi.nlm.nih.gov/pmc/articles/PMC12550537/
+KW  - MOT-ME-001
+KW  - MOT-MI-001
+KW  - R0994
+KW  - family:motor
+KW  - role:review
+N1  - BCI Paradigm Atlas 自动收集（web_search），未核实
+ER  - 
+
+TY  - JOUR
+TI  - Motor facilitation during action observation: a magnetic stimulation study
+UR  - https://pubmed.ncbi.nlm.nih.gov/7666169/
+AN  - PMID:7666169
+KW  - MOT-OBS-001
+KW  - R0995
+KW  - family:motor
+KW  - role:first_source_candidate
+N1  - BCI Paradigm Atlas 自动收集（web_search），未核实
+ER  - 
+
+TY  - GEN
+TI  - Motor imagery activates primary sensorimotor area in humans
+UR  - https://scholarhub.vn/publication/:slug/7c002421-69cc-493d-b5ad-9a23ee0a617a
+KW  - MOT-MI-001
+KW  - R0996
+KW  - family:motor
+KW  - role:first_source_candidate
+N1  - BCI Paradigm Atlas 自动收集（web_search），未核实
+ER  - 
+
+TY  - JOUR
+TI  - Motor imagery and EEG-based control of spelling devices and neuroprostheses
+UR  - https://pubmed.ncbi.nlm.nih.gov/17071244/
+AN  - PMID:17071244
+KW  - MOT-MI-001
+KW  - R0997
+KW  - family:motor
+KW  - role:method
+N1  - BCI Paradigm Atlas 自动收集（web_search），未核实
+ER  - 
+
+TY  - JOUR
+TI  - Neural coding of movement direction in the healthy human brain
+UR  - https://pubmed.ncbi.nlm.nih.gov/20967197/
+AN  - PMID:20967197
+KW  - MOT-REACH-001
+KW  - R1002
+KW  - family:motor
+KW  - role:method
+N1  - BCI Paradigm Atlas 自动收集（web_search），未核实
+ER  - 
+
+TY  - JOUR
+TI  - Neuronal population coding of movement direction
+UR  - https://pubmed.ncbi.nlm.nih.gov/3749885/
+AN  - PMID:3749885
+KW  - MOT-REACH-001
+KW  - R1012
+KW  - family:motor
+KW  - role:method
+N1  - BCI Paradigm Atlas 自动收集（web_search），未核实
+ER  - 
+
+TY  - JOUR
+TI  - Non-linear online low-frequency EEG decoding of arm movements during a pursuit tracking task
+UR  - https://pubmed.ncbi.nlm.nih.gov/33018632/
+AN  - PMID:33018632
+KW  - MOT-TRACK-001
+KW  - R1016
+KW  - family:motor
+KW  - role:method
+N1  - BCI Paradigm Atlas 自动收集（web_search），未核实
+ER  - 
+
+TY  - JOUR
+TI  - On the relations between the direction of two-dimensional arm movements and cell discharge in primate motor cortex
+UR  - https://pubmed.ncbi.nlm.nih.gov/7143039/
+AN  - PMID:7143039
+KW  - MOT-REACH-001
+KW  - R1020
+KW  - family:motor
+KW  - role:first_source_candidate
+N1  - BCI Paradigm Atlas 自动收集（web_search），未核实
+ER  - 
+
+TY  - GEN
+TI  - Repetition of verbal fluency task attenuates the hemodynamic activation in the left prefrontal cortex: Enhancing the clinical usefulness of near-infrared spectroscopy
+UR  - https://pmc.ncbi.nlm.nih.gov/articles/PMC5862477/
+KW  - IMG-WORD-001
+KW  - R1035
+KW  - family:imagery
+KW  - role:method
+N1  - BCI Paradigm Atlas 自动收集（web_search），未核实
+ER  - 
+
+TY  - JOUR
+TI  - Review: Human Intracortical Recording and Neural Decoding for Brain-Computer Interfaces
+UR  - https://pubmed.ncbi.nlm.nih.gov/28278476/
+AN  - PMID:28278476
+KW  - MOT-ATT-001
+KW  - MOT-CURSOR-001
+KW  - MOT-REACH-001
+KW  - R1038
+KW  - family:motor
+KW  - role:review
+N1  - BCI Paradigm Atlas 自动收集（web_search），未核实
+ER  - 
+
+TY  - JOUR
+TI  - Single trial classification of fNIRS-based brain-computer interface mental arithmetic data: a comparison between different classifiers
+UR  - https://pubmed.ncbi.nlm.nih.gov/25570376/
+AN  - PMID:25570376
+KW  - IMG-MA-001
+KW  - R1041
+KW  - family:imagery
+KW  - role:method
+N1  - BCI Paradigm Atlas 自动收集（web_search），未核实
+ER  - 
+
+TY  - JOUR
+TI  - Speech imagery brain-computer interfaces: a systematic literature review
+UR  - https://pubmed.ncbi.nlm.nih.gov/40490003/
+AN  - PMID:40490003
+KW  - IMG-SPI-001
+KW  - R1045
+KW  - family:imagery
+KW  - role:review
+N1  - BCI Paradigm Atlas 自动收集（web_search），未核实
+ER  - 
+
+TY  - JOUR
+TI  - Synchronization between motor cortex and spinal motoneuronal pool during the performance of a maintained motor task in man
+UR  - https://pubmed.ncbi.nlm.nih.gov/8788955/
+AN  - PMID:8788955
+KW  - MOT-FORCE-001
+KW  - R1050
+KW  - family:motor
+KW  - role:first_source_candidate
+N1  - BCI Paradigm Atlas 自动收集（web_search），未核实
+ER  - 
+
+TY  - JOUR
+TI  - Systematic review: progress in EEG-based speech imagery brain-computer interface decoding and encoding research
+UR  - https://pubmed.ncbi.nlm.nih.gov/40989443/
+AN  - PMID:40989443
+KW  - IMG-SPI-001
+KW  - R1051
+KW  - family:imagery
+KW  - role:review
+N1  - BCI Paradigm Atlas 自动收集（web_search），未核实
+ER  - 
+
+TY  - JOUR
+TI  - The functional significance of ERP effects during mental rotation
+UR  - https://pubmed.ncbi.nlm.nih.gov/12236320/
+AN  - PMID:12236320
+KW  - IMG-ROT-001
+KW  - R1060
+KW  - family:imagery
+KW  - role:review
+N1  - BCI Paradigm Atlas 自动收集（web_search），未核实
+ER  - 
+
+TY  - JOUR
+TI  - Toward a chronopsychophysiology of mental rotation
+UR  - https://pubmed.ncbi.nlm.nih.gov/12212633/
+AN  - PMID:12212633
+KW  - IMG-ROT-001
+KW  - R1077
+KW  - family:imagery
+KW  - role:review
+N1  - BCI Paradigm Atlas 自动收集（web_search），未核实
+ER  - 
+
+TY  - JOUR
+TI  - Transcranial Direct Current Stimulation Enhances Motor Performance by Modulating Beta-Phase Synchronization in the Sensorimotor Network: A Preliminary Study
+UR  - https://pubmed.ncbi.nlm.nih.gov/40149807/
+AN  - PMID:40149807
+KW  - R1080
+KW  - STM-TDCS-001
+KW  - family:stimulation
+KW  - role:method
+N1  - BCI Paradigm Atlas 自动收集（web_search），未核实
+ER  - 
+
+TY  - JOUR
+TI  - Tuning characteristics of low-frequency EEG to positions and velocities in visuomotor and oculomotor tracking tasks
+UR  - https://pubmed.ncbi.nlm.nih.gov/30532058/
+AN  - PMID:30532058
+KW  - MOT-TRACK-001
+KW  - R1082
+KW  - family:motor
+KW  - role:method
+N1  - BCI Paradigm Atlas 自动收集（web_search），未核实
+ER  - 
+
+TY  - GEN
+TI  - fNIRS-based brain-computer interfaces: a review
+UR  - https://pmc.ncbi.nlm.nih.gov/articles/PMC4309034/
+KW  - IMG-MA-001
+KW  - R1088
+KW  - family:imagery
+KW  - role:review
+N1  - BCI Paradigm Atlas 自动收集（web_search），未核实
+ER  - 
+
+TY  - GEN
+TI  - reconstructing three dimensional hand movements from noninvasive
+UR  - https://scholars.houstonmethodist.org/en/publications/reconstructing-three-dimensional-hand-movements-from-noninvasive-/
+KW  - MOT-TRACK-001
+KW  - R1091
+KW  - family:motor
+KW  - role:first_source_candidate
+N1  - BCI Paradigm Atlas 自动收集（web_search），未核实
+ER  - 
+

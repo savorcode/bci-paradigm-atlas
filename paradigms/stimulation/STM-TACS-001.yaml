@@ -1,0 +1,58 @@
+schema_version: '0.2'
+id: STM-TACS-001
+class: STM-TACS
+name:
+  en: Transcranial alternating current stimulation with EEG
+  zh: 经颅交流电刺激同步脑电
+aliases:
+- tACS-EEG
+- oscillatory entrainment
+- tACS
+family: stimulation
+bci_category:
+- none
+recording_modality:
+- EEG
+- MEG
+stimulus_modality:
+- electrical_stimulation
+markers:
+- MK.oscillatory_entrainment
+- MK.tES_power_aftereffect
+description:
+  en: >-
+    A weak sinusoidal current at a chosen frequency (often the individual alpha frequency) is applied through scalp electrodes,
+    and EEG is recorded before, during and after stimulation, compared with sham. Stimulation can phase-align ongoing oscillations
+    at the stimulation frequency (entrainment) and is followed by an increase in power in the stimulated band after stimulation
+    ends.
+  zh: 通过头皮电极施加选定频率（常为个体 α 频率）的弱正弦电流，在刺激前、刺激中和刺激后记录脑电，并与伪刺激比较。刺激可使进行中的节律与刺激频率相位对齐（夹带），刺激结束后该频段功率升高。
+protocol:
+  n_classes: 2
+  classes:
+  - tACS at the individual alpha frequency
+  - sham
+  cue: none
+  stimulus_coding: sinusoidal current at a fixed frequency
+  paradigm_timing: block
+  feedback: none
+  distinguishing: >-
+    Standard configuration (earliest published) / 标准配置（最早发表）: fixed-frequency tACS vs sham with EEG before and after stimulation
+    (Zaehle et al. 2010). No sibling protocol yet; closed-loop phase-locked tACS is not split (no lead).
+first_source:
+  citation: >-
+    Zaehle T, Rach S, Herrmann CS. Transcranial alternating current stimulation enhances individual alpha activity in human
+    EEG. PLoS ONE. 2010;5(11):e13766.
+  doi: 10.1371/journal.pone.0013766
+  year: 2010
+  verified: false
+interop:
+  bids_task: tacs
+notes: >-
+  Leads: R0596. Search sources (curation/work/pkg_B/search_log.md): S11 https://doaj.org/article/3171b8ae5c5e433c901e01d88a881003;
+  S12 https://fis.uke.de/portal/de/publications/entrainment-of-brain-oscillations-by-transcranial-alternating-current-stimulation(809b5661-2549-4f33-b5ee-6f4c31eba172)/export.html.
+  first_source found by search (S11, aftereffect); S12 reports online entrainment. R0596 (cranial electrotherapy for depression,
+  Cochrane) is not a recording study and is not used as evidence. Recording during stimulation is affected by large artefacts.
+  bibliography corrected (OpenAlex, 2026-10-05)
+status: draft
+contributors:
+- curator_b

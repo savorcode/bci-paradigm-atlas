@@ -1,0 +1,57 @@
+schema_version: '0.2'
+id: MEM-SME-001
+class: MEM-SME
+name:
+  en: Subsequent memory paradigm
+  zh: 后续记忆效应
+aliases:
+- Difference due to memory (Dm)
+- SME paradigm
+- Subsequent memory effect
+family: memory
+bci_category:
+- none
+recording_modality:
+- EEG
+- fMRI
+stimulus_modality:
+- visual
+- auditory
+markers:
+- MK.Dm
+- MK.BOLD_hippocampus
+description:
+  en: Neural activity recorded while items are encoded is sorted according to whether each item is later remembered or forgotten
+    in a subsequent memory test. Later-remembered items show more positive ERPs during encoding (difference due to memory,
+    Dm) and greater encoding-related BOLD activity in the hippocampus and medial temporal lobe.
+  zh: 记录项目编码时的神经活动，并按每个项目在随后记忆测试中被记住还是被遗忘进行分类。后来被记住的项目在编码时诱发更正的 ERP（记忆差异效应，Dm），并在海马和内侧颞叶表现出更强的编码相关 BOLD 活动。
+trial_structure:
+  conditions:
+  - remembered
+  - forgotten
+protocol:
+  n_classes: 2
+  classes:
+  - subsequently remembered
+  - subsequently forgotten
+  cue: items encoded under an (often incidental) study task, followed by a later memory test
+  paradigm_timing: synchronous
+  feedback: none
+  distinguishing: 标准配置（最早发表）：编码期活动按后续测试结果分类（Paller, Kutas & Mayes 1987, R1157）。本类只有这一配置。
+first_source:
+  citation: Paller KA, Kutas M, Mayes AR. Neural correlates of encoding in an incidental learning paradigm. Electroencephalography
+    and Clinical Neurophysiology. 1987;67(4):360-371.
+  doi: 10.1016/0013-4694(87)90124-6
+  year: 1987
+  verified: false
+interop:
+  bids_task: subsequentmemory
+notes: 'Leads: R0229, DN04 (R#### = curation/literature.csv; DN## = curation/work/pkg_D/new_leads.csv). Only lead R0229 (Paller
+  & Wagner 2002) is a review; Paller, Kutas & Mayes (1987) located via search (title as returned by the fetched PDF; check).
+  Earlier ERP work (e.g. Sanquist et al. 1980) may have priority - not retrieved. decisions.md notes possible overlap with
+  MEM-FR-001 (SME is an analysis design applicable to any encoding task). Sprint 2 (D-057, curator_d, 2026-10-03): protocol
+  block added (-001 = earliest/standard configuration). bibliography corrected (OpenAlex, 2026-10-05) [maintainer sprint 3,
+  2026-10-07, D-073] origin candidate recalled, record confirmed via OpenAlex.'
+status: draft
+contributors:
+- curator_d

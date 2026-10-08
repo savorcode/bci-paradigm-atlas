@@ -1,0 +1,52 @@
+schema_version: '0.2'
+id: IMG-CMD-002
+class: IMG-CMD
+name:
+  en: Bedside EEG motor-imagery command following
+  zh: 床旁脑电运动想象指令跟随
+aliases:
+- EEG command following
+- bedside awareness detection
+family: imagery
+bci_category:
+- active
+recording_modality:
+- EEG
+stimulus_modality:
+- auditory
+- mental_imagery
+markers:
+- MK.SMR_ERD
+description:
+  en: >-
+    At the bedside, patients with disorders of consciousness hear short spoken commands, signalled by tones, to imagine one
+    of two movements or to relax, in many short trials. Classification of command-specific sensorimotor rhythm changes above
+    chance is taken as evidence of covert command following.
+  zh: 在床旁，意识障碍患者在大量短试次中听到以提示音标记的简短口头指令，想象两种动作之一或放松。若对指令特异的感觉运动节律变化的分类高于机会水平，即视为隐蔽指令跟随的证据。
+protocol:
+  classes:
+  - motor-imagery commands (two movements, to be checked against R0858)
+  - relax
+  cue: spoken instruction with tone cues
+  paradigm_timing: synchronous
+  feedback: none
+  distinguishing: >-
+    Criteria 1, 2 and 3 vs IMG-CMD-001: short EEG trials paced by tones with two motor-imagery commands, instead of 30-s fMRI
+    blocks of tennis vs house-navigation imagery.
+first_source:
+  citation: >-
+    Cruse D, Chennu S, Chatelle C, Bekinschtein TA, Fernández-Espejo D, Pickard JD, Laureys S, Owen AM. Bedside detection
+    of awareness in the vegetative state: a cohort study. The Lancet. 2011;378(9809):2088-2094.
+  doi: 10.1016/s0140-6736(11)61224-5
+  pmid: '22078855'
+  year: 2011
+  verified: false
+interop:
+  bids_task: commandfollowing
+notes: >-
+  Leads: R0858 (first_source, title + PMID; memory lead Cruse et al. 2011 Lancet, unverified), R0870. Converted from the IMG-CMD-001
+  variant 'Bedside EEG motor-imagery command following'. Motor attempts instead of imagery are MOT-ATT-002. bibliography corrected
+  (OpenAlex, 2026-10-05)
+status: draft
+contributors:
+- curator_b

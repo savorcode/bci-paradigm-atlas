@@ -1,0 +1,58 @@
+schema_version: '0.2'
+id: CTL-SST-001
+class: CTL-SST
+name:
+  en: Stop-signal task
+  zh: 停止信号任务
+aliases:
+- Countermanding task
+- SST
+- Stop Signal
+- Stop Task
+- Stop-Signal
+- Stop-signal paradigm
+family: control
+bci_category:
+- none
+recording_modality:
+- EEG
+- fMRI
+stimulus_modality:
+- visual
+- auditory
+markers:
+- MK.NoGo_P3
+- MK.rIFG_beta
+description:
+  en: Participants respond to a go stimulus, and on a minority of trials a stop signal follows after a variable delay, instructing
+    them to cancel the response already initiated; stop-signal reaction time is estimated from a race model. Successful stopping
+    elicits a fronto-central stop-P3 and is accompanied by right inferior frontal beta-band activity.
+  zh: 被试对 Go 刺激反应；在少数试次中，Go 刺激之后以可变延迟出现停止信号，要求被试取消已启动的反应，并依据竞赛模型估计停止信号反应时。成功停止诱发额中央的停止 P3，并伴随右额下回 β 频段活动。
+trial_structure:
+  conditions:
+  - go
+  - stop
+protocol:
+  n_classes: 2
+  classes:
+  - go trial
+  - stop-signal trial
+  cue: go stimulus followed on a minority of trials by a stop signal after a variable delay
+  paradigm_timing: synchronous
+  feedback: none
+  distinguishing: 标准配置（最早发表线索）：少数试次在可变延迟后出现停止信号，按赛跑模型估计 SSRT（Logan & Cowan 1984，R0067）；延迟固定或阶梯追踪是参数。
+first_source:
+  citation: 'Logan GD, Cowan WB. On the ability to inhibit thought and action: A theory of an act of control. Psychological
+    Review. 1984;91(3):295-327.'
+  doi: 10.1037/0033-295x.91.3.295
+  year: 1984
+  verified: false
+interop:
+  bids_task: stopsignal
+notes: 'HED task page: https://www.hedtags.org/hed-task/tasks/hedtsk_stop_signal.html. Leads used: R0067; R0418; R0756; R0915.
+  first_source lead: R0067. Earlier stop-signal work (task sheet: Lappin & Eriksen 1966, unconfirmed) not among leads. Reviews/guides:
+  R0418, R0756, R0915. Pass 1 skeleton (curator_c, 2026-10-03); all sources unverified. Sprint 2 (D-057): protocol added;
+  single configuration (selective / stop-change versions not split for lack of leads). bibliography corrected (Crossref, 2026-10-05)'
+status: draft
+contributors:
+- curator_c

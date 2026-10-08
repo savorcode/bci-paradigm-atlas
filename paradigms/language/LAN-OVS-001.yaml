@@ -1,0 +1,57 @@
+schema_version: '0.2'
+id: LAN-OVS-001
+class: LAN-OVS
+name:
+  en: Overt / attempted speech production
+  zh: 出声或尝试言语产生
+aliases:
+- articulation decoding
+- attempted speech
+- speech neuroprosthesis
+family: language
+bci_category:
+- active
+recording_modality:
+- ECoG
+stimulus_modality:
+- motor_execution
+- visual
+- auditory
+markers:
+- MK.high_gamma
+description:
+  en: Participants with implanted electrodes read aloud or repeat prompted consonant-vowel syllables while neural activity
+    is recorded from ventral sensorimotor cortex; decoding is done offline (open loop). Articulator-specific high-gamma activity
+    reveals the somatotopic and temporal organisation of speech articulation that later speech neuroprostheses build on.
+  zh: 植入电极的被试朗读或复述提示的辅音—元音音节，同时记录腹侧感觉运动皮层活动；解码离线进行（开环）。与发音器官对应的高 γ 活动揭示了言语发音的躯体定位与时间组织，是后来言语神经假体的基础。
+trial_structure:
+  conditions:
+  - syllable identity (consonant, vowel)
+protocol:
+  n_classes: 1
+  classes:
+  - 'consonant-vowel syllables (set: parameter)'
+  cue: visually or auditorily prompted syllables, read aloud
+  paradigm_timing: synchronous
+  feedback: none
+  distinguishing: 标准配置（最早发表）：开环出声说出提示的辅音—元音音节，ECoG 记录腹侧感觉运动皮层（R0941）。与 -002（瘫痪者尝试说固定小词表、实时离散解码，准则 1;4）、-003（大词表句子、实时连续解码，准则
+    1;4）区别。
+first_source:
+  citation: Bouchard KE, Mesgarani N, Johnson K, Chang EF. Functional organization of human sensorimotor cortex for speech
+    articulation. Nature. 2013;495(7441):327-332.
+  doi: 10.1038/nature11911
+  pmid: '23426266'
+  year: 2013
+  verified: false
+interop:
+  bids_task: speechproduction
+notes: 'Leads: R0838, R0839, R0850, R0857, R0941, R1013 (R#### = curation/literature.csv; DN## = curation/work/pkg_D/new_leads.csv).
+  R0941 (Functional organization of human sensorimotor cortex for speech articulation; title and PMID only) chosen as the
+  earliest of the two origin candidates; R1013 (Neuroprosthesis for decoding speech in a paralyzed person with anarthria)
+  is the first attempted-speech BCI. Lead fields lack authors and years. Distinct from IMG-SPI-001 (imagined/inner speech,
+  package B). Sprint 2 (D-057, curator_d, 2026-10-03): protocol block added (-001 = earliest/standard configuration). Narrowed
+  to open-loop overt syllable production (ECoG); attempted word decoding with a small vocabulary is LAN-OVS-002 and large-vocabulary
+  sentence decoding LAN-OVS-003. Sibling concrete paradigms: LAN-OVS-002, LAN-OVS-003. bibliography corrected (OpenAlex, 2026-10-05)'
+status: draft
+contributors:
+- curator_d

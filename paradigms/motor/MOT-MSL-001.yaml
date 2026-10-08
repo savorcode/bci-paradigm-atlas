@@ -1,0 +1,59 @@
+schema_version: '0.2'
+id: MOT-MSL-001
+class: MOT-MSL
+name:
+  en: Motor sequence learning (finger sequence)
+  zh: 运动序列学习（手指序列）
+aliases:
+- Finger Sequence Task
+- Sequence Learning
+- finger opposition sequence
+- explicit motor sequence learning
+family: motor
+bci_category:
+- none
+recording_modality:
+- fMRI
+- EEG
+- MEG
+stimulus_modality:
+- motor_execution
+- visual
+markers:
+- MK.SMR_ERD
+- MK.BOLD_motor_network
+description:
+  en: >-
+    Participants repeatedly practise an explicitly known sequence of finger movements (e.g. a finger-to-thumb opposition or
+    key-press sequence) and are tested for speed and accuracy across sessions, often including post-sleep retests. Learning-related
+    changes appear in motor network BOLD (M1, SMA, premotor cortex, striatum, cerebellum) and in sensorimotor beta modulation.
+  zh: >-
+    被试反复练习一个外显已知的手指动作序列（如拇指对指或按键序列），并在多个时段（常包括睡眠后复测）测量速度与准确性。学习相关变化表现为运动网络（M1、SMA、前运动皮层、纹状体、小脑）BOLD 的改变以及感觉运动 β 调制。
+protocol:
+  n_classes: 2
+  classes:
+  - trained sequence
+  - untrained control sequence
+  cue: explicit instruction of the finger sequence
+  paradigm_timing: block
+  feedback: none
+  distinguishing: >-
+    Standard configuration (earliest published) / 标准配置（最早发表）: explicitly known finger-opposition sequence practised over sessions,
+    trained vs untrained sequence blocks (Karni et al. 1998). No sibling protocol yet; overlap with MOT-SRT pending (decisions.md).
+first_source:
+  citation: >-
+    Karni A, Meyer G, Rey-Hipolito C, Jezzard P, Adams MM, Turner R, Ungerleider LG. The acquisition of skilled motor performance:
+    fast and slow experience-driven changes in primary motor cortex. Proceedings of the National Academy of Sciences. 1998;95(3):861-868.
+  doi: 10.1073/pnas.95.3.861
+  pmid: '9448252'
+  year: 1998
+  verified: false
+interop:
+  bids_task: motorsequence
+notes: >-
+  HED task page: https://www.hedtags.org/hed-task/tasks/hedtsk_motor_sequence_learning.html. Leads: R0170, R0220, R0231, R0432,
+  R0634, R0650, R0718. Maintainer note (decisions.md, next-meeting items): possible overlap with MOT-SRT-001 (explicit vs
+  implicit sequence learning). No review lead for the EEG beta marker yet. bibliography corrected (OpenAlex, 2026-10-05)
+status: draft
+contributors:
+- curator_b

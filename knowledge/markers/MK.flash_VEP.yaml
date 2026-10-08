@@ -1,0 +1,24 @@
+schema_version: "0.2"
+id: MK.flash_VEP
+name:
+  en: Flash visual evoked potential
+  zh: 闪光视觉诱发电位
+aliases:
+- flash VEP
+- FVEP
+- flash visual evoked response
+type: erp_component
+recording_modality:
+- EEG
+signature:
+  latency_ms: ~30-200 (sequence of components)
+  topography: occipital
+description:
+  en: Series of occipital positive and negative waves evoked by diffuse light flashes, more variable between individuals than
+    the pattern-reversal VEP.
+  zh: 由弥散闪光诱发的一系列枕区正负波，个体间变异大于图形翻转 VEP。
+notes: First-pass skeleton by package A (2026-10-03). No generators/indexes yet. Signature values are textbook-level approximations
+  and await source checking.
+status: draft
+contributors:
+- curator_a

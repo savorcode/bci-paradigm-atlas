@@ -1,0 +1,61 @@
+schema_version: '0.2'
+id: IMG-MA-001
+class: IMG-MA
+name:
+  en: Mental arithmetic
+  zh: 心算
+aliases:
+- MA
+- mental calculation
+- serial subtraction
+family: imagery
+bci_category:
+- active
+recording_modality:
+- fNIRS
+- EEG
+stimulus_modality:
+- cognitive_task
+- visual
+markers:
+- MK.HbO_prefrontal
+- MK.frontal_midline_theta
+description:
+  en: >-
+    Participants silently perform calculations, typically serial subtraction of a small number from a cued starting number,
+    in blocks alternating with rest or another mental task. Calculation increases prefrontal oxygenated haemoglobin in fNIRS
+    and frontal midline theta in EEG, which serve as features in mental-task BCIs.
+  zh: 被试默默进行计算，通常是从提示的起始数字连续减去一个小数，按组块与休息或另一种心理任务交替。计算使 fNIRS 测得的前额叶氧合血红蛋白升高、EEG 额中线 θ 增强，这些特征用于心理任务脑机接口。
+protocol:
+  n_classes: 2
+  classes:
+  - mental arithmetic
+  - baseline (rest)
+  cue: visual instruction / arithmetic problem
+  paradigm_timing: synchronous
+  feedback: none
+  distinguishing: >-
+    Canonical configuration / 标准配置（公认）: silent calculation contrasted with a baseline task (two classes), cue-paced trials, no
+    feedback - the configuration used by BNCI2015_004-style and fNIRS mental-arithmetic BCIs. Sibling: -002 five-class mental-task
+    set (criterion 1). Keirn & Aunon 1990 (R0842) is the class-origin candidate only; whatever task set it contained does not
+    change the meaning of -001 (D-062, D-063).
+first_source:
+  citation: A new mode of EEG based communication.
+  verified: false
+datasets:
+- name: Colorado State Keirn & Aunon mental-task EEG data
+- name: >-
+    Open Access Dataset for EEG plus NIRS Single-Trial Classification (TU Berlin hybrid EEG+NIRS, MI and MA)
+interop:
+  bids_task: mentalarithmetic
+notes: >-
+  Leads: R0842, R0868, R1041, R1088. D-001: active mental task, not perceptual imagery; kept in the imagery family. Memory
+  lead: R0842 believed Keirn & Aunon 1990 IEEE TBME (five mental tasks); fNIRS origin not established. Sprint 2 (D-057): R0842
+  (Keirn & Aunon, memory lead) may have used a larger set of mental tasks; if the original configuration is multi-task, swap
+  the roles of -001 and -002 before merge (numbers stay). Shin et al. EEG+NIRS dataset (MA vs baseline) matches this protocol;
+  its block timing is a parameter. D-063 ruling (maintainer, 2026-10-05): NO swap - under D-062 -001 is the canonical two-class
+  mental arithmetic vs rest configuration regardless of the content of Keirn & Aunon 1990; R0842 remains the class-origin candidate
+  (first_source here is that candidate, unverified). ID meaning frozen from release v0.1.0.
+status: draft
+contributors:
+- curator_b

@@ -1,0 +1,53 @@
+schema_version: '0.2'
+id: MEM-PA-002
+class: MEM-PA
+name:
+  en: Visuospatial paired-associate learning
+  zh: 视空间配对联想学习
+aliases:
+- object-location paired associates
+- visuospatial PAL
+- PAL
+family: memory
+bci_category:
+- none
+recording_modality:
+- fMRI
+stimulus_modality:
+- visual
+markers:
+- MK.BOLD_hippocampus
+description:
+  en: Patterns or objects are shown one at a time in different locations, and participants then have to indicate the location
+    in which each pattern or object appeared; the number of pairs increases across stages. The task is used in clinical assessment
+    of memory impairment, and fMRI versions show hippocampal activity during encoding and retrieval of object-location pairs.
+  zh: 图案或物体逐一呈现在不同位置，随后被试指出每个图案或物体出现过的位置；配对数逐级增加。该任务用于记忆障碍的临床评估，fMRI 版本显示编码与提取物体—位置配对时的海马活动。
+trial_structure:
+  conditions:
+  - number of pairs (parameter)
+  - correct location
+  - incorrect location
+protocol:
+  n_classes: 2
+  classes:
+  - correct location
+  - incorrect location
+  cue: abstract patterns or objects in spatial locations
+  paradigm_timing: synchronous
+  feedback: none
+  distinguishing: 准则 2：联想对由词—词（MEM-PA-001）变为图案/物体—位置，测试为位置指认。
+first_source:
+  citation: Sahakian BJ, Morris RG, Evenden JL, Heald A, Levy R, Philpot M, Robbins TW. A comparative study of visuospatial
+    memory and learning in Alzheimer-type dementia and Parkinson's disease. Brain. 1988;111(3):695-718.
+  doi: 10.1093/brain/111.3.695
+  year: 1988
+  verified: false
+notes: 'Split out of the MEM-PA-001 description. Leads: R0504 (de Rover et al. 2011, fMRI of a visuospatial paired associates
+  learning task in MCI), R0491. Whether a feedback component exists in the computerised clinical version has to be checked.
+  (R#### = curation/literature.csv; DN## = curation/work/pkg_D/new_leads.csv.) Numbering criterion (D-057): 2. first_source
+  TBD resolved by bibliographic search (OpenAlex, 2026-10-05; curator_c): candidate origin found by bibliographic search;
+  content unverified. Previous entry: "TBD: origin of the visuospatial paired-associates test not retrieved" [maintainer sprint
+  3, 2026-10-07] bibliography confirmed (OpenAlex, 2026-10-05; origin candidate, content unverified).'
+status: draft
+contributors:
+- curator_d

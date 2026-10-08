@@ -1,0 +1,11 @@
+schema_version: "0.2"
+id: MK.BOLD_motor_network
+name: {en: 'Motor network BOLD (M1, SMA, premotor, cerebellum)', zh: 运动网络 BOLD（M1、SMA、前运动区、小脑）}
+aliases: [motor network activation, motor cortex BOLD, M1 BOLD]
+type: hemodynamic
+recording_modality: [fMRI, fNIRS]
+signature: {topography: 'contralateral M1/S1, SMA, premotor cortex, basal ganglia, cerebellum'}
+description: {en: 'Haemodynamic response in primary motor cortex, supplementary motor area, premotor cortex and cerebellum during executed, imagined or learned movements. fNIRS HbO over the same regions is included (D-028).', zh: 执行、想象或学习动作时，初级运动皮层、辅助运动区、前运动皮层和小脑的血流动力学响应。fNIRS 在相同区域测得的 HbO 也归入此标记物（D-028）。}
+notes: Signature values are textbook-level characteristics and await source checking (first pass, curator_b). Includes motor-learning BOLD changes and SMA activation during tennis imagery in command-following (registry note). Generators and indexes to be added in the second pass.
+status: draft
+contributors: [maintainer, curator_b]

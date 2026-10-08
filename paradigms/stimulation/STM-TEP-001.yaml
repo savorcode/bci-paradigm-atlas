@@ -1,0 +1,52 @@
+schema_version: '0.2'
+id: STM-TEP-001
+class: STM-TEP
+name:
+  en: TMS-evoked potentials (TMS-EEG)
+  zh: TMS 诱发脑电
+aliases:
+- TEP
+- TMS-EEG
+- perturbational complexity index
+family: stimulation
+bci_category:
+- none
+recording_modality:
+- EEG
+stimulus_modality:
+- magnetic_stimulation
+markers:
+- MK.TEP
+description:
+  en: >-
+    Single TMS pulses are delivered to a cortical target while EEG is recorded with TMS-compatible amplifiers, and responses
+    are averaged across pulses. The resulting TMS-evoked potential, a series of deflections over the first few hundred milliseconds
+    that spreads from the stimulated site, indexes local cortical reactivity and effective connectivity.
+  zh: 在使用兼容 TMS 的放大器记录脑电的同时，向皮层靶点施加单个 TMS 脉冲，并对多次脉冲的响应进行平均。由此得到的 TMS 诱发电位是刺激后数百毫秒内由受刺激部位向外扩散的一系列波，反映局部皮层反应性与有效连接。
+protocol:
+  n_classes: 1
+  classes:
+  - single TMS pulse to a cortical target
+  cue: none
+  stimulus_coding: single pulses, responses averaged
+  paradigm_timing: synchronous
+  feedback: none
+  distinguishing: >-
+    Standard configuration (earliest published) / 标准配置（最早发表）: single-pulse TMS with TMS-compatible EEG and averaging (Ilmoniemi
+    et al. 1997). No sibling protocol yet.
+first_source:
+  citation: >-
+    Ilmoniemi RJ, Virtanen J, Ruohonen J, Karhu J, Aronen HJ, Näätänen R, Katila T. Neuronal responses to magnetic stimulation
+    reveal cortical reactivity and connectivity. Neuroreport. 1997;8(16):3537-3540.
+  doi: 10.1097/00001756-199711100-00024
+  year: 1997
+  verified: false
+interop:
+  bids_task: tmseeg
+notes: >-
+  Leads: R0529, R0808. Search sources (curation/work/pkg_B/search_log.md): S13 https://research.aalto.fi/fi/publications/neuronal-responses-to-magnetic-stimulation-reveal-cortical-reacti/.
+  first_source found by search (S13); leads R0529/R0808 are TMS practice/safety guidelines. Memory leads (unverified): Tremblay
+  et al. 2019 consensus; Casali et al. 2013 (PCI). bibliography corrected (OpenAlex, 2026-10-05)
+status: draft
+contributors:
+- curator_b

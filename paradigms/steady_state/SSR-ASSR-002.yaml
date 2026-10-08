@@ -1,0 +1,52 @@
+schema_version: '0.2'
+id: SSR-ASSR-002
+class: SSR-ASSR
+name:
+  en: ASSR-based auditory BCI (selective attention to two streams)
+  zh: 基于 ASSR 的听觉脑机接口（选择性注意两路声流）
+aliases:
+- ASSR BCI
+- vision-free ASSR BCI
+family: steady_state
+bci_category:
+- reactive
+recording_modality:
+- EEG
+stimulus_modality:
+- auditory
+markers:
+- MK.ASSR
+description:
+  en: Two tone-burst trains with different modulation (beat) rates, for example 37 and 43 Hz, are played at the same time
+    from loudspeakers on the left and right. The user attends to one of them, and the ASSR at the attended rate is compared
+    with the other to make a binary, vision-free choice; the configuration has been run online.
+  zh: 两路调制（拍）频率不同的短纯音串（如 37 Hz 与 43 Hz）同时从左右两侧扬声器播放。用户注意其中一路，比较被注意速率与另一速率上的 ASSR 作二元选择，完全不需要视觉；该配置已在线运行。
+trial_structure:
+  conditions:
+  - attend left stream (37 Hz)
+  - attend right stream (43 Hz)
+protocol:
+  n_classes: 2
+  classes:
+  - attend left stream
+  - attend right stream
+  cue: two concurrent tone-burst trains from left and right loudspeakers at different rates
+  stimulus_coding: frequency tagging of two concurrent auditory streams
+  paradigm_timing: synchronous
+  feedback: discrete
+  distinguishing: 准则 1;2;4：两路并存、不同速率的声流，条件为注意哪一路，在线离散反馈；-001 为单一声流被动聆听。
+first_source:
+  citation: 'Kim D-W, Hwang H-J, Lim J-H, Lee Y-H, Jung K-Y, Im C-H. Classification of selective attention to auditory stimuli:
+    toward vision-free brain-computer interfacing. J Neurosci Methods. 2011;197(1):180-185.'
+  doi: 10.1016/j.jneumeth.2011.02.007
+  year: 2011
+  verified: false
+interop:
+  bids_task: assr
+notes: 'Lead: WebSearch S2A22 [=R1277]; Korea University record read in S2A23 (abstract: 37 and 43 Hz tone-burst trains from
+  left and right speakers; "first online ASSR-based BCI system"). Several further ASSR-BCI records from the same group appeared
+  in S2A22 results (SNU, Korea University). New in sprint 2. [curator_e sprint 3, 2026-10-05] bibliography confirmed (OpenAlex,
+  2026-10-05).'
+status: draft
+contributors:
+- curator_a

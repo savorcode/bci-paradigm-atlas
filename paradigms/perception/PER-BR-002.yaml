@@ -1,0 +1,54 @@
+schema_version: '0.2'
+id: PER-BR-002
+class: PER-BR
+name:
+  en: Frequency-tagged binocular rivalry
+  zh: 频率标记双眼竞争
+aliases:
+- frequency-tagged rivalry
+- SSVEP rivalry
+family: perception
+bci_category:
+- none
+recording_modality:
+- EEG
+- MEG
+stimulus_modality:
+- visual
+markers:
+- MK.SSVEP
+description:
+  en: The two rivalling images flicker at different frequencies, so that each eye's input is tagged. The steady-state response
+    at each tag frequency rises and falls with the dominance of the corresponding image, which allows the percept to be tracked
+    from brain activity, with or without the participant's report.
+  zh: 两幅竞争图像以不同频率闪烁，从而标记每只眼的输入。各标记频率上的稳态响应随相应图像的主导而起伏，因此无论被试是否报告，都可以从脑活动中追踪知觉。
+trial_structure:
+  conditions:
+  - image tagged at f1 dominant
+  - image tagged at f2 dominant
+protocol:
+  n_classes: 2
+  classes:
+  - percept at f1 dominant
+  - percept at f2 dominant
+  cue: dichoptic images, each flickering at its own frequency
+  stimulus_coding: frequency tagging of each eye's image
+  paradigm_timing: continuous
+  feedback: none
+  distinguishing: 准则 2（编码方案）：两眼图像各带频率标记，以稳态响应读出主导知觉；-001 无频率标记，以报告与 BOLD 为读出。
+first_source:
+  citation: Lansing RW. Electroencephalographic correlates of binocular rivalry in man. Science. 1964;146(3649):1325-1327.
+  doi: 10.1126/science.146.3649.1325
+  year: 1964
+  verified: false
+interop:
+  bids_task: rivalry
+notes: 'Split from PER-BR-001 under D-057 (its sprint-1 description covered both). Leads: R0346 (Tong 2006 review), R0239
+  (review); no origin paper among the leads (D-032). [curator_e sprint 3, 2026-10-05] candidate origin found by bibliographic
+  search (OpenAlex, 2026-10-05); content unverified. [maintainer sprint 3, 2026-10-07] bibliography confirmed (OpenAlex, 2026-10-05;
+  origin candidate, content unverified). [maintainer sprint 3, 2026-10-07, D-073] origin candidate recalled, record confirmed
+  via OpenAlex.'
+status: draft
+contributors:
+- curator_a
+- curator_e

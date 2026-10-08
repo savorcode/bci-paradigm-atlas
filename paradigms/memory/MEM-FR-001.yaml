@@ -1,0 +1,62 @@
+schema_version: '0.2'
+id: MEM-FR-001
+class: MEM-FR
+name:
+  en: Free recall / list learning
+  zh: 自由回忆与词表学习
+aliases:
+- Recall Task
+- Rey Auditory Verbal Learning Test
+- Rey Verbal Learning
+family: memory
+bci_category:
+- none
+recording_modality:
+- EEG
+- sEEG
+- fMRI
+stimulus_modality:
+- visual
+- auditory
+markers:
+- MK.Dm
+- MK.high_gamma
+description:
+  en: Participants study a list of words presented one at a time and, after a delay or distractor task, recall as many words
+    as possible in any order; a new list is used on each study-test cycle. Encoding-period activity that differs between later-recalled
+    and later-forgotten words (the subsequent memory effect, Dm) and intracranial high-gamma power increases during successful
+    encoding and retrieval are the main neural measures.
+  zh: 被试逐个学习词表中的词，经过延迟或分心任务后以任意顺序尽可能多地回忆；每个学习—测试循环使用新词表。编码期之后被回忆与被遗忘词之间的活动差异（后续记忆效应，Dm）以及成功编码和提取时颅内高 γ 功率的增加是主要神经指标。
+trial_structure:
+  conditions:
+  - serial position (parameter)
+  - later recalled
+  - later forgotten
+protocol:
+  n_classes: 2
+  classes:
+  - later recalled
+  - later forgotten
+  cue: visually or auditorily presented word list, one word at a time, followed by a distractor or delay and a free-recall
+    period
+  paradigm_timing: synchronous
+  feedback: none
+  distinguishing: 标准配置（最早发表）：单次学习—自由回忆的词表（Murdock 1962, R1155）。与 -002（RAVLT：重复学习—回忆循环 + 干扰表 + 延迟回忆与再认，准则 1;3）区别。
+first_source:
+  citation: Murdock BB. The serial position effect of free recall. Journal of Experimental Psychology. 1962;64(5):482-488.
+  doi: 10.1037/h0045106
+  year: 1962
+  verified: false
+interop:
+  bids_task: freerecall
+notes: 'HED task page: https://www.hedtags.org/hed-task/tasks/hedtsk_free_recall.html ; https://www.hedtags.org/hed-task/tasks/hedtsk_rey_auditory_verbal_learning.html.
+  Leads: R0119, R0175, R0300, R0347, R0353, R0424, R0540, R0550, R0644, R0709, R0790, DN02 (R#### = curation/literature.csv;
+  DN## = curation/work/pkg_D/new_leads.csv). Murdock (1962) is a classic early free-recall study located via search; it is
+  not necessarily the first free-recall experiment (free recall predates it), so the origin attribution is provisional. Overlap
+  with MEM-SME-001 noted in decisions.md (next-meeting topic). RAVLT recorded as a variant (candidates.csv note). Sprint 2
+  (D-057, curator_d, 2026-10-03): protocol block added (-001 = earliest/standard configuration). Narrowed to single-trial
+  list free recall; the RAVLT moved to MEM-FR-002. Sibling concrete paradigms: MEM-FR-002. bibliography corrected (Crossref,
+  2026-10-05)'
+status: draft
+contributors:
+- curator_d

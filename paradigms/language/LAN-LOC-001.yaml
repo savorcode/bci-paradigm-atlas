@@ -1,0 +1,54 @@
+schema_version: '0.2'
+id: LAN-LOC-001
+class: LAN-LOC
+name:
+  en: Language localizer (sentences vs nonwords)
+  zh: 语言定位任务
+aliases:
+- Fedorenko localizer
+- language localizer
+- sentences vs nonwords
+family: language
+bci_category:
+- none
+recording_modality:
+- fMRI
+stimulus_modality:
+- visual
+markers:
+- MK.BOLD_language_network
+description:
+  en: Participants read blocks of sentences and blocks of pronounceable nonword sequences presented word by word, and the
+    sentences > nonwords contrast is used to define language-responsive regions in each individual. The contrast identifies
+    a left-lateralised frontotemporal language network whose BOLD response is then examined in other conditions.
+  zh: 被试阅读逐词呈现的句子组块与可发音非词序列组块，以“句子 > 非词”对比在每个个体中界定语言响应区。该对比识别出左偏侧的额颞语言网络，再考察其在其他条件下的 BOLD 响应。
+trial_structure:
+  conditions:
+  - sentences
+  - nonwords
+protocol:
+  n_classes: 2
+  classes:
+  - sentences
+  - nonword lists
+  cue: visually presented sentences and nonword sequences, word by word
+  paradigm_timing: block
+  feedback: none
+  distinguishing: 标准配置（最早发表）：阅读句子 vs 非词序列的组块设计（Fedorenko et al. 2010, R1162）。与 -002（听完整 vs 声学退化语音，准则 2）区别。
+first_source:
+  citation: 'Fedorenko E, Hsieh PJ, Nieto-Castañón A, Whitfield-Gabrieli S, Kanwisher N. New Method for fMRI Investigations
+    of Language: Defining ROIs Functionally in Individual Subjects. Journal of Neurophysiology. 2010;104(2):1177-1194.'
+  doi: 10.1152/jn.00032.2010
+  pmid: '20410363'
+  year: 2010
+  verified: false
+interop:
+  bids_task: langloc
+notes: 'Leads: DN09 (R#### = curation/literature.csv; DN## = curation/work/pkg_D/new_leads.csv). No leads existed in S-001;
+  Fedorenko et al. (2010) located via search. Auditory versions (intact vs degraded speech) exist; leads still to be collected.
+  Sprint 2 (D-057, curator_d, 2026-10-03): protocol block added (-001 = earliest/standard configuration). Narrowed to the
+  visual reading localizer; the auditory intact vs degraded speech localizer is LAN-LOC-002. Sibling concrete paradigms: LAN-LOC-002.
+  bibliography corrected (OpenAlex, 2026-10-05)'
+status: draft
+contributors:
+- curator_d

@@ -1,0 +1,56 @@
+schema_version: '0.2'
+id: LAN-VF-003
+class: LAN-VF
+name:
+  en: Verbal fluency fNIRS block design
+  zh: 言语流畅性 fNIRS 组块设计
+aliases:
+- fNIRS VFT
+- clinical fNIRS verbal fluency task
+family: language
+bci_category:
+- none
+recording_modality:
+- fNIRS
+stimulus_modality:
+- auditory
+- cognitive_task
+markers:
+- MK.HbO_prefrontal
+description:
+  en: A verbal fluency task period, in which participants say aloud words for successive letter (or category) cues, is preceded
+    and followed by control periods of repeating a simple sequence (for example vowels or counting); the prefrontal oxygenated-haemoglobin
+    increase during the task period relative to the control periods is the main measure. The protocol is widely used in clinical
+    psychiatric fNIRS studies.
+  zh: 言语流畅性任务期中被试按依次给出的字母（或类别）线索出声说词，任务期前后各有重复简单序列（如元音或数数）的控制期；主要指标是任务期相对控制期的前额氧合血红蛋白增加。该协议广泛用于精神科临床 fNIRS 研究。
+trial_structure:
+  conditions:
+  - pre-task control
+  - verbal fluency task
+  - post-task control
+protocol:
+  n_classes: 2
+  classes:
+  - verbal fluency
+  - control repetition
+  cue: spoken letter cues during the task period; repetition instruction during control periods
+  paradigm_timing: block
+  feedback: none
+  distinguishing: 准则 1：在流畅性生成（LAN-VF-001）前后加入控制期并以“任务 − 控制”对比为读出，条件集由单一生成条件变为生成与控制两类。
+first_source:
+  citation: Herrmann MJ, Ehlis AC, Fallgatter AJ. Frontal activation during a verbal-fluency task as measured by near-infrared
+    spectroscopy. Brain Research Bulletin. 2003;61(1):51-56.
+  doi: 10.1016/s0361-9230(03)00066-2
+  year: 2003
+  verified: false
+notes: 'New configuration (sprint 2). Leads: R1035 (repetition of the verbal fluency task attenuates left prefrontal haemodynamic
+  activation, fNIRS clinical usefulness), R0979 (review of fNIRS verbal fluency studies; moved here from the LAN-VF-001 BCI
+  variant). Block durations and control task are left unspecified until checked. (R#### = curation/literature.csv; DN## =
+  curation/work/pkg_D/new_leads.csv.) Numbering criterion (D-057): 1. first_source TBD resolved by bibliographic search (OpenAlex,
+  2026-10-05; curator_c): candidate origin found by bibliographic search; content unverified. Previous entry: "TBD: origin
+  of the clinical fNIRS verbal-fluency block design not retrieved" [maintainer sprint 3, 2026-10-07] bibliography confirmed
+  (OpenAlex, 2026-10-05; origin candidate, content unverified). [maintainer sprint 3, 2026-10-07, D-073] origin candidate
+  recalled, record confirmed via OpenAlex.'
+status: draft
+contributors:
+- curator_d

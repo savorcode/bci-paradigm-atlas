@@ -1,0 +1,24 @@
+schema_version: "0.2"
+id: MK.LEP
+name:
+  en: Laser-evoked potentials (N2-P2)
+  zh: 激光诱发电位（N2-P2）
+aliases:
+- LEP
+- laser-evoked potentials
+- N2-P2 (laser)
+type: erp_component
+recording_modality:
+- EEG
+signature:
+  polarity: vertex negative (N2) followed by positive (P2)
+  topography: vertex maximum for N2-P2
+description:
+  en: Evoked potentials to brief radiant heat pulses that selectively activate skin nociceptors, dominated by a vertex negative-positive
+    N2-P2 complex preceded by a smaller lateralised N1.
+  zh: 由选择性激活皮肤伤害感受器的短暂辐射热脉冲诱发的电位，以顶部负—正 N2–P2 复合波为主，其前有较小的偏侧化 N1。
+notes: First-pass skeleton by package A (2026-10-03). No generators/indexes yet. Signature values are textbook-level approximations
+  and await source checking.
+status: draft
+contributors:
+- curator_a

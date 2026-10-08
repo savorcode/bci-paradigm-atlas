@@ -1,0 +1,55 @@
+schema_version: '0.2'
+id: SOC-RME-001
+class: SOC-RME
+name:
+  en: Reading the mind in the eyes
+  zh: 眼中读心测验
+aliases:
+- Baron-Cohen Eyes Task
+- Eyes Test
+- RMET
+- Reading the Mind in the Eyes Test
+family: social
+bci_category:
+- none
+recording_modality:
+- fMRI
+stimulus_modality:
+- visual
+markers:
+- MK.BOLD_TPJ
+- MK.BOLD_mPFC
+description:
+  en: Photographs of the eye region of faces are shown and participants choose which of four mental-state words best describes
+    what the person is thinking or feeling, compared with a control judgement such as age or gender. Mental-state judgements
+    engage the temporoparietal junction and medial prefrontal cortex.
+  zh: 呈现面孔眼部区域的照片，被试从四个心理状态词中选出最能描述此人所想或所感的一个，并与年龄或性别判断等对照任务比较。心理状态判断激活颞顶联合区与内侧前额叶。
+protocol:
+  n_classes: 2
+  classes:
+  - mental-state judgement
+  - control judgement (age or gender)
+  cue: photographs of the eye region with four response words
+  paradigm_timing: synchronous
+  feedback: none
+  distinguishing: 'Standard configuration (earliest published or canonical; D-057 -001): revised Eyes test with a control
+    judgement (Baron-Cohen et al. 2001, R0214).'
+first_source:
+  citation: 'Baron-Cohen S, Wheelwright S, Hill J, Raste Y, Plumb I. The "Reading the Mind in the Eyes" Test revised version:
+    a study with normal adults, and adults with Asperger syndrome or high-functioning autism. Journal of Child Psychology
+    and Psychiatry. 2001;42(2):241-251.'
+  doi: 10.1111/1469-7610.00715
+  pmid: '11280420'
+  year: 2001
+  verified: false
+interop:
+  bids_task: rmet
+notes: 'HED task page: https://www.hedtags.org/hed-task/tasks/hedtsk_reading_the_mind_in_the_eyes.html. Lead refs (curation/literature.csv):
+  R0214 [key_reference], R0460 [key_reference], R0586 [review], R0635 [further_reference], R0690 [key_reference], R0738 [review].
+  R0214 is the revised version (2001); the original 1997 version is not in leads. R0690 questions construct validity. First-pass
+  skeleton (curator_e, 2026-10-03); all sources unverified. Sprint 2 (curator_e, 2026-10-03): protocol block added per D-057;
+  see curation/work/pkg_E/sprint2/split_log.csv. Sprint 3 (curator_d, 2026-10-05): bibliography corrected (OpenAlex, 2026-10-05):
+  volume, issue, pages added.'
+status: draft
+contributors:
+- curator_e

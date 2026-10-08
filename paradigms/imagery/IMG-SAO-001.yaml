@@ -1,0 +1,55 @@
+schema_version: '0.2'
+id: IMG-SAO-001
+class: IMG-SAO
+name:
+  en: Somatosensory attentional orientation
+  zh: 体感注意定向
+aliases:
+- SAO
+- selective sensation
+- somatosensory attention BCI
+- tactile selective attention BCI
+family: imagery
+bci_category:
+- active
+recording_modality:
+- EEG
+stimulus_modality:
+- somatosensory
+markers:
+- MK.SMR_ERD
+description:
+  en: >-
+    Both wrists receive equal vibrotactile stimulation, and on each cued trial the participant attends to the sensation on
+    one side to make a binary selection. Selective sensation produces lateralised sensorimotor rhythm ERD over the contralateral
+    somatosensory cortex.
+  zh: 双侧手腕同时接受相同的振动触觉刺激，被试在每个提示试次中注意一侧的感觉以完成二选一。选择性感觉在对侧体感皮层引起偏侧化的感觉运动节律 ERD。
+protocol:
+  n_classes: 2
+  classes:
+  - attend left wrist
+  - attend right wrist
+  cue: visual cue; equal vibrotactile stimulation of both wrists
+  stimulus_coding: bilateral simultaneous vibrotactile stimulation
+  paradigm_timing: synchronous
+  feedback: none
+  distinguishing: >-
+    Standard configuration (earliest published) / 标准配置（最早发表）: selective attention to one of two simultaneously vibrated wrists
+    (Yao et al. 2013). Sibling: -002 attentional orientation to a body part without stimulation (criterion 2).
+first_source:
+  citation: >-
+    Yao L, Meng J, Zhang D, Sheng X, Zhu X. Selective sensation based brain-computer interface via mechanical vibrotactile
+    stimulation. PLoS ONE 8(6):e64784. 2013.
+  doi: 10.1371/journal.pone.0064784
+  year: 2013
+  verified: false
+interop:
+  bids_task: somatosensoryattention
+notes: >-
+  Search sources (curation/work/pkg_B/search_log.md): S05 https://doaj.org/article/544f81093e374a799bed7642391ca0f8; S06 https://read.qxmd.com/read/27244745/a-bci-system-based-on-somatosensory-attentional-orientation.
+  Candidate had no leads; first_source (S05) and S06 found by search. Distinguish from PER-TACT-001 (transient N140 attention
+  effects, package A) and SSR-SSSEP-001 (steady-state responses). Sprint 2 (D-057): orientation without stimulation (S06)
+  moved to IMG-SAO-002. Feedback mode of R1110 to be checked. bibliography confirmed (OpenAlex, 2026-10-05)
+status: draft
+contributors:
+- curator_b

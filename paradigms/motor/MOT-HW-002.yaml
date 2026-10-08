@@ -1,0 +1,63 @@
+schema_version: '0.2'
+id: MOT-HW-002
+class: MOT-HW
+name:
+  en: Executed handwriting of letters (scalp EEG)
+  zh: 实际书写字母（头皮脑电）
+aliases:
+- EEG handwriting decoding
+- handwritten character classification
+family: motor
+bci_category:
+- active
+recording_modality:
+- EEG
+stimulus_modality:
+- motor_execution
+- visual
+markers:
+- MK.low_freq_kinematics
+description:
+  en: >-
+    Healthy participants write a cued letter with a finger inside a box while fixating on the screen, without visual feedback
+    of the writing, and the letter is classified from EEG via continuous decoding of the writing kinematics.
+  zh: 健康被试注视屏幕，在一个方框内用手指书写提示的字母，书写时没有笔迹的视觉反馈；通过连续解码书写运动学，从脑电中对字母分类。
+protocol:
+  n_classes: 10
+  classes:
+  - a
+  - d
+  - e
+  - f
+  - j
+  - n
+  - o
+  - s
+  - t
+  - v
+  cue: visual letter cue
+  paradigm_timing: synchronous
+  feedback: none
+  distinguishing: >-
+    Criteria 1 and 4 vs MOT-HW-001: a ten-letter set written overtly by healthy participants without feedback instead of attempted
+    writing of the full character set with decoded-text feedback.
+first_source:
+  citation: >-
+    Crell MR, Müller-Putz GR. Handwritten character classification from EEG through continuous kinematic decoding. Computers
+    in Biology and Medicine 182:109132. 2024.
+  doi: 10.1016/j.compbiomed.2024.109132
+  year: 2024
+  verified: false
+datasets:
+- name: BNCI2024_001 (MOABB)
+  url: https://moabb.neurotechx.com/docs/generated/moabb.datasets.BNCI2024_001.html
+  subjects: 20
+interop:
+  bids_task: handwriting
+notes: >-
+  Leads: WF-B2-11 [=R1297] (MOABB BNCI2024_001 page: 20 healthy subjects, ten letters, 'no visual feedback of the writing',
+  8.5 s task window) and R0886 (EEG imagined handwriting, arXiv 2025). Executed writing by healthy participants extends the
+  class beyond 'attempted' (class_updates.yaml: class renamed). bibliography confirmed (OpenAlex, 2026-10-05)
+status: draft
+contributors:
+- curator_b

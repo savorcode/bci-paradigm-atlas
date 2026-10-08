@@ -1,0 +1,54 @@
+schema_version: '0.2'
+id: CTL-CPT-003
+class: CTL-CPT
+name:
+  en: Gradual-onset continuous performance task (gradCPT)
+  zh: 渐变呈现持续操作任务（gradCPT）
+aliases:
+- gradCPT
+- Gradual-onset CPT
+family: control
+bci_category:
+- none
+recording_modality:
+- fMRI
+stimulus_modality:
+- visual
+markers:
+- MK.DMN_connectivity
+description:
+  en: Scene images (e.g., cities and mountains) gradually morph from one to the next without abrupt onsets; participants respond
+    to the frequent category and withhold to the rare one. Moment-to-moment fluctuations in response-time variability define
+    'in the zone' and 'out of the zone' attentional states, which are associated with differing default-mode activity.
+  zh: 场景图片（如城市与山景）逐张渐变过渡，没有突然出现；被试对常见类别作反应、对罕见类别抑制。反应时变异性的逐刻波动划分出"专注"与"走神"两种注意状态，二者伴随不同的默认模式网络活动。
+trial_structure:
+  conditions:
+  - frequent category (respond)
+  - rare category (withhold)
+protocol:
+  n_classes: 2
+  classes:
+  - frequent scene category (respond)
+  - rare scene category (withhold)
+  cue: scene images gradually transitioning from one to the next
+  paradigm_timing: continuous
+  feedback: none
+  distinguishing: 准则 2、3：刺激为渐变过渡的场景图片、无离散刺激起始，按连续时间序列分析注意状态（CTL-CPT-001 为离散字母流的目标检测）。
+first_source:
+  citation: Esterman M, Noonan SK, Rosenberg M, DeGutis J. In the Zone or Zoning Out? Tracking Behavioral and Neural Fluctuations
+    During Sustained Attention. Cerebral Cortex. 2013;23(11):2712-2723.
+  doi: 10.1093/cercor/bhs261
+  year: 2013
+  verified: false
+interop:
+  bids_task: gradcpt
+notes: 'Leads used: R0575 (literature.csv; authors truncated there as ''Esterman, M., Noonan, S. K., Rosenberg, ...'' - remaining
+  author from memory, check), HED CPT page. That R0575 introduced the gradCPT, the city/mountain categories and the DMN finding
+  are from memory of R0575 and must be checked. MK.DMN_connectivity (package E) is the closest registry marker for default-mode
+  activity; a better-fitting marker may be needed (maintainer). D-061 (maintainer, 2026-10-05): stand-in marker - MK.DMN_connectivity
+  approximates default-mode activity in the gradCPT; package C to submit a marker request (proposed MK.BOLD_DMN) in sprint
+  3. Sprint 2 (D-057, curator_c, 2026-10-03): new concrete paradigm of class CTL-CPT; numbering criterion 2;3 relative to
+  CTL-CPT-001; all sources unverified. bibliography corrected (Crossref, 2026-10-05)'
+status: draft
+contributors:
+- curator_c

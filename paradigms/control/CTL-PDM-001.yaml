@@ -1,0 +1,59 @@
+schema_version: '0.2'
+id: CTL-PDM-001
+class: CTL-PDM
+name:
+  en: Perceptual decision making (random-dot motion, trial-based)
+  zh: 知觉决策（随机点运动，按试次）
+aliases:
+- Dot Motion
+- Dot Motion Task
+- Motion coherence discrimination
+- Perceptual decision making
+- RDK
+- Random Dot Kinematogram
+- Random dot motion task
+family: control
+bci_category:
+- none
+recording_modality:
+- EEG
+- intracortical
+stimulus_modality:
+- visual
+markers:
+- MK.CPP
+description:
+  en: Participants view a random-dot kinematogram in which a variable fraction of dots moves coherently and report the net
+    motion direction. Sensory evidence accumulation is reflected in a centro-parietal positivity that builds up at a rate
+    proportional to motion coherence and peaks around the decision.
+  zh: 被试观看随机点运动图，其中一部分（比例可变）点一致运动，被试报告整体运动方向。感觉证据的累积反映在中央顶区正波（CPP）上，其上升速率与运动一致性成正比，并在决策时刻前后达到峰值。
+trial_structure:
+  conditions:
+  - coherence levels
+  - two motion directions
+protocol:
+  n_classes: 2
+  classes:
+  - leftward motion
+  - rightward motion
+  cue: random-dot kinematogram with a variable fraction of coherently moving dots
+  paradigm_timing: synchronous
+  feedback: discrete
+  distinguishing: 标准配置（最早发表）：每个试次呈现一段随机点运动，报告净运动方向（Britten et al. 1992，R0102，动物源头）。
+first_source:
+  citation: 'Britten KH, Shadlen MN, Newsome WT, Movshon JA. The analysis of visual motion: a comparison of neuronal and psychophysical
+    performance. The Journal of Neuroscience. 1992;12(12):4745-4765.'
+  doi: 10.1523/jneurosci.12-12-04745.1992
+  pmid: '1464765'
+  year: 1992
+  verified: false
+interop:
+  bids_task: dotmotion
+notes: 'HED task page: https://www.hedtags.org/hed-task/tasks/hedtsk_random_dot_kinematogram.html. Leads used: R0102; R0384;
+  R0736. first_source lead: R0102. R0102 is a monkey neurophysiology/psychophysics origin; human CPP origin (task sheet: O''Connell
+  et al. 2012, unconfirmed) not among leads. Human EEG lead: R0736. Review: R0384. Pass 1 skeleton (curator_c, 2026-10-03);
+  all sources unverified. Sprint 2 (D-057): protocol added; the continuous-monitoring dot-motion task without trial onsets
+  (Kelly & O''Connell 2013) split off as CTL-PDM-002 (criterion 3). bibliography corrected (Crossref, 2026-10-05)'
+status: draft
+contributors:
+- curator_c

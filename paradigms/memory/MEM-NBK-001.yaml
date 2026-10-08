@@ -1,0 +1,66 @@
+schema_version: '0.2'
+id: MEM-NBK-001
+class: MEM-NBK
+name:
+  en: n-back task
+  zh: n-back
+aliases:
+- Kirchner task
+- N-Back
+family: memory
+bci_category:
+- passive
+recording_modality:
+- EEG
+- fNIRS
+- fMRI
+stimulus_modality:
+- visual
+- auditory
+markers:
+- MK.frontal_midline_theta
+- MK.P3b
+- MK.alpha_posterior
+- MK.HbO_prefrontal
+- MK.BOLD_frontoparietal
+description:
+  en: Participants monitor a single stream of serially presented stimuli and respond whenever the current item matches the
+    item presented n positions earlier, with n fixed for a run. The n-back load increases working-memory demand while keeping
+    the stimuli constant; higher load is accompanied by increased frontal-midline theta, decreased posterior alpha, a reduced
+    P3b to probes and load-dependent prefrontal and frontoparietal hemodynamic responses.
+  zh: 被试监视单一序列刺激流，每当当前项目与 n 个位置之前的项目相同时作出反应，每轮 n 固定。n-back 负荷在刺激不变的情况下提高工作记忆需求；负荷越高，额中线 θ 越强、后部 α 越弱、探测刺激的 P3b 越小，前额与额顶血流动力学响应也随负荷变化。
+trial_structure:
+  conditions:
+  - target
+  - non-target
+  - n (parameter)
+protocol:
+  n_classes: 2
+  classes:
+  - target (match n back)
+  - non-target
+  cue: single stream of serially presented stimuli
+  stimulus_coding: single-stream n-back, one fixed n per run
+  paradigm_timing: synchronous
+  feedback: none
+  distinguishing: 标准配置（最早发表）：单一刺激流、固定 n 的 n-back（Kirchner 1958, R1154）。与 -002（含 0-back 控制的多负荷组块设计，准则 1;3）、-003（双通道 n-back，准则
+    1;2）、-004（自适应双 n-back 训练，准则 4）区别。
+first_source:
+  citation: Kirchner WK. Age differences in short-term retention of rapidly changing information. Journal of Experimental
+    Psychology. 1958;55(4):352-358.
+  doi: 10.1037/h0043688
+  pmid: '13539317'
+  year: 1958
+  verified: false
+interop:
+  bids_task: nback
+notes: 'HED task page: https://www.hedtags.org/hed-task/tasks/hedtsk_n_back.html. Leads: R0154, R0319, R0486, R0503, R0562,
+  R0728, R0826, DN01 (R#### = curation/literature.csv; DN## = curation/work/pkg_D/new_leads.csv). Kirchner (1958) located
+  via Wikipedia reference list (search); the HED-listed Jonides et al. lead R0154 has inconsistent volume/DOI (see lead check).
+  Sprint 2 (D-057, curator_d, 2026-10-03): protocol block added (-001 = earliest/standard configuration). Narrowed to the
+  single-stream n-back with one n per run; the parametric block design with a 0-back control (standard neuroimaging / passive-BCI
+  workload protocol) is MEM-NBK-002, dual n-back MEM-NBK-003, adaptive dual n-back training MEM-NBK-004. Sibling concrete
+  paradigms: MEM-NBK-002, MEM-NBK-003, MEM-NBK-004. bibliography corrected (Crossref, 2026-10-05)'
+status: draft
+contributors:
+- curator_d

@@ -1,0 +1,52 @@
+schema_version: '0.2'
+id: CTL-AMBIG-001
+class: CTL-AMBIG
+name:
+  en: Decision under risk versus ambiguity
+  zh: 风险与模糊决策
+aliases:
+- Ellsberg paradigm
+- Ambiguity aversion task
+- Risk and ambiguity task
+family: control
+bci_category:
+- none
+recording_modality:
+- fMRI
+stimulus_modality:
+- visual
+markers:
+- MK.BOLD_amygdala
+- MK.BOLD_striatum_reward
+description:
+  en: Participants choose between a certain payoff and gambles whose outcome probabilities are either known (risk) or unknown
+    (ambiguity), as in the Ellsberg urn problem. Ambiguity increases amygdala and orbitofrontal BOLD activity, whereas striatal
+    activity correlates with expected reward.
+  zh: 被试在确定收益与赌局之间选择，赌局结果概率或已知（风险）或未知（模糊），如 Ellsberg 罐子问题。模糊性增加杏仁核与眶额 BOLD 活动，而纹状体活动与期望奖赏相关。
+trial_structure:
+  conditions:
+  - risk
+  - ambiguity
+protocol:
+  n_classes: 2
+  classes:
+  - risk (known probabilities)
+  - ambiguity (unknown probabilities)
+  cue: choice between a certain payoff and a gamble whose outcome probabilities are known or unknown
+  paradigm_timing: synchronous
+  distinguishing: 标准配置（最早发表线索）：确定收益 vs 概率已知/未知的赌局（Hsu et al. 2005，R1152）。本包仅此一个配置。
+first_source:
+  citation: Hsu M, Bhatt M, Adolphs R, Tranel D, Camerer CF. Neural Systems Responding to Degrees of Uncertainty in Human
+    Decision-Making. Science. 2005;310(5754):1680-1683.
+  doi: 10.1126/science.1115327
+  year: 2005
+  verified: false
+interop:
+  bids_task: ambiguity
+notes: 'Leads used: S_HSU2005 (search: https://neuroecon.berkeley.edu/papers/papers_files/Hsu_Science_2005.html). first_source
+  lead: S_HSU2005. MK.BOLD_amygdala is owned by package E; orbitofrontal effect not mapped to a marker (MK.BOLD_vmPFC_value
+  is the closest registry id). Pass 1 skeleton (curator_c, 2026-10-03); all sources unverified. Sprint 2 (D-057): protocol
+  added; single configuration, no split. bibliography corrected (Crossref, 2026-10-05)'
+status: draft
+contributors:
+- curator_c

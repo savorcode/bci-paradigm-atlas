@@ -1,0 +1,55 @@
+schema_version: '0.2'
+id: MEM-CD-003
+class: MEM-CD
+name:
+  en: Lateralised change detection (CDA)
+  zh: 偏侧化变化检测（CDA）
+aliases:
+- CDA paradigm
+- Lateralized change detection
+- Vogel-Machizawa task
+family: memory
+bci_category:
+- none
+recording_modality:
+- EEG
+stimulus_modality:
+- visual
+markers:
+- MK.CDA
+description:
+  en: An arrow cue at the start of each trial tells participants to remember the items in one hemifield of a bilateral memory
+    array; after a short retention interval, a test array is shown and participants report whether an item in the cued hemifield
+    changed. The sustained negativity over posterior sites contralateral to the memorised hemifield during the delay (contralateral
+    delay activity, CDA) increases with the number of items held, up to the individual capacity limit.
+  zh: 每个试次开始时箭头线索指示被试只记忆双侧记忆阵列中一侧视野的项目；短暂保持期后呈现测试阵列，被试报告被提示一侧是否有项目变化。保持期内记忆一侧对侧后部电极的持续负波（对侧延迟活动，CDA）随所保持项目数增加，直至个体容量上限。
+trial_structure:
+  conditions:
+  - attend left
+  - attend right
+  - set size (parameter)
+  - change
+  - no change
+protocol:
+  n_classes: 2
+  classes:
+  - change
+  - no change
+  cue: central arrow pre-cue to one hemifield, then a bilateral memory array and a test array
+  stimulus_coding: bilateral arrays with spatial pre-cue (contralateral minus ipsilateral subtraction)
+  paradigm_timing: synchronous
+  feedback: none
+  distinguishing: 准则 2：在全视野阵列（MEM-CD-001）之外加入指向一侧视野的箭头前线索与双侧阵列，使对侧–同侧差（CDA）可测。
+first_source:
+  citation: Vogel EK, Machizawa MG. Neural activity predicts individual differences in visual working memory capacity. Nature.
+    2004;428(6984):748-751.
+  doi: 10.1038/nature02447
+  pmid: '15085132'
+  year: 2004
+  verified: false
+notes: 'Split out of the MEM-CD-001 description (lateralised version). Leads: R0282 (Vogel & Machizawa 2004, origin of this
+  configuration), R0689 (Luria et al. 2016 review of the CDA), R1210, R0591, R0662. (R#### = curation/literature.csv; DN##
+  = curation/work/pkg_D/new_leads.csv.) Numbering criterion (D-057): 2. bibliography corrected (Crossref, 2026-10-05)'
+status: draft
+contributors:
+- curator_d

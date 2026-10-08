@@ -1,0 +1,55 @@
+schema_version: '0.2'
+id: CTL-GNG-001
+class: CTL-GNG
+name:
+  en: Go/NoGo task
+  zh: Go/NoGo
+aliases:
+- GNG
+- Go No-Go
+- Go/No-Go
+family: control
+bci_category:
+- none
+recording_modality:
+- EEG
+- fMRI
+stimulus_modality:
+- visual
+markers:
+- MK.N2_frontocentral
+- MK.NoGo_P3
+description:
+  en: Participants respond quickly to frequent Go stimuli and withhold the response to infrequent NoGo stimuli. Correctly
+    withheld NoGo trials elicit an enhanced fronto-central N2 followed by a fronto-central NoGo-P3.
+  zh: 被试对高频的 Go 刺激快速反应，对低频的 NoGo 刺激抑制反应。成功抑制的 NoGo 试次诱发增强的额中央 N2，随后出现额中央的 NoGo-P3。
+trial_structure:
+  conditions:
+  - Go
+  - NoGo
+protocol:
+  n_classes: 2
+  classes:
+  - Go
+  - NoGo
+  cue: frequent Go and infrequent NoGo stimuli
+  paradigm_timing: synchronous
+  feedback: none
+  distinguishing: 标准配置（最早发表）：对 Go 刺激反应、对 NoGo 刺激抑制（Donders 1868/1969，R0019）；Go/NoGo 比例、刺激种类（字母、情绪面孔）只是参数。
+first_source:
+  citation: Donders FC. On the speed of mental processes. Acta Psychologica. 1969;30:412-431.
+  doi: 10.1016/0001-6918(69)90065-1
+  pmid: '5811531'
+  year: 1969
+  verified: false
+interop:
+  bids_task: gonogo
+notes: 'HED task page: https://www.hedtags.org/hed-task/tasks/hedtsk_go_no_go.html. Leads used: R0019; R0180; R0408; R0915.
+  first_source lead: R0019. Origin per lead R0019 is Donders (orig. 1868, English translation 1969; year field uses the 1969
+  publication). Maintainer note (候议): possible overlap with CTL-SART-001. fMRI lead: R0180; reviews: R0408, R0915. Pass 1
+  skeleton (curator_c, 2026-10-03); all sources unverified. Sprint 2 (D-057): protocol added; single configuration. HED-listed
+  versions (probabilistic ratios, emotional stimuli) are parameter-level; cued Go/NoGo logged as proposal (no lead seen);
+  reward/punishment Go/NoGo is class ERR-OGNG. bibliography corrected (Crossref, 2026-10-05)'
+status: draft
+contributors:
+- curator_c

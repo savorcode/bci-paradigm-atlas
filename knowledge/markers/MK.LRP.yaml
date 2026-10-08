@@ -1,0 +1,11 @@
+schema_version: "0.2"
+id: MK.LRP
+name: {en: Lateralized readiness potential, zh: 偏侧化准备电位}
+aliases: [LRP]
+type: erp_component
+recording_modality: [EEG, MEG]
+signature: {polarity: negative (contralateral minus ipsilateral), topography: C3/C4 over motor cortex}
+description: {en: 'Difference wave obtained by subtracting activity over the motor cortex ipsilateral to the responding hand from that over the contralateral motor cortex, averaged across hands. Its onset marks the start of hand-specific response preparation.', zh: 将反应手同侧运动皮层上的活动从对侧运动皮层上的活动中减去（并对双手平均）得到的差异波，其起始标志着特定手的反应准备开始。}
+notes: Signature values are textbook-level characteristics and await source checking (first pass, curator_b). Generators and indexes to be added in the second pass.
+status: draft
+contributors: [maintainer, curator_b]

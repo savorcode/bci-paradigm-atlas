@@ -1,0 +1,50 @@
+schema_version: '0.2'
+id: EMO-APRIME-001
+class: EMO-APRIME
+name:
+  en: Affective (evaluative) priming
+  zh: 情感（评价）启动
+aliases:
+- Evaluative Priming
+family: emotion
+bci_category:
+- none
+recording_modality:
+- EEG
+stimulus_modality:
+- visual
+markers:
+- MK.N400
+- MK.LPP
+description:
+  en: A briefly presented prime word or picture is followed by a target that participants classify as positive or negative;
+    responses are faster when prime and target share valence. Valence-incongruent targets elicit a larger N400 and modulate
+    the late positive potential.
+  zh: 短暂呈现的启动词或图片之后出现靶刺激，被试判断其为正性或负性；启动与靶刺激效价一致时反应更快。效价不一致的靶刺激诱发更大的 N400，并调制晚期正电位。
+protocol:
+  n_classes: 2
+  classes:
+  - valence-congruent prime-target pair
+  - valence-incongruent prime-target pair
+  cue: briefly presented prime word followed by a target word that is classified as positive or negative (evaluative decision)
+  paradigm_timing: synchronous
+  feedback: none
+  distinguishing: 'Standard configuration (earliest published or canonical; D-057 -001): evaluative-decision affective priming
+    with word primes and targets (Fazio et al. 1986, R0074).'
+first_source:
+  citation: Fazio RH, Sanbonmatsu DM, Powell MC, Kardes FR. On the automatic activation of attitudes. Journal of Personality
+    and Social Psychology. 1986;50(2):229-238.
+  doi: 10.1037/0022-3514.50.2.229
+  year: 1986
+  verified: false
+interop:
+  bids_task: affectivepriming
+notes: 'HED task page: https://www.hedtags.org/hed-task/tasks/hedtsk_affective_priming.html. Lead refs (curation/literature.csv):
+  R0074 [key_reference], R0104 [key_reference], R0202 [key_reference], R0211 [review], R0438 [review], R0582 [further_reference].
+  Distinguish from LAN-PRIME-001 semantic priming (pkg D): here the manipulated relation is evaluative, not semantic. First-pass
+  skeleton (curator_e, 2026-10-03); all sources unverified. Sprint 2 (curator_e, 2026-10-03): protocol block added per D-057;
+  see curation/work/pkg_E/sprint2/split_log.csv. Sprint 3 (curator_d, 2026-10-05): bibliography corrected (Crossref, 2026-10-05):
+  volume, issue, pages added.'
+status: draft
+contributors:
+- curator_e

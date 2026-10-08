@@ -1,0 +1,22 @@
+schema_version: "0.2"
+id: MK.BOLD_dACC
+name:
+  en: Dorsal anterior cingulate BOLD
+  zh: 背侧前扣带 BOLD
+aliases:
+- dACC BOLD
+- dorsal anterior cingulate activation
+- dACC activation
+type: hemodynamic
+recording_modality:
+- fMRI
+description:
+  en: BOLD activity in dorsal anterior cingulate cortex (and adjacent medial frontal cortex) that increases with response
+    conflict and interference, and with the valuation of effort and of alternatives to the current option.
+  zh: 背侧前扣带皮层（及邻近内侧额叶）的 BOLD 活动，随反应冲突与干扰增加，并与对努力及当前选项之外的替代选项的价值评估相关。
+notes: 'No signature given in pass 1 (hemodynamic marker; region described in the description). Generators and indexes not
+  yet written. Used by (registry): CTL-EFF-001, SOC-CYB-001.'
+status: draft
+contributors:
+- maintainer
+- curator_c

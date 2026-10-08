@@ -1,0 +1,26 @@
+schema_version: "0.2"
+id: MK.MMN
+name:
+  en: Mismatch negativity
+  zh: 失匹配负波
+aliases:
+- MMN
+- mismatch negativity
+- MMNm
+type: erp_component
+recording_modality:
+- EEG
+- MEG
+signature:
+  latency_ms: ~100-250
+  polarity: negative
+  topography: fronto-central, polarity reversal at mastoids
+description:
+  en: Fronto-central negativity, maximal in the deviant-minus-standard difference wave, elicited by sounds that violate a
+    regularity established by preceding sounds, even without attention.
+  zh: 由违反先前声音所建立规律的声音诱发的额中央负波，在偏差减标准差异波中最明显，无需注意也会出现。
+notes: First-pass skeleton by package A (2026-10-03). No generators/indexes yet. Signature values are textbook-level approximations
+  and await source checking.
+status: draft
+contributors:
+- curator_a

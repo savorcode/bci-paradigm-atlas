@@ -1,0 +1,49 @@
+schema_version: '0.2'
+id: EMO-HUMOR-001
+class: EMO-HUMOR
+name:
+  en: Humor appreciation
+  zh: 幽默欣赏
+aliases:
+- humor appreciation
+- funny cartoons paradigm
+- joke comprehension
+family: emotion
+bci_category:
+- none
+recording_modality:
+- fMRI
+stimulus_modality:
+- visual
+markers:
+- MK.BOLD_striatum_reward
+description:
+  en: Participants view funny and matched non-funny cartoons or jokes and rate their funniness. Humorous items engage mesolimbic
+    reward regions, including ventral striatum BOLD that scales with rated funniness.
+  zh: 被试观看有趣与匹配的无趣漫画或笑话，并评定其有趣程度。幽默材料激活中脑边缘奖赏脑区，其中腹侧纹状体 BOLD 随评定的有趣程度变化。
+protocol:
+  n_classes: 2
+  classes:
+  - funny cartoons
+  - matched non-funny cartoons
+  cue: cartoons with funniness rating
+  paradigm_timing: synchronous
+  feedback: none
+  distinguishing: 'Standard configuration (earliest published or canonical; D-057 -001): funny versus non-funny cartoon viewing
+    with ratings (Mobbs et al. 2003, R1184).'
+first_source:
+  citation: Mobbs D, Greicius MD, Abdel-Azim E, Menon V, Reiss AL. Humor modulates the mesolimbic reward centers. Neuron.
+    2003;40(5):1041-1048.
+  doi: 10.1016/s0896-6273(03)00751-7
+  pmid: '14659102'
+  year: 2003
+  verified: false
+interop:
+  bids_task: humor
+notes: 'Sources found by curator_e (curation/work/pkg_E/search_log.md): S11 = https://neurosynth.org/studies/14659102. New
+  candidate (curator_e). First-pass skeleton (curator_e, 2026-10-03); all sources unverified. Sprint 2 (curator_e, 2026-10-03):
+  protocol block added per D-057; see curation/work/pkg_E/sprint2/split_log.csv. Sprint 3 (curator_d, 2026-10-05): bibliography
+  corrected (OpenAlex, 2026-10-05): doi, volume, issue, pages added.'
+status: draft
+contributors:
+- curator_e

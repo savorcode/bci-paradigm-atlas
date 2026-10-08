@@ -1,0 +1,11 @@
+schema_version: "0.2"
+id: MK.corticomuscular_coherence
+name: {en: Corticomuscular coherence, zh: 皮层-肌肉相干}
+aliases: [CMC, cortico-muscular coherence, EEG-EMG coherence, MEG-EMG coherence]
+type: connectivity
+recording_modality: [EEG, MEG]
+signature: {frequency_hz: beta 15-30 (also gamma during strong contraction), topography: contralateral primary motor cortex}
+description: {en: 'Frequency-domain coherence between EEG/MEG over motor cortex and surface EMG of an active muscle, typically in the beta band during steady isometric contraction. It is interpreted as reflecting corticospinal coupling.', zh: 运动皮层上的 EEG/MEG 与活动肌肉表面肌电之间的频域相干，在稳定等长收缩时通常出现在 β 频段，被解释为反映皮层-脊髓耦合。}
+notes: Signature values are textbook-level characteristics and await source checking (first pass, curator_b). Generators and indexes to be added in the second pass.
+status: draft
+contributors: [maintainer, curator_b]

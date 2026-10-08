@@ -1,0 +1,25 @@
+schema_version: "0.2"
+id: MK.SSSEP
+name:
+  en: Steady-state somatosensory evoked potential
+  zh: 稳态体感诱发电位
+aliases:
+- SSSEP
+- steady-state somatosensory evoked potential
+- vibrotactile steady-state response
+type: steady_state
+recording_modality:
+- EEG
+- MEG
+signature:
+  frequency_hz: stimulation frequency (commonly 20-30)
+  topography: centro-parietal, contralateral to stimulated side
+description:
+  en: Steady-state response of somatosensory cortex at the frequency of a vibrotactile stimulus; its amplitude increases when
+    attention is directed to the stimulated site.
+  zh: 体感皮层在振动触觉刺激频率处产生的稳态响应；注意指向受刺激部位时波幅增加。
+notes: First-pass skeleton by package A (2026-10-03). No generators/indexes yet. Signature values are textbook-level approximations
+  and await source checking.
+status: draft
+contributors:
+- curator_a

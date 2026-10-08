@@ -1,0 +1,69 @@
+schema_version: '0.2'
+id: SSR-SSVEP-006
+class: SSR-SSVEP
+name:
+  en: Joint frequency-phase modulated 12-target SSVEP
+  zh: 联合频率–相位调制 12 目标 SSVEP
+aliases:
+- 12-class JFPM SSVEP
+family: steady_state
+bci_category:
+- reactive
+recording_modality:
+- EEG
+stimulus_modality:
+- visual
+markers:
+- MK.SSVEP
+description:
+  en: Twelve targets flicker at frequencies between 9.25 and 14.75 Hz in 0.5 Hz steps with different phases, arranged like
+    a numeric keypad. Each trial has a 4 s stimulation window, and the attended target is detected with canonical correlation
+    analysis-based methods.
+  zh: 12 个目标以 9.25–14.75 Hz（间隔 0.5 Hz）的不同频率和不同相位闪烁，排列类似数字小键盘。每个试次刺激窗为 4 s，用基于典型相关分析的方法检测被注视目标。
+trial_structure:
+  phases:
+  - name: flicker
+    duration_ms: 4000
+  conditions:
+  - 12 targets
+protocol:
+  n_classes: 12
+  classes:
+  - 9.25 Hz
+  - 9.75 Hz
+  - 10.25 Hz
+  - 10.75 Hz
+  - 11.25 Hz
+  - 11.75 Hz
+  - 12.25 Hz
+  - 12.75 Hz
+  - 13.25 Hz
+  - 13.75 Hz
+  - 14.25 Hz
+  - 14.75 Hz
+  cue: 12 simultaneously flickering targets
+  stimulus_coding: joint frequency-phase modulation (JFPM)
+  paradigm_timing: synchronous
+  feedback: none
+  distinguishing: 准则 1（相对 -005）：12 目标而非 40 字符键盘；准则 2（相对 -002）：联合频率–相位编码。公开数据为离线记录（反馈未在数据集页面说明）。
+first_source:
+  citation: Nakanishi M, Wang Y, Wang Y-T, Jung T-P. A comparison study of canonical correlation analysis based methods for
+    detecting steady-state visual evoked potentials. PLoS One. 2015;10(10):e0140703.
+  doi: 10.1371/journal.pone.0140703
+  year: 2015
+  verified: false
+datasets:
+- name: Nakanishi 2015 12-class SSVEP dataset
+  url: https://moabb.neurotechx.com/docs/generated/moabb.datasets.Nakanishi2015.html
+  identifier: Nakanishi2015
+  subjects: 9
+interop:
+  bids_task: ssvep
+notes: 'Lead: MOABB dataset page Nakanishi2015 (S2A05 [=R1267]): "joint frequency-phase modulated SSVEP", 12 frequencies listed, 4
+  s task window. The dataset paper is not necessarily the first 12-target JFPM study (a 2014 high-speed speller paper by the
+  same group appeared in S2A14 results, not read). New in sprint 2. Deprecated 2026-10-05: merged into SSR-SSVEP-005 per D-058
+  (homogeneous target count is a parameter, not criterion 1); the 12-target layout and the Nakanishi2015 dataset are recorded
+  as a parameter-level variant of SSR-SSVEP-005. Serial number not reused; file kept for the record (D-057 permanence).'
+status: deprecated
+contributors:
+- curator_a

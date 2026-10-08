@@ -1,0 +1,52 @@
+schema_version: '0.2'
+id: ERR-TE-001
+class: ERR-TE
+name:
+  en: Time estimation task
+  zh: 时间估计任务
+aliases:
+- Interval estimation with feedback
+- Miltner time-estimation task
+family: error
+bci_category:
+- none
+recording_modality:
+- EEG
+stimulus_modality:
+- visual
+- auditory
+markers:
+- MK.FRN
+description:
+  en: Participants estimate a fixed time interval (e.g., one second) by pressing a button after a cue and receive feedback
+    on whether the estimate fell within an adaptive tolerance window. Negative performance feedback elicits a fronto-central
+    feedback-related negativity, the paradigm in which this component was first described.
+  zh: 被试在提示后按键以估计一个固定时间间隔（如 1 秒），并获得估计是否落在自适应容差窗口内的反馈。负性表现反馈诱发额中央的反馈相关负波；该成分最早正是在这一范式中被描述的。
+trial_structure:
+  conditions:
+  - correct feedback
+  - incorrect feedback
+protocol:
+  n_classes: 2
+  classes:
+  - correct feedback
+  - incorrect feedback
+  cue: cue to start an interval estimate (e.g., one second) by button press; feedback on whether the estimate fell within
+    an adaptive window
+  paradigm_timing: synchronous
+  feedback: discrete
+  distinguishing: 标准配置（最早发表）：时间估计后给出正确/错误反馈，时间窗自适应调整（Miltner et al. 1997，R0146）。本包仅此一个配置。
+first_source:
+  citation: 'Miltner WHR, Braun CH, Coles MGH. Event-Related Brain Potentials Following Incorrect Feedback in a Time-Estimation
+    Task: Evidence for a "Generic" Neural System for Error Detection. Journal of Cognitive Neuroscience. 1997;9(6):788-798.'
+  doi: 10.1162/jocn.1997.9.6.788
+  year: 1997
+  verified: false
+interop:
+  bids_task: timeestimation
+notes: 'Leads used: R0146; R0969. first_source lead: R0146. Maintainer note (decisions.md, 候议): possible overlap with ERR-GAM-001.
+  Review lead without bibliographic data: R0969. Pass 1 skeleton (curator_c, 2026-10-03); all sources unverified. Sprint 2
+  (D-057): protocol added; single configuration, no split. bibliography corrected (Crossref, 2026-10-05)'
+status: draft
+contributors:
+- curator_c

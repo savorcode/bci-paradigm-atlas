@@ -1,0 +1,51 @@
+schema_version: '0.2'
+id: LAN-SWITCH-002
+class: LAN-SWITCH
+name:
+  en: Receptive language switching
+  zh: 接受性语言切换
+aliases:
+- comprehension language switching
+- bilingual word reading switch
+family: language
+bci_category:
+- none
+recording_modality:
+- EEG
+stimulus_modality:
+- visual
+markers:
+- MK.N2_frontocentral
+description:
+  en: Bilingual participants read or hear words that switch unpredictably or predictably between their two languages and perform
+    a comprehension-based task (for example a semantic categorisation) rather than speaking. ERPs compare switch with non-switch
+    trials to examine language control during comprehension.
+  zh: 双语被试阅读或聆听在两种语言之间可预测或不可预测地切换的词，执行基于理解的任务（如语义分类），而不是说话。ERP 比较切换与非切换试次，考察理解中的语言控制。
+trial_structure:
+  conditions:
+  - language repeat
+  - language switch
+protocol:
+  n_classes: 2
+  classes:
+  - language repeat trial
+  - language switch trial
+  cue: written words in either language (language is given by the word, no cue)
+  paradigm_timing: synchronous
+  feedback: none
+  distinguishing: 准则 1;2：任务由线索指定语言的命名产出（LAN-SWITCH-001）变为对两种语言词的理解判断，无语言提示线索。
+first_source:
+  citation: Jackson GM, Swainson R, Mullin A, Cunnington R, Jackson SR. ERP Correlates of a Receptive Language-Switching Task.
+    The Quarterly Journal of Experimental Psychology Section A. 2004;57(2):223-240.
+  doi: 10.1080/02724980343000198
+  pmid: '14742175'
+  year: 2004
+  verified: false
+notes: 'New configuration (sprint 2). Lead R1212 (ERP correlates of a receptive language-switching task; title and PMID only,
+  chosen as first_source because its title names this configuration; earlier receptive-switching studies may exist). The task
+  details (categorisation, written words) have to be checked; MK.N2_frontocentral is provisional for comprehension switching.
+  Leads: R1212, R1211. (R#### = curation/literature.csv; DN## = curation/work/pkg_D/new_leads.csv.) Numbering criterion (D-057):
+  1;2. bibliography corrected (OpenAlex, 2026-10-05)'
+status: draft
+contributors:
+- curator_d

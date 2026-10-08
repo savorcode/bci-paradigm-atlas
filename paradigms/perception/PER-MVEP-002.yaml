@@ -1,0 +1,51 @@
+schema_version: '0.2'
+id: PER-MVEP-002
+class: PER-MVEP
+name:
+  en: Motion-onset VEP BCI (multi-target)
+  zh: 运动起始 VEP 脑机接口（多目标）
+aliases:
+- mVEP BCI
+- motion-onset VEP speller
+family: perception
+bci_category:
+- reactive
+recording_modality:
+- EEG
+stimulus_modality:
+- visual
+markers:
+- MK.mVEP
+description:
+  en: Several targets on the screen each contain a small moving element whose motion onsets occur in turn in random order.
+    The user attends to the desired target, and the motion-onset VEP (N2) time-locked to that target's motion is detected
+    to select it, giving a flicker-free visual BCI with selection feedback.
+  zh: 屏幕上多个目标各含一个小运动元素，其运动起始按随机顺序轮流出现。用户注意目标，检测与该目标运动锁时的运动起始 VEP（N2）以选中它，构成无闪烁、带选择反馈的视觉 BCI。
+trial_structure:
+  conditions:
+  - motion onset in attended target
+  - motion onset in other targets
+protocol:
+  classes:
+  - on-screen targets (virtual buttons)
+  cue: targets each with a moving element, motion onsets in random order
+  stimulus_coding: time-multiplexed motion onsets per target
+  paradigm_timing: synchronous
+  feedback: discrete
+  distinguishing: 准则 1;4：类别为屏幕目标（多选一），逐次离散选择反馈；-001 为单一运动起始、被动观察。
+first_source:
+  citation: Guo F, Hong B, Gao X, Gao S. A brain–computer interface using motion-onset visual evoked potential. Journal of
+    Neural Engineering. 2008;5.
+  doi: 10.1088/1741-2560/5/4/011
+  year: 2008
+  verified: false
+interop:
+  bids_task: mvep
+notes: Former variant "Motion-onset VEP BCI" of PER-MVEP-001 (sprint 1, search SA45/SA47), split under D-057. Related lead
+  R0836 (single-stimulus multitarget BCI based on retinotopic mapping of mVEPs) uses a different coding scheme (targets coded
+  by retinotopic position of one stimulus); recorded in split_log as a proposal, not created (one lead, no year). [maintainer,
+  sprint 2] Lead registered as R1285 (literature.csv). [curator_e sprint 3, 2026-10-05] bibliography confirmed (Crossref,
+  2026-10-05).
+status: draft
+contributors:
+- curator_a

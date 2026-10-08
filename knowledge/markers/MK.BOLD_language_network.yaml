@@ -1,0 +1,24 @@
+schema_version: "0.2"
+id: MK.BOLD_language_network
+name:
+  en: Language network BOLD
+  zh: 语言网络 BOLD
+aliases:
+- frontotemporal language network activation
+- left IFG and temporal language areas
+type: hemodynamic
+recording_modality:
+- fMRI
+description:
+  en: >-
+    BOLD activity in the left-lateralised frontotemporal language network, including the inferior frontal gyrus
+    and lateral temporal cortex, that responds more to meaningful language than to control stimuli. Specific subregions
+    are specified in generators and relations rather than as separate markers.
+  zh: 左侧化额颞语言网络（包括额下回和外侧颞叶皮层）的 BOLD 活动，对有意义语言的响应强于对照刺激。具体子区在 generators 与 relation 中说明，不单列标记物。
+notes: >-
+  First-pass skeleton (curator_d, 2026-10-03). No signature is given for this hemodynamic marker; generators and
+  indexes will be added in the second pass.
+status: draft
+contributors:
+- maintainer
+- curator_d

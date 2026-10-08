@@ -1,0 +1,25 @@
+schema_version: "0.2"
+id: MK.N2pc
+name:
+  en: N2pc
+  zh: N2pc
+aliases:
+- N2pc
+- N2-posterior-contralateral
+type: erp_component
+recording_modality:
+- EEG
+- MEG
+signature:
+  latency_ms: ~180-300
+  polarity: negative (contralateral minus ipsilateral)
+  topography: posterior, e.g. PO7/PO8
+description:
+  en: Negativity over posterior sites contralateral to an attended item in a bilateral display, reflecting the allocation
+    of spatial attention to that item.
+  zh: 在双侧呈现的画面中，被注意项目对侧后部电极出现的负波，反映空间注意对该项目的分配。
+notes: First-pass skeleton by package A (2026-10-03). No generators/indexes yet. Signature values are textbook-level approximations
+  and await source checking.
+status: draft
+contributors:
+- curator_a

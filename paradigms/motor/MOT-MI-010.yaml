@@ -1,0 +1,56 @@
+schema_version: '0.2'
+id: MOT-MI-010
+class: MOT-MI
+name:
+  en: Both-hands vs both-feet motor imagery (target cue)
+  zh: 双手对双脚运动想象（目标提示）
+aliases:
+- fists vs feet imagery
+- eegmmidb runs 6/10/14
+family: motor
+bci_category:
+- active
+recording_modality:
+- EEG
+stimulus_modality:
+- mental_imagery
+- visual
+markers:
+- MK.SMR_ERD
+description:
+  en: >-
+    A target appears at the top or bottom of the screen and the participant imagines opening and closing both fists (top)
+    or both feet (bottom) until the target disappears, alternating with rest. Bilateral hand imagery and foot imagery are
+    separated by their lateral vs midline ERD patterns.
+  zh: 屏幕上方或下方出现目标，被试想象双手握拳张开（上方）或双脚动作（下方），直到目标消失，并与休息交替。双手想象与双脚想象依据外侧与中线 ERD 模式区分。
+protocol:
+  n_classes: 3
+  classes:
+  - both hands
+  - both feet
+  - rest
+  cue: visual target at the top or bottom of the screen
+  paradigm_timing: synchronous
+  feedback: none
+  distinguishing: >-
+    Criteria 1 and 2 vs MOT-MI-001: bilateral hands vs feet (plus rest) instead of left vs right hand; screen-position target
+    instead of an arrow.
+first_source:
+  citation: >-
+    Schalk G, McFarland DJ, Hinterberger T, Birbaumer N, Wolpaw JR. BCI2000: a general-purpose brain-computer interface (BCI)
+    system. IEEE Transactions on Biomedical Engineering 51(6):1034-1043. 2004.
+  doi: 10.1109/TBME.2004.827072
+  year: 2004
+  verified: false
+datasets:
+- name: PhysioNet EEG Motor Movement/Imagery Dataset (eegmmidb), fists/feet imagery runs
+  url: https://moabb.neurotechx.com/docs/generated/moabb.datasets.PhysionetMI.html
+  subjects: 109
+interop:
+  bids_task: motorimagery
+notes: >-
+  Lead: WF-B2-04 [=R1291] (MOABB PhysionetMI page, verbatim task text; reference BCI2000 paper). The BCI2000 system paper
+  is the dataset reference, not necessarily the protocol origin. bibliography confirmed (Crossref, 2026-10-05)
+status: draft
+contributors:
+- curator_b

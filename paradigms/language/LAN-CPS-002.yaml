@@ -1,0 +1,49 @@
+schema_version: '0.2'
+id: LAN-CPS-002
+class: LAN-CPS
+name:
+  en: Closure positive shift in reading (comma-marked boundaries)
+  zh: 阅读中的闭合正漂移（逗号标记边界）
+aliases:
+- comma CPS
+- reading CPS
+family: language
+bci_category:
+- none
+recording_modality:
+- EEG
+stimulus_modality:
+- visual
+markers:
+- MK.CPS
+description:
+  en: Participants read sentences presented word by word in which commas mark (or do not mark) a phrase boundary. Commas elicit
+    a closure positive shift similar to the one evoked by prosodic boundaries in speech, supporting the view that readers
+    impose implicit prosodic phrasing.
+  zh: 被试阅读逐词呈现的句子，其中逗号标记（或不标记）短语边界。逗号诱发与言语韵律边界相似的闭合正漂移，支持读者在阅读中施加隐性韵律切分的观点。
+trial_structure:
+  conditions:
+  - comma boundary
+  - no comma
+protocol:
+  n_classes: 2
+  classes:
+  - comma-marked boundary
+  - no comma
+  cue: written sentences presented word by word
+  paradigm_timing: synchronous
+  feedback: none
+  distinguishing: 准则 2：刺激由自然语音中的语调边界（LAN-CPS-001）变为书面句子中的逗号。
+first_source:
+  citation: 'Steinhauer K, Friederici AD. Prosodic Boundaries, Comma Rules, and Brain Responses: The Closure Positive Shift
+    in ERPs as a Universal Marker for Prosodic Phrasing in Listeners and Readers. Journal of Psycholinguistic Research. 2001;30(3):267-295.'
+  doi: 10.1023/a:1010443001646
+  pmid: '11523275'
+  year: 2001
+  verified: false
+notes: 'Split out of the LAN-CPS-001 description. Lead R1213 (title and PMID only; covers listeners and readers). Leads: R1213,
+  R1164. (R#### = curation/literature.csv; DN## = curation/work/pkg_D/new_leads.csv.) Numbering criterion (D-057): 2. bibliography
+  corrected (OpenAlex, 2026-10-05)'
+status: draft
+contributors:
+- curator_d

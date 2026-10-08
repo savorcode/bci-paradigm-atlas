@@ -1,0 +1,606 @@
+# 包 D sprint 3 范式类书目核实结果（D-072）。维护者合入 paradigms/_classes.yaml；审核人不直接改登记表。
+# Class first_source / notes updates from the sprint 3 bibliographic check (curator_c, 2026-10-05).
+# action: modify；fields 只写要改的字段。verified 一律保持 false（本冲刺只做书目核实）。
+updates:
+- id: LAN-AGL
+  action: modify
+  fields:
+    notes: migrated from schema-0.1 file LAN-AGL-001. bibliography confirmed (Crossref, 2026-10-05)
+  reason: 'sprint 3 bibliographic verification (curator_c): confirmed. title, first author, year, venue, volume/issue/pages
+    agree with the record'
+- id: LAN-CPS
+  action: modify
+  fields:
+    first_source:
+      citation: Steinhauer K, Alter K, Friederici AD. Brain potentials indicate immediate use of prosodic cues in natural
+        speech processing. Nature Neuroscience. 1999;2(2):191-196.
+      doi: 10.1038/5757
+      year: 1999
+      verified: false
+    notes: 'migrated from schema-0.1 file LAN-CPS-001; sprint 2 (D-057): aliases updated from curation/work/pkg_D/sprint2/class_updates.yaml.
+      bibliography corrected (Crossref, 2026-10-05)'
+  reason: 'sprint 3 bibliographic verification (curator_c): corrected. rewritten in house style from the Crossref record'
+- id: LAN-GEST
+  action: modify
+  fields:
+    first_source:
+      citation: Kelly SD, Kravitz C, Hopkins M. Neural correlates of bimodal speech and gesture comprehension. Brain and Language.
+        2003;89(1):253-260.
+      doi: 10.1016/s0093-934x(03)00335-3
+      year: 2003
+      verified: false
+    notes: 'migrated from schema-0.1 file LAN-GEST-001. first_source TBD resolved by bibliographic search (OpenAlex, 2026-10-05;
+      curator_c): candidate origin found by bibliographic search; content unverified. Previous entry: "TBD: no origin source
+      identified yet (see curation/work/pkg_D/status.csv)"'
+  reason: 'sprint 3 bibliographic verification (curator_c): tbd_resolved. candidate origin found by bibliographic search;
+    content unverified. from LAN-GEST-001'
+- id: LAN-HIER
+  action: modify
+  fields:
+    first_source:
+      citation: Ding N, Melloni L, Zhang H, Tian X, Poeppel D. Cortical tracking of hierarchical linguistic structures in
+        connected speech. Nature Neuroscience. 2016;19(1):158-164.
+      doi: 10.1038/nn.4186
+      year: 2016
+      verified: false
+    notes: migrated from schema-0.1 file LAN-HIER-001. bibliography corrected (Crossref, 2026-10-05)
+  reason: 'sprint 3 bibliographic verification (curator_c): corrected. rewritten in house style from the Crossref record;
+    Crossref issued 2015 (online); print volume 19(1) is 2016 - citation year kept at 2016'
+- id: LAN-LDT
+  action: modify
+  fields:
+    notes: migrated from schema-0.1 file LAN-LDT-001. bibliography confirmed (Crossref, 2026-10-05)
+  reason: 'sprint 3 bibliographic verification (curator_c): confirmed. title, first author, year, venue, volume/issue/pages
+    agree with the record'
+- id: LAN-LOC
+  action: modify
+  fields:
+    first_source:
+      citation: 'Fedorenko E, Hsieh PJ, Nieto-Castañón A, Whitfield-Gabrieli S, Kanwisher N. New Method for fMRI Investigations
+        of Language: Defining ROIs Functionally in Individual Subjects. Journal of Neurophysiology. 2010;104(2):1177-1194.'
+      doi: 10.1152/jn.00032.2010
+      pmid: '20410363'
+      year: 2010
+      verified: false
+    notes: 'migrated from schema-0.1 file LAN-LOC-001; sprint 2 (D-057): aliases updated from curation/work/pkg_D/sprint2/class_updates.yaml.
+      bibliography corrected (OpenAlex, 2026-10-05)'
+  reason: 'sprint 3 bibliographic verification (curator_c): corrected. rewritten in house style from the OpenAlex record'
+- id: LAN-MUS
+  action: modify
+  fields:
+    first_source:
+      citation: 'Patel AD, Gibson E, Ratner J, Besson M, Holcomb PJ. Processing Syntactic Relations in Language and Music:
+        An Event-Related Potential Study. Journal of Cognitive Neuroscience. 1998;10(6):717-733.'
+      doi: 10.1162/089892998563121
+      pmid: '9831740'
+      year: 1998
+      verified: false
+    notes: migrated from schema-0.1 file LAN-MUS-001. bibliography corrected (OpenAlex, 2026-10-05)
+  reason: 'sprint 3 bibliographic verification (curator_c): corrected. rewritten in house style from the OpenAlex record'
+- id: LAN-N400
+  action: modify
+  fields:
+    first_source:
+      citation: Kutas M, Hillyard SA. Event-related brain potentials to semantically inappropriate and surprisingly large
+        words. Biological Psychology. 1980;11(2):99-116.
+      doi: 10.1016/0301-0511(80)90046-0
+      pmid: '7272388'
+      year: 1980
+      verified: false
+    notes: 'migrated from schema-0.1 file LAN-N400-001; sprint 2 (D-057): aliases updated from curation/work/pkg_D/sprint2/class_updates.yaml.
+      bibliography corrected (OpenAlex, 2026-10-05)'
+  reason: 'sprint 3 bibliographic verification (curator_c): corrected. rewritten in house style from the OpenAlex record'
+- id: LAN-NAT
+  action: modify
+  fields:
+    first_source:
+      citation: Luo H, Poeppel D. Phase Patterns of Neuronal Responses Reliably Discriminate Speech in Human Auditory Cortex.
+        Neuron. 2007;54(6):1001-1010.
+      doi: 10.1016/j.neuron.2007.06.004
+      pmid: '17582338'
+      year: 2007
+      verified: false
+    notes: migrated from schema-0.1 file LAN-NAT-001. bibliography corrected (OpenAlex, 2026-10-05)
+  reason: 'sprint 3 bibliographic verification (curator_c): corrected. rewritten in house style from the OpenAlex record'
+- id: LAN-NWL
+  action: modify
+  fields:
+    first_source:
+      citation: 'Perfetti CA, Wlotko EW, Hart LA. Word Learning and Individual Differences in Word Learning Reflected in Event-Related
+        Potentials. Journal of Experimental Psychology: Learning, Memory, and Cognition. 2005;31(6):1281-1292.'
+      doi: 10.1037/0278-7393.31.6.1281
+      year: 2005
+      verified: false
+    notes: 'migrated from schema-0.1 file LAN-NWL-001. first_source TBD resolved by bibliographic search (Crossref, 2026-10-05;
+      curator_c): candidate origin found by bibliographic search; content unverified. Previous entry: "TBD: no origin source
+      identified yet (see curation/work/pkg_D/status.csv)"'
+  reason: 'sprint 3 bibliographic verification (curator_c): tbd_resolved. candidate origin found by bibliographic search;
+    content unverified. from LAN-NWL-001'
+- id: LAN-OVS
+  action: modify
+  fields:
+    first_source:
+      citation: Bouchard KE, Mesgarani N, Johnson K, Chang EF. Functional organization of human sensorimotor cortex for speech
+        articulation. Nature. 2013;495(7441):327-332.
+      doi: 10.1038/nature11911
+      pmid: '23426266'
+      year: 2013
+      verified: false
+    notes: 'migrated from schema-0.1 file LAN-OVS-001; sprint 2 (D-057): aliases updated from curation/work/pkg_D/sprint2/class_updates.yaml.
+      bibliography corrected (OpenAlex, 2026-10-05)'
+  reason: 'sprint 3 bibliographic verification (curator_c): corrected. rewritten in house style from the OpenAlex record'
+- id: LAN-P600
+  action: modify
+  fields:
+    first_source:
+      citation: Hagoort P, Brown C, Groothusen J. The syntactic positive shift (SPS) as an ERP measure of syntactic processing.
+        Language and Cognitive Processes. 1993;8(4):439-483.
+      doi: 10.1080/01690969308407585
+      year: 1993
+      verified: false
+    notes: 'migrated from schema-0.1 file LAN-P600-001; sprint 2 (D-057): aliases updated from curation/work/pkg_D/sprint2/class_updates.yaml.
+      bibliography corrected (Crossref, 2026-10-05)'
+  reason: 'sprint 3 bibliographic verification (curator_c): corrected. rewritten in house style from the Crossref record'
+- id: LAN-PCAT
+  action: modify
+  fields:
+    first_source:
+      citation: Chang EF, Rieger JW, Johnson K, Berger MS, Barbaro NM, Knight RT. Categorical speech representation in human
+        superior temporal gyrus. Nature Neuroscience. 2010;13(11):1428-1432.
+      doi: 10.1038/nn.2641
+      pmid: '20890293'
+      year: 2010
+      verified: false
+    notes: migrated from schema-0.1 file LAN-PCAT-001. bibliography corrected (OpenAlex, 2026-10-05)
+  reason: 'sprint 3 bibliographic verification (curator_c): corrected. rewritten in house style from the OpenAlex record'
+- id: LAN-PHA
+  action: modify
+  fields:
+    first_source:
+      citation: Shaywitz SE, Shaywitz BA, Pugh KR, Fulbright RK, Constable RT, Mencl WE, Shankweiler DP, Liberman AM, Skudlarski
+        P, Fletcher JM, Katz L, Marchione KE, Lacadie C, Gatenby C, Gore JC. Functional disruption in the organization of
+        the brain for reading in dyslexia. Proceedings of the National Academy of Sciences. 1998;95(5):2636-2641.
+      doi: 10.1073/pnas.95.5.2636
+      pmid: '9482939'
+      year: 1998
+      verified: false
+    notes: migrated from schema-0.1 file LAN-PHA-001. bibliography corrected (Crossref, 2026-10-05)
+  reason: 'sprint 3 bibliographic verification (curator_c): corrected. rewritten in house style from the Crossref record'
+- id: LAN-PN
+  action: modify
+  fields:
+    first_source:
+      citation: Crone NE, Hao L, Hart J, Boatman DF, Lesser RP, Irizarry RA, Gordon B. Electrocorticographic gamma activity
+        during word production in spoken and sign language. Neurology. 2001;57(11):2045-2053.
+      doi: 10.1212/wnl.57.11.2045
+      pmid: '11739824'
+      year: 2001
+      verified: false
+    notes: 'migrated from schema-0.1 file LAN-PN-001; sprint 2 (D-057): aliases updated from curation/work/pkg_D/sprint2/class_updates.yaml.
+      bibliography corrected (OpenAlex, 2026-10-05)'
+  reason: 'sprint 3 bibliographic verification (curator_c): corrected. rewritten in house style from the OpenAlex record'
+- id: LAN-PRIME
+  action: modify
+  fields:
+    notes: 'migrated from schema-0.1 file LAN-PRIME-001; sprint 2 (D-057): aliases updated from curation/work/pkg_D/sprint2/class_updates.yaml.
+      bibliography confirmed (Crossref, 2026-10-05)'
+  reason: 'sprint 3 bibliographic verification (curator_c): confirmed. title, first author, year, venue, volume/issue/pages
+    agree with the record'
+- id: LAN-READ
+  action: modify
+  fields:
+    first_source:
+      citation: 'Dimigen O, Sommer W, Hohlfeld A, Jacobs AM, Kliegl R. Coregistration of eye movements and EEG in natural
+        reading: Analyses and review. Journal of Experimental Psychology: General. 2011;140(4):552-572.'
+      doi: 10.1037/a0023885
+      year: 2011
+      verified: false
+    notes: migrated from schema-0.1 file LAN-READ-001. bibliography corrected (OpenAlex, 2026-10-05)
+  reason: 'sprint 3 bibliographic verification (curator_c): corrected. rewritten in house style from the OpenAlex record'
+- id: LAN-SC
+  action: modify
+  fields:
+    first_source:
+      citation: 'Frazier L, Rayner K. Making and correcting errors during sentence comprehension: Eye movements in the analysis
+        of structurally ambiguous sentences. Cognitive Psychology. 1982;14(2):178-210.'
+      doi: 10.1016/0010-0285(82)90008-1
+      year: 1982
+      verified: false
+    notes: 'migrated from schema-0.1 file LAN-SC-001; sprint 2 (D-057): aliases updated from curation/work/pkg_D/sprint2/class_updates.yaml.
+      bibliography corrected (Crossref, 2026-10-05)'
+  reason: 'sprint 3 bibliographic verification (curator_c): corrected. rewritten in house style from the Crossref record'
+- id: LAN-SEMD
+  action: modify
+  fields:
+    first_source:
+      citation: Binder JR, Rao SM, Hammeke TA, Frost JA, Bandettini PA, Jesmanowicz A, Hyde JS. Lateralized Human Brain Language
+        Systems Demonstrated by Task Subtraction Functional Magnetic Resonance Imaging. Archives of Neurology. 1995;52(6):593-601.
+      doi: 10.1001/archneur.1995.00540300067015
+      pmid: '7763208'
+      year: 1995
+      verified: false
+    notes: migrated from schema-0.1 file LAN-SEMD-001. bibliography corrected (OpenAlex, 2026-10-05)
+  reason: 'sprint 3 bibliographic verification (curator_c): corrected. rewritten in house style from the OpenAlex record'
+- id: LAN-SIS
+  action: modify
+  fields:
+    first_source:
+      citation: Curio G, Neuloh G, Numminen J, Jousmäki V, Hari R. Speaking modifies voice-evoked activity in the human auditory
+        cortex. Human Brain Mapping. 2000;9(4):183-191.
+      doi: 10.1002/(sici)1097-0193(200004)9:4<183::aid-hbm1>3.0.co;2-z
+      pmid: '10770228'
+      year: 2000
+      verified: false
+    notes: 'migrated from schema-0.1 file LAN-SIS-001; sprint 2 (D-057): aliases updated from curation/work/pkg_D/sprint2/class_updates.yaml.
+      bibliography corrected (OpenAlex, 2026-10-05)'
+  reason: 'sprint 3 bibliographic verification (curator_c): corrected. rewritten in house style from the OpenAlex record'
+- id: LAN-SL
+  action: modify
+  fields:
+    first_source:
+      citation: Saffran JR, Aslin RN, Newport EL. Statistical Learning by 8-Month-Old Infants. Science. 1996;274(5294):1926-1928.
+      doi: 10.1126/science.274.5294.1926
+      pmid: '8943209'
+      year: 1996
+      verified: false
+    notes: migrated from schema-0.1 file LAN-SL-001. bibliography corrected (OpenAlex, 2026-10-05)
+  reason: 'sprint 3 bibliographic verification (curator_c): corrected. rewritten in house style from the OpenAlex record'
+- id: LAN-SWITCH
+  action: modify
+  fields:
+    first_source:
+      citation: 'Meuter RFI, Allport A. Bilingual Language Switching in Naming: Asymmetrical Costs of Language Selection.
+        Journal of Memory and Language. 1999;40(1):25-40.'
+      doi: 10.1006/jmla.1998.2602
+      year: 1999
+      verified: false
+    notes: 'migrated from schema-0.1 file LAN-SWITCH-001; sprint 2 (D-057): aliases updated from curation/work/pkg_D/sprint2/class_updates.yaml.
+      first_source TBD resolved by bibliographic search (OpenAlex, 2026-10-05; curator_c): candidate origin found by bibliographic
+      search; content unverified. Previous entry: "TBD: no origin source identified yet (see curation/work/pkg_D/status.csv)"'
+  reason: 'sprint 3 bibliographic verification (curator_c): tbd_resolved. candidate origin found by bibliographic search;
+    content unverified. from LAN-SWITCH-001'
+- id: LAN-VF
+  action: modify
+  fields:
+    notes: 'migrated from schema-0.1 file LAN-VF-001; sprint 2 (D-057): aliases updated from curation/work/pkg_D/sprint2/class_updates.yaml.
+      bibliography not found in Crossref (2026-10-05; curator_c): test manual (Benton, Hamsher & Sivan, Multilingual Aphasia
+      Examination, AJA Associates) has no Crossref record; search returned only secondary papers (Schum, Sivan & Benton 1989;
+      Hamsher 1998)'
+  reason: 'sprint 3 bibliographic verification (curator_c): not_found. test manual (Benton, Hamsher & Sivan, Multilingual
+    Aphasia Examination, AJA Associates) has no Crossref record; search returned only secondary papers (Schum, Sivan & Benton
+    1989; Hamsher 1998)'
+- id: LAN-VG
+  action: modify
+  fields:
+    first_source:
+      citation: Petersen SE, Fox PT, Posner MI, Mintun M, Raichle ME. Positron emission tomographic studies of the cortical
+        anatomy of single-word processing. Nature. 1988;331(6157):585-589.
+      doi: 10.1038/331585a0
+      pmid: '3277066'
+      year: 1988
+      verified: false
+    notes: migrated from schema-0.1 file LAN-VG-001. bibliography corrected (Crossref, 2026-10-05)
+  reason: 'sprint 3 bibliographic verification (curator_c): corrected. rewritten in house style from the Crossref record'
+- id: LAN-VWFA
+  action: modify
+  fields:
+    first_source:
+      citation: Cohen L, Lehéricy S, Chochon F, Lemer C, Rivaud S, Dehaene S. Language-specific tuning of visual cortex? Functional
+        properties of the Visual Word Form Area. Brain. 2002;125(5):1054-1069.
+      doi: 10.1093/brain/awf094
+      pmid: '11960895'
+      year: 2002
+      verified: false
+    notes: migrated from schema-0.1 file LAN-VWFA-001. bibliography corrected (OpenAlex, 2026-10-05)
+  reason: 'sprint 3 bibliographic verification (curator_c): corrected. rewritten in house style from the OpenAlex record'
+- id: MEM-CD
+  action: modify
+  fields:
+    first_source:
+      citation: Luck SJ, Vogel EK. The capacity of visual working memory for features and conjunctions. Nature. 1997;390(6657):279-281.
+      doi: 10.1038/36846
+      pmid: '9384378'
+      year: 1997
+      verified: false
+    notes: 'migrated from schema-0.1 file MEM-CD-001; sprint 2 (D-057): aliases updated from curation/work/pkg_D/sprint2/class_updates.yaml.
+      bibliography corrected (Crossref, 2026-10-05)'
+  reason: 'sprint 3 bibliographic verification (curator_c): corrected. rewritten in house style from the Crossref record'
+- id: MEM-CFMT
+  action: modify
+  fields:
+    notes: migrated from schema-0.1 file MEM-CFMT-001. bibliography confirmed (Crossref, 2026-10-05)
+  reason: 'sprint 3 bibliographic verification (curator_c): confirmed. title, first author, year, venue, volume/issue/pages
+    agree with the record'
+- id: MEM-CIT
+  action: modify
+  fields:
+    first_source:
+      citation: 'Farwell LA, Donchin E. The Truth Will Out: Interrogative Polygraphy ("Lie Detection") With Event-Related
+        Brain Potentials. Psychophysiology. 1991;28(5):531-547.'
+      doi: 10.1111/j.1469-8986.1991.tb01990.x
+      year: 1991
+      verified: false
+    notes: 'migrated from schema-0.1 file MEM-CIT-001; sprint 2 (D-057): aliases updated from curation/work/pkg_D/sprint2/class_updates.yaml.
+      bibliography corrected (Crossref, 2026-10-05)'
+  reason: 'sprint 3 bibliographic verification (curator_c): corrected. rewritten in house style from the Crossref record'
+- id: MEM-DF
+  action: modify
+  fields:
+    first_source:
+      citation: 'Bjork RA. Positive forgetting: The noninterference of Items intentionally forgotten. Journal of Verbal Learning
+        and Verbal Behavior. 1970;9(3):255-268.'
+      doi: 10.1016/s0022-5371(70)80059-7
+      year: 1970
+      verified: false
+    notes: 'migrated from schema-0.1 file MEM-DF-001; sprint 2 (D-057): aliases updated from curation/work/pkg_D/sprint2/class_updates.yaml.
+      bibliography corrected (Crossref, 2026-10-05)'
+  reason: 'sprint 3 bibliographic verification (curator_c): corrected. rewritten in house style from the Crossref record'
+- id: MEM-DMS
+  action: modify
+  fields:
+    first_source:
+      citation: Fuster JM, Alexander GE. Neuron Activity Related to Short-Term Memory. Science. 1971;173(3997):652-654.
+      doi: 10.1126/science.173.3997.652
+      pmid: '4998337'
+      year: 1971
+      verified: false
+    notes: migrated from schema-0.1 file MEM-DMS-001. bibliography corrected (Crossref, 2026-10-05)
+  reason: 'sprint 3 bibliographic verification (curator_c): corrected. rewritten in house style from the Crossref record'
+- id: MEM-DRM
+  action: modify
+  fields:
+    first_source:
+      citation: Deese J. On the prediction of occurrence of particular verbal intrusions in immediate recall. Journal of Experimental
+        Psychology. 1959;58(1):17-22.
+      doi: 10.1037/h0046671
+      pmid: '13664879'
+      year: 1959
+      verified: false
+    notes: migrated from schema-0.1 file MEM-DRM-001. bibliography corrected (OpenAlex, 2026-10-05)
+  reason: 'sprint 3 bibliographic verification (curator_c): corrected. rewritten in house style from the OpenAlex record'
+- id: MEM-DS
+  action: modify
+  fields:
+    first_source:
+      citation: Jacobs J. Experiments on "prehension". Mind. 1887;os-12(45):75-79.
+      doi: 10.1093/mind/os-12.45.75
+      year: 1887
+      verified: false
+    notes: 'migrated from schema-0.1 file MEM-DS-001; sprint 2 (D-057): aliases updated from curation/work/pkg_D/sprint2/class_updates.yaml.
+      bibliography corrected (Crossref, 2026-10-05)'
+  reason: 'sprint 3 bibliographic verification (curator_c): corrected. rewritten in house style from the Crossref record'
+- id: MEM-EFT
+  action: modify
+  fields:
+    first_source:
+      citation: 'Addis DR, Wong AT, Schacter DL. Remembering the past and imagining the future: Common and distinct neural
+        substrates during event construction and elaboration. Neuropsychologia. 2007;45(7):1363-1377.'
+      doi: 10.1016/j.neuropsychologia.2006.10.016
+      year: 2007
+      verified: false
+    notes: migrated from schema-0.1 file MEM-EFT-001. bibliography corrected (Crossref, 2026-10-05)
+  reason: 'sprint 3 bibliographic verification (curator_c): corrected. rewritten in house style from the Crossref record'
+- id: MEM-FR
+  action: modify
+  fields:
+    first_source:
+      citation: Murdock BB. The serial position effect of free recall. Journal of Experimental Psychology. 1962;64(5):482-488.
+      doi: 10.1037/h0045106
+      year: 1962
+      verified: false
+    notes: 'migrated from schema-0.1 file MEM-FR-001; sprint 2 (D-057): aliases updated from curation/work/pkg_D/sprint2/class_updates.yaml.
+      bibliography corrected (Crossref, 2026-10-05)'
+  reason: 'sprint 3 bibliographic verification (curator_c): corrected. rewritten in house style from the Crossref record'
+- id: MEM-META
+  action: modify
+  fields:
+    notes: 'migrated from schema-0.1 file MEM-META-001; sprint 2 (D-057): aliases updated from curation/work/pkg_D/sprint2/class_updates.yaml.
+      bibliography confirmed (Crossref, 2026-10-05)'
+  reason: 'sprint 3 bibliographic verification (curator_c): confirmed. title, first author, year, venue, volume/issue/pages
+    agree with the record'
+- id: MEM-MST
+  action: modify
+  fields:
+    notes: 'migrated from schema-0.1 file MEM-MST-001; sprint 2 (D-057): aliases updated from curation/work/pkg_D/sprint2/class_updates.yaml.
+      bibliography confirmed (Crossref, 2026-10-05)'
+  reason: 'sprint 3 bibliographic verification (curator_c): confirmed. title, first author, year, venue, volume/issue/pages
+    agree with the record'
+- id: MEM-NAV
+  action: modify
+  fields:
+    first_source:
+      citation: 'Maguire EA, Burgess N, Donnett JG, Frackowiak RSJ, Frith CD, O''Keefe J. Knowing Where and Getting There:
+        A Human Navigation Network. Science. 1998;280(5365):921-924.'
+      doi: 10.1126/science.280.5365.921
+      pmid: '9572740'
+      year: 1998
+      verified: false
+    notes: 'migrated from schema-0.1 file MEM-NAV-001; sprint 2 (D-057): aliases updated from curation/work/pkg_D/sprint2/class_updates.yaml.
+      bibliography corrected (OpenAlex, 2026-10-05)'
+  reason: 'sprint 3 bibliographic verification (curator_c): corrected. rewritten in house style from the OpenAlex record'
+- id: MEM-NBK
+  action: modify
+  fields:
+    first_source:
+      citation: Kirchner WK. Age differences in short-term retention of rapidly changing information. Journal of Experimental
+        Psychology. 1958;55(4):352-358.
+      doi: 10.1037/h0043688
+      pmid: '13539317'
+      year: 1958
+      verified: false
+    notes: 'migrated from schema-0.1 file MEM-NBK-001; sprint 2 (D-057): aliases updated from curation/work/pkg_D/sprint2/class_updates.yaml.
+      bibliography corrected (Crossref, 2026-10-05)'
+  reason: 'sprint 3 bibliographic verification (curator_c): corrected. rewritten in house style from the Crossref record'
+- id: MEM-ON
+  action: modify
+  fields:
+    first_source:
+      citation: 'Mandler G. Recognizing: The judgment of previous occurrence. Psychological Review. 1980;87(3):252-271.'
+      doi: 10.1037/0033-295x.87.3.252
+      year: 1980
+      verified: false
+    notes: 'migrated from schema-0.1 file MEM-ON-001; sprint 2 (D-057): aliases updated from curation/work/pkg_D/sprint2/class_updates.yaml.
+      bibliography corrected (Crossref, 2026-10-05)'
+  reason: 'sprint 3 bibliographic verification (curator_c): corrected. rewritten in house style from the Crossref record'
+- id: MEM-PA
+  action: modify
+  fields:
+    notes: 'migrated from schema-0.1 file MEM-PA-001; sprint 2 (D-057): aliases updated from curation/work/pkg_D/sprint2/class_updates.yaml.
+      first_source still TBD after bibliographic search (2026-10-05; curator_c): see MEM-PA-001'
+  reason: 'sprint 3 bibliographic verification (curator_c): tbd_open. see MEM-PA-001'
+- id: MEM-PM
+  action: modify
+  fields:
+    first_source:
+      citation: 'Einstein GO, McDaniel MA. Normal aging and prospective memory. Journal of Experimental Psychology: Learning,
+        Memory, and Cognition. 1990;16(4):717-726.'
+      doi: 10.1037/0278-7393.16.4.717
+      year: 1990
+      verified: false
+    notes: 'migrated from schema-0.1 file MEM-PM-001; sprint 2 (D-057): aliases updated from curation/work/pkg_D/sprint2/class_updates.yaml.
+      bibliography corrected (Crossref, 2026-10-05)'
+  reason: 'sprint 3 bibliographic verification (curator_c): corrected. rewritten in house style from the Crossref record'
+- id: MEM-RC
+  action: modify
+  fields:
+    first_source:
+      citation: Griffin IC, Nobre AC. Orienting Attention to Locations in Internal Representations. Journal of Cognitive Neuroscience.
+        2003;15(8):1176-1194.
+      doi: 10.1162/089892903322598139
+      year: 2003
+      verified: false
+    notes: migrated from schema-0.1 file MEM-RC-001. bibliography corrected (Crossref, 2026-10-05)
+  reason: 'sprint 3 bibliographic verification (curator_c): corrected. rewritten in house style from the Crossref record'
+- id: MEM-RIF
+  action: modify
+  fields:
+    first_source:
+      citation: 'Anderson MC, Bjork RA, Bjork EL. Remembering can cause forgetting: Retrieval dynamics in long-term memory.
+        Journal of Experimental Psychology: Learning, Memory, and Cognition. 1994;20(5):1063-1087.'
+      doi: 10.1037/0278-7393.20.5.1063
+      year: 1994
+      verified: false
+    notes: migrated from schema-0.1 file MEM-RIF-001. bibliography corrected (Crossref, 2026-10-05)
+  reason: 'sprint 3 bibliographic verification (curator_c): corrected. rewritten in house style from the Crossref record'
+- id: MEM-RMEM
+  action: modify
+  fields:
+    first_source:
+      citation: 'Adcock RA, Thangavel A, Whitfield-Gabrieli S, Knutson B, Gabrieli JDE. Reward-Motivated Learning: Mesolimbic
+        Activation Precedes Memory Formation. Neuron. 2006;50(3):507-517.'
+      doi: 10.1016/j.neuron.2006.03.036
+      year: 2006
+      verified: false
+    notes: 'migrated from schema-0.1 file MEM-RMEM-001. first_source TBD resolved by bibliographic search (OpenAlex, 2026-10-05;
+      curator_c): candidate origin found by bibliographic search; content unverified. Previous entry: "TBD: no origin source
+      identified yet (see curation/work/pkg_D/status.csv)"'
+  reason: 'sprint 3 bibliographic verification (curator_c): tbd_resolved. candidate origin found by bibliographic search;
+    content unverified. from MEM-RMEM-001'
+- id: MEM-RPRIM
+  action: modify
+  fields:
+    first_source:
+      citation: 'Scarborough DL, Cortese C, Scarborough HS. Frequency and repetition effects in lexical memory. Journal of
+        Experimental Psychology: Human Perception and Performance. 1977;3(1):1-17.'
+      doi: 10.1037/0096-1523.3.1.1
+      year: 1977
+      verified: false
+    notes: 'migrated from schema-0.1 file MEM-RPRIM-001. first_source TBD resolved by bibliographic search (Crossref, 2026-10-05;
+      curator_c): candidate origin found by bibliographic search; content unverified. Previous entry: "TBD: no origin source
+      identified yet (see curation/work/pkg_D/status.csv)"'
+  reason: 'sprint 3 bibliographic verification (curator_c): tbd_resolved. candidate origin found by bibliographic search;
+    content unverified. from MEM-RPRIM-001'
+- id: MEM-RPT
+  action: modify
+  fields:
+    first_source:
+      citation: Monsell S. Recency, immediate recognition memory, and reaction time. Cognitive Psychology. 1978;10(4):465-501.
+      doi: 10.1016/0010-0285(78)90008-7
+      year: 1978
+      verified: false
+    notes: 'migrated from schema-0.1 file MEM-RPT-001. first_source TBD resolved by bibliographic search (OpenAlex, 2026-10-05;
+      curator_c): candidate origin found by bibliographic search; content unverified. Previous entry: "TBD: no origin source
+      identified yet (see curation/work/pkg_D/status.csv)"'
+  reason: 'sprint 3 bibliographic verification (curator_c): tbd_resolved. candidate origin found by bibliographic search;
+    content unverified. from MEM-RPT-001'
+- id: MEM-SB
+  action: modify
+  fields:
+    first_source:
+      citation: Sternberg S. High-Speed Scanning in Human Memory. Science. 1966;153(3736):652-654.
+      doi: 10.1126/science.153.3736.652
+      pmid: '5939936'
+      year: 1966
+      verified: false
+    notes: migrated from schema-0.1 file MEM-SB-001. bibliography corrected (Crossref, 2026-10-05)
+  reason: 'sprint 3 bibliographic verification (curator_c): corrected. rewritten in house style from the Crossref record'
+- id: MEM-SME
+  action: modify
+  fields:
+    first_source:
+      citation: Paller KA, Kutas M, Mayes AR. Neural correlates of encoding in an incidental learning paradigm. Electroencephalography
+        and Clinical Neurophysiology. 1987;67(4):360-371.
+      doi: 10.1016/0013-4694(87)90124-6
+      year: 1987
+      verified: false
+    notes: migrated from schema-0.1 file MEM-SME-001. bibliography corrected (OpenAlex, 2026-10-05)
+  reason: 'sprint 3 bibliographic verification (curator_c): corrected. title corrected (… incidental learning paradigm); rewritten
+    in house style from the OpenAlex record'
+- id: MEM-SRC
+  action: modify
+  fields:
+    notes: migrated from schema-0.1 file MEM-SRC-001. bibliography confirmed (OpenAlex, 2026-10-05)
+  reason: 'sprint 3 bibliographic verification (curator_c): confirmed. title, first author, year, venue, volume/issue/pages
+    agree with the record; OpenAlex author display name "Michael K. Johnson" is a disambiguation artefact; initials M. K.
+    agree'
+- id: MEM-SRE
+  action: modify
+  fields:
+    first_source:
+      citation: Rogers TB, Kuiper NA, Kirker WS. Self-reference and the encoding of personal information. Journal of Personality
+        and Social Psychology. 1977;35(9):677-688.
+      doi: 10.1037/0022-3514.35.9.677
+      year: 1977
+      verified: false
+    notes: migrated from schema-0.1 file MEM-SRE-001. bibliography corrected (Crossref, 2026-10-05)
+  reason: 'sprint 3 bibliographic verification (curator_c): corrected. rewritten in house style from the Crossref record'
+- id: MEM-SWM
+  action: modify
+  fields:
+    first_source:
+      citation: Milner B. Interhemispheric differences in the localization of psychological processes in man. British Medical
+        Bulletin. 1971;27(3):272-277.
+      doi: 10.1093/oxfordjournals.bmb.a070866
+      pmid: '4937273'
+      year: 1971
+      verified: false
+    notes: 'migrated from schema-0.1 file MEM-SWM-001. D-061 (2026-10-05): MK.CDA is used by no concrete paradigm of this class
+      yet; kept pending the lateralised spatial delayed-response configuration (MEM-SWM-002, package D, sprint 3) or removal.
+      bibliography corrected (Crossref, 2026-10-05)'
+  reason: 'sprint 3 bibliographic verification (curator_c): corrected. rewritten in house style from the Crossref record'
+- id: MEM-TMR
+  action: modify
+  fields:
+    first_source:
+      citation: Rasch B, Büchel C, Gais S, Born J. Odor Cues During Slow-Wave Sleep Prompt Declarative Memory Consolidation.
+        Science. 2007;315(5817):1426-1429.
+      doi: 10.1126/science.1138581
+      pmid: '17347444'
+      year: 2007
+      verified: false
+    notes: 'migrated from schema-0.1 file MEM-TMR-001; sprint 2 (D-057): description, markers, first_source, aliases updated from
+      curation/work/pkg_D/sprint2/class_updates.yaml. D-062 (2026-10-05): class origin = Rasch et al. 2007 (R1327, odour context
+      reactivation), taken from MEM-TMR-002, the earliest bibliographically identifiable configuration; MEM-TMR-001 (Rudoy
+      2009) remains the canonical configuration and keeps its number. bibliography corrected (OpenAlex, 2026-10-05)'
+  reason: 'sprint 3 bibliographic verification (curator_c): corrected. rewritten in house style from the OpenAlex record'
+- id: MEM-TNT
+  action: modify
+  fields:
+    first_source:
+      citation: Anderson MC, Green C. Suppressing unwanted memories by executive control. Nature. 2001;410(6826):366-369.
+      doi: 10.1038/35066572
+      pmid: '11268212'
+      year: 2001
+      verified: false
+    notes: migrated from schema-0.1 file MEM-TNT-001. bibliography corrected (Crossref, 2026-10-05)
+  reason: 'sprint 3 bibliographic verification (curator_c): corrected. rewritten in house style from the Crossref record'

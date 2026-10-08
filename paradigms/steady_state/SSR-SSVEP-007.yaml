@@ -1,0 +1,67 @@
+schema_version: '0.2'
+id: SSR-SSVEP-007
+class: SSR-SSVEP
+name:
+  en: Frequency-coded SSVEP with a no-control (rest) class
+  zh: 含静息（非控制）类的频率编码 SSVEP
+aliases:
+- SSVEP with resting class
+family: steady_state
+bci_category:
+- reactive
+recording_modality:
+- EEG
+stimulus_modality:
+- visual
+markers:
+- MK.SSVEP
+description:
+  en: Three LEDs flicker at 13, 17 and 21 Hz. An auditory instruction tells the user which LED to attend to, or to attend
+    none of them; the resting trials form an explicit no-control class, so the classifier must reject non-intentional periods
+    as well as discriminate the frequencies. The configuration was used online with Riemannian classifiers.
+  zh: 三个 LED 分别以 13、17、21 Hz 闪烁。听觉指令告诉用户注视哪一个 LED，或都不注视；静息试次构成明确的非控制类，分类器既要区分频率，也要拒识非意图时段。该配置用黎曼几何分类器进行了在线测试。
+trial_structure:
+  phases:
+  - name: trial
+    duration_ms: 5000
+  - name: pause
+    duration_ms: 3000
+  typical_trials: 32 per session (8 per class)
+  conditions:
+  - 13 Hz
+  - 17 Hz
+  - 21 Hz
+  - rest
+protocol:
+  n_classes: 4
+  classes:
+  - 13 Hz
+  - 17 Hz
+  - 21 Hz
+  - rest (no control)
+  cue: three flickering LEDs; auditory instruction of the target or rest
+  stimulus_coding: frequency coding
+  paradigm_timing: synchronous
+  feedback: discrete
+  distinguishing: 准则 1（条件集）：在频率类之外加入明确的静息/非控制类；与 -008 不同，试次仍由提示驱动（同步）。
+first_source:
+  citation: Kalunga EK, Chevallier S, Barthélemy Q, Djouani K, Monacelli E, Hamam Y. Online SSVEP-based BCI using Riemannian
+    geometry. Neurocomputing. 2016;191:55-68.
+  doi: 10.1016/j.neucom.2016.01.007
+  year: 2016
+  verified: false
+datasets:
+- name: Kalunga 2016 SSVEP dataset (3 frequencies + rest)
+  url: https://moabb.neurotechx.com/docs/generated/moabb.datasets.Kalunga2016.html
+  identifier: Kalunga2016
+  subjects: 12
+interop:
+  bids_task: ssvep
+notes: 'Lead: MOABB dataset page Kalunga2016 (S2A06 [=R1268]): 4 classes (13, 17, 21 Hz, rest), 5 s trials, 3 s pause, 32
+  trials per session, auditory instructions, synchronous. Whether the rest class makes this a separate configuration or a
+  condition-level parameter is for the meeting (criterion 1 applied literally). New in sprint 2. [curator_e sprint 3, 2026-10-05]
+  bibliography corrected (OpenAlex, 2026-10-05).'
+status: draft
+contributors:
+- curator_a
+- curator_e

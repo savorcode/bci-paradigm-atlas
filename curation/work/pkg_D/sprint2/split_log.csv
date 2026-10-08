@@ -1,0 +1,99 @@
+﻿class_id,new_id,criterion,distinguishing,source_ref,lead_url,status,note
+MEM-CD,MEM-CD-001,,"标准配置（最早发表）：全视野记忆阵列 + 测试阵列，二择一报告“有/无变化”，集合大小为参数（Luck & Vogel 1997, R0151）。与 -002（连续报告，准则 1）、-003（偏侧化箭头前线索，准则 2）区别。",,,已建文件,标准配置；本次加 protocol，并收窄描述/条件
+MEM-CFMT,MEM-CFMT-001,,"标准配置（最早发表）：标准化测验（学习 + 三择一识别，含新视角与加噪阶段；Duchaine & Nakayama 2006, R0354）。本类目前只有这一配置。",,,已建文件,标准配置；本次加 protocol
+MEM-CIT,MEM-CIT-001,,"标准配置（最早发表）：三刺激（探测/无关/靶）单刺激试次序列（Farwell & Donchin 1991, R1160）。与 -002（复合试次协议 CTP，准则 3）区别。",,,已建文件,标准配置；本次加 protocol，并收窄描述/条件
+MEM-DF,MEM-DF-001,,"标准配置（最早发表）：逐项给出记住/遗忘指示（item method；类源头 Bjork 1970, R0021，该文的指示方式待核对）。与 -002（list method，整列表后给指示，准则 3）区别。",,,已建文件,标准配置；本次加 protocol，并收窄描述/条件
+MEM-DMS,MEM-DMS-001,,"标准配置（最早发表）：样本—延迟—探测，判断探测是否与样本相同（类源头 Fuster & Alexander 1971, R0025，动物研究，D-031 第 2 款）。延迟非匹配（DNMS）配置无人类线索，暂记为提议。",,,已建文件,标准配置；本次加 protocol，并收窄描述/条件
+MEM-DRM,MEM-DRM-001,,"标准配置（最早发表）：联想词表学习 + 回忆/再认测试（Deese 1959, R0006；Roediger & McDermott 1995, R0122）。本类只有这一配置。",,,已建文件,标准配置；本次加 protocol
+MEM-DS,MEM-DS-001,,"标准配置（最早发表）：顺背数字广度（Jacobs 1887, R1158）。与 -002（倒背，准则 1）区别。",,,已建文件,标准配置；本次加 protocol，并收窄描述/条件
+MEM-EFT,MEM-EFT-001,,"标准配置（最早发表）：线索词引发回忆过去/想象未来事件，分构建与细化两阶段（Addis et al. 2007, R0376）。本类只有这一配置。",,,已建文件,标准配置；本次加 protocol
+MEM-FR,MEM-FR-001,,"标准配置（最早发表）：单次学习—自由回忆的词表（Murdock 1962, R1155）。与 -002（RAVLT：重复学习—回忆循环 + 干扰表 + 延迟回忆与再认，准则 1;3）区别。",,,已建文件,标准配置；本次加 protocol，并收窄描述/条件
+MEM-META,MEM-META-001,,"标准配置（最早发表）：回忆—判断—再认（RJR）知晓感程序（Hart 1965, R0013）。与 -002（学习判断 JOL：学习后预测回忆，准则 1;3）区别。",,,已建文件,标准配置；本次加 protocol，并收窄描述/条件
+MEM-MST,MEM-MST-001,,"标准配置（最早发表）：显式“旧/相似/新”三择判断（类源头 Kirwan & Stark 2007, R0373；标准化 MST 见 Stark et al. 2013, R0565，连续再认与学习—测试两阶段呈现作为参数范围，待核对）。与 -002（偶然编码、无记忆判断的重复抑制设计，准则 1）区别。",,,已建文件,标准配置；本次加 protocol
+MEM-NAV,MEM-NAV-001,,"标准配置（最早发表）：虚拟城镇中的寻路/路线导航（Maguire et al. 1998, R0164；Hartley et al. 2003, R0265）。与 -002（虚拟放射臂迷宫，准则 1;2）、-003（虚拟 Morris 水迷宫，准则 1;2）区别。",,,已建文件,标准配置；本次加 protocol，并收窄描述/条件
+MEM-NBK,MEM-NBK-001,,"标准配置（最早发表）：单一刺激流、固定 n 的 n-back（Kirchner 1958, R1154）。与 -002（含 0-back 控制的多负荷组块设计，准则 1;3）、-003（双通道 n-back，准则 1;2）、-004（自适应双 n-back 训练，准则 4）区别。",,,已建文件,标准配置；本次加 protocol，并收窄描述/条件
+MEM-ON,MEM-ON-001,,"标准配置（最早发表）：学习—测试，二择“旧/新”判断（类源头 Mandler 1980, R0051）。与 -002（记得/知道判断，准则 1，D-024）区别。",,,已建文件,标准配置；本次加 protocol，并收窄描述/条件
+MEM-PA,MEM-PA-001,,标准配置（最早发表）：词—词配对学习与线索回忆（源头 TBD）。与 -002（物体—位置视空间配对联想，准则 2）区别。,,,已建文件,标准配置；本次加 protocol，并收窄描述/条件
+MEM-PM,MEM-PM-001,,"标准配置（最早发表）：事件型前瞻记忆（Einstein & McDaniel 1990, R0092）。与 -002（时间型，以时间而非事件为线索，准则 2）区别。",,,已建文件,标准配置；本次加 protocol，并收窄描述/条件
+MEM-RC,MEM-RC-001,,"标准配置（最早发表）：保持期空间回溯线索 vs 中性线索（Griffin & Nobre 2003, R1156）。本类目前只有这一配置。",,,已建文件,标准配置；本次加 protocol
+MEM-RIF,MEM-RIF-001,,"标准配置（最早发表）：学习—提取练习—最终测试三阶段（Anderson, Bjork & Bjork 1994, R1159）。本类只有这一配置。",,,已建文件,标准配置；本次加 protocol
+MEM-RMEM,MEM-RMEM-001,,标准配置（最早发表）：每个学习项目前给出高/低奖赏提示，之后测试记忆（源头 TBD）。本类只有这一配置。,,,已建文件,标准配置；本次加 protocol
+MEM-RPRIM,MEM-RPRIM-001,,标准配置（最早发表）：偶然任务中的首次 vs 重复呈现（源头 TBD）。本类只有这一配置。,,,已建文件,标准配置；本次加 protocol
+MEM-RPT,MEM-RPT-001,,标准配置（最早发表）：Sternberg 式项目再认中加入近期负探测（源头 TBD，Monsell 1978 待核）。本类只有这一配置。,,,已建文件,标准配置；本次加 protocol
+MEM-SB,MEM-SB-001,,"标准配置（最早发表）：Sternberg 项目再认（Sternberg 1966, R0014），集合大小为参数。本类只有这一配置。",,,已建文件,标准配置；本次加 protocol
+MEM-SME,MEM-SME-001,,"标准配置（最早发表）：编码期活动按后续测试结果分类（Paller, Kutas & Mayes 1987, R1157）。本类只有这一配置。",,,已建文件,标准配置；本次加 protocol
+MEM-SRC,MEM-SRC-001,,"标准配置（最早发表）：两种学习情境 + 再认与来源判断（类源头 Johnson et al. 1993, R0107，为综述，weak_origin）。本类只有这一配置。",,,已建文件,标准配置；本次加 protocol
+MEM-SRE,MEM-SRE-001,,"标准配置（最早发表）：自我/他人/结构判断编码 + 意外记忆测试（Rogers et al. 1977, R0042）。本类只有这一配置。",,,已建文件,标准配置；本次加 protocol
+MEM-SWM,MEM-SWM-001,,"标准配置（最早发表）：Corsi 方块敲击（Milner 1971, R0023；Corsi 1972, R0028），序列长度为参数。自定序空间搜索与偏侧化空间延迟反应配置暂记为提议。",,,已建文件,标准配置；本次加 protocol，并收窄描述/条件
+MEM-TMR,MEM-TMR-001,,"标准配置（最早发表）：学习时项目特异的声音线索，在慢波睡眠中重放一部分（Rudoy et al. 2009, R0443）。与 -002（整段学习情境的气味线索，准则 1;2）区别；-001 保留为公认的项目特异 TMR 配置，尽管 -002 的源头（2007）更早。",,,已建文件,标准配置；本次加 protocol，并收窄描述/条件
+MEM-TNT,MEM-TNT-001,,"标准配置（最早发表）：学习线索—目标对，想/不想阶段，最终测试（Anderson & Green 2001, R0213）。本类只有这一配置。",,,已建文件,标准配置；本次加 protocol
+LAN-AGL,LAN-AGL-001,,"标准配置（最早发表）：字母串，学习后做合语法性分类（Reber 1967, R0017）。音调串版本暂记为提议。",,,已建文件,标准配置；本次加 protocol，并收窄描述/条件
+LAN-CPS,LAN-CPS-001,,"标准配置（最早发表）：听自然语音句子中的语调短语边界（Steinhauer et al. 1999, R1164）。与 -002（阅读，以逗号标记边界，准则 2）区别。",,,已建文件,标准配置；本次加 protocol，并收窄描述/条件
+LAN-GEST,LAN-GEST-001,,标准配置（最早发表）：言语—手势一致 vs 不一致视频（源头 TBD）。本类目前只有这一配置；手势—言语时间偏移为参数。,,,已建文件,标准配置；本次加 protocol
+LAN-HIER,LAN-HIER-001,,"标准配置（最早发表）：等时音节序列，频率标记音节/短语/句子速率（Ding et al. 2016, R1161）。本类只有这一配置。",,,已建文件,标准配置；本次加 protocol
+LAN-LDT,LAN-LDT-001,,"标准配置（最早发表）：视觉词汇判断（类源头 Meyer & Schvaneveldt 1971, R0022）。听觉词汇判断暂记为提议（无线索）。",,,已建文件,标准配置；本次加 protocol，并收窄描述/条件
+LAN-LOC,LAN-LOC-001,,"标准配置（最早发表）：阅读句子 vs 非词序列的组块设计（Fedorenko et al. 2010, R1162）。与 -002（听完整 vs 声学退化语音，准则 2）区别。",,,已建文件,标准配置；本次加 protocol，并收窄描述/条件
+LAN-MUS,LAN-MUS-001,,标准配置（最早发表）：和弦序列中的和声规则/违例目标和弦（R1030，仅标题与 PMID）。本类目前只有这一配置。,,,已建文件,标准配置；本次加 protocol
+LAN-N400,LAN-N400-001,,"标准配置（最早发表）：句末语义违例 vs 一致（Kutas & Hillyard 1980, R0924）。与 -002（按完形概率分级的期待性，准则 1）区别。",,,已建文件,标准配置；本次加 protocol，并收窄描述/条件
+LAN-NAT,LAN-NAT-001,,标准配置（最早发表）：连续自然语音聆听，TRF/刺激重建分析（R1026、R1005）。本类只有这一配置；多说话人选择性注意属 PER-AAD（包 A）。,,,已建文件,标准配置；本次加 protocol
+LAN-NWL,LAN-NWL-001,,标准配置（最早发表）：语境中学习新词，再测其 N400 效应（源头 TBD）。本类目前只有这一配置。,,,已建文件,标准配置；本次加 protocol
+LAN-OVS,LAN-OVS-001,,标准配置（最早发表）：开环出声说出提示的辅音—元音音节，ECoG 记录腹侧感觉运动皮层（R0941）。与 -002（瘫痪者尝试说固定小词表、实时离散解码，准则 1;4）、-003（大词表句子、实时连续解码，准则 1;4）区别。,,,已建文件,标准配置；本次加 protocol，并收窄描述/条件
+LAN-P600,LAN-P600-001,,标准配置（最早发表）：句法违例（一致性或短语结构错误）vs 合法句（R1071，SPS）。与 -002（花园路径暂时歧义句，准则 1）区别。,,,已建文件,标准配置；本次加 protocol，并收窄描述/条件
+LAN-PCAT,LAN-PCAT-001,,标准配置（最早发表）：音位连续体上的音节辨认（R1169）。本类只有这一配置。,,,已建文件,标准配置；本次加 protocol
+LAN-PHA,LAN-PHA-001,,"标准配置（最早发表）：押韵判断（Shaywitz et al. 1998, R0162，最早神经影像线索，非任务源头）。音位删除等其他语音意识任务暂记为提议。",,,已建文件,标准配置；本次加 protocol，并收窄描述/条件
+LAN-PN,LAN-PN-001,,标准配置（最早发表）：出声图片命名（源头候选 R0914）。与 -002（图词干扰：叠加干扰词，准则 2）区别。,,,已建文件,标准配置；本次加 protocol，并收窄描述/条件
+LAN-PRIME,LAN-PRIME-001,,"标准配置（最早发表）：可见启动词 + 目标词（词汇判断或阅读；Meyer & Schvaneveldt 1971, R0022）。与 -002（掩蔽启动，准则 2）区别。",,,已建文件,标准配置；本次加 protocol
+LAN-READ,LAN-READ-001,,"标准配置（最早发表）：自由阅读 + EEG/眼动同步，注视锁时（Dimigen et al. 2011, R1163）。本类只有这一配置。",,,已建文件,标准配置；本次加 protocol
+LAN-SC,LAN-SC-001,,"标准配置（最早发表）：结构复杂/暂时歧义句 vs 简单句的理解（类源头 Frazier & Rayner 1982, R0055）。与 -002（手语句子理解，准则 2，D-044）区别。",,,已建文件,标准配置；本次加 protocol
+LAN-SEMD,LAN-SEMD-001,,标准配置（最早发表）：语义判断 vs 音调判断组块对比（R1168）。本类只有这一配置。,,,已建文件,标准配置；本次加 protocol
+LAN-SIS,LAN-SIS-001,,"标准配置（最早发表）：说话 vs 听回放（Curio et al. 2000, R1167）。与 -002（实时改变听觉反馈，准则 1;4）区别；D-042 若并入 ERR-AAF-001，其音高扰动响应在本类下取 -003。",,,已建文件,标准配置；本次加 protocol，并收窄描述/条件
+LAN-SL,LAN-SL-001,,"标准配置（最早发表）：听觉音节流（Saffran et al. 1996, R1166，婴儿行为学源头）。视觉形状流版本暂记为提议。",,,已建文件,标准配置；本次加 protocol，并收窄描述/条件
+LAN-SWITCH,LAN-SWITCH-001,,标准配置（最早发表）：线索指定语言的图片/数字命名（产出），重复 vs 切换（源头 TBD；R1211）。与 -002（接受性语言切换，准则 1;2）区别。,,,已建文件,标准配置；本次加 protocol，并收窄描述/条件
+LAN-VF,LAN-VF-001,,"标准配置（最早发表）：神经心理测验（限时口头生成，每个线索一个固定时段；Benton et al. 1983, R0061）。与 -002（BCI 心理任务：短的提示试次中默想生词 vs 休息，准则 1;3）、-003（fNIRS 组块设计，生成与控制交替，准则 1）区别。",,,已建文件,标准配置；本次加 protocol，并收窄描述/条件
+LAN-VG,LAN-VG-001,,"标准配置（最早发表）：给名词生成相关动词 vs 复述/朗读（Petersen et al. 1988, R0082）。本类只有这一配置（出声/默想为参数，临床组块设计待复核）。",,,已建文件,标准配置；本次加 protocol
+LAN-VWFA,LAN-VWFA-001,,标准配置（最早发表）：字词 vs 控制刺激（R1165）。本类只有这一配置（事件相关 vs 组块为参数，待复核）。,,,已建文件,标准配置；本次加 protocol
+MEM-CD,MEM-CD-002,1,准则 1：报告空间由“有/无变化”二择（MEM-CD-001）变为对被探测项目特征的连续复现；刺激与时序同 -001。,R1209,,已建文件,原 MEM-CD-001 变体；D-044（MEM-DE-001 作废，不复活）；被拆出的变体：Delayed estimation (continuous report of a remembered feature)
+MEM-CD,MEM-CD-003,2,准则 2：在全视野阵列（MEM-CD-001）之外加入指向一侧视野的箭头前线索与双侧阵列，使对侧–同侧差（CDA）可测。,R0282,,已建文件,新配置（原 -001 描述中“偏侧化版本”拆出）
+MEM-CIT,MEM-CIT-002,3;1,准则 3（及 1）：试次结构由每试次一个刺激（MEM-CIT-001 三刺激协议）变为每试次两个刺激（先探测/无关、后靶/非靶），类别集相应改变。,DN47,https://scholars.hkbu.edu.hk/en/publications/the-complex-trial-protocol-ctp-a-new-countermeasure-resistant-acc/,已建文件,新配置（文献命名协议）
+MEM-DF,MEM-DF-002,3,准则 3：遗忘指示由逐项给出（MEM-DF-001 item method）变为整列表后给出一次，比较单位由项目变为列表。,R0579,,已建文件,原 -001 别名/描述中的 list method 拆出
+MEM-DS,MEM-DS-002,1,准则 1：任务规则由按原顺序复述（MEM-DS-001）变为倒序复述。,R1197,,已建文件,新配置；D-043（MEM-DS 的 D-023 复核）仍待例会
+MEM-FR,MEM-FR-002,1;3,准则 1;3：同一列表的重复学习—回忆循环 + 干扰列表 + 延迟回忆与再认，取代 MEM-FR-001 的单次学习—回忆。,R0550,https://www.hedtags.org/hed-task/tasks/hedtsk_rey_auditory_verbal_learning.html,已建文件,原 MEM-FR-001 变体；被拆出的变体：Rey Auditory Verbal Learning Test (RAVLT)
+MEM-META,MEM-META-002,1;3,准则 1;3：判断对象与时序改变——学习后预测之后能否回忆（学习—判断—回忆），而不是回忆失败后预测能否再认（MEM-META-001 回忆—判断—再认）。,R0098,https://www.hedtags.org/hed-task/tasks/hedtsk_judgment_of_learning.html,已建文件,原 MEM-META-001 变体；被拆出的变体：Judgment of learning (JOL)
+MEM-MST,MEM-MST-002,1,准则 1：条件集由显式“旧/相似/新”判断（MEM-MST-001）变为不要求记忆判断的首次/重复/诱饵对比，读出为 BOLD 重复抑制。,R0416,,已建文件,新配置
+MEM-NAV,MEM-NAV-002,1;2;4,准则 1;2：环境与任务由城镇寻路（MEM-NAV-001）变为多臂迷宫中的赢—移（win-shift）觅食，类别为已访问/未访问、有/无奖励的臂；每次进入给出是否获得奖励的离散反馈（准则 4）。,R0289,https://www.hedtags.org/hed-task/tasks/hedtsk_virtual_radial_arm_maze.html,已建文件,原 MEM-NAV-001 变体；被拆出的变体：Virtual radial arm maze
+MEM-NAV,MEM-NAV-003,1;2;4,准则 1;2：单一隐藏目标的开放场寻找（MEM-NAV-001 为城镇路线），含探测试次与可见平台控制；到达平台为离散反馈（准则 4）。,R0289,https://www.hedtags.org/hed-task/tasks/hedtsk_virtual_morris_water_maze.html,已建文件,新配置（原 -001 描述中的虚拟水迷宫拆出）
+MEM-NBK,MEM-NBK-002,1;3,准则 1;3：条件集由单一固定 n（MEM-NBK-001）变为含 0-back 控制的多个负荷水平，并采用负荷组块（与休息）交替的组块设计；具体负荷水平组合（如 0/1/2/3 或 0/2/3）为参数。,R0319,https://doc.ml.tu-berlin.de/publications/bib/shin_simultaneous_2018.bib.txt,已建文件,新配置（P1 核心类）
+MEM-NBK,MEM-NBK-003,1;2,准则 1;2：刺激由单一流（MEM-NBK-001）变为同时呈现的视觉空间流与听觉字母流，靶类别由一类变为视觉/听觉/双重/无四类。,DN48,https://en.wikipedia.org/wiki/N-back,已建文件,新配置（P1 核心类）
+MEM-NBK,MEM-NBK-004,4;3,准则 4（及 3）：在双通道 n-back（MEM-NBK-003）基础上按组块成绩自适应调整 n 并给出成绩反馈，构成闭环训练；以多次训练组块取代单次测试。,DN49,https://en.wikipedia.org/wiki/N-back,已建文件,新配置（P1 核心类）
+MEM-ON,MEM-ON-002,1,准则 1：报告类别由“旧/新”二类（MEM-ON-001）变为“记得/知道/新”三类。,R0069,,已建文件,原 MEM-ON-001 变体；D-024（MEM-RK-001 作废，不复活）；被拆出的变体：Remember/know judgements
+MEM-PA,MEM-PA-002,2,准则 2：联想对由词—词（MEM-PA-001）变为图案/物体—位置，测试为位置指认。,R0504,,已建文件,新配置（原 -001 描述中的 object-location 拆出）
+MEM-PM,MEM-PM-002,2,准则 2：前瞻记忆线索由外部事件（MEM-PM-001）变为时间（自我监控时钟），条件集相应增加“查看时钟”。,DN51,https://profiles.wustl.edu/en/publications/neural-mechanisms-of-time-based-prospective-memory-evidence-for-t/,已建文件,新配置
+MEM-TMR,MEM-TMR-002,1;2,准则 1;2：线索由项目特异的声音（MEM-TMR-001）变为整段学习情境的单一气味，比较单位由被提示/未被提示项目变为有/无气味的睡眠条件。,DN52,https://fis.uke.de/portal/en/publications/odor-cues-during-slowwave-sleep-prompt-declarative-memory-consolidation(5a687f69-dcc4-43a2-8fee-d59944c52b51).html,已建文件,新配置；源头早于 -001（2007 < 2009），-001 序号不变
+LAN-CPS,LAN-CPS-002,2,准则 2：刺激由自然语音中的语调边界（LAN-CPS-001）变为书面句子中的逗号。,R1213,,已建文件,新配置（原 -001 描述中的阅读版本拆出）
+LAN-LOC,LAN-LOC-002,2,准则 2：刺激由书面句子/非词（LAN-LOC-001）变为口语段落与声学退化版本。,DN53,https://web.mit.edu/evlab/funcloc/,已建文件,新配置
+LAN-N400,LAN-N400-002,1,准则 1：条件集由一致/语义违例二分（LAN-N400-001）变为同属可接受结尾、按完形概率分级的多个水平。,R0863,,已建文件,新配置
+LAN-OVS,LAN-OVS-002,1;4,准则 1;4：类别集由音节（LAN-OVS-001）变为固定小词表中的词；实时解码并显示结果（离散闭环反馈）。,R1013,,已建文件,新配置（P1 核心类）
+LAN-OVS,LAN-OVS-003,1;4,准则 1;4：类别集由固定小词表（LAN-OVS-002）变为开放大词表的音素序列；输出在尝试说句的过程中连续更新（连续闭环反馈）。,R0839;R0838,,已建文件,新配置（P1 核心类）
+LAN-P600,LAN-P600-002,1,准则 1：条件集由不合语法的违例句（LAN-P600-001）变为合语法但暂时歧义、需重新分析的句子与无歧义对照。,R0864,,已建文件,原 LAN-P600-001 变体；被拆出的变体：Garden-path sentences
+LAN-PN,LAN-PN-002,2;1,准则 2（及 1）：刺激由单纯图片（LAN-PN-001）变为图片 + 干扰词，条件集按干扰词与目标名称的关系划分。,R1000,,已建文件,原 LAN-PN-001 变体；被拆出的变体：Picture-word interference
+LAN-PRIME,LAN-PRIME-002,2,准则 2：启动刺激由可见（LAN-PRIME-001）变为被图形掩蔽、几乎不可见的短暂呈现。,R0926,,已建文件,新配置
+LAN-SC,LAN-SC-002,2,准则 2：输入由书面/口语句子（LAN-SC-001）变为视觉—手势模态的手语句子。,R1223,,已建文件,原 LAN-SC-001 变体；D-044（LAN-SIGN-001 作废，不复活）；被拆出的变体：Sign language sentence comprehension
+LAN-SIS,LAN-SIS-002,1;4,准则 1;4：在说/听对比（LAN-SIS-001）中加入实时改变的听觉反馈条件，反馈路径被实时操纵（连续闭环）。,R1220,,已建文件,新配置（原 -001 描述中的扰动版本拆出）；D-042 待例会
+LAN-SWITCH,LAN-SWITCH-002,1;2,准则 1;2：任务由线索指定语言的命名产出（LAN-SWITCH-001）变为对两种语言词的理解判断，无语言提示线索。,R1212,,已建文件,新配置
+LAN-VF,LAN-VF-002,1;3,准则 1;3：由每线索一个计分时段的测验（LAN-VF-001）变为默想生词与休息两类的短提示试次，用作 BCI 分类；Shin 等数据集为开环（无反馈）。,DN50,https://doc.ml.tu-berlin.de/publications/bib/shin_simultaneous_2018.bib.txt,已建文件,"原 LAN-VF-001 变体；D-036（IMG-WORD-001 作废，不复活）；被拆出的变体：fNIRS / EEG-fNIRS mental-task BCI: covert word generation (letter, category or associate cue)"
+LAN-VF,LAN-VF-003,1,准则 1：在流畅性生成（LAN-VF-001）前后加入控制期并以“任务 − 控制”对比为读出，条件集由单一生成条件变为生成与控制两类。,R1035;R0979,,已建文件,新配置
+LAN-OVS,LAN-OVS-003,,合成语音/虚拟形象输出：输出通道不同，任务配置相同,R0838,,保留为变体,输出通道不是给号准则
+MEM-NAV,MEM-NAV-002,,4-on-8 虚拟放射臂迷宫（策略评估版本）,R0366,,保留为变体,写在 MEM-NAV-002 notes；待核对是否改变试次结构
+MEM-DMS,（未给号）,1,延迟非匹配（DNMS）：选择不匹配项,,,提议,无人类研究线索
+MEM-ON,（未给号）,1,带信心评分的再认（ROC）,R0361,,提议,仅理论文章线索
+MEM-PA,（未给号）,2,面孔—姓名配对联想,,,提议,无线索
+MEM-PA,（未给号）,1,联想再认（完整/重组/新对）,R0187,,提议,线索为行为学研究，未核对配置
+MEM-SWM,（未给号）,1;2,自定序空间搜索（CANTAB SWM 类）,R0136,,提议,线索标题提示相关，配置未核对
+MEM-SWM,（未给号）,2,偏侧化空间延迟反应（CDA 版）,,,提议,无线索；类标记物 MK.CDA 依赖此配置
+LAN-AGL,（未给号）,2,音调串人工语法,,,提议,无线索
+LAN-LDT,（未给号）,2,听觉词汇判断,,,提议,无线索
+LAN-N400,（未给号）,2,听觉句子语义违例,,,提议,无线索
+LAN-PHA,（未给号）,1,音位删除等其他显式语音任务,,,提议,无线索
+LAN-PRIME,（未给号）,1,间接（中介）语义启动,R0847,,提议,仅一项研究线索
+LAN-SL,（未给号）,2,视觉形状流统计学习,,,提议,无线索
+LAN-SIS,（未给号，拟 LAN-SIS-003）,2,音高扰动响应（短暂不可预测的音高偏移，反应锁时）,ERR-AAF-001,,待例会,D-042：若 ERR-AAF-001 并入 LAN-SIS，则在本类下给号

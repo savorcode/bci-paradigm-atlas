@@ -1,0 +1,57 @@
+schema_version: '0.2'
+id: STM-PHTMS-001
+class: STM-PHTMS
+name:
+  en: EEG phase-triggered TMS
+  zh: 脑电相位触发 TMS
+aliases:
+- brain-state-dependent TMS
+- real-time EEG-triggered TMS
+- mu-phase-triggered TMS
+- closed-loop TMS
+family: stimulation
+bci_category:
+- passive
+recording_modality:
+- EEG
+stimulus_modality:
+- magnetic_stimulation
+markers:
+- MK.SMR_ERD
+description:
+  en: >-
+    Ongoing EEG is analysed in real time and TMS pulses are triggered at a predefined phase of a target oscillation, typically
+    the sensorimotor mu rhythm (e.g. negative peak vs positive peak), compared with random-phase stimulation. Excitability
+    and plasticity effects depend on the phase of the mu rhythm at which pulses are delivered.
+  zh: 实时分析进行中的脑电，在目标节律（通常为感觉运动 mu 节律）的预设相位（如负峰与正峰）触发 TMS 脉冲，并与随机相位刺激比较。兴奋性与可塑性效应取决于脉冲施加时 mu 节律的相位。
+protocol:
+  n_classes: 3
+  classes:
+  - negative-peak triggered
+  - positive-peak triggered
+  - random phase
+  cue: none
+  stimulus_coding: real-time EEG phase-locked triggering of TMS pulses (mu rhythm)
+  paradigm_timing: asynchronous
+  feedback: discrete
+  distinguishing: >-
+    Standard configuration (earliest published) / 标准配置（最早发表）: each TMS pulse triggered by the real-time mu-rhythm phase (brain-state-dependent,
+    pulse-wise closed loop), compared with random-phase stimulation (Zrenner et al. 2018). No sibling protocol yet.
+first_source:
+  citation: >-
+    Zrenner C, Desideri D, Belardinelli P, Ziemann U. Real-time EEG-defined excitability states determine efficacy of TMS-induced
+    plasticity in human motor cortex. Brain Stimulation 11(2):374-389. 2018.
+  doi: 10.1016/j.brs.2017.11.016
+  year: 2018
+  verified: false
+interop:
+  bids_task: phasetms
+notes: >-
+  Search sources (curation/work/pkg_B/search_log.md): N18 https://ub01.uni-tuebingen.de/xmlui/handle/10900/95028. New candidate
+  (pkg B). The outcome measure in the lead is the motor evoked potential (EMG); the brain marker is the mu-rhythm state used
+  for triggering (MK.SMR_ERD). Maintainer may prefer a dedicated phase marker. D-031 (maintainer, 2026-10-03): first_source
+  is a behavioural or EMG/MEP-only origin, which is acceptable; add the earliest brain-recording study as a "First neural
+  recording: <citation> (R####)" line in sprint 2. bibliography confirmed (OpenAlex, 2026-10-05)
+status: draft
+contributors:
+- curator_b

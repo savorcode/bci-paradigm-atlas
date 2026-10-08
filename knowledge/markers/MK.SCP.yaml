@@ -1,0 +1,27 @@
+schema_version: "0.2"
+id: MK.SCP
+name:
+  en: Slow cortical potential
+  zh: 慢皮层电位
+aliases:
+- SCP
+- DC potential shift
+type: erp_component
+recording_modality:
+- EEG
+signature:
+  latency_ms: shifts lasting ~0.5 s to several seconds
+  frequency_hz: < 1
+  polarity: negative (increased cortical excitability) or positive
+  topography: vertex (Cz) maximum
+description:
+  en: Slow shifts of the cortical DC potential lasting from hundreds of milliseconds to seconds; negative shifts reflect increased
+    and positive shifts decreased cortical excitability. People can learn to regulate them with feedback, which was used in
+    early BCIs.
+  zh: 持续数百毫秒至数秒的皮层直流电位缓慢偏移；负向偏移反映皮层兴奋性升高，正向偏移反映降低。人可借助反馈学会调节它，早期脑机接口即基于此。
+notes: Signature values are textbook-level characteristics entered in the first pass and await source checking. Related negative
+  slow waves (MK.CNV, MK.MRCP) are separate registry entries.
+status: draft
+contributors:
+- maintainer
+- curator_e

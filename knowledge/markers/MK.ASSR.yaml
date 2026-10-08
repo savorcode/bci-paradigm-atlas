@@ -1,0 +1,27 @@
+schema_version: "0.2"
+id: MK.ASSR
+name:
+  en: Auditory steady-state response
+  zh: 听觉稳态响应
+aliases:
+- ASSR
+- 40-Hz ASSR
+- auditory steady-state evoked potential
+- envelope following response (cortical)
+type: steady_state
+recording_modality:
+- EEG
+- MEG
+signature:
+  frequency_hz: stimulation/modulation rate, commonly ~40 or 80-100
+  topography: fronto-central (scalp EEG)
+description:
+  en: Periodic response of the auditory system phase-locked to the repetition or amplitude-modulation rate of a sound, measured
+    at that frequency in the EEG/MEG spectrum. Responses near 40 Hz are largest in the waking state and reflect largely cortical
+    sources; responses at 80-100 Hz reflect mainly brainstem sources.
+  zh: 听觉系统对声音重复率或调幅频率产生的锁相周期性响应，在 EEG/MEG 频谱的对应频率处测量。约 40 Hz 的响应在清醒时最大，主要来自皮层；80–100 Hz 的响应主要来自脑干。
+notes: First-pass skeleton by package A (2026-10-03). No generators/indexes yet. Signature values are textbook-level approximations
+  and await source checking.
+status: draft
+contributors:
+- curator_a

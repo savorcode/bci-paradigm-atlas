@@ -1,0 +1,554 @@
+# 包 E sprint 3 范式类修改（书目核实，D-072）。维护者合入 paradigms/_classes.yaml；审核人不直接改登记表。
+# Class edits for package E from the sprint 3 bibliographic check; the maintainer applies them to paradigms/_classes.yaml.
+# action: modify；fields 只写要改的字段。notes 为追加了核实句的完整文本；first_source 只在 corrected / tbd_resolved 时给出。
+# 所有 verified 仍为 false（本冲刺只做书目核实）。checker: curator_d, 2026-10-05.
+updates:
+- id: EMO-APRIME
+  action: modify
+  fields:
+    first_source:
+      citation: Fazio RH, Sanbonmatsu DM, Powell MC, Kardes FR. On the automatic activation of attitudes. Journal of Personality
+        and Social Psychology. 1986;50(2):229-238.
+      doi: 10.1037/0022-3514.50.2.229
+      year: 1986
+      verified: false
+    notes: 'migrated from schema-0.1 file EMO-APRIME-001. Sprint 3 (curator_d, 2026-10-05): bibliography corrected (Crossref, 2026-10-05):
+      volume, issue, pages added. Class source is that of EMO-APRIME-001.'
+  reason: 'Sprint 3 bibliographic check: same correction as EMO-APRIME-001 (volume, issue, pages added).'
+- id: EMO-AUTO
+  action: modify
+  fields:
+    notes: 'migrated from schema-0.1 file EMO-AUTO-001. Sprint 3 (curator_d, 2026-10-05): bibliography confirmed (OpenAlex, 2026-10-05).
+      Class source is that of EMO-AUTO-001.'
+  reason: 'Sprint 3 bibliographic check: class first_source identical to EMO-AUTO-001, record confirmed (OpenAlex).'
+- id: EMO-DOT
+  action: modify
+  fields:
+    notes: 'migrated from schema-0.1 file EMO-DOT-001. Sprint 3 (curator_d, 2026-10-05): bibliography confirmed (Crossref, 2026-10-05).
+      Class source is that of EMO-DOT-001.'
+  reason: 'Sprint 3 bibliographic check: class first_source identical to EMO-DOT-001, record confirmed (Crossref).'
+- id: EMO-EST
+  action: modify
+  fields:
+    first_source:
+      citation: 'Gotlib IH, McCann CD. Construct accessibility and depression: an examination of cognitive and affective factors.
+        Journal of Personality and Social Psychology. 1984;47(2):427-439.'
+      doi: 10.1037/0022-3514.47.2.427
+      year: 1984
+      verified: false
+    notes: 'migrated from schema-0.1 file EMO-EST-001. Sprint 3 (curator_d, 2026-10-05): first_source written from bibliographic
+      search (OpenAlex, 2026-10-05); candidate origin found by bibliographic search; content unverified. Gotlib & McCann 1984
+      (Experiment 1: colour-naming of depressed-, neutral- and manic-content words) is the earliest emotional-Stroop study
+      cited by the Williams, Mathews & MacLeod 1996 review (R0137); Watts et al. 1986 (phobia-related words) is the other
+      early candidate, not fetched. Class source is that of EMO-EST-001.'
+  reason: 'Sprint 3 bibliographic search: TBD resolved with the same candidate origin as EMO-EST-001 (D-062 class source =
+    earliest bibliographically identifiable original study); content unverified.'
+- id: EMO-FACE
+  action: modify
+  fields:
+    first_source:
+      citation: Eimer M, Holmes A. An ERP study on the time course of emotional face processing. NeuroReport. 2002;13(4):427-431.
+      doi: 10.1097/00001756-200203250-00013
+      pmid: '11930154'
+      year: 2002
+      verified: false
+    notes: 'migrated from schema-0.1 file EMO-FACE-001; sprint 2 (D-057): description updated from curation/work/pkg_E/sprint2/class_updates.yaml.
+      Sprint 3 (curator_d, 2026-10-05): bibliography corrected (Crossref, 2026-10-05): doi, authors, year, volume, issue,
+      pages added. Class source is that of EMO-FACE-001.'
+  reason: 'Sprint 3 bibliographic check: same correction as EMO-FACE-001 (doi, authors, year, volume, issue, pages added).'
+- id: EMO-FC
+  action: modify
+  fields:
+    first_source:
+      citation: 'LaBar KS, Gatenby JC, Gore JC, LeDoux JE, Phelps EA. Human amygdala activation during conditioned fear acquisition
+        and extinction: a mixed-trial fMRI study. Neuron. 1998;20(5):937-945.'
+      doi: 10.1016/s0896-6273(00)80475-4
+      pmid: '9620698'
+      year: 1998
+      verified: false
+    notes: 'migrated from schema-0.1 file EMO-FC-001; sprint 2 (D-057): markers updated from curation/work/pkg_E/sprint2/class_updates.yaml.
+      Sprint 3 (curator_d, 2026-10-05): bibliography corrected (OpenAlex, 2026-10-05): doi, authors, year, volume, issue,
+      pages added. Class source is that of EMO-FC-001.'
+  reason: 'Sprint 3 bibliographic check: same correction as EMO-FC-001 (doi, authors, year, volume, issue, pages added).'
+- id: EMO-FILM
+  action: modify
+  fields:
+    first_source:
+      citation: Gross JJ, Levenson RW. Emotion elicitation using films. Cognition & Emotion. 1995;9(1):87-108.
+      doi: 10.1080/02699939508408966
+      year: 1995
+      verified: false
+    notes: 'migrated from schema-0.1 file EMO-FILM-001; sprint 2 (D-057): description, aliases updated from curation/work/pkg_E/sprint2/class_updates.yaml.
+      Sprint 3 (curator_d, 2026-10-05): bibliography corrected (Crossref, 2026-10-05): authors, year, volume, issue, pages
+      added. Class source is that of EMO-FILM-001.'
+  reason: 'Sprint 3 bibliographic check: same correction as EMO-FILM-001 (authors, year, volume, issue, pages added).'
+- id: EMO-HUMOR
+  action: modify
+  fields:
+    first_source:
+      citation: Mobbs D, Greicius MD, Abdel-Azim E, Menon V, Reiss AL. Humor modulates the mesolimbic reward centers. Neuron.
+        2003;40(5):1041-1048.
+      doi: 10.1016/s0896-6273(03)00751-7
+      pmid: '14659102'
+      year: 2003
+      verified: false
+    notes: 'migrated from schema-0.1 file EMO-HUMOR-001. Sprint 3 (curator_d, 2026-10-05): bibliography corrected (OpenAlex, 2026-10-05):
+      doi, volume, issue, pages added. Class source is that of EMO-HUMOR-001.'
+  reason: 'Sprint 3 bibliographic check: same correction as EMO-HUMOR-001 (doi, volume, issue, pages added).'
+- id: EMO-IAPS
+  action: modify
+  fields:
+    first_source:
+      citation: 'Cuthbert BN, Schupp HT, Bradley MM, Birbaumer N, Lang PJ. Brain potentials in affective picture processing:
+        covariation with autonomic arousal and affective report. Biological Psychology. 2000;52(2):95-111.'
+      doi: 10.1016/s0301-0511(99)00044-7
+      pmid: '10699350'
+      year: 2000
+      verified: false
+    notes: 'migrated from schema-0.1 file EMO-IAPS-001. Sprint 3 (curator_d, 2026-10-05): bibliography corrected (OpenAlex, 2026-10-05):
+      doi, authors, year, volume, issue, pages added. Class source is that of EMO-IAPS-001.'
+  reason: 'Sprint 3 bibliographic check: same correction as EMO-IAPS-001 (doi, authors, year, volume, issue, pages added).'
+- id: EMO-MID
+  action: modify
+  fields:
+    first_source:
+      citation: Knutson B, Westdorp A, Kaiser E, Hommer D. FMRI visualization of brain activity during a monetary incentive
+        delay task. NeuroImage. 2000;12(1):20-27.
+      doi: 10.1006/nimg.2000.0593
+      pmid: '10875899'
+      year: 2000
+      verified: false
+    notes: 'migrated from schema-0.1 file EMO-MID-001; sprint 2 (D-057): description updated from curation/work/pkg_E/sprint2/class_updates.yaml.
+      Sprint 3 (curator_d, 2026-10-05): bibliography corrected (OpenAlex, 2026-10-05): author list expanded, volume, issue,
+      pages added. Class source is that of EMO-MID-001.'
+  reason: 'Sprint 3 bibliographic check: same correction as EMO-MID-001 (author list expanded, volume, issue, pages added).'
+- id: EMO-REG
+  action: modify
+  fields:
+    notes: 'migrated from schema-0.1 file EMO-REG-001; sprint 2 (D-057): description, markers updated from curation/work/pkg_E/sprint2/class_updates.yaml.
+      Sprint 3 (curator_d, 2026-10-05): bibliography confirmed (Crossref, 2026-10-05). Class source is that of EMO-REG-001.'
+  reason: 'Sprint 3 bibliographic check: class first_source identical to EMO-REG-001, record confirmed (Crossref).'
+- id: EMO-SOUND
+  action: modify
+  fields:
+    notes: 'migrated from schema-0.1 file EMO-SOUND-001. Sprint 3 (curator_d, 2026-10-05): bibliography confirmed (OpenAlex, 2026-10-05).
+      Class source is that of EMO-SOUND-001.'
+  reason: 'Sprint 3 bibliographic check: class first_source identical to EMO-SOUND-001, record confirmed (OpenAlex).'
+- id: EMO-STRESS
+  action: modify
+  fields:
+    first_source:
+      citation: Kirschbaum C, Pirke KM, Hellhammer DH. The 'Trier Social Stress Test' - a tool for investigating psychobiological
+        stress responses in a laboratory setting. Neuropsychobiology. 1993;28(1-2):76-81.
+      doi: 10.1159/000119004
+      year: 1993
+      verified: false
+    notes: 'migrated from schema-0.1 file EMO-STRESS-001. Sprint 3 (curator_d, 2026-10-05): bibliography corrected (OpenAlex, 2026-10-05):
+      doi added. Class source is that of EMO-STRESS-001.'
+  reason: 'Sprint 3 bibliographic check: same correction as EMO-STRESS-001 (doi added).'
+- id: EMO-THREAT
+  action: modify
+  fields:
+    first_source:
+      citation: Schmitz A, Grillon C. Assessing fear and anxiety in humans using the threat of predictable and unpredictable
+        aversive events (the NPU-threat test). Nature Protocols. 2012;7(3):527-532.
+      doi: 10.1038/nprot.2012.001
+      year: 2012
+      verified: false
+    notes: 'migrated from schema-0.1 file EMO-THREAT-001 | First neural recording: Alvarez RP et al. 2011, Phasic and sustained
+      fear in humans elicits distinct patterns of brain activity, NeuroImage (R1182). Earlier threat-of-shock startle studies
+      not surfaced; the 2012 protocol paper is the earliest description seen, not a confirmed origin.; sprint 2 (D-057): first_source,
+      notes updated from curation/work/pkg_E/sprint2/class_updates.yaml. Sprint 3 (curator_d, 2026-10-05): bibliography corrected
+      (Crossref, 2026-10-05): doi, pages added. Class source is that of EMO-THREAT-001.'
+  reason: 'Sprint 3 bibliographic check: same correction as EMO-THREAT-001 (doi, pages added).'
+- id: EMO-TOUCH
+  action: modify
+  fields:
+    first_source:
+      citation: Olausson H, Lamarre Y, Backlund H, Morin C, Wallin BG, Starck G, Ekholm S, Strigo I, Worsley K, Vallbo ÅB,
+        Bushnell MC. Unmyelinated tactile afferents signal touch and project to insular cortex. Nature Neuroscience. 2002;5(9):900-904.
+      doi: 10.1038/nn896
+      year: 2002
+      verified: false
+    notes: 'migrated from schema-0.1 file EMO-TOUCH-001. Sprint 3 (curator_d, 2026-10-05): bibliography corrected (OpenAlex, 2026-10-05):
+      author list expanded, volume, issue, pages added. Class source is that of EMO-TOUCH-001.'
+  reason: 'Sprint 3 bibliographic check: same correction as EMO-TOUCH-001 (author list expanded, volume, issue, pages added).'
+- id: EMO-WORD
+  action: modify
+  fields:
+    first_source:
+      citation: 'Kissler J, Herbert C, Peyk P, Junghöfer M. Buzzwords: early cortical responses to emotional words during
+        reading. Psychological Science. 2007;18(6):475-480.'
+      doi: 10.1111/j.1467-9280.2007.01924.x
+      year: 2007
+      verified: false
+    notes: 'migrated from schema-0.1 file EMO-WORD-001. Sprint 3 (curator_d, 2026-10-05): bibliography corrected (OpenAlex, 2026-10-05):
+      pages added, author spelling (Junghöfer). Class source is that of EMO-WORD-001.'
+  reason: 'Sprint 3 bibliographic check: same correction as EMO-WORD-001 (pages added, author spelling (Junghöfer)).'
+- id: SOC-ANIM
+  action: modify
+  fields:
+    first_source:
+      citation: 'Castelli F, Happé F, Frith U, Frith C. Movement and mind: a functional imaging study of perception and interpretation
+        of complex intentional movement patterns. NeuroImage. 2000;12(3):314-325.'
+      doi: 10.1006/nimg.2000.0612
+      pmid: '10944414'
+      year: 2000
+      verified: false
+    notes: 'migrated from schema-0.1 file SOC-ANIM-001. Sprint 3 (curator_d, 2026-10-05): bibliography corrected (OpenAlex, 2026-10-05):
+      doi, journal, volume, issue, pages added. Class source is that of SOC-ANIM-001.'
+  reason: 'Sprint 3 bibliographic check: same correction as SOC-ANIM-001 (doi, journal, volume, issue, pages added).'
+- id: SOC-BIO
+  action: modify
+  fields:
+    notes: 'migrated from schema-0.1 file SOC-BIO-001. Sprint 3 (curator_d, 2026-10-05): bibliography confirmed (OpenAlex, 2026-10-05).
+      Class source is that of SOC-BIO-001.'
+  reason: 'Sprint 3 bibliographic check: class first_source identical to SOC-BIO-001, record confirmed (OpenAlex).'
+- id: SOC-CONF
+  action: modify
+  fields:
+    notes: 'migrated from schema-0.1 file SOC-CONF-001. Sprint 3 (curator_d, 2026-10-05): bibliography confirmed (OpenAlex, 2026-10-05).
+      Class source is that of SOC-CONF-001.'
+  reason: 'Sprint 3 bibliographic check: class first_source identical to SOC-CONF-001, record confirmed (OpenAlex).'
+- id: SOC-CYB
+  action: modify
+  fields:
+    first_source:
+      citation: 'Williams KD, Cheung CKT, Choi W. Cyberostracism: effects of being ignored over the Internet. Journal of Personality
+        and Social Psychology. 2000;79(5):748-762.'
+      doi: 10.1037/0022-3514.79.5.748
+      year: 2000
+      verified: false
+    notes: 'migrated from schema-0.1 file SOC-CYB-001 | First neural recording: Eisenberger et al. 2003, Does rejection hurt? An
+      fMRI study of social exclusion (R1171).; sprint 2 (D-057): first_source, notes updated from curation/work/pkg_E/sprint2/class_updates.yaml.
+      Sprint 3 (curator_d, 2026-10-05): bibliography corrected (Crossref, 2026-10-05): doi, issue added. Class source is that
+      of SOC-CYB-001.'
+  reason: 'Sprint 3 bibliographic check: same correction as SOC-CYB-001 (doi, issue added).'
+- id: SOC-DICT
+  action: modify
+  fields:
+    notes: 'migrated from schema-0.1 file SOC-DICT-001. Sprint 3 (curator_d, 2026-10-05): bibliography confirmed (OpenAlex, 2026-10-05).
+      Class source is that of SOC-DICT-001.'
+  reason: 'Sprint 3 bibliographic check: class first_source identical to SOC-DICT-001, record confirmed (OpenAlex).'
+- id: SOC-EYE
+  action: modify
+  fields:
+    notes: 'migrated from schema-0.1 file SOC-EYE-001. Sprint 3 (curator_d, 2026-10-05): bibliography confirmed (OpenAlex, 2026-10-05).
+      Class source is that of SOC-EYE-001.'
+  reason: 'Sprint 3 bibliographic check: class first_source identical to SOC-EYE-001, record confirmed (OpenAlex).'
+- id: SOC-GAZE
+  action: modify
+  fields:
+    first_source:
+      citation: Friesen CK, Kingstone A. The eyes have it! Reflexive orienting is triggered by nonpredictive gaze. Psychonomic
+        Bulletin & Review. 1998;5(3):490-495.
+      doi: 10.3758/BF03208827
+      year: 1998
+      verified: false
+    notes: 'migrated from schema-0.1 file SOC-GAZE-001; sprint 2 (D-057): markers updated from curation/work/pkg_E/sprint2/class_updates.yaml.
+      Sprint 3 (curator_d, 2026-10-05): bibliography corrected (Crossref, 2026-10-05): doi, authors, year, journal, volume,
+      issue, pages added. Class source is that of SOC-GAZE-001.'
+  reason: 'Sprint 3 bibliographic check: same correction as SOC-GAZE-001 (doi, authors, year, journal, volume, issue, pages
+    added).'
+- id: SOC-IAT
+  action: modify
+  fields:
+    notes: 'migrated from schema-0.1 file SOC-IAT-001. Sprint 3 (curator_d, 2026-10-05): bibliography confirmed (OpenAlex, 2026-10-05).
+      Class source is that of SOC-IAT-001.'
+  reason: 'Sprint 3 bibliographic check: class first_source identical to SOC-IAT-001, record confirmed (OpenAlex).'
+- id: SOC-IMIT
+  action: modify
+  fields:
+    notes: 'migrated from schema-0.1 file SOC-IMIT-001. Sprint 3 (curator_d, 2026-10-05): bibliography confirmed (OpenAlex, 2026-10-05).
+      Class source is that of SOC-IMIT-001.'
+  reason: 'Sprint 3 bibliographic check: class first_source identical to SOC-IMIT-001, record confirmed (OpenAlex).'
+- id: SOC-JA
+  action: modify
+  fields:
+    first_source:
+      citation: Tognoli E, Lagarde J, DeGuzman GC, Kelso JAS. The phi complex as a neuromarker of human social coordination.
+        Proceedings of the National Academy of Sciences. 2007;104(19):8190-8195.
+      doi: 10.1073/pnas.0611453104
+      year: 2007
+      verified: false
+    notes: 'migrated from schema-0.1 file SOC-JA-001. Sprint 3 (curator_d, 2026-10-05): bibliography corrected (OpenAlex, 2026-10-05):
+      author order (Tognoli first, Kelso last), doi, year, issue added. Class source is that of SOC-JA-001.'
+  reason: 'Sprint 3 bibliographic check: same correction as SOC-JA-001 (author order (Tognoli first, Kelso last), doi, year,
+    issue added).'
+- id: SOC-MORAL
+  action: modify
+  fields:
+    notes: 'migrated from schema-0.1 file SOC-MORAL-001. Sprint 3 (curator_d, 2026-10-05): bibliography confirmed (OpenAlex, 2026-10-05).
+      Class source is that of SOC-MORAL-001.'
+  reason: 'Sprint 3 bibliographic check: class first_source identical to SOC-MORAL-001, record confirmed (OpenAlex).'
+- id: SOC-NAME
+  action: modify
+  fields:
+    notes: 'migrated from schema-0.1 file SOC-NAME-001. Sprint 3 (curator_d, 2026-10-05): bibliography confirmed (OpenAlex, 2026-10-05).
+      Class source is that of SOC-NAME-001.'
+  reason: 'Sprint 3 bibliographic check: class first_source identical to SOC-NAME-001, record confirmed (OpenAlex).'
+- id: SOC-PAIN
+  action: modify
+  fields:
+    first_source:
+      citation: Singer T, Seymour B, O'Doherty J, Kaube H, Dolan RJ, Frith CD. Empathy for pain involves the affective but
+        not sensory components of pain. Science. 2004;303(5661):1157-1162.
+      doi: 10.1126/science.1093535
+      pmid: '14976305'
+      year: 2004
+      verified: false
+    notes: 'migrated from schema-0.1 file SOC-PAIN-001. Sprint 3 (curator_d, 2026-10-05): bibliography corrected (OpenAlex, 2026-10-05):
+      doi, authors, year, volume, issue, pages added. Class source is that of SOC-PAIN-001.'
+  reason: 'Sprint 3 bibliographic check: same correction as SOC-PAIN-001 (doi, authors, year, volume, issue, pages added).'
+- id: SOC-RACE
+  action: modify
+  fields:
+    first_source:
+      citation: 'Ito TA, Urland GR. Race and gender on the brain: electrocortical measures of attention to the race and gender
+        of multiply categorizable individuals. Journal of Personality and Social Psychology. 2003;85(4):616-626.'
+      doi: 10.1037/0022-3514.85.4.616
+      pmid: '14561116'
+      year: 2003
+      verified: false
+    notes: 'migrated from schema-0.1 file SOC-RACE-001. Sprint 3 (curator_d, 2026-10-05): bibliography corrected (OpenAlex, 2026-10-05):
+      doi added. Class source is that of SOC-RACE-001.'
+  reason: 'Sprint 3 bibliographic check: same correction as SOC-RACE-001 (doi added).'
+- id: SOC-RME
+  action: modify
+  fields:
+    first_source:
+      citation: 'Baron-Cohen S, Wheelwright S, Hill J, Raste Y, Plumb I. The "Reading the Mind in the Eyes" Test revised version:
+        a study with normal adults, and adults with Asperger syndrome or high-functioning autism. Journal of Child Psychology
+        and Psychiatry. 2001;42(2):241-251.'
+      doi: 10.1111/1469-7610.00715
+      pmid: '11280420'
+      year: 2001
+      verified: false
+    notes: 'migrated from schema-0.1 file SOC-RME-001. Sprint 3 (curator_d, 2026-10-05): bibliography corrected (OpenAlex, 2026-10-05):
+      volume, issue, pages added. Class source is that of SOC-RME-001.'
+  reason: 'Sprint 3 bibliographic check: same correction as SOC-RME-001 (volume, issue, pages added).'
+- id: SOC-SELF
+  action: modify
+  fields:
+    notes: 'migrated from schema-0.1 file SOC-SELF-001. Sprint 3 (curator_d, 2026-10-05): bibliography confirmed (OpenAlex, 2026-10-05).
+      Class source is that of SOC-SELF-001.'
+  reason: 'Sprint 3 bibliographic check: class first_source identical to SOC-SELF-001, record confirmed (OpenAlex).'
+- id: SOC-SFB
+  action: modify
+  fields:
+    notes: 'migrated from schema-0.1 file SOC-SFB-001. Sprint 3 (curator_d, 2026-10-05): bibliography confirmed (OpenAlex, 2026-10-05).
+      Class source is that of SOC-SFB-001.'
+  reason: 'Sprint 3 bibliographic check: class first_source identical to SOC-SFB-001, record confirmed (OpenAlex).'
+- id: SOC-TOM
+  action: modify
+  fields:
+    notes: 'migrated from schema-0.1 file SOC-TOM-001. Sprint 3 (curator_d, 2026-10-05): bibliography confirmed (OpenAlex, 2026-10-05).
+      Class source is that of SOC-TOM-001.'
+  reason: 'Sprint 3 bibliographic check: class first_source identical to SOC-TOM-001, record confirmed (OpenAlex).'
+- id: SOC-TPP
+  action: modify
+  fields:
+    first_source:
+      citation: Fehr E, Fischbacher U. Third-party punishment and social norms. Evolution and Human Behavior. 2004;25(2):63-87.
+      doi: 10.1016/S1090-5138(04)00005-4
+      year: 2004
+      verified: false
+    notes: 'migrated from schema-0.1 file SOC-TPP-001. Sprint 3 (curator_d, 2026-10-05): bibliography corrected (OpenAlex, 2026-10-05):
+      doi, authors, issue added. Class source is that of SOC-TPP-001.'
+  reason: 'Sprint 3 bibliographic check: same correction as SOC-TPP-001 (doi, authors, issue added).'
+- id: SOC-TRUST
+  action: modify
+  fields:
+    first_source:
+      citation: Berg J, Dickhaut J, McCabe K. Trust, reciprocity, and social history. Games and Economic Behavior. 1995;10(1):122-142.
+      doi: 10.1006/game.1995.1027
+      year: 1995
+      verified: false
+    notes: 'migrated from schema-0.1 file SOC-TRUST-001. Sprint 3 (curator_d, 2026-10-05): bibliography corrected (OpenAlex, 2026-10-05):
+      volume, issue, pages added. Class source is that of SOC-TRUST-001.'
+  reason: 'Sprint 3 bibliographic check: same correction as SOC-TRUST-001 (volume, issue, pages added).'
+- id: SOC-UG
+  action: modify
+  fields:
+    first_source:
+      citation: Güth W, Schmittberger R, Schwarze B. An experimental analysis of ultimatum bargaining. Journal of Economic
+        Behavior & Organization. 1982;3(4):367-388.
+      doi: 10.1016/0167-2681(82)90011-7
+      year: 1982
+      verified: false
+    notes: 'migrated from schema-0.1 file SOC-UG-001. Sprint 3 (curator_d, 2026-10-05): bibliography corrected (OpenAlex, 2026-10-05):
+      volume, issue, pages added, author spelling (Güth). Class source is that of SOC-UG-001.'
+  reason: 'Sprint 3 bibliographic check: same correction as SOC-UG-001 (volume, issue, pages added, author spelling (Güth)).'
+- id: SOC-VPT
+  action: modify
+  fields:
+    notes: 'migrated from schema-0.1 file SOC-VPT-001. Sprint 3 (curator_d, 2026-10-05): bibliography confirmed (OpenAlex, 2026-10-05).
+      Class source is that of SOC-VPT-001.'
+  reason: 'Sprint 3 bibliographic check: class first_source identical to SOC-VPT-001, record confirmed (OpenAlex).'
+- id: SOC-WIT
+  action: modify
+  fields:
+    first_source:
+      citation: 'Payne BK. Prejudice and perception: the role of automatic and controlled processes in misperceiving a weapon.
+        Journal of Personality and Social Psychology. 2001;81(2):181-192.'
+      doi: 10.1037/0022-3514.81.2.181
+      pmid: '11519925'
+      year: 2001
+      verified: false
+    notes: 'migrated from schema-0.1 file SOC-WIT-001. Sprint 3 (curator_d, 2026-10-05): bibliography corrected (OpenAlex, 2026-10-05):
+      volume, issue, pages added. Class source is that of SOC-WIT-001.'
+  reason: 'Sprint 3 bibliographic check: same correction as SOC-WIT-001 (volume, issue, pages added).'
+- id: STA-ANES
+  action: modify
+  fields:
+    first_source:
+      citation: Sigl JC, Chamoun NG. An introduction to bispectral analysis for the electroencephalogram. Journal of Clinical
+        Monitoring. 1994;10(6):392-404.
+      doi: 10.1007/bf01618421
+      pmid: '7836975'
+      year: 1994
+      verified: false
+    notes: 'migrated from schema-0.1 file STA-ANES-001. Sprint 3 (curator_d, 2026-10-05): bibliography corrected (OpenAlex, 2026-10-05):
+      volume, issue, pages added. Class source is that of STA-ANES-001.'
+  reason: 'Sprint 3 bibliographic check: same correction as STA-ANES-001 (volume, issue, pages added).'
+- id: STA-CLAS
+  action: modify
+  fields:
+    notes: 'migrated from schema-0.1 file STA-CLAS-001. Sprint 3 (curator_d, 2026-10-05): bibliography confirmed (OpenAlex, 2026-10-05).
+      Class source is that of STA-CLAS-001.'
+  reason: 'Sprint 3 bibliographic check: class first_source identical to STA-CLAS-001, record confirmed (OpenAlex).'
+- id: STA-DREAM
+  action: modify
+  fields:
+    notes: 'migrated from schema-0.1 file STA-DREAM-001. Sprint 3 (curator_d, 2026-10-05): bibliography confirmed (OpenAlex, 2026-10-05).
+      Class source is that of STA-DREAM-001.'
+  reason: 'Sprint 3 bibliographic check: class first_source identical to STA-DREAM-001, record confirmed (OpenAlex).'
+- id: STA-DRV
+  action: modify
+  fields:
+    notes: 'migrated from schema-0.1 file STA-DRV-001; sprint 2 (D-057): description updated from curation/work/pkg_E/sprint2/class_updates.yaml.
+      Sprint 3 (curator_d, 2026-10-05): bibliography confirmed (OpenAlex, 2026-10-05). Class source is that of STA-DRV-001.'
+  reason: 'Sprint 3 bibliographic check: class first_source identical to STA-DRV-001, record confirmed (OpenAlex).'
+- id: STA-ENG
+  action: modify
+  fields:
+    first_source:
+      citation: Dmochowski JP, Sajda P, Dias J, Parra LC. Correlated components of ongoing EEG point to emotionally laden
+        attention - a possible marker of engagement? Frontiers in Human Neuroscience. 2012;6:112.
+      doi: 10.3389/fnhum.2012.00112
+      pmid: '22623915'
+      year: 2012
+      verified: false
+    notes: 'migrated from schema-0.1 file STA-ENG-001. Sprint 3 (curator_d, 2026-10-05): bibliography corrected (OpenAlex, 2026-10-05):
+      article number (112) added. Class source is that of STA-ENG-001.'
+  reason: 'Sprint 3 bibliographic check: same correction as STA-ENG-001 (article number (112) added).'
+- id: STA-HYPN
+  action: modify
+  fields:
+    first_source:
+      citation: Jiang H, White MP, Greicius MD, Waelde LC, Spiegel D. Brain activity and functional connectivity associated
+        with hypnosis. Cerebral Cortex. 2017;27(8):4083-4093.
+      doi: 10.1093/cercor/bhw220
+      year: 2017
+      verified: false
+    notes: 'migrated from schema-0.1 file STA-HYPN-001. Sprint 3 (curator_d, 2026-10-05): bibliography corrected (OpenAlex, 2026-10-05):
+      first author (Jiang H, not Spiegel), author list expanded, doi added. Class source is that of STA-HYPN-001.'
+  reason: 'Sprint 3 bibliographic check: same correction as STA-HYPN-001 (first author (Jiang H, not Spiegel), author list
+    expanded, doi added).'
+- id: STA-MATB
+  action: modify
+  fields:
+    notes: 'migrated from schema-0.1 file STA-MATB-001. Sprint 3 (curator_d, 2026-10-05): bibliography not found (Crossref, 2026-10-05);
+      no Crossref record for this item, citation left as is.'
+  reason: 'Sprint 3 bibliographic check: no Crossref record for the first_source of STA-MATB-001; only notes appended.'
+- id: STA-MED
+  action: modify
+  fields:
+    first_source:
+      citation: Kasamatsu A, Hirai T. An electroencephalographic study on the Zen meditation (Zazen). Folia Psychiatrica et
+        Neurologica Japonica. 1966;20(4):315-336.
+      doi: 10.1111/j.1440-1819.1966.tb02646.x
+      year: 1966
+      verified: false
+    notes: 'migrated from schema-0.1 file STA-MED-001. Sprint 3 (curator_d, 2026-10-05): bibliography corrected (OpenAlex, 2026-10-05):
+      replaced 1973 reprint record with the 1966 original: authors (order Kasamatsu, Hirai), journal, year, volume, issue,
+      pages, doi. Class source is that of STA-MED-001.'
+  reason: 'Sprint 3 bibliographic check: same correction as STA-MED-001 (replaced 1973 reprint record with the 1966 original:
+    authors (order Kasamatsu, Hirai), journal, year, volume, issue, pages, doi).'
+- id: STA-MW
+  action: modify
+  fields:
+    notes: 'migrated from schema-0.1 file STA-MW-001; sprint 2 (D-057): description updated from curation/work/pkg_E/sprint2/class_updates.yaml.
+      Sprint 3 (curator_d, 2026-10-05): bibliography confirmed (OpenAlex, 2026-10-05). Class source is that of STA-MW-001.'
+  reason: 'Sprint 3 bibliographic check: class first_source identical to STA-MW-001, record confirmed (OpenAlex).'
+- id: STA-NF
+  action: modify
+  fields:
+    first_source:
+      citation: Sterman MB, Friar L. Suppression of seizures in an epileptic following sensorimotor EEG feedback training.
+        Electroencephalography and Clinical Neurophysiology. 1972;33(1):89-95.
+      doi: 10.1016/0013-4694(72)90028-4
+      year: 1972
+      verified: false
+    notes: 'migrated from schema-0.1 file STA-NF-001; sprint 2 (D-057): description, markers, first_source updated from curation/work/pkg_E/sprint2/class_updates.yaml.
+      Sprint 3 (curator_d, 2026-10-05): bibliography corrected (OpenAlex, 2026-10-05): doi added, author initials (Sterman
+      MB). Class source is that of STA-NF-001.'
+  reason: 'Sprint 3 bibliographic check: same correction as STA-NF-001 (doi added, author initials (Sterman MB)).'
+- id: STA-PSY
+  action: modify
+  fields:
+    first_source:
+      citation: Carhart-Harris RL, Muthukumaraswamy S, Roseman L, Kaelen M, Droog W, Murphy K, Tagliazucchi E, Schenberg EE,
+        Nest T, Orban C, Leech R, Williams LT, Williams TM, Bolstridge M, Sessa B, McGonigle J, Sereno MI, Nichols D, Hellyer
+        PJ, Hobden P, Evans J, Singh KD, Wise RG, Curran HV, Feilding A, Nutt DJ. Neural correlates of the LSD experience
+        revealed by multimodal neuroimaging. Proceedings of the National Academy of Sciences. 2016;113(17):4853-4858.
+      doi: 10.1073/pnas.1518377113
+      year: 2016
+      verified: false
+    notes: 'migrated from schema-0.1 file STA-PSY-001. Sprint 3 (curator_d, 2026-10-05): bibliography corrected (OpenAlex, 2026-10-05):
+      author list expanded (26 authors). Class source is that of STA-PSY-001.'
+  reason: 'Sprint 3 bibliographic check: same correction as STA-PSY-001 (author list expanded (26 authors)).'
+- id: STA-PVT
+  action: modify
+  fields:
+    first_source:
+      citation: Dinges DF, Powell JW. Microcomputer analyses of performance on a portable, simple visual RT task during sustained
+        operations. Behavior Research Methods, Instruments, & Computers. 1985;17(6):652-655.
+      doi: 10.3758/bf03200977
+      year: 1985
+      verified: false
+    notes: 'migrated from schema-0.1 file STA-PVT-001. Sprint 3 (curator_d, 2026-10-05): bibliography corrected (OpenAlex, 2026-10-05):
+      volume, issue, pages added. Class source is that of STA-PVT-001.'
+  reason: 'Sprint 3 bibliographic check: same correction as STA-PVT-001 (volume, issue, pages added).'
+- id: STA-REST
+  action: modify
+  fields:
+    first_source:
+      citation: Biswal B, Yetkin FZ, Haughton VM, Hyde JS. Functional connectivity in the motor cortex of resting human brain
+        using echo-planar MRI. Magnetic Resonance in Medicine. 1995;34(4):537-541.
+      doi: 10.1002/mrm.1910340409
+      year: 1995
+      verified: false
+    notes: 'migrated from schema-0.1 file STA-REST-001. Sprint 3 (curator_d, 2026-10-05): bibliography corrected (Crossref, 2026-10-05):
+      volume, issue, pages added. Class source is that of STA-REST-001.'
+  reason: 'Sprint 3 bibliographic check: same correction as STA-REST-001 (volume, issue, pages added).'
+- id: STA-SCP
+  action: modify
+  fields:
+    notes: 'migrated from schema-0.1 file STA-SCP-001; sprint 2 (D-057): description updated from curation/work/pkg_E/sprint2/class_updates.yaml.
+      D-062 (2026-10-05): class origin kept as Birbaumer 1999 (R1177, the spelling device, now STA-SCP-002); earlier configuration
+      STA-SCP-001 (binary SCP training); origin TBD (earliest records seen 1992: R1333, R1334). Sprint 3 (curator_d, 2026-10-05):
+      bibliography confirmed (Crossref, 2026-10-05). Class source is that of STA-SCP-002. Sprint 3 bibliographic search found
+      a candidate origin for the earlier configuration STA-SCP-001: Elbert T, Rockstroh B, Lutzenberger W, Birbaumer N. Biofeedback
+      of slow cortical potentials. I. Electroencephalography and Clinical Neurophysiology. 1980;48(3):293-301 (doi:10.1016/0013-4694(80)90265-5;
+      content unverified). Per D-062 the class source is not changed here; maintainer to decide whether the 1980 original
+      study replaces Birbaumer 1999.'
+  reason: 'Sprint 3 bibliographic check: class first_source identical to STA-SCP-002, record confirmed (Crossref). Candidate
+    1980 origin of STA-SCP-001 recorded in notes for the D-062 decision; class first_source unchanged.'
+- id: STA-SLP
+  action: modify
+  fields:
+    notes: 'migrated from schema-0.1 file STA-SLP-001; sprint 2 (D-057): description updated from curation/work/pkg_E/sprint2/class_updates.yaml.
+      Sprint 3 (curator_d, 2026-10-05): bibliography not found (Crossref, 2026-10-05); no Crossref record for this item, citation
+      left as is.'
+  reason: 'Sprint 3 bibliographic check: no Crossref record for the first_source of STA-SLP-001; only notes appended.'

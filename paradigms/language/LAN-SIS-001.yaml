@@ -1,0 +1,60 @@
+schema_version: '0.2'
+id: LAN-SIS-001
+class: LAN-SIS
+name:
+  en: Speaking-induced suppression / altered auditory feedback
+  zh: 言语诱发抑制与听觉反馈
+aliases:
+- speaking-induced suppression
+- SIS
+- speak vs listen
+- pitch perturbation
+family: language
+bci_category:
+- none
+recording_modality:
+- MEG
+- EEG
+- ECoG
+stimulus_modality:
+- motor_execution
+- auditory
+markers:
+- MK.N1_auditory
+- MK.high_gamma
+description:
+  en: Participants produce speech sounds while hearing their own voice, and the auditory responses are compared with passive
+    listening to recordings of the same sounds. Auditory-cortex responses (M100/N1 and high-gamma activity) are suppressed
+    during speaking compared with listening.
+  zh: 被试发出言语声音并听到自己的声音，将其听觉反应与被动聆听同一录音时的反应比较。说话时听觉皮层反应（M100/N1 与高 γ 活动）比聆听时受到抑制。
+trial_structure:
+  conditions:
+  - speak
+  - listen
+protocol:
+  n_classes: 2
+  classes:
+  - speaking (own voice)
+  - listening (playback)
+  cue: self-produced speech sounds vs playback of the same recordings
+  paradigm_timing: synchronous
+  feedback: none
+  distinguishing: 标准配置（最早发表）：说话 vs 听回放（Curio et al. 2000, R1167）。与 -002（实时改变听觉反馈，准则 1;4）区别；D-042 若并入 ERR-AAF-001，其音高扰动响应在本类下取
+    -003。
+first_source:
+  citation: Curio G, Neuloh G, Numminen J, Jousmäki V, Hari R. Speaking modifies voice-evoked activity in the human auditory
+    cortex. Human Brain Mapping. 2000;9(4):183-191.
+  doi: 10.1002/(sici)1097-0193(200004)9:4<183::aid-hbm1>3.0.co;2-z
+  pmid: '10770228'
+  year: 2000
+  verified: false
+interop:
+  bids_task: speakinginducedsuppression
+notes: 'Leads: DN39, DN40 (R#### = curation/literature.csv; DN## = curation/work/pkg_D/new_leads.csv). New candidate (curator_d).
+  Relevant to speech neuroprostheses (auditory feedback during attempted speech). DN39 chosen as the earliest lead by PMID
+  (title/PMID only). Leads: DN39, DN40. Sprint 2 (D-057, curator_d, 2026-10-03): protocol block added (-001 = earliest/standard
+  configuration). Narrowed to speak vs listen; real-time altered feedback moved to LAN-SIS-002. D-042 (ERR-AAF-001) pending.
+  Sibling concrete paradigms: LAN-SIS-002. bibliography corrected (OpenAlex, 2026-10-05)'
+status: draft
+contributors:
+- curator_d

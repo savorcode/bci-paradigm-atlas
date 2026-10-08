@@ -1,0 +1,46 @@
+schema_version: '0.2'
+id: CTL-RAVEN-001
+class: CTL-RAVEN
+name:
+  en: Raven's progressive matrices
+  zh: 瑞文推理
+aliases:
+- Progressive Matrices
+- RPM
+- Raven's
+- Raven's Progressive Matrices Test
+family: control
+bci_category:
+- none
+recording_modality:
+- fMRI
+- EEG
+stimulus_modality:
+- visual
+markers:
+- MK.BOLD_frontoparietal
+description:
+  en: Participants view a matrix of geometric patterns with one cell missing and select the piece that completes it according
+    to the underlying relational rules. Solving matrix problems engages a lateral frontoparietal network in fMRI, increasing
+    with the number of relations to integrate.
+  zh: 被试观看一个缺失一格的几何图案矩阵，依据其中的关系规则选出能补全矩阵的图块。解答矩阵问题激活 fMRI 中的外侧额顶网络，且随需要整合的关系数量增加而增强。
+protocol:
+  cue: matrix of geometric patterns with one missing cell and response options
+  distinguishing: 标准配置（最早发表线索）：选择补全矩阵的图块（Penrose & Raven 1936，R1137）；神经影像中的计算机化版本只改呈现参数。
+first_source:
+  citation: 'Penrose LS, Raven JC. A New Series of Perceptual Tests: Preliminary Communication. British Journal of Medical
+    Psychology. 1936;16(2):97-104.'
+  doi: 10.1111/j.2044-8341.1936.tb00690.x
+  year: 1936
+  verified: false
+interop:
+  bids_task: raven
+notes: 'HED task page: https://www.hedtags.org/hed-task/tasks/hedtsk_ravens_progressive_matrices.html. Leads used: S_PENROSE1936
+  (search: https://en.wikipedia.org/wiki/Raven%27s_Progressive_Matrices); R0095; R0257; R0149. first_source lead: S_PENROSE1936.
+  D-023: included at P3 with MK.BOLD_frontoparietal. No origin among leads; first_source found by search (Penrose & Raven
+  1936 as cited on Wikipedia; first Progressive Matrices publication 1938 not bibliographically identified). Neural leads:
+  R0257, R0149; cognitive account: R0095. Pass 1 skeleton (curator_c, 2026-10-03); all sources unverified. Sprint 2 (D-057):
+  protocol added; single configuration, no split. bibliography corrected (Crossref, 2026-10-05)'
+status: draft
+contributors:
+- curator_c

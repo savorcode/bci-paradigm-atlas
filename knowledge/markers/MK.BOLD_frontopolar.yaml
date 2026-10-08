@@ -1,0 +1,22 @@
+schema_version: "0.2"
+id: MK.BOLD_frontopolar
+name:
+  en: Frontopolar cortex BOLD
+  zh: 额极皮层 BOLD
+aliases:
+- frontopolar BOLD
+- rostrolateral prefrontal activation
+- BA10 activation
+type: hemodynamic
+recording_modality:
+- fMRI
+description:
+  en: BOLD activity in frontopolar (rostral prefrontal) cortex associated with exploratory choices, integration of relations,
+    and monitoring of internal states such as metamemory and prospective intentions.
+  zh: 额极（喙部前额叶）皮层的 BOLD 活动，与探索性选择、关系整合，以及对元记忆和前瞻意图等内部状态的监控相关。
+notes: 'No signature given in pass 1 (hemodynamic marker; region described in the description). Generators and indexes not
+  yet written. Used by (registry): ERR-BANDIT-001, MEM-META-001, MEM-PM-001.'
+status: draft
+contributors:
+- maintainer
+- curator_c

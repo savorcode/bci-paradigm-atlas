@@ -1,0 +1,52 @@
+schema_version: '0.2'
+id: PER-VMMN-001
+class: PER-VMMN
+name:
+  en: Visual mismatch negativity
+  zh: 视觉失匹配负波
+aliases:
+- vMMN
+- visual oddball MMN
+family: perception
+bci_category:
+- none
+recording_modality:
+- EEG
+- MEG
+stimulus_modality:
+- visual
+markers:
+- MK.vMMN
+description:
+  en: Frequent standard visual stimuli are interrupted by rare deviants (for example in colour, orientation or facial expression)
+    while the participant performs an unrelated task. Deviants elicit a posterior negativity at roughly 150-350 ms, the visual
+    mismatch negativity, considered the visual counterpart of the auditory MMN.
+  zh: 被试执行无关任务时，高频标准视觉刺激中穿插低频偏差刺激（如颜色、朝向或面部表情的变化）。偏差刺激在约 150–350 ms 诱发后部负波，即视觉失匹配负波，被视为听觉 MMN 的视觉对应物。
+protocol:
+  n_classes: 2
+  classes:
+  - standard
+  - visual deviant
+  cue: frequent standard and rare deviant visual stimuli while performing an unrelated task
+  paradigm_timing: synchronous
+  feedback: none
+  distinguishing: 标准配置（最早发表，即 first_source）：视觉 oddball，被试执行无关任务。本类暂无其他具体范式（no sibling protocol yet）。
+first_source:
+  citation: Tales A, Newton P, Troscianko T, Butler S. Mismatch negativity in the visual modality. NeuroReport. 1999;10(16):3363-3367.
+  doi: 10.1097/00001756-199911080-00020
+  year: 1999
+  verified: false
+interop:
+  bids_task: vmmn
+notes: 'Leads used: search SA01/SA04, search SA01a, search SA01b. first_source: no origin source identified in this pass (blocker,
+  see curation/work/pkg_A/status.csv). New candidate proposed by package A on 2026-10-03 (curation/work/pkg_A/new_candidates.csv);
+  registered in curation/candidates.csv as C210 (D-053, milestone M1). Distinct from PER-MMN-001 because the marker has a different
+  modality and posterior generators (requested MK.vMMN). First_source not identified; leads are reviews. [curator_a sprint
+  2, 2026-10-03] D-057: protocol block added for the canonical configuration; no other concrete paradigm identified for this
+  class in sprint 2. [curator_e sprint 3, 2026-10-05] candidate origin found by bibliographic search (OpenAlex, 2026-10-05);
+  content unverified. [maintainer sprint 3, 2026-10-07] bibliography confirmed (OpenAlex, 2026-10-05; origin candidate, content
+  unverified). [maintainer sprint 3, 2026-10-07, D-073] origin candidate recalled, record confirmed via OpenAlex.'
+status: draft
+contributors:
+- curator_a
+- curator_e

@@ -1,0 +1,56 @@
+schema_version: '0.2'
+id: SOC-IMIT-001
+class: SOC-IMIT
+name:
+  en: Imitation inhibition (automatic imitation)
+  zh: 模仿抑制（自动模仿）
+aliases:
+- Action Observation Compatibility Task
+- Automatic Imitation
+- Automatic Imitation Task
+- Brass Imitation Task
+- Stimulus-Response Compatibility Imitation Task
+family: social
+bci_category:
+- none
+recording_modality:
+- EEG
+- fMRI
+stimulus_modality:
+- visual
+- motor_execution
+markers:
+- MK.SMR_ERD
+- MK.BOLD_TPJ
+description:
+  en: Participants execute a cued finger movement while watching a hand perform the same (congruent) or a different (incongruent)
+    movement; incongruent observed actions slow responses. Imitation inhibition involves temporoparietal junction BOLD, and
+    action observation modulates sensorimotor rhythms.
+  zh: 被试根据提示执行手指动作，同时观看一只手做相同（一致）或不同（不一致）的动作；观察到不一致动作时反应变慢。模仿抑制涉及颞顶联合区 BOLD，动作观察则调制感觉运动节律。
+protocol:
+  n_classes: 2
+  classes:
+  - congruent observed finger movement
+  - incongruent observed finger movement
+  cue: video of a hand performing a finger movement while the participant executes a cued movement
+  paradigm_timing: synchronous
+  feedback: none
+  distinguishing: 'Standard configuration (earliest published or canonical; D-057 -001): finger-movement imitation-inhibition
+    task (Brass et al. 2000, R0188).'
+first_source:
+  citation: 'Brass, M., Bekkering, H., Wohlschlager, A., & Prinz, W. Compatibility between observed and executed finger movements:
+    Comparing symbolic, spatial, and imitative cues. Brain and Cognition, 44(2), 124-143. 2000.'
+  doi: 10.1006/brcg.2000.1225
+  pmid: '11041986'
+  year: 2000
+  verified: false
+interop:
+  bids_task: imitation
+notes: 'HED task page: https://www.hedtags.org/hed-task/tasks/hedtsk_imitation_inhibition.html. Lead refs (curation/literature.csv):
+  R0188 [key_reference], R0248 [further_reference], R0496 [key_reference], R0694 [further_reference], R0710 [further_reference],
+  R0734 [review]. Related: MOT-OBS-001 action observation (pkg B). First-pass skeleton (curator_e, 2026-10-03); all sources
+  unverified. Sprint 2 (curator_e, 2026-10-03): protocol block added per D-057; see curation/work/pkg_E/sprint2/split_log.csv.
+  Sprint 3 (curator_d, 2026-10-05): bibliography confirmed (OpenAlex, 2026-10-05).'
+status: draft
+contributors:
+- curator_e

@@ -1,0 +1,63 @@
+schema_version: '0.2'
+id: MEM-CD-001
+class: MEM-CD
+name:
+  en: Change detection
+  zh: 变化检测
+aliases:
+- Change detection task
+- Luck-Vogel Task
+- VWM Capacity Task
+- Visual working memory change detection
+family: memory
+bci_category:
+- none
+recording_modality:
+- EEG
+stimulus_modality:
+- visual
+markers:
+- MK.CDA
+description:
+  en: A memory array of simple visual items (for example coloured squares) is briefly shown across the display, followed by
+    a short blank retention interval and a test array in which one item may have changed; participants report whether a change
+    occurred. Set size is varied to estimate visual working-memory capacity. In this whole-display configuration the class
+    marker (contralateral delay activity) is not directly measurable; it is obtained with the lateralised configuration MEM-CD-003.
+  zh: 短暂呈现分布于整个屏幕的简单视觉项目（如彩色方块）记忆阵列，经过短暂空白保持期后呈现测试阵列，其中可能有一个项目发生变化，被试报告是否有变化。通过改变集合大小估计视觉工作记忆容量。在这一全视野配置中不能直接测得本类的标记物（对侧延迟活动），后者由偏侧化配置
+    MEM-CD-003 获得。
+trial_structure:
+  conditions:
+  - set size (parameter)
+  - change
+  - no change
+protocol:
+  n_classes: 2
+  classes:
+  - change
+  - no change
+  cue: brief whole-display memory array of simple coloured squares or features, followed by a test array
+  paradigm_timing: synchronous
+  feedback: none
+  distinguishing: 标准配置（最早发表）：全视野记忆阵列 + 测试阵列，二择一报告“有/无变化”，集合大小为参数（Luck & Vogel 1997, R0151）。与 -002（连续报告，准则 1）、-003（偏侧化箭头前线索，准则
+    2）区别。
+first_source:
+  citation: Luck SJ, Vogel EK. The capacity of visual working memory for features and conjunctions. Nature. 1997;390(6657):279-281.
+  doi: 10.1038/36846
+  pmid: '9384378'
+  year: 1997
+  verified: false
+interop:
+  bids_task: changedetection
+notes: 'HED task page: https://www.hedtags.org/hed-task/tasks/hedtsk_change_detection.html. Leads: R0151, R0215, R0282, R0591,
+  R0597, R0662, R0689 (R#### = curation/literature.csv; DN## = curation/work/pkg_D/new_leads.csv). R0151 (Luck & Vogel 1997)
+  chosen as the behavioural origin of the modern change-detection procedure; Phillips 1974 (R0031, listed under MEM-RC-001)
+  is an earlier precursor and Vogel & Machizawa 2004 (R0282) introduced the lateralized CDA version. Delayed estimation (proposed
+  new candidate MEM-DE-001) recorded as a variant pending maintainer decision. Sprint 2 (D-057, curator_d, 2026-10-03): protocol
+  block added (-001 = earliest/standard configuration). Narrowed to the whole-display Luck & Vogel (1997) configuration; delayed
+  estimation moved to MEM-CD-002 and the lateralised CDA version to MEM-CD-003. MK.CDA kept as class marker although it requires
+  the lateralised design (see sprint2 worklog, issue for maintainer). D-061 (maintainer, 2026-10-05): marker inherited from
+  class - MK.CDA measured in the lateralised sibling MEM-CD-003 (Vogel & Machizawa 2004), not in the whole-display configuration.
+  Sibling concrete paradigms: MEM-CD-002, MEM-CD-003. bibliography corrected (Crossref, 2026-10-05)'
+status: draft
+contributors:
+- curator_d

@@ -1,0 +1,52 @@
+schema_version: '0.2'
+id: STA-MW-002
+class: STA-MW
+name:
+  en: Mind wandering (self-caught reports)
+  zh: 走神（自我觉察报告）
+aliases:
+- self-caught mind wandering
+- mindless reading paradigm
+family: state
+bci_category:
+- passive
+- none
+recording_modality:
+- EEG
+stimulus_modality:
+- visual
+- cognitive_task
+markers:
+- MK.alpha_posterior
+- MK.P3b
+description:
+  en: During an ongoing task such as reading, participants press a key whenever they notice that their attention has drifted
+    away from the task, and the periods before these self-caught reports are compared with on-task periods; the method is
+    often combined with thought probes to separate lapses with and without awareness. Off-task periods are accompanied by
+    increased posterior alpha and reduced stimulus-evoked responses.
+  zh: 在阅读等持续任务中，被试每当察觉自己的注意离开任务时就按键；比较这些自我觉察报告之前的时段与专注时段。该方法常与思维探测结合，以区分有觉察与无觉察的走神。走神时段伴随后部 α 增强与刺激诱发反应减弱。
+protocol:
+  n_classes: 2
+  classes:
+  - self-caught off-task report
+  - on-task period
+  cue: ongoing task (e.g. text reading); participant-initiated key press
+  paradigm_timing: asynchronous
+  feedback: none
+  distinguishing: 'Criterion 3 versus STA-MW-001: reports are initiated by the participant whenever they notice mind wandering
+    (self-paced), instead of being elicited by experimenter-timed probes.'
+first_source:
+  citation: 'Zoning out while reading: Evidence for dissociations between experience and metaconsciousness. (Schooler lab
+    publication record)'
+  verified: false
+notes: 'Source: sprint-2 S2-11 [=R1339, R1340] (title seen on https://labs.psych.ucsb.edu/schooler/jonathan/publications/318,
+  which redirected; authors, venue and year not seen). Use of both self- and probe-caught reports confirmed in Sayette MA,
+  Schooler JW, Reichle ED 2010, Out for a smoke: the impact of cigarette craving on zoning out during reading, Psychological
+  Science 21(1):26-30 (https://eprints.soton.ac.uk/348428). Wikipedia ''Mind-wandering'' (sprint-2 F07) cites Franklin et
+  al. 2016 for a space-bar self-catch procedure. Lead refs: R0356 [other], R0666 [review]. Recording modality limited to EEG
+  pending a neural lead. New concrete paradigm (curator_e, sprint 2, 2026-10-03, D-057); all sources unverified. Sprint 3
+  (curator_d, 2026-10-05): bibliography not found (Crossref, 2026-10-05); no Crossref record for this item, citation left
+  as is.'
+status: draft
+contributors:
+- curator_e

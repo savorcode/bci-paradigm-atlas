@@ -1,0 +1,67 @@
+schema_version: '0.2'
+id: STA-SCP-001
+class: STA-SCP
+name:
+  en: SCP self-regulation training (binary)
+  zh: 慢皮层电位自我调节训练（二分类）
+aliases:
+- SCP feedback
+- SCP-BCI
+- thought translation device (TTD)
+family: state
+bci_category:
+- active
+recording_modality:
+- EEG
+stimulus_modality:
+- visual
+- cognitive_task
+markers:
+- MK.SCP
+description:
+  en: On each trial a cue indicates whether the participant should produce a negative or a positive shift of the vertex slow
+    cortical potential lasting several seconds, and the SCP is shown continuously as a moving cursor or object. The trained
+    signal is the slow cortical potential itself.
+  zh: 每个试次中，提示要求被试产生持续数秒的头顶慢皮层电位负向或正向偏移，SCP 以移动的光标或物体连续显示。被训练的信号就是慢皮层电位本身。
+protocol:
+  n_classes: 2
+  classes:
+  - cortical negativity
+  - cortical positivity
+  cue: trial-wise visual cue indicating the required polarity; the SCP is shown as a moving cursor or object
+  paradigm_timing: synchronous
+  feedback: continuous
+  distinguishing: 'Standard configuration (earliest published or canonical; D-057 -001): binary negativity/positivity training
+    with continuous visual SCP feedback, no spelling; the configuration from which the speller (STA-SCP-002) was built.'
+first_source:
+  citation: Elbert T, Rockstroh B, Lutzenberger W, Birbaumer N. Biofeedback of slow cortical potentials. I. Electroencephalography
+    and Clinical Neurophysiology. 1980;48(3):293-301.
+  doi: 10.1016/0013-4694(80)90265-5
+  year: 1980
+  verified: false
+interop:
+  bids_task: scp
+notes: 'Lead refs (curation/literature.csv): R0012 [first_source_candidate], R0039 [other], R0071 [other], R0093 [other],
+  R0252 [other], R0546 [other]. Sources found by curator_e (curation/work/pkg_E/search_log.md): S03 = https://ideas.repec.org/a/nat/nature/v398y1999i6725d10.1038_18581.html.
+  Independent of STA-NF-001 (D-020). Existing leads (R0012, R0039, R0071, R0093, R0252, R0546) concern the Bereitschaftspotential
+  and other negative slow waves, not SCP self-regulation; S03 found by curator_e. BCI Competition II SCP datasets are a memory-only
+  lead. First-pass skeleton (curator_e, 2026-10-03); all sources unverified. Sprint 2 (curator_e, 2026-10-03): protocol block
+  added per D-057; see curation/work/pkg_E/sprint2/split_log.csv. Sprint 2: the spelling device (Birbaumer et al. 1999, R1177)
+  moved to STA-SCP-002 as its own configuration; the class origin stays in paradigms/_classes.yaml pending maintainer review.
+  D-063 (maintainer, 2026-10-05): redefinition of -001 from "spelling device" (schema-0.1 skeleton, never had a protocol) to binary
+  SCP training accepted; ID meaning frozen from release v0.1.0. Class origin stays Birbaumer et al. 1999 (R1177) until an original study
+  of this earlier configuration is bibliographically established (D-062; earliest records seen 1992: R1333, R1334). Seen leads
+  for this configuration: Birbaumer N, Roberts LE, Lutzenberger W, Rockstroh B, Elbert T 1992, Area-specific self-regulation
+  of slow cortical potentials on the sagittal midline and its effects on behavior, Electroencephalography and Clinical Neurophysiology
+  84(4):353-361, doi:10.1016/0168-5597(92)90088-S; Schneider F et al. 1992, Self-regulation of slow cortical potentials in
+  psychiatric patients: Depression, Biofeedback and Self-Regulation 17(3):203-214, doi:10.1007/BF01000403 (continuous visual
+  feedback as a moving rocket). Elbert et al. 1980 is a memory-only lead. [maintainer, sprint 2] Lead registered as R1333
+  (literature.csv). [maintainer, sprint 2] Lead registered as R1334 (literature.csv). Sprint 3 (curator_d, 2026-10-05): first_source
+  written from bibliographic search (OpenAlex, 2026-10-05); candidate origin found by bibliographic search; content unverified.
+  Elbert, Rockstroh, Lutzenberger & Birbaumer 1980 is an original study of operant SCP biofeedback (the "memory-only lead"
+  named in the notes), 12 years earlier than the 1992 records R1333/R1334 (OpenAlex lists PMID 6153348; not added). [maintainer
+  sprint 3, 2026-10-07] bibliography confirmed (OpenAlex, 2026-10-05; origin candidate, content unverified). [maintainer sprint
+  3, 2026-10-07, D-073] origin candidate recalled, record confirmed via OpenAlex.'
+status: draft
+contributors:
+- curator_e

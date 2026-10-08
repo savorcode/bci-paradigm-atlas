@@ -1,0 +1,55 @@
+schema_version: '0.2'
+id: STM-CCEP-001
+class: STM-CCEP
+name:
+  en: Cortico-cortical evoked potentials
+  zh: 皮层-皮层诱发电位
+aliases:
+- CCEP
+- single pulse electrical stimulation
+- SPES
+family: stimulation
+bci_category:
+- none
+recording_modality:
+- ECoG
+- sEEG
+stimulus_modality:
+- electrical_stimulation
+markers:
+- MK.CCEP
+description:
+  en: >-
+    In patients with implanted subdural or depth electrodes, single electrical pulses are delivered repeatedly to a pair of
+    contacts while responses are recorded from all other contacts. Averaged responses at distant sites (an early N1 and a
+    later N2 deflection) reveal effective connectivity from the stimulated cortex.
+  zh: 在植入硬膜下或深部电极的患者中，向一对触点反复施加单个电脉冲，同时在其余所有触点记录响应。远隔部位的平均响应（早期 N1 和较晚的 N2 波）揭示从受刺激皮层出发的有效连接。
+protocol:
+  n_classes: 1
+  classes:
+  - single-pulse stimulation of an electrode pair
+  cue: none
+  stimulus_coding: repeated single electrical pulses, responses averaged
+  paradigm_timing: synchronous
+  feedback: none
+  distinguishing: >-
+    Standard configuration (earliest published) / 标准配置（最早发表）: repeated single-pulse stimulation of one contact pair with averaging
+    at all other contacts (Matsumoto et al. 2004). No sibling protocol yet.
+first_source:
+  citation: >-
+    Matsumoto R, Nair DR, LaPresto E, Najm I, Bingaman W, Shibasaki H, Lüders HO. Functional connectivity in the human language
+    system: a cortico-cortical evoked potential study. Brain. 2004;127(10):2316-2330.
+  doi: 10.1093/brain/awh246
+  pmid: '15269116'
+  year: 2004
+  verified: false
+interop:
+  bids_task: ccep
+notes: >-
+  Search sources (curation/work/pkg_B/search_log.md): S07 https://modeldb.science/citations/99059. Candidate had no leads;
+  first_source found by search (S07). Distinguish from excluded STM-ECS-001 (D-010): stimulation mapping reads out behaviour,
+  whereas CCEP records evoked neural responses. Memory leads (unverified): Keller et al. 2014 review; OpenNeuro CCEP datasets.
+  bibliography corrected (Crossref, 2026-10-05)
+status: draft
+contributors:
+- curator_b

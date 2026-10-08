@@ -1,0 +1,29 @@
+schema_version: "0.2"
+id: MK.N400
+name:
+  en: N400
+  zh: N400
+aliases:
+- N4
+- N400 effect
+type: erp_component
+recording_modality:
+- EEG
+- MEG
+signature:
+  latency_ms: 250-500 (peak around 400)
+  polarity: negative
+  topography: centro-parietal maximum
+description:
+  en: >-
+    Negative-going ERP deflection elicited by meaningful or potentially meaningful stimuli such as words, pictures
+    and gestures. Its amplitude is reduced when the stimulus is expected or semantically related to the preceding
+    context and increased for anomalous or unexpected items.
+  zh: 由词语、图片、手势等有意义或潜在有意义的刺激诱发的负向 ERP 成分。刺激符合预期或与先前语境语义相关时波幅减小，语义违例或意外项目则使波幅增大。
+notes: >-
+  First-pass skeleton (curator_d, 2026-10-03). Signature values are textbook-level approximations that await source
+  checking; generators and indexes will be added in the second pass.
+status: draft
+contributors:
+- maintainer
+- curator_d

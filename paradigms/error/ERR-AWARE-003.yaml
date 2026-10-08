@@ -1,0 +1,59 @@
+schema_version: '0.2'
+id: ERR-AWARE-003
+class: ERR-AWARE
+name:
+  en: Error Awareness Task (EAT)
+  zh: 错误觉知任务（EAT）
+aliases:
+- Error Awareness Task
+- EAT
+family: error
+bci_category:
+- none
+recording_modality:
+- fMRI
+stimulus_modality:
+- visual
+markers:
+- MK.BOLD_frontoparietal
+description:
+  en: 'A modified Go/NoGo task with colour words: participants respond to congruent colour words and withhold to two types
+    of NoGo trials (a word repeated on successive trials, or a word in an incongruent colour). They press a separate error-signalling
+    button on the trial after a commission error they noticed. Aware commission errors are associated with prefrontal and
+    parietal activation.'
+  zh: 以颜色词为刺激的改良 Go/NoGo 任务：被试对一致颜色词按键，对两类 NoGo 试次（与上一试次重复的词、颜色不一致的词）抑制反应；若察觉自己误按，在下一试次按另一个"错误报告"键。被察觉的误按错误伴随前额与顶叶激活。
+trial_structure:
+  conditions:
+  - Go
+  - repeat NoGo
+  - incongruent NoGo
+  - aware commission error
+  - unaware commission error
+protocol:
+  n_classes: 4
+  classes:
+  - correct Go
+  - correct NoGo
+  - aware commission error
+  - unaware commission error
+  cue: serial colour words (congruent or incongruent font colour); separate error-signalling button on the next trial
+  paradigm_timing: synchronous
+  feedback: none
+  distinguishing: 准则 1、2：Go/NoGo 结构，错误是抑制失败（误按），用 Stroop 式颜色词作刺激，觉知用下一试次的错误报告键标示（ERR-AWARE-001 为选择任务 + 每次正确性判断）。
+first_source:
+  citation: 'Hester R, Foxe JJ, Molholm S, Shpaner M, Garavan H. Neural mechanisms involved in error processing: A comparison
+    of errors made with and without awareness. NeuroImage. 2005;27(3):602-608.'
+  doi: 10.1016/j.neuroimage.2005.04.035
+  year: 2005
+  verified: false
+interop:
+  bids_task: errorawarenesstask
+notes: 'Leads used: R1315 (bibliographic data from https://www.tara.tcd.ie/items/92ce6bd2-3b46-47da-951f-5c85fc63aa79; author
+  order differs between TARA and Cognitive Atlas - Cognitive Atlas order used, to be checked); task description from the Cognitive
+  Atlas EAT page (80% congruent go stimuli, two NoGo types, difficulty adjusted). Marker MK.BOLD_frontoparietal maps ''bilateral
+  prefrontal and parietal activation'' (abstract) and is not yet in the ERR-AWARE class union (proposed in class_updates.yaml).
+  Sprint 2 (D-057, curator_c, 2026-10-03): new concrete paradigm of class ERR-AWARE; numbering criterion 1;2 relative to ERR-AWARE-001;
+  all sources unverified. bibliography corrected (Crossref, 2026-10-05)'
+status: draft
+contributors:
+- curator_c

@@ -1,0 +1,58 @@
+schema_version: '0.2'
+id: EMO-FACE-001
+class: EMO-FACE
+name:
+  en: Emotional face processing
+  zh: 情绪面孔加工
+aliases:
+- Ekman Faces Task
+- Facial Emotion Recognition
+- emotional face viewing
+- facial expression processing
+family: emotion
+bci_category:
+- none
+recording_modality:
+- EEG
+- fMRI
+stimulus_modality:
+- visual
+markers:
+- MK.N170
+- MK.EPN
+- MK.BOLD_amygdala
+description:
+  en: Photographs of faces with emotional or neutral expressions are presented one at a time, with passive viewing or an orthogonal
+    task such as detecting a repeated or target stimulus. Emotional expressions modulate the N170 and the early posterior
+    negativity in EEG and increase amygdala BOLD.
+  zh: 逐张呈现带有情绪或中性表情的面孔照片，被试被动观看或完成与表情无关的任务（如检测重复或靶刺激）。情绪表情调制脑电中的 N170 与早期后部负波，并增强杏仁核 BOLD。
+protocol:
+  n_classes: 2
+  classes:
+  - emotional expression faces
+  - neutral expression faces
+  cue: photographs of faces presented one at a time, with passive viewing or an orthogonal task
+  paradigm_timing: synchronous
+  feedback: none
+  distinguishing: 'Standard configuration (earliest published or canonical; D-057 -001): event-related presentation of single
+    emotional versus neutral faces with an orthogonal or passive task (ERP lead R0846). Differs from EMO-FACE-002 (blocked
+    face-versus-shape matching).'
+first_source:
+  citation: Eimer M, Holmes A. An ERP study on the time course of emotional face processing. NeuroReport. 2002;13(4):427-431.
+  doi: 10.1097/00001756-200203250-00013
+  pmid: '11930154'
+  year: 2002
+  verified: false
+interop:
+  bids_task: emotionalfaces
+notes: 'HED task page: https://www.hedtags.org/hed-task/tasks/hedtsk_facial_emotion_recognition.html. Lead refs (curation/literature.csv):
+  R0036 [key_reference], R0115 [key_reference], R0358 [review], R0530 [review], R0683 [review], R0764 [further_reference],
+  R0768 [further_reference], R0846 [first_source_candidate], R0989 [method], R1056 [review]. Ekman & Friesen (1976) Pictures
+  of Facial Affect (R0036) is the classic stimulus set, not a neural paradigm. Distinguish from PER-FACE-001 (face vs non-face
+  perception, pkg A). R0683 DOI in literature.csv looks wrong (book-chapter DOI for a Cognition and Emotion article). First-pass
+  skeleton (curator_e, 2026-10-03); all sources unverified. Sprint 2 (curator_e, 2026-10-03): protocol block added per D-057;
+  see curation/work/pkg_E/sprint2/split_log.csv. Sprint 3 (curator_d, 2026-10-05): bibliography corrected (Crossref, 2026-10-05):
+  doi, authors, year, volume, issue, pages added.'
+status: draft
+contributors:
+- curator_e

@@ -1,0 +1,59 @@
+schema_version: '0.2'
+id: SOC-CYB-001
+class: SOC-CYB
+name:
+  en: Cyberball social exclusion
+  zh: 网络传球社会排斥（Cyberball）
+aliases:
+- Cyberball
+- ostracism paradigm
+- social exclusion
+family: social
+bci_category:
+- none
+recording_modality:
+- EEG
+- fMRI
+stimulus_modality:
+- visual
+markers:
+- MK.P3b
+- MK.BOLD_dACC
+description:
+  en: Participants play a virtual ball-tossing game with ostensible co-players who first include them and then stop passing
+    the ball to them. Exclusion is associated with dorsal anterior cingulate BOLD, and ball-receipt events in EEG elicit P3b
+    differences between inclusion and exclusion.
+  zh: 被试与名义上的其他玩家进行虚拟传球游戏，其他玩家先接纳被试，随后不再把球传给被试。排斥阶段伴随背侧前扣带 BOLD 变化；在脑电中，接球事件诱发的 P3b 在接纳与排斥条件间不同。
+protocol:
+  n_classes: 2
+  classes:
+  - inclusion
+  - exclusion
+  cue: virtual ball-tossing game with two ostensible co-players
+  paradigm_timing: block
+  feedback: none
+  distinguishing: 'Standard configuration (earliest published or canonical; D-057 -001): Cyberball inclusion followed by exclusion
+    (Williams, Cheung & Choi 2000, sprint-2 F06).'
+first_source:
+  citation: 'Williams KD, Cheung CKT, Choi W. Cyberostracism: effects of being ignored over the Internet. Journal of Personality
+    and Social Psychology. 2000;79(5):748-762.'
+  doi: 10.1037/0022-3514.79.5.748
+  year: 2000
+  verified: false
+interop:
+  bids_task: cyberball
+notes: 'Sources found by curator_e (curation/work/pkg_E/search_log.md): S01 = https://pubmed.ncbi.nlm.nih.gov/14551436/; S01b
+  = https://www3.psych.purdue.edu/~willia55/Announce/Cyberball_Articles.htm. first_source note: Venue not shown in results;
+  behavioural Cyberball origin (Williams et al. 2000) not surfaced. No leads in literature.csv; S01 and S01b found by curator_e.
+  The behavioural Cyberball origin (Williams, Cheung & Choi 2000) was not surfaced; S01b lists Cyberball publications. First-pass
+  skeleton (curator_e, 2026-10-03); all sources unverified. D-031 (maintainer, 2026-10-03): first_source currently holds the
+  earliest neural recording study found, not the paradigm origin; in sprint 2 move it to a "First neural recording:" line
+  and fill first_source with the origin. Sprint 2 (curator_e, 2026-10-03): protocol block added per D-057; see curation/work/pkg_E/sprint2/split_log.csv.
+  D-031 resolved in sprint 2: first_source now the behavioural Cyberball origin as listed on the Cyberball publications page
+  (S01b, fetched again as sprint-2 F06 [=R1343]); the program paper is Williams & Jarvis 2006, Behavior Research Methods,
+  Instruments, and Computers 38:174-180. First neural recording: Eisenberger et al. 2003, Does rejection hurt? An fMRI study
+  of social exclusion (R1171, PMID 14551436). Sprint 3 (curator_d, 2026-10-05): bibliography corrected (Crossref, 2026-10-05):
+  doi, issue added. [maintainer sprint 3, 2026-10-07, D-073] origin candidate recalled, record confirmed via Crossref.'
+status: draft
+contributors:
+- curator_e

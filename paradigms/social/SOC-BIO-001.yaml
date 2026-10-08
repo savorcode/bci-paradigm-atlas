@@ -1,0 +1,57 @@
+schema_version: '0.2'
+id: SOC-BIO-001
+class: SOC-BIO
+name:
+  en: Biological motion perception
+  zh: 生物运动知觉
+aliases:
+- Johansson displays
+- PLW
+- Point-Light Displays
+- Point-Light Walker Task
+- biological motion
+- point-light walkers
+family: social
+bci_category:
+- none
+recording_modality:
+- EEG
+- fMRI
+stimulus_modality:
+- visual
+markers:
+- MK.N170
+- MK.N2_posterior
+- MK.BOLD_pSTS
+description:
+  en: Point-light displays depicting human actions are compared with scrambled or inverted versions in which the local dot
+    motions are kept but the body configuration is destroyed. Intact biological motion evokes larger posterior N170/N2 responses
+    and pSTS BOLD than the control displays.
+  zh: 将表现人体动作的光点显示与保留局部光点运动但破坏身体结构的打乱版或倒置版进行比较。完整生物运动比对照刺激诱发更大的后部 N170／N2 以及后颞上沟 BOLD。
+protocol:
+  n_classes: 2
+  classes:
+  - intact point-light action
+  - scrambled point-light control
+  cue: point-light displays of human actions
+  paradigm_timing: synchronous
+  feedback: none
+  distinguishing: 'Standard configuration (earliest published or canonical; D-057 -001): point-light biological motion versus
+    scrambled control (display method of Johansson 1973, R0029).'
+first_source:
+  citation: Johansson, G. Visual perception of biological motion and a model for its analysis. Perception & Psychophysics,
+    14(2), 201-211. 1973.
+  doi: 10.3758/bf03212378
+  year: 1973
+  verified: false
+interop:
+  bids_task: biomotion
+notes: 'HED task page: https://www.hedtags.org/hed-task/tasks/hedtsk_biological_motion_perception.html. Lead refs (curation/literature.csv):
+  R0029 [key_reference], R0219 [key_reference], R0374 [key_reference], R0533 [further_reference], R0539 [further_reference],
+  R0563 [further_reference], R0576 [further_reference], R0581 [further_reference], R0686 [further_reference], R0788 [review].
+  R0533 and R0788 DOIs in literature.csv do not match their titles/venues (book chapter / Molecular Autism DOI). First-pass
+  skeleton (curator_e, 2026-10-03); all sources unverified. Sprint 2 (curator_e, 2026-10-03): protocol block added per D-057;
+  see curation/work/pkg_E/sprint2/split_log.csv. Sprint 3 (curator_d, 2026-10-05): bibliography confirmed (OpenAlex, 2026-10-05).'
+status: draft
+contributors:
+- curator_e

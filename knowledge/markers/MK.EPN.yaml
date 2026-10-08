@@ -1,0 +1,23 @@
+schema_version: "0.2"
+id: MK.EPN
+name:
+  en: Early posterior negativity
+  zh: 早期后部负波
+aliases:
+- EPN
+type: erp_component
+recording_modality:
+- EEG
+signature:
+  latency_ms: 200-300
+  polarity: negative (relative to neutral stimuli)
+  topography: occipito-temporal
+description:
+  en: Relative negativity over posterior sites for emotional compared with neutral stimuli, observed for pictures, faces and
+    words. It is interpreted as enhanced early visual encoding of emotionally arousing stimuli.
+  zh: 与中性刺激相比，情绪刺激在后部电极引起的相对负向偏移，见于图片、面孔和词语。被解释为对情绪唤醒刺激的早期视觉编码增强。
+notes: Signature values are textbook-level characteristics entered in the first pass and await source checking.
+status: draft
+contributors:
+- maintainer
+- curator_e

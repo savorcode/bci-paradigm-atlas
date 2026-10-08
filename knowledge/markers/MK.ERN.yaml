@@ -1,0 +1,29 @@
+schema_version: "0.2"
+id: MK.ERN
+name:
+  en: Error-related negativity
+  zh: 错误相关负波
+aliases:
+- ERN
+- Ne
+- error negativity
+- response ERN
+type: erp_component
+recording_modality:
+- EEG
+- MEG
+signature:
+  latency_ms: 0-100 after response onset
+  polarity: negative
+  topography: fronto-central (FCz) maximum
+description:
+  en: Response-locked negative deflection that peaks shortly after an erroneous response in speeded choice tasks, larger on
+    error than on correct trials (where a smaller correct-response negativity is seen). Commonly elicited in flanker, Simon
+    and Go/NoGo tasks.
+  zh: 在快速选择任务中错误反应后不久达到峰值的反应锁时负向波，错误试次大于正确试次（正确试次仅见较小的正确反应负波）。常在 Flanker、Simon 和 Go/NoGo 任务中诱发。
+notes: 'Signature values are textbook-level approximations and await checking against sources (pass 2). Generators and indexes
+  not yet written. Used by (registry): CTL-FLK-001.'
+status: draft
+contributors:
+- maintainer
+- curator_c

@@ -1,0 +1,50 @@
+schema_version: '0.2'
+id: PER-FVEP-001
+class: PER-FVEP
+name:
+  en: Flash VEP
+  zh: 闪光视觉诱发电位
+aliases:
+- FVEP
+- flash VEP
+- flash visual evoked response
+family: perception
+bci_category:
+- none
+recording_modality:
+- EEG
+stimulus_modality:
+- visual
+markers:
+- MK.flash_VEP
+description:
+  en: Diffuse light flashes, often delivered through closed eyelids or goggles, evoke a sequence of occipital positive and
+    negative waves. The flash VEP is used when pattern stimulation is not possible, for example in infants or uncooperative
+    patients.
+  zh: 以弥散闪光刺激（常通过闭合的眼睑或护目镜给予）诱发枕区一系列正负波。闪光 VEP 用于无法进行图形刺激的情况，如婴儿或不能配合的患者。
+protocol:
+  n_classes: 1
+  classes:
+  - diffuse flash
+  cue: diffuse light flashes (goggles or through closed eyelids)
+  paradigm_timing: synchronous
+  feedback: none
+  distinguishing: 标准配置（最早发表，即 first_source）：弥散闪光刺激，被动观察。本类暂无其他具体范式（no sibling protocol yet）。
+first_source:
+  citation: Cigánek L. The EEG response (evoked potential) to light stimulus in man. Electroencephalogr Clin Neurophysiol.
+    1961;13(2):165-172.
+  doi: 10.1016/0013-4694(61)90132-8
+  year: 1961
+  verified: false
+interop:
+  bids_task: flashvep
+notes: 'Leads used: R0678, R0848, R1086. first_source: no origin source identified in this pass (blocker, see curation/work/pkg_A/status.csv).
+  Leads are a clinical standard (ISCEV 2016), a clinical study and a clinical review; no origin paper. [curator_a sprint 2,
+  2026-10-03] D-057: protocol block added for the canonical configuration; no other concrete paradigm identified for this
+  class in sprint 2. [curator_e sprint 3, 2026-10-05] candidate origin found by bibliographic search (Crossref, 2026-10-05);
+  content unverified. [maintainer sprint 3, 2026-10-07] bibliography confirmed (Crossref, 2026-10-05; origin candidate, content
+  unverified). [maintainer sprint 3, 2026-10-07, D-073] origin candidate recalled, record confirmed via Crossref.'
+status: draft
+contributors:
+- curator_a
+- curator_e

@@ -1,0 +1,52 @@
+schema_version: '0.2'
+id: PER-ORN-001
+class: PER-ORN
+name:
+  en: Mistuned harmonic / concurrent sound segregation
+  zh: 失谐谐波与同时声音分离
+aliases:
+- mistuned harmonic paradigm
+- object-related negativity paradigm
+- concurrent sound segregation
+family: perception
+bci_category:
+- none
+recording_modality:
+- EEG
+- MEG
+stimulus_modality:
+- auditory
+markers:
+- MK.ORN
+description:
+  en: Complex tones are presented in which one harmonic is either in tune or mistuned. Mistuning makes listeners hear two
+    concurrent sounds and elicits the object-related negativity, a negative difference at about 150-250 ms, which is present
+    even when the sounds are ignored.
+  zh: 呈现复合音，其中某个谐波或调谐或失谐。失谐使听者感知到两个同时存在的声音，并诱发客体相关负波（ORN），即约 150–250 ms 的负性差异波，在忽略声音时也会出现。
+protocol:
+  n_classes: 2
+  classes:
+  - tuned harmonic
+  - mistuned harmonic
+  cue: harmonic complex tones with one harmonic in tune or mistuned
+  paradigm_timing: synchronous
+  feedback: none
+  distinguishing: 标准配置（最早发表，即 first_source）：谐波复合音中某一谐波失谐或不失谐。本类暂无其他具体范式（no sibling protocol yet）。
+first_source:
+  citation: Alain C, Schuler BM, McDonald KL. Neural activity associated with distinguishing concurrent auditory objects.
+    J Acoust Soc Am. 2002;111(2):990-995.
+  doi: 10.1121/1.1434942
+  year: 2002
+  verified: false
+interop:
+  bids_task: mistunedharmonic
+notes: 'Leads used: search SA11, search SA11b. first_source found by search in this sprint (SA11), not from the lead list.
+  New candidate proposed by package A on 2026-10-03 (curation/work/pkg_A/new_candidates.csv); registered in curation/candidates.csv
+  as C213 (D-053, milestone M1). Requested marker MK.ORN. [curator_a sprint 2, 2026-10-03] D-057: protocol block added for the canonical
+  configuration; no other concrete paradigm identified for this class in sprint 2. [curator_e sprint 3, 2026-10-05] bibliography
+  corrected (OpenAlex, 2026-10-05). [maintainer sprint 3, 2026-10-07, D-073] origin candidate recalled, record confirmed via
+  OpenAlex.'
+status: draft
+contributors:
+- curator_a
+- curator_e

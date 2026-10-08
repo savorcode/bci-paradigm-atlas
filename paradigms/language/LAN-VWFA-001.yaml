@@ -1,0 +1,58 @@
+schema_version: '0.2'
+id: LAN-VWFA-001
+class: LAN-VWFA
+name:
+  en: Visual word form processing
+  zh: 视觉词形加工（字词定位）
+aliases:
+- VWFA localizer
+- words vs consonant strings
+- print tuning
+- orthographic localizer
+family: language
+bci_category:
+- none
+recording_modality:
+- fMRI
+- EEG
+stimulus_modality:
+- visual
+markers:
+- MK.BOLD_category_selective
+- MK.N170
+description:
+  en: Participants view written words alongside control stimuli such as consonant strings, false fonts, faces or objects,
+    often with a simple detection task. Written words evoke stronger responses in the left ventral occipitotemporal 'visual
+    word form area' and a larger, left-lateralised occipitotemporal N170 than control strings (print tuning).
+  zh: 被试观看书面词语以及辅音串、伪字体、面孔或物体等对照刺激，常配合简单的检测任务。与对照串相比，书面词语在左侧腹侧枕颞“视觉词形区”诱发更强的响应，并诱发更大、左侧化的枕颞 N170（文字调谐）。
+trial_structure:
+  conditions:
+  - words
+  - consonant strings
+  - false fonts
+protocol:
+  n_classes: 2
+  classes:
+  - written words
+  - control strings (consonant strings, false fonts, objects)
+  cue: visually presented words and control stimuli
+  paradigm_timing: block
+  feedback: none
+  distinguishing: 标准配置（最早发表）：字词 vs 控制刺激（R1165）。本类只有这一配置（事件相关 vs 组块为参数，待复核）。
+first_source:
+  citation: Cohen L, Lehéricy S, Chochon F, Lemer C, Rivaud S, Dehaene S. Language-specific tuning of visual cortex? Functional
+    properties of the Visual Word Form Area. Brain. 2002;125(5):1054-1069.
+  doi: 10.1093/brain/awf094
+  pmid: '11960895'
+  year: 2002
+  verified: false
+interop:
+  bids_task: vwfa
+notes: 'Leads: DN31, DN32 (R#### = curation/literature.csv; DN## = curation/work/pkg_D/new_leads.csv). New candidate (curator_d).
+  Uses the category-selective BOLD marker (VWFA) and N170 (owned by package A); distinct from PER-FACE-001/PER-CAT-001 because
+  the category is learned orthography. DN31 is the earliest lead located (title/PMID only); earlier VWFA work may exist. Leads:
+  DN31, DN32. Sprint 2 (D-057, curator_d, 2026-10-03): protocol block added (-001 = earliest/standard configuration). bibliography
+  corrected (OpenAlex, 2026-10-05)'
+status: draft
+contributors:
+- curator_d

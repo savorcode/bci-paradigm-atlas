@@ -1,0 +1,55 @@
+schema_version: '0.2'
+id: STM-TI-001
+class: STM-TI
+name:
+  en: Temporal interference stimulation
+  zh: 时间干涉电刺激
+aliases:
+- temporal interference
+- TI stimulation
+- tTIS
+family: stimulation
+bci_category:
+- none
+recording_modality:
+- fMRI
+stimulus_modality:
+- electrical_stimulation
+markers:
+- MK.BOLD_stimulated_region
+description:
+  en: >-
+    Two high-frequency alternating currents with slightly different frequencies are applied through separate scalp electrode
+    pairs, so that their interference produces an envelope at the difference frequency that is maximal in a deep target (e.g.
+    the hippocampus). Target engagement is assessed with BOLD responses in the targeted region during a task, compared with
+    control stimulation.
+  zh: 通过两组独立的头皮电极施加频率略有差异的两路高频交流电，二者干涉在差频处形成包络，并在深部靶点（如海马）达到最大。通过任务期间靶区 BOLD 响应并与对照刺激比较，评估对靶点的作用。
+protocol:
+  n_classes: 2
+  classes:
+  - temporal interference stimulation
+  - control stimulation
+  cue: task during stimulation
+  stimulus_coding: two kHz currents with a small frequency difference
+  paradigm_timing: block
+  feedback: none
+  distinguishing: >-
+    Standard configuration (earliest published) / 标准配置（最早发表）: TI targeting the hippocampus with BOLD readout during a task
+    (R1129). No sibling protocol yet.
+first_source:
+  citation: >-
+    Violante IR, Alania K, Cassarà AM, Neufeld E, Acerbo E, Carron R, Williamson A, Kurtin DL, Rhodes EJ, Hampshire A, Kuster
+    N, Boyden ES, Pascual-Leone A, Grossman N. Non-invasive temporal interference electrical stimulation of the human hippocampus.
+    Nature Neuroscience. 2023;26(11):1994-2004.
+  doi: 10.1038/s41593-023-01456-8
+  year: 2023
+  verified: false
+interop:
+  bids_task: ti
+notes: >-
+  Search sources (curation/work/pkg_B/search_log.md): N11 https://www.research-collection.ethz.ch/handle/20.500.11850/640045.
+  New candidate (pkg B). Lead N11 confirmed only title and journal; authors/year to be completed. bibliography corrected (OpenAlex,
+  2026-10-05)
+status: draft
+contributors:
+- curator_b

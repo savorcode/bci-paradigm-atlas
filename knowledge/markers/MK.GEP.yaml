@@ -1,0 +1,20 @@
+schema_version: "0.2"
+id: MK.GEP
+name:
+  en: Gustatory evoked potential
+  zh: 味觉诱发电位
+aliases:
+- GEP
+- gustatory evoked potential
+- taste evoked potential
+type: erp_component
+recording_modality:
+- EEG
+description:
+  en: Event-related potential to the onset of a taste stimulus delivered without tactile or thermal cues, with long latencies.
+  zh: 在无触觉或温度线索的条件下，对味觉刺激起始产生的长潜伏期事件相关电位。
+notes: First-pass skeleton by package A (2026-10-03). No generators/indexes yet. New marker requested by package A (curation/work/pkg_A/marker_requests.csv);
+  not yet in curation/registry/markers.csv.
+status: draft
+contributors:
+- curator_a

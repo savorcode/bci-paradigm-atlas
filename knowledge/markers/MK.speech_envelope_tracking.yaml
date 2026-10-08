@@ -1,0 +1,27 @@
+schema_version: "0.2"
+id: MK.speech_envelope_tracking
+name:
+  en: Cortical speech envelope tracking
+  zh: 皮层语音包络跟踪
+aliases:
+- neural tracking of speech envelope
+- envelope entrainment
+- TRF-based tracking
+- cortical speech tracking
+type: oscillatory
+recording_modality:
+- EEG
+- MEG
+- ECoG
+signature:
+  frequency_hz: ~1-8 (delta-theta)
+  topography: temporal / fronto-central
+description:
+  en: Low-frequency cortical activity whose time course follows the amplitude envelope of continuous speech, quantified with
+    temporal response functions, stimulus reconstruction or coherence; tracking is stronger for the attended talker.
+  zh: 时间进程跟随连续语音幅度包络的低频皮层活动，可用时间响应函数、刺激重建或相干性量化；对被注意说话人的跟踪更强。
+notes: First-pass skeleton by package A (2026-10-03). No generators/indexes yet. Signature values are textbook-level approximations
+  and await source checking.
+status: draft
+contributors:
+- curator_a

@@ -1,0 +1,57 @@
+schema_version: '0.2'
+id: STA-MATB-001
+class: STA-MATB
+name:
+  en: Multi-attribute task battery (MATB)
+  zh: 多属性任务组（MATB）
+aliases:
+- MATB
+- MATB-II
+- OpenMATB
+- multi-attribute task battery
+family: state
+bci_category:
+- passive
+recording_modality:
+- EEG
+- fNIRS
+stimulus_modality:
+- visual
+- auditory
+- motor_execution
+markers:
+- MK.frontal_midline_theta
+- MK.alpha_posterior
+- MK.HbO_prefrontal
+description:
+  en: Participants simultaneously monitor gauges, track a target, manage fuel resources and respond to communication requests
+    in a simulated cockpit, with workload set by the rate and number of subtasks. Higher workload increases frontal midline
+    theta and prefrontal HbO and decreases posterior alpha power.
+  zh: 被试在模拟驾驶舱中同时监视仪表、追踪目标、管理燃油资源并回应通信请求，工作负荷由子任务的速率和数量设定。负荷升高时额中线 θ 和前额叶 HbO 增加，后部 α 功率降低。
+protocol:
+  n_classes: 2
+  classes:
+  - low workload
+  - high workload
+  cue: simultaneous monitoring, tracking, resource-management and communication subtasks
+  paradigm_timing: block
+  feedback: none
+  distinguishing: 'Standard configuration (earliest published or canonical; D-057 -001): MATB with workload set by subtask
+    rate and number (R1064/R0849); the number of workload levels is a parameter.'
+first_source:
+  citation: The multi-attribute task battery for human operator workload and strategic behavior research (NASA NTRS 19920007912).
+  verified: false
+datasets:
+- name: COG-BCI database (Zenodo)
+interop:
+  bids_task: matb
+notes: 'Lead refs (curation/literature.csv): R0849 [first_source_candidate], R0976 [review], R1064 [first_source_candidate].
+  R1064 title is flagged in the task sheet as recalled from memory (search showed only the NTRS URL https://ntrs.nasa.gov/citations/19920007912);
+  R0849 (Arnegard contractor report) is the alternative origin lead. COG-BCI dataset lead title: ''Open multi-session and
+  multi-task EEG cognitive Dataset for passive brain-computer Interface Applications''. First-pass skeleton (curator_e, 2026-10-03);
+  all sources unverified. Sprint 2 (curator_e, 2026-10-03): protocol block added per D-057; see curation/work/pkg_E/sprint2/split_log.csv.
+  Sprint 3 (curator_d, 2026-10-05): bibliography not found (Crossref, 2026-10-05); no Crossref record for this item, citation
+  left as is.'
+status: draft
+contributors:
+- curator_e

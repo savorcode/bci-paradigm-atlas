@@ -1,0 +1,47 @@
+schema_version: '0.2'
+id: CTL-SIM-002
+class: CTL-SIM
+name:
+  en: Simon task (visual)
+  zh: Simon 任务（视觉版）
+aliases:
+- Visual Simon task
+family: control
+bci_category:
+- none
+recording_modality:
+- EEG
+stimulus_modality:
+- visual
+markers:
+- MK.N2_frontocentral
+- MK.LRP
+description:
+  en: Participants respond with a left or right key to the colour (or shape) of a stimulus presented to the left or right
+    of fixation, while the irrelevant stimulus location corresponds or not to the response side. Non-corresponding trials
+    slow responses and elicit a fronto-central N2 and an initial lateralised readiness potential towards the incorrect hand.
+  zh: 被试对出现在注视点左侧或右侧的刺激的颜色（或形状）作左/右键反应，与任务无关的刺激位置与反应侧一致或不一致。不一致试次反应变慢，并诱发额中央 N2 及先偏向错误手的偏侧化准备电位。
+trial_structure:
+  conditions:
+  - corresponding
+  - non-corresponding
+protocol:
+  n_classes: 2
+  classes:
+  - corresponding
+  - non-corresponding
+  cue: coloured visual stimuli at lateral screen positions; colour-to-key mapping
+  paradigm_timing: synchronous
+  feedback: none
+  distinguishing: 准则 2：刺激为左右视野中的彩色视觉刺激（CTL-SIM-001 为左右耳的听觉刺激）。
+first_source:
+  citation: 'TBD: origin of the visual Simon task not identified; HED task catalog lists it as the standard variant without
+    a reference'
+  verified: false
+interop:
+  bids_task: simon
+notes: 'Leads used: HED Simon task page (fetched in sprint 2); R0516 review. first_source TBD (D-032). Sprint 2 (D-057, curator_c,
+  2026-10-03): new concrete paradigm of class CTL-SIM; numbering criterion 2 relative to CTL-SIM-001; all sources unverified.'
+status: draft
+contributors:
+- curator_c

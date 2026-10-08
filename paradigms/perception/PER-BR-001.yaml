@@ -1,0 +1,57 @@
+schema_version: '0.2'
+id: PER-BR-001
+class: PER-BR
+name:
+  en: Binocular rivalry / bistable perception
+  zh: 双眼竞争与双稳态知觉
+aliases:
+- ambiguous figure (Necker cube) paradigm
+- binocular rivalry
+- bistable perception
+- perceptual rivalry
+family: perception
+bci_category:
+- none
+recording_modality:
+- fMRI
+- EEG
+- MEG
+stimulus_modality:
+- visual
+markers:
+- MK.BOLD_visual_cortex
+description:
+  en: Dissimilar images are presented to the two eyes. Although the input is constant, perception alternates between the two
+    images, and participants report each switch by key press; neural activity, for example visual cortex BOLD, is time-locked
+    to the reported switches or sorted by the reported dominant percept.
+  zh: 双眼分别呈现不同图像。虽然输入不变，知觉在两幅图像之间交替，被试按键报告每次切换；神经活动（如视觉皮层 BOLD）与报告的切换锁时，或按报告的主导知觉分类。
+protocol:
+  n_classes: 2
+  classes:
+  - percept A dominant
+  - percept B dominant
+  cue: dissimilar images presented dichoptically, perceptual switches reported by key press
+  stimulus_coding: 频率标记版本拆为 PER-BR-002（准则 2）；歧义图形版本在 split_log 中提议。
+  paradigm_timing: continuous
+  feedback: none
+  distinguishing: 标准配置（最早发表，即 first_source）：双眼分视不同图像，被试连续按键报告当前主导知觉。同类其他具体范式：PER-BR-002（区别见各自 distinguishing；维护者 sprint 2
+    QA 更正）。
+first_source:
+  citation: Wheatstone C. Contributions to the physiology of vision. Part the first. On some remarkable, and hitherto unobserved,
+    phenomena of binocular vision. Philos Trans R Soc Lond. 1838;128:371-394.
+  doi: 10.1098/rstl.1838.0019
+  year: 1838
+  verified: false
+interop:
+  bids_task: rivalry
+notes: 'Leads used: R0239, R0346. first_source: no origin source identified in this pass (blocker, see curation/work/pkg_A/status.csv).
+  Leads are reviews only. Task-sheet model-memory hints (unverified): Wheatstone 1838 for the phenomenon; frequency-tagged
+  rivalry MEG/EEG studies of the late 1990s. [curator_a sprint 2, 2026-10-03] D-057: frequency-tagged rivalry is PER-BR-002
+  (marker MK.SSVEP moved there); ambiguous-figure bistability is a proposal in split_log. [curator_e sprint 3, 2026-10-05]
+  candidate origin found by bibliographic search (OpenAlex, 2026-10-05); content unverified. [maintainer sprint 3, 2026-10-07]
+  bibliography confirmed (OpenAlex, 2026-10-05; origin candidate, content unverified). [maintainer sprint 3, 2026-10-07, D-073]
+  origin candidate recalled, record confirmed via OpenAlex.'
+status: draft
+contributors:
+- curator_a
+- curator_e

@@ -1,0 +1,98 @@
+name: 范式条目 / Paradigm entry
+description: 认领或提议一个范式条目（一个范式 = 一个 Issue + 一个 PR）/ Claim or propose one paradigm entry.
+title: "[范式] <ID> <中文名>"
+labels: ["paradigm", "待认领"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        每个具体范式对应一个 Issue。ID 分两级：范式类 `<范式族>-<简称>`，具体范式 `<范式族>-<简称>-<序号>`（D-057）。认领前请确认该范式在 `curation/candidates.csv` 中 `decision = 收录`；被并入（`并入 <ID>`）的候选不建文件，请写成目标范式的变体（`curation/decisions.md` D-030）。
+        One issue per concrete paradigm (`<FAMILY>-<SHORT>-<NNN>` of class `<FAMILY>-<SHORT>`, D-057). Only candidates with `decision = 收录` get their own file; merged candidates become `variants` of the target paradigm.
+  - type: input
+    id: paradigm_id
+    attributes:
+      label: 范式 ID / Paradigm ID
+      description: candidates.csv 中的 proposed_id；新提议的范式留空，由维护者分配。
+      placeholder: CTL-FLK-001
+  - type: input
+    id: class
+    attributes:
+      label: 范式类 / Paradigm class
+      description: "`<范式族>-<简称>`，即 ID 去掉序号（D-057）。已有范式类见 paradigms/_classes.yaml；新范式类请在下方说明标记物或构念的不同。"
+      placeholder: MOT-MI
+    validations:
+      required: true
+  - type: checkboxes
+    id: criterion
+    attributes:
+      label: 与同类已有具体范式相比改变了什么 / Numbering criterion changed (D-057)
+      description: 新具体范式（新序号）至少勾选一项；只改参数（时长、ISI、试次数、同一编码方案内的取值）的请作为变体，不开新序号。新范式类的第一个具体范式（-001）不勾选。
+      options:
+        - label: 1 类别/条件集 / class or condition set
+        - label: 2 刺激或提示类型（含编码方案）/ stimulus or cue type (incl. coding scheme)
+        - label: 3 试次结构（同步/异步，单试次/组块）/ trial structure
+        - label: 4 反馈方式（无/离散/连续，开环/闭环）/ feedback mode
+  - type: input
+    id: name
+    attributes:
+      label: 名称 / Name (zh / en)
+      placeholder: Flanker 任务 / Flanker task
+    validations:
+      required: true
+  - type: dropdown
+    id: package
+    attributes:
+      label: 工作包 / Package
+      options:
+        - A 感知与稳态 (perception, steady_state)
+        - B 运动、想象与刺激 (motor, imagery, stimulation)
+        - C 错误监测与认知控制 (error, control)
+        - D 记忆与语言 (memory, language)
+        - E 情绪、社会与脑状态 (emotion, social, state)
+        - 新提议，待分配 / New proposal
+    validations:
+      required: true
+  - type: dropdown
+    id: kind
+    attributes:
+      label: 类型 / Kind
+      options:
+        - 第一遍骨架 / First-pass skeleton
+        - 第二遍补完整 / Second-pass completion
+        - 新范式提议 / New paradigm proposal
+        - 修正已有条目 / Correction
+    validations:
+      required: true
+  - type: input
+    id: markers
+    attributes:
+      label: 神经标记物 / Markers
+      description: 使用 curation/registry/paradigm_markers.csv 中的规范 ID，用 ; 分隔。登记表中没有的，在本包 marker_requests.csv 中申请。
+      placeholder: MK.ERN; MK.Pe; MK.N2_frontocentral
+  - type: textarea
+    id: sources
+    attributes:
+      label: 源头候选与关键文献 / First-source candidates and key references
+      description: 列出任务单中的线索编号（R0xxx）或 DOI/PMID。未核实的请注明。
+      placeholder: |
+        - 源头候选：R0123 Eriksen & Eriksen 1974（未核实）
+        - 综述：R0456
+  - type: textarea
+    id: inclusion
+    attributes:
+      label: 纳入理由（仅新提议）/ Inclusion rationale (new proposals only)
+      description: 说明满足方法说明 §2 的三条纳入标准，以及它与已有范式的区别：新范式类看标记物或构念是否不同（§1）；同类新具体范式看上方给号准则（§6）。
+  - type: input
+    id: assignee
+    attributes:
+      label: 策展人 / Curator handle
+      placeholder: curator_c
+  - type: checkboxes
+    id: checks
+    attributes:
+      label: 确认 / Checks
+      options:
+        - label: 已查 candidates.csv 与 decisions.md，该范式不是被并入、排除或暂缓的候选
+          required: true
+        - label: 我只会修改本包写入范围内的文件（decisions.md D-029）
+          required: true

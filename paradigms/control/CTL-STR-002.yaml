@@ -1,0 +1,50 @@
+schema_version: '0.2'
+id: CTL-STR-002
+class: CTL-STR
+name:
+  en: Stroop task (single-trial computerised colour-word)
+  zh: Stroop 任务（单试次计算机化颜色词）
+aliases:
+- Manual Stroop
+- Single-trial Stroop
+- Computerised Stroop
+family: control
+bci_category:
+- none
+recording_modality:
+- EEG
+- fMRI
+stimulus_modality:
+- visual
+markers:
+- MK.N450
+description:
+  en: Colour words are presented one at a time in a congruent or incongruent ink colour, and participants report the ink colour
+    on each trial, usually by button press (or vocally). Incongruent trials slow responses and elicit a fronto-central negativity
+    peaking around 450 ms (N450).
+  zh: 颜色词逐个以一致或不一致的墨水颜色呈现，被试在每个试次上报告墨色，通常按键（也可口头）。不一致试次反应变慢，并诱发约 450 ms 达峰的额中央负波（N450）。
+trial_structure:
+  conditions:
+  - congruent
+  - incongruent
+protocol:
+  n_classes: 2
+  classes:
+  - congruent
+  - incongruent
+  cue: single colour word per trial in congruent or incongruent ink colour
+  paradigm_timing: synchronous
+  feedback: none
+  distinguishing: 准则 3：单试次呈现、逐试次反应（CTL-STR-001 为整张卡片/列表连续命名的组块结构）；按键或口头反应、是否含中性试次只是参数。
+first_source:
+  citation: 'TBD: origin of the single-trial computerised colour-word Stroop not identified; HED task catalog lists manual
+    (button-press) Stroop as preferred in neuroimaging, without a reference'
+  verified: false
+interop:
+  bids_task: stroop
+notes: 'Leads used: HED Stroop page (fetched in sprint 2); R0096. first_source TBD (D-032). N450 origin (Liotti et al. 2000,
+  task-sheet memory) not seen. Emotional Stroop is EMO-EST (D-019). Sprint 2 (D-057, curator_c, 2026-10-03): new concrete
+  paradigm of class CTL-STR; numbering criterion 3 relative to CTL-STR-001; all sources unverified.'
+status: draft
+contributors:
+- curator_c

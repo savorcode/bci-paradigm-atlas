@@ -1,0 +1,57 @@
+schema_version: '0.2'
+id: MEM-DRM-001
+class: MEM-DRM
+name:
+  en: Deese-Roediger-McDermott paradigm
+  zh: 错误记忆（DRM）
+aliases:
+- DRM paradigm
+- False memory word-list paradigm
+family: memory
+bci_category:
+- none
+recording_modality:
+- EEG
+- fMRI
+stimulus_modality:
+- visual
+- auditory
+markers:
+- MK.FN400
+- MK.parietal_old_new
+description:
+  en: Participants study lists of words that are all semantic associates of a single non-presented critical lure and are later
+    tested by recall or recognition; the critical lure is frequently falsely remembered. ERP studies compare studied words,
+    critical lures and unrelated new words, using the mid-frontal (FN400) and left parietal old/new effects to separate familiarity-
+    and recollection-based contributions to true and false recognition.
+  zh: 被试学习若干词表，每个词表中的词都是同一个未呈现的关键诱饵词的语义联想词，随后进行回忆或再认测试，关键诱饵词常被错误地“记起”。ERP 研究比较学过的词、关键诱饵词与无关新词，利用额中部（FN400）和左顶叶新旧效应区分熟悉性与回忆对真实再认和错误再认的贡献。
+trial_structure:
+  conditions:
+  - studied
+  - critical lure
+  - unrelated new
+protocol:
+  n_classes: 3
+  classes:
+  - studied word
+  - critical lure
+  - unrelated new word
+  cue: auditory or visual lists of semantic associates of a non-presented critical lure
+  paradigm_timing: synchronous
+  feedback: none
+  distinguishing: 标准配置（最早发表）：联想词表学习 + 回忆/再认测试（Deese 1959, R0006；Roediger & McDermott 1995, R0122）。本类只有这一配置。
+first_source:
+  citation: Deese J. On the prediction of occurrence of particular verbal intrusions in immediate recall. Journal of Experimental
+    Psychology. 1959;58(1):17-22.
+  doi: 10.1037/h0046671
+  pmid: '13664879'
+  year: 1959
+  verified: false
+interop:
+  bids_task: drm
+notes: 'Leads: R0006, R0122, R0200 (R#### = curation/literature.csv; DN## = curation/work/pkg_D/new_leads.csv). Deese 1959
+  (R0006) chosen as origin; the paradigm was revived and named by Roediger & McDermott 1995 (R0122). Sprint 2 (D-057, curator_d,
+  2026-10-03): protocol block added (-001 = earliest/standard configuration). bibliography corrected (OpenAlex, 2026-10-05)'
+status: draft
+contributors:
+- curator_d

@@ -1,0 +1,25 @@
+schema_version: "0.2"
+id: MK.BOLD_category_selective
+name:
+  en: Category-selective ventral visual cortex BOLD (FFA, PPA, etc.)
+  zh: 腹侧视觉皮层类别选择性 BOLD（FFA、PPA 等）
+aliases:
+- FFA activation
+- PPA activation
+- EBA activation
+- category-selective ventral visual cortex
+type: hemodynamic
+recording_modality:
+- fMRI
+- PET
+description:
+  en: BOLD responses in ventral and lateral occipito-temporal cortex that are larger for one visual category than for others,
+    for example faces in the fusiform face area, places in the parahippocampal place area and bodies in the extrastriate body
+    area.
+  zh: 腹侧及外侧枕颞皮层中对某一视觉类别的响应大于其他类别的 BOLD 信号，例如梭状回面孔区对面孔、海马旁回位置区对场景、纹外身体区对身体的响应。
+notes: 'First-pass skeleton by package A (2026-10-03). No generators/indexes yet. D-050 (maintainer, 2026-10-03): PET regional
+  blood-flow (rCBF) effects in the same region are grouped under this marker, as fNIRS HbO is under D-028 item 5.'
+status: draft
+contributors:
+- curator_a
+- maintainer

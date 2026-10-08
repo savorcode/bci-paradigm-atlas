@@ -1,0 +1,23 @@
+schema_version: "0.2"
+id: MK.interbrain_synchrony
+name:
+  en: Inter-brain synchrony
+  zh: 脑间同步
+aliases:
+- inter-brain coupling
+- brain-to-brain synchrony
+- hyperscanning synchrony
+type: connectivity
+recording_modality:
+- EEG
+- fNIRS
+description:
+  en: Statistical coupling, such as phase synchrony or wavelet coherence, between signals recorded simultaneously from two
+    or more interacting people. It increases during cooperative or coordinated interaction compared with independent or non-interactive
+    conditions.
+  zh: 在两名或多名互动个体上同时记录的信号之间的统计耦合，如相位同步或小波相干。与独立或无互动条件相比，在合作或协调互动中增强。
+notes: 'Hyperscanning measure (D-021). No signature: frequency and topography depend on task and modality.'
+status: draft
+contributors:
+- maintainer
+- curator_e

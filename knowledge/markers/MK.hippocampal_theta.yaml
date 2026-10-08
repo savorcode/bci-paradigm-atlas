@@ -1,0 +1,27 @@
+schema_version: "0.2"
+id: MK.hippocampal_theta
+name:
+  en: Hippocampal theta
+  zh: 海马 θ
+aliases:
+- human hippocampal theta
+- medial temporal theta
+type: oscillatory
+recording_modality:
+- sEEG
+- MEG
+signature:
+  frequency_hz: approximately 3-8 (human hippocampal theta often lower than in rodents)
+description:
+  en: >-
+    Theta-band oscillations recorded from the hippocampus with depth electrodes, or estimated from MEG source activity,
+    during spatial navigation and episodic memory tasks. Power and phase dynamics of hippocampal theta are related
+    to movement through virtual environments and to successful encoding and retrieval.
+  zh: 在空间导航和情景记忆任务中，用深部电极记录或由 MEG 源活动估计的海马 θ 频段振荡。海马 θ 的功率和相位动态与在虚拟环境中的移动以及成功的编码和提取有关。
+notes: >-
+  First-pass skeleton (curator_d, 2026-10-03). Signature values are textbook-level approximations that await source
+  checking; generators and indexes will be added in the second pass.
+status: draft
+contributors:
+- maintainer
+- curator_d

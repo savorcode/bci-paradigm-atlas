@@ -1,0 +1,72 @@
+schema_version: '0.2'
+id: LAN-VF-001
+class: LAN-VF
+name:
+  en: Verbal fluency
+  zh: 言语流畅性
+aliases:
+- COWAT
+- Category Fluency
+- Controlled Oral Word Association Test
+- FAS Test
+- Letter Fluency
+- Phonemic Fluency
+- Semantic Fluency
+- word generation
+- word association task
+- verbal fluency task
+- VFT
+family: language
+bci_category:
+- none
+recording_modality:
+- fMRI
+- fNIRS
+stimulus_modality:
+- cognitive_task
+- auditory
+markers:
+- MK.HbO_prefrontal
+description:
+  en: Within a fixed time per cue, participants say aloud as many words as possible that begin with a given letter (phonemic
+    fluency) or belong to a given category (semantic fluency); the number of correct words is the score. Fluency generation
+    increases prefrontal oxygenated haemoglobin in fNIRS and activates left inferior frontal regions in fMRI.
+  zh: 每个线索给定固定时长，被试尽可能多地说出以指定字母开头（音位流畅性）或属于指定类别（语义流畅性）的词，以正确词数计分。流畅性生成在 fNIRS 中提高前额叶氧合血红蛋白，在 fMRI 中激活左侧额下区域。
+trial_structure:
+  conditions:
+  - letter fluency
+  - category fluency
+protocol:
+  n_classes: 1
+  classes:
+  - word generation (letter or category cue)
+  cue: spoken letter or category cue
+  paradigm_timing: block
+  feedback: none
+  distinguishing: 标准配置（最早发表）：神经心理测验（限时口头生成，每个线索一个固定时段；Benton et al. 1983, R0061）。与 -002（BCI 心理任务：短的提示试次中默想生词 vs 休息，准则 1;3）、-003（fNIRS
+    组块设计，生成与控制交替，准则 1）区别。
+first_source:
+  citation: 'Benton, A. L., Hamsher, K., & Sivan, A. B. Multilingual Aphasia Examination (3rd ed.). Iowa City: AJA Associates.
+    1983.'
+  year: 1983
+  verified: false
+interop:
+  bids_task: verbalfluency
+notes: 'HED task page: https://www.hedtags.org/hed-task/tasks/hedtsk_verbal_fluency.html. Leads: R0061, R0142, R0269, R0420,
+  R0630, R0765, R0978 (R#### = curation/literature.csv; DN## = curation/work/pkg_D/new_leads.csv). R0061 (Benton & Hamsher
+  1983, Multilingual Aphasia Examination) is the oldest lead; it is a test manual, not necessarily the origin. Overlap with
+  IMG-WORD-001 (package B), whose aliases include verbal fluency and verb generation - needs maintainer decision. D-035 (maintainer,
+  2026-10-03): IMG-WORD-001 (pkg B) merged here as a variant - same marker (MK.HbO_prefrontal) and construct (lexical retrieval);
+  BCI use is expressed by bci_category (precedent D-003). IMG-WORD-001 retired; its first_source (Petersen et al. 1988, R0082)
+  is the LAN-VG-001 origin. Sprint 2 (D-057, curator_d, 2026-10-03): protocol block added (-001 = earliest/standard configuration).
+  Narrowed to the neuropsychological test; the BCI covert word-generation mental task (former IMG-WORD-001, D-036) moved to
+  LAN-VF-002 together with the Shin et al. dataset, and the clinical fNIRS block design to LAN-VF-003. Sibling concrete paradigms:
+  LAN-VF-002, LAN-VF-003. D-061 (maintainer, 2026-10-05): marker inherited from class - MK.HbO_prefrontal measured in the
+  fNIRS siblings LAN-VF-002 / LAN-VF-003, not in the neuropsychological test configuration. bibliography not found in Crossref
+  (2026-10-05; curator_c): test manual (Benton, Hamsher & Sivan, Multilingual Aphasia Examination, AJA Associates) has no
+  Crossref record; search returned only secondary papers (Schum, Sivan & Benton 1989; Hamsher 1998)'
+status: draft
+contributors:
+- curator_d
+- curator_b
+- maintainer

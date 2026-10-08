@@ -1,0 +1,62 @@
+schema_version: '0.2'
+id: MOT-ME-002
+class: MOT-ME
+name:
+  en: Individual finger movements
+  zh: 单指运动
+aliases:
+- individual finger movement
+- finger flexion decoding
+- ECoG finger decoding
+family: motor
+bci_category:
+- active
+- none
+recording_modality:
+- ECoG
+- intracortical
+stimulus_modality:
+- motor_execution
+- visual
+markers:
+- MK.high_gamma
+- MK.SMR_ERD
+description:
+  en: >-
+    Participants flex individual fingers of one hand in response to a visual cue while finger positions are measured with
+    a data glove, and the moving finger (or its flexion trajectory) is decoded from electrocorticography. Focal high-gamma
+    increases with fine somatotopy over hand sensorimotor cortex distinguish the fingers.
+  zh: 被试按视觉提示屈曲一只手的单个手指，同时用数据手套测量手指位置，从皮层脑电中解码运动的手指（或其屈曲轨迹）。手部感觉运动皮层上具有精细躯体定位的局灶高 γ 增强可区分各手指。
+protocol:
+  n_classes: 5
+  classes:
+  - thumb
+  - index
+  - middle
+  - ring
+  - little
+  cue: cue to flex an individual finger (cue type to be checked)
+  paradigm_timing: synchronous
+  feedback: none
+  distinguishing: 'Criterion 1 vs MOT-ME-001: five individual-finger classes instead of a single hand/finger movement vs rest.'
+first_source:
+  citation: >-
+    Onaran I, Ince NF, Cetin AE. Classification of multichannel ECoG related to individual finger movements with redundant
+    spatial projections. Annual International Conference of the IEEE Engineering in Medicine and Biology Society. 2011;2011:5424-5427.
+  doi: 10.1109/iembs.2011.6091341
+  pmid: '22255564'
+  year: 2011
+  verified: false
+datasets:
+- name: BCI Competition IV, dataset 4 (ECoG finger flexion)
+  url: https://www.bbci.de/competition/iv/
+interop:
+  bids_task: motor
+notes: >-
+  Leads: R0871 (first_source, title + PMID), R0960, R0908, R0837. Converted from the MOT-ME-001 variant 'Individual finger
+  movements' (D-005, merged candidate MOT-FING-001, ID stays void). WF-B2-09 (BCI Competition IV page): dataset 4 has 5 classes
+  of individual finger flexions recorded with a data glove, 48-64 ECoG channels. Cue type to be checked. bibliography corrected
+  (OpenAlex, 2026-10-05)
+status: draft
+contributors:
+- curator_b

@@ -1,0 +1,52 @@
+schema_version: '0.2'
+id: EMO-MID-002
+class: EMO-MID
+name:
+  en: Social incentive delay task
+  zh: 社会激励延迟任务
+aliases:
+- SID task
+- social incentive delay
+family: emotion
+bci_category:
+- none
+recording_modality:
+- fMRI
+- EEG
+stimulus_modality:
+- visual
+markers:
+- MK.BOLD_striatum_reward
+description:
+  en: 'As in the monetary incentive delay task, a cue announces whether a fast response to an upcoming target can earn a reward,
+    but the incentive is social: successful trials are followed by a smiling or approving face instead of money. Anticipation
+    of social reward recruits ventral striatal BOLD.'
+  zh: 与金钱激励延迟任务相同，线索提示对随后靶刺激的快速反应能否获得奖励，但奖励是社会性的：成功试次之后出现微笑或赞许的面孔而非金钱。对社会奖赏的预期激活腹侧纹状体 BOLD。
+protocol:
+  n_classes: 2
+  classes:
+  - potential social reward
+  - no incentive
+  cue: cues announcing social reward, then a target; outcome shown as a facial expression
+  paradigm_timing: synchronous
+  feedback: discrete
+  distinguishing: 'Criterion 2 versus EMO-MID-001: incentive cues and outcome feedback are social (facial approval) instead
+    of monetary (Spreckelmeyer et al. 2009, R0426).'
+first_source:
+  citation: Spreckelmeyer KN, Krach S, Kohls G, Rademacher L, Irmak A, Konrad K, Kircher T, Gründer G. Anticipation of monetary
+    and social reward differently activates mesolimbic brain structures in men and women. Social Cognitive and Affective Neuroscience.
+    2009;4(2):158-165.
+  doi: 10.1093/scan/nsn051
+  pmid: '19174537'
+  year: 2009
+  verified: false
+interop:
+  bids_task: socialincentivedelay
+notes: 'Former EMO-MID-001 variant (merged candidate SOC-SID-001, D-025). HED task page: https://www.hedtags.org/hed-task/tasks/hedtsk_social_incentive_delay.html.
+  Lead refs: R0426, R0461, R0589, R0600, R0652, R0731 (all via merged SOC-SID-001). Studies also contrast social and monetary
+  blocks; whether the combined design is a further number is left to review. New concrete paradigm (curator_e, sprint 2, 2026-10-03,
+  D-057); all sources unverified. Sprint 3 (curator_d, 2026-10-05): bibliography corrected (OpenAlex, 2026-10-05): author
+  list expanded, volume, issue, pages added.'
+status: draft
+contributors:
+- curator_e

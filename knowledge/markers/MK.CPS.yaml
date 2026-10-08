@@ -1,0 +1,25 @@
+schema_version: "0.2"
+id: MK.CPS
+name:
+  en: Closure positive shift (CPS)
+  zh: 闭合正漂移（CPS）
+aliases:
+- CPS
+- closure positive shift
+type: erp_component
+recording_modality:
+- EEG
+signature:
+  polarity: positive
+  topography: centro-parietal
+description:
+  en: >-
+    Positive ERP shift time-locked to prosodic phrase boundaries in spoken sentences, and reported for comma-marked
+    boundaries in reading. It is interpreted as reflecting the closure of a prosodic phrase.
+  zh: 在口语句子中以韵律短语边界为锁时点的正向 ERP 偏移，在阅读中以逗号标示的边界处也有报告，被解释为反映韵律短语的闭合。
+notes: >-
+  First-pass skeleton (curator_d, 2026-10-03). Signature values are textbook-level approximations that await source
+  checking; generators and indexes will be added in the second pass. New marker requested by package D (see curation/work/pkg_D/marker_requests.csv).
+status: draft
+contributors:
+- curator_d

@@ -1,0 +1,54 @@
+schema_version: '0.2'
+id: LAN-SEMD-001
+class: LAN-SEMD
+name:
+  en: Semantic decision task
+  zh: 语义判断任务（语言定位）
+aliases:
+- semantic decision vs tone decision
+- animal semantic decision
+- semantic categorization
+family: language
+bci_category:
+- none
+recording_modality:
+- fMRI
+stimulus_modality:
+- auditory
+- visual
+markers:
+- MK.BOLD_language_network
+description:
+  en: Participants hear or read words, typically animal names, and decide whether each meets a semantic criterion, compared
+    with a control task such as deciding whether a tone sequence contains a target pitch. The semantic-minus-tone contrast
+    activates a left-lateralised network of frontal, temporal and parietal regions and is used for presurgical language lateralisation.
+  zh: 被试听或读词语（通常为动物名称），判断其是否满足某个语义标准，并与对照任务（如判断音调序列中是否包含目标音高）比较。“语义减音调”对比激活左侧化的额、颞、顶区网络，用于术前语言偏侧化评估。
+trial_structure:
+  conditions:
+  - semantic
+  - tone
+protocol:
+  n_classes: 2
+  classes:
+  - semantic decision
+  - tone decision
+  cue: spoken animal names (semantic task) and tone sequences (control)
+  paradigm_timing: block
+  feedback: none
+  distinguishing: 标准配置（最早发表）：语义判断 vs 音调判断组块对比（R1168）。本类只有这一配置。
+first_source:
+  citation: Binder JR, Rao SM, Hammeke TA, Frost JA, Bandettini PA, Jesmanowicz A, Hyde JS. Lateralized Human Brain Language
+    Systems Demonstrated by Task Subtraction Functional Magnetic Resonance Imaging. Archives of Neurology. 1995;52(6):593-601.
+  doi: 10.1001/archneur.1995.00540300067015
+  pmid: '7763208'
+  year: 1995
+  verified: false
+interop:
+  bids_task: semanticdecision
+notes: 'Leads: DN41, DN42 (R#### = curation/literature.csv; DN## = curation/work/pkg_D/new_leads.csv). New candidate (curator_d).
+  Clinical fMRI language-mapping protocol; distinct from LAN-LOC-001 (sentences vs nonwords, passive reading). DN41 chosen
+  as the earlier of two leads (title/PMID only). Leads: DN41, DN42. Sprint 2 (D-057, curator_d, 2026-10-03): protocol block
+  added (-001 = earliest/standard configuration). bibliography corrected (OpenAlex, 2026-10-05)'
+status: draft
+contributors:
+- curator_d

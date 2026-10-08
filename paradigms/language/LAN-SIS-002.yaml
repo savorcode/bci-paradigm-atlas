@@ -1,0 +1,56 @@
+schema_version: '0.2'
+id: LAN-SIS-002
+class: LAN-SIS
+name:
+  en: Speaking with altered auditory feedback
+  zh: 改变听觉反馈下的说话
+aliases:
+- altered auditory feedback
+- feedback perturbation during speech
+family: language
+bci_category:
+- none
+recording_modality:
+- MEG
+- EEG
+- ECoG
+stimulus_modality:
+- motor_execution
+- auditory
+markers:
+- MK.N1_auditory
+description:
+  en: While participants speak, the auditory feedback of their own voice is altered in real time (for example shifted in pitch
+    or formants, or mixed with noise) and compared with unaltered feedback and with listening to playback. The suppression
+    of the auditory M100/N1 during speaking is reduced when the feedback does not match the expected sound.
+  zh: 被试说话时，自身声音的听觉反馈被实时改变（如音高或共振峰偏移、混入噪声），与未改变的反馈以及聆听回放比较。当反馈与预期声音不符时，说话时听觉 M100/N1 的抑制减弱。
+trial_structure:
+  conditions:
+  - speak, normal feedback
+  - speak, altered feedback
+  - listen to playback
+protocol:
+  n_classes: 3
+  classes:
+  - speak with normal feedback
+  - speak with altered feedback
+  - listen
+  cue: real-time manipulation of the participant's own voice
+  paradigm_timing: synchronous
+  feedback: continuous
+  distinguishing: 准则 1;4：在说/听对比（LAN-SIS-001）中加入实时改变的听觉反馈条件，反馈路径被实时操纵（连续闭环）。
+first_source:
+  citation: 'Houde JF, Nagarajan SS, Sekihara K, Merzenich MM. Modulation of the Auditory Cortex during Speech: An MEG Study.
+    Journal of Cognitive Neuroscience. 2002;14(8):1125-1138.'
+  doi: 10.1162/089892902760807140
+  pmid: '12495520'
+  year: 2002
+  verified: false
+notes: 'Split out of the LAN-SIS-001 description. Lead R1220 (Modulation of the auditory cortex during speech: an MEG study;
+  title and PMID only) - the kind of alteration used there has to be checked. D-042: if ERR-AAF-001 (pitch-shift perturbation
+  response) is merged into LAN-SIS, it will get LAN-SIS-003 (criterion 2: brief unpredictable pitch shifts, response-locked
+  analysis). Leads: R1220, R1167. (R#### = curation/literature.csv; DN## = curation/work/pkg_D/new_leads.csv.) Numbering criterion
+  (D-057): 1;4. bibliography corrected (OpenAlex, 2026-10-05)'
+status: draft
+contributors:
+- curator_d

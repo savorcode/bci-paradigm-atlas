@@ -1,0 +1,161 @@
+# 包 B sprint 2 范式类修改（D-057）。维护者合入 paradigms/_classes.yaml；策展人不要直接改登记表。
+# Class edits for package B; the maintainer applies them to paradigms/_classes.yaml.
+# action: modify | add | deprecate；fields 只写要改的字段（schema/paradigm_class.schema.json）。
+updates:
+- id: MOT-MI
+  action: modify
+  fields:
+    description:
+      en: The participant imagines movements of specific body parts (e.g. left or right hand, feet, tongue, or joints of one
+        arm) without executing them, usually on a visual cue and in cue-paced trials, but also in self-paced mode and with
+        or without online feedback. Class-specific, somatotopically organised ERD/ERS of sensorimotor rhythms (and, for multi-joint
+        upper-limb tasks, low-frequency EEG) is used as the control signal in active BCIs.
+      zh: 被试想象特定身体部位的运动（如左手或右手、双脚、舌头，或单侧上肢的各关节）而不实际执行，通常由视觉提示在提示驱动的试次中进行，也可自定步调、带或不带在线反馈。具有躯体定位组织的类别特异感觉运动节律 ERD/ERS（单侧上肢多关节任务中还包括低频脑电）用作主动式脑机接口的控制信号。
+    markers:
+    - MK.SMR_ERD
+    - MK.low_freq_kinematics
+    aliases:
+    - motor imagery
+    - MI
+    - kinesthetic motor imagery
+    - movement imagery
+    - lower-limb MI
+    - foot motor imagery
+    - gait imagery
+    - asynchronous MI
+    - self-paced motor imagery
+  reason: Class description generalised to cover MOT-MI-001…-011 (D-057); MK.low_freq_kinematics added for MOT-MI-003 (Ofner
+    et al. 2017, low-frequency EEG decoding). Class origin unchanged (Pfurtscheller & Neuper 1997).
+- id: MOT-ME
+  action: modify
+  fields:
+    markers:
+    - MK.SMR_ERD
+    - MK.high_gamma
+    - MK.BOLD_motor_network
+    - MK.low_freq_kinematics
+    aliases:
+    - executed movement
+    - overt movement
+    - finger tapping
+    - finger tapping localizer
+    - FTT
+    - Tapping Task
+    - individual finger movement
+    - finger flexion decoding
+    - walking
+    - gait EEG
+    - paced finger tapping
+  reason: Union of markers of MOT-ME-001…-005 (MOT-ME-005 low-frequency EEG, Ofner et al. 2017); aliases of the split-out
+    protocols kept at class level.
+- id: MOT-ATT
+  action: modify
+  fields:
+    description:
+      en: Participants with paralysis are cued, visually or by spoken command, to try to perform a movement (e.g. of the foot,
+        hand or arm) that they cannot overtly execute. The attempt produces sensorimotor rhythm ERD/ERS and low-frequency
+        EEG changes over the corresponding motor area and modulates motor cortical spiking, which are decoded as control signals
+        or used as evidence of command following.
+      zh: 瘫痪被试在视觉提示或口头指令下，尝试完成其无法实际执行的动作（如足、手或上肢的动作）。尝试运动在相应运动区引起感觉运动节律 ERD/ERS 和低频脑电变化，并调制运动皮层神经元放电，这些信号被解码为控制信号，或作为指令跟随的证据。
+    markers:
+    - MK.SMR_ERD
+    - MK.motor_cortical_spiking
+    - MK.low_freq_kinematics
+  reason: Generalised for MOT-ATT-002 (spoken commands, DoC) and MOT-ATT-003 (Ofner et al. 2019, low-frequency EEG of attempted
+    arm/hand movements in SCI).
+- id: MOT-HW
+  action: modify
+  fields:
+    name:
+      en: Handwriting (attempted or executed)
+      zh: 书写（尝试或实际执行）
+    description:
+      en: A participant writes cued letters or sentences, either attempting to write as if holding a pen (paralysis, intracortical
+        recording) or writing overtly with a finger (scalp EEG). The handwriting kinematics or character identities are decoded
+        from motor cortical spiking or from low-frequency EEG.
+      zh: 被试书写提示的字母或句子：或仿佛握笔一样尝试书写（瘫痪被试，皮层内记录），或用手指实际书写（头皮脑电）。从运动皮层神经元放电或低频脑电中解码书写运动学或字符身份。
+    markers:
+    - MK.motor_cortical_spiking
+    - MK.low_freq_kinematics
+    aliases:
+    - brain-to-text handwriting
+    - imagined handwriting
+    - mental handwriting
+    - EEG handwriting decoding
+  reason: MOT-HW-002 (Crell & Müller-Putz 2024, executed handwriting with EEG, BNCI2024_001) extends the class beyond attempted
+    writing; marker added accordingly. Maintainer may instead prefer to keep MOT-HW attempted-only and move MOT-HW-002 to
+    MOT-ME (then a new serial there).
+- id: MOT-MRCP
+  action: modify
+  fields:
+    name:
+      en: Movement-related cortical potential (voluntary movement preparation)
+      zh: 运动相关皮层电位（自主运动准备）
+    description:
+      en: Participants perform or imagine brief voluntary movements (e.g. finger flexion or ankle dorsiflexion), either at
+        self-chosen times or on an external cue, and EEG is averaged to movement or cue onset or analysed in single trials.
+        A slowly rising negativity (Bereitschaftspotential / MRCP) precedes the movement; its online detection is used in
+        movement-intention BCIs, including ones that trigger peripheral stimulation.
+      zh: 被试在自选时刻或按外部提示完成或想象短暂的自主动作（如手指屈曲或踝背屈），以动作或提示起始为零点平均脑电，或做单试次分析。动作前出现缓慢上升的负电位（准备电位/MRCP）；对其在线检测用于运动意图脑机接口，包括触发外周刺激的系统。
+    aliases:
+    - MRCP
+    - movement-related cortical potential
+    - Bereitschaftspotential
+    - BP
+    - readiness potential
+    - associative BCI
+  reason: 'Class name and description generalised: MOT-MRCP-002 (cue-based) and -003 (self-paced online, stimulation-triggering)
+    are not ''self-paced'' only (Jochumsen et al. 2019).'
+- id: MOT-GRASP
+  action: modify
+  fields:
+    markers:
+    - MK.high_gamma
+    - MK.motor_cortical_spiking
+    - MK.SMR_ERD
+  reason: EEG protocols MOT-GRASP-003/-004 use sensorimotor rhythm features; union of markers.
+- id: MOT-REACH
+  action: modify
+  fields:
+    markers:
+    - MK.motor_cortical_spiking
+    - MK.high_gamma
+    - MK.low_freq_kinematics
+    aliases:
+    - center-out task
+    - centre-out reaching
+    - 8-target reaching
+    - wrist centre-out movement
+  reason: MOT-REACH-002 (BCI Competition IV dataset 3, directionally modulated low-frequency MEG).
+- id: MOT-SACC
+  action: modify
+  fields:
+    markers:
+    - MK.presaccadic_potential
+    - MK.BOLD_oculomotor
+    - MK.BOLD_frontoparietal
+  reason: MOT-SACC-002 (memory-guided saccades, sustained posterior parietal activity; Schluppeck et al. 2006). MK.BOLD_frontoparietal
+    is owned by package A.
+- id: MOT-CURSOR
+  action: modify
+  fields:
+    aliases:
+    - closed-loop BCI control
+    - cursor control
+    - radial-8 cursor task
+    - 1D/2D cursor control
+    - point-and-click typing
+  reason: Alias for MOT-CURSOR-003.
+- id: IMG-CMD
+  action: modify
+  fields:
+    aliases:
+    - mental imagery command-following
+    - active paradigm for DoC
+    - covert consciousness detection
+    - cognitive motor dissociation assessment
+    - tennis/navigation imagery
+    - spatial navigation imagery
+    - house navigation imagery
+    - fMRI yes/no communication
+  reason: Alias for IMG-CMD-003 (Monti et al. 2010).

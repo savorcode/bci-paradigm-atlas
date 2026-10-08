@@ -1,0 +1,93 @@
+# 包 C sprint 2 范式类修改（D-057）。维护者合入 paradigms/_classes.yaml；策展人不要直接改登记表。
+# Class edits for package C; the maintainer applies them to paradigms/_classes.yaml.
+# action: modify | add | deprecate；fields 只写要改的字段（schema/paradigm_class.schema.json）。
+updates:
+  - id: ERR-ERRP
+    action: modify
+    fields:
+      description:
+        en: "While the user operates or supervises a device or BCI, the system occasionally executes an action other than the intended one. Such errors elicit a fronto-central error-related potential (ErrP) time-locked to the erroneous feedback, whether the error follows a discrete user command, occurs while monitoring an autonomous device, is a genuine BCI selection error or arises during continuous control; the ErrP can be detected on single trials and used to correct or adapt the system."
+        zh: "用户操作或监督设备或脑机接口时，系统偶尔执行与意图不符的动作。无论错误发生在离散用户指令之后、监视自主运行设备时、来自真实的 BCI 选择错误，还是出现在连续控制中，都会在错误反馈之后诱发额中央的错误相关电位（ErrP）；它可在单试次上检测，用于纠正或自适应调整系统。"
+      aliases: [Interaction ErrP, error-related potentials in BCI, iErrP, Monitoring ErrP, Continuous ErrP]
+    reason: "D-057 split into ERR-ERRP-001 (discrete commands, Ferrez & Millán 2008), -002 (monitoring, BNCI 013-2015), -003 (P300-speller feedback, BCI Challenge @ NER 2015), -004 (continuous feedback, Spüler & Niethammer 2015); class description generalised. Class origin unchanged (Ferrez & Millán 2008, R0403)."
+  - id: ERR-OBS
+    action: modify
+    fields:
+      description:
+        en: "Participants watch another agent - a person, a virtual avatar or a machine - perform a task and monitor its actions without acting themselves. Observed errors elicit an observer error-related negativity (oERN) over medial frontal sites, a signal also exploited for passive BCI supervision of automated systems."
+        zh: "被试观看另一个行动者（他人、虚拟化身或机器）完成任务，只监视其动作而不亲自操作。被观察到的错误在内侧额区诱发观察性错误相关负波（oERN），这一信号也用于对自动化系统进行被动式 BCI 监督。"
+    reason: "D-057 split: ERR-OBS-001 observed choice task, -002 observed Go/NoGo, -003 VR avatar errors (R0714). Class origin unchanged (van Schie et al. 2004, R0279). Boundary with ERR-ERRP-002 (monitoring a machine) is a meeting item."
+  - id: ERR-AWARE
+    action: modify
+    fields:
+      description:
+        en: "Participants perform a speeded task and indicate, after each response or after errors they notice, whether they erred, so that errors can be sorted into aware (signalled) and unaware ones. The error positivity (Pe) and prefrontal-parietal activity are larger for aware than for unaware errors, whereas the earlier ERN differs less between them."
+        zh: "被试完成快速任务，并在每次反应后或在察觉错误后报告是否出错，从而把错误分为觉察到的（被报告的）与未觉察的两类。错误正波（Pe）与前额–顶叶活动在觉察到的错误上更强，而更早出现的 ERN 在两类错误间差异较小。"
+      markers: [MK.Pe, MK.ERN, MK.BOLD_frontoparietal]
+    reason: "D-057 split (D-015 revisited): -001 choice task with accuracy judgements (R0195), -002 antisaccade (R0205), -003 Error Awareness Task (Hester et al. 2005, fMRI). Marker union adds MK.ERN (R0205 contrasts ERN and Pe) and MK.BOLD_frontoparietal (Hester et al. 2005 abstract)."
+  - id: ERR-GAM
+    action: modify
+    fields:
+      description:
+        en: "Participants receive monetary gain or loss feedback that is largely independent of performance, after a simple choice (e.g., between two options or doors) or without any choice (slot-machine outcomes). Loss feedback elicits a fronto-central feedback-related negativity relative to gain feedback (equivalently, gains elicit a reward positivity)."
+        zh: "被试在简单选择（如两个选项或两扇门之间）之后，或在不作任何选择的情况下（老虎机结果），获得与表现基本无关的金钱得失反馈。损失反馈相对收益反馈诱发额中央反馈相关负波（等价地，收益诱发奖赏正波）。"
+      aliases: [Doors task, FRN paradigm, RewP paradigm, Reward feedback paradigm, Simple gambling task, Slot-machine task, Feedback Block, Performance Feedback, Score Screen, Trial Feedback]
+    reason: "D-057 split: -001 Gehring & Willoughby 2002, -002 doors task (R1093), -003 passive slot machine (R0714)."
+  - id: ERR-ADAPT
+    action: modify
+    fields:
+      name: {en: "Motor adaptation and reward-based motor learning", zh: "运动适应与基于奖赏的运动学习"}
+      description:
+        en: "Participants make reaching or cursor movements and adapt them to cancel an imposed sensory error (e.g., a rotated cursor) or to obtain binary reward feedback. Feedback revealing sensory or reward prediction errors elicits feedback-locked ERPs such as error-related potentials, the FRN and a P300."
+        zh: "被试做伸手或光标运动，并调整运动以抵消施加的感觉误差（如旋转的光标）或获得二值奖赏反馈。揭示感觉或奖赏预测误差的反馈诱发反馈锁时的事件相关电位，如错误相关电位、FRN 与 P300。"
+      markers: [MK.FRN, MK.ErrP, MK.P3b]
+    reason: "D-057 split: -001 visuomotor rotation (R0194), -002 reward-based reaching with binary feedback (R1001). R1001 reports FRN for reward feedback and P300 for both feedback types. Class origin unchanged (Krakauer et al. 2000)."
+  - id: ERR-CHGPT
+    action: modify
+    fields:
+      description:
+        en: "On each trial participants predict where the next outcome will fall and then observe the outcome, whose generative distribution changes abruptly at unsignalled change points or, in an oddball variant of the statistics, produces occasional outliers, so that trial-wise learning rates can be measured. Surprising outcomes elicit a feedback-locked P300 whose relation to belief updating depends on the statistical context."
+        zh: "每个试次被试预测下一个结果的位置并观察结果；结果的生成分布在无提示的变点处突变，或在 oddball 统计条件下偶尔产生离群值，从而可测量逐试次学习率。出乎意料的结果诱发反馈锁时的 P300，其与信念更新的关系取决于统计情境。"
+    reason: "D-057 split: -001 change-point (Nassar et al. 2010), -002 change-point + oddball (Nassar et al. 2019)."
+  - id: ERR-TS
+    action: modify
+    fields:
+      aliases: [Daw Task, MB/MF Task, Two-Step Task, Kool two-step task]
+    reason: "D-057: ERR-TS-002 deterministic-transition two-stage task (Kool et al. 2016, R0692)."
+  - id: CTL-CPT
+    action: modify
+    fields:
+      name: {en: "Continuous performance task", zh: "持续操作任务"}
+      description:
+        en: "Participants monitor a long stream of stimuli and respond to targets, which requires sustained attention; in context versions (AX-CPT) the target is defined by a preceding cue, and in gradual-onset versions stimuli morph continuously. Targets elicit a P3, cues in the AX-CPT a contingent negative variation, and attentional fluctuations are tracked by default-mode activity."
+        zh: "被试监视长时间的刺激流并对目标作反应，需要持续注意；情境版本（AX-CPT）中目标由前一线索界定，渐变版本中刺激连续过渡。目标诱发 P3，AX-CPT 的线索诱发关联性负变，注意波动可由默认模式网络活动追踪。"
+      markers: [MK.CNV, MK.P3b, MK.DMN_connectivity]
+      aliases: [CPT, CPT-II, CPT-X, X-CPT, Continuous Performance, AX-CPT, AX continuous performance task, AX-CPT variant, gradCPT]
+    reason: "D-057 split: -001 X-CPT (Rosvold et al. 1956), -002 AX-CPT (Servan-Schreiber et al. 1996), -003 gradCPT (R0575). Class name no longer AX-CPT-specific. MK.DMN_connectivity (package E) is a provisional fit for gradCPT."
+  - id: CTL-FLK
+    action: modify
+    fields:
+      markers: [MK.ERN, MK.Pe, MK.N2_frontocentral, MK.LRP]
+      aliases: [Arrow flanker task, Arrowhead flanker, Eriksen flanker, Flanker, Flanker Task, Letter flanker task]
+    reason: "D-057 split: -001 letter, -002 arrow (ERP CORE flankers paradigm reports LRP and ERN); MK.LRP (package B) added to the union."
+  - id: CTL-SW
+    action: modify
+    fields:
+      description:
+        en: "Participants alternate between two simple tasks on the same stimuli - in predictable runs, as indicated by an explicit cue, or by their own choice - and responses are slower on switch than on repeat trials. Cue-locked switch trials elicit a posterior switch-related positivity, and frontal midline theta increases with switching."
+        zh: "被试在同一刺激上交替完成两个简单任务——按可预测序列、按显式线索或自主选择——切换试次的反应慢于重复试次。线索锁时的切换试次诱发后部切换相关正波，额中线 θ 随切换增强。"
+      aliases: [Alternating Runs, Alternating runs paradigm, Cued task switching, Voluntary task switching, Set Shifting, Task-switching paradigm]
+    reason: "D-057 split: -001 alternating runs (Rogers & Monsell 1995), -002 cued (Meiran 1996), -003 voluntary (HED)."
+  - id: CTL-PDM
+    action: modify
+    fields:
+      description:
+        en: "Participants view random-dot motion in which a variable fraction of dots moves coherently - in discrete trials or as unannounced periods within a continuous display - and report the net motion direction. Sensory evidence accumulation is reflected in a centro-parietal positivity that builds up at a rate proportional to motion coherence and peaks around the decision."
+        zh: "被试观看随机点运动，其中一部分点一致运动——按离散试次呈现，或作为连续画面中无预告出现的片段——并报告净运动方向。感觉证据的累积表现为中央顶正波，其累积速率与运动一致性成正比，并在决策附近达峰。"
+      aliases: [Dot Motion, Dot Motion Task, Motion coherence discrimination, Perceptual decision making, RDK, Random Dot Kinematogram, Random dot motion task, Continuous dot-motion detection]
+    reason: "D-057 split: -001 trial-based RDM (Britten et al. 1992), -002 continuous monitoring (Kelly & O'Connell 2013)."
+  - id: CTL-STR
+    action: modify
+    fields:
+      aliases: [CWIT, Color-Word Interference Test, Color-word interference task, Stroop, Stroop color-word task, Manual Stroop, Single-trial Stroop]
+    reason: "D-057 split: -001 card version (Stroop 1935), -002 single-trial computerised version (HED). Class description already describes the single-trial form with N450; maintainer may wish to mention the card version."

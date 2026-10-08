@@ -1,0 +1,54 @@
+schema_version: '0.2'
+id: IMG-SPI-002
+class: IMG-SPI
+name:
+  en: Imagined command words (inner speech)
+  zh: 想象指令词（内部言语）
+aliases:
+- inner speech words
+- imagined directional words
+- Thinking out loud dataset
+family: imagery
+bci_category:
+- active
+recording_modality:
+- EEG
+stimulus_modality:
+- mental_imagery
+- visual
+markers:
+- MK.high_gamma
+description:
+  en: >-
+    On each trial a visual cue indicates one of a small set of command words (e.g. Spanish words for up, down, left and right),
+    which the participant then says silently in inner speech; some datasets add pronounced or visualised conditions as comparisons.
+    The word is classified from EEG.
+  zh: 每个试次由视觉提示指示一组少量指令词之一（如西班牙语的上、下、左、右），被试随后以内部言语默念该词；部分数据集另设出声或视觉化条件作比较。依据脑电对词分类。
+protocol:
+  n_classes: 4
+  cue: visual cue
+  paradigm_timing: synchronous
+  feedback: none
+  distinguishing: 'Criterion 1 vs IMG-SPI-001: a set of directional command words instead of vowels.'
+first_source:
+  citation: >-
+    Nieto N, Peterson V, Rufiner HL, Kamienkowski JE, Spies RD. Thinking out loud, an open-access EEG-based BCI dataset for
+    inner speech recognition. Scientific Data. 2022;9(1):52.
+  doi: 10.1038/s41597-022-01147-2
+  year: 2022
+  verified: false
+datasets:
+- name: Thinking out loud, an open-access EEG-based BCI dataset for inner speech recognition
+  subjects: 10
+interop:
+  bids_task: innerspeech
+notes: >-
+  Leads: WS-B2-07 [=R1302], WF-B2-21 (sinc.unl.edu.ar bibliographic page), WF-B2-23 [=R1303] (Varshney & Khan 2022, Front
+  Signal Process, doi 10.3389/frsip.2022.760643, which lists Nieto et al. 2021 'four Spanish direction-based words, 10 subjects'
+  and Coretto et al. 2017 'six Spanish direction commands and five vowels'). Coretto et al. 2017 is earlier and probably the
+  origin of the command-word configuration (secondary citation only; to be checked). The four words are not listed on the
+  pages seen, so protocol.classes is left out until the paper is read. Scalp-EEG features of this protocol are not high-gamma;
+  marker kept at class level pending a marker review. bibliography corrected (OpenAlex, 2026-10-05)
+status: draft
+contributors:
+- curator_b

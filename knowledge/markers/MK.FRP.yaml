@@ -1,0 +1,27 @@
+schema_version: "0.2"
+id: MK.FRP
+name:
+  en: Fixation-related potential
+  zh: 注视相关电位
+aliases:
+- FRP
+- fixation-related brain potential
+- eye-fixation-related potential (EFRP)
+type: erp_component
+recording_modality:
+- EEG
+signature:
+  topography: early lambda response maximal over occipital sites
+description:
+  en: >-
+    EEG response time-locked to the onset of an eye fixation during free viewing or reading, analogous to a stimulus-locked
+    ERP. It contains an early occipital lambda response related to the new visual input and later components, such
+    as the N400, that are modulated by properties of the fixated word.
+  zh: 在自由观看或阅读过程中以眼睛注视起始为锁时点的 EEG 响应，类似以刺激为锁时点的 ERP。它包含与新视觉输入有关的早期枕区 λ 响应，以及受被注视词属性调制的较晚成分（如 N400）。
+notes: >-
+  First-pass skeleton (curator_d, 2026-10-03). Signature values are textbook-level approximations that await source
+  checking; generators and indexes will be added in the second pass.
+status: draft
+contributors:
+- maintainer
+- curator_d

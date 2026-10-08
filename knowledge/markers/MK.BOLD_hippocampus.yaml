@@ -1,0 +1,19 @@
+schema_version: "0.2"
+id: MK.BOLD_hippocampus
+name:
+  en: Hippocampal BOLD response
+  zh: 海马 BOLD 响应
+aliases:
+- hippocampal activation
+- hippocampal BOLD
+type: hemodynamic
+recording_modality:
+- fMRI
+description:
+  en: Task-related BOLD response in the hippocampus, including responses related to encoding, retrieval, spatial context and
+    pattern separation in subfields.
+  zh: 海马中与任务相关的 BOLD 响应，包括与编码、提取、空间情境以及亚区模式分离相关的响应。
+notes: First-pass skeleton by package A (2026-10-03). No generators/indexes yet.
+status: draft
+contributors:
+- curator_a

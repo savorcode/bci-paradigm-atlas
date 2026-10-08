@@ -1,0 +1,24 @@
+schema_version: "0.2"
+id: MK.SPN
+name:
+  en: Sustained posterior negativity
+  zh: 持续性后部负波
+aliases:
+- SPN
+- sustained posterior negativity
+type: erp_component
+recording_modality:
+- EEG
+signature:
+  latency_ms: from ~250, sustained
+  polarity: negative (regular minus random)
+  topography: posterior / occipital
+description:
+  en: Sustained negativity over posterior sites for symmetrical or otherwise regular patterns relative to random patterns;
+    its amplitude increases with the degree of regularity.
+  zh: 对称或其他规则图案相对于随机图案在后部电极出现的持续负波；其波幅随规则程度增加。
+notes: First-pass skeleton by package A (2026-10-03). No generators/indexes yet. Signature values are textbook-level approximations
+  and await source checking. New marker requested by package A (curation/work/pkg_A/marker_requests.csv); not yet in curation/registry/markers.csv.
+status: draft
+contributors:
+- curator_a

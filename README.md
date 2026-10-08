@@ -75,7 +75,7 @@ python scripts/build_graph.py     # exports dist/graph.json and prints coverage 
 
 ## Status
 
-The atlas is in its seeding phase. The schemas (v0.1) and vocabularies are drafts and may change before v1.0. Seed entries are marked `draft` until their sources have been verified against the original publications.
+Release v0.1.0 (8 Oct 2026) contains 267 paradigm classes, 405 concrete paradigms (404 active, each with a protocol) and 129 neural markers across all 12 paradigm families. The first sources of all 682 entries have been checked bibliographically against Crossref/OpenAlex; checking them against the full text is the next step, so every entry is still marked `draft`. Identifier meanings are frozen from this release. Schema 0.2 (two-level paradigm identifiers: class and concrete protocol) and the vocabularies are drafts and may change before v1.0. Release notes (Chinese): [curation/reports/release_v0.1.0.md](curation/reports/release_v0.1.0.md).
 
 
 ## Relation to the Paradigm Factory
@@ -91,8 +91,9 @@ The first version of the Paradigm Factory is scheduled for **late October 2026**
 | Version | Target | Content |
 |---|---|---|
 | v0.0.1 | 1 Oct 2026 | Initial release and first public statement of the BCI Paradigm Atlas and Paradigm Factory concepts |
+| v0.1.0 | 8 Oct 2026 | 267 paradigm classes, 405 concrete paradigms with protocols, two-level identifiers, bibliographic verification of 682 sources |
 | — | Late Oct 2026 | Paradigm Factory first version |
-| v0.1.x | Q4 2026 | Systematic seeding of paradigms and markers across modalities |
+| v0.2.x | Q4 2026 | Content verification of sources against the full text; schema 0.3 proposals |
 | v1.0.0 | TBD | Atlas v1 frozen; review paper made public |
 
 Versions follow [Semantic Versioning](https://semver.org). See [CHANGELOG.md](CHANGELOG.md).

@@ -1,0 +1,56 @@
+schema_version: '0.2'
+id: STA-MW-001
+class: STA-MW
+name:
+  en: Mind wandering (probe-caught thought sampling)
+  zh: 走神（思维探测采样）
+aliases:
+- experience sampling
+- mind wandering
+- task-unrelated thought
+- thought probes
+family: state
+bci_category:
+- passive
+- none
+recording_modality:
+- EEG
+- fMRI
+stimulus_modality:
+- visual
+- cognitive_task
+markers:
+- MK.alpha_posterior
+- MK.P3b
+- MK.DMN_connectivity
+description:
+  en: During a monotonous ongoing task, thought probes ask participants at random times whether their attention was on the
+    task or elsewhere, and neural activity preceding on- and off-task reports is compared. Off-task periods show reduced P3b
+    to task stimuli, increased posterior alpha and engagement of the default mode network.
+  zh: 在单调的持续任务中，思维探测在随机时刻询问被试注意力是在任务上还是在别处，并比较“在任务”与“离任务”报告之前的神经活动。离任务期间任务刺激诱发的 P3b 减小，后部 α 增强，默认模式网络被激活。
+protocol:
+  n_classes: 2
+  classes:
+  - on-task report
+  - off-task report
+  cue: thought probes at unpredictable times during a monotonous task
+  paradigm_timing: synchronous
+  feedback: none
+  distinguishing: 'Standard configuration (earliest published or canonical; D-057 -001): experimenter-initiated thought probes
+    (probe-caught; Antrobus et al. 1970, R0020). Differs from STA-MW-002 (participant-initiated self-caught reports).'
+first_source:
+  citation: 'Antrobus, J.S.; Singer, J.L.; Goldstein, S.; Fortgang, M. Mind-wandering and cognitive structure. Transactions
+    of the New York Academy of Sciences 32 (2): 242–252. 1970.'
+  doi: 10.1111/j.2164-0947.1970.tb02056.x
+  pmid: '5265228'
+  year: 1970
+  verified: false
+interop:
+  bids_task: mindwandering
+notes: 'Lead refs (curation/literature.csv): R0020 [first_source_candidate], R0356 [other], R0364 [other], R0390 [other],
+  R0429 [other], R0666 [review]. R0390 (fMRI, default network) is the key neural lead. First-pass skeleton (curator_e, 2026-10-03);
+  all sources unverified. Sprint 2 (curator_e, 2026-10-03): protocol block added per D-057; see curation/work/pkg_E/sprint2/split_log.csv.
+  Sprint 3 (curator_d, 2026-10-05): bibliography confirmed (OpenAlex, 2026-10-05).'
+status: draft
+contributors:
+- curator_e

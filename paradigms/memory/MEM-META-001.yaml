@@ -1,0 +1,61 @@
+schema_version: '0.2'
+id: MEM-META-001
+class: MEM-META
+name:
+  en: Metamemory (feeling-of-knowing / judgment-of-learning)
+  zh: 元记忆（知晓感、学习判断）
+aliases:
+- FOK Task
+- Feeling-of-Knowing Judgment
+- Hart FOK Paradigm
+- JOL Task
+- Judgment-of-Learning Paradigm
+- Metacognitive Prediction Task
+family: memory
+bci_category:
+- none
+recording_modality:
+- EEG
+- fMRI
+stimulus_modality:
+- visual
+markers:
+- MK.BOLD_frontopolar
+description:
+  en: In the feeling-of-knowing (FOK) procedure participants first try to recall answers to questions or targets of cue words;
+    for items they fail to recall they rate how likely they are to recognise the answer, and a recognition test follows. FOK
+    accuracy is assessed against recognition performance, and metamemory judgments engage frontopolar (anterior prefrontal)
+    cortex in fMRI studies.
+  zh: 在知晓感（FOK）程序中，被试先尝试回忆问题答案或线索词的目标；对未能回忆的项目评定自己之后能认出答案的可能性，随后进行再认测试。以再认成绩评估 FOK 的准确性；fMRI 研究显示元记忆判断激活额极（前部前额叶）皮层。
+trial_structure:
+  conditions:
+  - recalled
+  - 'not recalled: high FOK'
+  - 'not recalled: low FOK'
+protocol:
+  n_classes: 2
+  classes:
+  - feeling-of-knowing rating
+  - later recognition (correct/incorrect)
+  cue: general-knowledge questions or cue words; recall attempt, then FOK rating, then recognition test
+  stimulus_coding: recall-judgment-recognition (RJR) procedure
+  paradigm_timing: synchronous
+  feedback: none
+  distinguishing: 标准配置（最早发表）：回忆—判断—再认（RJR）知晓感程序（Hart 1965, R0013）。与 -002（学习判断 JOL：学习后预测回忆，准则 1;3）区别。
+first_source:
+  citation: Hart, J. T. Memory and the feeling-of-knowing experience. Journal of Educational Psychology, 56(4), 208-216. 1965.
+  doi: 10.1037/h0022263
+  pmid: '5825050'
+  year: 1965
+  verified: false
+interop:
+  bids_task: metamemory
+notes: 'HED task page: https://www.hedtags.org/hed-task/tasks/hedtsk_feeling_of_knowing.html ; https://www.hedtags.org/hed-task/tasks/hedtsk_judgment_of_learning.html.
+  Leads: R0013, R0064, R0098, R0099, R0105, R0148, R0325, R0462, R0493, R0517, R0522, R0649, R0664, R0729 (R#### = curation/literature.csv;
+  DN## = curation/work/pkg_D/new_leads.csv). Feeling-of-knowing (Hart 1965) chosen as origin; judgments of learning recorded
+  as a variant. Sprint 2 (D-057, curator_d, 2026-10-03): protocol block added (-001 = earliest/standard configuration). Narrowed
+  to the feeling-of-knowing (RJR) procedure; judgments of learning moved to MEM-META-002. Sibling concrete paradigms: MEM-META-002.
+  bibliography confirmed (Crossref, 2026-10-05)'
+status: draft
+contributors:
+- curator_d

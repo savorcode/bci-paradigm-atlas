@@ -1,0 +1,27 @@
+schema_version: "0.2"
+id: MK.switch_positivity
+name:
+  en: Switch-related positivity
+  zh: 切换相关正波
+aliases:
+- switch positivity
+- switch-related positivity
+- cue-locked switch P3
+- posterior switch positivity
+type: erp_component
+recording_modality:
+- EEG
+signature:
+  latency_ms: 300-600 after task cue
+  polarity: positive
+  topography: parietal / posterior
+description:
+  en: Positive deflection that is larger after cues signalling a task switch than after cues signalling a task repetition.
+    It is associated with advance reconfiguration of the task set.
+  zh: 提示任务切换的线索之后比提示任务重复的线索之后更大的正向波。它与任务定势的提前重构相关。
+notes: 'Signature values are textbook-level approximations and await checking against sources (pass 2). Generators and indexes
+  not yet written. Used by (registry): CTL-SW-001.'
+status: draft
+contributors:
+- maintainer
+- curator_c

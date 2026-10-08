@@ -1,0 +1,30 @@
+schema_version: "0.2"
+id: MK.Dm
+name:
+  en: Subsequent memory effect (Dm)
+  zh: 后续记忆效应（Dm）
+aliases:
+- Dm
+- difference due to memory
+- subsequent memory effect
+type: erp_component
+recording_modality:
+- EEG
+- MEG
+signature:
+  latency_ms: 400-800 after stimulus onset
+  polarity: more positive for later-remembered items
+  topography: centro-parietal or frontal, depending on encoding task
+description:
+  en: >-
+    Difference in encoding-period ERPs between items that are later remembered and items that are later forgotten,
+    with later-remembered items typically eliciting more positive waveforms. It is used to identify neural activity
+    that predicts successful memory formation.
+  zh: 编码阶段后来被记住与后来被遗忘项目之间的 ERP 差异，后来被记住的项目通常诱发更正的波形，用于识别能预测成功记忆形成的神经活动。
+notes: >-
+  First-pass skeleton (curator_d, 2026-10-03). Signature values are textbook-level approximations that await source
+  checking; generators and indexes will be added in the second pass.
+status: draft
+contributors:
+- maintainer
+- curator_d

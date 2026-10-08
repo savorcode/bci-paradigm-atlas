@@ -1,0 +1,52 @@
+schema_version: '0.2'
+id: SSR-IM-001
+class: SSR-IM
+name:
+  en: Intermodulation frequency tagging
+  zh: 互调频率标记
+aliases:
+- intermodulation
+- IM frequency tagging
+- part-whole frequency tagging
+family: steady_state
+bci_category:
+- none
+recording_modality:
+- EEG
+- MEG
+stimulus_modality:
+- visual
+markers:
+- MK.intermodulation
+description:
+  en: Two parts of a stimulus (for example the two halves of a face) flicker at different frequencies f1 and f2. Responses
+    at intermodulation frequencies (such as f1+f2) can only arise from neural populations that integrate both inputs, and
+    therefore index integration of the parts.
+  zh: 刺激的两部分（如面孔左右两半）分别以不同频率 f1、f2 闪烁。互调频率（如 f1+f2）处的响应只能来自同时整合两路输入的神经群体，因此反映对各部分的整合。
+protocol:
+  n_classes: 2
+  classes:
+  - aligned parts
+  - misaligned parts
+  cue: two stimulus parts (e.g. face halves) flickering at f1 and f2
+  stimulus_coding: frequency tagging of parts (f1, f2), intermodulation readout
+  paradigm_timing: continuous
+  feedback: none
+  distinguishing: 标准配置（最早发表，即 first_source）：刺激两部分以 f1、f2 闪烁，比较对齐与错位。本类暂无其他具体范式（no sibling protocol yet）。
+first_source:
+  citation: Boremanse A, Norcia AM, Rossion B. Dissociation of part-based and integrated neural responses to faces by means
+    of electroencephalographic frequency tagging. European Journal of Neuroscience. 2014.
+  doi: 10.1111/ejn.12663
+  year: 2014
+  verified: false
+interop:
+  bids_task: intermodulation
+notes: 'Leads used: search SA22/SA27. first_source found by search in this sprint (SA22/SA27), not from the lead list. New
+  candidate proposed by package A on 2026-10-03 (curation/work/pkg_A/new_candidates.csv); registered in curation/candidates.csv
+  as C224 (D-053, milestone M1). Requested marker MK.intermodulation; distinct from MK.SSVEP (fundamental/harmonics) and MK.FPVS_oddball.
+  Earlier intermodulation EEG work likely exists; first_source provisional. [curator_a sprint 2, 2026-10-03] D-057: protocol
+  block added for the canonical configuration; no other concrete paradigm identified for this class in sprint 2. [curator_e
+  sprint 3, 2026-10-05] bibliography confirmed (Crossref, 2026-10-05).'
+status: draft
+contributors:
+- curator_a

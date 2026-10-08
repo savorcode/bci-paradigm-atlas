@@ -1,0 +1,52 @@
+schema_version: '0.2'
+id: PER-IB-001
+class: PER-IB
+name:
+  en: Inattentional blindness
+  zh: 非注意盲
+aliases:
+- inattentional blindness
+- no-report paradigm
+family: perception
+bci_category:
+- none
+recording_modality:
+- EEG
+stimulus_modality:
+- visual
+markers:
+- MK.VAN
+- MK.P3b
+description:
+  en: While participants perform a demanding task, task-irrelevant patterns appear that many participants do not notice, assessed
+    with questionnaires after each phase. Comparing aware and unaware participants isolates a posterior visual awareness negativity,
+    whereas the P3b appears mainly when the pattern becomes task-relevant.
+  zh: 被试执行要求较高的任务时，出现与任务无关的图案，许多被试并未察觉，每个阶段后以问卷评估。比较察觉与未察觉的被试，可分离出后部视觉觉知负波（VAN），而 P3b 主要在图案变为任务相关时出现。
+protocol:
+  n_classes: 2
+  classes:
+  - aware of pattern
+  - unaware of pattern
+  cue: task-irrelevant patterns during a demanding task; awareness probed by questionnaire after each phase
+  paradigm_timing: block
+  feedback: none
+  distinguishing: 标准配置（最早发表，即 first_source）：多阶段设计，每阶段后问卷判定是否察觉无关图形。本类暂无其他具体范式（no sibling protocol yet）。
+first_source:
+  citation: 'Mack A, Rock I. Inattentional Blindness. Cambridge, MA: MIT Press. 1998.'
+  doi: 10.7551/mitpress/3707.001.0001
+  year: 1998
+  verified: false
+interop:
+  bids_task: inattentionalblindness
+notes: 'Leads used: search SA17a, search SA17b. first_source: no origin source identified in this pass (blocker, see curation/work/pkg_A/status.csv).
+  New candidate proposed by package A on 2026-10-03 (curation/work/pkg_A/new_candidates.csv); registered in curation/candidates.csv
+  as C219 (D-053, milestone M1). Uses registry markers MK.VAN and MK.P3b; complements PER-MASK-001 (no-report manipulation of awareness).
+  [curator_a sprint 2, 2026-10-03] D-057: protocol block added for the canonical configuration; no other concrete paradigm
+  identified for this class in sprint 2. [curator_e sprint 3, 2026-10-05] candidate origin found by bibliographic search (OpenAlex,
+  2026-10-05); content unverified. [maintainer sprint 3, 2026-10-07] bibliography confirmed (OpenAlex, 2026-10-05; origin
+  candidate, content unverified). [maintainer sprint 3, 2026-10-07, D-073] origin candidate recalled, record confirmed via
+  OpenAlex.'
+status: draft
+contributors:
+- curator_a
+- curator_e

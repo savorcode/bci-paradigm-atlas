@@ -1,0 +1,52 @@
+schema_version: '0.2'
+id: MEM-DS-001
+class: MEM-DS
+name:
+  en: Digit span
+  zh: 数字广度
+aliases:
+- DS
+- Forward/Backward Span
+family: memory
+bci_category:
+- none
+recording_modality:
+- EEG
+stimulus_modality:
+- auditory
+- visual
+markers:
+- MK.frontal_midline_theta
+description:
+  en: Participants hear or see sequences of digits of increasing length and repeat them in the same order (forward span);
+    span is the longest sequence reproduced correctly. EEG studies of computerised versions report load-related increases
+    of frontal-midline theta during encoding and maintenance.
+  zh: 被试听到或看到长度递增的数字序列，并按原顺序复述（顺背广度）；广度为能正确复述的最长序列。计算机化版本的 EEG 研究报告编码与保持期额中线 θ 随负荷增加。
+trial_structure:
+  conditions:
+  - sequence length (parameter)
+protocol:
+  n_classes: 1
+  classes:
+  - forward serial recall
+  cue: spoken or visually presented digit sequences of increasing length
+  paradigm_timing: synchronous
+  feedback: none
+  distinguishing: 标准配置（最早发表）：顺背数字广度（Jacobs 1887, R1158）。与 -002（倒背，准则 1）区别。
+first_source:
+  citation: Jacobs J. Experiments on "prehension". Mind. 1887;os-12(45):75-79.
+  doi: 10.1093/mind/os-12.45.75
+  year: 1887
+  verified: false
+interop:
+  bids_task: digitspan
+notes: 'HED task page: https://www.hedtags.org/hed-task/tasks/hedtsk_digit_span.html. Leads: R0004, R0076, R0505, DN05, DN06,
+  DN07 (R#### = curation/literature.csv; DN## = curation/work/pkg_D/new_leads.csv). D-023: keep only if at least two independent
+  human neural-recording studies report consistent effects. Two ERP/EEG leads were found by search (DN06, DN07; titles only,
+  not yet checked); the maintainer should decide at the meeting whether this meets the D-023 criterion. Origin: Jacobs (1887),
+  cited via the Gorilla task page. Sprint 2 (D-057, curator_d, 2026-10-03): protocol block added (-001 = earliest/standard
+  configuration). Narrowed to forward span; backward span moved to MEM-DS-002. Sibling concrete paradigms: MEM-DS-002. bibliography
+  corrected (Crossref, 2026-10-05)'
+status: draft
+contributors:
+- curator_d

@@ -1,0 +1,55 @@
+schema_version: '0.2'
+id: CTL-DD-001
+class: CTL-DD
+name:
+  en: Delay discounting
+  zh: 延迟折扣
+aliases:
+- Delay of Gratification
+- Intertemporal choice task
+- Temporal Discounting
+family: control
+bci_category:
+- none
+recording_modality:
+- fMRI
+- EEG
+stimulus_modality:
+- visual
+markers:
+- MK.BOLD_striatum_reward
+- MK.BOLD_vmPFC_value
+description:
+  en: Participants repeatedly choose between a smaller reward available sooner and a larger reward available after a delay,
+    and the indifference points yield a discount function. In fMRI, ventral striatum and ventromedial prefrontal activity
+    tracks the subjective value of the options.
+  zh: 被试反复在较早可得的较小奖赏与延迟后可得的较大奖赏之间选择，由无差异点得到折扣函数。fMRI 中，腹侧纹状体与腹内侧前额叶的活动反映选项的主观价值。
+trial_structure:
+  conditions:
+  - smaller-sooner
+  - larger-later
+protocol:
+  n_classes: 2
+  classes:
+  - smaller-sooner reward
+  - larger-later reward
+  cue: pairs of monetary amounts with delays
+  paradigm_timing: synchronous
+  distinguishing: 标准配置（最早发表线索）：反复在较小的即时奖赏与较大的延迟奖赏间选择以求无差异点（Rachlin et al. 1991，R1134）。本包仅此一个配置。
+first_source:
+  citation: Rachlin H, Raineri A, Cross D. Subjective Probability and Delay. Journal of the Experimental Analysis of Behavior.
+    1991;55(2):233-244.
+  doi: 10.1901/jeab.1991.55-233
+  year: 1991
+  verified: false
+interop:
+  bids_task: delaydiscounting
+notes: 'HED task page: https://www.hedtags.org/hed-task/tasks/hedtsk_delay_discounting.html. Leads used: S_RACHLIN1991 (search:
+  https://behavioristbookclub.com/aba-research/aba-fundamentals/subjective-probability-and-delay/); R0288; R0385; R0518. first_source
+  lead: S_RACHLIN1991. Leads R0288 (McClure et al. 2004) and R0385 (Kable & Glimcher 2007) are the first neuroimaging studies,
+  not the origin of the behavioural paradigm; first_source found by search (Rachlin et al. 1991). Earlier behavioural work
+  (task sheet: Ainslie 1975, Mazur 1987) unconfirmed. Review: R0518. Pass 1 skeleton (curator_c, 2026-10-03); all sources
+  unverified. Sprint 2 (D-057): protocol added; single configuration, no split. bibliography corrected (Crossref, 2026-10-05)'
+status: draft
+contributors:
+- curator_c

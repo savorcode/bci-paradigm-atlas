@@ -1,0 +1,50 @@
+schema_version: '0.2'
+id: SOC-RACE-001
+class: SOC-RACE
+name:
+  en: Race and group-membership face categorization
+  zh: 种族与群体身份面孔分类
+aliases:
+- race categorization
+- ingroup/outgroup faces
+- other-race face processing
+family: social
+bci_category:
+- none
+recording_modality:
+- EEG
+stimulus_modality:
+- visual
+markers:
+- MK.P2_visual
+description:
+  en: Faces varying in race (and often gender) are presented while participants categorize them by race, gender or an unrelated
+    feature. Early attention-related ERP components, including the visual P2, differ between ingroup and outgroup faces.
+  zh: 呈现种族（常同时包括性别）不同的面孔，被试按种族、性别或无关特征分类。包括视觉 P2 在内的早期注意相关 ERP 成分在内群体与外群体面孔之间存在差异。
+protocol:
+  n_classes: 2
+  classes:
+  - ingroup-race faces
+  - outgroup-race faces
+  cue: face photographs varying in race and gender, categorised by race, gender or another feature
+  paradigm_timing: synchronous
+  feedback: none
+  distinguishing: 'Standard configuration (earliest published or canonical; D-057 -001): race and gender face categorisation
+    with ERPs (Ito & Urland 2003, R1190).'
+first_source:
+  citation: 'Ito TA, Urland GR. Race and gender on the brain: electrocortical measures of attention to the race and gender
+    of multiply categorizable individuals. Journal of Personality and Social Psychology. 2003;85(4):616-626.'
+  doi: 10.1037/0022-3514.85.4.616
+  pmid: '14561116'
+  year: 2003
+  verified: false
+interop:
+  bids_task: raceface
+notes: 'Sources found by curator_e (curation/work/pkg_E/search_log.md): S18 = https://experts.colorado.edu/display/pubid_52678.
+  New candidate (curator_e). Related to SOC-WIT-001 (race primes) and PER-FACE-001; N170 race effects not surfaced. First-pass
+  skeleton (curator_e, 2026-10-03); all sources unverified. Sprint 2 (curator_e, 2026-10-03): protocol block added per D-057;
+  see curation/work/pkg_E/sprint2/split_log.csv. Sprint 3 (curator_d, 2026-10-05): bibliography corrected (OpenAlex, 2026-10-05):
+  doi added.'
+status: draft
+contributors:
+- curator_e

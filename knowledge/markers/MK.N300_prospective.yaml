@@ -1,0 +1,27 @@
+schema_version: "0.2"
+id: MK.N300_prospective
+name:
+  en: Prospective-memory N300
+  zh: 前瞻记忆 N300
+aliases:
+- N300 (prospective memory)
+- prospective component (N300)
+type: erp_component
+recording_modality:
+- EEG
+signature:
+  latency_ms: 300-500
+  polarity: negative
+  topography: occipito-parietal
+description:
+  en: >-
+    Negative ERP deflection over occipito-parietal sites elicited by prospective-memory cues compared with ongoing-task
+    stimuli. It is interpreted as reflecting detection of the cue that signals the intended action.
+  zh: 与进行中任务刺激相比，前瞻记忆线索在枕顶区诱发的负向 ERP 成分，被解释为对提示执行意图动作的线索的检测。
+notes: >-
+  First-pass skeleton (curator_d, 2026-10-03). Signature values are textbook-level approximations that await source
+  checking; generators and indexes will be added in the second pass.
+status: draft
+contributors:
+- maintainer
+- curator_d

@@ -1,0 +1,53 @@
+schema_version: '0.2'
+id: STA-ENG-001
+class: STA-ENG
+name:
+  en: Engagement during naturalistic video and learning
+  zh: 自然视频与学习中的投入度
+aliases:
+- classroom EEG
+- inter-subject correlation (ISC)
+- learning engagement
+- video engagement
+family: state
+bci_category:
+- passive
+recording_modality:
+- EEG
+- fNIRS
+stimulus_modality:
+- naturalistic
+markers:
+- MK.ISC
+- MK.alpha_posterior
+description:
+  en: Groups of participants watch the same film clips or instructional videos, sometimes repeated or temporally scrambled
+    to reduce engagement, and the similarity of their neural responses is computed. Engagement is indexed by inter-subject
+    correlation of EEG, accompanied by reduced posterior alpha power.
+  zh: 多名被试观看相同的影片片段或教学视频，有时通过重复或时间打乱降低投入度，并计算其神经反应的相似性。投入度以脑电被试间相关为指标，并伴随后部 α 功率降低。
+protocol:
+  n_classes: 1
+  classes:
+  - naturalistic film or video viewing
+  cue: film clips or instructional videos watched by several participants
+  paradigm_timing: continuous
+  feedback: none
+  distinguishing: 'Standard configuration (earliest published or canonical; D-057 -001): inter-subject correlation of EEG
+    during repeated or scrambled film viewing (Dmochowski et al. 2012, R1178).'
+first_source:
+  citation: Dmochowski JP, Sajda P, Dias J, Parra LC. Correlated components of ongoing EEG point to emotionally laden attention
+    - a possible marker of engagement? Frontiers in Human Neuroscience. 2012;6:112.
+  doi: 10.3389/fnhum.2012.00112
+  pmid: '22623915'
+  year: 2012
+  verified: false
+interop:
+  bids_task: engagement
+notes: 'Sources found by curator_e (curation/work/pkg_E/search_log.md): S02 = https://www.frontiersin.org/journals/human-neuroscience/articles/10.3389/fnhum.2012.00112/full.
+  first_source note: PMID from neuinfo.org result URL. No leads in literature.csv; S02 found by curator_e. Related: PER-NAT-001
+  naturalistic viewing (pkg A) shares MK.ISC. First-pass skeleton (curator_e, 2026-10-03); all sources unverified. Sprint
+  2 (curator_e, 2026-10-03): protocol block added per D-057; see curation/work/pkg_E/sprint2/split_log.csv. Sprint 3 (curator_d,
+  2026-10-05): bibliography corrected (OpenAlex, 2026-10-05): article number (112) added.'
+status: draft
+contributors:
+- curator_e

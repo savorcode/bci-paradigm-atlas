@@ -1,0 +1,56 @@
+schema_version: '0.2'
+id: ERR-ADAPT-001
+class: ERR-ADAPT
+name:
+  en: Visuomotor adaptation
+  zh: 运动适应（视觉旋转）
+aliases:
+- Cursor rotation adaptation
+- Visuomotor adaptation task
+- Visuomotor rotation
+family: error
+bci_category:
+- none
+recording_modality:
+- EEG
+stimulus_modality:
+- visual
+- motor_execution
+markers:
+- MK.FRN
+- MK.ErrP
+description:
+  en: Participants make reaching or cursor movements towards visual targets while the cursor representing the hand is rotated
+    relative to the actual hand direction, and gradually adapt their movements to cancel the imposed sensory error. Feedback
+    revealing the sensory prediction error elicits feedback-locked ERPs such as error-related potentials and a P300.
+  zh: 被试向视觉目标做伸手或光标运动，代表手位置的光标相对实际运动方向被旋转，被试逐渐调整运动以抵消施加的感觉误差。揭示感觉预测误差的反馈诱发反馈锁时的事件相关电位，如错误相关电位与 P300。
+trial_structure:
+  conditions:
+  - veridical cursor feedback
+  - rotated cursor feedback
+protocol:
+  n_classes: 2
+  classes:
+  - veridical cursor feedback
+  - rotated cursor feedback
+  cue: visual reach targets; cursor feedback of hand position rotated relative to the actual movement direction
+  paradigm_timing: synchronous
+  feedback: continuous
+  distinguishing: 标准配置（最早发表线索）：伸手/光标运动中施加视觉旋转，被试依据光标位置的感觉误差逐渐适应（Krakauer et al. 2000，R0194）。光标反馈为连续或仅终点显示的区别待核对原文（见 split_log
+    待例会行）。
+first_source:
+  citation: Krakauer JW, Pine ZM, Ghilardi MF, Ghez C. Learning of Visuomotor Transformations for Vectorial Planning of Reaching
+    Trajectories. The Journal of Neuroscience. 2000;20(23):8916-8924.
+  doi: 10.1523/jneurosci.20-23-08916.2000
+  year: 2000
+  verified: false
+interop:
+  bids_task: visuomotorrotation
+notes: 'Leads used: R0194; R1001; R1009. first_source lead: R0194. R0194 (Krakauer et al. 2000) is the only origin-candidate
+  lead; visuomotor rotation adaptation predates it (task sheet mentions Cunningham 1989, unconfirmed). EEG leads: R1001, R1009.
+  Pass 1 skeleton (curator_c, 2026-10-03); all sources unverified. Sprint 2 (D-057): protocol added and description narrowed
+  to sensory-error (cursor) feedback; reward-based reaching with binary feedback split off as ERR-ADAPT-002 (criterion 4;
+  leads R1001, R1009). bibliography corrected (Crossref, 2026-10-05)'
+status: draft
+contributors:
+- curator_c

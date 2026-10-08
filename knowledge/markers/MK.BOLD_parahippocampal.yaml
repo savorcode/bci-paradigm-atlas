@@ -1,0 +1,11 @@
+schema_version: "0.2"
+id: MK.BOLD_parahippocampal
+name: {en: Parahippocampal / navigation network BOLD, zh: 海马旁回/导航网络 BOLD}
+aliases: [navigation network activation, PPA/parahippocampal activation]
+type: hemodynamic
+recording_modality: [fMRI, fNIRS]
+signature: {topography: 'parahippocampal gyrus, retrosplenial cortex, posterior parietal cortex'}
+description: {en: 'Haemodynamic response in the parahippocampal gyrus together with retrosplenial and posterior parietal regions during real or imagined spatial navigation, such as imagining walking through one''s home.', zh: 真实或想象的空间导航（如想象在家中行走）时，海马旁回及压后皮层、后顶叶区域的血流动力学响应。}
+notes: Signature values are textbook-level characteristics and await source checking (first pass, curator_b). Includes spatial navigation imagery (D-008). Generators and indexes to be added in the second pass.
+status: draft
+contributors: [maintainer, curator_b]

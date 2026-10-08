@@ -1,0 +1,541 @@
+# 包 C sprint 3 范式类书目核实结果（D-072）。维护者合入 paradigms/_classes.yaml；审核人不直接改登记表。
+# Class first_source corrections for package C from bibliographic verification (curator_b, 2026-10-05).
+# fields.first_source = full replacement (verified stays false); fields.notes.append = sentence to append to the class notes.
+updates:
+- id: ERR-ADAPT
+  action: modify
+  fields:
+    first_source:
+      citation: Krakauer JW, Pine ZM, Ghilardi MF, Ghez C. Learning of Visuomotor Transformations for Vectorial Planning of
+        Reaching Trajectories. The Journal of Neuroscience. 2000;20(23):8916-8924.
+      doi: 10.1523/jneurosci.20-23-08916.2000
+      year: 2000
+      verified: false
+    notes:
+      append: bibliography corrected (Crossref, 2026-10-05)
+  reason: 'sprint 3 bibliographic verification: authors (et al. expanded); pages added; doi added'
+- id: ERR-APC
+  action: modify
+  fields:
+    first_source:
+      citation: O'Doherty JP, Dayan P, Friston K, Critchley H, Dolan RJ. Temporal Difference Models and Reward-Related Learning
+        in the Human Brain. Neuron. 2003;38(2):329-337.
+      doi: 10.1016/s0896-6273(03)00169-7
+      year: 2003
+      verified: false
+    notes:
+      append: bibliography corrected (Crossref, 2026-10-05)
+  reason: 'sprint 3 bibliographic verification: authors added (O''Doherty JP, Dayan P, Friston K, Critchley H, Dolan RJ);
+    volume/issue/pages added; doi added'
+- id: ERR-AWARE
+  action: modify
+  fields:
+    first_source:
+      citation: 'Scheffers MK, Coles MGH. Performance monitoring in a confusing world: Error-related brain activity, judgments
+        of response accuracy, and types of errors. Journal of Experimental Psychology: Human Perception and Performance. 2000;26(1):141-151.'
+      doi: 10.1037/0096-1523.26.1.141
+      pmid: '10696610'
+      year: 2000
+      verified: false
+    notes:
+      append: bibliography corrected (Crossref, 2026-10-05)
+  reason: 'sprint 3 bibliographic verification: pages 141-51->141-151'
+- id: ERR-BANDIT
+  action: modify
+  fields:
+    first_source:
+      citation: Daw ND, O'Doherty JP, Dayan P, Seymour B, Dolan RJ. Cortical substrates for exploratory decisions in humans.
+        Nature. 2006;441(7095):876-879.
+      doi: 10.1038/nature04766
+      pmid: '16778890'
+      year: 2006
+      verified: false
+    notes:
+      append: bibliography corrected (Crossref, 2026-10-05)
+  reason: 'sprint 3 bibliographic verification: authors (et al. expanded); pages added'
+- id: ERR-CAUS
+  action: modify
+  fields:
+    notes:
+      append: bibliography confirmed (OpenAlex, 2026-10-05)
+  reason: 'sprint 3 bibliographic verification: record agrees with Crossref'
+- id: ERR-CHGPT
+  action: modify
+  fields:
+    first_source:
+      citation: Nassar MR, Wilson RC, Heasly B, Gold JI. An Approximately Bayesian Delta-Rule Model Explains the Dynamics
+        of Belief Updating in a Changing Environment. The Journal of Neuroscience. 2010;30(37):12366-12378.
+      doi: 10.1523/JNEUROSCI.0822-10.2010
+      pmid: '20844132'
+      year: 2010
+      verified: false
+    notes:
+      append: bibliography corrected (Crossref, 2026-10-05)
+  reason: 'sprint 3 bibliographic verification: pages added'
+- id: ERR-INST
+  action: modify
+  fields:
+    first_source:
+      citation: O'Doherty J, Dayan P, Schultz J, Deichmann R, Friston K, Dolan RJ. Dissociable Roles of Ventral and Dorsal
+        Striatum in Instrumental Conditioning. Science. 2004;304(5669):452-454.
+      doi: 10.1126/science.1094285
+      year: 2004
+      verified: false
+    notes:
+      append: bibliography corrected (Crossref, 2026-10-05)
+  reason: 'sprint 3 bibliographic verification: pages added'
+- id: ERR-OBS
+  action: modify
+  fields:
+    first_source:
+      citation: van Schie HT, Mars RB, Coles MGH, Bekkering H. Modulation of activity in medial frontal and motor cortices
+        during error observation. Nature Neuroscience. 2004;7(5):549-554.
+      doi: 10.1038/nn1239
+      year: 2004
+      verified: false
+    notes:
+      append: bibliography corrected (Crossref, 2026-10-05)
+  reason: 'sprint 3 bibliographic verification: authors (et al. expanded); pages added'
+- id: ERR-PCL
+  action: modify
+  fields:
+    first_source:
+      citation: Knowlton BJ, Squire LR, Gluck MA. Probabilistic classification learning in amnesia. Learning & Memory. 1994;1(2):106-120.
+      doi: 10.1101/lm.1.2.106
+      pmid: '10467589'
+      year: 1994
+      verified: false
+    notes:
+      append: bibliography corrected (Crossref, 2026-10-05)
+  reason: 'sprint 3 bibliographic verification: pages added'
+- id: ERR-PRL
+  action: modify
+  fields:
+    first_source:
+      citation: Cools R, Clark L, Owen AM, Robbins TW. Defining the Neural Mechanisms of Probabilistic Reversal Learning Using
+        Event-Related Functional Magnetic Resonance Imaging. The Journal of Neuroscience. 2002;22(11):4563-4567.
+      doi: 10.1523/jneurosci.22-11-04563.2002
+      pmid: '12040063'
+      year: 2002
+      verified: false
+    notes:
+      append: bibliography corrected (Crossref, 2026-10-05)
+  reason: 'sprint 3 bibliographic verification: pages added'
+- id: ERR-PSEL
+  action: modify
+  fields:
+    first_source:
+      citation: 'Frank MJ, Seeberger LC, O''Reilly RC. By Carrot or by Stick: Cognitive Reinforcement Learning in Parkinsonism.
+        Science. 2004;306(5703):1940-1943.'
+      doi: 10.1126/science.1102941
+      pmid: '15528409'
+      year: 2004
+      verified: false
+    notes:
+      append: bibliography corrected (Crossref, 2026-10-05)
+  reason: 'sprint 3 bibliographic verification: pages added'
+- id: ERR-TE
+  action: modify
+  fields:
+    first_source:
+      citation: 'Miltner WHR, Braun CH, Coles MGH. Event-Related Brain Potentials Following Incorrect Feedback in a Time-Estimation
+        Task: Evidence for a "Generic" Neural System for Error Detection. Journal of Cognitive Neuroscience. 1997;9(6):788-798.'
+      doi: 10.1162/jocn.1997.9.6.788
+      year: 1997
+      verified: false
+    notes:
+      append: bibliography corrected (Crossref, 2026-10-05)
+  reason: 'sprint 3 bibliographic verification: pages added'
+- id: ERR-TS
+  action: modify
+  fields:
+    first_source:
+      citation: Daw ND, Gershman SJ, Seymour B, Dayan P, Dolan RJ. Model-Based Influences on Humans' Choices and Striatal
+        Prediction Errors. Neuron. 2011;69(6):1204-1215.
+      doi: 10.1016/j.neuron.2011.02.027
+      pmid: '21435563'
+      year: 2011
+      verified: false
+    notes:
+      append: bibliography corrected (Crossref, 2026-10-05)
+  reason: 'sprint 3 bibliographic verification: authors (et al. expanded); pages added'
+- id: ERR-VRPE
+  action: modify
+  fields:
+    first_source:
+      citation: Gehrke L, Akman S, Lopes P, Chen A, Singh AK, Chen HT, Lin CT, Gramann K. Detecting Visuo-Haptic Mismatches
+        in Virtual Reality using the Prediction Error Negativity of Event-Related Brain Potentials. Proceedings of the 2019
+        CHI Conference on Human Factors in Computing Systems. 2019:1-11.
+      doi: 10.1145/3290605.3300657
+      year: 2019
+      verified: false
+    notes:
+      append: bibliography corrected (Crossref, 2026-10-05)
+  reason: 'sprint 3 bibliographic verification: venue (proceedings title); pages 427-437->1-11 (Crossref; 427 is the paper
+    number); author initials Chen H-T->HT'
+- id: CTL-AMBIG
+  action: modify
+  fields:
+    first_source:
+      citation: Hsu M, Bhatt M, Adolphs R, Tranel D, Camerer CF. Neural Systems Responding to Degrees of Uncertainty in Human
+        Decision-Making. Science. 2005;310(5754):1680-1683.
+      doi: 10.1126/science.1115327
+      year: 2005
+      verified: false
+    notes:
+      append: bibliography corrected (Crossref, 2026-10-05)
+  reason: 'sprint 3 bibliographic verification: pages added; doi added'
+- id: CTL-ANAL
+  action: modify
+  fields:
+    first_source:
+      citation: 'Bunge SA, Wendelken C, Badre D, Wagner AD. Analogical reasoning and prefrontal cortex: evidence for separable
+        retrieval and integration mechanisms. Cerebral Cortex. 2005.'
+      doi: 10.1093/cercor/bhh126
+      pmid: '15238433'
+      year: 2005
+      verified: false
+    notes:
+      append: bibliography corrected (Crossref, 2026-10-05)
+  reason: 'sprint 3 bibliographic verification: pages added; doi added'
+- id: CTL-ANT
+  action: modify
+  fields:
+    first_source:
+      citation: Fan J, McCandliss BD, Sommer T, Raz A, Posner MI. Testing the Efficiency and Independence of Attentional Networks.
+        Journal of Cognitive Neuroscience. 2002;14(3):340-347.
+      doi: 10.1162/089892902317361886
+      pmid: '11970796'
+      year: 2002
+      verified: false
+    notes:
+      append: bibliography corrected (Crossref, 2026-10-05)
+  reason: 'sprint 3 bibliographic verification: authors (et al. expanded); pages added'
+- id: CTL-AS
+  action: modify
+  fields:
+    first_source:
+      citation: Hallett PE. Primary and secondary saccades to goals defined by instructions. Vision Research. 1978;18(10):1279-1296.
+      doi: 10.1016/0042-6989(78)90218-3
+      pmid: '726270'
+      year: 1978
+      verified: false
+    notes:
+      append: bibliography corrected (Crossref, 2026-10-05)
+  reason: 'sprint 3 bibliographic verification: issue 11->10; pages added'
+- id: CTL-AUT
+  action: modify
+  fields:
+    first_source:
+      citation: 'Fink A, Grabner RH, Benedek M, Reishofer G, Hauswirth V, Fally M, Neuper C, Ebner F, Neubauer AC. The creative
+        brain: Investigation of brain activity during creative problem solving by means of EEG and FMRI. Human Brain Mapping.
+        2009;30(3):734-748.'
+      doi: 10.1002/hbm.20538
+      year: 2009
+      verified: false
+    notes:
+      append: bibliography corrected (Crossref, 2026-10-05)
+  reason: 'sprint 3 bibliographic verification: authors (et al. expanded); doi added'
+- id: CTL-BART
+  action: modify
+  fields:
+    first_source:
+      citation: 'Lejuez CW, Read JP, Kahler CW, Richards JB, Ramsey SE, Stuart GL, Strong DR, Brown RA. Evaluation of a behavioral
+        measure of risk taking: The Balloon Analogue Risk Task (BART). Journal of Experimental Psychology: Applied. 2002;8(2):75-84.'
+      doi: 10.1037/1076-898x.8.2.75
+      pmid: '12075692'
+      year: 2002
+      verified: false
+    notes:
+      append: bibliography corrected (Crossref, 2026-10-05)
+  reason: 'sprint 3 bibliographic verification: authors (et al. expanded)'
+- id: CTL-CNV
+  action: modify
+  fields:
+    first_source:
+      citation: 'Walter WG, Cooper R, Aldridge VJ, McCallum WC, Winter AL. Contingent Negative Variation: An Electric Sign
+        of Sensori-Motor Association and Expectancy in the Human Brain. Nature. 1964;203(4943):380-384.'
+      doi: 10.1038/203380a0
+      pmid: '14197376'
+      year: 1964
+      verified: false
+    notes:
+      append: bibliography corrected (Crossref, 2026-10-05)
+  reason: 'sprint 3 bibliographic verification: authors (et al. expanded); pages added'
+- id: CTL-CONF
+  action: modify
+  fields:
+    notes:
+      append: bibliography confirmed (Crossref, 2026-10-05)
+  reason: 'sprint 3 bibliographic verification: record agrees with Crossref'
+- id: CTL-CPT
+  action: modify
+  fields:
+    first_source:
+      citation: Rosvold HE, Mirsky AF, Sarason I, Bransome ED, Beck LH. A continuous performance test of brain damage. Journal
+        of Consulting Psychology. 1956;20(5):343-350.
+      doi: 10.1037/h0043220
+      pmid: '13367264'
+      year: 1956
+      verified: false
+    notes:
+      append: bibliography corrected (Crossref, 2026-10-05)
+  reason: 'sprint 3 bibliographic verification: authors (et al. expanded); pages added'
+- id: CTL-DD
+  action: modify
+  fields:
+    first_source:
+      citation: Rachlin H, Raineri A, Cross D. Subjective Probability and Delay. Journal of the Experimental Analysis of Behavior.
+        1991;55(2):233-244.
+      doi: 10.1901/jeab.1991.55-233
+      year: 1991
+      verified: false
+    notes:
+      append: bibliography corrected (Crossref, 2026-10-05)
+  reason: 'sprint 3 bibliographic verification: authors (et al. expanded)'
+- id: CTL-DT
+  action: modify
+  fields:
+    first_source:
+      citation: Telford CW. The refractory phase of voluntary and associative responses. Journal of Experimental Psychology.
+        1931;14(1):1-36.
+      doi: 10.1037/h0073262
+      year: 1931
+      verified: false
+    notes:
+      append: bibliography corrected (Crossref, 2026-10-05)
+  reason: 'sprint 3 bibliographic verification: title; pages 1-35->1-36; doi added'
+- id: CTL-EFF
+  action: modify
+  fields:
+    first_source:
+      citation: Treadway MT, Buckholtz JW, Schwartzman AN, Lambert WE, Zald DH. Worth the 'EEfRT'? The Effort Expenditure
+        for Rewards Task as an Objective Measure of Motivation and Anhedonia. PLoS ONE. 2009;4(8):e6598.
+      doi: 10.1371/journal.pone.0006598
+      pmid: '19672310'
+      year: 2009
+      verified: false
+    notes:
+      append: bibliography corrected (Crossref, 2026-10-05)
+  reason: 'sprint 3 bibliographic verification: pages added'
+- id: CTL-FLK
+  action: modify
+  fields:
+    first_source:
+      citation: Eriksen BA, Eriksen CW. Effects of noise letters upon the identification of a target letter in a nonsearch
+        task. Perception & Psychophysics. 1974;16(1):143-149.
+      doi: 10.3758/bf03203267
+      year: 1974
+      verified: false
+    notes:
+      append: bibliography corrected (OpenAlex, 2026-10-05)
+  reason: 'sprint 3 bibliographic verification: issue 2->1; pages added'
+- id: CTL-FORAGE
+  action: modify
+  fields:
+    notes:
+      append: bibliography confirmed (Crossref, 2026-10-05)
+  reason: 'sprint 3 bibliographic verification: record agrees with Crossref'
+- id: CTL-GNG
+  action: modify
+  fields:
+    first_source:
+      citation: Donders FC. On the speed of mental processes. Acta Psychologica. 1969;30:412-431.
+      doi: 10.1016/0001-6918(69)90065-1
+      pmid: '5811531'
+      year: 1969
+      verified: false
+    notes:
+      append: bibliography corrected (Crossref, 2026-10-05)
+  reason: 'sprint 3 bibliographic verification: pages added'
+- id: CTL-IGT
+  action: modify
+  fields:
+    first_source:
+      citation: Bechara A, Damasio AR, Damasio H, Anderson SW. Insensitivity to future consequences following damage to human
+        prefrontal cortex. Cognition. 1994;50(1-3):7-15.
+      doi: 10.1016/0010-0277(94)90018-3
+      pmid: '8039375'
+      year: 1994
+      verified: false
+    notes:
+      append: bibliography corrected (Crossref, 2026-10-05)
+  reason: 'sprint 3 bibliographic verification: authors (et al. expanded)'
+- id: CTL-MIXG
+  action: modify
+  fields:
+    first_source:
+      citation: Tom SM, Fox CR, Trepel C, Poldrack RA. The Neural Basis of Loss Aversion in Decision-Making Under Risk. Science.
+        2007;315(5811):515-518.
+      doi: 10.1126/science.1134239
+      year: 2007
+      verified: false
+    notes:
+      append: bibliography corrected (OpenAlex, 2026-10-05)
+  reason: 'sprint 3 bibliographic verification: pages added'
+- id: CTL-MSIT
+  action: modify
+  fields:
+    first_source:
+      citation: 'Bush G, Shin LM, Holmes J, Rosen BR, Vogt BA. The Multi-Source Interference Task: validation study with fMRI
+        in individual subjects. Molecular Psychiatry. 2003;8(1):60-70.'
+      doi: 10.1038/sj.mp.4001217
+      pmid: '12556909'
+      year: 2003
+      verified: false
+    notes:
+      append: bibliography corrected (Crossref, 2026-10-05)
+  reason: 'sprint 3 bibliographic verification: authors added (Bush G, Shin LM, Holmes J, Rosen BR, Vogt BA)'
+- id: CTL-PDM
+  action: modify
+  fields:
+    first_source:
+      citation: 'Britten KH, Shadlen MN, Newsome WT, Movshon JA. The analysis of visual motion: a comparison of neuronal and
+        psychophysical performance. The Journal of Neuroscience. 1992;12(12):4745-4765.'
+      doi: 10.1523/jneurosci.12-12-04745.1992
+      pmid: '1464765'
+      year: 1992
+      verified: false
+    notes:
+      append: bibliography corrected (Crossref, 2026-10-05)
+  reason: 'sprint 3 bibliographic verification: authors (et al. expanded); pages added'
+- id: CTL-RAT
+  action: modify
+  fields:
+    first_source:
+      citation: Mednick S. The associative basis of the creative process. Psychological Review. 1962;69(3):220-232.
+      doi: 10.1037/h0048850
+      pmid: '14472013'
+      year: 1962
+      verified: false
+    notes:
+      append: bibliography corrected (Crossref, 2026-10-05)
+  reason: 'sprint 3 bibliographic verification: pages added'
+- id: CTL-RAVEN
+  action: modify
+  fields:
+    first_source:
+      citation: 'Penrose LS, Raven JC. A New Series of Perceptual Tests: Preliminary Communication. British Journal of Medical
+        Psychology. 1936;16(2):97-104.'
+      doi: 10.1111/j.2044-8341.1936.tb00690.x
+      year: 1936
+      verified: false
+    notes:
+      append: bibliography corrected (Crossref, 2026-10-05)
+  reason: 'sprint 3 bibliographic verification: pages added; doi added'
+- id: CTL-RNG
+  action: modify
+  fields:
+    first_source:
+      citation: 'Jahanshahi M, Dirnberger G, Fuller R, Frith CD. The Role of the Dorsolateral Prefrontal Cortex in Random
+        Number Generation: A Study with Positron Emission Tomography. NeuroImage. 2000;12(6):713-725.'
+      doi: 10.1006/nimg.2000.0647
+      year: 2000
+      verified: false
+    notes:
+      append: bibliography corrected (Crossref, 2026-10-05)
+  reason: 'sprint 3 bibliographic verification: doi added'
+- id: CTL-SART
+  action: modify
+  fields:
+    first_source:
+      citation: 'Robertson IH, Manly T, Andrade J, Baddeley BT, Yiend J. ''Oops!'': Performance correlates of everyday attentional
+        failures in traumatic brain injured and normal subjects. Neuropsychologia. 1997;35(6):747-758.'
+      doi: 10.1016/s0028-3932(97)00015-8
+      pmid: '9204482'
+      year: 1997
+      verified: false
+    notes:
+      append: bibliography corrected (Crossref, 2026-10-05)
+  reason: 'sprint 3 bibliographic verification: authors (et al. expanded); pages added'
+- id: CTL-SIM
+  action: modify
+  fields:
+    first_source:
+      citation: 'Simon JR, Rudell AP. Auditory S-R compatibility: The effect of an irrelevant cue on information processing.
+        Journal of Applied Psychology. 1967;51(3):300-304.'
+      doi: 10.1037/h0020586
+      pmid: '6045637'
+      year: 1967
+      verified: false
+    notes:
+      append: bibliography corrected (Crossref, 2026-10-05)
+  reason: 'sprint 3 bibliographic verification: pages added'
+- id: CTL-SST
+  action: modify
+  fields:
+    first_source:
+      citation: 'Logan GD, Cowan WB. On the ability to inhibit thought and action: A theory of an act of control. Psychological
+        Review. 1984;91(3):295-327.'
+      doi: 10.1037/0033-295x.91.3.295
+      year: 1984
+      verified: false
+    notes:
+      append: bibliography corrected (Crossref, 2026-10-05)
+  reason: 'sprint 3 bibliographic verification: pages added'
+- id: CTL-STR
+  action: modify
+  fields:
+    first_source:
+      citation: Stroop JR. Studies of interference in serial verbal reactions. Journal of Experimental Psychology. 1935;18(6):643-662.
+      doi: 10.1037/h0054651
+      year: 1935
+      verified: false
+    notes:
+      append: bibliography corrected (Crossref, 2026-10-05)
+  reason: 'sprint 3 bibliographic verification: pages added'
+- id: CTL-SW
+  action: modify
+  fields:
+    first_source:
+      citation: 'Rogers RD, Monsell S. Costs of a predictible switch between simple cognitive tasks. Journal of Experimental
+        Psychology: General. 1995;124(2):207-231.'
+      doi: 10.1037/0096-3445.124.2.207
+      year: 1995
+      verified: false
+    notes:
+      append: bibliography corrected (Crossref, 2026-10-05)
+  reason: 'sprint 3 bibliographic verification: title; pages added'
+- id: CTL-SYLL
+  action: modify
+  fields:
+    first_source:
+      citation: Goel V, Buchel C, Frith C, Dolan RJ. Dissociation of Mechanisms Underlying Syllogistic Reasoning. NeuroImage.
+        2000;12(5):504-514.
+      doi: 10.1006/nimg.2000.0636
+      year: 2000
+      verified: false
+    notes:
+      append: bibliography corrected (Crossref, 2026-10-05)
+  reason: 'sprint 3 bibliographic verification: doi added'
+- id: CTL-TOL
+  action: modify
+  fields:
+    first_source:
+      citation: Shallice T. Specific impairments of planning. Philosophical Transactions of the Royal Society of London. B,
+        Biological Sciences. 1982;298(1089):199-209.
+      doi: 10.1098/rstb.1982.0082
+      pmid: '6125971'
+      year: 1982
+      verified: false
+    notes:
+      append: bibliography corrected (Crossref, 2026-10-05)
+  reason: 'sprint 3 bibliographic verification: venue (full journal title); pages added'
+- id: CTL-VBC
+  action: modify
+  fields:
+    notes:
+      append: bibliography confirmed (Crossref, 2026-10-05)
+  reason: 'sprint 3 bibliographic verification: record agrees with Crossref'
+- id: CTL-WCST
+  action: modify
+  fields:
+    first_source:
+      citation: Grant DA, Berg E. A behavioral analysis of degree of reinforcement and ease of shifting to new responses in
+        a Weigl-type card-sorting problem. Journal of Experimental Psychology. 1948;38(4):404-411.
+      doi: 10.1037/h0059831
+      year: 1948
+      verified: false
+    notes:
+      append: bibliography corrected (Crossref, 2026-10-05)
+  reason: 'sprint 3 bibliographic verification: volume ->38; doi added'

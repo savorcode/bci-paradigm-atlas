@@ -1,0 +1,58 @@
+schema_version: '0.2'
+id: CTL-CPT-001
+class: CTL-CPT
+name:
+  en: Continuous performance test (X-CPT)
+  zh: 持续操作测验（X-CPT）
+aliases:
+- CPT
+- CPT-X
+- Continuous Performance
+- X-CPT
+family: control
+bci_category:
+- none
+recording_modality:
+- EEG
+- fMRI
+stimulus_modality:
+- visual
+markers:
+- MK.P3b
+description:
+  en: Participants monitor a long, rapid stream of letters and respond whenever a target letter appears, which requires sustained
+    attention over many minutes. Targets elicit a P3.
+  zh: 被试监视长时间、快速呈现的字母流，每当目标字母出现即作反应，需要持续数分钟的注意。目标诱发 P3。
+trial_structure:
+  conditions:
+  - target
+  - non-target
+protocol:
+  n_classes: 2
+  classes:
+  - target letter X
+  - non-target letters
+  cue: rapid stream of single letters; respond to the target letter
+  paradigm_timing: synchronous
+  feedback: none
+  distinguishing: 标准配置（最早发表）：在快速字母流中对目标字母作反应（Rosvold et al. 1956，R0003）。
+first_source:
+  citation: Rosvold HE, Mirsky AF, Sarason I, Bransome ED, Beck LH. A continuous performance test of brain damage. Journal
+    of Consulting Psychology. 1956;20(5):343-350.
+  doi: 10.1037/h0043220
+  pmid: '13367264'
+  year: 1956
+  verified: false
+interop:
+  bids_task: cpt
+notes: 'HED task page: https://www.hedtags.org/hed-task/tasks/hedtsk_continuous_performance.html. Leads used: R0003; R0158;
+  R0715. first_source lead: R0003. AX-CPT-specific origin not among leads (task-sheet memory: Servan-Schreiber et al. 1996,
+  unconfirmed); variant not added for lack of a lead. Related leads: R0158, R0715. Pass 1 skeleton (curator_c, 2026-10-03);
+  all sources unverified. Sprint 2 (D-057): protocol added; -001 narrowed to the original single-target CPT (renamed from
+  ''AX-CPT''); the AX-CPT (Servan-Schreiber et al. 1996) split off as CTL-CPT-002 (criterion 1) and the gradual-onset CPT
+  (Esterman et al. 2013, R0575) as CTL-CPT-003. MK.CNV moved to CTL-CPT-002 (cue-related). Whether Rosvold et al. 1956 also
+  reported an A-X version is to be checked against the original. Aliases AX-CPT etc. moved to CTL-CPT-002; CPT-II (Conners,
+  not-X) logged as proposal. bibliography corrected (Crossref, 2026-10-05)'
+status: draft
+contributors:
+- curator_c

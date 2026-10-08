@@ -1,0 +1,49 @@
+schema_version: '0.2'
+id: PER-MOT-001
+class: PER-MOT
+name:
+  en: Multiple object tracking
+  zh: 多目标追踪
+aliases:
+- MOT
+- Multiple Object Tracking
+- Pylyshyn Tracking
+family: perception
+bci_category:
+- none
+recording_modality:
+- EEG
+- fMRI
+stimulus_modality:
+- visual
+markers:
+- MK.CDA
+- MK.BOLD_frontoparietal
+description:
+  en: Several identical objects move independently; a subset is briefly highlighted as targets and must be tracked until the
+    objects stop. Tracking load modulates contralateral delay activity in lateralised designs and BOLD in frontoparietal attention
+    regions.
+  zh: 若干相同物体独立运动，其中一部分短暂高亮作为靶，被试需追踪至物体停止。追踪负荷调制偏侧设计中的对侧延迟活动（CDA）以及额顶注意区域的 BOLD。
+protocol:
+  classes:
+  - number of tracked targets (load levels)
+  cue: identical moving objects, a subset briefly highlighted as targets
+  paradigm_timing: synchronous
+  feedback: none
+  distinguishing: 标准配置（最早发表，即 first_source）：若干相同物体运动，追踪事先高亮的靶子，负荷水平为条件。本类暂无其他具体范式（no sibling protocol yet）。
+first_source:
+  citation: 'Pylyshyn, Z. W., & Storm, R. W. Tracking multiple independent targets: Evidence for a parallel tracking mechanism.
+    Spatial Vision, 3(3), 179–197. 1988.'
+  doi: 10.1163/156856888x00122
+  pmid: '3153671'
+  year: 1988
+  verified: false
+interop:
+  bids_task: mot
+notes: 'HED task page: https://www.hedtags.org/hed-task/tasks/hedtsk_multiple_object_tracking.html. Leads used: R0083, R0331,
+  R0367, R0412, R0685, R0719. [curator_a sprint 2, 2026-10-03] D-057: protocol block added for the canonical configuration;
+  no other concrete paradigm identified for this class in sprint 2. [curator_e sprint 3, 2026-10-05] bibliography confirmed
+  (Crossref, 2026-10-05).'
+status: draft
+contributors:
+- curator_a

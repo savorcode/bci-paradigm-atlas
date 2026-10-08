@@ -1,0 +1,54 @@
+schema_version: '0.2'
+id: ERR-PRT-001
+class: ERR-PRT
+name:
+  en: Probabilistic reward task
+  zh: 概率奖赏任务（信号检测）
+aliases:
+- PRT
+- Pizzagalli reward task
+- Signal-detection reward task
+family: error
+bci_category:
+- none
+recording_modality:
+- EEG
+- fMRI
+stimulus_modality:
+- visual
+markers:
+- MK.FRN
+description:
+  en: Participants categorise briefly presented stimuli that differ subtly (e.g., a short or long mouth on a cartoon face),
+    and correct identifications of one stimulus are rewarded more often than the other, producing a response bias towards
+    the richly rewarded category. Reward feedback elicits the FRN, whose amplitude relates to the development of response
+    bias.
+  zh: 被试对短暂呈现、差异细微的刺激（如卡通脸上较短或较长的嘴）进行分类，其中一类刺激的正确判断获得奖赏的频率高于另一类，从而形成偏向高奖赏类别的反应偏向。奖赏反馈诱发 FRN，其波幅与反应偏向的形成相关。
+trial_structure:
+  conditions:
+  - short mouth (rich or lean)
+  - long mouth (rich or lean)
+protocol:
+  n_classes: 2
+  classes:
+  - short mouth
+  - long mouth
+  cue: briefly presented cartoon face with a short or long mouth; correct identifications of one stimulus rewarded more often
+  paradigm_timing: synchronous
+  feedback: discrete
+  distinguishing: 标准配置（最早发表）：信号检测任务，两类刺激的正确识别以不对称比例给奖赏，产生反应偏向（Pizzagalli et al. 2005，S_PIZZAGALLI2005）。本包仅此一个配置。
+first_source:
+  citation: 'Pizzagalli DA, Jahn AL, O''Shea JP. Toward an objective characterization of an anhedonic phenotype: a signal-detection
+    approach. Biological Psychiatry 57(3):319-327. 2005.'
+  year: 2005
+  verified: false
+interop:
+  bids_task: prt
+notes: 'Leads used: S_PIZZAGALLI2005 (search: https://depressioninstitute.uci.edu/wp-content/uploads/sites/37/santesso_ni08.pdf);
+  S_SANTESSO2008 (search: https://depressioninstitute.uci.edu/wp-content/uploads/sites/37/santesso_ni08.pdf). first_source
+  lead: S_PIZZAGALLI2005. Origin reference (S_PIZZAGALLI2005) seen only as cited in S_SANTESSO2008; that EEG/fMRI study reports
+  the FRN. Pass 1 skeleton (curator_c, 2026-10-03); all sources unverified. Sprint 2 (D-057): protocol added; single configuration,
+  no split.'
+status: draft
+contributors:
+- curator_c

@@ -1,0 +1,54 @@
+schema_version: '0.2'
+id: MOT-MRCP-002
+class: MOT-MRCP
+name:
+  en: Cue-based movement-related cortical potential (associative BCI)
+  zh: 提示驱动的运动相关皮层电位（联合式脑机接口）
+aliases:
+- cue-based MRCP
+- associative BCI (cue-based)
+family: motor
+bci_category:
+- active
+recording_modality:
+- EEG
+stimulus_modality:
+- mental_imagery
+- motor_execution
+- visual
+- electrical_stimulation
+markers:
+- MK.MRCP
+description:
+  en: >-
+    A visual cue tells the participant when to imagine (or attempt) a dorsiflexion of the ankle, and the MRCP time-locked
+    to the cue is measured; in the associative version, peripheral (common peroneal) nerve stimulation is delivered at a fixed
+    latency after the cue so that it coincides with the MRCP peak determined in calibration.
+  zh: 视觉提示指示被试何时想象（或尝试）踝背屈，测量与提示锁时的运动相关皮层电位；在联合式版本中，于提示后按校准所得的 MRCP 峰潜伏期的固定延迟施加外周（腓总）神经电刺激，使二者同时到达。
+protocol:
+  n_classes: 1
+  classes:
+  - cued imagined ankle dorsiflexion
+  cue: visual cue
+  paradigm_timing: synchronous
+  feedback: none
+  distinguishing: >-
+    Criteria 2 and 3 vs MOT-MRCP-001: movement timed by an external visual cue (cue-locked trials) instead of self-paced;
+    stimulation timing is fixed by the cue, not by online detection (contrast MOT-MRCP-003).
+first_source:
+  citation: >-
+    Jochumsen M, Navid MS, Nedergaard RW, Signal N, Rashid MU, Hassan A, Haavik H, Taylor D, Niazi IK. Self-paced online vs.
+    cue-based offline brain-computer interfaces for inducing neural plasticity. Brain Sciences 9(6):127. 2019.
+  doi: 10.3390/brainsci9060127
+  year: 2019
+  verified: false
+interop:
+  bids_task: mrcp
+notes: >-
+  Leads: WS-B2-04 [=R1298], WF-B2-19 (author PDF, vbn.aau.dk: cue-based paradigm 'visual cue—latency—50 ms', based on Mrachacz-Kersting
+  et al. [ref 4], 50 pairings). The earlier cue-based associative BCI (Mrachacz-Kersting et al.) is the likely origin; first_source
+  is the paper actually seen. R0896 (single-trial MRCP detection) and R0835 (review; PMC page blocked by captcha) not read.
+  bibliography confirmed (Crossref, 2026-10-05)
+status: draft
+contributors:
+- curator_b

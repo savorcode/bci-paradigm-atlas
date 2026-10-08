@@ -1,0 +1,66 @@
+schema_version: '0.2'
+id: LAN-OVS-003
+class: LAN-OVS
+name:
+  en: 'Attempted speech: large-vocabulary sentence decoding'
+  zh: 尝试言语：大词表句子解码
+aliases:
+- speech-to-text BCI
+- high-performance speech neuroprosthesis
+- speech BCI (sentences)
+family: language
+bci_category:
+- active
+recording_modality:
+- intracortical
+- ECoG
+stimulus_modality:
+- visual
+- motor_execution
+markers:
+- MK.motor_cortical_spiking
+- MK.high_gamma
+description:
+  en: Participants with paralysis attempt to speak cued sentences, aloud or silently, while intracortical arrays or high-density
+    ECoG record speech motor cortex; phoneme- or subword-level decoders combined with a large-vocabulary language model output
+    text continuously as the sentence is attempted, and some systems also synthesise speech or animate an avatar.
+  zh: 瘫痪被试出声或无声地尝试说出提示的句子，同时用皮层内电极阵列或高密度 ECoG 记录言语运动皮层；音素或子词级解码器结合大词表语言模型在尝试说句时连续输出文字，部分系统还合成语音或驱动虚拟形象。
+trial_structure:
+  conditions:
+  - 'cued sentences (vocabulary: parameter)'
+  - 'output: text / synthesised speech / avatar (variant)'
+protocol:
+  n_classes: 1
+  classes:
+  - phoneme sequence of an open-vocabulary sentence
+  cue: visually cued sentences
+  stimulus_coding: phoneme-level decoding with a large-vocabulary language model
+  paradigm_timing: continuous
+  feedback: continuous
+  distinguishing: 准则 1;4：类别集由固定小词表（LAN-OVS-002）变为开放大词表的音素序列；输出在尝试说句的过程中连续更新（连续闭环反馈）。
+first_source:
+  citation: Willett FR, Kunz EM, Fan C, Avansino DT, Wilson GH, Choi EY, Kamdar FB, Glasser MF, Hochberg LR, Druckmann S,
+    Shenoy KV, Henderson JM. A high-performance speech neuroprosthesis. Nature. 2023;620(7976):1031-1036.
+  doi: 10.1038/s41586-023-06377-x
+  pmid: '37612500'
+  year: 2023
+  verified: false
+variants:
+- name: Speech synthesis and avatar output (ECoG)
+  source:
+    citation: Metzger SL, Littlejohn KT, Silva AB, Moses DA, Seaton MP, Wang R, Dougherty ME, Liu JR, Wu P, Berger MA, Zhuravleva
+      I, Tu-Chan A, Ganguly K, Anumanchipalli GK, Chang EF. A high-performance neuroprosthesis for speech decoding and avatar
+      control. Nature. 2023;620(7976):1037-1046.
+    doi: 10.1038/s41586-023-06443-4
+    pmid: '37612505'
+    year: 2023
+    verified: false
+  note: Same task configuration with additional synthesised-speech and facial-avatar outputs; kept as a variant (output channel,
+    not a numbering criterion). Lead R0838. bibliography corrected (OpenAlex, 2026-10-05).
+notes: 'New configuration (sprint 2). Leads: R0839 (A high-performance speech neuroprosthesis; intracortical), R0838 (speech
+  decoding and avatar control; ECoG), R0850 (systematic review). Both leads are title and PMID only; which was published first
+  has to be checked. (R#### = curation/literature.csv; DN## = curation/work/pkg_D/new_leads.csv.) Numbering criterion (D-057):
+  1;4. bibliography corrected (OpenAlex, 2026-10-05)'
+status: draft
+contributors:
+- curator_d

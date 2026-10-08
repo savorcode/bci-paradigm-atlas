@@ -1,0 +1,54 @@
+schema_version: '0.2'
+id: PER-AAD-001
+class: PER-AAD
+name:
+  en: Auditory selective attention (cocktail party)
+  zh: 听觉选择性注意（鸡尾酒会）
+aliases:
+- auditory attention decoding (AAD)
+- cocktail party paradigm
+- competing-talker paradigm
+- dichotic listening
+family: perception
+bci_category:
+- reactive
+recording_modality:
+- EEG
+- MEG
+- ECoG
+stimulus_modality:
+- auditory
+markers:
+- MK.N1_auditory
+- MK.speech_envelope_tracking
+description:
+  en: Two or more concurrent speech streams (or tone sequences) are presented and the listener attends to one of them. The
+    attended stream is identified from enhanced auditory N1 responses and from cortical tracking of its speech envelope, which
+    underlies auditory attention decoding for neuro-steered hearing devices.
+  zh: 同时呈现两路或多路语音流（或音调序列），被试只注意其中一路。被注意语流引起更大的听觉 N1，皮层对其语音包络的跟踪更强，据此可识别注意对象，这是神经调控助听设备中听觉注意解码的基础。
+protocol:
+  n_classes: 2
+  classes:
+  - attend speaker 1
+  - attend speaker 2
+  cue: instruction to attend one of two concurrent, dichotically presented speech streams
+  paradigm_timing: block
+  feedback: none
+  distinguishing: 标准配置（最早发表，即 first_source）：两路同时呈现（双耳分听）的连续语音，指示注意其中一路，按刺激包络重建解码被注意者，开环。本类暂无其他具体范式（no sibling protocol yet）。
+first_source:
+  citation: O'Sullivan JA, Power AJ, Mesgarani N, Rajaram S, Foxe JJ, Shinn-Cunningham BG, Slaney M, Shamma SA, Lalor EC.
+    Attentional selection in a cocktail party environment can be decoded from single-trial EEG. Cereb Cortex. 2015;25(7):1697-1706.
+  doi: 10.1093/cercor/bht355
+  year: 2015
+  verified: false
+interop:
+  bids_task: aad
+notes: 'Leads used: R0855, R0542, R0911, R0916. R0855 is the earliest single-trial EEG decoding study among the leads; the
+  attention effect on N1 and the ECoG work summarised in R0542 are earlier precursors to be assessed. Dataset lead ''IEEE
+  DataPort auditory attention decoding datasets'' is a keyword page, not a dataset, so it is not listed under datasets. [curator_a
+  sprint 2, 2026-10-03] D-057: protocol block added for the canonical configuration; no other concrete paradigm identified
+  for this class in sprint 2. [curator_e sprint 3, 2026-10-05] bibliography corrected (Crossref, 2026-10-05).'
+status: draft
+contributors:
+- curator_a
+- curator_e

@@ -1,0 +1,58 @@
+schema_version: '0.2'
+id: STM-PAS-001
+class: STM-PAS
+name:
+  en: Paired associative stimulation
+  zh: 成对联合刺激
+aliases:
+- PAS
+- paired associative stimulation
+family: stimulation
+bci_category:
+- none
+recording_modality:
+- EEG
+stimulus_modality:
+- electrical_stimulation
+- magnetic_stimulation
+markers:
+- MK.TEP
+- MK.SEP_N20
+description:
+  en: >-
+    Peripheral nerve stimulation (typically of the median nerve) is repeatedly paired with TMS of the contralateral motor
+    cortex at a fixed interstimulus interval, so that the afferent volley and the cortical pulse coincide or are offset. The
+    protocol induces timing-dependent changes in cortical excitability; with concurrent EEG, effects are assessed through
+    TMS-evoked potentials and the median-nerve SEP N20 that times the pairing.
+  zh: >-
+    将外周神经电刺激（通常为正中神经）与对侧运动皮层 TMS 以固定刺激间隔反复配对，使传入冲动与皮层脉冲同时到达或错开。该方案诱导依赖时序的皮层兴奋性改变；同步记录脑电时，通过 TMS 诱发电位以及决定配对时序的正中神经 SEP N20
+    评估其效应。
+protocol:
+  n_classes: 1
+  classes:
+  - median-nerve stimulation paired with motor-cortex TMS
+  cue: none
+  stimulus_coding: peripheral pulse and TMS pulse at a fixed interstimulus interval
+  paradigm_timing: block
+  feedback: none
+  distinguishing: >-
+    Standard configuration (earliest published) / 标准配置（最早发表）: repeated fixed-interval pairing, excitability measured before
+    and after the intervention (Stefan et al. 2000, MEP origin, D-031). No sibling protocol yet.
+first_source:
+  citation: >-
+    Stefan K, Kunesch E, Cohen LG, Benecke R, Classen J. Induction of plasticity in the human motor cortex by paired associative
+    stimulation. Brain. 2000;123(3):572-584.
+  doi: 10.1093/brain/123.3.572
+  year: 2000
+  verified: false
+interop:
+  bids_task: pas
+notes: >-
+  Search sources (curation/work/pkg_B/search_log.md): S09 https://alzforum.org/papers/induction-plasticity-human-motor-cortex-paired-associative-stimulation.
+  Candidate had no leads; first_source found by search (S09). The origin study measured motor evoked potentials (EMG), not
+  EEG; an EEG/TEP-based PAS lead is still needed (blocker). D-031 (maintainer, 2026-10-03): first_source is a behavioural
+  or EMG/MEP-only origin, which is acceptable; add the earliest brain-recording study as a "First neural recording: <citation>
+  (R####)" line in sprint 2. bibliography corrected (OpenAlex, 2026-10-05)
+status: draft
+contributors:
+- curator_b

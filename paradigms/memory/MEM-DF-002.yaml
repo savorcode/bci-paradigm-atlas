@@ -1,0 +1,52 @@
+schema_version: '0.2'
+id: MEM-DF-002
+class: MEM-DF
+name:
+  en: List-method directed forgetting
+  zh: 列表法定向遗忘
+aliases:
+- list-method directed forgetting
+- LMDF
+family: memory
+bci_category:
+- none
+recording_modality:
+- EEG
+stimulus_modality:
+- visual
+markers:
+- MK.alpha_posterior
+description:
+  en: Participants study a first list of items and then receive an instruction either to forget that list or to keep remembering
+    it, before studying a second list; memory for both lists is tested at the end. A forget instruction reduces recall of
+    list 1 and enhances recall of list 2, and EEG studies relate the forget cue to changes in oscillatory activity that are
+    interpreted as a shift of mental context or inhibition.
+  zh: 被试学习第一个列表后，收到遗忘该列表或继续记住的指示，然后学习第二个列表；最后测试两个列表的记忆。遗忘指示降低列表 1 的回忆并提高列表 2 的回忆；EEG 研究把遗忘指示与振荡活动的变化联系起来，并解释为心理情境转换或抑制。
+trial_structure:
+  conditions:
+  - forget list 1
+  - remember list 1
+protocol:
+  n_classes: 2
+  classes:
+  - forget instruction
+  - remember instruction
+  cue: one remember/forget instruction after the whole first list
+  paradigm_timing: block
+  feedback: none
+  distinguishing: 准则 3：遗忘指示由逐项给出（MEM-DF-001 item method）变为整列表后给出一次，比较单位由项目变为列表。
+first_source:
+  citation: Bjork RA, LaBerge D, Legrand R. The modification of short-term memory through instructions to forget. Psychonomic
+    Science. 1968;10(2):55-56.
+  doi: 10.3758/bf03331404
+  year: 1968
+  verified: false
+notes: 'Split out of MEM-DF-001 (item and list methods were both covered there). Marker MK.alpha_posterior provisional: the
+  oscillatory evidence for list-method directed forgetting has to be checked (R0602, R0610). Leads: R0579, R0602, R0610. (R####
+  = curation/literature.csv; DN## = curation/work/pkg_D/new_leads.csv.) Numbering criterion (D-057): 3. first_source TBD resolved
+  by bibliographic search (Crossref, 2026-10-05; curator_c): candidate origin found by bibliographic search; content unverified.
+  Previous entry: "TBD: original list-method publication not retrieved; R0579 (Sahakyan et al. 2013) is a methodological review"
+  [maintainer sprint 3, 2026-10-07] bibliography confirmed (Crossref, 2026-10-05; origin candidate, content unverified).'
+status: draft
+contributors:
+- curator_d

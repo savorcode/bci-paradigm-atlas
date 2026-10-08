@@ -1,0 +1,25 @@
+schema_version: "0.2"
+id: MK.SSEP_beat
+name:
+  en: Beat-related steady-state evoked potential
+  zh: 节拍相关稳态诱发电位
+aliases:
+- beat-related SS-EP
+- meter frequency tagging
+- neural entrainment to beat
+type: steady_state
+recording_modality:
+- EEG
+- MEG
+signature:
+  frequency_hz: beat and metre frequencies (typically 0.5-5)
+  topography: fronto-central
+description:
+  en: Steady-state EEG response at the frequency of the perceived beat (and metre) of a rhythm, measured as peaks in the frequency
+    spectrum, including at metre frequencies that are imagined rather than acoustically present.
+  zh: 节奏中被知觉节拍（及拍律）频率处的稳态脑电响应，以频谱峰值度量；即使拍律频率仅为想象而非声学上存在，也可出现。
+notes: First-pass skeleton by package A (2026-10-03). No generators/indexes yet. Signature values are textbook-level approximations
+  and await source checking.
+status: draft
+contributors:
+- curator_a

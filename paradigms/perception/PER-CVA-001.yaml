@@ -1,0 +1,52 @@
+schema_version: '0.2'
+id: PER-CVA-001
+class: PER-CVA
+name:
+  en: Covert spatial attention (alpha lateralization)
+  zh: 隐蔽空间注意（α 偏侧化）
+aliases:
+- Posner-type alpha paradigm
+- alpha lateralization
+- covert visuospatial attention
+family: perception
+bci_category:
+- none
+recording_modality:
+- EEG
+- MEG
+stimulus_modality:
+- visual
+markers:
+- MK.alpha_lateralization
+description:
+  en: A central cue directs covert attention to the left or right visual hemifield while gaze stays at fixation, and a target
+    follows after a delay. In the cue-target interval, posterior alpha power decreases over the hemisphere contralateral to
+    the attended side and increases ipsilaterally; this alpha lateralization indexes the spatial bias of attention.
+  zh: 中央线索指引被试在保持注视的同时将隐蔽注意转向左或右视野，延迟后出现靶刺激。在线索–靶间期，与被注意侧对侧的后部 α 功率降低、同侧升高；这种 α 偏侧化反映注意的空间偏向。
+protocol:
+  n_classes: 2
+  classes:
+  - attend left
+  - attend right
+  cue: central cue directing covert attention to the left or right hemifield
+  stimulus_coding: 闭环 α 偏侧化 BCI 拆为 PER-CVA-002（准则 4）。
+  paradigm_timing: synchronous
+  feedback: none
+  distinguishing: 标准配置（最早发表，即 first_source）：中央线索指引隐蔽注意左/右视野，测线索–靶间期 α 偏侧化，开环。同类其他具体范式：PER-CVA-002（区别见各自 distinguishing；维护者
+    sprint 2 QA 更正）。
+first_source:
+  citation: Thut G, Nietzel A, Brandt SA, Pascual-Leone A. α-Band Electroencephalographic Activity over Occipital Cortex Indexes
+    Visuospatial Attention Bias and Predicts Visual Target Detection. Journal of Neuroscience. 2006;26(37):9494-9502.
+  doi: 10.1523/JNEUROSCI.0875-06.2006
+  year: 2006
+  verified: false
+interop:
+  bids_task: covertattention
+notes: 'Leads used: R0343, R0937. first_source found by search in this sprint (SA48), not from the lead list. first_source
+  = lead R0343 (DOI 10.1523/jneurosci.0875-06.2006, title not shown in lead); title, authors and pages were read from the
+  journal page in this sprint (search_log SA48) and match the lead DOI. Earlier anticipatory alpha lateralization work (task
+  sheet model-memory hint: Worden et al. 2000) is an unverified priority candidate. [curator_a sprint 2, 2026-10-03] D-057:
+  the closed-loop BCI use is PER-CVA-002. [curator_e sprint 3, 2026-10-05] bibliography confirmed (Crossref, 2026-10-05).'
+status: draft
+contributors:
+- curator_a

@@ -1,0 +1,49 @@
+schema_version: '0.2'
+id: LAN-LOC-002
+class: LAN-LOC
+name:
+  en: Auditory language localizer (intact vs degraded speech)
+  zh: 听觉语言定位任务（完整 vs 退化语音）
+aliases:
+- auditory language localizer
+- intact > degraded speech localizer
+family: language
+bci_category:
+- none
+recording_modality:
+- fMRI
+stimulus_modality:
+- auditory
+markers:
+- MK.BOLD_language_network
+description:
+  en: Participants listen to blocks of short spoken passages and blocks of acoustically degraded versions of the same passages
+    that are unintelligible. The intact > degraded contrast localises high-level language regions in each individual and can
+    be used where reading is not possible.
+  zh: 被试聆听短的口语段落组块，以及这些段落经声学退化、无法理解的版本组块。“完整 > 退化”对比在每个个体中定位高级语言区，可用于不能阅读的情况。
+trial_structure:
+  conditions:
+  - intact speech
+  - degraded speech
+protocol:
+  n_classes: 2
+  classes:
+  - intact passages
+  - acoustically degraded passages
+  cue: spoken passages (interview excerpts and similar)
+  paradigm_timing: block
+  feedback: none
+  distinguishing: 准则 2：刺激由书面句子/非词（LAN-LOC-001）变为口语段落与声学退化版本。
+first_source:
+  citation: Scott TL, Gallée J, Fedorenko E. A new fun and robust version of an fMRI localizer for the frontotemporal language
+    system. Cognitive Neuroscience. 2017;8(3):167-176.
+  doi: 10.1080/17588928.2016.1201466
+  year: 2017
+  verified: false
+notes: 'New configuration (sprint 2). Lead R1328 (EvLab functional localization page, WebFetch S2-F08; the citation is given
+  only as ''Scott et al., 2017''). The first author''s initials in first_source are the curator''s and must be checked (marked
+  in PR). Leads: R1328, R1162. (R#### = curation/literature.csv; DN## = curation/work/pkg_D/new_leads.csv.) Numbering criterion
+  (D-057): 2. bibliography corrected (Crossref, 2026-10-05)'
+status: draft
+contributors:
+- curator_d

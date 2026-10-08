@@ -1,0 +1,56 @@
+schema_version: '0.2'
+id: CTL-SW-001
+class: CTL-SW
+name:
+  en: Task switching (alternating runs)
+  zh: 任务切换（交替序列）
+aliases:
+- Alternating Runs
+- Alternating runs paradigm
+- Set Shifting
+- Task-switching paradigm
+family: control
+bci_category:
+- none
+recording_modality:
+- EEG
+- fMRI
+stimulus_modality:
+- visual
+markers:
+- MK.frontal_midline_theta
+- MK.switch_positivity
+description:
+  en: Participants alternate between two simple tasks on the same stimuli in a predictable sequence (e.g., two trials of one
+    task, then two of the other), and responses are slower on switch than on repeat trials. Switch trials are associated with
+    a posterior switch-related positivity and increased frontal midline theta.
+  zh: 被试按可预测的顺序（如两次任务甲、两次任务乙）在同一刺激上交替完成两个简单任务，切换试次的反应慢于重复试次。切换试次伴随后部切换相关正波与额中线 θ 增强。
+trial_structure:
+  conditions:
+  - repeat
+  - switch
+protocol:
+  n_classes: 2
+  classes:
+  - task repeat
+  - task switch
+  cue: task indicated by the stimulus position in a predictable AABB sequence; no explicit task cue
+  paradigm_timing: synchronous
+  feedback: none
+  distinguishing: 标准配置（最早发表）：可预测的 AABB 交替序列，任务由位置决定、无显式线索（Rogers & Monsell 1995，R0121）。
+first_source:
+  citation: 'Rogers RD, Monsell S. Costs of a predictible switch between simple cognitive tasks. Journal of Experimental Psychology:
+    General. 1995;124(2):207-231.'
+  doi: 10.1037/0096-3445.124.2.207
+  year: 1995
+  verified: false
+interop:
+  bids_task: taskswitching
+notes: 'HED task page: https://www.hedtags.org/hed-task/tasks/hedtsk_task_switching.html. Leads used: R0121; R0261; R0258.
+  first_source lead: R0121. Historical origin (task sheet: Jersild 1927, unconfirmed) not among leads. fMRI lead: R0258; review:
+  R0261. Pass 1 skeleton (curator_c, 2026-10-03); all sources unverified. Sprint 2 (D-057): protocol added; -001 narrowed
+  to alternating runs; cued task switching (Meiran 1996) split off as CTL-SW-002 (criterion 2) and voluntary task switching
+  as CTL-SW-003 (criteria 2;3). bibliography corrected (Crossref, 2026-10-05)'
+status: draft
+contributors:
+- curator_c

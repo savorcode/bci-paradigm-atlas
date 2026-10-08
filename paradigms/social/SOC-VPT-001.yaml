@@ -1,0 +1,56 @@
+schema_version: '0.2'
+id: SOC-VPT-001
+class: SOC-VPT
+name:
+  en: Visual perspective taking
+  zh: 视觉观点采择
+aliases:
+- visual perspective taking
+- level-1/level-2 perspective taking
+family: social
+bci_category:
+- none
+recording_modality:
+- EEG
+- fMRI
+stimulus_modality:
+- visual
+markers:
+- MK.BOLD_TPJ
+- MK.alpha_posterior
+description:
+  en: Participants judge what another agent in a scene can see (level 1) or how the scene looks from that agent's viewpoint
+    (level 2), compared with judgements from their own perspective. Taking another's perspective engages the temporoparietal
+    junction and modulates posterior alpha power.
+  zh: 被试判断场景中另一个体能看到什么（一级），或从其视角看场景是什么样子（二级），并与从自身视角作出的判断比较。采择他人视角激活颞顶联合区，并调制后部 α 功率。
+protocol:
+  n_classes: 2
+  classes:
+  - other's perspective
+  - own perspective
+  cue: scene with an agent; judgement of what is visible or how the scene looks from a viewpoint
+  paradigm_timing: synchronous
+  feedback: none
+  distinguishing: 'Standard configuration (earliest published or canonical; D-057 -001): self versus other visuospatial perspective
+    judgements; origin publication TBD (first_source holds an fMRI study, D-031).'
+first_source:
+  citation: 'David N, Bewernick BH, Cohen MX, Newen A, Lux S, Fink GR, Shah NJ, Vogeley K. Neural representations of self
+    versus other: visual-spatial perspective taking and agency in a virtual ball-tossing game. J Cognitive Neurosci 18(6):898-910.
+    2006.'
+  doi: 10.1162/jocn.2006.18.6.898
+  pmid: '16839298'
+  year: 2006
+  verified: false
+interop:
+  bids_task: vpt
+notes: 'Lead refs (curation/literature.csv): R0875 [review]. Sources found by curator_e (curation/work/pkg_E/search_log.md):
+  S28 = https://fis.uke.de/portal/en/publications/neural-representations-of-self-versus-other-visualspatial-perspective-taking-and-agency-in-a-virtual-balltossing-game(7b363190-1007-4395-8ea7-53a5f7ecb39c)/export.html.
+  first_source note: fMRI study of visuospatial perspective taking; earlier VPT neuroimaging (e.g. Vogeley et al. 2004) not
+  surfaced. Only lead in literature.csv is the meta-analysis R0875. S28 is an fMRI study found by curator_e; behavioural origin
+  not identified. First-pass skeleton (curator_e, 2026-10-03); all sources unverified. D-031 (maintainer, 2026-10-03): first_source
+  currently holds the earliest neural recording study found, not the paradigm origin; in sprint 2 move it to a "First neural
+  recording:" line and fill first_source with the origin. Sprint 2 (curator_e, 2026-10-03): protocol block added per D-057;
+  see curation/work/pkg_E/sprint2/split_log.csv. Sprint 3 (curator_d, 2026-10-05): bibliography confirmed (OpenAlex, 2026-10-05).'
+status: draft
+contributors:
+- curator_e

@@ -1,0 +1,58 @@
+schema_version: '0.2'
+id: ERR-CHGPT-001
+class: ERR-CHGPT
+name:
+  en: Predictive inference task (change-point condition)
+  zh: 预测推断任务（变点条件）
+aliases:
+- Helicopter task
+- Cannon task
+- Change-point task
+- Predictive inference task
+family: error
+bci_category:
+- none
+recording_modality:
+- EEG
+stimulus_modality:
+- visual
+markers:
+- MK.P3b
+description:
+  en: On each trial participants predict where the next outcome will fall, then observe the outcome drawn from a distribution
+    whose mean shifts abruptly at unsignalled change points, so that trial-wise learning rates can be measured. Surprising
+    outcomes elicit a feedback-locked P300 whose amplitude relates to subsequent belief updating.
+  zh: 每个试次被试预测下一个结果的位置，然后观察实际结果；结果分布的均值会在无提示的变点处突变，因而可测量逐试次学习率。出乎意料的结果诱发反馈锁时的 P300，其幅度与随后的信念更新有关。
+trial_structure:
+  conditions:
+  - change-point condition
+protocol:
+  n_classes: 1
+  classes:
+  - change-point generative condition
+  cue: on each trial a prediction of the next outcome location, followed by the observed outcome drawn from a distribution
+    whose mean shifts at unsignalled change points
+  paradigm_timing: synchronous
+  feedback: discrete
+  distinguishing: 标准配置（最早发表）：结果分布的均值在无提示的变点处突变，只有变点一种生成条件（Nassar et al. 2010，R1138）。
+first_source:
+  citation: Nassar MR, Wilson RC, Heasly B, Gold JI. An Approximately Bayesian Delta-Rule Model Explains the Dynamics of Belief
+    Updating in a Changing Environment. The Journal of Neuroscience. 2010;30(37):12366-12378.
+  doi: 10.1523/JNEUROSCI.0822-10.2010
+  pmid: '20844132'
+  year: 2010
+  verified: false
+datasets:
+- name: Nassar, Bruckner & Frank 2019 behavioural and EEG data (Dryad)
+  url: https://doi.org/10.5061/dryad.570pf8n
+interop:
+  bids_task: predictiveinference
+notes: 'Leads used: S_NASSAR2010 (search: https://pmc.ncbi.nlm.nih.gov/articles/PMC2945906); S_NASSAR2019 (search: https://ski.clps.brown.edu/papers/NassarP3_eLife.pdf).
+  first_source lead: S_NASSAR2010. First source is the behavioural task paper (no neural recording); EEG lead S_NASSAR2019
+  reports P3a/P3b-like feedback P300. Dataset from S_NASSAR2019 data-availability statement. Pass 1 skeleton (curator_c, 2026-10-03);
+  all sources unverified. Sprint 2 (D-057): protocol added and description narrowed to the change-point condition; the oddball
+  condition of Nassar et al. 2019 (R1255) split off as ERR-CHGPT-002 (criterion 1). The Dryad dataset contains both conditions.
+  bibliography corrected (Crossref, 2026-10-05)'
+status: draft
+contributors:
+- curator_c

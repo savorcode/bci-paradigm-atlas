@@ -2,7 +2,7 @@
   "$schema": "https://json-schema.org/draft/2020-12/schema",
   "$id": "https://github.com/savorcode/bci-paradigm-atlas/schema/marker.schema.json",
   "title": "Neural marker",
-  "description": "A neural marker with its generators and the constructs it indexes. Schema v0.1 (draft).",
+  "description": "A neural marker with its generators and the constructs it indexes. Schema 0.2 (draft; content unchanged from schema 0.1).",
   "type": "object",
   "additionalProperties": false,
   "required": [
@@ -16,7 +16,7 @@
   ],
   "properties": {
     "schema_version": {
-      "const": "0.1"
+      "const": "0.2"
     },
     "id": {
       "type": "string",

@@ -1,0 +1,54 @@
+schema_version: '0.2'
+id: CTL-SW-002
+class: CTL-SW
+name:
+  en: Cued task switching
+  zh: 线索提示任务切换
+aliases:
+- Cued task switching
+- Cued task-switching paradigm
+- Explicit task cueing
+family: control
+bci_category:
+- none
+recording_modality:
+- EEG
+- fMRI
+stimulus_modality:
+- visual
+markers:
+- MK.frontal_midline_theta
+- MK.switch_positivity
+description:
+  en: An explicit cue presented before each stimulus tells the participant which of two tasks to perform, with the task sequence
+    random, so that cue processing, preparation (cue-stimulus interval) and task reconfiguration can be separated. Switch
+    trials are slower than repeat trials and elicit a cue-locked switch positivity and increased frontal midline theta.
+  zh: 每个刺激前呈现一个显式线索，告诉被试本试次完成两个任务中的哪一个，任务顺序随机，因而可分离线索加工、准备（线索–刺激间隔）与任务重构。切换试次慢于重复试次，并诱发线索锁时的切换正波与额中线 θ 增强。
+trial_structure:
+  conditions:
+  - task repeat
+  - task switch
+protocol:
+  n_classes: 2
+  classes:
+  - task repeat
+  - task switch
+  cue: explicit task cue on every trial (e.g., word 'colour' or 'shape') followed by a bivalent target; random task sequence
+  paradigm_timing: synchronous
+  feedback: none
+  distinguishing: 准则 2：每试次有显式任务线索、任务顺序随机（CTL-SW-001 为可预测 AABB 序列、无线索）；线索–刺激间隔是参数。
+first_source:
+  citation: 'Meiran N. Reconfiguration of processing mode prior to task performance. Journal of Experimental Psychology: Learning,
+    Memory, and Cognition. 1996;22(6):1423-1442.'
+  doi: 10.1037/0278-7393.22.6.1423
+  year: 1996
+  verified: false
+interop:
+  bids_task: cuedtaskswitch
+notes: 'Leads used: R1314 (citation as given on the PsyToolkit page; PDF https://tzin.bgu.ac.il/~nmeiran/index_files/Meiran%201996.pdf
+  seen in search results, not opened); HED page; R0261. Please add R1314 to literature.csv. Sprint 2 (D-057, curator_c, 2026-10-03):
+  new concrete paradigm of class CTL-SW; numbering criterion 2 relative to CTL-SW-001; all sources unverified. bibliography
+  corrected (Crossref, 2026-10-05)'
+status: draft
+contributors:
+- curator_c

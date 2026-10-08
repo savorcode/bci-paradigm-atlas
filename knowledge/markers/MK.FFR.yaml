@@ -1,0 +1,26 @@
+schema_version: "0.2"
+id: MK.FFR
+name:
+  en: Frequency-following response
+  zh: 频率跟随响应
+aliases:
+- FFR
+- frequency-following response
+- complex ABR
+- speech-ABR
+- envelope following response
+type: steady_state
+recording_modality:
+- EEG
+- MEG
+signature:
+  frequency_hz: stimulus fundamental frequency and harmonics (typically below ~1500)
+description:
+  en: Sustained phase-locked response that follows the periodicity and fine structure of a sound, recorded mainly from subcortical
+    (and partly cortical) auditory generators; its spectrum reproduces the fundamental frequency and harmonics of the stimulus.
+  zh: 跟随声音周期性与精细结构的持续锁相响应，主要来自皮层下（部分来自皮层）听觉发生源；其频谱重现刺激的基频和谐波。
+notes: First-pass skeleton by package A (2026-10-03). No generators/indexes yet. Signature values are textbook-level approximations
+  and await source checking.
+status: draft
+contributors:
+- curator_a

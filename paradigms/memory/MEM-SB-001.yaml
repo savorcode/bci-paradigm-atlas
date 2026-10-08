@@ -1,0 +1,56 @@
+schema_version: '0.2'
+id: MEM-SB-001
+class: MEM-SB
+name:
+  en: Sternberg task
+  zh: Sternberg 工作记忆
+aliases:
+- Memory Search Task
+- Memory scanning task
+- Sternberg Memory Scanning
+- Sternberg item recognition
+family: memory
+bci_category:
+- passive
+recording_modality:
+- EEG
+- MEG
+stimulus_modality:
+- visual
+- auditory
+markers:
+- MK.frontal_midline_theta
+- MK.alpha_posterior
+description:
+  en: A memory set of one to several items is presented, followed by a retention interval and a single probe; participants
+    decide whether the probe was in the set. Reaction time increases with set size, and during retention frontal-midline theta
+    and posterior alpha power increase with memory load.
+  zh: 先呈现包含一到数个项目的记忆集，经过保持期后呈现单个探测项，被试判断探测项是否属于记忆集。反应时随记忆集大小增加而延长；保持期内额中线 θ 与后部 α 功率随记忆负荷增加而增强。
+trial_structure:
+  conditions:
+  - set size (parameter)
+  - positive probe
+  - negative probe
+protocol:
+  n_classes: 2
+  classes:
+  - probe in set
+  - probe not in set
+  cue: memory set of 1 to several items, retention interval, single probe
+  paradigm_timing: synchronous
+  feedback: none
+  distinguishing: 标准配置（最早发表）：Sternberg 项目再认（Sternberg 1966, R0014），集合大小为参数。本类只有这一配置。
+first_source:
+  citation: Sternberg S. High-Speed Scanning in Human Memory. Science. 1966;153(3736):652-654.
+  doi: 10.1126/science.153.3736.652
+  pmid: '5939936'
+  year: 1966
+  verified: false
+interop:
+  bids_task: sternberg
+notes: 'HED task page: https://www.hedtags.org/hed-task/tasks/hedtsk_sternberg_item_recognition.html. Leads: R0014, R0018,
+  R0465, R0528, R0735 (R#### = curation/literature.csv; DN## = curation/work/pkg_D/new_leads.csv). Sprint 2 (D-057, curator_d,
+  2026-10-03): protocol block added (-001 = earliest/standard configuration). bibliography corrected (Crossref, 2026-10-05)'
+status: draft
+contributors:
+- curator_d

@@ -1,0 +1,58 @@
+schema_version: '0.2'
+id: MOT-MI-008
+class: MOT-MI
+name:
+  en: Three-class motor imagery (left hand / right hand / feet)
+  zh: 三分类运动想象（左手/右手/双脚）
+aliases:
+- 3-class motor imagery
+family: motor
+bci_category:
+- active
+recording_modality:
+- EEG
+stimulus_modality:
+- mental_imagery
+- visual
+- auditory
+markers:
+- MK.SMR_ERD
+description:
+  en: >-
+    After a preparatory beep, an arrow pointing left, right or down instructs imagery of the left hand, right hand or feet
+    for several seconds, followed by a blank screen. The three classes combine the lateralised hand ERD with the midline foot
+    pattern.
+  zh: 预备提示音后，指向左、右或下方的箭头提示被试在数秒内想象左手、右手或双脚的运动，随后为黑屏。三类结合了偏侧化的手部 ERD 与中线的足部模式。
+protocol:
+  n_classes: 3
+  classes:
+  - left hand
+  - right hand
+  - feet
+  cue: visual arrow cue (left/right/down) after a beep
+  paradigm_timing: synchronous
+  feedback: none
+  distinguishing: Criterion 1 vs MOT-MI-001 (feet added) and vs MOT-MI-002 (tongue absent).
+first_source:
+  citation: >-
+    Zhou B, Wu X, Lv Z, Zhang L, Guo X. A fully automated trial selection method for optimization of motor imagery based brain-computer
+    interface. PLoS ONE. 2016;11(9):e0162657.
+  doi: 10.1371/journal.pone.0162657
+  year: 2016
+  verified: false
+datasets:
+- name: Zhou2016 (MOABB)
+  url: https://moabb.neurotechx.com/docs/generated/moabb.datasets.Zhou2016.html
+  subjects: 4
+- name: Beetl2021_B (MOABB; left hand, right hand, feet)
+  url: https://moabb.neurotechx.com/docs/dataset_summary.html
+  subjects: 2
+interop:
+  bids_task: motorimagery
+notes: >-
+  Leads: WF-B2-08 [=R1290] (MOABB Zhou2016 page: 1 s beep, 5 s arrow, 4 s blank; 3 sessions; 25 trials per class per run)
+  and WF-B2-02 (Beetl2021_B classes left_hand, right_hand, feet). First source is the earliest publication seen, not an established
+  origin. bibliography corrected (OpenAlex, 2026-10-05)
+status: draft
+contributors:
+- curator_b

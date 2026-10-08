@@ -1,0 +1,51 @@
+schema_version: '0.2'
+id: SSR-FFR-001
+class: SSR-FFR
+name:
+  en: Frequency-following response (FFR)
+  zh: 频率跟随响应
+aliases:
+- FFR
+- complex ABR (cABR)
+- envelope following response
+- speech-ABR
+family: steady_state
+bci_category:
+- none
+recording_modality:
+- EEG
+stimulus_modality:
+- auditory
+markers:
+- MK.FFR
+description:
+  en: Low-frequency pure tones are repeated many times. Phase-locked activity of the auditory brainstem follows the stimulus
+    waveform, so that the averaged response reproduces the stimulus frequency.
+  zh: 低频纯音重复呈现多次。听觉脑干的锁相活动跟随刺激波形，平均后的响应重现刺激频率。
+protocol:
+  n_classes: 1
+  classes:
+  - periodic tone
+  cue: low-frequency tones repeated many times
+  stimulus_coding: 语音音节 FFR（cABR）拆为 SSR-FFR-002（准则 2）。
+  paradigm_timing: synchronous
+  feedback: none
+  distinguishing: 标准配置（最早发表，即 first_source）：低频纯音重复呈现，平均锁相响应。同类其他具体范式：SSR-FFR-002（区别见各自 distinguishing；维护者 sprint 2 QA 更正）。
+first_source:
+  citation: Worden FG, Marsh JT. Frequency-following (microphonic-like) neural responses evoked by sound. Electroencephalography
+    and Clinical Neurophysiology. 1968;25(1):42-52.
+  doi: 10.1016/0013-4694(68)90085-0
+  pmid: '4174782'
+  year: 1968
+  verified: false
+interop:
+  bids_task: ffr
+notes: 'Leads used: R0770, R0773, R1017. first_source found by search in this sprint (SA36), not from the lead list. first_source
+  taken from the Wikipedia FFR page read in this sprint (SA36), which says the term was coined for responses recorded directly
+  from brainstem nuclei; whether that paper reports human recordings needs to be checked, and the first human scalp FFR may
+  be a later paper. D-031: Worden & Marsh 1968 (search SA36) may not be a human recording; verify species before review (qa_flag
+  verify_species). (maintainer, 2026-10-03) [curator_a sprint 2, 2026-10-03] D-057: the speech-syllable FFR (complex ABR)
+  is SSR-FFR-002. [curator_e sprint 3, 2026-10-05] bibliography confirmed (OpenAlex, 2026-10-05).'
+status: draft
+contributors:
+- curator_a

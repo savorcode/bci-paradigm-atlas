@@ -1,0 +1,54 @@
+schema_version: '0.2'
+id: ERR-INST-001
+class: ERR-INST
+name:
+  en: Instrumental conditioning
+  zh: 工具性条件化
+aliases:
+- Instrumental Learning
+- Operant Conditioning
+- PIT
+- Pavlovian-Instrumental Transfer
+family: error
+bci_category:
+- none
+recording_modality:
+- EEG
+- fMRI
+stimulus_modality:
+- visual
+markers:
+- MK.FRN
+- MK.BOLD_striatum_reward
+description:
+  en: Participants learn by trial and error which actions lead to rewarding (or avoid aversive) outcomes, so that action-outcome
+    contingencies shape choice. Reward prediction errors during instrumental learning are reflected in striatal BOLD, and
+    outcome feedback elicits the FRN in EEG.
+  zh: 被试通过试错学习哪些动作会带来奖赏（或避免厌恶结果），由动作–结果关联塑造选择。工具性学习中的奖赏预测误差反映在纹状体 BOLD 信号中，EEG 中结果反馈诱发 FRN。
+protocol:
+  n_classes: 2
+  classes:
+  - rewarded outcome
+  - unrewarded outcome
+  cue: visual stimuli chosen by the participant, each associated probabilistically with a rewarding outcome
+  paradigm_timing: synchronous
+  feedback: discrete
+  distinguishing: 标准配置（首个人类 fMRI 线索）：被试通过选择学习动作–结果关联，结果给出奖赏反馈（O'Doherty et al. 2004，S_ODOHERTY2004）。本包仅此一个配置。
+first_source:
+  citation: O'Doherty J, Dayan P, Schultz J, Deichmann R, Friston K, Dolan RJ. Dissociable Roles of Ventral and Dorsal Striatum
+    in Instrumental Conditioning. Science. 2004;304(5669):452-454.
+  doi: 10.1126/science.1094285
+  year: 2004
+  verified: false
+interop:
+  bids_task: instrumental
+notes: 'HED task page: https://www.hedtags.org/hed-task/tasks/hedtsk_instrumental_conditioning.html. Leads used: S_ODOHERTY2004
+  (search: https://www.citedrive.com/en/discovery/dissociable-roles-of-ventral-and-dorsal-striatum-in-instrumental-conditioning);
+  R0140; R0466; R0572. first_source lead: S_ODOHERTY2004. No origin paper among leads (R0140 is a primate neurophysiology
+  review); first_source found by search (O''Doherty et al. 2004, first human fMRI instrumental-conditioning lead found). Historical
+  behavioural origin (Thorndike/Skinner) not sourced. Related: R0466, R0572. Pass 1 skeleton (curator_c, 2026-10-03); all
+  sources unverified. Sprint 2 (D-057): protocol added; single configuration, no split. bibliography corrected (Crossref,
+  2026-10-05)'
+status: draft
+contributors:
+- curator_c

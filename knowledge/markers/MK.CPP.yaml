@@ -1,0 +1,27 @@
+schema_version: "0.2"
+id: MK.CPP
+name:
+  en: Centro-parietal positivity
+  zh: 中央顶正波
+aliases:
+- CPP
+- centro-parietal positivity
+- decision positivity
+type: erp_component
+recording_modality:
+- EEG
+signature:
+  latency_ms: builds up from ~200 ms after evidence onset and peaks near the response
+  polarity: positive
+  topography: centro-parietal (Pz)
+description:
+  en: Positive potential that rises gradually during perceptual decisions at a rate proportional to the strength of sensory
+    evidence and peaks around the time of the response, independent of stimulus modality and response hand. It is interpreted
+    as a signature of evidence accumulation.
+  zh: 知觉决策过程中逐渐上升的正电位，上升速率与感觉证据强度成正比，在反应时刻前后达到峰值，且与刺激模态和反应手无关。它被解释为证据累积的特征信号。
+notes: 'Signature values are textbook-level approximations and await checking against sources (pass 2). Generators and indexes
+  not yet written. Used by (registry): CTL-PDM-001.'
+status: draft
+contributors:
+- maintainer
+- curator_c

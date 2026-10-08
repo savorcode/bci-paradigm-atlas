@@ -1,0 +1,60 @@
+schema_version: '0.2'
+id: MOT-MI-004
+class: MOT-MI
+name:
+  en: Foot motor imagery brain switch (beta rebound)
+  zh: 足部运动想象脑开关（β 反弹）
+aliases:
+- lower-limb MI
+- foot motor imagery
+- gait imagery
+- beta rebound brain switch
+family: motor
+bci_category:
+- active
+recording_modality:
+- EEG
+stimulus_modality:
+- mental_imagery
+- visual
+markers:
+- MK.SMR_ERD
+description:
+  en: >-
+    The participant is cued to perform brief imagery of both-feet movement, contrasted with rest, and the post-imagery beta
+    rebound (beta ERS) over the vertex is detected as a single switch-like command. The single imagery class against rest
+    is intended for a 'brain switch' that can later be operated in self-paced mode.
+  zh: 被试按提示短暂想象双脚动作，与休息对照；检测想象结束后头顶区的 β 反弹（β ERS），作为一个开关式指令。单一想象类对休息的设计用于可在自定步调模式下操作的“脑开关”。
+protocol:
+  n_classes: 2
+  classes:
+  - feet motor imagery
+  - rest
+  cue: visual cue
+  paradigm_timing: synchronous
+  feedback: none
+  distinguishing: >-
+    Criterion 1 vs MOT-MI-001: a single foot-imagery class against rest (detected via post-imagery beta rebound) instead of
+    left vs right hand.
+first_source:
+  citation: >-
+    Pfurtscheller G, Solis-Escalante T. Could the beta rebound in the EEG be suitable to realize a "brain switch"? Clinical
+    Neurophysiology. 2009;120(1):24-29.
+  doi: 10.1016/j.clinph.2008.09.027
+  pmid: '19028138'
+  year: 2009
+  verified: false
+datasets:
+- name: >-
+    An EEG database for the cognitive assessment of motor imagery during walking with a lower-limb exoskeleton (configuration
+    to be checked)
+interop:
+  bids_task: motorimagery
+notes: >-
+  Leads: R0883 (first_source, title + PMID only), R0922, R0955. Converted from the MOT-MI-001 variant 'Lower-limb / foot motor
+  imagery' (D-014, merged candidate MOT-GAIT-001; the ID MOT-GAIT-001 stays void, D-057 item 7). Cue type and class set taken
+  from the variant note and title; check against the original. The exoskeleton-walking MI database was moved here from MOT-MI-001;
+  its class set may differ (possible separate protocol). bibliography corrected (OpenAlex, 2026-10-05)
+status: draft
+contributors:
+- curator_b

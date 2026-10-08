@@ -1,0 +1,47 @@
+schema_version: '0.2'
+id: ERR-GAM-002
+class: ERR-GAM
+name:
+  en: Doors guessing task
+  zh: 门选择猜测任务（doors task）
+aliases:
+- Doors task
+- Simple guessing task
+family: error
+bci_category:
+- none
+recording_modality:
+- EEG
+stimulus_modality:
+- visual
+markers:
+- MK.FRN
+description:
+  en: On each trial participants see two doors, pick one, and receive feedback of a monetary gain (upward green arrow) or
+    loss (downward red arrow), each on half of the trials, with gains about twice the size of losses. Gain feedback elicits
+    a reward positivity relative to loss feedback; the task is widely used as a clinical biomarker paradigm.
+  zh: 每个试次被试看到两扇门并选择其一，随后得到金钱收益（向上绿色箭头）或损失（向下红色箭头）的反馈，得失各占一半试次，收益约为损失的两倍。收益反馈相对损失反馈诱发奖赏正波；该任务被广泛用作临床生物标记范式。
+trial_structure:
+  conditions:
+  - gain
+  - loss
+protocol:
+  n_classes: 2
+  classes:
+  - monetary gain
+  - monetary loss
+  cue: two doors; pure guess; fixed-magnitude gain/loss arrows
+  paradigm_timing: synchronous
+  feedback: discrete
+  distinguishing: 准则 2：刺激为两扇门与固定金额的得失箭头，纯猜测；准则 1：只有得/失两个条件，金额不作为因素（与 ERR-GAM-001 的金额标注选项相区别，后者金额因素待核对原文）。
+first_source:
+  citation: 'TBD: origin of the doors task not identified (R1093, Proudfit 2015, describes the task without citing its origin)'
+  verified: false
+interop:
+  bids_task: doors
+notes: 'Leads used: R1093 (bibliographic data now known: Proudfit GH 2015, Psychophysiology, 10.1111/psyp.12370 - please update
+  literature.csv R1093). first_source TBD (D-032); memory candidate Foti & Hajcak 2009 not seen. Sprint 2 (D-057, curator_c,
+  2026-10-03): new concrete paradigm of class ERR-GAM; numbering criterion 1;2 relative to ERR-GAM-001; all sources unverified.'
+status: draft
+contributors:
+- curator_c

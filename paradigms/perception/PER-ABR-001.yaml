@@ -1,0 +1,53 @@
+schema_version: '0.2'
+id: PER-ABR-001
+class: PER-ABR
+name:
+  en: Auditory brainstem response (ABR)
+  zh: 听觉脑干反应
+aliases:
+- ABR
+- BAEP
+- BAER
+- brainstem auditory evoked potential
+family: perception
+bci_category:
+- none
+recording_modality:
+- EEG
+stimulus_modality:
+- auditory
+markers:
+- MK.ABR
+description:
+  en: Brief clicks or tone bursts are presented at high rates and thousands of responses are averaged. The response within
+    the first ~10 ms shows waves I-V generated along the auditory nerve and brainstem pathway; their latencies are used for
+    hearing screening and neurodiagnosis.
+  zh: 以较高速率呈现短声或短纯音，并对数千次响应进行叠加平均。刺激后约 10 ms 内出现由听神经和脑干通路产生的 I–V 波，其潜伏期用于听力筛查和神经诊断。
+protocol:
+  n_classes: 1
+  classes:
+  - click / tone burst
+  cue: brief clicks or tone bursts at high rate
+  stimulus_coding: 短声与短纯音、刺激率、强度为参数（variants），本类暂无其他具体范式（no sibling protocol yet）。
+  paradigm_timing: synchronous
+  feedback: none
+  distinguishing: 标准配置（最早发表，即 first_source）：高速率短声/短纯音，被动聆听，平均前 10 ms 响应。本类暂无其他具体范式（no sibling protocol yet）。
+first_source:
+  citation: Jewett DL, Williston JS. Auditory-evoked far fields averaged from the scalp of humans. Brain. 1971;94(4):681-696.
+  doi: 10.1093/brain/94.4.681
+  year: 1971
+  verified: false
+interop:
+  bids_task: abr
+notes: 'Leads used: R0856, R1054, R1087. first_source: no origin source identified in this pass (blocker, see curation/work/pkg_A/status.csv).
+  R0856 (Wikipedia, read in this sprint, SA08) states that Sohmer and Feinmesser (1967) first published human ABRs with surface
+  electrodes and that Jewett and Williston (1971) gave a clear description, but gives no full references; a search for the
+  1971 paper (SA33) did not surface it. Both are origin candidates to be located. [curator_a sprint 2, 2026-10-03] D-057:
+  protocol block added for the canonical configuration; no other concrete paradigm identified for this class in sprint 2.
+  [curator_e sprint 3, 2026-10-05] candidate origin found by bibliographic search (OpenAlex, 2026-10-05); content unverified.
+  [maintainer sprint 3, 2026-10-07] bibliography confirmed (OpenAlex, 2026-10-05; origin candidate, content unverified). [maintainer
+  sprint 3, 2026-10-07, D-073] origin candidate recalled, record confirmed via OpenAlex.'
+status: draft
+contributors:
+- curator_a
+- curator_e

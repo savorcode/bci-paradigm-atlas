@@ -1,0 +1,25 @@
+schema_version: "0.2"
+id: MK.BOLD_TPJ
+name:
+  en: Temporoparietal junction BOLD
+  zh: 颞顶联合区 BOLD
+aliases:
+- TPJ activation
+- rTPJ belief-attribution response
+type: hemodynamic
+recording_modality:
+- fMRI
+- PET
+signature:
+  topography: bilateral temporoparietal junction, right-lateralized for belief attribution
+description:
+  en: Task-evoked BOLD signal change in the temporoparietal junction. It increases when participants reason about other people's
+    beliefs, take another's visual perspective or distinguish self- from other-generated actions.
+  zh: 颞顶联合区的任务诱发 BOLD 信号变化。在推理他人信念、采择他人视觉视角或区分自我与他人产生的动作时增强。
+notes: 'Signature values are textbook-level characteristics entered in the first pass and await source checking. Also referenced
+  by SOC-ANIM-001 (PET study; hemodynamic markers are BOLD-named in the registry). D-050 (maintainer, 2026-10-03): PET regional
+  blood-flow (rCBF) effects in the same region are grouped under this marker, as fNIRS HbO is under D-028 item 5.'
+status: draft
+contributors:
+- maintainer
+- curator_e

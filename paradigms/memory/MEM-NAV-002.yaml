@@ -1,0 +1,53 @@
+schema_version: '0.2'
+id: MEM-NAV-002
+class: MEM-NAV
+name:
+  en: Virtual radial arm maze
+  zh: 虚拟放射臂迷宫
+aliases:
+- virtual radial maze
+- VRAM
+family: memory
+bci_category:
+- none
+recording_modality:
+- fMRI
+stimulus_modality:
+- visual
+markers:
+- MK.BOLD_hippocampus
+description:
+  en: In a first-person virtual environment, participants start from a central platform with several arms and must collect
+    rewards by visiting arms, avoiding re-entries into arms already visited (working-memory errors) and arms never baited
+    (reference-memory errors). Distal landmarks support place-based strategies, and versions that probe strategy use relate
+    hippocampal grey matter and activity to place learning.
+  zh: 在第一人称虚拟环境中，被试从带有若干臂的中央平台出发，通过进入各臂收集奖励，避免再次进入已访问的臂（工作记忆错误）和从未放置奖励的臂（参考记忆错误）。远端地标支持基于地点的策略；考察策略的版本把海马灰质与活动和地点学习联系起来。
+trial_structure:
+  conditions:
+  - working-memory errors
+  - reference-memory errors
+  - landmarks present/removed (parameter)
+protocol:
+  n_classes: 2
+  classes:
+  - baited arm
+  - unbaited / already visited arm
+  cue: virtual 8-arm (or 4-on-8) maze with distal landmarks
+  paradigm_timing: synchronous
+  feedback: discrete
+  distinguishing: 准则 1;2：环境与任务由城镇寻路（MEM-NAV-001）变为多臂迷宫中的赢—移（win-shift）觅食，类别为已访问/未访问、有/无奖励的臂；每次进入给出是否获得奖励的离散反馈（准则 4）。
+first_source:
+  citation: Astur RS, Tropp J, Sava S, Constable RT, Markus EJ. Sex differences and correlations in a virtual Morris water
+    task, a virtual radial arm maze, and mental rotation. Behavioural Brain Research. 2004;151(1-2):103-115.
+  doi: 10.1016/j.bbr.2003.08.024
+  pmid: '15084426'
+  year: 2004
+  verified: false
+notes: 'Former variant of MEM-NAV-001. first_source is the variant''s source (Astur et al. 2004); earlier virtual radial maze
+  studies may exist. Animal origin: Olton & Samuelson 1976 (R0037). The 4-on-8 strategy version (R0366, structural MRI) is
+  kept as a parameter-level variant here. MK.BOLD_hippocampus is provisional (R0366 is structural). Leads: R0289, R0315, R0366,
+  R0698, R0037. (R#### = curation/literature.csv; DN## = curation/work/pkg_D/new_leads.csv.) Numbering criterion (D-057):
+  1;2;4. bibliography corrected (Crossref, 2026-10-05)'
+status: draft
+contributors:
+- curator_d

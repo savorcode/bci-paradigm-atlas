@@ -1,0 +1,58 @@
+schema_version: '0.2'
+id: MEM-FR-002
+class: MEM-FR
+name:
+  en: Rey Auditory Verbal Learning Test
+  zh: Rey 听觉词语学习测验
+aliases:
+- RAVLT
+- Rey AVLT
+family: memory
+bci_category:
+- none
+recording_modality:
+- EEG
+- fMRI
+stimulus_modality:
+- auditory
+markers:
+- MK.Dm
+description:
+  en: A list of 15 words is read aloud and recalled over five consecutive learning trials, followed by a single interference
+    list, a short-delay recall of the first list, a long-delay recall and a recognition test. The test is a standard clinical
+    measure of verbal learning and memory; neural studies use adapted versions to relate encoding activity to later recall.
+  zh: 朗读 15 个词的列表，连续五次学习—回忆，然后呈现一次干扰列表，再进行第一列表的短延迟回忆、长延迟回忆与再认测试。这是临床评估言语学习与记忆的标准测验；神经研究用改编版本把编码期活动与之后的回忆联系起来。
+trial_structure:
+  conditions:
+  - learning trials 1-5
+  - interference list
+  - short-delay recall
+  - long-delay recall
+  - recognition
+protocol:
+  n_classes: 5
+  classes:
+  - learning trials 1-5
+  - interference list B
+  - short-delay recall
+  - long-delay recall
+  - recognition
+  cue: auditory word list read by the examiner
+  paradigm_timing: block
+  feedback: none
+  distinguishing: 准则 1;3：同一列表的重复学习—回忆循环 + 干扰列表 + 延迟回忆与再认，取代 MEM-FR-001 的单次学习—回忆。
+first_source:
+  citation: Lezak, M. D., Howieson, D. B., Bigler, E. D., & Tranel, D. Neuropsychological Assessment. Oxford University Press.
+    2012.
+  year: 2012
+  verified: false
+notes: 'Former variant of MEM-FR-001. first_source is the variant''s source (Lezak et al. 2012, a handbook; the original Rey
+  publication was not retrieved). The fixed parts (15 words, five trials) follow the standard test description and have to
+  be checked against R0550. MK.Dm is the class marker; neural evidence specific to the RAVLT has not been collected yet. D-061
+  (maintainer, 2026-10-05): marker inherited from class - MK.Dm measured in the sibling MEM-FR-001 (subsequent-memory free
+  recall), not in the RAVLT. Leads: R0550, R0119, R0353. (R#### = curation/literature.csv; DN## = curation/work/pkg_D/new_leads.csv.)
+  Numbering criterion (D-057): 1;3. bibliography not found in Crossref (2026-10-05; curator_c): handbook (Lezak et al. 2012,
+  Neuropsychological Assessment, OUP); two Crossref bibliographic searches were refused (HTTP 429); not resolvable this sprint'
+status: draft
+contributors:
+- curator_d

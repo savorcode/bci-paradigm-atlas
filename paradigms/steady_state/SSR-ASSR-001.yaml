@@ -1,0 +1,52 @@
+schema_version: '0.2'
+id: SSR-ASSR-001
+class: SSR-ASSR
+name:
+  en: Auditory steady-state response (ASSR)
+  zh: 听觉稳态响应
+aliases:
+- 40-Hz ASSR
+- AM-tone ASSR
+- ASSR
+- auditory steady-state evoked potential
+family: steady_state
+bci_category:
+- none
+recording_modality:
+- EEG
+- MEG
+stimulus_modality:
+- auditory
+markers:
+- MK.ASSR
+description:
+  en: Clicks or amplitude-modulated tones are presented passively at a constant rate, classically around 40 Hz. The auditory
+    system follows the stimulation rate, producing an auditory steady-state response at that frequency, which is used to estimate
+    hearing thresholds (also with 80-100 Hz modulation) and to probe gamma-band function.
+  zh: 以恒定速率（经典为约 40 Hz）被动呈现短声或调幅音。听觉系统跟随刺激速率，在该频率产生听觉稳态响应，用于估计听阈（也用 80–100 Hz 调制）和探测 γ 频段功能。
+protocol:
+  n_classes: 1
+  classes:
+  - about 40 Hz click / modulation rate
+  cue: click trains or amplitude-modulated tones at a constant rate (about 40 Hz)
+  stimulus_coding: ASSR 听觉 BCI 拆为 SSR-ASSR-002（准则 1;2;4）；80–100 Hz 载频为参数。
+  paradigm_timing: continuous
+  feedback: none
+  distinguishing: 标准配置（最早发表，即 first_source）：约 40 Hz 短声串/调幅音，被动聆听。同类其他具体范式：SSR-ASSR-002（区别见各自 distinguishing；维护者 sprint 2 QA
+    更正）。
+first_source:
+  citation: Galambos R, Makeig S, Talmachoff PJ. A 40-Hz auditory potential recorded from the human scalp. Proc Natl Acad
+    Sci U S A. 1981;78(4):2643-2647.
+  doi: 10.1073/pnas.78.4.2643
+  year: 1981
+  verified: false
+interop:
+  bids_task: assr
+notes: 'Leads used: R0833, R0872, R0897. R0833 gives the title of the origin candidate only (no authors/year in the lead).
+  [curator_a sprint 2, 2026-10-03] D-057: the selective-attention ASSR BCI is SSR-ASSR-002. [curator_e sprint 3, 2026-10-05]
+  bibliography corrected (OpenAlex, 2026-10-05). [maintainer sprint 3, 2026-10-07, D-073] origin candidate recalled, record
+  confirmed via OpenAlex.'
+status: draft
+contributors:
+- curator_a
+- curator_e

@@ -1,0 +1,59 @@
+schema_version: '0.2'
+id: MOT-IB-001
+class: MOT-IB
+name:
+  en: Intentional binding
+  zh: 意向绑定（主体感）
+aliases:
+- Temporal Binding Task
+- Action-Effect Binding Task
+- Interval Estimation Agency Task
+- Libet Clock Binding Task
+family: motor
+bci_category:
+- none
+recording_modality:
+- EEG
+stimulus_modality:
+- motor_execution
+- auditory
+- visual
+markers:
+- MK.MRCP
+- MK.N1_auditory
+description:
+  en: >-
+    Participants make a voluntary key press that is followed after a short delay by a tone, and judge the timing of the action
+    or the tone (e.g. with a Libet clock) or the interval between them. Perceived action and outcome times shift towards each
+    other for voluntary actions; neural correlates include the readiness potential before the action and attenuation of the
+    auditory N1 to self-caused tones.
+  zh: 被试自主按键，短暂延迟后出现声音，被试判断动作或声音出现的时刻（如借助 Libet 时钟）或二者的间隔。自主动作时，知觉到的动作与结果时刻相互靠近；神经相关指标包括动作前的准备电位，以及对自身引起声音的听觉 N1 衰减。
+protocol:
+  n_classes: 2
+  classes:
+  - operant condition (action followed by tone)
+  - baseline condition (action or tone alone)
+  cue: rotating Libet clock for time judgements
+  paradigm_timing: asynchronous
+  feedback: none
+  distinguishing: >-
+    Standard configuration (earliest published) / 标准配置（最早发表）: self-timed key press followed by a tone, time judgements with
+    a Libet clock, operant vs baseline conditions (Haggard et al. 2002). Interval-estimation versions are not yet split (no
+    lead checked).
+first_source:
+  citation: >-
+    Haggard, P., Clark, S., & Kalogeras, J. Voluntary action and conscious awareness. Nature Neuroscience, 5(4), 382-385.
+    2002.
+  doi: 10.1038/nn827
+  pmid: '11896397'
+  year: 2002
+  verified: false
+interop:
+  bids_task: intentionalbinding
+notes: >-
+  HED task page: https://www.hedtags.org/hed-task/tasks/hedtsk_intentional_binding.html. Leads: R0241, R0455, R0543, R0569,
+  R0697, R0769. Related new candidate MOT-LIBET-001 (W-judgement of intention timing) is proposed separately in new_candidates.csv.
+  bibliography confirmed (Crossref, 2026-10-05)
+status: draft
+contributors:
+- curator_b

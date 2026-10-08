@@ -1,0 +1,24 @@
+schema_version: "0.2"
+id: MK.alpha_lateralization
+name:
+  en: Posterior alpha lateralization
+  zh: 后部 α 偏侧化
+aliases:
+- alpha lateralization index
+- hemispheric alpha asymmetry (attention)
+type: oscillatory
+recording_modality:
+- EEG
+- MEG
+signature:
+  frequency_hz: 8-13
+  topography: parieto-occipital, contralateral vs ipsilateral to attended side
+description:
+  en: Relative decrease of posterior alpha power over the hemisphere contralateral to the attended hemifield (or memorised
+    item) and relative increase ipsilaterally, during anticipatory covert attention or retro-cueing.
+  zh: 在预期性隐蔽注意或回溯线索期间，被注意视野（或被记忆项目）对侧半球后部 α 功率相对降低、同侧半球相对升高。
+notes: First-pass skeleton by package A (2026-10-03). No generators/indexes yet. Signature values are textbook-level approximations
+  and await source checking.
+status: draft
+contributors:
+- curator_a

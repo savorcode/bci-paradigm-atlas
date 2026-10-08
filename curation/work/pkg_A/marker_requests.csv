@@ -1,0 +1,11 @@
+﻿marker_id,name_en,name_zh,type,recording_modality,requested_by_paradigm,reason
+MK.vMMN,Visual mismatch negativity,视觉失匹配负波,erp_component,EEG;MEG,PER-VMMN-001,视觉偏差检测的后部负波，与听觉 MK.MMN 模态和发生源不同；登记表无同义项；已在本包分支建文件（D-028 第 7 条）
+MK.MLR,Auditory middle-latency response,听觉中潜伏期反应,erp_component,EEG;MEG,PER-MLR-001,10–80 ms 听觉中潜伏期波（Na/Pa），介于 MK.ABR 与 MK.N1_auditory 之间，登记表无同义项；已在本包分支建文件（D-028 第 7 条）
+MK.ORN,Object-related negativity,客体相关负波,erp_component,EEG;MEG,PER-ORN-001,同时声音分离的客体相关负波，与 MMN 不同（无需 oddball 结构）；登记表无同义项；已在本包分支建文件（D-028 第 7 条）
+MK.GEP,Gustatory evoked potential,味觉诱发电位,erp_component,EEG,PER-GEP-001,味觉诱发电位，登记表无味觉标记物；已在本包分支建文件（D-028 第 7 条）
+MK.SPN,Sustained posterior negativity,持续性后部负波,erp_component,EEG,PER-SPN-001,对称/规则性的持续后部负波，登记表无同义项；已在本包分支建文件（D-028 第 7 条）
+MK.Pd,Distractor positivity,干扰正波,erp_component,EEG,PER-ADDS-001,干扰抑制的对侧正波，与 MK.N2pc 极性和构念不同；已在本包分支建文件（D-028 第 7 条）
+MK.RREP,Respiratory-related evoked potential,呼吸相关诱发电位,erp_component,EEG,PER-RREP-001,呼吸内感受诱发电位，与 MK.HEP 不同的内感受通道；已在本包分支建文件（D-028 第 7 条）
+MK.intermodulation,Intermodulation frequency response,互调频率响应,steady_state,EEG;MEG,SSR-IM-001,互调频率成分只来自非线性整合，与 MK.SSVEP（基频/谐波）和 MK.FPVS_oddball 不同；已在本包分支建文件（D-028 第 7 条）
+MK.SSEP_nociceptive,Nociceptive steady-state evoked potential,伤害性稳态诱发电位,steady_state,EEG,SSR-NSSEP-001,伤害性稳态响应，与非伤害性 MK.SSSEP 头皮分布不同；已在本包分支建文件（D-028 第 7 条）
+MK.FPAS_oddball,FPAS oddball-frequency response,快速周期听觉刺激 oddball 频率响应,steady_state,EEG,SSR-FPAS-001,MK.FPVS_oddball 定义为视觉；若例会同意把听觉版作为 FPVS 变体，可改为扩展 MK.FPVS_oddball 的定义；已在本包分支建文件（D-028 第 7 条）

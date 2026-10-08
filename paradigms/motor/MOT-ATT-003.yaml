@@ -1,0 +1,60 @@
+schema_version: '0.2'
+id: MOT-ATT-003
+class: MOT-ATT
+name:
+  en: Multi-class attempted arm and hand movements (spinal cord injury)
+  zh: 多类别尝试上肢与手部运动（脊髓损伤）
+aliases:
+- attempted upper limb movements
+- BNCI2019_001 paradigm
+family: motor
+bci_category:
+- active
+recording_modality:
+- EEG
+stimulus_modality:
+- motor_execution
+- visual
+markers:
+- MK.low_freq_kinematics
+- MK.SMR_ERD
+description:
+  en: >-
+    Participants with cervical spinal cord injury attempt one of five arm and hand movements (forearm supination or pronation,
+    hand opening, palmar grasp, lateral grasp) after a visual cue. Movements are decoded from low-frequency EEG, and in the
+    online part a movement icon is shown when a movement is detected.
+  zh: 颈髓损伤被试按视觉提示尝试 5 种上肢与手部动作之一（前臂旋后/旋前、手张开、掌握、侧捏）。依据低频脑电解码动作，在线部分检测到动作时显示动作图标。
+protocol:
+  n_classes: 5
+  classes:
+  - forearm supination
+  - forearm pronation
+  - hand open
+  - palmar grasp
+  - lateral grasp
+  cue: visual cue
+  paradigm_timing: synchronous
+  feedback: discrete
+  distinguishing: >-
+    Criteria 1 and 4 vs MOT-ATT-001: five upper-limb attempt classes instead of attempted vs passive foot movement; discrete
+    online feedback (icon on detection).
+first_source:
+  citation: >-
+    Ofner P, Schwarz A, Pereira J, Wyss D, Wildburger R, Müller-Putz GR. Attempted arm and hand movements can be decoded from
+    low-frequency EEG from persons with spinal cord injury. Scientific Reports. 2019;9(1):7134.
+  doi: 10.1038/s41598-019-43594-9
+  year: 2019
+  verified: false
+datasets:
+- name: BNCI2019_001 (MOABB)
+  url: https://moabb.neurotechx.com/docs/generated/moabb.datasets.BNCI2019_001.html
+  subjects: 10
+interop:
+  bids_task: attemptedmovement
+notes: >-
+  Lead: WF-B2-10 [=R1294] (MOABB BNCI2019_001 page: 10 participants with cervical SCI, attempted movements, five classes,
+  visual cue, 'movement icon displayed when movement detected' in the online paradigm). Offline sessions without feedback
+  are part of the same dataset (parameter). bibliography corrected (Crossref, 2026-10-05)
+status: draft
+contributors:
+- curator_b

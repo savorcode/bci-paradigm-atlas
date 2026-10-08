@@ -1,0 +1,53 @@
+schema_version: '0.2'
+id: ERR-ERRP-004
+class: ERR-ERRP
+name:
+  en: Error-related potentials during continuous feedback
+  zh: 连续反馈中的错误电位
+aliases:
+- Continuous ErrP
+family: error
+bci_category:
+- passive
+recording_modality:
+- EEG
+stimulus_modality:
+- visual
+- motor_execution
+markers:
+- MK.ErrP
+description:
+  en: Users continuously control a cursor in a simple video game and receive continuous visual feedback. Execution errors
+    (the feedback deviates from the user's input) and outcome errors (the action goal is not achieved) are introduced at unpredictable
+    times and elicit error-related potentials without trial segmentation.
+  zh: 用户在简单电子游戏中连续控制光标并获得连续视觉反馈。在不可预测的时刻引入执行错误（反馈偏离用户输入）与结果错误（未达成动作目标），二者在没有试次划分的情况下诱发错误相关电位。
+trial_structure:
+  conditions:
+  - correct continuous feedback
+  - execution error
+  - outcome error
+protocol:
+  n_classes: 3
+  classes:
+  - correct continuous feedback
+  - execution error
+  - outcome error
+  cue: continuous cursor control in a video game; errors inserted at unpredictable times
+  paradigm_timing: continuous
+  feedback: continuous
+  distinguishing: 准则 3、4：连续控制、无试次划分，反馈连续（ERR-ERRP-001 为离散指令与离散反馈）；准则 1：区分执行错误与结果错误两类错误。
+first_source:
+  citation: 'Spüler M, Niethammer C. Error-related potentials during continuous feedback: using EEG to detect errors of different
+    type and severity. Frontiers in Human Neuroscience. 2015;9:155.'
+  doi: 10.3389/fnhum.2015.00155
+  year: 2015
+  verified: false
+interop:
+  bids_task: errpcontinuous
+notes: 'Leads used: R1308 (10 subjects; execution vs outcome errors; severity manipulated without significant EEG difference);
+  R1309 (title-only search hit https://bibliographie.uni-tuebingen.de/xmlui/handle/10900/76582). Please add both to literature.csv.
+  Sprint 2 (D-057, curator_c, 2026-10-03): new concrete paradigm of class ERR-ERRP; numbering criterion 3;4 relative to ERR-ERRP-001;
+  all sources unverified. bibliography corrected (Crossref, 2026-10-05)'
+status: draft
+contributors:
+- curator_c

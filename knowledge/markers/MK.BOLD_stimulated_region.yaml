@@ -1,0 +1,10 @@
+schema_version: "0.2"
+id: MK.BOLD_stimulated_region
+name: {en: Hemodynamic response at the stimulated region, zh: 受刺激脑区血流动力学响应}
+aliases: [stimulation-evoked BOLD, target engagement BOLD]
+type: hemodynamic
+recording_modality: [fMRI, fNIRS]
+description: {en: 'Change in BOLD or HbO signal at, and in regions connected to, the brain area targeted by non-invasive brain stimulation (e.g. TMS, tDCS, focused ultrasound). It is used to verify target engagement and to characterise network effects.', zh: 非侵入性脑刺激（如 TMS、tDCS、聚焦超声）作用靶区及其连接区域的 BOLD 或 HbO 信号变化，用于确认靶点作用并刻画网络效应。}
+notes: Generators and indexes to be added in the second pass.
+status: draft
+contributors: [maintainer, curator_b]

@@ -1,0 +1,53 @@
+schema_version: '0.2'
+id: PER-RET-001
+class: PER-RET
+name:
+  en: Retinotopic mapping
+  zh: 视网膜拓扑映射
+aliases:
+- phase-encoded retinotopy
+- population receptive field (pRF) mapping
+- retinotopic mapping
+- wedge-and-ring paradigm
+family: perception
+bci_category:
+- none
+recording_modality:
+- fMRI
+stimulus_modality:
+- visual
+markers:
+- MK.BOLD_visual_cortex
+description:
+  en: A slowly rotating wedge and an expanding ring of flickering checkerboard sweep periodically across the visual field.
+    The phase of the visual cortex BOLD response at the stimulation frequency at each voxel gives its preferred polar angle
+    or eccentricity, which maps the visual field and delineates the borders of early visual areas.
+  zh: 闪烁棋盘格构成的缓慢旋转楔形和扩张环周期性地扫过视野。每个体素视觉皮层 BOLD 响应在刺激频率上的相位给出其偏好的极角或离心率，据此绘制视野图并划定早期视觉区边界。
+protocol:
+  n_classes: 2
+  classes:
+  - polar angle (rotating wedge)
+  - eccentricity (expanding ring)
+  cue: rotating wedges and expanding rings sweeping the visual field
+  stimulus_coding: phase-encoded (travelling wave)
+  paradigm_timing: continuous
+  feedback: none
+  distinguishing: 标准配置（最早发表，即 first_source）：旋转楔形与扩张环，相位编码（行波）设计。群体感受野（pRF）模型配置拆为 PER-RET-002（准则 2）。
+first_source:
+  citation: DeYoe EA, Carman GJ, Bandettini P, Glickman S, Wieser J, Cox R, Miller D, Neitz J. Mapping striate and extrastriate
+    visual areas in human cerebral cortex. Proceedings of the National Academy of Sciences of the United States of America.
+    1996;93(6):2382-2386.
+  doi: 10.1073/pnas.93.6.2382
+  pmid: '8637882'
+  year: 1996
+  verified: false
+interop:
+  bids_task: retinotopy
+notes: 'Leads used: R0009, R0240, R0334, R0490, R0507. first_source found by search in this sprint (SA38), not from the lead
+  list. Leads are animal or review papers. first_source taken from the Wikipedia Retinotopy page read in this sprint (SA38),
+  which also cites Engel et al. 1997; earlier phase-encoded fMRI work may exist and should be checked. [curator_a sprint 2,
+  2026-10-03] D-057: -001 = phase-encoded design; population receptive field mapping is PER-RET-002. [curator_e sprint 3,
+  2026-10-05] bibliography confirmed (Crossref, 2026-10-05).'
+status: draft
+contributors:
+- curator_a

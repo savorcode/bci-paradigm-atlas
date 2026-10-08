@@ -1,7 +1,17 @@
 # Copy to paradigms/<family>/<ID>.yaml. Remove any field you cannot fill with verified information.
 # 复制到 paradigms/<范式族>/<ID>.yaml。无法核实的字段请删除，不要猜测。
-schema_version: "0.1"
+# Two-level IDs (D-057): the class <FAMILY>-<SHORT> holds the shared mechanism and is registered in
+# paradigms/_classes.yaml; this file is ONE concrete paradigm (protocol) <FAMILY>-<SHORT>-<NNN>.
+# 两级 ID（D-057）：范式类 <范式族>-<简称> 记录共同机制，登记在 paradigms/_classes.yaml；
+# 本文件是其中一个具体范式（协议）<范式族>-<简称>-<序号>。
+# New serial number if ANY of: (1) class/condition set, (2) stimulus/cue type or coding scheme,
+# (3) trial structure (synchronous/asynchronous, single-trial/block), (4) feedback mode changes.
+# Parameter changes only (durations, ISI, trial counts, values within the same scheme) -> `variants`.
+# 以下任一改变即取新序号：(1) 类别/条件集；(2) 刺激或提示类型（含编码方案）；(3) 试次结构；(4) 反馈方式。
+# 只改参数（时长、ISI、试次数、同一方案内的取值）的写入 `variants`。序号永久有效、不复用；-001 为最早/标准配置。
+schema_version: "0.2"
 id: XXX-NAME-001
+class: XXX-NAME                   # = id without -NNN; must exist in paradigms/_classes.yaml (same family)
 name: {en: "", zh: ""}
 aliases: []
 family: perception
@@ -15,12 +25,21 @@ trial_structure:
     - {name: fixation, duration_ms: 500}
   typical_trials: 0
   conditions: []
+protocol:                         # the task configuration of THIS concrete paradigm / 本具体范式的任务配置
+  n_classes: 2                    # number of distinct classes / targets / conditions decoded or contrasted
+  classes: [left hand, right hand]
+  cue: ""                         # cue / stimulus type, e.g. visual arrow cue
+  stimulus_coding: ""             # e.g. frequency coding, joint frequency-phase coding, row/column flashing
+  paradigm_timing: synchronous    # synchronous | asynchronous | block | continuous
+  feedback: none                  # none | discrete | continuous
+  distinguishing: ""              # REQUIRED: how this differs from sibling protocols, citing criteria 1-4
+                                  # 必填：与同类其他具体范式的区别，写明依据的准则编号（-001 写"标准配置"）
 first_source:
   citation: ""
   doi: ""
   year: 2000
   verified: false
-variants: []
+variants: []                      # parameter-level variations only / 只记参数级变化
 datasets: []
 interop:
   bids_task: ""

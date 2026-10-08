@@ -1,0 +1,52 @@
+schema_version: '0.2'
+id: EMO-WORD-001
+class: EMO-WORD
+name:
+  en: Emotional word reading
+  zh: 情绪词阅读
+aliases:
+- emotional words
+- emotional word processing
+family: emotion
+bci_category:
+- none
+recording_modality:
+- EEG
+- MEG
+stimulus_modality:
+- visual
+markers:
+- MK.EPN
+- MK.LPP
+description:
+  en: Emotionally positive, negative and neutral words are presented, often in rapid streams, during silent reading or a lexical
+    or evaluative task. Emotional words elicit an enhanced early posterior negativity about 200-300 ms after onset and a larger
+    late positive potential.
+  zh: 在默读或词汇、评价任务中呈现正性、负性和中性情绪词，常以快速序列呈现。情绪词在出现后约 200–300 毫秒诱发增强的早期后部负波，并诱发更大的晚期正电位。
+protocol:
+  n_classes: 3
+  classes:
+  - positive words
+  - negative words
+  - neutral words
+  cue: words presented in a rapid serial stream during silent reading
+  paradigm_timing: synchronous
+  feedback: none
+  distinguishing: 'Standard configuration (earliest published or canonical; D-057 -001): rapid serial presentation of emotional
+    and neutral words during reading (Kissler et al. 2007, R1181).'
+first_source:
+  citation: 'Kissler J, Herbert C, Peyk P, Junghöfer M. Buzzwords: early cortical responses to emotional words during reading.
+    Psychological Science. 2007;18(6):475-480.'
+  doi: 10.1111/j.1467-9280.2007.01924.x
+  year: 2007
+  verified: false
+interop:
+  bids_task: emotionalwords
+notes: 'Sources found by curator_e (curation/work/pkg_E/search_log.md): S08 = https://www.psychologicalscience.org/journals/psychological-science/j.1467-9280.2007.01924.x/.
+  first_source note: Subtitle taken from search query; fetched page shows title ''Buzzwords''. New candidate (curator_e).
+  Related: EMO-EST-001 (emotional words with colour naming) and LAN-LDT-001. First-pass skeleton (curator_e, 2026-10-03);
+  all sources unverified. Sprint 2 (curator_e, 2026-10-03): protocol block added per D-057; see curation/work/pkg_E/sprint2/split_log.csv.
+  Sprint 3 (curator_d, 2026-10-05): bibliography corrected (OpenAlex, 2026-10-05): pages added, author spelling (Junghöfer).'
+status: draft
+contributors:
+- curator_e

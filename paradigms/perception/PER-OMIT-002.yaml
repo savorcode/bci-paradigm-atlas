@@ -1,0 +1,56 @@
+schema_version: '0.2'
+id: PER-OMIT-002
+class: PER-OMIT
+name:
+  en: Self-initiated sound omission
+  zh: 自发产生声音的遗漏范式
+aliases:
+- motor-auditory omission paradigm
+- self-generated sound omission
+family: perception
+bci_category:
+- none
+recording_modality:
+- EEG
+- MEG
+stimulus_modality:
+- auditory
+markers:
+- MK.omission_response
+description:
+  en: Participants press a button at their own pace (about once per second), and each press normally produces a sound; occasionally
+    the press produces no sound. Omissions of the self-generated sound evoke responses resembling the auditory response, larger
+    when the identity of the sound is predictable, which shows sound-specific prediction.
+  zh: 被试自定步调按键（约每秒一次），每次按键通常产生一个声音，偶尔按键后没有声音。自发产生的声音被遗漏时，诱发与听觉响应相似的遗漏响应；声音身份可预测时响应更大，表明存在声音特异的预测。
+trial_structure:
+  conditions:
+  - press followed by sound
+  - press followed by omission
+  - predictable vs unpredictable sound identity
+protocol:
+  n_classes: 2
+  classes:
+  - sound after press
+  - omission after press
+  cue: self-paced button presses that trigger sounds; occasional omissions
+  paradigm_timing: asynchronous
+  feedback: none
+  distinguishing: 准则 2;3：声音由被试自己的按键触发（运动–听觉耦合），按键自定步调；-001 为外部定时的序列。
+first_source:
+  citation: 'SanMiguel I, Widmann A, Bendixen A, Trujillo-Barreto N, Schröger E. Hearing silences: human auditory processing
+    relies on preactivation of sound-specific brain activity patterns. J Neurosci. 2013;33(20):8633-8639.'
+  doi: 10.1523/JNEUROSCI.5821-12.2013
+  year: 2013
+  verified: false
+interop:
+  bids_task: omission
+notes: 'Leads: R0585 (SanMiguel et al. 2013 J Neurosci 33:8633, Leipzig abstract page; the page itself was robots-blocked
+  in S2A32, not retried), WebSearch S2A33 [=R1282], DocCheck news page S2A34 (button press about once per second produces
+  a sound; omissions; DOI; lists Schroeger E among authors), R0792 = Dercksen TT, Widmann A, Schroeger E, Wetzel N. Omission
+  related brain responses reflect specific and unspecific action-effect couplings. NeuroImage. 2020;215:116840 (DOAJ record
+  S2A35: replication with predictable vs random sound). Full author list of the first_source to be completed. New in sprint
+  2. [curator_e sprint 3, 2026-10-05] bibliography corrected (Crossref, 2026-10-05).'
+status: draft
+contributors:
+- curator_a
+- curator_e

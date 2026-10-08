@@ -1,0 +1,53 @@
+schema_version: '0.2'
+id: LAN-CPS-001
+class: LAN-CPS
+name:
+  en: Prosodic boundary processing (closure positive shift)
+  zh: 韵律边界加工
+aliases:
+- CPS paradigm
+- intonational phrase boundary
+- prosodic phrasing
+family: language
+bci_category:
+- none
+recording_modality:
+- EEG
+stimulus_modality:
+- auditory
+markers:
+- MK.CPS
+description:
+  en: Participants listen to naturally spoken sentences that differ in the number or position of intonational phrase boundaries,
+    sometimes with otherwise identical words. Each prosodic boundary elicits a positive shift (closure positive shift, CPS)
+    over centro-parietal sites, which indexes prosodic phrasing independently of the acoustic pause.
+  zh: 被试聆听语调短语边界数量或位置不同、有时用词完全相同的自然语音句子。每个韵律边界在中央—顶区诱发正漂移（闭合正漂移，CPS），反映韵律切分，而不依赖于声学停顿本身。
+trial_structure:
+  conditions:
+  - boundary
+  - no boundary
+protocol:
+  n_classes: 2
+  classes:
+  - sentence with additional intonational phrase boundary
+  - sentence without it
+  cue: naturally spoken sentences
+  paradigm_timing: synchronous
+  feedback: none
+  distinguishing: 标准配置（最早发表）：听自然语音句子中的语调短语边界（Steinhauer et al. 1999, R1164）。与 -002（阅读，以逗号标记边界，准则 2）区别。
+first_source:
+  citation: Steinhauer K, Alter K, Friederici AD. Brain potentials indicate immediate use of prosodic cues in natural speech
+    processing. Nature Neuroscience. 1999;2(2):191-196.
+  doi: 10.1038/5757
+  year: 1999
+  verified: false
+interop:
+  bids_task: prosodicboundary
+notes: 'Leads: DN29, DN30 (R#### = curation/literature.csv; DN## = curation/work/pkg_D/new_leads.csv). New candidate (curator_d).
+  DN29 is the source candidate (title only from search result; author/year not visible). New marker MK.CPS requested. Leads:
+  DN29, DN30. Sprint 2 (D-057, curator_d, 2026-10-03): protocol block added (-001 = earliest/standard configuration). Narrowed
+  to spoken sentences; reading with comma-marked boundaries moved to LAN-CPS-002. Sibling concrete paradigms: LAN-CPS-002.
+  bibliography corrected (Crossref, 2026-10-05)'
+status: draft
+contributors:
+- curator_d

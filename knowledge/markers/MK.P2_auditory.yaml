@@ -1,0 +1,27 @@
+schema_version: "0.2"
+id: MK.P2_auditory
+name:
+  en: Auditory P2 (P200)
+  zh: 听觉 P2（P200）
+aliases:
+- P2
+- P200
+- P2m
+- auditory P2
+type: erp_component
+recording_modality:
+- EEG
+- MEG
+signature:
+  latency_ms: ~150-250
+  polarity: positive
+  topography: fronto-central (vertex)
+description:
+  en: Positive component of the long-latency auditory evoked potential following the N1, with a fronto-central distribution;
+    it is modulated by training and by emotional prosody.
+  zh: 长潜伏期听觉诱发电位中紧随 N1 的正成分，呈额中央分布；受训练和情绪韵律调制。
+notes: First-pass skeleton by package A (2026-10-03). No generators/indexes yet. Signature values are textbook-level approximations
+  and await source checking.
+status: draft
+contributors:
+- curator_a

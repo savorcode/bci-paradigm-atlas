@@ -1,0 +1,23 @@
+schema_version: "0.2"
+id: MK.BOLD_mPFC
+name:
+  en: Medial prefrontal BOLD (self/mentalizing)
+  zh: 内侧前额叶 BOLD（自我/心智化）
+aliases:
+- mPFC activation
+- cortical midline activity
+type: hemodynamic
+recording_modality:
+- fMRI
+- PET
+description:
+  en: BOLD activity in medial prefrontal cortex that is greater when people evaluate information in relation to themselves
+    or reason about the mental states of others. It is part of the cortical midline and default-mode systems.
+  zh: 当个体评价与自身相关的信息或推理他人心理状态时增强的内侧前额叶 BOLD 活动，属于皮层中线系统和默认模式网络的一部分。
+notes: 'First-pass skeleton (curator_d, 2026-10-03). No signature is given for this hemodynamic marker; generators and indexes
+  will be added in the second pass. D-050 (maintainer, 2026-10-03): PET regional blood-flow (rCBF) effects in the same region
+  are grouped under this marker, as fNIRS HbO is under D-028 item 5.'
+status: draft
+contributors:
+- maintainer
+- curator_d

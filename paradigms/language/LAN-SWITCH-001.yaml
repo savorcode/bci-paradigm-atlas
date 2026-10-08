@@ -1,0 +1,60 @@
+schema_version: '0.2'
+id: LAN-SWITCH-001
+class: LAN-SWITCH
+name:
+  en: Bilingual language switching
+  zh: 双语语言切换
+aliases:
+- language switching
+- cued language switching
+- mixed-language picture naming
+family: language
+bci_category:
+- none
+recording_modality:
+- EEG
+- fMRI
+stimulus_modality:
+- visual
+- motor_execution
+markers:
+- MK.N2_frontocentral
+description:
+  en: Bilingual participants name pictures or digits in one of their languages as indicated by a cue, with the language either
+    repeating or switching between trials. Switch trials incur reaction-time costs, and ERP studies report an enhanced frontocentral
+    N2 on switch trials that is interpreted as inhibition of the non-target language.
+  zh: 双语被试根据线索用其中一种语言命名图片或数字，语言在相邻试次间重复或切换。切换试次有反应时代价，ERP 研究报告切换试次的额中央 N2 增强，被解释为对非目标语言的抑制。
+trial_structure:
+  conditions:
+  - repeat L1
+  - repeat L2
+  - switch to L1
+  - switch to L2
+protocol:
+  n_classes: 2
+  classes:
+  - language repeat trial
+  - language switch trial
+  cue: pictures or digits with a cue indicating the response language
+  paradigm_timing: synchronous
+  feedback: none
+  distinguishing: 标准配置（最早发表）：线索指定语言的图片/数字命名（产出），重复 vs 切换（源头 TBD；R1211）。与 -002（接受性语言切换，准则 1;2）区别。
+first_source:
+  citation: 'Meuter RFI, Allport A. Bilingual Language Switching in Naming: Asymmetrical Costs of Language Selection. Journal
+    of Memory and Language. 1999;40(1):25-40.'
+  doi: 10.1006/jmla.1998.2602
+  year: 1999
+  verified: false
+interop:
+  bids_task: languageswitching
+notes: 'Leads: DN27, DN28 (R#### = curation/literature.csv; DN## = curation/work/pkg_D/new_leads.csv). New candidate (curator_d).
+  Shares structure with CTL-SW-001 (task switching), but the construct is bilingual language control. Origin not retrieved
+  (first_source TBD). Leads: DN27, DN28. first_source blocked: see curation/work/pkg_D/status.csv. Sprint 2 (D-057, curator_d,
+  2026-10-03): protocol block added (-001 = earliest/standard configuration). Narrowed to cued production (naming); receptive
+  switching moved to LAN-SWITCH-002. Sibling concrete paradigms: LAN-SWITCH-002. first_source TBD resolved by bibliographic
+  search (OpenAlex, 2026-10-05; curator_c): candidate origin found by bibliographic search; content unverified. Previous entry:
+  "TBD: no origin source identified yet (see curation/work/pkg_D/status.csv)" [maintainer sprint 3, 2026-10-07] bibliography
+  confirmed (OpenAlex, 2026-10-05; origin candidate, content unverified).'
+status: draft
+contributors:
+- curator_d

@@ -1,0 +1,65 @@
+schema_version: '0.2'
+id: PER-MMN-003
+class: PER-MMN
+name:
+  en: Multi-feature MMN paradigm (Optimum-1)
+  zh: 多特征失匹配负波范式（Optimum-1）
+aliases:
+- multi-feature MMN
+- Optimum-1
+- optimal MMN paradigm
+family: perception
+bci_category:
+- passive
+- none
+recording_modality:
+- EEG
+- MEG
+stimulus_modality:
+- auditory
+markers:
+- MK.MMN
+description:
+  en: Several deviant types (frequency, intensity, duration, sound location and a silent gap) are presented within one sequence,
+    each deviant alternating with a standard, instead of in separate oddball blocks. MMNs to all deviant types are obtained
+    in a short recording, giving a profile of auditory discrimination abilities.
+  zh: 在同一序列中呈现多种偏差类型（频率、强度、时长、声源位置和无声间隙），每个偏差与一个标准刺激交替，而不是分组块分别做 oddball。短时间记录即可得到所有偏差类型的 MMN，形成听觉辨别能力的剖面。
+trial_structure:
+  conditions:
+  - standard
+  - frequency deviant
+  - intensity deviant
+  - duration deviant
+  - location deviant
+  - gap deviant
+protocol:
+  n_classes: 6
+  classes:
+  - standard
+  - frequency deviant
+  - intensity deviant
+  - duration deviant
+  - location deviant
+  - gap deviant
+  cue: one tone sequence with five deviant types, standards and deviants alternating
+  stimulus_coding: standard-deviant alternation, five deviant types in one sequence
+  paradigm_timing: synchronous
+  feedback: none
+  distinguishing: 准则 1（条件集）：一个序列内 5 种偏差类型，取代 -001 的单一偏差类型。
+first_source:
+  citation: 'Näätänen R, Pakarinen S, Rinne T, Takegata R. The mismatch negativity (MMN): towards the optimal paradigm. Clin
+    Neurophysiol. 2004;115(1):140-144.'
+  doi: 10.1016/j.clinph.2003.04.001
+  pmid: '14706481'
+  year: 2004
+  verified: false
+interop:
+  bids_task: mmn
+notes: 'Lead: WebSearch S2A18 [=R1275], QxMD record of PubMed 14706481 (S2A19): title, journal and date read; abstract mentions
+  five deviant types and short recording time; authors not shown on the page (Naatanen et al. per search query, unverified).
+  Also seen in S2A18 results: a musical multi-feature paradigm (Frontiers abstract), a parameter-level variant. New in sprint
+  2. [curator_e sprint 3, 2026-10-05] bibliography corrected (OpenAlex, 2026-10-05).'
+status: draft
+contributors:
+- curator_a
+- curator_e

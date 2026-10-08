@@ -1,0 +1,53 @@
+schema_version: '0.2'
+id: SSR-FPVS-001
+class: SSR-FPVS
+name:
+  en: Fast periodic visual stimulation (FPVS)
+  zh: 快速周期视觉刺激（频率标记）
+aliases:
+- FPVS
+- FPVS-oddball
+- fast periodic oddball
+- frequency-tagging oddball
+family: steady_state
+bci_category:
+- none
+recording_modality:
+- EEG
+stimulus_modality:
+- visual
+markers:
+- MK.FPVS_oddball
+description:
+  en: Images are presented at a fast fixed rate (for example 6 Hz), and an image of a different category or identity appears
+    at a slower periodic rate (for example every fifth image). A response at the oddball frequency and its harmonics, separate
+    from the base-frequency response, indicates that the brain discriminates the oddball category.
+  zh: 以较快的固定速率（如 6 Hz）呈现图像，并以较慢的周期速率（如每第五张）插入不同类别或身份的图像。在 oddball 频率及其谐波处出现、区别于基频响应的反应，表明大脑对 oddball 类别进行了辨别。
+protocol:
+  n_classes: 2
+  classes:
+  - base-rate images
+  - oddball-category images
+  cue: images at a fast fixed rate (e.g. 6 Hz) with oddball images at a slower periodic rate
+  stimulus_coding: 面孔类别 vs 面孔身份等条件集在 split_log 中提议。
+  paradigm_timing: continuous
+  feedback: none
+  distinguishing: 标准配置（最早发表，即 first_source）：快速固定速率图像序列中按较慢周期插入 oddball 图像。本类暂无其他具体范式（no sibling protocol yet）。
+first_source:
+  citation: Liu-Shuang J, Norcia AM, Rossion B. An objective index of individual face discrimination in the right occipito-temporal
+    cortex by means of fast periodic oddball stimulation. Neuropsychologia. 2014;52:57-72.
+  doi: 10.1016/j.neuropsychologia.2013.10.022
+  year: 2014
+  verified: false
+interop:
+  bids_task: fpvs
+notes: 'Leads used: R0814, R1014, search SA41/SA43. first_source: no origin source identified in this pass (blocker, see curation/work/pkg_A/status.csv).
+  Leads are methods papers; a 2020 review (SA41/SA43) was found but the origin paper was not identified. [curator_a sprint
+  2, 2026-10-03] D-057: protocol block added for the canonical configuration; no other concrete paradigm identified for this
+  class in sprint 2. [curator_e sprint 3, 2026-10-05] candidate origin found by bibliographic search (OpenAlex, 2026-10-05);
+  content unverified. [maintainer sprint 3, 2026-10-07] bibliography confirmed (OpenAlex, 2026-10-05; origin candidate, content
+  unverified). [maintainer sprint 3, 2026-10-07, D-073] origin candidate recalled, record confirmed via OpenAlex.'
+status: draft
+contributors:
+- curator_a
+- curator_e

@@ -1,0 +1,58 @@
+schema_version: '0.2'
+id: PER-ODD-002
+class: PER-ODD
+name:
+  en: Three-stimulus oddball
+  zh: 三刺激 oddball
+aliases:
+- three-stimulus oddball
+- novelty oddball
+- distractor oddball
+family: perception
+bci_category:
+- none
+recording_modality:
+- EEG
+- MEG
+stimulus_modality:
+- auditory
+- visual
+markers:
+- MK.P3a
+- MK.P3b
+description:
+  en: A third, infrequent non-target stimulus (a deviant distractor or a novel sound or picture) is added to the standard
+    and target stimuli of the oddball. Participants respond only to targets. Targets elicit a parietal P3b, whereas the rare
+    non-target distractors elicit an earlier, fronto-central P3a.
+  zh: 在 oddball 的标准刺激与靶刺激之外，加入第三类低频非靶刺激（偏差干扰刺激或新异声音/图片）。被试只对靶刺激反应。靶刺激诱发顶区 P3b，低频非靶干扰刺激诱发潜伏期更早、额中央分布的 P3a。
+trial_structure:
+  conditions:
+  - standard (frequent)
+  - target (infrequent, attended)
+  - distractor / novel (infrequent, non-target)
+protocol:
+  n_classes: 3
+  classes:
+  - standard
+  - target
+  - non-target distractor
+  cue: stimulus sequence with frequent standards, infrequent targets and infrequent non-target distractors
+  paradigm_timing: synchronous
+  feedback: none
+  distinguishing: 准则 1（条件集）：比 PER-ODD-001 多一个低频非靶干扰/新异刺激条件，用于分离 P3a 与 P3b。
+first_source:
+  citation: Squires NK, Squires KC, Hillyard SA. Two varieties of long-latency positive waves evoked by unpredictable auditory
+    stimuli in man. Electroencephalogr Clin Neurophysiol. 1975;38(4):387-401.
+  doi: 10.1016/0013-4694(75)90263-1
+  year: 1975
+  verified: false
+interop:
+  bids_task: oddball
+notes: 'Leads: R1022 (Wikipedia P3a, fetched in sprint 2, S2A10 [=R1272]: describes the three-stimulus oddball and gives the
+  Squires, Squires & Hillyard 1975 reference), R0389 (Polich 2007 review). The attribution of the three-stimulus design to
+  Squires et al. 1975 follows R1022 only and must be checked against the paper (P3a in an ignore condition vs three-stimulus
+  design); novelty-oddball origin (Courchesne et al. 1975) is not in the leads. Split from PER-ODD-001 under D-057. [curator_e
+  sprint 3, 2026-10-05] bibliography confirmed (Crossref, 2026-10-05).'
+status: draft
+contributors:
+- curator_a

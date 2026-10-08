@@ -1,0 +1,51 @@
+schema_version: '0.2'
+id: CTL-PDM-002
+class: CTL-PDM
+name:
+  en: Continuous-monitoring random-dot motion task
+  zh: 连续监视随机点运动任务
+aliases:
+- Continuous dot-motion detection
+family: control
+bci_category:
+- none
+recording_modality:
+- EEG
+stimulus_modality:
+- visual
+markers:
+- MK.CPP
+description:
+  en: Participants continuously watch an incoherent random-dot display, and at unpredictable times a period of coherent motion
+    appears without any abrupt onset; they report its direction as soon as they detect it. Because evidence onset is not marked
+    by a sensory transient, the build-up of the centro-parietal positivity can be isolated from stimulus-evoked activity.
+  zh: 被试持续观看无一致运动的随机点画面，在不可预测的时刻、没有任何突然起始地出现一段一致运动，被试一旦察觉即报告其方向。由于证据开始时没有感觉瞬变，中央顶正波的累积过程可与刺激诱发活动分离。
+trial_structure:
+  conditions:
+  - coherent motion leftward
+  - coherent motion rightward
+protocol:
+  n_classes: 2
+  classes:
+  - leftward coherent motion
+  - rightward coherent motion
+  cue: continuous random-dot display with embedded, unannounced periods of coherent motion
+  paradigm_timing: continuous
+  feedback: none
+  distinguishing: 准则 3：连续监视、目标出现没有试次起始标记（CTL-PDM-001 为按试次呈现的随机点运动）。
+first_source:
+  citation: Kelly SP, O'Connell RG. Internal and External Influences on the Rate of Sensory Evidence Accumulation in the Human
+    Brain. The Journal of Neuroscience. 2013;33(50):19434-19441.
+  doi: 10.1523/JNEUROSCI.3355-13.2013
+  year: 2013
+  verified: false
+interop:
+  bids_task: dotmotioncontinuous
+notes: 'Leads used: R0578 (''a continuous-monitoring version of the prototypical two-alternative dot-motion discrimination
+  task''); R0736. O''Connell et al. 2012 (continuous monitoring with gradual targets, origin of the CPP) is from memory and
+  was not seen - if confirmed it predates R0578 for continuous monitoring in general, but used contrast changes rather than
+  dot motion. Please add R0578 to literature.csv. Sprint 2 (D-057, curator_c, 2026-10-03): new concrete paradigm of class
+  CTL-PDM; numbering criterion 3 relative to CTL-PDM-001; all sources unverified. bibliography corrected (Crossref, 2026-10-05)'
+status: draft
+contributors:
+- curator_c

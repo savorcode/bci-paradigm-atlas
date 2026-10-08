@@ -1,0 +1,62 @@
+schema_version: '0.2'
+id: MEM-RPRIM-001
+class: MEM-RPRIM
+name:
+  en: Repetition priming
+  zh: 重复启动（内隐记忆）
+aliases:
+- repetition suppression
+- fMRI adaptation (memory)
+- word repetition effect
+- implicit memory priming
+family: memory
+bci_category:
+- none
+recording_modality:
+- fMRI
+- EEG
+stimulus_modality:
+- visual
+- auditory
+markers:
+- MK.BOLD_category_selective
+- MK.N400
+description:
+  en: Stimuli such as words, pictures or faces are presented once and later repeated, usually in an incidental task, and behavioural
+    facilitation for repeated items is measured without requiring conscious recollection. Repeated items evoke reduced BOLD
+    responses in ventral visual and prefrontal cortex (repetition suppression) and, for words, an attenuated N400 relative
+    to first presentations.
+  zh: 词语、图片或面孔等刺激先呈现一次，之后（通常在附带任务中）重复呈现，在不要求有意识回忆的情况下测量重复项目的行为易化。与首次呈现相比，重复项目在腹侧视觉皮层和前额叶诱发较弱的 BOLD 响应（重复抑制），对于词语还表现为 N400
+    减弱。
+trial_structure:
+  conditions:
+  - first
+  - repeat
+protocol:
+  n_classes: 2
+  classes:
+  - first presentation
+  - repeated presentation
+  cue: words, pictures or faces in an incidental task
+  paradigm_timing: synchronous
+  feedback: none
+  distinguishing: 标准配置（最早发表）：偶然任务中的首次 vs 重复呈现（源头 TBD）。本类只有这一配置。
+first_source:
+  citation: 'Scarborough DL, Cortese C, Scarborough HS. Frequency and repetition effects in lexical memory. Journal of Experimental
+    Psychology: Human Perception and Performance. 1977;3(1):1-17.'
+  doi: 10.1037/0096-1523.3.1.1
+  year: 1977
+  verified: false
+interop:
+  bids_task: repetitionpriming
+notes: 'Leads: DN22, DN23, DN24 (R#### = curation/literature.csv; DN## = curation/work/pkg_D/new_leads.csv). New candidate
+  (curator_d). Marker mapping provisional: repetition suppression of BOLD in ventral visual cortex is mapped to MK.BOLD_category_selective
+  and the ERP word repetition effect to MK.N400 attenuation; the maintainer may prefer a dedicated MK.repetition_suppression
+  marker. Origin not retrieved; first_source TBD. Leads: DN22, DN23, DN24. first_source blocked: see curation/work/pkg_D/status.csv.
+  Sprint 2 (D-057, curator_d, 2026-10-03): protocol block added (-001 = earliest/standard configuration). first_source TBD
+  resolved by bibliographic search (Crossref, 2026-10-05; curator_c): candidate origin found by bibliographic search; content
+  unverified. Previous entry: "TBD: no origin source identified yet (see curation/work/pkg_D/status.csv)" [maintainer sprint
+  3, 2026-10-07] bibliography confirmed (Crossref, 2026-10-05; origin candidate, content unverified).'
+status: draft
+contributors:
+- curator_d

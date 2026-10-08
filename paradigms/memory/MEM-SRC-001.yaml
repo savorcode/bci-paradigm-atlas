@@ -1,0 +1,59 @@
+schema_version: '0.2'
+id: MEM-SRC-001
+class: MEM-SRC
+name:
+  en: Source memory
+  zh: 来源记忆
+aliases:
+- Context Memory Task
+- Reality Monitoring Task
+- Source Judgment Task
+- Source Monitoring Task
+family: memory
+bci_category:
+- none
+recording_modality:
+- EEG
+- fMRI
+stimulus_modality:
+- visual
+- auditory
+markers:
+- MK.right_frontal_old_new
+description:
+  en: Items are studied in one of two or more contexts (for example presented on the left or right, in one of two voices,
+    or with one of two encoding tasks); at test, participants recognise items and report the context in which each was studied.
+    Retrieval of source information is associated with a late, sustained right frontal old/new ERP effect in addition to the
+    earlier recognition effects.
+  zh: 项目在两种或以上的情境之一中学习（如呈现在左侧或右侧、由两种声音之一朗读、配合两种编码任务之一）；测试时被试再认项目并报告其学习情境。除较早的再认效应外，来源信息的提取还伴随晚期持续的右额新旧 ERP 效应。
+trial_structure:
+  conditions:
+  - source correct
+  - source incorrect
+  - new
+protocol:
+  n_classes: 3
+  classes:
+  - correct source
+  - incorrect source
+  - new
+  cue: items studied in one of two contexts (location, voice or encoding task)
+  paradigm_timing: synchronous
+  feedback: none
+  distinguishing: 标准配置（最早发表）：两种学习情境 + 再认与来源判断（类源头 Johnson et al. 1993, R0107，为综述，weak_origin）。本类只有这一配置。
+first_source:
+  citation: Johnson, M. K., Hashtroudi, S., & Lindsay, D. S. Source monitoring. Psychological Bulletin, 114(1), 3-28. 1993.
+  doi: 10.1037/0033-2909.114.1.3
+  pmid: '8346328'
+  year: 1993
+  verified: false
+interop:
+  bids_task: sourcememory
+notes: 'HED task page: https://www.hedtags.org/hed-task/tasks/hedtsk_source_memory.html. Leads: R0107, R0123, R0442, R0454,
+  R0676, R0677, R0720 (R#### = curation/literature.csv; DN## = curation/work/pkg_D/new_leads.csv). R0107 (Johnson, Hashtroudi
+  & Lindsay 1993) is a theoretical review of source monitoring; an earlier empirical origin (e.g. reality monitoring work)
+  has not been identified among the leads. Sprint 2 (D-057, curator_d, 2026-10-03): protocol block added (-001 = earliest/standard
+  configuration). bibliography confirmed (OpenAlex, 2026-10-05)'
+status: draft
+contributors:
+- curator_d

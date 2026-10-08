@@ -1,0 +1,54 @@
+schema_version: '0.2'
+id: MOT-MI-006
+class: MOT-MI
+name:
+  en: Right-hand vs feet motor imagery (cue-based, no feedback)
+  zh: 右手对双脚运动想象（提示驱动，无反馈）
+aliases:
+- hand vs foot motor imagery
+- BCI Competition III IVa paradigm
+family: motor
+bci_category:
+- active
+recording_modality:
+- EEG
+stimulus_modality:
+- mental_imagery
+- visual
+markers:
+- MK.SMR_ERD
+description:
+  en: A visual cue instructs the participant to imagine movement of the right hand or of the feet, in cue-paced trials without
+    feedback. Hand imagery produces ERD over the left hand area and foot imagery ERD/ERS at the vertex, so the two classes
+    are separated mainly along the medial-lateral axis rather than by hemisphere.
+  zh: 视觉提示指示被试想象右手或双脚的运动，按提示分试次进行，不给反馈。手的想象在左侧手区引起 ERD，脚的想象在头顶区引起 ERD/ERS，因此两类主要沿内外侧方向而非左右半球区分。
+protocol:
+  n_classes: 2
+  classes:
+  - right hand
+  - feet
+  cue: visual cue
+  paradigm_timing: synchronous
+  feedback: none
+  distinguishing: 'Criterion 1 vs MOT-MI-001: class set right hand vs feet instead of left vs right hand. Criterion 4 vs MOT-MI-007
+    (no feedback here).'
+first_source:
+  citation: Dornhege G, Blankertz B, Curio G, Müller KR. Boosting bit rates in noninvasive EEG single-trial classifications
+    by feature combination and multiclass paradigms. IEEE Transactions on Biomedical Engineering. 2004;51(6):993-1002.
+  doi: 10.1109/TBME.2004.827088
+  year: 2004
+  verified: false
+datasets:
+- name: BNCI2003_004 (MOABB; 118 channels; right hand vs feet)
+  url: https://moabb.neurotechx.com/docs/dataset_summary.html
+  subjects: 5
+interop:
+  bids_task: motorimagery
+notes: 'Lead: WF-B2-01 (MOABB dataset summary: BNCI2003_004, 5 subjects, 118 channels, 2 classes right_hand/feet, visual cue).
+  Commonly identified as BCI Competition III dataset IVa (memory, unverified). [curator_a, sprint 3] Former first_source:
+  "TBD: origin of the right-hand vs feet cue-based configuration not identified; public dataset BNCI2003_004 (MOABB) seen,
+  publication not displayed". candidate origin found by bibliographic search; content unverified. bibliography corrected (OpenAlex,
+  2026-10-05) [maintainer sprint 3, 2026-10-07, D-073] origin candidate recalled, record confirmed via OpenAlex.'
+status: draft
+contributors:
+- curator_b

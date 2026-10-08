@@ -1,42 +1,73 @@
-schema_version: "0.1"
+schema_version: '0.2'
 id: PER-ODD-001
-name: {en: Oddball paradigm, zh: Oddball 范式（怪球范式）}
-aliases: [two-stimulus oddball, three-stimulus oddball, P300 oddball]
+class: PER-ODD
+name:
+  en: Oddball paradigm
+  zh: Oddball 范式（怪球范式）
+aliases:
+- two-stimulus oddball
+- P300 oddball
+- Auditory Oddball
+- P300 Task
+- Visual Oddball
 family: perception
-bci_category: [reactive, none]
-recording_modality: [EEG, MEG, fMRI]
-stimulus_modality: [auditory, visual, somatosensory]
-markers: [MK.P3b, MK.P3a]
+bci_category:
+- reactive
+- none
+recording_modality:
+- EEG
+- MEG
+- fMRI
+stimulus_modality:
+- auditory
+- visual
+markers:
+- MK.P3b
 description:
-  en: >-
-    A sequence of frequent standard stimuli is interrupted by infrequent deviant stimuli. Attended, task-relevant
-    deviants (targets) elicit a P3b; in the three-stimulus version, infrequent non-target distractors elicit a P3a.
-    The paradigm underlies P300-based BCIs.
-  zh: >-
-    在高频出现的标准刺激序列中插入低频的偏差刺激。被注意的、与任务相关的偏差刺激（靶刺激）诱发 P3b；
-    在三刺激版本中，低频非靶干扰刺激诱发 P3a。该范式是基于 P300 的脑机接口的基础。
+  en: 'Two kinds of stimuli are presented in random order: frequent standards and infrequent targets (for example tones of
+    two pitches, or two visual symbols). Participants count the targets or press a button to them. Targets elicit a parietal
+    P3b whose amplitude grows as target probability falls.'
+  zh: 两类刺激随机呈现：高频标准刺激与低频靶刺激（如两种音高的纯音，或两种视觉符号）。被试对靶刺激计数或按键。靶刺激诱发顶区 P3b，靶概率越低，P3b 越大。
 trial_structure:
   phases:
-    - {name: stimulus, duration_ms: "50-200"}
-    - {name: inter-stimulus interval, duration_ms: "800-1500"}
-  typical_trials: "200-600"
-  conditions: [standard (p ≈ 0.8), target (p ≈ 0.1-0.2), distractor (three-stimulus version)]
+  - name: stimulus
+    duration_ms: 50-200
+  - name: inter-stimulus interval
+    duration_ms: 800-1500
+  typical_trials: 200-600
+  conditions:
+  - standard (p ≈ 0.8)
+  - target (p ≈ 0.1-0.2)
+protocol:
+  n_classes: 2
+  classes:
+  - standard
+  - target
+  cue: sequence of frequent standards and infrequent targets (auditory or visual), targets counted or responded to
+  paradigm_timing: synchronous
+  feedback: none
+  distinguishing: 标准配置（最早发表，即 first_source）：两刺激 oddball：高频标准刺激与低频靶刺激，被试计数或按键。同类其他具体范式：三刺激 -002（准则 1）；行/列拼写器 -003、RSVP -004、RSVP
+    拼写 -005、棋盘格 -006、单项闪烁 -007、听觉空间 -008、触觉 -009（维护者 sprint 2 QA：原写在 stimulus_coding 中的兄弟列表移到此处；两刺激 oddball 无编码方案，删去 stimulus_coding）。
 first_source:
-  citation: "Sutton S, Braren M, Zubin J, John ER. Evoked-potential correlates of stimulus uncertainty. Science. 1965;150(3700):1187-1188."
-  doi: "10.1126/science.150.3700.1187"
+  citation: Sutton S, Braren M, Zubin J, John ER. Evoked-potential correlates of stimulus uncertainty. Science. 1965;150(3700):1187-1188.
+  doi: 10.1126/science.150.3700.1187
   year: 1965
   verified: false
-variants:
-  - name: P300 speller (row/column matrix)
-    source:
-      citation: "Farwell LA, Donchin E. Talking off the top of your head: toward a mental prosthesis utilizing event-related brain potentials. Electroencephalogr Clin Neurophysiol. 1988;70(6):510-523."
-      doi: "10.1016/0013-4694(88)90149-6"
-      year: 1988
-      verified: false
 interop:
   bids_task: oddball
-notes: >-
-  Origin attribution under review. Sutton et al. (1965) first reported the late positive component in relation to
-  stimulus uncertainty; the canonical two-stimulus oddball design is frequently attributed to subsequent work.
+notes: 'Origin attribution under review. Sutton et al. (1965) first reported the late positive component in relation to stimulus
+  uncertainty; the canonical two-stimulus oddball design is frequently attributed to subsequent work. [curator_a 2026-10-03]
+  HED task page: https://www.hedtags.org/hed-task/tasks/hedtsk_oddball.html. Leads checked: R0011 (= current first_source),
+  R0081, R0328, R0389, R0578, R0661, R1022, R1052 (= P300 speller variant); RSVP leads R0038, R0101, R0120, R0298, R0299,
+  R0391, R0446, R0620, R0843, R0869. D-012 tactile P300 BCI variant not added: no lead available (blocker). Attentional-blink
+  aliases of PER-RSVP-001 belong to PER-AB-001 (D-011). R1022 (Wikipedia P3a) mentions the three-stimulus work of Squires,
+  Squires & Hillyard (1975) as a possible earlier source for P3a; unverified. [curator_a sprint 2, 2026-10-03] D-057: narrowed
+  to the two-stimulus oddball. Split out: three-stimulus PER-ODD-002, row/column speller PER-ODD-003 (former variant), RSVP
+  target detection PER-ODD-004 (former variant, with the NITRC RSVP dataset), RSVP speller -005, checkerboard -006, single-item
+  flashing -007, auditory spatial -008, tactile -009. The first_source (R0011) is kept for this configuration and for the
+  class; the canonical two-stimulus design may be attributed to later work (to be checked). [curator_e sprint 3, 2026-10-05]
+  bibliography confirmed (Crossref, 2026-10-05).'
 status: draft
-contributors: [savorcode01]
+contributors:
+- savorcode01
+- curator_a

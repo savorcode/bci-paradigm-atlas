@@ -1,0 +1,60 @@
+schema_version: '0.2'
+id: IMG-SPI-001
+class: IMG-SPI
+name:
+  en: Imagined / inner speech
+  zh: 想象语音（内部言语）
+aliases:
+- inner speech
+- imagined speech
+- covert speech
+- silent speech
+- speech imagery
+family: imagery
+bci_category:
+- active
+recording_modality:
+- ECoG
+- sEEG
+- EEG
+- intracortical
+stimulus_modality:
+- mental_imagery
+- visual
+- auditory
+markers:
+- MK.high_gamma
+description:
+  en: >-
+    Participants are cued to imagine articulating a vowel without moving the articulators or producing sound, and the imagined
+    vowel is classified offline from scalp EEG. Intracranial studies of the class report item-specific high-gamma activity
+    over speech cortex.
+  zh: 被试按提示想象发出某个元音，但不动用发音器官、不发声，离线从头皮脑电中分类所想象的元音。该类的颅内研究报告言语皮层上项目特异的高 γ 活动。
+protocol:
+  classes:
+  - imagined vowels (set to be checked against R1109)
+  cue: visual cue
+  paradigm_timing: synchronous
+  feedback: none
+  distinguishing: >-
+    Standard configuration (earliest published) / 标准配置（最早发表）: imagined vowel articulation classified offline from scalp EEG
+    with common spatial patterns (DaSalla et al. 2009). Siblings: -002 imagined command words (criterion 1), -003 phoneme
+    and word set with interleaved overt speech (criteria 1, 2).
+first_source:
+  citation: >-
+    DaSalla CS, Kambara H, Sato M, Koike Y. Single-trial classification of vowel speech imagery using common spatial patterns.
+    Neural Networks. 2009;22(9):1334-1339.
+  doi: 10.1016/j.neunet.2009.05.008
+  year: 2009
+  verified: false
+interop:
+  bids_task: innerspeech
+notes: >-
+  Leads: R0884, R0887, R0956, R0957, R1045, R1051. Search sources (curation/work/pkg_B/search_log.md): S04 https://dblp.org/pid/95/7576.
+  first_source found by search (S04, EEG vowel imagery); Suppes et al. 1997 PNAS remains an unverified earlier candidate.
+  Attempted/overt speech decoding is LAN-OVS-001 (package D). Several review PMIDs (42198020, 40490003, 40989443) are 2025-2026
+  records; check. Sprint 2 (D-057): 'Thinking out loud' dataset (four Spanish direction words) moved to IMG-SPI-002. bibliography
+  corrected (OpenAlex, 2026-10-05)
+status: draft
+contributors:
+- curator_b

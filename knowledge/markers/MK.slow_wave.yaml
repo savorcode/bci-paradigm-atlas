@@ -1,0 +1,29 @@
+schema_version: "0.2"
+id: MK.slow_wave
+name:
+  en: Slow waves / slow oscillation
+  zh: 慢波 / 慢振荡
+aliases:
+- slow oscillation
+- delta waves
+- SWA (slow-wave activity)
+type: oscillatory
+recording_modality:
+- EEG
+signature:
+  frequency_hz: slow oscillation below 1; delta 1-4
+  polarity: high-amplitude biphasic waves
+  topography: frontal maximum
+description:
+  en: >-
+    High-amplitude low-frequency EEG waves that dominate deep non-REM sleep and also appear under general anaesthesia,
+    reflecting alternating cortical up- and down-states. Slow-wave activity indexes sleep depth and homeostatic
+    sleep pressure, and slow oscillations group spindles during memory consolidation.
+  zh: 主导深度非快速眼动睡眠、也出现在全身麻醉下的高波幅低频 EEG 波，反映皮层上态与下态的交替。慢波活动反映睡眠深度和稳态睡眠压力，慢振荡在记忆巩固中对纺锤波进行组织。
+notes: >-
+  First-pass skeleton (curator_d, 2026-10-03). Signature values are textbook-level approximations that await source
+  checking; generators and indexes will be added in the second pass.
+status: draft
+contributors:
+- maintainer
+- curator_d

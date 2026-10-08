@@ -1,40 +1,58 @@
-schema_version: "0.1"
+schema_version: '0.2'
 id: SSR-SSVEP-001
-name: {en: Steady-state visual evoked potential paradigm, zh: 稳态视觉诱发电位范式}
-aliases: [SSVEP, frequency-tagged visual stimulation]
+class: SSR-SSVEP
+name:
+  en: Steady-state visual evoked potential paradigm
+  zh: 稳态视觉诱发电位范式
+aliases:
+- steady-state VEP
+- SSVEP
+- photic following
 family: steady_state
-bci_category: [reactive]
-recording_modality: [EEG, MEG]
-stimulus_modality: [visual]
-markers: [MK.SSVEP]
+bci_category:
+- none
+recording_modality:
+- EEG
+- MEG
+stimulus_modality:
+- visual
+markers:
+- MK.SSVEP
 description:
-  en: >-
-    Visual stimuli flicker or reverse at distinct frequencies. The attended stimulus is identified from the frequency
-    content of occipital responses, which makes the paradigm one of the fastest non-invasive BCI control schemes.
-  zh: >-
-    多个视觉刺激以不同频率闪烁或翻转，根据枕区响应的频率成分识别被注视的刺激，是速度最快的无创脑机接口控制方式之一。
+  en: A single light source modulated at a constant frequency is viewed passively, and the frequency is changed between runs.
+    The averaged occipital response follows the stimulation frequency and its harmonics; its amplitude and phase as a function
+    of frequency characterise the steady-state visual evoked potential.
+  zh: 被试被动观看以恒定频率调制的单一光源，各次运行改变频率。平均的枕区响应跟随刺激频率及其谐波；其幅度与相位随频率的变化刻画了稳态视觉诱发电位。
 trial_structure:
-  phases:
-    - {name: cue, duration_ms: 500}
-    - {name: flicker, duration_ms: "1000-5000"}
-    - {name: rest, duration_ms: 500}
-  conditions: [one target per stimulation frequency]
+  conditions:
+  - one modulation frequency per run
+protocol:
+  n_classes: 1
+  classes:
+  - single flicker frequency (varied across runs)
+  cue: single sinusoidally or square-wave modulated light, passive viewing
+  stimulus_coding: single-frequency modulation
+  paradigm_timing: synchronous
+  feedback: none
+  distinguishing: 标准配置（最早发表，即 first_source）：单一调制光源，按运行改变频率，被动观察，开环（Regan 1966）。多目标频率编码 BCI -002（准则 1;4）、临床光驱动 -003（准则 1;3）、多刺激频率标记注意
+    -004（准则 1;2）、JFPM 拼写 -005（40 目标标准配置，12 目标为其变体；原 -006 已按 D-058 作废）、含静息类 -007、异步 -008。
 first_source:
-  citation: "Regan D. Some characteristics of average steady-state and transient responses evoked by modulated light. Electroencephalogr Clin Neurophysiol. 1966;20(3):238-248."
-  doi: "10.1016/0013-4694(66)90088-5"
+  citation: Regan D. Some characteristics of average steady-state and transient responses evoked by modulated light. Electroencephalogr
+    Clin Neurophysiol. 1966;20(3):238-248.
+  doi: 10.1016/0013-4694(66)90088-5
   year: 1966
   verified: false
-variants:
-  - name: SSVEP-based BCI
-    source:
-      citation: "Middendorf M, McMillan G, Calhoun G, Jones KS. Brain-computer interfaces based on the steady-state visual-evoked response. IEEE Trans Rehabil Eng. 2000;8(2):211-214."
-      doi: "10.1109/86.847819"
-      year: 2000
-      verified: false
 interop:
   bids_task: ssvep
-notes: >-
-  Origin attribution under review. Earlier BCI implementations based on visual evoked responses should be assessed
-  as candidate first sources for the BCI variant.
+notes: 'Origin attribution under review. Earlier BCI implementations based on visual evoked responses should be assessed as
+  candidate first sources for the BCI variant. [curator_a 2026-10-03] Leads checked: R0667, R0867, R1047; merged-candidate
+  leads R0954, R1090 (SSR-PD-001), R0085, R0206, R0398, R0483, R0667, R0802 (SSR-FT-001). Candidate note: joint frequency-phase
+  modulation (JFPM) speller to be treated as a variant; no dedicated lead yet. Dataset leads are names only (no URL in leads).
+  [curator_a sprint 2, 2026-10-03] D-057: narrowed to the single-stimulus physiological configuration of Regan (1966). Former
+  variants: SSVEP-based BCI -> SSR-SSVEP-002; photic driving (D-002) -> -003; frequency-tagged attention (D-003) -> -004 (the
+  high-frequency / periliminal variant, D-004, stays a parameter-level variant of -004); datasets BETA and Tsinghua benchmark
+  moved to -005. [curator_e sprint 3, 2026-10-05] bibliography confirmed (OpenAlex, 2026-10-05).'
 status: draft
-contributors: [savorcode01]
+contributors:
+- savorcode01
+- curator_a

@@ -3,6 +3,10 @@
 """Validate all atlas files against their schemas, taxonomies and cross-references.
 
     python scripts/validate.py
+
+Errors make the script exit with status 1. Warnings (concrete paradigms without a `protocol` block, D-057)
+are printed but do not fail the run. Class markers must be a superset of the markers of every active (non-deprecated)
+concrete paradigm of the class (D-061, error).
 """
 
 from __future__ import annotations
@@ -15,15 +19,19 @@ import yaml
 from jsonschema import Draft202012Validator
 from referencing import Registry, Resource
 
-from atlas import ROOT, marker_files, paradigm_files, read_yaml, schemas, terms
+from atlas import CLASSES_FILE, ROOT, class_id, marker_files, paradigm_files, read_yaml, schemas, terms
 
 
 class Report:
     def __init__(self) -> None:
         self.errors: list[str] = []
+        self.warnings: list[str] = []
 
     def add(self, path: Path, msg: str) -> None:
         self.errors.append(f"{path.relative_to(ROOT).as_posix()}: {msg}")
+
+    def warn(self, path: Path, msg: str) -> None:
+        self.warnings.append(f"{path.relative_to(ROOT).as_posix()}: warning: {msg}")
 
 
 def validators() -> dict[str, Draft202012Validator]:
@@ -104,6 +112,28 @@ def main() -> int:
             if x["construct"] not in vocab["constructs"]:
                 rep.add(path, f"unknown construct '{x['construct']}'")
 
+    # Paradigm classes (D-057): paradigms/_classes.yaml
+    classes: dict[str, dict] = {}
+    data = load_file(CLASSES_FILE, rep) if CLASSES_FILE.exists() else None
+    if not CLASSES_FILE.exists():
+        rep.add(CLASSES_FILE, "class registry missing")
+    elif data is not None and check_schema(v["paradigm_class"], data, CLASSES_FILE, rep):
+        for t in data["terms"]:
+            cid = t["id"]
+            if cid in classes:
+                rep.add(CLASSES_FILE, f"duplicate class id '{cid}'")
+            classes[cid] = t
+            fam = t["family"]
+            if fam not in families:
+                rep.add(CLASSES_FILE, f"class '{cid}': unknown family '{fam}'")
+            elif not cid.startswith(families[fam]["prefix"] + "-"):
+                rep.add(CLASSES_FILE, f"class '{cid}' should start with '{families[fam]['prefix']}-'")
+            for m in t["markers"]:
+                if m not in markers:
+                    rep.add(CLASSES_FILE, f"class '{cid}': unknown marker '{m}'")
+    instances: Counter = Counter()
+    active: Counter = Counter()
+
     paradigms: set[str] = set()
     for path in paradigm_files():
         d = load_file(path, rep)
@@ -127,11 +157,40 @@ def main() -> int:
         for m in d["markers"]:
             if m not in markers:
                 rep.add(path, f"unknown marker '{m}' (add it under knowledge/markers/)")
+        cls = d["class"]
+        if cls != class_id(pid):
+            rep.add(path, f"class '{cls}' must equal id without the serial suffix ('{class_id(pid)}')")
+        if cls not in classes:
+            rep.add(path, f"class '{cls}' is not registered in paradigms/_classes.yaml")
+        else:
+            instances[cls] += 1
+            if d["status"] != "deprecated":
+                active[cls] += 1
+            if classes[cls]["family"] != fam:
+                rep.add(path, f"family '{fam}' differs from family of class '{cls}' ('{classes[cls]['family']}')")
+            # D-061 (confirmed 2026-10-05): class markers are the union of the markers of its active concrete paradigms
+            if d["status"] != "deprecated":
+                missing = [m for m in d["markers"] if m not in classes[cls]["markers"]]
+                if missing:
+                    rep.add(path, f"markers {missing} not in markers of class '{cls}' (class markers must be a superset, D-061)")
+        proto = d.get("protocol")
+        if proto is None:
+            rep.warn(path, "no `protocol` block (D-057; to be defined in sprint 2)")
+        elif "n_classes" in proto and "classes" in proto and proto["n_classes"] != len(proto["classes"]):
+            rep.add(path, f"protocol.n_classes ({proto['n_classes']}) != number of protocol.classes ({len(proto['classes'])})")
 
+    for cid in classes:
+        if not instances[cid]:
+            rep.add(CLASSES_FILE, f"class '{cid}' has no concrete paradigm")
+        elif not active[cid]:
+            rep.add(CLASSES_FILE, f"class '{cid}' has no active (non-deprecated) concrete paradigm")
+
+    for line in rep.warnings:
+        print(line)
     for line in rep.errors:
         print(line)
-    print(f"{len(paradigms)} paradigms, {len(markers)} markers, {len(vocab['regions'])} regions, "
-          f"{len(vocab['constructs'])} constructs checked; {len(rep.errors)} problem(s).")
+    print(f"{len(paradigms)} paradigms, {len(classes)} classes, {len(markers)} markers, {len(vocab['regions'])} regions, "
+          f"{len(vocab['constructs'])} constructs checked; {len(rep.errors)} problem(s), {len(rep.warnings)} warning(s).")
     return 1 if rep.errors else 0
 
 

@@ -1,0 +1,58 @@
+schema_version: '0.2'
+id: IMG-MA-002
+class: IMG-MA
+name:
+  en: Five-class mental-task BCI
+  zh: 五分类心理任务脑机接口
+aliases:
+- multi-class mental tasks
+- BNCI2015_004 paradigm
+family: imagery
+bci_category:
+- active
+recording_modality:
+- EEG
+stimulus_modality:
+- cognitive_task
+- mental_imagery
+- visual
+markers:
+- MK.frontal_midline_theta
+description:
+  en: >-
+    Participants (here end-users with stroke or spinal cord injury) perform one of five cued mental tasks per trial, including
+    a mental arithmetic task, and the task is classified from EEG without feedback. Mental arithmetic is one class among several
+    non-motor and motor mental tasks.
+  zh: 被试（此处为脑卒中或脊髓损伤的终端用户）每个试次按提示完成 5 种心理任务之一（其中包括心算），不给反馈，依据脑电对任务分类。心算是若干非运动与运动心理任务中的一类。
+protocol:
+  n_classes: 5
+  cue: visual cue
+  paradigm_timing: synchronous
+  feedback: none
+  distinguishing: >-
+    Criterion 1 vs IMG-MA-001: five mental-task classes (arithmetic plus four others) instead of arithmetic vs baseline. Content
+    (class list, relation to Keirn & Aunon 1990) to be verified in sprint 3 (D-063); the ID keeps this meaning.
+first_source:
+  citation: >-
+    Scherer R, Faller J, Friedrich EVC, Opisso E, Costa U, Kübler A, Müller-Putz GR. Individually adapted imagery improves
+    brain-computer interface performance in end-users with disability. PLoS ONE. 2015;10(5):e0123727.
+  doi: 10.1371/journal.pone.0123727
+  year: 2015
+  verified: false
+datasets:
+- name: BNCI2015_004 (MOABB)
+  url: https://moabb.neurotechx.com/docs/generated/moabb.datasets.BNCI2015_004.html
+  subjects: 9
+interop:
+  bids_task: mentaltask
+notes: >-
+  Lead: WF-B2-12 [=R1301] (MOABB BNCI2015_004 page). The two MOABB pages disagree on the class list: the dataset page lists
+  'mental multiplication, mental letter composing, mental rotation, mental counting, and a baseline task', the summary table
+  'math, letter, rotation, ...' (truncated) - the class list is therefore left out until the paper is checked. If the set
+  equals the Keirn & Aunon tasks (R0842), see the note in IMG-MA-001 on swapping roles. D-063 ruling (maintainer, 2026-10-05):
+  no swap with -001; this ID means the multi-class mental-task set. Its content (class list from Scherer et al. 2015, R1301;
+  whether Keirn & Aunon 1990, R0842, used the same five tasks) is to be verified in sprint 3; R0842 stays the class-origin
+  candidate only. bibliography corrected (Crossref, 2026-10-05)
+status: draft
+contributors:
+- curator_b

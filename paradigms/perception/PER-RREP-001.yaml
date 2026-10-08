@@ -1,0 +1,50 @@
+schema_version: '0.2'
+id: PER-RREP-001
+class: PER-RREP
+name:
+  en: Respiratory-related evoked potential
+  zh: 呼吸相关诱发电位
+aliases:
+- RREP
+- inspiratory occlusion paradigm
+family: perception
+bci_category:
+- none
+recording_modality:
+- EEG
+stimulus_modality:
+- somatosensory
+markers:
+- MK.RREP
+description:
+  en: Brief occlusions of the airway at inspiration onset (or inspiratory resistive loads) are delivered through a mouthpiece.
+    The interruption evokes a respiratory-related evoked potential over centro-parietal sites, used to study respiratory interoception.
+  zh: 通过口器在吸气起始时短暂阻断气道（或施加吸气阻力负荷）。气流中断在中央—顶区诱发呼吸相关诱发电位，用于研究呼吸内感受。
+protocol:
+  n_classes: 1
+  classes:
+  - inspiratory occlusion
+  cue: brief airway occlusion at inspiration onset through a mouthpiece
+  paradigm_timing: synchronous
+  feedback: none
+  distinguishing: 标准配置（最早发表，即 first_source）：吸气起始时经口器短暂阻断气道。本类暂无其他具体范式（no sibling protocol yet）。
+first_source:
+  citation: Davenport PW, Friedman WA, Thompson FJ, Franzén O. Respiratory-related cortical potentials evoked by inspiratory
+    occlusion in humans. J Appl Physiol. 1986;60(6):1843-1848.
+  doi: 10.1152/jappl.1986.60.6.1843
+  year: 1986
+  verified: false
+interop:
+  bids_task: rrep
+notes: 'Leads used: search SA19a, search SA19b. first_source: no origin source identified in this pass (blocker, see curation/work/pkg_A/status.csv).
+  New candidate proposed by package A on 2026-10-03 (curation/work/pkg_A/new_candidates.csv); registered in curation/candidates.csv
+  as C221 (D-053, milestone M1). Requested marker MK.RREP; interoceptive counterpart of PER-HBD-001. Stimulus modality coded as
+  somatosensory (mechanical respiratory afferents). [curator_a sprint 2, 2026-10-03] D-057: protocol block added for the canonical
+  configuration; no other concrete paradigm identified for this class in sprint 2. [curator_e sprint 3, 2026-10-05] candidate
+  origin found by bibliographic search (OpenAlex, 2026-10-05); content unverified. [maintainer sprint 3, 2026-10-07] bibliography
+  confirmed (OpenAlex, 2026-10-05; origin candidate, content unverified). [maintainer sprint 3, 2026-10-07, D-073] origin
+  candidate recalled, record confirmed via OpenAlex.'
+status: draft
+contributors:
+- curator_a
+- curator_e

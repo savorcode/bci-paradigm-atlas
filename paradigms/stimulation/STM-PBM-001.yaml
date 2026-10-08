@@ -1,0 +1,55 @@
+schema_version: '0.2'
+id: STM-PBM-001
+class: STM-PBM
+name:
+  en: Transcranial photobiomodulation with EEG
+  zh: 经颅光生物调节同步脑电
+aliases:
+- tPBM
+- transcranial photobiomodulation
+- transcranial near-infrared laser stimulation
+family: stimulation
+bci_category:
+- none
+recording_modality:
+- EEG
+stimulus_modality:
+- optical_stimulation
+markers:
+- MK.alpha_posterior
+description:
+  en: >-
+    Near-infrared laser or LED light is applied to the scalp (typically over the forehead) in active and sham blocks while
+    the EEG is recorded before, during and after stimulation. Changes in resting-state alpha and beta band power relative
+    to sham are the main reported neural outcome.
+  zh: 在真刺激与伪刺激组块中，将近红外激光或 LED 光施加于头皮（通常在前额），并在刺激前、刺激中和刺激后记录脑电。主要报告的神经结果是相对于伪刺激的静息态 α、β 频段功率变化。
+protocol:
+  n_classes: 2
+  classes:
+  - active photobiomodulation
+  - sham
+  cue: none
+  paradigm_timing: block
+  feedback: none
+  distinguishing: >-
+    Standard configuration (earliest published) / 标准配置（最早发表）: near-infrared light over the forehead in active and sham blocks
+    with EEG (R1253). No sibling protocol yet.
+first_source:
+  citation: >-
+    Wang X, Dmochowski JP, Zeng L, Kallioniemi E, Husain M, Gonzalez-Lima F, Liu H. Transcranial photobiomodulation with 1064-nm
+    laser modulates brain electroencephalogram rhythms. Neurophotonics. 2019;6(2):025013.
+  doi: 10.1117/1.NPh.6.2.025013
+  year: 2019
+  verified: false
+interop:
+  bids_task: tpbm
+notes: >-
+  New candidate proposed by pkg B (curation/work/pkg_B/new_candidates.csv; file created by the maintainer after the draft
+  stimulus_modality term optical_stimulation was added, D-045). Leads: the Neurophotonics 6(2):025013 record (title, venue
+  and DOI from the search result; authors and year not displayed) and a PMC record (PMC8460746) on photobiomodulation versus
+  thermal stimulation EEG topographies - see curation/literature.csv (found_via=curator_search). Whether this is the earliest
+  EEG study is unknown. Pass 1 skeleton; all sources unverified. bibliography corrected (Crossref, 2026-10-05)
+status: draft
+contributors:
+- curator_b
+- maintainer

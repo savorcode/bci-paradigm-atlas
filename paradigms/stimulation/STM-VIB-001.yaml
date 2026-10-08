@@ -1,0 +1,54 @@
+schema_version: '0.2'
+id: STM-VIB-001
+class: STM-VIB
+name:
+  en: Tendon vibration kinesthetic illusion
+  zh: 肌腱振动运动错觉
+aliases:
+- tendon vibration
+- kinesthetic illusion
+- vibration-induced illusory movement
+family: stimulation
+bci_category:
+- none
+recording_modality:
+- fMRI
+- EEG
+stimulus_modality:
+- somatosensory
+markers:
+- MK.BOLD_motor_network
+description:
+  en: >-
+    High-frequency vibration (around 80-110 Hz) is applied to a tendon of a stationary limb, which activates muscle spindle
+    afferents and produces an illusion that the limb is moving, compared with vibration of a nearby skin site that does not
+    induce the illusion. Illusory movement activates motor network regions including primary motor cortex, SMA and cerebellum.
+  zh: 对静止肢体的肌腱施加高频振动（约 80-110 Hz），激活肌梭传入并产生肢体在运动的错觉，并与不引起错觉的邻近皮肤部位振动比较。运动错觉激活包括初级运动皮层、辅助运动区和小脑在内的运动网络。
+protocol:
+  n_classes: 2
+  classes:
+  - tendon vibration (illusion)
+  - skin vibration control
+  cue: none
+  stimulus_coding: high-frequency vibration of a tendon
+  paradigm_timing: block
+  feedback: none
+  distinguishing: >-
+    Standard configuration (earliest published) / 标准配置（最早发表）: tendon vibration inducing kinaesthetic illusion vs nearby skin
+    vibration in fMRI (R1130; origin not established). No sibling protocol yet.
+first_source:
+  citation: >-
+    Naito E, Nakashima T, Kito T, Aramaki Y, Okada T, Sadato N. Human limb-specific and non-limb-specific brain representations
+    during kinesthetic illusory movements of the upper and lower extremities. European Journal of Neuroscience. 2007;25(11):3476-3487.
+  doi: 10.1111/j.1460-9568.2007.05587.x
+  year: 2007
+  verified: false
+interop:
+  bids_task: tendonvibration
+notes: >-
+  Search sources (curation/work/pkg_B/search_log.md): N15 https://www.nips.ac.jp/fmritms/publications/2007/2007_NaitoE_EurJNeurosci.pdf.
+  New candidate (pkg B). Lead N15 (2007) is not the origin; memory lead Naito et al. 1999 not confirmed. Family assignment
+  (stimulation vs motor) to be confirmed. bibliography corrected (OpenAlex, 2026-10-05)
+status: draft
+contributors:
+- curator_b

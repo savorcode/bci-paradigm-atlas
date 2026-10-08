@@ -1,0 +1,58 @@
+schema_version: '0.2'
+id: ERR-ERRP-002
+class: ERR-ERRP
+name:
+  en: Monitoring error-related potentials (autonomous device)
+  zh: 监视型错误电位（自主运行设备）
+aliases:
+- Monitoring ErrP
+- Observation ErrP
+family: error
+bci_category:
+- passive
+recording_modality:
+- EEG
+stimulus_modality:
+- visual
+markers:
+- MK.ErrP
+description:
+  en: The user does not issue commands but watches a device (e.g., a cursor) move autonomously towards a target; on a proportion
+    of steps the device moves in the wrong direction. Erroneous movements elicit a fronto-central error-related potential
+    that can be detected on single trials and used to teach the device by reinforcement.
+  zh: 用户不发出指令，只观看设备（如光标）自主向目标移动；部分步骤中设备朝错误方向移动。错误移动诱发额中央错误相关电位，可在单试次上检测，并作为强化信号让设备学习。
+trial_structure:
+  conditions:
+  - correct device movement
+  - erroneous device movement
+protocol:
+  n_classes: 2
+  classes:
+  - correct device movement
+  - erroneous device movement
+  cue: cursor or device moving autonomously step by step towards a target, without user commands
+  paradigm_timing: synchronous
+  feedback: discrete
+  distinguishing: 准则 3：试次中没有用户指令阶段，用户只监视自主运行的设备（ERR-ERRP-001 中错误是对用户离散指令的错误执行）。
+first_source:
+  citation: Chavarriaga R, Millan JdR. Learning From EEG Error-Related Potentials in Noninvasive Brain-Computer Interfaces.
+    IEEE Transactions on Neural Systems and Rehabilitation Engineering. 2010;18(4):381-388.
+  doi: 10.1109/TNSRE.2010.2053387
+  year: 2010
+  verified: false
+datasets:
+- name: 'BNCI Horizon 2020 013-2015: Monitoring error-related potentials (64-channel EEG)'
+  url: https://bnci-horizon-2020.eu/database/data-sets
+  identifier: 013-2015
+  subjects: 6
+interop:
+  bids_task: errpmonitoring
+notes: 'Leads used: BNCI Horizon 2020 data sets page (013-2015, CNBI EPFL, 6 subjects, DOI 10.1109/TNSRE.2010.2053387); R0714.
+  first_source title not seen; please add to literature.csv with an R number. Overlaps with ERR-OBS (observation of a machine''s
+  errors, e.g. Ullsperger et al. 2007 and Gentsch et al. 2009 as cited in R0714); kept under ERR-ERRP because the marker is
+  the interaction ErrP and the use is BCI supervision (meeting item). Sprint 2 (D-057, curator_c, 2026-10-03): new concrete
+  paradigm of class ERR-ERRP; numbering criterion 3 relative to ERR-ERRP-001; all sources unverified. [maintainer, sprint
+  2] Lead registered as R1310 (literature.csv). bibliography corrected (Crossref, 2026-10-05)'
+status: draft
+contributors:
+- curator_c

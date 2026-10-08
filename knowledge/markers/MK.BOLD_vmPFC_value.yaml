@@ -1,0 +1,22 @@
+schema_version: "0.2"
+id: MK.BOLD_vmPFC_value
+name:
+  en: Ventromedial prefrontal value BOLD
+  zh: 腹内侧前额叶价值 BOLD
+aliases:
+- vmPFC value signal
+- ventromedial prefrontal value BOLD
+- medial OFC value signal
+type: hemodynamic
+recording_modality:
+- fMRI
+description:
+  en: BOLD activity in ventromedial prefrontal and medial orbitofrontal cortex that scales with the subjective value of options
+    or outcomes during choice.
+  zh: 选择过程中腹内侧前额叶与内侧眶额皮层的 BOLD 活动，随选项或结果的主观价值变化。
+notes: 'No signature given in pass 1 (hemodynamic marker; region described in the description). Generators and indexes not
+  yet written. Used by (registry): CTL-DD-001, CTL-IGT-001, SOC-DICT-001.'
+status: draft
+contributors:
+- maintainer
+- curator_c

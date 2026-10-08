@@ -1,0 +1,56 @@
+schema_version: '0.2'
+id: LAN-NWL-001
+class: LAN-NWL
+name:
+  en: Novel word learning
+  zh: 新词学习
+aliases:
+- word learning from context
+- fast mapping
+- pseudoword meaning acquisition
+family: language
+bci_category:
+- none
+recording_modality:
+- EEG
+stimulus_modality:
+- visual
+- auditory
+markers:
+- MK.N400
+description:
+  en: Participants encounter novel pseudowords whose meanings can be inferred from sentence contexts, pictures or definitions,
+    and are later tested on them. As meaning is acquired, novel words come to elicit N400 effects similar to those of known
+    words, for example an N400 reduction when followed by semantically related words.
+  zh: 被试接触新的假词，其意义可从句子语境、图片或定义中推断，随后对这些词进行测试。随着意义的习得，新词开始诱发与已知词类似的 N400 效应，例如其后呈现语义相关词时 N400 减弱。
+trial_structure:
+  conditions:
+  - 'novel word: meaningful context'
+  - 'novel word: meaningless context'
+  - known word
+protocol:
+  n_classes: 2
+  classes:
+  - novel word
+  - known word
+  cue: pseudowords embedded in sentence contexts, pictures or definitions
+  paradigm_timing: synchronous
+  feedback: none
+  distinguishing: 标准配置（最早发表）：语境中学习新词，再测其 N400 效应（源头 TBD）。本类目前只有这一配置。
+first_source:
+  citation: 'Perfetti CA, Wlotko EW, Hart LA. Word Learning and Individual Differences in Word Learning Reflected in Event-Related
+    Potentials. Journal of Experimental Psychology: Learning, Memory, and Cognition. 2005;31(6):1281-1292.'
+  doi: 10.1037/0278-7393.31.6.1281
+  year: 2005
+  verified: false
+interop:
+  bids_task: wordlearning
+notes: 'Leads: DN37, DN38 (R#### = curation/literature.csv; DN## = curation/work/pkg_D/new_leads.csv). New candidate (curator_d).
+  Origin not retrieved (first_source TBD). Leads: DN37, DN38. first_source blocked: see curation/work/pkg_D/status.csv. Sprint
+  2 (D-057, curator_d, 2026-10-03): protocol block added (-001 = earliest/standard configuration). first_source TBD resolved
+  by bibliographic search (Crossref, 2026-10-05; curator_c): candidate origin found by bibliographic search; content unverified.
+  Previous entry: "TBD: no origin source identified yet (see curation/work/pkg_D/status.csv)" [maintainer sprint 3, 2026-10-07]
+  bibliography confirmed (Crossref, 2026-10-05; origin candidate, content unverified).'
+status: draft
+contributors:
+- curator_d

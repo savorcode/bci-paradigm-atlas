@@ -1,0 +1,28 @@
+schema_version: "0.2"
+id: MK.N1_auditory
+name:
+  en: Auditory N1 (N100)
+  zh: 听觉 N1（N100）
+aliases:
+- N1
+- N100
+- N1m
+- auditory N1
+- Nd (attention effect)
+type: erp_component
+recording_modality:
+- EEG
+- MEG
+signature:
+  latency_ms: ~80-120
+  polarity: negative
+  topography: fronto-central (vertex)
+description:
+  en: Obligatory negative component of the long-latency auditory evoked potential around 100 ms, generated largely in auditory
+    cortex; it is enhanced by selective attention and reduced for self-generated sounds.
+  zh: 长潜伏期听觉诱发电位中约 100 ms 的必然负成分，主要产生于听皮层；选择性注意使其增强，自身产生的声音使其减弱。
+notes: First-pass skeleton by package A (2026-10-03). No generators/indexes yet. Signature values are textbook-level approximations
+  and await source checking.
+status: draft
+contributors:
+- curator_a

@@ -1,0 +1,6 @@
+﻿marker_id,name_en,name_zh,type,recording_modality,requested_by_paradigm,reason
+MK.corticokinematic_coherence,Corticokinematic coherence,皮层-运动学相干,connectivity,MEG;EEG,MOT-PASS-001,"Passive-movement/proprioception paradigm; distinct from MK.corticomuscular_coherence (EMG-based, efferent) and no synonym in registry. Lead N01."
+MK.perturbation_N1,Perturbation-evoked N1,扰动诱发 N1,erp_component,EEG,MOT-PERT-001,Balance perturbation paradigm; not covered by MK.N1_auditory/MK.N1_visual/MK.N140_somatosensory. Lead N04.
+MK.BOLD_olfactory_cortex,Olfactory (piriform) cortex BOLD,嗅觉（梨状）皮层 BOLD,hemodynamic,fMRI,IMG-OLF-001,"No olfactory hemodynamic marker in registry (MK.OERP is EEG). Leads N06, N07."
+MK.BOLD_vestibular_cortex,Vestibular cortex BOLD,前庭皮层 BOLD,hemodynamic,fMRI,STM-GVS-001,No vestibular marker in registry. Lead N17.
+MK.subthalamic_beta,Subthalamic beta activity,丘脑底核 β 活动,oscillatory,other,STM-ADBS-001,Subcortical LFP beta not in registry (MK.SMR_ERD is cortical). Recording modality 'other' per D-027. Lead N10.

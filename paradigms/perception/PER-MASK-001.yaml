@@ -1,0 +1,56 @@
+schema_version: '0.2'
+id: PER-MASK-001
+class: PER-MASK
+name:
+  en: Masking / threshold perception
+  zh: 掩蔽与阈限知觉
+aliases:
+- Backward Masking
+- Metacontrast Masking
+- Pattern Masking
+- backward masking
+- contrastive analysis of consciousness
+- near-threshold perception
+family: perception
+bci_category:
+- none
+recording_modality:
+- EEG
+- MEG
+stimulus_modality:
+- visual
+markers:
+- MK.VAN
+- MK.P3b
+description:
+  en: 'A brief target is followed (backward masking) or surrounded (metacontrast) by a mask, and the target-mask interval
+    is varied around the visibility threshold. Seen versus unseen trials are compared: awareness is associated with a posterior
+    visual awareness negativity and a later P3b.'
+  zh: 短暂呈现的靶刺激之后跟随掩蔽刺激（后向掩蔽）或被其环绕（元对比掩蔽），并在可见性阈限附近改变靶–掩蔽间隔。比较“看见”与“未看见”试次：觉知与后部视觉觉知负波（VAN）及其后的 P3b 相关。
+protocol:
+  n_classes: 2
+  classes:
+  - seen
+  - unseen
+  cue: brief target followed by a backward mask at variable target-mask SOA
+  stimulus_coding: 元对比掩蔽在 split_log 中提议，暂无专门线索。
+  paradigm_timing: synchronous
+  feedback: none
+  distinguishing: 标准配置（最早发表，即 first_source）：后向掩蔽，靶–掩蔽 SOA 围绕阈限变化，按看见/未看见分类。本类暂无其他具体范式（no sibling protocol yet）。
+first_source:
+  citation: Del Cul, A., Baillet, S., & Dehaene, S. Brain dynamics underlying the nonlinear threshold for access to consciousness.
+    PLoS Biology. 2007.
+  doi: 10.1371/journal.pbio.0050260
+  pmid: '17896866'
+  year: 2007
+  verified: false
+interop:
+  bids_task: masking
+notes: 'HED task page: https://www.hedtags.org/hed-task/tasks/hedtsk_visual_masking.html. Leads used: R0359, R0254, R0277,
+  R0428, R0448, R0449, R0502, R0519, R0672, R0684, R0727, R0772, R0791, R0800, R0923, R1015, R1057. R0359 (2007) is the earliest
+  masking ERP/MEG study among the leads; visual masking itself is much older, so first_source is provisional. [curator_a sprint
+  2, 2026-10-03] D-057: protocol block added for the canonical configuration; no other concrete paradigm identified for this
+  class in sprint 2. [curator_e sprint 3, 2026-10-05] bibliography confirmed (Crossref, 2026-10-05).'
+status: draft
+contributors:
+- curator_a

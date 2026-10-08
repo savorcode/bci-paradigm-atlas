@@ -1,0 +1,62 @@
+schema_version: '0.2'
+id: PER-ODD-003
+class: PER-ODD
+name:
+  en: P300 speller (row/column matrix)
+  zh: P300 拼写器（行/列矩阵）
+aliases:
+- P300 speller
+- row/column paradigm (RCP)
+- Farwell-Donchin speller
+- P300 matrix speller
+family: perception
+bci_category:
+- reactive
+recording_modality:
+- EEG
+stimulus_modality:
+- visual
+markers:
+- MK.P3b
+description:
+  en: A matrix of characters (6 x 6 in the original) is shown and its rows and columns are flashed one at a time in random
+    order. The user attends to the desired character and counts its flashes; the row and the column containing it are the
+    rare targets and elicit a P300, so the character is selected at the intersection of the row and column with the largest
+    responses, and the selected character is displayed as feedback.
+  zh: 屏幕显示字符矩阵（原始版本为 6×6），各行、各列以随机顺序逐一闪烁。用户注视目标字符并默数其闪烁次数；包含该字符的行与列是低频靶刺激并诱发 P300，响应最大的行与列交点即为选中字符，并显示为反馈。
+trial_structure:
+  phases:
+  - name: row/column flash sequence
+    note: each row and column flashed once per sequence, sequences repeated
+  - name: selection feedback
+  conditions:
+  - target row/column flash
+  - non-target row/column flash
+protocol:
+  classes:
+  - 36 characters of a 6 x 6 matrix
+  cue: character matrix with random row and column flashes
+  stimulus_coding: row/column flashing
+  paradigm_timing: synchronous
+  feedback: discrete
+  distinguishing: 准则 1;2;4：类别集为矩阵中的字符（选择任务而非二类计数），刺激编码为行/列闪烁，逐字符离散反馈；-001 为两刺激开环计数。
+first_source:
+  citation: 'Farwell LA, Donchin E. Talking off the top of your head: toward a mental prosthesis utilizing event-related brain
+    potentials. Electroencephalogr Clin Neurophysiol. 1988;70(6):510-523.'
+  doi: 10.1016/0013-4694(88)90149-6
+  year: 1988
+  verified: false
+datasets:
+- name: BNCI2014-008 (ALS patients, P300 speller)
+  url: https://moabb.neurotechx.com/docs/dataset_summary.html
+  identifier: BNCI2014_008
+  subjects: 8
+interop:
+  bids_task: p300speller
+notes: 'Former variant "P300 speller (row/column matrix)" of PER-ODD-001 (seed), split under D-057. Lead: R1052 (PubMed 2461285).
+  Dataset: MOABB dataset summary (S2A01) lists BNCI2014_008 as "ALS patients, 6x6 speller" with 8 subjects. Many further public
+  P300 speller datasets exist (BNCI Horizon 2020), not checked in this pass. [curator_e sprint 3, 2026-10-05] bibliography
+  confirmed (Crossref, 2026-10-05).'
+status: draft
+contributors:
+- curator_a

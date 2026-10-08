@@ -1,0 +1,62 @@
+schema_version: '0.2'
+id: PER-FACE-001
+class: PER-FACE
+name:
+  en: Face perception
+  zh: 面孔知觉
+aliases:
+- FFA Localizer
+- Face Localizer
+- N170 paradigm
+- face localizer
+- face perception paradigm
+- famous/unfamiliar/scrambled faces
+family: perception
+bci_category:
+- none
+recording_modality:
+- EEG
+- MEG
+- fMRI
+stimulus_modality:
+- visual
+markers:
+- MK.N170
+- MK.BOLD_category_selective
+description:
+  en: Faces are contrasted with other object categories or with scrambled images. Faces elicit a larger occipito-temporal
+    N170 (M170) and stronger BOLD responses in face-selective regions such as the fusiform face area; the contrast is also
+    used as a functional localizer.
+  zh: 将面孔与其他物体类别或打乱图像进行对比。面孔诱发更大的枕颞 N170（M170），并在梭状回面孔区等面孔选择性区域引起更强的 BOLD 响应；该对比也用作功能定位任务。
+protocol:
+  n_classes: 2
+  classes:
+  - faces
+  - non-face objects or scrambled images
+  cue: photographs of faces vs other object categories
+  stimulus_coding: fMRI 组块定位器与 ERP 事件相关设计目前作为同一配置记录，待第二遍核对。
+  paradigm_timing: synchronous
+  feedback: none
+  distinguishing: 标准配置（最早发表，即 first_source）：面孔与非面孔物体图像逐一呈现的事件相关设计（ERP）。本类暂无其他具体范式（no sibling protocol yet）。
+first_source:
+  citation: Bentin S, Allison T, Puce A, Perez E, McCarthy G. Electrophysiological studies of face perception in humans. J
+    Cogn Neurosci. 1996;8(6):551-565.
+  doi: 10.1162/jocn.1996.8.6.551
+  year: 1996
+  verified: false
+datasets:
+- name: A multi-subject, multi-modal human neuroimaging dataset (Wakeman & Henson faces)
+  identifier: ds000117
+- name: SPM multimodal faces dataset
+interop:
+  bids_task: faces
+notes: 'HED task page: https://www.hedtags.org/hed-task/tasks/hedtsk_face_processing.html. Leads used: R0917, R0932, R0153,
+  R0199, R0292, R0520, R0559, R0724, R0950. R0917 (EEG/ERP) and R0932 (intracranial) are origin candidates without year in
+  the leads; R0153 (1997, fMRI) is the key FFA reference. Order of priority to be checked. [curator_a sprint 2, 2026-10-03]
+  D-057: protocol block added for the canonical configuration; no other concrete paradigm identified for this class in sprint
+  2. [curator_e sprint 3, 2026-10-05] bibliography corrected (OpenAlex, 2026-10-05). [maintainer sprint 3, 2026-10-07, D-073]
+  origin candidate recalled, record confirmed via OpenAlex.'
+status: draft
+contributors:
+- curator_a
+- curator_e

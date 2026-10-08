@@ -1,0 +1,61 @@
+schema_version: '0.2'
+id: MEM-CFMT-001
+class: MEM-CFMT
+name:
+  en: Cambridge face memory test
+  zh: 剑桥面孔记忆
+aliases:
+- CFMT
+- Cambridge Face Memory
+- Cambridge Face Test
+family: memory
+bci_category:
+- none
+recording_modality:
+- EEG
+- fMRI
+stimulus_modality:
+- visual
+markers:
+- MK.N170
+- MK.BOLD_category_selective
+description:
+  en: Participants learn unfamiliar faces from several viewpoints and then identify the learned face among distractor faces
+    in three-alternative forced-choice trials of increasing difficulty, including novel views and added visual noise. Performance
+    on the test is used to characterise individual face-recognition ability and is related to face-selective neural responses
+    such as the N170 and BOLD activity in face-selective ventral visual cortex.
+  zh: 被试从多个视角学习陌生面孔，然后在难度递增的三选一强迫选择试次中（包括新视角和加噪声的图片）从干扰面孔中识别学过的面孔。该测验用于刻画个体的面孔识别能力，其成绩与面孔选择性的神经响应（如 N170 和腹侧视觉皮层面孔选择区的 BOLD
+    活动）相关。
+trial_structure:
+  conditions:
+  - same images
+  - novel views
+  - novel views with noise
+protocol:
+  n_classes: 2
+  classes:
+  - learned target face
+  - distractor face
+  cue: greyscale unfamiliar face photographs; learning views then three-alternative test displays
+  paradigm_timing: synchronous
+  feedback: none
+  distinguishing: 标准配置（最早发表）：标准化测验（学习 + 三择一识别，含新视角与加噪阶段；Duchaine & Nakayama 2006, R0354）。本类目前只有这一配置。
+first_source:
+  citation: 'Duchaine, B., & Nakayama, K. The Cambridge Face Memory Test: Results for neurologically intact individuals and
+    an investigation of its validity using inverted face stimuli and prosopagnosic participants. Neuropsychologia, 44(4),
+    576–585. 2006.'
+  doi: 10.1016/j.neuropsychologia.2005.07.001
+  pmid: '16169565'
+  year: 2006
+  verified: false
+interop:
+  bids_task: cfmt
+notes: 'HED task page: https://www.hedtags.org/hed-task/tasks/hedtsk_cambridge_face_memory.html. Leads: R0153, R0354, R0360,
+  R0433, R0444, R0467, R0674 (R#### = curation/literature.csv; DN## = curation/work/pkg_D/new_leads.csv). The CFMT is primarily
+  a behavioural test; neural markers (N170, face-selective BOLD) come from studies relating CFMT performance to face-related
+  responses. R0153 (Kanwisher et al. 1997) is the FFA localizer reference. Sprint 2 (D-057, curator_d, 2026-10-03): protocol
+  block added (-001 = earliest/standard configuration). Only one configuration (standardised test) identified; stages are
+  fixed test parts, not separate protocols. bibliography confirmed (Crossref, 2026-10-05)'
+status: draft
+contributors:
+- curator_d

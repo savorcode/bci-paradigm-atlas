@@ -1,0 +1,53 @@
+schema_version: '0.2'
+id: IMG-TACT-001
+class: IMG-TACT
+name:
+  en: Tactile imagery
+  zh: 触觉想象
+aliases:
+- tactile imagery
+- somatosensory imagery
+- imagined touch
+- imagined vibration
+family: imagery
+bci_category:
+- active
+recording_modality:
+- EEG
+stimulus_modality:
+- mental_imagery
+- somatosensory
+markers:
+- MK.SMR_ERD
+description:
+  en: >-
+    Participants first experience a tactile stimulus (e.g. vibration on the wrist) and then, on cued trials, imagine that
+    sensation in its absence. Tactile imagery produces mu-band ERD over the contralateral somatosensory cortex that can be
+    classified, in a way comparable to motor imagery.
+  zh: 被试先体验触觉刺激（如腕部振动），随后在提示试次中在无刺激时想象该感觉。触觉想象在对侧体感皮层引起可被分类的 mu 频段 ERD，方式与运动想象相似。
+protocol:
+  n_classes: 2
+  classes:
+  - tactile imagery
+  - rest
+  cue: visual cue after prior experience of the real vibration
+  paradigm_timing: synchronous
+  feedback: none
+  distinguishing: >-
+    Standard configuration (earliest published) / 标准配置（最早发表）: imagery of a previously experienced wrist vibration vs rest
+    (Yakovlev et al. 2023). No sibling protocol yet.
+first_source:
+  citation: >-
+    Yakovlev L, Syrov N, Miroshnikov A, Lebedev M, Kaplan A. Event-related desynchronization induced by tactile imagery: an
+    EEG study. eNeuro 10(6):ENEURO.0455-22.2023. 2023.
+  doi: 10.1523/ENEURO.0455-22.2023
+  year: 2023
+  verified: false
+interop:
+  bids_task: tactileimagery
+notes: >-
+  Search sources (curation/work/pkg_B/search_log.md): N05 https://www.eneuro.org/content/10/6/ENEURO.0455-22.2023. New candidate
+  (pkg B). Differs from IMG-SAO-001, where attention is directed to real stimulation. bibliography confirmed (Crossref, 2026-10-05)
+status: draft
+contributors:
+- curator_b

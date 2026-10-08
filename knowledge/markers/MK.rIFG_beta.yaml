@@ -1,0 +1,27 @@
+schema_version: "0.2"
+id: MK.rIFG_beta
+name:
+  en: Right inferior frontal beta (stopping)
+  zh: 右额下回 β（停止）
+aliases:
+- rIFG beta
+- right inferior frontal beta
+- stop-related beta
+type: oscillatory
+recording_modality:
+- EEG
+- ECoG
+signature:
+  frequency_hz: 13-30 (beta)
+  polarity: power increase on successful stop trials
+  topography: right inferior frontal cortex / right frontal scalp
+description:
+  en: Increase in beta-band power over right inferior frontal cortex shortly after a stop signal, larger on successful than
+    on failed stop trials. It is recorded with scalp EEG source analysis and with intracranial (ECoG) electrodes.
+  zh: 停止信号后不久右额下回 β 频段功率升高，成功停止试次大于停止失败试次。可通过头皮 EEG 源分析及颅内（ECoG）电极记录。
+notes: 'Signature values are textbook-level approximations and await checking against sources (pass 2). Generators and indexes
+  not yet written. Used by (registry): CTL-SST-001.'
+status: draft
+contributors:
+- maintainer
+- curator_c

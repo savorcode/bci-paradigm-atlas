@@ -1,0 +1,55 @@
+schema_version: '0.2'
+id: ERR-AWARE-002
+class: ERR-AWARE
+name:
+  en: Error awareness in the antisaccade task
+  zh: 反向眼跳任务中的错误觉知
+aliases:
+- Antisaccade error-awareness task
+- Saccade error signalling
+family: error
+bci_category:
+- none
+recording_modality:
+- EEG
+stimulus_modality:
+- visual
+markers:
+- MK.Pe
+- MK.ERN
+description:
+  en: Participants perform an antisaccade task and signal after each trial whether they made an erroneous saccade towards
+    the target. Many reflexive saccade errors go unnoticed; the Pe is present for signalled but largely absent for unsignalled
+    errors, whereas the ERN occurs for both.
+  zh: 被试完成反向眼跳任务，并在每个试次后报告是否误向目标扫视。许多反射性扫视错误未被察觉；Pe 只在被报告的错误上明显出现，而 ERN 在两类错误上都会出现。
+trial_structure:
+  conditions:
+  - correct antisaccade
+  - signalled saccade error
+  - unsignalled saccade error
+protocol:
+  n_classes: 3
+  classes:
+  - correct antisaccade
+  - aware (signalled) error
+  - unaware error
+  cue: peripheral visual target; antisaccade instruction; error signalling after each trial
+  paradigm_timing: synchronous
+  feedback: none
+  distinguishing: 准则 2：刺激与反应换为反向眼跳（眼动反应、外周目标），错误为反射性前向扫视（ERR-AWARE-001 为手动选择任务）。
+first_source:
+  citation: 'Nieuwenhuis S, Ridderinkhof KR, Blom J, Band GPH, Kok A. Error-related brain potentials are differentially related
+    to awareness of response errors: Evidence from an antisaccade task. Psychophysiology. 2001;38(5):752-760.'
+  doi: 10.1111/1469-8986.3850752
+  pmid: '11577898'
+  year: 2001
+  verified: false
+interop:
+  bids_task: antisaccadeawareness
+notes: 'Leads used: R0205. Moved from the variants of ERR-AWARE-001 (D-015, revisited under D-057 criterion 2). MK.ERN listed
+  because the source contrasts ERN and Pe; ERN is a CTL-FLK/class-union marker owned by package C. Sprint 2 (D-057, curator_c,
+  2026-10-03): new concrete paradigm of class ERR-AWARE; numbering criterion 2 relative to ERR-AWARE-001; all sources unverified.
+  bibliography corrected (OpenAlex, 2026-10-05)'
+status: draft
+contributors:
+- curator_c

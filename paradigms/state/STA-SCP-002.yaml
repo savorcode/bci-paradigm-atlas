@@ -1,0 +1,47 @@
+schema_version: '0.2'
+id: STA-SCP-002
+class: STA-SCP
+name:
+  en: SCP-driven spelling device (Thought Translation Device)
+  zh: 慢皮层电位拼写装置（思维翻译装置）
+aliases:
+- Thought Translation Device
+- TTD
+family: state
+bci_category:
+- active
+recording_modality:
+- EEG
+stimulus_modality:
+- visual
+- cognitive_task
+markers:
+- MK.SCP
+description:
+  en: A person who has learned to control the vertex slow cortical potential uses negative or positive shifts to select or
+    reject successively smaller groups of letters presented on a screen, so that binary selections spell words. Visual feedback
+    shows the SCP during each selection interval.
+  zh: 已学会控制头顶慢皮层电位的使用者，通过负向或正向偏移来选择或拒绝屏幕上逐步缩小的字母组，以一连串二元选择拼出单词。每个选择区间内以视觉方式反馈 SCP。
+protocol:
+  n_classes: 2
+  classes:
+  - select letter group (negativity)
+  - reject letter group (positivity)
+  cue: letter groups presented on screen in a binary selection tree
+  paradigm_timing: synchronous
+  feedback: continuous
+  distinguishing: 'Criterion 1 versus STA-SCP-001: the two SCP classes are mapped to selecting or rejecting letter groups
+    in a binary spelling tree, so trials yield character selections (Birbaumer et al. 1999, R1177).'
+first_source:
+  citation: Birbaumer N, Ghanayim N, Hinterberger T, Iversen I, Kotchoubey B, Kübler A, Perelmouter J, Taub E, Flor H. A spelling
+    device for the paralysed. Nature 398(6725):297-298. 1999.
+  doi: 10.1038/18581
+  year: 1999
+  verified: false
+notes: 'Former content of STA-SCP-001. Source: S03 (sprint 1) = https://ideas.repec.org/a/nat/nature/v398y1999i6725d10.1038_18581.html.
+  Lead ref: R1177. The selection-tree details are as described in sprint 1 and are to be checked against the original. New
+  concrete paradigm (curator_e, sprint 2, 2026-10-03, D-057); all sources unverified. Sprint 3 (curator_d, 2026-10-05): bibliography
+  confirmed (Crossref, 2026-10-05).'
+status: draft
+contributors:
+- curator_e

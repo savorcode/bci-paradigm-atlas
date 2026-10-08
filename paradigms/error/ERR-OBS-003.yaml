@@ -1,0 +1,48 @@
+schema_version: '0.2'
+id: ERR-OBS-003
+class: ERR-OBS
+name:
+  en: Observation of avatar action errors in immersive VR
+  zh: 沉浸式 VR 中观察化身的动作错误
+aliases:
+- Avatar error observation (1PP)
+family: error
+bci_category:
+- passive
+recording_modality:
+- EEG
+stimulus_modality:
+- visual
+markers:
+- MK.oERN
+description:
+  en: Participants wearing a head-mounted display watch a virtual body (avatar) perform reach-to-grasp actions, seen from
+    a first-person or third-person perspective, and the avatar occasionally makes an erroneous action. Observed avatar errors
+    elicit an observer error-related negativity, modulated by the perspective and the sense of embodiment.
+  zh: 被试佩戴头戴显示器，从第一或第三人称视角观看虚拟身体（化身）完成伸手抓握动作，化身偶尔出错。被观察到的化身错误诱发观察性错误相关负波，并受视角与具身感调节。
+trial_structure:
+  conditions:
+  - avatar correct action
+  - avatar erroneous action
+protocol:
+  n_classes: 2
+  classes:
+  - avatar correct action
+  - avatar erroneous action
+  cue: avatar reach-to-grasp actions in immersive VR seen from first- or third-person perspective
+  paradigm_timing: synchronous
+  feedback: none
+  distinguishing: 准则 2：被观察的刺激是 VR 中化身的伸手抓握动作（第一/第三人称视角），而不是 ERR-OBS-001 中他人在选择任务上的按键反应。
+first_source:
+  citation: Pavone et al. 2016, as cited in R0714 (Somon et al. 2017); full reference not seen
+  year: 2016
+  verified: false
+interop:
+  bids_task: observeavatar
+notes: 'Leads used: R0714. Pavone et al. 2016 and Padrão et al. 2016 are both 2016; which appeared first is not known - first_source
+  to be confirmed by the maintainer. Task details (reach-to-grasp) from memory of the class literature and to be checked;
+  R0714 describes them as ''computer generated visual representations'' observed in 1PP or 3PP. Sprint 2 (D-057, curator_c,
+  2026-10-03): new concrete paradigm of class ERR-OBS; numbering criterion 2 relative to ERR-OBS-001; all sources unverified. [maintainer, sprint 2] Lead registered as R1320 (literature.csv).'
+status: draft
+contributors:
+- curator_c

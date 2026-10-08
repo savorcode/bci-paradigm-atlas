@@ -1,0 +1,50 @@
+schema_version: '0.2'
+id: LAN-P600-002
+class: LAN-P600
+name:
+  en: Garden-path sentences
+  zh: 花园路径句
+aliases:
+- garden-path P600
+- temporary syntactic ambiguity
+family: language
+bci_category:
+- none
+recording_modality:
+- EEG
+stimulus_modality:
+- visual
+markers:
+- MK.P600
+description:
+  en: Sentences are temporarily ambiguous so that the initially preferred structure turns out to be wrong at a disambiguating
+    word (garden-path sentences), and they are compared with unambiguous controls. The disambiguating word elicits a P600,
+    interpreted as syntactic reanalysis.
+  zh: 句子在前半部分暂时歧义，最初偏好的结构在消歧词处被证明是错的（花园路径句），与无歧义对照句比较。消歧词诱发 P600，被解释为句法重新分析。
+trial_structure:
+  conditions:
+  - garden-path (disambiguation to non-preferred structure)
+  - unambiguous control
+protocol:
+  n_classes: 2
+  classes:
+  - garden-path
+  - unambiguous control
+  cue: sentences presented word by word
+  paradigm_timing: synchronous
+  feedback: none
+  distinguishing: 准则 1：条件集由不合语法的违例句（LAN-P600-001）变为合语法但暂时歧义、需重新分析的句子与无歧义对照。
+first_source:
+  citation: 'Osterhout L, Holcomb PJ, Swinney D. Brain potentials elicited by garden-path sentences: Evidence of the application
+    of verb information during parsing. Journal of Experimental Psychology: Learning, Memory, and Cognition. 1994;20(4):786-803.'
+  doi: 10.1037/0278-7393.20.4.786
+  pmid: '8064247'
+  year: 1994
+  verified: false
+notes: 'Former variant of LAN-P600-001. Lead R0864 (Brain potentials elicited by garden-path sentences; title and PMID only).
+  Related class LAN-SC (structural ambiguity in comprehension, fMRI) - kept separate at class level. Leads: R0864, R0905.
+  (R#### = curation/literature.csv; DN## = curation/work/pkg_D/new_leads.csv.) Numbering criterion (D-057): 1. bibliography
+  corrected (OpenAlex, 2026-10-05)'
+status: draft
+contributors:
+- curator_d

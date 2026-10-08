@@ -1,0 +1,50 @@
+schema_version: '0.2'
+id: MOT-CURSOR-002
+class: MOT-CURSOR
+name:
+  en: Two-dimensional EEG cursor control
+  zh: 二维脑电光标控制
+aliases:
+- 2-D cursor control
+- two-dimensional SMR control
+family: motor
+bci_category:
+- active
+recording_modality:
+- EEG
+stimulus_modality:
+- visual
+- mental_imagery
+markers:
+- MK.SMR_ERD
+description:
+  en: >-
+    Participants move a cursor from the centre of the screen to targets placed around the periphery, with horizontal and vertical
+    cursor velocity each driven by a weighted combination of mu/beta rhythm amplitudes. An adaptive algorithm selects the
+    features users can modulate; continuous cursor feedback closes the loop.
+  zh: 被试将光标从屏幕中央移向周边的目标，光标的水平和垂直速度分别由 mu/β 节律幅值的加权组合驱动。自适应算法选择用户能调节的特征；光标的连续反馈构成闭环。
+protocol:
+  classes:
+  - peripheral targets in two dimensions (number to be checked)
+  cue: visual target on the screen periphery
+  paradigm_timing: synchronous
+  feedback: continuous
+  distinguishing: >-
+    Criterion 1 vs MOT-CURSOR-001: two-dimensional point-to-point movement to peripheral targets instead of one-dimensional
+    movement to a top or bottom target.
+first_source:
+  citation: >-
+    Wolpaw JR, McFarland DJ. Control of a two-dimensional movement signal by a noninvasive brain-computer interface in humans.
+    Proceedings of the National Academy of Sciences. 2004;101(51):17849-17854.
+  doi: 10.1073/pnas.0403504101
+  pmid: '15585584'
+  year: 2004
+  verified: false
+interop:
+  bids_task: cursor
+notes: >-
+  Leads: WS-B2-02 [=R1295] and WF-B2-17 (neurotechcenter.org node 3139: citation, DOI, PMID, abstract 'multidimensional point-to-point
+  movement control'). Target layout not stated in the abstract. bibliography corrected (Crossref, 2026-10-05)
+status: draft
+contributors:
+- curator_b

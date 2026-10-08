@@ -1,6 +1,6 @@
-# Brain regions / 脑区 (seed, draft). Granularity is coarse in v0.1 and will be refined
-# with mappings to standard atlases. v0.1 粒度较粗，后续将细化并映射到标准脑图谱。
-schema_version: "0.1"
+# Brain regions / 脑区 (seed, draft). Granularity is coarse in this release and will be refined
+# with mappings to standard atlases. 本版粒度较粗，后续将细化并映射到标准脑图谱。
+schema_version: "0.2"
 prefix: BR
 terms:
   - {id: BR.frontal_cortex, en: Frontal cortex, zh: 额叶皮层}

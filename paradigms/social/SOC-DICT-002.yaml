@@ -1,0 +1,49 @@
+schema_version: '0.2'
+id: SOC-DICT-002
+class: SOC-DICT
+name:
+  en: Charitable donation task
+  zh: 慈善捐赠任务
+aliases:
+- donation task
+- charitable giving task
+family: social
+bci_category:
+- none
+recording_modality:
+- fMRI
+stimulus_modality:
+- visual
+markers:
+- MK.BOLD_vmPFC_value
+description:
+  en: Participants decide on repeated trials whether to donate money from their own endowment to real charitable organisations,
+    compared with trials in which they receive money for themselves or in which transfers to the charity are mandatory. Donation
+    decisions engage the mesolimbic reward system and ventromedial prefrontal value signals.
+  zh: 被试在多个试次中决定是否从自己的本金中向真实慈善机构捐款，并与自己获得金钱或强制向慈善机构转移的试次比较。捐赠决策激活中脑边缘奖赏系统与腹内侧前额叶价值信号。
+protocol:
+  n_classes: 3
+  classes:
+  - voluntary donation to a charity
+  - monetary reward to self
+  - mandatory transfer to a charity
+  cue: charity name or logo with the proposed amounts
+  paradigm_timing: synchronous
+  feedback: none
+  distinguishing: 'Criterion 1 versus SOC-DICT-001: the recipient is a real charity and trials contrast voluntary giving with
+    self-reward or mandatory transfer, rather than a single allocation to a passive person (Moll et al. 2006, R0341; Harbaugh
+    et al. 2007, R0371).'
+first_source:
+  citation: Moll, J., Krueger, F., Zahn, R., Pardini, M., de Oliveira-Souza, R., & Grafman, J. Human fronto-mesolimbic networks
+    guide decisions about charitable donation. Proceedings of the National Academy of Sciences, 103(42), 15623-15628. 2006.
+  doi: 10.1073/pnas.0604475103
+  pmid: '17030808'
+  year: 2006
+  verified: false
+notes: 'Lead refs: R0341 [key_reference], R0371 [key_reference] (mandatory taxation versus voluntary giving). The class list
+  merges the two lead designs; exact condition sets to be checked. Author list as in literature.csv. New concrete paradigm
+  (curator_e, sprint 2, 2026-10-03, D-057); all sources unverified. Sprint 3 (curator_d, 2026-10-05): bibliography confirmed
+  (OpenAlex, 2026-10-05).'
+status: draft
+contributors:
+- curator_e

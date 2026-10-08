@@ -1,0 +1,55 @@
+schema_version: '0.2'
+id: PER-MMN-002
+class: PER-MMN
+name:
+  en: Speech-sound (phoneme-contrast) MMN
+  zh: 语音（音位对比）失匹配负波
+aliases:
+- phoneme MMN
+- speech MMN
+- phonetic MMN
+family: perception
+bci_category:
+- passive
+- none
+recording_modality:
+- EEG
+- MEG
+stimulus_modality:
+- auditory
+markers:
+- MK.MMN
+description:
+  en: Speech syllables or vowels are used as standards and deviants, for example native and non-native phoneme contrasts.
+    Deviant speech sounds elicit an MMN whose amplitude depends on whether the contrast is phonemic in the listener's language,
+    so the paradigm indexes language-specific phoneme representations.
+  zh: 以音节或元音作为标准刺激与偏差刺激，例如母语与非母语的音位对比。偏差语音诱发 MMN，其幅度取决于该对比在被试语言中是否构成音位对立，因此可反映语言特异的音位表征。
+trial_structure:
+  conditions:
+  - standard speech sound
+  - deviant speech sound (phonemic or non-phonemic contrast)
+protocol:
+  n_classes: 2
+  classes:
+  - standard speech sound
+  - deviant speech sound
+  cue: syllables or vowels as standards and deviants, sounds ignored
+  paradigm_timing: synchronous
+  feedback: none
+  distinguishing: 准则 2（刺激类型）：语音音节/元音取代 -001 的纯音。
+first_source:
+  citation: Lawson EA, Gaillard AWK. Mismatch negativity in a phonetic discrimination task. Biol Psychol. 1981;13:281-288.
+  doi: 10.1016/0301-0511(81)90043-0
+  pmid: '7342998'
+  year: 1981
+  verified: false
+interop:
+  bids_task: mmn
+notes: 'Former variant of PER-MMN-001 (merged candidate LAN-PHON-001 of pkg D, D-017/D-030), split under D-057. Leads: R0988
+  (PubMed 7342998, = first_source, title only), R0968 (language-specific phoneme representations, PubMed 9009189), R0216/R1068
+  (Naatanen 2001 review), R0975. Authors and year of the first_source to be filled from R0988. [curator_e sprint 3, 2026-10-05]
+  bibliography corrected (OpenAlex, 2026-10-05).'
+status: draft
+contributors:
+- curator_a
+- curator_e

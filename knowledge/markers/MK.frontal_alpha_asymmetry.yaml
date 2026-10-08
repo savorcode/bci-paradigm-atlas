@@ -1,0 +1,24 @@
+schema_version: "0.2"
+id: MK.frontal_alpha_asymmetry
+name:
+  en: Frontal alpha asymmetry
+  zh: 额叶 α 不对称
+aliases:
+- FAA
+- frontal EEG asymmetry
+type: oscillatory
+recording_modality:
+- EEG
+signature:
+  frequency_hz: 8-13
+  topography: homologous frontal pairs (e.g. F4/F3), index ln(right) - ln(left) alpha power
+description:
+  en: Difference in alpha power between right and left frontal sites. Because alpha power is inversely related to cortical
+    activity, relatively greater left frontal activity has been associated with approach motivation and positive affect, and
+    greater right frontal activity with withdrawal.
+  zh: 左右额区 α 功率之差。由于 α 功率与皮层活动呈反向关系，左额相对活动更高与趋近动机和正性情绪相关，右额相对活动更高则与回避相关。
+notes: Signature values are textbook-level characteristics entered in the first pass and await source checking.
+status: draft
+contributors:
+- maintainer
+- curator_e

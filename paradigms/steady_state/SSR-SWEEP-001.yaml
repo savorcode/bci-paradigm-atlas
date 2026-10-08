@@ -1,0 +1,41 @@
+schema_version: '0.2'
+id: SSR-SWEEP-001
+class: SSR-SWEEP
+name:
+  en: Sweep VEP
+  zh: 扫描 VEP（视敏度评估）
+family: steady_state
+bci_category:
+- none
+recording_modality:
+- EEG
+stimulus_modality:
+- visual
+markers:
+- MK.SSVEP
+description:
+  en: A pattern stimulus reversing at a fixed rate is swept through a range of spatial frequencies (or contrasts) within a
+    single trial of several seconds. The amplitude of the steady-state VEP is plotted against spatial frequency and extrapolated
+    to zero to estimate visual acuity, for example in infants.
+  zh: 以固定速率翻转的图形刺激在数秒的单个试次中扫过一系列空间频率（或对比度）。将稳态 VEP 波幅对空间频率作图并外推至零，估计视敏度，例如用于婴儿。
+protocol:
+  n_classes: 1
+  classes:
+  - spatial-frequency sweep
+  cue: pattern reversing at a fixed rate swept through spatial frequencies within one trial
+  stimulus_coding: 对比度扫描在 split_log 中提议。
+  paradigm_timing: synchronous
+  feedback: none
+  distinguishing: 标准配置（最早发表，即 first_source）：固定翻转率的图形在单试次内扫描空间频率。本类暂无其他具体范式（no sibling protocol yet）。
+first_source:
+  citation: 'TBD: no origin source identified yet (see curation/work/pkg_A/status.csv)'
+  verified: false
+interop:
+  bids_task: sweepvep
+notes: 'Leads used: R0787. first_source: no origin source identified in this pass (blocker, see curation/work/pkg_A/status.csv).
+  Maintainer note (decisions.md): may be discussed as a variant of SSR-SSVEP-001 at the second meeting. Only lead is a 2020
+  review. [curator_a sprint 2, 2026-10-03] D-057: protocol block added for the canonical configuration; no other concrete
+  paradigm identified for this class in sprint 2.'
+status: draft
+contributors:
+- curator_a

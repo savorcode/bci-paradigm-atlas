@@ -1,0 +1,54 @@
+schema_version: '0.2'
+id: MEM-CIT-002
+class: MEM-CIT
+name:
+  en: Complex trial protocol (P300 CIT)
+  zh: 复合试次协议（P300 隐匿信息测试）
+aliases:
+- Complex Trial Protocol
+- CTP
+family: memory
+bci_category:
+- none
+recording_modality:
+- EEG
+stimulus_modality:
+- visual
+markers:
+- MK.P3b
+description:
+  en: 'Each trial contains two stimuli: first a probe or an irrelevant item, which participants acknowledge with a single
+    button press regardless of type, and then a target or non-target item that requires a differentiated response. Separating
+    the probe from the target task in this way was introduced to make the probe-elicited P3b more resistant to countermeasures
+    than in the three-stimulus protocol.'
+  zh: 每个试次包含两个刺激：先是探测项或无关项，被试不论类型都按同一个键确认；随后是靶或非靶项目，需要区分性反应。这样把探测项与靶任务分开，目的是使探测项诱发的 P3b 比三刺激协议更能抵抗反测谎手段。
+trial_structure:
+  conditions:
+  - probe then target/non-target
+  - irrelevant then target/non-target
+protocol:
+  n_classes: 4
+  classes:
+  - probe
+  - irrelevant
+  - target
+  - non-target
+  cue: 'two sequential stimuli per trial: probe/irrelevant item, then target/non-target item'
+  stimulus_coding: dual-stimulus trials (probe/irrelevant followed by target/non-target)
+  paradigm_timing: synchronous
+  feedback: none
+  distinguishing: 准则 3（及 1）：试次结构由每试次一个刺激（MEM-CIT-001 三刺激协议）变为每试次两个刺激（先探测/无关、后靶/非靶），类别集相应改变。
+first_source:
+  citation: 'Rosenfeld JP, Labkovsky E, Winograd M, Lui MA, Vandenboom C, Chedid E. The Complex Trial Protocol (CTP): A new,
+    countermeasure-resistant, accurate, P300-based method for detection of concealed information. Psychophysiology 45(6):906-919.
+    2008.'
+  doi: 10.1111/j.1469-8986.2008.00708.x
+  year: 2008
+  verified: false
+notes: 'New configuration (sprint 2). Leads: R1322 (Rosenfeld et al. 2008, bibliographic data from the HKBU scholars page,
+  WebSearch S2-03), further CTP papers seen in the same search (Labkovsky & Rosenfeld 2012; Hu et al. 2012, not yet registered).
+  (R#### = curation/literature.csv; DN## = curation/work/pkg_D/new_leads.csv.) Numbering criterion (D-057): 3;1. bibliography
+  confirmed (Crossref, 2026-10-05)'
+status: draft
+contributors:
+- curator_d

@@ -1,0 +1,53 @@
+schema_version: '0.2'
+id: MOT-MI-011
+class: MOT-MI
+name:
+  en: Eleven-task single upper-extremity motor imagery
+  zh: 单侧上肢 11 类动作想象
+aliases:
+- 11 intuitive movement tasks
+- Jeong2020 dataset
+family: motor
+bci_category:
+- active
+recording_modality:
+- EEG
+stimulus_modality:
+- mental_imagery
+- visual
+markers:
+- MK.SMR_ERD
+description:
+  en: >-
+    Participants imagine (and in separate blocks execute) eleven different movement tasks of one upper extremity over three
+    recording days, with EEG, EMG and EOG recorded together. The large intuitive task set targets multi-degree-of-freedom
+    control of a single arm.
+  zh: 被试在三天的记录中想象（并在另外的组块中执行）单侧上肢的 11 种不同动作任务，同时记录脑电、肌电和眼电。这一直观的大任务集面向单臂多自由度控制。
+protocol:
+  n_classes: 11
+  cue: visual cue
+  paradigm_timing: synchronous
+  feedback: none
+  distinguishing: >-
+    Criterion 1 vs MOT-MI-001 and MOT-MI-003: eleven upper-extremity tasks (class identities not yet listed from the source)
+    instead of two hand classes or six movements + rest.
+first_source:
+  citation: >-
+    Jeong JH, Cho JH, Shim KH, Kwon BH, Lee BH, Lee DY, Lee DH, Lee SW. Multimodal signal dataset for 11 intuitive movement
+    tasks from single upper extremity during multiple recording sessions. GigaScience 9(10). 2020.
+  doi: 10.1093/gigascience/giaa098
+  year: 2020
+  verified: false
+datasets:
+- name: Jeong2020 multimodal dataset (25 subjects, 60-channel EEG, 7 EMG, 4 EOG, 3 sessions)
+  subjects: 25
+interop:
+  bids_task: motorimagery
+notes: >-
+  Leads: WS-B2-03 [=R1292] and WF-B2-18 (Korea University research portal: citation, 25 participants, real movement and motor
+  imagery, 82,500 trials; the 11 tasks are not enumerated on that page). The class list must be added from the paper before
+  merge; the cue type is assumed visual (check). This is the '11 classes' dataset of the D-057 example. bibliography confirmed
+  (OpenAlex, 2026-10-05)
+status: draft
+contributors:
+- curator_b

@@ -1,0 +1,50 @@
+schema_version: '0.2'
+id: SOC-EYE-001
+class: SOC-EYE
+name:
+  en: Live eye-to-eye contact
+  zh: 真人双向目光接触
+aliases:
+- mutual gaze
+- live eye contact
+- eye-to-eye contact hyperscanning
+family: social
+bci_category:
+- none
+recording_modality:
+- fNIRS
+stimulus_modality:
+- visual
+markers:
+- MK.interbrain_synchrony
+description:
+  en: Two partners face each other and alternate between looking into each other's eyes and looking at a control target such
+    as eyes in a photograph, while both brains are recorded. Real eye contact increases cross-brain coherence of hemodynamic
+    signals in frontal, temporal and parietal regions.
+  zh: 两名同伴面对面，在相互注视对方眼睛与注视对照目标（如照片中的眼睛）之间交替，同时记录双方脑活动。真实目光接触增强额、颞、顶区血流动力学信号的脑间相干。
+protocol:
+  n_classes: 2
+  classes:
+  - live eye-to-eye contact
+  - gaze at eyes in a photograph
+  cue: live partner seated face to face, alternating with a picture
+  paradigm_timing: block
+  feedback: none
+  distinguishing: 'Standard configuration (earliest published or canonical; D-057 -001): live eye contact versus photograph
+    with dual-brain fNIRS (Hirsch et al. 2017, R1191).'
+first_source:
+  citation: Hirsch J, Zhang X, Noah JA, Ono Y. Frontal temporal and parietal systems synchronize within and across brains
+    during live eye-to-eye contact. NeuroImage 157:314-330. 2017.
+  doi: 10.1016/j.neuroimage.2017.06.018
+  year: 2017
+  verified: false
+interop:
+  bids_task: eyecontact
+notes: 'Sources found by curator_e (curation/work/pkg_E/search_log.md): S26 = https://discovery-pp.ucl.ac.uk/id/eprint/10064566.
+  New candidate (curator_e). Distinct from SOC-GAZE-001 (gaze following) and SOC-JA-001 (coordinated action); could alternatively
+  become a Hyperscanning variant of SOC-GAZE-001. First-pass skeleton (curator_e, 2026-10-03); all sources unverified. Sprint
+  2 (curator_e, 2026-10-03): protocol block added per D-057; see curation/work/pkg_E/sprint2/split_log.csv. Sprint 3 (curator_d,
+  2026-10-05): bibliography confirmed (OpenAlex, 2026-10-05).'
+status: draft
+contributors:
+- curator_e

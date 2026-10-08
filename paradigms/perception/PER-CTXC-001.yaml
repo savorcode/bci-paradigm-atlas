@@ -1,0 +1,49 @@
+schema_version: '0.2'
+id: PER-CTXC-001
+class: PER-CTXC
+name:
+  en: Contextual cueing
+  zh: 情境线索效应
+aliases:
+- CC Task
+family: perception
+bci_category:
+- none
+recording_modality:
+- EEG
+- fMRI
+stimulus_modality:
+- visual
+markers:
+- MK.N2pc
+- MK.BOLD_hippocampus
+description:
+  en: Participants search for a target in displays of distractors, some of which repeat across blocks with a fixed target
+    position. Search becomes faster for repeated configurations without explicit recognition; the learned context enhances
+    the N2pc to the target and engages the hippocampus.
+  zh: 被试在干扰项中搜索靶刺激，部分画面布局跨组块重复且靶位置固定。即使不能外显识别，重复布局下的搜索也会变快；习得的情境增强靶刺激的 N2pc，并激活海马。
+protocol:
+  n_classes: 2
+  classes:
+  - repeated configuration
+  - novel configuration
+  cue: search displays, some configurations repeated across blocks
+  paradigm_timing: synchronous
+  feedback: none
+  distinguishing: 标准配置（最早发表，即 first_source）：重复与新异的搜索布局在组间交替出现。本类暂无其他具体范式（no sibling protocol yet）。
+first_source:
+  citation: 'Chun, M. M., & Jiang, Y. Contextual cueing: Implicit learning and memory of visual context guides spatial attention.
+    Cognitive Psychology, 36(1), 28–71. 1998.'
+  doi: 10.1006/cogp.1998.0681
+  pmid: '9679076'
+  year: 1998
+  verified: false
+interop:
+  bids_task: contextualcueing
+notes: 'HED task page: https://www.hedtags.org/hed-task/tasks/hedtsk_contextual_cueing.html. Leads used: R0160, R0253, R0646,
+  R0707, R0746, R0771, R0817. [curator_a sprint 2, 2026-10-03] D-057: protocol block added for the canonical configuration;
+  no other concrete paradigm identified for this class in sprint 2. [curator_e sprint 3, 2026-10-05] bibliography confirmed
+  (Crossref, 2026-10-05).'
+status: draft
+contributors:
+- curator_a

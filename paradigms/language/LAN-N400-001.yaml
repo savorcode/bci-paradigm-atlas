@@ -1,0 +1,54 @@
+schema_version: '0.2'
+id: LAN-N400-001
+class: LAN-N400
+name:
+  en: Semantic violation
+  zh: 语义违例
+aliases:
+- semantic anomaly
+- semantic incongruity
+- sentence N400 paradigm
+family: language
+bci_category:
+- none
+recording_modality:
+- EEG
+- MEG
+stimulus_modality:
+- visual
+markers:
+- MK.N400
+description:
+  en: Sentences are presented visually word by word and end either with a congruent word or with a semantically anomalous
+    word. Anomalous sentence-final words elicit a larger centro-parietal negativity, the N400, than congruent endings.
+  zh: 句子以视觉方式逐词呈现，以一致的词或语义异常的词结尾。语义异常的句末词比一致结尾诱发更大的中央—顶区负波，即 N400。
+trial_structure:
+  conditions:
+  - congruent
+  - anomalous
+protocol:
+  n_classes: 2
+  classes:
+  - congruent ending
+  - semantically anomalous ending
+  cue: sentences presented visually word by word (RSVP)
+  paradigm_timing: synchronous
+  feedback: none
+  distinguishing: 标准配置（最早发表）：句末语义违例 vs 一致（Kutas & Hillyard 1980, R0924）。与 -002（按完形概率分级的期待性，准则 1）区别。
+first_source:
+  citation: Kutas M, Hillyard SA. Event-related brain potentials to semantically inappropriate and surprisingly large words.
+    Biological Psychology. 1980;11(2):99-116.
+  doi: 10.1016/0301-0511(80)90046-0
+  pmid: '7272388'
+  year: 1980
+  verified: false
+interop:
+  bids_task: semanticviolation
+notes: 'Leads: R0863, R0924, R0939, R1075 (R#### = curation/literature.csv; DN## = curation/work/pkg_D/new_leads.csv). R0924
+  (title and PMID only) chosen as origin (source candidate role). Lead fields lack authors/years. Sprint 2 (D-057, curator_d,
+  2026-10-03): protocol block added (-001 = earliest/standard configuration). Narrowed to the binary anomaly contrast in reading;
+  graded cloze-probability designs moved to LAN-N400-002. Auditory sentence versions logged as proposed. Sibling concrete
+  paradigms: LAN-N400-002. bibliography corrected (OpenAlex, 2026-10-05)'
+status: draft
+contributors:
+- curator_d

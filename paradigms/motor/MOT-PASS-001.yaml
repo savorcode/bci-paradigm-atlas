@@ -1,0 +1,57 @@
+schema_version: '0.2'
+id: MOT-PASS-001
+class: MOT-PASS
+name:
+  en: Passive movement / proprioceptive stimulation
+  zh: 被动运动（本体感觉刺激）
+aliases:
+- passive movement
+- proprioceptive stimulation
+- corticokinematic coherence paradigm
+- CKC
+family: motor
+bci_category:
+- none
+- active
+recording_modality:
+- MEG
+- EEG
+stimulus_modality:
+- somatosensory
+markers:
+- MK.corticokinematic_coherence
+- MK.SMR_ERD
+description:
+  en: >-
+    A finger or limb of the relaxed participant is moved passively by an experimenter or a (pneumatic or robotic) device,
+    often rhythmically, while movement kinematics are recorded together with MEG/EEG. Coherence between sensorimotor cortex
+    activity and movement kinematics (corticokinematic coherence), driven mainly by proprioceptive afference, and beta ERD/rebound
+    are the main markers.
+  zh: >-
+    由实验者或（气动、机器人）装置被动移动放松被试的手指或肢体（常为节律性运动），同时记录运动学信号和 MEG/EEG。主要标记物为主要由本体感觉传入驱动的感觉运动皮层活动与运动学之间的相干（皮层-运动学相干）以及 β ERD/反弹。
+protocol:
+  n_classes: 1
+  classes:
+  - passive rhythmic finger movement
+  cue: none (movement imposed by experimenter or device)
+  paradigm_timing: continuous
+  feedback: none
+  distinguishing: >-
+    Standard configuration (earliest published) / 标准配置（最早发表）: rhythmic passive finger movements with kinematics recorded for
+    corticokinematic coherence (Bourguignon et al. 2015). No sibling protocol yet.
+first_source:
+  citation: >-
+    Bourguignon M, Piitulainen H, De Tiege X, Jousmaki V, Hari R. Corticokinematic coherence mainly reflects movement-induced
+    proprioceptive feedback. NeuroImage 106:382-390. 2015.
+  doi: 10.1016/j.neuroimage.2014.11.026
+  year: 2015
+  verified: false
+interop:
+  bids_task: passivemovement
+notes: >-
+  Search sources (curation/work/pkg_B/search_log.md): N01 https://aaltodoc.aalto.fi/items/8554bd13-c042-4f54-8dcd-2cc10e38cfdb/full.
+  New candidate (pkg B). Requests new marker MK.corticokinematic_coherence (marker_requests.csv). Passive movements also appear
+  as a comparison condition in R0922 (MOT-ATT-001). bibliography confirmed (OpenAlex, 2026-10-05)
+status: draft
+contributors:
+- curator_b

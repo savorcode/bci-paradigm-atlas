@@ -1,0 +1,26 @@
+schema_version: "0.2"
+id: MK.MLR
+name:
+  en: Auditory middle-latency response
+  zh: 听觉中潜伏期反应
+aliases:
+- MLR
+- AMLR
+- middle latency response
+- Na-Pa
+type: erp_component
+recording_modality:
+- EEG
+- MEG
+signature:
+  latency_ms: ~10-80
+  topography: vertex / fronto-central
+description:
+  en: Auditory evoked waves between about 10 and 80 ms (Na, Pa, Nb, Pb) that follow the brainstem response and precede the
+    N1, attributed to thalamo-cortical and primary auditory cortex activity.
+  zh: 介于约 10–80 ms 之间的听觉诱发波（Na、Pa、Nb、Pb），位于脑干响应之后、N1 之前，归因于丘脑—皮层及初级听皮层活动。
+notes: First-pass skeleton by package A (2026-10-03). No generators/indexes yet. Signature values are textbook-level approximations
+  and await source checking. New marker requested by package A (curation/work/pkg_A/marker_requests.csv); not yet in curation/registry/markers.csv.
+status: draft
+contributors:
+- curator_a

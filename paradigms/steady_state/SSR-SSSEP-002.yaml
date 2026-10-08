@@ -1,0 +1,53 @@
+schema_version: '0.2'
+id: SSR-SSSEP-002
+class: SSR-SSSEP
+name:
+  en: Steady-state tactile spatial attention BCI
+  zh: 稳态触觉空间注意脑机接口
+aliases:
+- SSSEP BCI
+- tactile SSSEP attention
+family: steady_state
+bci_category:
+- reactive
+recording_modality:
+- EEG
+stimulus_modality:
+- somatosensory
+markers:
+- MK.SSSEP
+description:
+  en: Both hands (or wrists) are stimulated at the same time with vibrations at two different frequencies. The user attends
+    to the left or the right vibration as instructed; the SSSEP at the frequency of the attended side is enhanced, which is
+    classified as a binary command.
+  zh: 双手（或双腕）同时接受两种不同频率的振动刺激。用户按指令注意左侧或右侧的振动；被注意一侧频率上的 SSSEP 增强，据此分类为二元指令。
+trial_structure:
+  conditions:
+  - attend left vibration
+  - attend right vibration
+protocol:
+  n_classes: 2
+  classes:
+  - attend left
+  - attend right
+  cue: simultaneous bilateral vibration at two distinct frequencies; cue to attend one side
+  stimulus_coding: frequency tagging of left and right stimulation sites
+  paradigm_timing: synchronous
+  feedback: discrete
+  distinguishing: 准则 1;2：双侧并存、不同频率的振动刺激，条件为注意左/右；-001 为单一部位被动刺激。
+first_source:
+  citation: Ahn S, Kim K, Jun SC. Steady-state somatosensory evoked potential for brain-computer interface-present and future.
+    Front Hum Neurosci. 2016;9:716.
+  doi: 10.3389/fnhum.2015.00716
+  year: 2016
+  verified: false
+interop:
+  bids_task: sssep
+notes: Former variant of SSR-SSSEP-001 (D-012), split under D-057. first_source is the BCI review R1048 (doi 10.3389/fnhum.2015.00716),
+  not an origin paper; the first attend-left/right SSSEP BCI is to be located (D-032). Lead R1049 (NCSU project page). Feedback
+  mode set to discrete following the review's description of online SSSEP BCIs; to be checked. [curator_e sprint 3, 2026-10-05]
+  bibliography corrected (OpenAlex, 2026-10-05).
+status: draft
+contributors:
+- curator_a
+- curator_e

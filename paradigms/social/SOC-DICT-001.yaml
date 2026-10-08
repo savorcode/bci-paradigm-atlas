@@ -1,0 +1,47 @@
+schema_version: '0.2'
+id: SOC-DICT-001
+class: SOC-DICT
+name:
+  en: Dictator game
+  zh: 独裁者博弈
+aliases:
+- DG
+- Dictator Game
+family: social
+bci_category:
+- none
+recording_modality:
+- fMRI
+stimulus_modality:
+- visual
+markers:
+- MK.BOLD_vmPFC_value
+description:
+  en: A dictator decides how to divide an endowment between themselves and a passive anonymous recipient who cannot respond.
+    The value of prosocial choices is reflected in ventromedial prefrontal BOLD.
+  zh: 独裁者决定如何在自己与不能作出回应的匿名被动接受者之间分配一笔钱。亲社会选择的价值反映在腹内侧前额叶 BOLD 中。
+protocol:
+  n_classes: 1
+  classes:
+  - dictator allocation between self and a passive recipient
+  cue: endowment and recipient display; dictator chooses an allocation
+  paradigm_timing: synchronous
+  feedback: none
+  distinguishing: 'Standard configuration (earliest published or canonical; D-057 -001): dictator game with a passive anonymous
+    recipient (Forsythe et al. 1994, R0114). Differs from SOC-DICT-002 (donation decisions to real charities).'
+first_source:
+  citation: Forsythe, R., Horowitz, J. L., Savin, N. E., & Sefton, M. Fairness in simple bargaining experiments. Games and
+    Economic Behavior, 6(3), 347–369. 1994.
+  doi: 10.1006/game.1994.1021
+  year: 1994
+  verified: false
+interop:
+  bids_task: dictator
+notes: 'HED task page: https://www.hedtags.org/hed-task/tasks/hedtsk_dictator_game.html. Lead refs (curation/literature.csv):
+  R0114 [key_reference], R0341 [key_reference], R0371 [key_reference], R0497 [further_reference], R0614 [further_reference].
+  Neural leads: R0341, R0371 (charitable donation fMRI). First-pass skeleton (curator_e, 2026-10-03); all sources unverified.
+  Sprint 2 (curator_e, 2026-10-03): protocol block added per D-057; see curation/work/pkg_E/sprint2/split_log.csv. Sprint
+  3 (curator_d, 2026-10-05): bibliography confirmed (OpenAlex, 2026-10-05).'
+status: draft
+contributors:
+- curator_e

@@ -1,0 +1,27 @@
+schema_version: "0.2"
+id: MK.oERN
+name:
+  en: Observed error-related negativity
+  zh: 观察性错误相关负波
+aliases:
+- oERN
+- observer ERN
+- observation ERN
+- observed-error negativity
+type: erp_component
+recording_modality:
+- EEG
+signature:
+  latency_ms: 200-300 after the observed error
+  polarity: negative
+  topography: fronto-central
+description:
+  en: Negative deflection elicited in an observer when another agent, human or machine, commits an error. It resembles the
+    ERN in topography but occurs later relative to the observed response.
+  zh: 当另一行为主体（人或机器）犯错时在观察者身上诱发的负向波。其头皮分布与 ERN 相似，但相对于被观察的反应出现得更晚。
+notes: 'Signature values are textbook-level approximations and await checking against sources (pass 2). Generators and indexes
+  not yet written. Used by (registry): ERR-OBS-001.'
+status: draft
+contributors:
+- maintainer
+- curator_c

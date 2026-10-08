@@ -1,0 +1,48 @@
+schema_version: '0.2'
+id: CTL-SW-003
+class: CTL-SW
+name:
+  en: Voluntary task switching
+  zh: 自主任务切换
+aliases:
+- Voluntary task-switching paradigm
+family: control
+bci_category:
+- none
+recording_modality:
+- EEG
+- fMRI
+stimulus_modality:
+- visual
+markers:
+- MK.frontal_midline_theta
+description:
+  en: Participants freely choose on each trial which of two tasks to perform, usually instructed to perform both about equally
+    often and in a random order, so that task choice and switch costs reflect internally generated control rather than external
+    cues.
+  zh: 被试在每个试次上自由选择完成两个任务中的哪一个，通常被要求两任务大致同样频繁、顺序随机，因而任务选择与切换代价反映内部产生的控制，而非外部线索。
+trial_structure:
+  conditions:
+  - voluntary repeat
+  - voluntary switch
+protocol:
+  n_classes: 2
+  classes:
+  - voluntary repeat
+  - voluntary switch
+  cue: bivalent target without task cue; participant selects the task (e.g., by response hand)
+  paradigm_timing: synchronous
+  feedback: none
+  distinguishing: 准则 2、3：没有外部任务线索或预定序列，任务由被试逐试次自主选择（CTL-SW-001 为预定 AABB 序列，CTL-SW-002 为外部线索）。
+first_source:
+  citation: 'TBD: origin of voluntary task switching not identified; HED task catalog lists the variant without a reference'
+  verified: false
+interop:
+  bids_task: voluntarytaskswitch
+notes: 'Leads used: HED task-switching page (fetched in sprint 2). first_source TBD (D-032; memory candidate Arrington & Logan
+  2004 not seen). Marker inherited from the class; MK.switch_positivity omitted because it is cue-locked and there is no cue.
+  Sprint 2 (D-057, curator_c, 2026-10-03): new concrete paradigm of class CTL-SW; numbering criterion 2;3 relative to CTL-SW-001;
+  all sources unverified.'
+status: draft
+contributors:
+- curator_c

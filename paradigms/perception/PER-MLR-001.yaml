@@ -1,0 +1,52 @@
+schema_version: '0.2'
+id: PER-MLR-001
+class: PER-MLR
+name:
+  en: Auditory middle-latency response
+  zh: 听觉中潜伏期反应
+aliases:
+- MLR
+- AMLR
+- Na-Pa
+family: perception
+bci_category:
+- none
+recording_modality:
+- EEG
+- MEG
+stimulus_modality:
+- auditory
+markers:
+- MK.MLR
+description:
+  en: Clicks or tone bursts are presented at moderate rates and the averaged response between about 10 and 80 ms is analysed.
+    It contains the Na, Pa, Nb and Pb waves, thought to arise from thalamo-cortical and primary auditory cortex activity,
+    and is used in audiology and anaesthesia monitoring.
+  zh: 以中等速率呈现短声或短纯音，分析约 10–80 ms 之间的平均响应。其中包含 Na、Pa、Nb、Pb 波，被认为来自丘脑—皮层及初级听皮层活动，用于听力学和麻醉监测。
+protocol:
+  n_classes: 1
+  classes:
+  - click / tone burst
+  cue: clicks or tone bursts at moderate rate
+  paradigm_timing: synchronous
+  feedback: none
+  distinguishing: 标准配置（最早发表，即 first_source）：中等速率短声/短纯音，分析 10–80 ms。本类暂无其他具体范式（no sibling protocol yet）。
+first_source:
+  citation: Geisler CD, Frishkopf LS, Rosenblith WA. Extracranial responses to acoustic clicks in man. Science. 1958;128(3333):1210-1211.
+  doi: 10.1126/science.128.3333.1210
+  year: 1958
+  verified: false
+interop:
+  bids_task: mlr
+notes: 'Leads used: search SA09a, search SA09b, search SA09c. first_source: no origin source identified in this pass (blocker,
+  see curation/work/pkg_A/status.csv). New candidate proposed by package A on 2026-10-03 (curation/work/pkg_A/new_candidates.csv);
+  registered in curation/candidates.csv as C211 (D-053, milestone M1). Between PER-ABR-001 (<10 ms) and PER-AEP-001 (N1-P2) in latency;
+  requested marker MK.MLR. [curator_a sprint 2, 2026-10-03] D-057: protocol block added for the canonical configuration; no
+  other concrete paradigm identified for this class in sprint 2. [curator_e sprint 3, 2026-10-05] candidate origin found by
+  bibliographic search (OpenAlex, 2026-10-05); content unverified. [maintainer sprint 3, 2026-10-07] bibliography confirmed
+  (OpenAlex, 2026-10-05; origin candidate, content unverified). [maintainer sprint 3, 2026-10-07, D-073] origin candidate
+  recalled, record confirmed via OpenAlex.'
+status: draft
+contributors:
+- curator_a
+- curator_e

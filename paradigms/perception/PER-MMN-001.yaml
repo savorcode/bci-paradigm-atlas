@@ -1,0 +1,60 @@
+schema_version: '0.2'
+id: PER-MMN-001
+class: PER-MMN
+name:
+  en: Passive oddball (mismatch negativity)
+  zh: 被动 oddball（失匹配负波）
+aliases:
+- MMN
+- Mismatch Negativity Paradigm
+- multi-feature MMN (optimum paradigm)
+- passive auditory oddball
+- roving oddball
+- phonetic MMN
+- speech-sound oddball
+family: perception
+bci_category:
+- passive
+- none
+recording_modality:
+- EEG
+- MEG
+stimulus_modality:
+- auditory
+markers:
+- MK.MMN
+description:
+  en: Frequent standard tones are interrupted by infrequent deviant tones that differ in one physical feature (for example
+    frequency, intensity or duration) while the participant ignores the sounds. Deviants elicit the mismatch negativity, a
+    fronto-central negativity at about 100-250 ms that reflects automatic detection of a violation of the regularity encoded
+    from the standards.
+  zh: 在高频标准纯音中插入在单一物理特征（如频率、强度或时长）上不同的低频偏差纯音，被试忽略声音。偏差刺激诱发失匹配负波，一种约 100–250 ms 的额中央负波，反映对标准刺激所编码规律的违反的自动检测。
+protocol:
+  n_classes: 2
+  classes:
+  - standard tone
+  - deviant tone
+  cue: tone sequence with infrequent deviants in one physical feature, sounds ignored
+  stimulus_coding: 语音对比 MMN 拆为 PER-MMN-002（准则 2），多特征范式拆为 PER-MMN-003（准则 1）。
+  paradigm_timing: synchronous
+  feedback: none
+  distinguishing: 标准配置（最早发表，即 first_source）：被动 oddball：纯音序列中单一物理特征的低频偏差，被试忽略声音。同类其他具体范式：PER-MMN-002、PER-MMN-003（区别见各自 distinguishing；维护者
+    sprint 2 QA 更正）。
+first_source:
+  citation: Naatanen, R., Gaillard, A. W. K., & Mantysalo, S. Early selective-attention effect on evoked potential reinterpreted.
+    Acta Psychologica, 42(4), 313-329. 1978.
+  doi: 10.1016/0001-6918(78)90006-9
+  pmid: '685709'
+  year: 1978
+  verified: false
+interop:
+  bids_task: mmn
+notes: 'HED task page: https://www.hedtags.org/hed-task/tasks/hedtsk_mismatch_negativity.html. Leads used: R0044, R0383, R0447,
+  R0495, R0501, R0670, R1063, R0988, R0968, R1068, R0975. Merged candidate LAN-PHON-001 (pkg D) recorded as a variant per
+  D-017/D-030; its leads were taken from curation/paradigm_literature.csv because no pkg D hand-off list was available in
+  this worktree. [curator_a sprint 2, 2026-10-03] D-057: the speech-sound variant (merged candidate LAN-PHON-001, D-017) is
+  now PER-MMN-002; the multi-feature paradigm is PER-MMN-003. [curator_e sprint 3, 2026-10-05] bibliography confirmed (Crossref,
+  2026-10-05).'
+status: draft
+contributors:
+- curator_a

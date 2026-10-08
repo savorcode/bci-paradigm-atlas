@@ -1,0 +1,54 @@
+schema_version: '0.2'
+id: PER-CUE-002
+class: PER-CUE
+name:
+  en: Posner cueing with peripheral (exogenous) cues
+  zh: 外周（外源性）线索的 Posner 范式
+aliases:
+- exogenous cueing
+- peripheral cueing
+- inhibition of return paradigm
+family: perception
+bci_category:
+- none
+recording_modality:
+- EEG
+stimulus_modality:
+- visual
+markers:
+- MK.P1_visual
+- MK.N1_visual
+description:
+  en: A brief, non-predictive flash or brightening at one of the peripheral target locations serves as the cue. At short cue-target
+    intervals targets at the cued location are detected faster (reflexive capture of attention), whereas at longer intervals
+    responses are slower (inhibition of return); the ERP effects on P1 and N1 follow the same time course.
+  zh: 在外周某一靶位置给出短暂、无预测性的闪光或增亮作为线索。线索–靶间隔短时，被提示位置的靶检测更快（注意被反射性捕获）；间隔较长时反应变慢（返回抑制）；P1、N1 的 ERP 效应也呈相同的时程。
+trial_structure:
+  conditions:
+  - cued location
+  - uncued location
+  - short vs long cue-target interval
+protocol:
+  n_classes: 2
+  classes:
+  - cued location
+  - uncued location
+  cue: brief peripheral flash at one of the target locations (non-predictive)
+  paradigm_timing: synchronous
+  feedback: none
+  distinguishing: 准则 2（提示类型）：外周突显线索（外源性、通常无预测性）取代 -001 的中央符号线索。
+first_source:
+  citation: Posner, M. I. Orienting of attention. Quarterly Journal of Experimental Psychology. 1980.
+  doi: 10.1080/00335558008248231
+  pmid: '7367577'
+  year: 1980
+  verified: false
+interop:
+  bids_task: posner
+notes: 'Split under D-057. first_source is the same paper as PER-CUE-001 (R0049, Posner 1980), which used both central and
+  peripheral cues according to the leads; to be checked. Leads: R0793 (Dugue et al. 2020, endogenous vs exogenous attention
+  in visual cortex), R0618 (Chica et al. 2014, spatial orienting paradigm review), R0766. The inhibition-of-return origin
+  is not in the leads. [curator_e sprint 3, 2026-10-05] bibliography confirmed (Crossref, 2026-10-05).'
+status: draft
+contributors:
+- curator_a

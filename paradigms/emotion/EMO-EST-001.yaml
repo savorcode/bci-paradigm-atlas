@@ -1,0 +1,59 @@
+schema_version: '0.2'
+id: EMO-EST-001
+class: EMO-EST
+name:
+  en: Emotional Stroop
+  zh: 情绪 Stroop
+aliases:
+- Affective Stroop
+- eStroop
+- emotional Stroop
+family: emotion
+bci_category:
+- none
+recording_modality:
+- EEG
+- fMRI
+stimulus_modality:
+- visual
+markers:
+- MK.LPP
+- MK.N2_frontocentral
+description:
+  en: Participants name the ink colour of emotionally charged and neutral words; slower naming for emotional words reflects
+    attentional capture by word meaning rather than colour-word response conflict. Emotional words enhance the LPP and modulate
+    the fronto-central N2.
+  zh: 被试对情绪词和中性词的书写颜色进行命名；情绪词命名变慢反映了词义对注意的捕获，而非颜色—词义的反应冲突。情绪词增强 LPP，并调制额中央 N2。
+protocol:
+  n_classes: 2
+  classes:
+  - emotional words
+  - neutral words
+  cue: coloured words; the ink colour is named or reported by key press
+  paradigm_timing: synchronous
+  feedback: none
+  distinguishing: 'Standard configuration (earliest published or canonical; D-057 -001): colour naming of emotional versus
+    neutral words; origin publication still TBD (D-032).'
+first_source:
+  citation: 'Gotlib IH, McCann CD. Construct accessibility and depression: an examination of cognitive and affective factors.
+    Journal of Personality and Social Psychology. 1984;47(2):427-439.'
+  doi: 10.1037/0022-3514.47.2.427
+  year: 1984
+  verified: false
+interop:
+  bids_task: emotionalstroop
+notes: 'HED task page: https://www.hedtags.org/hed-task/tasks/hedtsk_emotional_stroop.html. Lead refs (curation/literature.csv):
+  R0137 [key_reference], R0259 [key_reference], R0270 [further_reference], R0349 [key_reference], R0380 [review], R0470 [further_reference].
+  Independent of CTL-STR-001 (D-019). Best lead R0137 is a 1996 review, not an origin paper; origin not identified. Note:
+  candidates.csv lists ''Emotional Stroop (variant)'' as an alias of CTL-STR-001, which conflicts with D-019 (to maintainer).
+  R0349 (Etkin et al. 2006) is an emotional face-word conflict task, arguably a separate paradigm. First-pass skeleton (curator_e,
+  2026-10-03); all sources unverified. Sprint 2 (curator_e, 2026-10-03): protocol block added per D-057; see curation/work/pkg_E/sprint2/split_log.csv.
+  Sprint 3 (curator_d, 2026-10-05): first_source written from bibliographic search (OpenAlex, 2026-10-05); candidate origin
+  found by bibliographic search; content unverified. Gotlib & McCann 1984 (Experiment 1: colour-naming of depressed-, neutral-
+  and manic-content words) is the earliest emotional-Stroop study cited by the Williams, Mathews & MacLeod 1996 review (R0137);
+  Watts et al. 1986 (phobia-related words) is the other early candidate, not fetched. [maintainer sprint 3, 2026-10-07] bibliography
+  confirmed (OpenAlex, 2026-10-05; origin candidate, content unverified). [maintainer sprint 3, 2026-10-07, D-073] origin
+  candidate recalled, record confirmed via OpenAlex.'
+status: draft
+contributors:
+- curator_e

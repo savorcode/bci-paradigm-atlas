@@ -1,0 +1,51 @@
+schema_version: '0.2'
+id: SSR-SSSEP-001
+class: SSR-SSSEP
+name:
+  en: Steady-state somatosensory evoked potential (SSSEP)
+  zh: 稳态体感诱发电位
+aliases:
+- SSSEP
+- steady-state somatosensory evoked potential
+- vibrotactile steady-state
+family: steady_state
+bci_category:
+- none
+recording_modality:
+- EEG
+stimulus_modality:
+- somatosensory
+markers:
+- MK.SSSEP
+description:
+  en: Vibrotactile stimulation at a constant frequency (typically 20-30 Hz) is applied to a finger or wrist while the participant
+    rests. Primary somatosensory cortex responds at the stimulation frequency and its harmonics, giving the steady-state somatosensory
+    evoked potential, whose amplitude depends on the stimulation frequency.
+  zh: 在被试静息时，以恒定频率（通常 20–30 Hz）对手指或手腕施加振动刺激。初级体感皮层在刺激频率及其谐波上产生响应，即稳态体感诱发电位，其幅度依赖刺激频率。
+protocol:
+  n_classes: 1
+  classes:
+  - vibration at one frequency
+  cue: vibrotactile stimulation at a constant frequency (typically 20-30 Hz) to a finger or wrist
+  stimulus_coding: 双侧注意 BCI 拆为 SSR-SSSEP-002（准则 1;2）。
+  paradigm_timing: continuous
+  feedback: none
+  distinguishing: 标准配置（最早发表，即 first_source）：单一部位恒定频率振动刺激，被动。同类其他具体范式：SSR-SSSEP-002（区别见各自 distinguishing；维护者 sprint 2 QA 更正）。
+first_source:
+  citation: 'Snyder AZ. Steady-state vibration evoked potentials: description of technique and characterization of responses.
+    Electroencephalogr Clin Neurophysiol. 1992;84(3):257-268.'
+  doi: 10.1016/0168-5597(92)90007-X
+  year: 1992
+  verified: false
+interop:
+  bids_task: sssep
+notes: 'Leads used: R1048, R1049. first_source: no origin source identified in this pass (blocker, see curation/work/pkg_A/status.csv).
+  Leads are a BCI review and a project page; no origin paper. [curator_a sprint 2, 2026-10-03] D-057: the attend-left/right
+  variant (D-012) is now SSR-SSSEP-002. [curator_e sprint 3, 2026-10-05] candidate origin found by bibliographic search (OpenAlex,
+  2026-10-05); content unverified. [maintainer sprint 3, 2026-10-07] bibliography confirmed (OpenAlex, 2026-10-05; origin
+  candidate, content unverified). [maintainer sprint 3, 2026-10-07, D-073] origin candidate recalled, record confirmed via
+  OpenAlex.'
+status: draft
+contributors:
+- curator_a
+- curator_e

@@ -1,0 +1,60 @@
+schema_version: '0.2'
+id: SOC-TRUST-001
+class: SOC-TRUST
+name:
+  en: One-shot trust (investment) game
+  zh: 单次信任（投资）博弈
+aliases:
+- Investment Game
+- Iterated PD
+- Iterated Prisoner's Dilemma
+- PD
+- Prisoner's Dilemma
+- TG
+- Trust Game
+- public goods game (related)
+family: social
+bci_category:
+- none
+recording_modality:
+- EEG
+- fMRI
+- fNIRS
+stimulus_modality:
+- visual
+markers:
+- MK.FRN
+- MK.BOLD_striatum_reward
+description:
+  en: An investor decides how much of an endowment to send to an anonymous trustee, the amount is multiplied, and the trustee
+    decides how much to return; each pair plays once. Partner decisions elicit the feedback-related negativity in EEG and
+    striatal reward BOLD in fMRI.
+  zh: 投资者决定把多少本金转给匿名受托人，转出金额被放大，受托人再决定返还多少；每对被试只进行一次。对方的决策在脑电中诱发反馈相关负波，在 fMRI 中引起纹状体奖赏 BOLD。
+protocol:
+  n_classes: 2
+  classes:
+  - investor transfer decision
+  - trustee return decision
+  cue: endowment display; the transfer is multiplied before the trustee decides
+  paradigm_timing: synchronous
+  feedback: discrete
+  distinguishing: 'Standard configuration (earliest published or canonical; D-057 -001): one-shot investment game between
+    anonymous partners (Berg, Dickhaut & McCabe 1995, R0127). Differs from SOC-TRUST-002 (iterated prisoner''s dilemma) and
+    SOC-TRUST-003 (multi-round trust game with a fixed partner).'
+first_source:
+  citation: Berg J, Dickhaut J, McCabe K. Trust, reciprocity, and social history. Games and Economic Behavior. 1995;10(1):122-142.
+  doi: 10.1006/game.1995.1027
+  year: 1995
+  verified: false
+interop:
+  bids_task: trustgame
+notes: 'HED task page: https://www.hedtags.org/hed-task/tasks/hedtsk_prisoners_dilemma.html ; https://www.hedtags.org/hed-task/tasks/hedtsk_trust_game.html.
+  Lead refs (curation/literature.csv): R0127 [key_reference], R0217 [key_reference], R0263 [key_reference], R0312 [key_reference],
+  R0479 [further_reference], R0523 [review], R0574 [further_reference], R0593 [further_reference], R0606 [further_reference],
+  R0693 [further_reference], R0712 [review], R0783 [further_reference], R0901 [method], R0958 [review], R0965 [method], R1081
+  [method]. Prisoner''s dilemma fMRI lead: R0217. Public goods game listed only as related alias. First-pass skeleton (curator_e,
+  2026-10-03); all sources unverified. Sprint 2 (curator_e, 2026-10-03): protocol block added per D-057; see curation/work/pkg_E/sprint2/split_log.csv.
+  Sprint 3 (curator_d, 2026-10-05): bibliography corrected (OpenAlex, 2026-10-05): volume, issue, pages added.'
+status: draft
+contributors:
+- curator_e

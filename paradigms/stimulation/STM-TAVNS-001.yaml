@@ -1,0 +1,54 @@
+schema_version: '0.2'
+id: STM-TAVNS-001
+class: STM-TAVNS
+name:
+  en: Transcutaneous auricular vagus nerve stimulation
+  zh: 经皮耳迷走神经刺激
+aliases:
+- taVNS
+- tVNS
+- transcutaneous vagus nerve stimulation
+family: stimulation
+bci_category:
+- none
+recording_modality:
+- EEG
+- fMRI
+stimulus_modality:
+- electrical_stimulation
+- visual
+markers:
+- MK.P3b
+description:
+  en: >-
+    Electrical stimulation is applied to the auricular branch of the vagus nerve at the outer ear (cymba conchae), compared
+    with sham stimulation of the earlobe, while participants perform a task or rest. Effects on the noradrenergic system are
+    assessed through the amplitude of the P3b in a concurrent oddball task, among other measures.
+  zh: 在外耳（耳甲艇）对迷走神经耳支施加电刺激，并与耳垂伪刺激比较，被试同时完成任务或静息。通过同时进行的 oddball 任务中 P3b 的波幅等指标评估其对去甲肾上腺素能系统的作用。
+protocol:
+  n_classes: 2
+  classes:
+  - cymba conchae stimulation
+  - sham (earlobe) stimulation
+  cue: visual oddball task during stimulation
+  paradigm_timing: block
+  feedback: none
+  distinguishing: >-
+    Standard configuration (earliest published) / 标准配置（最早发表）: taVNS vs earlobe sham with a concurrent oddball task for the
+    P3b (Ventura-Bort et al. 2018). No sibling protocol yet.
+first_source:
+  citation: >-
+    Ventura-Bort C, Wirkner J, Genheimer H, Wendt J, Hamm AO, Weymar M. Effects of transcutaneous vagus nerve stimulation
+    (tVNS) on the P300 and alpha-amylase level: a pilot study. Frontiers in Human Neuroscience 12:202. 2018.
+  doi: 10.3389/fnhum.2018.00202
+  year: 2018
+  verified: false
+interop:
+  bids_task: tavns
+notes: >-
+  Search sources (curation/work/pkg_B/search_log.md): N09 https://www.frontiersin.org/journals/human-neuroscience/articles/10.3389/fnhum.2018.00202/pdf.
+  New candidate (pkg B). Uses MK.P3b (owner package A). Vagus somatosensory evoked potentials (VSEP) could be requested later
+  as a separate marker. bibliography confirmed (OpenAlex, 2026-10-05)
+status: draft
+contributors:
+- curator_b

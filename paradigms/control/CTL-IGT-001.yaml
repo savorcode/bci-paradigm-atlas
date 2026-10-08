@@ -1,0 +1,56 @@
+schema_version: '0.2'
+id: CTL-IGT-001
+class: CTL-IGT
+name:
+  en: Iowa gambling task
+  zh: 爱荷华赌博任务
+aliases:
+- Bechara gambling task
+- IGT
+- Iowa Gambling
+family: control
+bci_category:
+- none
+recording_modality:
+- EEG
+- fMRI
+stimulus_modality:
+- visual
+markers:
+- MK.FRN
+- MK.BOLD_vmPFC_value
+description:
+  en: Participants repeatedly draw cards from four decks that differ in their schedules of gains and losses; two decks give
+    large immediate gains but larger long-term losses. Loss and gain feedback elicits the FRN, and ventromedial prefrontal
+    activity relates to advantageous choice.
+  zh: 被试反复从四副牌中抽牌，各牌组的得失安排不同，其中两副即时收益大但长期损失更大。损失和收益反馈诱发 FRN，腹内侧前额叶活动与有利选择相关。
+trial_structure:
+  conditions:
+  - advantageous decks
+  - disadvantageous decks
+protocol:
+  n_classes: 4
+  classes:
+  - deck A
+  - deck B
+  - deck C
+  - deck D
+  cue: four card decks with different gain/loss schedules
+  paradigm_timing: synchronous
+  feedback: discrete
+  distinguishing: 标准配置（最早发表）：四副牌，两副短期高收益但长期亏损（Bechara et al. 1994，R0116）。本包仅此一个配置。
+first_source:
+  citation: Bechara A, Damasio AR, Damasio H, Anderson SW. Insensitivity to future consequences following damage to human
+    prefrontal cortex. Cognition. 1994;50(1-3):7-15.
+  doi: 10.1016/0010-0277(94)90018-3
+  pmid: '8039375'
+  year: 1994
+  verified: false
+interop:
+  bids_task: igt
+notes: 'HED task page: https://www.hedtags.org/hed-task/tasks/hedtsk_iowa_gambling.html. Leads used: R0116; R0144; R0485;
+  R0430. first_source lead: R0116. fMRI lead: R0485; review: R0430. Pass 1 skeleton (curator_c, 2026-10-03); all sources unverified.
+  Sprint 2 (D-057): protocol added; single configuration, no split. bibliography corrected (Crossref, 2026-10-05)'
+status: draft
+contributors:
+- curator_c

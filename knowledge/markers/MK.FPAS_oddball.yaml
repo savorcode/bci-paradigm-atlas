@@ -1,0 +1,22 @@
+schema_version: "0.2"
+id: MK.FPAS_oddball
+name:
+  en: FPAS oddball-frequency response
+  zh: 快速周期听觉刺激 oddball 频率响应
+aliases:
+- FPAS oddball response
+- auditory oddball frequency response
+type: steady_state
+recording_modality:
+- EEG
+signature:
+  frequency_hz: oddball frequency and harmonics
+description:
+  en: Response at the periodic oddball frequency in fast periodic auditory stimulation, distinct from the base-rate response;
+    it indicates discrimination of the oddball sound category.
+  zh: 快速周期听觉刺激中在周期性 oddball 频率处出现、区别于基础速率响应的反应，表明对 oddball 声音类别的辨别。
+notes: First-pass skeleton by package A (2026-10-03). No generators/indexes yet. Signature values are textbook-level approximations
+  and await source checking. New marker requested by package A (curation/work/pkg_A/marker_requests.csv); not yet in curation/registry/markers.csv.
+status: draft
+contributors:
+- curator_a

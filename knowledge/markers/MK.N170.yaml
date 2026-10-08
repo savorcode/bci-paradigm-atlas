@@ -1,0 +1,27 @@
+schema_version: "0.2"
+id: MK.N170
+name:
+  en: N170 (M170)
+  zh: N170（M170）
+aliases:
+- N170
+- M170
+- face-sensitive N170
+- N1 (occipito-temporal)
+type: erp_component
+recording_modality:
+- EEG
+- MEG
+signature:
+  latency_ms: ~130-200
+  polarity: negative
+  topography: lateral occipito-temporal, often right-lateralised
+description:
+  en: Negative occipito-temporal component peaking about 170 ms after stimulus onset, larger for faces (and to a lesser extent
+    bodies) than for other object categories.
+  zh: 刺激后约 170 ms 达峰的枕颞负成分，对面孔（其次是身体）的反应大于其他物体类别。
+notes: First-pass skeleton by package A (2026-10-03). No generators/indexes yet. Signature values are textbook-level approximations
+  and await source checking.
+status: draft
+contributors:
+- curator_a

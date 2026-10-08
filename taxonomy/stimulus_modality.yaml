@@ -14,3 +14,7 @@ terms:
   - {id: cognitive_task, en: Cognitive task without external stimulus, zh: 无外部刺激的认知任务}
   - {id: resting_state, en: Resting state, zh: 静息态}
   - {id: naturalistic, en: Naturalistic (film, narrative, game), zh: 自然场景（影片、叙事、游戏）}
+  # Draft terms added at milestone M1 by the maintainer (D-044, D-045); pending confirmation at the next meeting.
+  # 里程碑 M1 时维护者新增的草案词条（D-044、D-045），待下次例会确认。
+  - {id: optical_stimulation, en: Optical stimulation of tissue (transcranial photobiomodulation; not visual light stimuli), zh: 组织光刺激（经颅光生物调节；不含视觉光刺激）}
+  - {id: pharmacological, en: Pharmacological administration (anaesthetics, psychoactive drugs), zh: 药物给予（麻醉药、精神活性药物）}

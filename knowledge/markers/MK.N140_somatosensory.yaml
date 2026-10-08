@@ -1,0 +1,25 @@
+schema_version: "0.2"
+id: MK.N140_somatosensory
+name:
+  en: Somatosensory N140
+  zh: 体感 N140
+aliases:
+- N140
+- somatosensory N140
+- N140 attention effect
+type: erp_component
+recording_modality:
+- EEG
+signature:
+  latency_ms: ~120-160
+  polarity: negative
+  topography: bilateral fronto-central
+description:
+  en: Negative component of the somatosensory ERP around 140 ms with a bilateral fronto-central distribution; it is enhanced
+    for stimuli at the attended body location.
+  zh: 体感 ERP 中约 140 ms 的负成分，呈双侧额中央分布；被注意身体部位的刺激使其增强。
+notes: First-pass skeleton by package A (2026-10-03). No generators/indexes yet. Signature values are textbook-level approximations
+  and await source checking.
+status: draft
+contributors:
+- curator_a

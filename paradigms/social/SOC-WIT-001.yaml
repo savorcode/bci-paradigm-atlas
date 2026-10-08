@@ -1,0 +1,53 @@
+schema_version: '0.2'
+id: SOC-WIT-001
+class: SOC-WIT
+name:
+  en: Weapons identification task
+  zh: 武器识别任务
+aliases:
+- Payne Task
+- Shooter Bias Task
+- Weapons Task
+family: social
+bci_category:
+- none
+recording_modality:
+- EEG
+stimulus_modality:
+- visual
+markers:
+- MK.P2_visual
+- MK.N2_frontocentral
+description:
+  en: A briefly presented face prime of a social group (e.g. Black or White) precedes a picture of a gun or tool that participants
+    classify under time pressure; race-congruent errors index stereotype bias. Primes and targets modulate the visual P2 and
+    the fronto-central N2 associated with control.
+  zh: 短暂呈现某社会群体（如黑人或白人）的面孔启动刺激，随后呈现枪或工具图片，被试在时间压力下分类；与刻板印象一致的错误反映刻板偏差。启动刺激与靶刺激调制视觉 P2 以及与控制相关的额中央 N2。
+protocol:
+  n_classes: 2
+  classes:
+  - gun target
+  - tool target
+  cue: brief Black or White face prime followed by a gun or tool picture under a response deadline
+  paradigm_timing: synchronous
+  feedback: none
+  distinguishing: 'Standard configuration (earliest published or canonical; D-057 -001): weapons identification task (Payne
+    2001, R0212).'
+first_source:
+  citation: 'Payne BK. Prejudice and perception: the role of automatic and controlled processes in misperceiving a weapon.
+    Journal of Personality and Social Psychology. 2001;81(2):181-192.'
+  doi: 10.1037/0022-3514.81.2.181
+  pmid: '11519925'
+  year: 2001
+  verified: false
+interop:
+  bids_task: weapons
+notes: 'HED task page: https://www.hedtags.org/hed-task/tasks/hedtsk_weapons_identification.html. Lead refs (curation/literature.csv):
+  R0212 [key_reference], R0237 [further_reference], R0284 [key_reference], R0326 [key_reference], R0624 [further_reference],
+  R0625 [further_reference], R0810 [further_reference]. Neural leads: R0284, R0326 (ERN/N2 in the weapons task). First-pass
+  skeleton (curator_e, 2026-10-03); all sources unverified. Sprint 2 (curator_e, 2026-10-03): protocol block added per D-057;
+  see curation/work/pkg_E/sprint2/split_log.csv. Sprint 3 (curator_d, 2026-10-05): bibliography corrected (OpenAlex, 2026-10-05):
+  volume, issue, pages added.'
+status: draft
+contributors:
+- curator_e

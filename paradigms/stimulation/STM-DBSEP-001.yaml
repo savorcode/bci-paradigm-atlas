@@ -1,0 +1,56 @@
+schema_version: '0.2'
+id: STM-DBSEP-001
+class: STM-DBSEP
+name:
+  en: DBS-evoked potentials
+  zh: 深部脑刺激诱发电位
+aliases:
+- DBS-evoked potentials
+- evoked resonant neural activity
+- ERNA
+- DBS cortical evoked potentials
+family: stimulation
+bci_category:
+- none
+recording_modality:
+- other
+- EEG
+stimulus_modality:
+- electrical_stimulation
+markers:
+- MK.ERNA
+- MK.DBS_cortical_EP
+description:
+  en: >-
+    Deep brain stimulation is delivered through an implanted electrode (e.g. in the subthalamic nucleus) in short bursts or
+    single pulses while responses are recorded from non-stimulating contacts of the same lead and/or from scalp EEG. Stimulation
+    evokes a high-frequency, decaying resonant local response (ERNA) and cortical evoked potentials whose features vary with
+    electrode location.
+  zh: 通过植入电极（如丘脑底核）以短串或单脉冲方式施加深部脑刺激，同时从同一电极的非刺激触点和/或头皮脑电记录响应。刺激诱发高频、逐渐衰减的局部共振响应（ERNA）以及皮层诱发电位，其特征随电极位置而变化。
+protocol:
+  n_classes: 1
+  classes:
+  - DBS bursts or single pulses through the implanted lead
+  cue: none
+  stimulus_coding: short bursts or single pulses
+  paradigm_timing: synchronous
+  feedback: none
+  distinguishing: >-
+    Standard configuration (earliest published) / 标准配置（最早发表）: stimulation through the DBS lead with recording from non-stimulating
+    contacts (ERNA; Sinclair et al. 2018). No sibling protocol yet.
+first_source:
+  citation: >-
+    Sinclair NC, McDermott HJ, Bulluss KJ, Fallon JB, Perera T, Xu SS, Brown P, Thevathasan W. Subthalamic nucleus deep brain
+    stimulation evokes resonant neural activity. Annals of Neurology. 2018;83(5):1027-1031.
+  doi: 10.1002/ana.25234
+  year: 2018
+  verified: false
+interop:
+  bids_task: dbsep
+notes: >-
+  Search sources (curation/work/pkg_B/search_log.md): S08 https://repository.bionicsinstitute.org/items/8cd862ff-1e28-455f-8e41-f4cc878eff7d/full.
+  D-027: DBS lead LFP recorded as 'other'. Candidate had no leads; first_source found by search (S08, ERNA). No lead yet for
+  the cortical evoked potential component (blocker for MK.DBS_cortical_EP evidence). bibliography corrected (OpenAlex, 2026-10-05)
+status: draft
+contributors:
+- curator_b

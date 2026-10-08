@@ -1,0 +1,56 @@
+schema_version: '0.2'
+id: EMO-FILM-003
+class: EMO-FILM
+name:
+  en: Film-clip three-class valence elicitation (SEED)
+  zh: 影片片段三分类效价诱发（SEED）
+aliases:
+- SEED paradigm
+family: emotion
+bci_category:
+- passive
+- none
+recording_modality:
+- EEG
+stimulus_modality:
+- naturalistic
+- visual
+- auditory
+markers:
+- MK.frontal_alpha_asymmetry
+- MK.affective_band_power
+description:
+  en: Participants watch film clips selected to induce positive, neutral or negative emotion, each preceded by a short hint
+    and followed by self-assessment and rest, and the session is repeated on different days. EEG differential-entropy and
+    band-power features across frequency bands are used to classify the three classes.
+  zh: 被试观看用于诱发正性、中性或负性情绪的影片片段，每段前有简短提示，之后进行自评与休息；实验在不同日期重复进行。利用各频段的脑电微分熵与功率特征对三类情绪进行分类。
+protocol:
+  n_classes: 3
+  classes:
+  - positive
+  - neutral
+  - negative
+  cue: film clips, each preceded by a hint and followed by self-assessment
+  paradigm_timing: block
+  feedback: none
+  distinguishing: 'Criterion 1 versus EMO-FILM-001: three valence classes (positive, neutral, negative) instead of a set of
+    discrete target emotions; used by the public SEED dataset (Zheng & Lu 2015).'
+first_source:
+  citation: Zheng WL, Lu BL. Investigating critical frequency bands and channels for EEG-based emotion recognition with deep
+    neural networks. IEEE Transactions on Autonomous Mental Development. 2015;7(3):162-175.
+  doi: 10.1109/TAMD.2015.2431497
+  year: 2015
+  verified: false
+datasets:
+- name: SEED (SJTU Emotion EEG Dataset)
+  url: https://bcmi.sjtu.edu.cn/home/seed/
+notes: 'Sources: sprint-2 S2-02 [=R1330] (https://astro.paperswithcode.com/paper/investigating-critical-frequency-bands-and:
+  15 subjects, three emotions, two sessions a few days apart); authors inferred from the SJTU BCMI URLs in the same search
+  (Bao-Liang Lu, Wei-Long Zheng), venue not seen; year from the URL path /papers/2015/. Sprint-2 F02 (SEED homepage) lists
+  the classes. The SEED dataset-paper title was a lead in candidates.csv (sprint 1). New concrete paradigm (curator_e, sprint
+  2, 2026-10-03, D-057); all sources unverified. Sprint 3 (curator_d, 2026-10-05): bibliography corrected (OpenAlex, 2026-10-05):
+  doi, journal, volume, issue, pages added. [maintainer sprint 3, 2026-10-07, D-073] origin candidate recalled, record confirmed
+  via OpenAlex.'
+status: draft
+contributors:
+- curator_e

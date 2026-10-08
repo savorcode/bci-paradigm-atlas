@@ -1,0 +1,27 @@
+schema_version: "0.2"
+id: MK.gamma_power
+name:
+  en: Scalp gamma power (30-100 Hz)
+  zh: 头皮 γ 功率（30–100 Hz）
+aliases:
+- gamma-band activity
+- induced gamma (scalp)
+type: oscillatory
+recording_modality:
+- EEG
+- MEG
+signature:
+  frequency_hz: 30-100
+description:
+  en: >-
+    Power in the gamma frequency band measured non-invasively with EEG or MEG, typically as induced activity relative
+    to baseline. In working-memory tasks it increases during the delay depending on the memorised content and load;
+    it is distinguished from intracranial high-gamma activity (MK.high_gamma).
+  zh: 用 EEG 或 MEG 无创测得的 γ 频段功率，通常以相对基线的诱发活动表示。在工作记忆任务中，延迟期 γ 功率随记忆内容和负荷而增加；与颅内高 γ 活动（MK.high_gamma）相区分。
+notes: >-
+  First-pass skeleton (curator_d, 2026-10-03). Signature values are textbook-level approximations that await source
+  checking; generators and indexes will be added in the second pass.
+status: draft
+contributors:
+- maintainer
+- curator_d
