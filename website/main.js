@@ -17,9 +17,9 @@ const tasks=[
   "en": "PER-ODD-001 / ODDBALL",
   "stage": "draft · 具体范式",
   "title": "Oddball：检测低频目标",
-  "description": "高频标准刺激与低频靶刺激随机出现，被试对靶刺激计数或按键。仓库将这一具体范式关联到 P3b，并记录视觉、听觉刺激及 EEG、MEG、fMRI 记录模态。",
-  "question": "两类刺激；目标检测或计数；刺激与间隔组成试次。完整条目保留参数范围、变体与源头文献。",
-  "knowledge": "P3b 的产生脑区：颞顶联合区（B）；关联认知构念：上下文更新与注意分配（B）。这些是知识库当前记录的关联，尚未完成内容核实。",
+  "description": "低频目标随机混入常见刺激，被试计数或按键；观察与目标相关的 P3b。",
+  "question": "两类刺激 · 目标检测或计数 · 随机呈现。",
+  "knowledge": "来源：颞顶联合区（B）。反映上下文更新与注意分配（B）。",
   "label": "概念时间线",
   "events": [
    "标准刺激",
@@ -38,9 +38,9 @@ const tasks=[
   "en": "MOT-MI-001 / MOTOR IMAGERY",
   "stage": "draft · 具体范式",
   "title": "运动想象：左手与右手",
-  "description": "视觉箭头提示被试想象左手或右手动作，不实际执行。条目关注感觉运动 mu／β 节律的偏侧化去同步化，用于研究两类运动想象的信号差异。",
-  "question": "左／右手二分类；视觉箭头提示；同步试次；试次内无反馈。四分类、连续反馈和异步设计分别记录为同类下的其他具体范式。",
-  "knowledge": "SMR ERD 的产生脑区：感觉运动皮层（A）；关联认知构念：运动想象（B）。脑区关联与认知关联分别评级，条目当前仍为 draft。",
+  "description": "按箭头提示想象左手或右手运动，以感觉运动 mu／β 节律区分两类。",
+  "question": "左／右手二分类 · 视觉提示 · 试次内无反馈。",
+  "knowledge": "来源：感觉运动皮层（A）。关联运动想象（B）。",
   "label": "概念时间线",
   "events": [
    "视觉提示",
@@ -59,9 +59,9 @@ const tasks=[
   "en": "SSR-SSVEP-002 / FREQUENCY CODING",
   "stage": "draft · 具体范式",
   "title": "SSVEP：用频率区分目标",
-  "description": "多个目标以不同频率同时闪烁。用户注视期望目标，系统依据枕区脑电中的频率特征完成选择，再向用户反馈结果。",
-  "question": "多目标频率编码；同步试次；离散反馈。与单光源被动观察的 -001、联合频率与相位编码的 -005 分别记录。",
-  "knowledge": "SSVEP 的产生脑区：视觉皮层（B）；关联认知构念：持续性视觉注意（B）。记录刺激频率及谐波响应，文献与审核状态可在标记物条目中追溯。",
+  "description": "注视不同频率闪烁的目标，通过枕区脑电频率特征完成选择。",
+  "question": "多目标频率编码 · 同步试次 · 选择反馈。",
+  "knowledge": "来源：视觉皮层（B）。关联持续性视觉注意（B）。",
   "label": "概念时间线",
   "events": [
    "目标提示",
@@ -75,7 +75,7 @@ const tasks=[
   ]
  }
 ];
-if(english)[{"stage": "draft · concrete paradigm", "title": "Oddball: detecting rare targets", "description": "Frequent standard stimuli and rare targets appear in random order. Participants count targets or press a button. The record links this protocol to P3b and lists visual/auditory stimulation and EEG, MEG and fMRI recording modalities.", "question": "Two stimulus types; target detection or counting; trials combine stimuli and intervals. The full record retains parameter ranges, variants and foundational sources.", "knowledge": "P3b is linked to the temporoparietal junction (B), context updating (B) and attention allocation (B). These relationships are recorded in the knowledge base; content verification is still pending.", "label": "CONCEPTUAL TIMELINE", "events": ["Standard stimulus", "Rare target", "Target response"]}, {"stage": "draft · concrete paradigm", "title": "Motor imagery: left vs. right hand", "description": "A visual arrow cues participants to imagine moving the left or right hand without executing the movement. The protocol focuses on lateralized mu/beta event-related desynchronization to distinguish the two imagery conditions.", "question": "Two classes: left/right hand. Visual arrow cues, synchronous trials and no feedback within each trial. Four-class, continuous-feedback and asynchronous designs are separate protocols in the same class.", "knowledge": "SMR ERD is linked to the sensorimotor cortex (A) and motor imagery (B). Region and construct associations are graded separately; this record is a draft.", "label": "CONCEPTUAL TIMELINE", "events": ["Visual cue", "Left/right imagery", "Rest without feedback"]}, {"stage": "draft · concrete paradigm", "title": "SSVEP: selecting by frequency", "description": "Multiple targets flicker simultaneously at different frequencies. The user looks at a desired target; the system decodes frequency features in occipital EEG to select it and provide feedback.", "question": "Multi-target frequency coding, synchronous trials and discrete feedback. The passive single-source protocol (-001) and joint frequency-phase coding (-005) are separate records.", "knowledge": "SSVEP is linked to the visual cortex (B) and sustained visual attention (B). The marker record describes responses at stimulation frequencies and harmonics, with references and review status.", "label": "CONCEPTUAL TIMELINE", "events": ["Target cue", "Frequency-coded stimuli", "Selection feedback"]}].forEach((text,i)=>Object.assign(tasks[i],text));
+if(english)[{"stage": "draft · concrete paradigm", "title": "Oddball: detecting rare targets", "description": "Detect rare targets among frequent stimuli and observe the target-related P3b response.", "question": "Two stimulus types · Target detection or counting · Random presentation.", "knowledge": "Source: temporoparietal junction (B). Indexes context updating and attention allocation (B).", "label": "CONCEPTUAL TIMELINE", "events": ["Standard stimulus", "Rare target", "Target response"]}, {"stage": "draft · concrete paradigm", "title": "Motor imagery: left vs. right hand", "description": "Imagine moving the left or right hand. Compare lateralized sensorimotor mu/beta rhythms.", "question": "Left/right hand · Visual cues · No within-trial feedback.", "knowledge": "Source: sensorimotor cortex (A). Indexes motor imagery (B).", "label": "CONCEPTUAL TIMELINE", "events": ["Visual cue", "Left/right imagery", "Rest without feedback"]}, {"stage": "draft · concrete paradigm", "title": "SSVEP: selecting by frequency", "description": "Look at a flickering target. Decode its frequency from occipital EEG to select it.", "question": "Multi-target frequency coding · Synchronous trials · Selection feedback.", "knowledge": "Source: visual cortex (B). Indexes sustained visual attention (B).", "label": "CONCEPTUAL TIMELINE", "events": ["Target cue", "Frequency-coded stimuli", "Selection feedback"]}].forEach((text,i)=>Object.assign(tasks[i],text));
 const taskButtons=[...document.querySelectorAll('[data-task]')];
 function selectTask(index){const t=tasks[index];document.querySelector('#task-source').href='https://github.com/savorcode/bci-paradigm-atlas/blob/main/paradigms/'+t.source;document.querySelector('#marker-source').href='https://github.com/savorcode/bci-paradigm-atlas/blob/main/knowledge/markers/'+t.marker+'.yaml';document.querySelector('#task-knowledge').textContent=t.knowledge;taskButtons.forEach((b,i)=>{b.setAttribute('aria-selected',String(i===index));b.tabIndex=i===index?0:-1;b.querySelector('.task-symbol').textContent=i===index?'−':'＋'});document.querySelector('#task-panel').setAttribute('aria-labelledby','task-tab-'+index);for(const [id,value] of Object.entries({'task-en':t.en,'task-stage':t.stage,'task-title':t.title,'task-description':t.description,'task-question':t.question,'signal-label':t.label}))document.getElementById(id).textContent=value;document.querySelector('#signal-events').replaceChildren(...t.events.map(text=>{const s=document.createElement('span');s.textContent=text;return s}));document.querySelector('#signal-path').setAttribute('d',t.path);document.querySelector('#signal-point').setAttribute('cx',t.point[0]);document.querySelector('#signal-point').setAttribute('cy',t.point[1]);document.querySelector('#task-signal').setAttribute('aria-label',english?'Conceptual timeline: '+t.events.join(', ')+'. Not measured data.':t.events.join('、')+'的概念时间线，不代表实测数据')}
 taskButtons.forEach((b,i)=>{b.addEventListener('click',()=>selectTask(i));b.addEventListener('keydown',e=>{let next;if(e.key==='ArrowDown'||e.key==='ArrowRight')next=(i+1)%3;if(e.key==='ArrowUp'||e.key==='ArrowLeft')next=(i+2)%3;if(e.key==='Home')next=0;if(e.key==='End')next=2;if(next!==undefined){e.preventDefault();selectTask(next);taskButtons[next].focus()}})});
@@ -98,8 +98,10 @@ function renderCatalog(){
   const title=document.createElement('h4');title.textContent=english?item.english:item.name;
   const description=document.createElement('p');description.textContent=english?item.descriptionEnglish:item.description;
   const tags=document.createElement('div');tags.className='record-tags';
-  for(const value of [...item.modalities,...item.markers]){const tag=document.createElement('span');tag.textContent=value;tags.append(tag)}
-  const link=document.createElement('a');link.textContent=local('View protocol & sources','查看协议与出处');link.className='external-link';link.target='_blank';link.rel='noopener noreferrer';link.href='https://github.com/savorcode/bci-paradigm-atlas/blob/main/'+item.path;
+  const allTags=[...item.modalities,...item.markers],visibleTags=[...item.modalities.slice(0,2),...item.markers.slice(0,1)];
+  if(allTags.length>visibleTags.length)visibleTags.push('+'+(allTags.length-visibleTags.length));
+  for(const value of visibleTags){const tag=document.createElement('span');tag.textContent=value;tags.append(tag)}
+  const link=document.createElement('a');link.textContent=local('Open protocol','打开协议');link.className='external-link action-primary';link.target='_blank';link.rel='noopener noreferrer';link.href='https://github.com/savorcode/bci-paradigm-atlas/blob/main/'+item.path;
   link.setAttribute('aria-label',english?'View protocol and sources for '+item.id+' '+item.english:'查看 '+item.id+' '+item.name+' 的协议与出处');
   card.append(id,title,description,tags,link);catalogResults.append(card);
  }
