@@ -1,5 +1,7 @@
 # 脑机接口范式图谱 BCI Paradigm Atlas
 
+[项目展示页](https://savorcode-website.vercel.app/) · [Website source](website/)
+
 [English](README.md) | **简体中文**
 
 一个开放、结构化、可引用的脑机接口（BCI）范式及其神经知识图谱，由**思维刻度 SavorCode** 发起并维护。

@@ -1,5 +1,7 @@
 # BCI Paradigm Atlas
 
+[Project website](https://savorcode-website.vercel.app/) · [Website source](website/)
+
 **English** | [简体中文](README.zh-CN.md)
 
 An open, structured and citable atlas of brain-computer interface (BCI) paradigms and the neural knowledge behind them, initiated and maintained by **思维刻度 SavorCode**.
