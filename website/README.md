@@ -40,4 +40,6 @@ The unlabeled automatic canvas animation uses a curated v0.1.0 subset of real pa
 
 `index.html` is the default English page; `zh.html` is the Chinese page. Both share `main.js`, `style.css`, the hero canvas and the bilingual `catalog.json`. The top-right language link preserves the current section anchor. Update both static pages together; task examples and interface messages are localized in the shared script. Catalog English names and descriptions come from the source YAML, not machine-generated placeholders.
 
-Section 04 uses three equal-width, row-aligned step cards above a shared terminal and export-illustration row. It collapses to a single column on mobile. External actions have explicit outlined buttons and an outward arrow; they open in a new tab with `noopener noreferrer`.
+Section 04 uses three equal-width, row-aligned step cards above a shared terminal and export-illustration row. It collapses to a single column on mobile. Primary actions use large solid navy buttons; supporting documentation uses clearly bordered secondary buttons. External links have an outward arrow and open in a new tab with `noopener noreferrer`.
+
+Both languages use concise section introductions and larger body text (17–18px for core explanations). Review limits remain visible, with detailed audit notes in an expandable disclosure. Catalog cards show a compact tag preview; search still includes the full source fields.
