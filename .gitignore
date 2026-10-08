@@ -1,3 +1,7 @@
 dist/
 __pycache__/
 *.pyc
+
+# Local website deployment settings
+.vercel/
+.env*
