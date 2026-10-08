@@ -1,7 +1,11 @@
 'use strict';
+const english=document.documentElement.lang==='en';
+const local=(en,zh)=>english?en:zh;
+const languageSwitch=document.querySelector('.language-switch');
+languageSwitch.addEventListener('click',()=>{languageSwitch.hash=location.hash});
 const menu=document.querySelector('.menu-toggle'),mobileNav=document.querySelector('#mobile-nav');
-function closeMenu(){menu.setAttribute('aria-expanded','false');menu.setAttribute('aria-label','打开导航');mobileNav.hidden=true}
-menu.addEventListener('click',()=>{const open=menu.getAttribute('aria-expanded')!=='true';menu.setAttribute('aria-expanded',String(open));menu.setAttribute('aria-label',open?'关闭导航':'打开导航');mobileNav.hidden=!open});
+function closeMenu(){menu.setAttribute('aria-expanded','false');menu.setAttribute('aria-label',local('Open navigation','打开导航'));mobileNav.hidden=true}
+menu.addEventListener('click',()=>{const open=menu.getAttribute('aria-expanded')!=='true';menu.setAttribute('aria-expanded',String(open));menu.setAttribute('aria-label',open?local('Close navigation','关闭导航'):local('Open navigation','打开导航'));mobileNav.hidden=!open});
 mobileNav.querySelectorAll('a').forEach(a=>a.addEventListener('click',closeMenu));
 document.addEventListener('keydown',e=>{if(e.key==='Escape'&&!mobileNav.hidden){closeMenu();menu.focus()}});
 document.querySelector('#year').textContent=new Date().getFullYear();
@@ -71,8 +75,9 @@ const tasks=[
   ]
  }
 ];
+if(english)[{"stage": "draft · concrete paradigm", "title": "Oddball: detecting rare targets", "description": "Frequent standard stimuli and rare targets appear in random order. Participants count targets or press a button. The record links this protocol to P3b and lists visual/auditory stimulation and EEG, MEG and fMRI recording modalities.", "question": "Two stimulus types; target detection or counting; trials combine stimuli and intervals. The full record retains parameter ranges, variants and foundational sources.", "knowledge": "P3b is linked to the temporoparietal junction (B), context updating (B) and attention allocation (B). These relationships are recorded in the knowledge base; content verification is still pending.", "label": "CONCEPTUAL TIMELINE", "events": ["Standard stimulus", "Rare target", "Target response"]}, {"stage": "draft · concrete paradigm", "title": "Motor imagery: left vs. right hand", "description": "A visual arrow cues participants to imagine moving the left or right hand without executing the movement. The protocol focuses on lateralized mu/beta event-related desynchronization to distinguish the two imagery conditions.", "question": "Two classes: left/right hand. Visual arrow cues, synchronous trials and no feedback within each trial. Four-class, continuous-feedback and asynchronous designs are separate protocols in the same class.", "knowledge": "SMR ERD is linked to the sensorimotor cortex (A) and motor imagery (B). Region and construct associations are graded separately; this record is a draft.", "label": "CONCEPTUAL TIMELINE", "events": ["Visual cue", "Left/right imagery", "Rest without feedback"]}, {"stage": "draft · concrete paradigm", "title": "SSVEP: selecting by frequency", "description": "Multiple targets flicker simultaneously at different frequencies. The user looks at a desired target; the system decodes frequency features in occipital EEG to select it and provide feedback.", "question": "Multi-target frequency coding, synchronous trials and discrete feedback. The passive single-source protocol (-001) and joint frequency-phase coding (-005) are separate records.", "knowledge": "SSVEP is linked to the visual cortex (B) and sustained visual attention (B). The marker record describes responses at stimulation frequencies and harmonics, with references and review status.", "label": "CONCEPTUAL TIMELINE", "events": ["Target cue", "Frequency-coded stimuli", "Selection feedback"]}].forEach((text,i)=>Object.assign(tasks[i],text));
 const taskButtons=[...document.querySelectorAll('[data-task]')];
-function selectTask(index){const t=tasks[index];document.querySelector('#task-source').href='https://github.com/savorcode/bci-paradigm-atlas/blob/main/paradigms/'+t.source;document.querySelector('#marker-source').href='https://github.com/savorcode/bci-paradigm-atlas/blob/main/knowledge/markers/'+t.marker+'.yaml';document.querySelector('#task-knowledge').textContent=t.knowledge;taskButtons.forEach((b,i)=>{b.setAttribute('aria-selected',String(i===index));b.tabIndex=i===index?0:-1;b.querySelector('.task-symbol').textContent=i===index?'−':'＋'});document.querySelector('#task-panel').setAttribute('aria-labelledby','task-tab-'+index);for(const [id,value] of Object.entries({'task-en':t.en,'task-stage':t.stage,'task-title':t.title,'task-description':t.description,'task-question':t.question,'signal-label':t.label}))document.getElementById(id).textContent=value;document.querySelector('#signal-events').replaceChildren(...t.events.map(text=>{const s=document.createElement('span');s.textContent=text;return s}));document.querySelector('#signal-path').setAttribute('d',t.path);document.querySelector('#signal-point').setAttribute('cx',t.point[0]);document.querySelector('#signal-point').setAttribute('cy',t.point[1]);document.querySelector('#task-signal').setAttribute('aria-label',t.events.join('、')+'的概念时间线，不代表实测数据')}
+function selectTask(index){const t=tasks[index];document.querySelector('#task-source').href='https://github.com/savorcode/bci-paradigm-atlas/blob/main/paradigms/'+t.source;document.querySelector('#marker-source').href='https://github.com/savorcode/bci-paradigm-atlas/blob/main/knowledge/markers/'+t.marker+'.yaml';document.querySelector('#task-knowledge').textContent=t.knowledge;taskButtons.forEach((b,i)=>{b.setAttribute('aria-selected',String(i===index));b.tabIndex=i===index?0:-1;b.querySelector('.task-symbol').textContent=i===index?'−':'＋'});document.querySelector('#task-panel').setAttribute('aria-labelledby','task-tab-'+index);for(const [id,value] of Object.entries({'task-en':t.en,'task-stage':t.stage,'task-title':t.title,'task-description':t.description,'task-question':t.question,'signal-label':t.label}))document.getElementById(id).textContent=value;document.querySelector('#signal-events').replaceChildren(...t.events.map(text=>{const s=document.createElement('span');s.textContent=text;return s}));document.querySelector('#signal-path').setAttribute('d',t.path);document.querySelector('#signal-point').setAttribute('cx',t.point[0]);document.querySelector('#signal-point').setAttribute('cy',t.point[1]);document.querySelector('#task-signal').setAttribute('aria-label',english?'Conceptual timeline: '+t.events.join(', ')+'. Not measured data.':t.events.join('、')+'的概念时间线，不代表实测数据')}
 taskButtons.forEach((b,i)=>{b.addEventListener('click',()=>selectTask(i));b.addEventListener('keydown',e=>{let next;if(e.key==='ArrowDown'||e.key==='ArrowRight')next=(i+1)%3;if(e.key==='ArrowUp'||e.key==='ArrowLeft')next=(i+2)%3;if(e.key==='Home')next=0;if(e.key==='End')next=2;if(next!==undefined){e.preventDefault();selectTask(next);taskButtons[next].focus()}})});
 
 selectTask(0);
@@ -90,15 +95,15 @@ function renderCatalog(){
  for(const item of filtered.slice(catalogPage*catalogPageSize,(catalogPage+1)*catalogPageSize)){
   const card=document.createElement('article');card.className='catalog-card';
   const id=document.createElement('span');id.className='record-id';id.textContent=item.id+' / '+item.status;
-  const title=document.createElement('h4');title.textContent=item.name;
-  const description=document.createElement('p');description.textContent=item.description;
+  const title=document.createElement('h4');title.textContent=english?item.english:item.name;
+  const description=document.createElement('p');description.textContent=english?item.descriptionEnglish:item.description;
   const tags=document.createElement('div');tags.className='record-tags';
   for(const value of [...item.modalities,...item.markers]){const tag=document.createElement('span');tag.textContent=value;tags.append(tag)}
-  const link=document.createElement('a');link.textContent='查看协议与出处 ↗';link.href='https://github.com/savorcode/bci-paradigm-atlas/blob/main/'+item.path;
-  link.setAttribute('aria-label','查看 '+item.id+' '+item.name+' 的协议与出处');
+  const link=document.createElement('a');link.textContent=local('View protocol & sources','查看协议与出处');link.className='external-link';link.target='_blank';link.rel='noopener noreferrer';link.href='https://github.com/savorcode/bci-paradigm-atlas/blob/main/'+item.path;
+  link.setAttribute('aria-label',english?'View protocol and sources for '+item.id+' '+item.english:'查看 '+item.id+' '+item.name+' 的协议与出处');
   card.append(id,title,description,tags,link);catalogResults.append(card);
  }
- catalogCount.textContent=filtered.length+' / '+catalogItems.length+' 个有效协议';
+ catalogCount.textContent=filtered.length+' / '+catalogItems.length+local(' active protocols',' 个有效协议');
  document.querySelector('#catalog-empty').hidden=filtered.length!==0;
  document.querySelector('#catalog-page').textContent=filtered.length?(catalogPage+1)+' / '+pages:'0 / 0';
  catalogPrev.disabled=catalogPage===0;catalogNext.disabled=catalogPage>=pages-1;
@@ -111,17 +116,17 @@ async function loadCatalog(){
   const response=await fetch('./catalog.json');if(!response.ok)throw new Error('Catalog unavailable');
   const data=await response.json();
   catalogItems=data.items.map(item=>({...item,search:[item.id,item.name,item.english,...item.aliases,...item.markers,...item.modalities].join(' ').toLowerCase()}));
-  for(const family of data.families){const option=document.createElement('option');option.value=family.id;option.textContent=family.name+' ('+family.count+')';catalogFamily.append(option)}
+  for(const family of data.families){const option=document.createElement('option');option.value=family.id;option.textContent=(english?family.english:family.name)+' ('+family.count+')';catalogFamily.append(option)}
   for(const modality of [...new Set(catalogItems.flatMap(item=>item.modalities))].sort()){const option=document.createElement('option');option.value=modality;option.textContent=modality;catalogModality.append(option)}
   for(const control of [catalogQuery,catalogFamily,catalogModality,catalogClear])control.disabled=false;
   renderCatalog();
- }catch{catalogCount.textContent='目录暂时无法加载，请刷新重试或打开下方完整源目录。'}
+ }catch{catalogCount.textContent=local('The catalog could not load. Refresh or open the source directory below.','目录暂时无法加载，请刷新重试或打开下方完整源目录。')}
 }
 loadCatalog();
 document.querySelector('#copy-setup').addEventListener('click',async()=>{
  const status=document.querySelector('#copy-status');
- try{await navigator.clipboard.writeText(document.querySelector('#setup-code').textContent);status.textContent='命令已复制。';}
- catch{status.textContent='未能访问剪贴板，请选中下方命令手动复制。';}
+ try{await navigator.clipboard.writeText(document.querySelector('#setup-code').textContent);status.textContent=local('Commands copied.','命令已复制。');}
+ catch{status.textContent=local('Clipboard unavailable. Select and copy the commands below.','未能访问剪贴板，请选中下方命令手动复制。');}
 });
 
 // A curated v0.1.0 subgraph. Layout is artistic; edges retain their source direction.
@@ -131,14 +136,14 @@ const reduced=matchMedia('(prefers-reduced-motion: reduce)');
 let paused=reduced.matches,visible=true,frame=0,last=0,time=0,width=0,height=0;
 const motionButton=document.querySelector('#motion-toggle');
 const tau=Math.PI*2;
-function updateMotionButton(){motionButton.setAttribute('aria-pressed',String(paused));motionButton.setAttribute('aria-label',paused?'播放所有动图':'暂停所有动图');document.querySelector('#motion-label').textContent=paused?'播放动效':'暂停动效';document.body.classList.toggle('motion-paused',paused)}
+function updateMotionButton(){motionButton.setAttribute('aria-pressed',String(paused));motionButton.setAttribute('aria-label',paused?local('Play all animations','播放所有动图'):local('Pause all animations','暂停所有动图'));document.querySelector('#motion-label').textContent=paused?local('Play motion','播放动效'):local('Pause motion','暂停动效');document.body.classList.toggle('motion-paused',paused)}
 function fit(){const r=canvas.getBoundingClientRect();width=r.width;height=r.height;const d=Math.min(devicePixelRatio||1,2);canvas.width=Math.round(width*d);canvas.height=Math.round(height*d);ctx.setTransform(d,0,0,d,0,0);draw()}
 function draw(){
  if(!width)return;
  ctx.clearRect(0,0,width,height);
  const mobile=width<761,t=reduced.matches?6:time;
  const scale=mobile?width*.46:Math.min(width*.25,height*.39);
- const cx=width*(mobile?.51:.745),cy=height*(mobile?.69:.47);
+ const cx=width*(mobile?.51:.745),cy=height*(mobile?(english?.73:.71):.47);
  const turn=.16*Math.sin(t*.075),tilt=.08*Math.cos(t*.06),breathe=1+.025*Math.sin(t*.4);
  const nodes=heroGraph.nodes.map((n,i)=>{
   const drift=.011*Math.sin(t*.35+i*1.7),x=n.x*Math.cos(turn)+n.z*Math.sin(turn),z=n.z*Math.cos(turn)-n.x*Math.sin(turn);
