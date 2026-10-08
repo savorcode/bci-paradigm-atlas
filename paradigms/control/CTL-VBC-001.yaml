@@ -1,0 +1,43 @@
+schema_version: '0.2'
+id: CTL-VBC-001
+class: CTL-VBC
+name:
+  en: Value-based choice (willingness to pay)
+  zh: 基于价值的选择（支付意愿）
+aliases:
+- Willingness-to-pay task
+- Food choice task
+- Becker-DeGroot-Marschak auction
+family: control
+bci_category:
+- none
+recording_modality:
+- fMRI
+stimulus_modality:
+- visual
+markers:
+- MK.BOLD_vmPFC_value
+description:
+  en: Hungry participants view food items and bid how much they are willing to pay for each in an incentive-compatible auction,
+    providing a trial-wise measure of subjective goal value. Medial orbitofrontal/ventromedial prefrontal BOLD activity scales
+    with willingness to pay.
+  zh: 饥饿的被试观看食物，并在激励相容的拍卖中出价表示愿意为每种食物支付多少，从而得到逐试次的主观目标价值指标。内侧眶额/腹内侧前额叶 BOLD 活动随支付意愿增加而升高。
+protocol:
+  cue: images of food items; bid in an incentive-compatible Becker-DeGroot-Marschak auction
+  paradigm_timing: synchronous
+  distinguishing: 标准配置（最早发表）：对食物出价的 BDM 拍卖（Plassmann et al. 2007，R1148）。本包仅此一个配置。
+first_source:
+  citation: Plassmann H, O'Doherty J, Rangel A. Orbitofrontal Cortex Encodes Willingness to Pay in Everyday Economic Transactions.
+    Journal of Neuroscience 27(37):9984-9988. 2007.
+  doi: 10.1523/JNEUROSCI.2131-07.2007
+  year: 2007
+  verified: false
+interop:
+  bids_task: wtp
+notes: 'Leads used: S_PLASSMANN2007 (search: https://authors.library.caltech.edu/records/x2xfk-88n48). first_source lead:
+  S_PLASSMANN2007. The source also reports dorsolateral prefrontal WTP coding; only the registry value marker is listed. Pass
+  1 skeleton (curator_c, 2026-10-03); all sources unverified. Sprint 2 (D-057): protocol added; single configuration, no split.
+  bibliography confirmed (Crossref, 2026-10-05)'
+status: draft
+contributors:
+- curator_c

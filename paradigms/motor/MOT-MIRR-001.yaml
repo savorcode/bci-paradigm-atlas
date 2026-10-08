@@ -1,0 +1,57 @@
+schema_version: '0.2'
+id: MOT-MIRR-001
+class: MOT-MIRR
+name:
+  en: Mirror tracing
+  zh: 镜像描摹
+aliases:
+- MTT
+- Mirror Drawing
+- Mirror Tracing
+family: motor
+bci_category:
+- none
+recording_modality:
+- fMRI
+- EEG
+stimulus_modality:
+- visual
+- motor_execution
+markers:
+- MK.BOLD_motor_network
+description:
+  en: >-
+    Participants trace a figure (e.g. a star) while seeing their hand only in a mirror, so that visual feedback is reversed,
+    and improve over repeated trials. Visuomotor skill acquisition is accompanied by changes in motor network BOLD, including
+    premotor, parietal and cerebellar regions.
+  zh: 被试只能通过镜子看到自己的手，在视觉反馈左右或上下颠倒的条件下描摹图形（如星形），并随练习逐渐改善。视觉运动技能习得伴随运动网络 BOLD 的变化，涉及前运动区、顶叶和小脑。
+protocol:
+  n_classes: 1
+  classes:
+  - mirror-reversed tracing
+  cue: figure to trace, hand seen only in a mirror
+  paradigm_timing: synchronous
+  feedback: continuous
+  distinguishing: >-
+    Standard configuration (earliest published) / 标准配置（最早发表）: repeated tracing of a figure under mirror-reversed visual feedback
+    of the hand (behavioural origin R0106, D-031). No sibling protocol yet.
+first_source:
+  citation: >-
+    Gabrieli, J. D. E., Corkin, S., Mickel, S. F., & Growdon, J. H. Intact acquisition and long-term retention of mirror-tracing
+    skill in Alzheimer's disease and in global amnesia. Behavioral Neuroscience, 107(6), 899–910. 1993.
+  doi: 10.1037/0735-7044.107.6.899
+  pmid: '8136066'
+  year: 1993
+  verified: false
+interop:
+  bids_task: mirrortracing
+notes: >-
+  HED task page: https://www.hedtags.org/hed-task/tasks/hedtsk_mirror_tracing.html. Leads: R0106, R0176, R0256, R0273, R0345,
+  R0564. first_source R0106 is a behavioural amnesia study and the oldest lead, not the task origin; the original mirror-drawing
+  task predates it (no lead). R0176 (psychometric function fitting) appears unrelated to the paradigm. Brain-recording evidence
+  specific to mirror tracing still needs a lead (blocker). D-031 (maintainer, 2026-10-03): first_source is a behavioural or
+  EMG/MEP-only origin, which is acceptable; add the earliest brain-recording study as a "First neural recording: <citation>
+  (R####)" line in sprint 2. bibliography confirmed (Crossref, 2026-10-05)
+status: draft
+contributors:
+- curator_b

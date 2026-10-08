@@ -1,0 +1,60 @@
+schema_version: '0.2'
+id: STA-CLAS-001
+class: STA-CLAS
+name:
+  en: Closed-loop auditory stimulation of sleep slow oscillations
+  zh: 睡眠慢振荡闭环听觉刺激
+aliases:
+- closed-loop acoustic stimulation
+- CLAS
+- phase-locked auditory stimulation in sleep
+- pink-noise slow-wave enhancement
+- phase-locked auditory stimulation
+- acoustic slow-wave enhancement
+family: state
+bci_category:
+- passive
+recording_modality:
+- EEG
+stimulus_modality:
+- auditory
+markers:
+- MK.slow_wave
+- MK.sleep_spindle
+description:
+  en: During NREM sleep, the online EEG is monitored and brief sounds such as pink-noise bursts are delivered phase-locked
+    to the up-states of slow oscillations. In-phase stimulation enhances the slow oscillation rhythm and phase-coupled spindle
+    activity.
+  zh: 在 NREM 睡眠期间实时监测脑电，并将短暂声音（如粉红噪声脉冲）锁相于慢振荡的上升态呈现。同相刺激增强慢振荡节律及与其相位耦合的纺锤波活动。
+protocol:
+  n_classes: 2
+  classes:
+  - stimulation night (sounds phase-locked to slow-oscillation up-states)
+  - sham night (no sounds)
+  cue: brief pink-noise bursts triggered by online detection of slow-oscillation up-states
+  paradigm_timing: continuous
+  feedback: discrete
+  distinguishing: 'Standard configuration (earliest published or canonical; D-057 -001): closed-loop in-phase auditory stimulation
+    versus sham (Ngo et al. 2013, R1192). feedback=discrete records the closed loop: each sound is triggered by the ongoing
+    EEG; the sleeping participant receives no feedback display.'
+first_source:
+  citation: Ngo HVV, Martinetz T, Born J, Mölle M. Auditory closed-loop stimulation of the sleep slow oscillation enhances
+    memory. Neuron 78(3):545-553. 2013.
+  doi: 10.1016/j.neuron.2013.03.006
+  year: 2013
+  verified: false
+interop:
+  bids_task: clas
+notes: 'Sources found by curator_e (curation/work/pkg_E/search_log.md): S19 = https://research.uni-luebeck.de/en/publications/auditory-closed-loop-stimulation-of-the-sleep-slow-oscillation-en/.
+  New candidate (curator_e). Related to MEM-TMR-001 (pkg D), which uses memory-associated cues during sleep; CLAS uses content-free
+  sounds timed to the EEG phase (closed loop). First-pass skeleton (curator_e, 2026-10-03); all sources unverified. D-033
+  (maintainer, 2026-10-03): duplicate STM-CLAS-001 (curator_b, pkg B; lead N16 in curation/work/pkg_B/search_log.md = the
+  same Ngo et al. 2013 record) merged here; ID STM-CLAS-001 retired, not reused. Comparison condition in the pkg B draft:
+  a sham night without sounds. Boundary with MEM-TMR-001: TMR replays memory-associated cues; CLAS uses content-free sounds
+  timed to slow-oscillation phase. Sprint 2 (curator_e, 2026-10-03): protocol block added per D-057; see curation/work/pkg_E/sprint2/split_log.csv.
+  Sprint 3 (curator_d, 2026-10-05): bibliography confirmed (OpenAlex, 2026-10-05).'
+status: draft
+contributors:
+- curator_e
+- curator_b
+- maintainer

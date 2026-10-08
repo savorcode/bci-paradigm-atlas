@@ -1,0 +1,11 @@
+schema_version: "0.2"
+id: MK.HbO_prefrontal
+name: {en: Prefrontal HbO task response, zh: 前额叶 HbO 任务响应}
+aliases: [prefrontal oxyhemoglobin increase, frontal HbO]
+type: hemodynamic
+recording_modality: [fNIRS]
+signature: {topography: prefrontal cortex (lateral and medial)}
+description: {en: 'Task-related increase in oxygenated haemoglobin (with a smaller decrease in deoxygenated haemoglobin) measured by fNIRS over prefrontal cortex, developing over several seconds during cognitive tasks such as mental arithmetic or word generation.', zh: 以 fNIRS 在前额叶测得的任务相关氧合血红蛋白升高（伴随较小的脱氧血红蛋白下降），在心算或词语生成等认知任务中于数秒内逐渐形成。}
+notes: Signature values are textbook-level characteristics and await source checking (first pass, curator_b). Generators and indexes to be added in the second pass.
+status: draft
+contributors: [maintainer, curator_b]

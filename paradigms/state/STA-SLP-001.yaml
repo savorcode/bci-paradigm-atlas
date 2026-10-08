@@ -1,0 +1,59 @@
+schema_version: '0.2'
+id: STA-SLP-001
+class: STA-SLP
+name:
+  en: Sleep staging (Rechtschaffen & Kales rules)
+  zh: 睡眠分期（Rechtschaffen & Kales 规则）
+aliases:
+- AASM staging
+- polysomnography staging
+- sleep scoring
+family: state
+bci_category:
+- passive
+- none
+recording_modality:
+- EEG
+stimulus_modality:
+- resting_state
+markers:
+- MK.sleep_spindle
+- MK.slow_wave
+description:
+  en: Overnight EEG from central derivations, together with electro-oculogram and chin electromyogram, is scored in 30-s epochs
+    into wake, NREM stages 1-4 and REM according to the Rechtschaffen and Kales rules. NREM stages are defined by sleep spindles,
+    K-complexes and the proportion of slow waves.
+  zh: 整夜记录中央导联脑电及眼电、颏肌电，按 Rechtschaffen 与 Kales 规则以 30 秒为一帧判读为清醒、NREM 1–4 期与 REM 期。NREM 各期由睡眠纺锤波、K 复合波与慢波所占比例界定。
+protocol:
+  n_classes: 6
+  classes:
+  - wake
+  - stage 1
+  - stage 2
+  - stage 3
+  - stage 4
+  - REM
+  cue: none (overnight polysomnography)
+  paradigm_timing: continuous
+  feedback: none
+  distinguishing: 'Standard configuration (earliest published or canonical; D-057 -001): 30-s epochs scored into six R&K stages
+    (Rechtschaffen & Kales 1968, R1180). Differs from STA-SLP-002 (AASM five-stage scheme).'
+first_source:
+  citation: Rechtschaffen A, Kales A (eds). A manual of standardized terminology, techniques and scoring system for sleep
+    stages of human subjects. U.S. Dept. of Health, Education, and Welfare, Bethesda, Md. 1968.
+  year: 1968
+  verified: false
+datasets:
+- name: Sleep-EDF Database Expanded (PhysioNet)
+interop:
+  bids_task: sleep
+notes: 'Lead refs (curation/literature.csv): R0890 [review], R0891 [review], R0892 [method]. Sources found by curator_e (curation/work/pkg_E/search_log.md):
+  S07 = https://search.worldcat.org/oclc/2518321. Recording-state paradigm rather than a task. Existing leads (R0890, R0891,
+  R0892) are automatic-staging method papers; S07 found by curator_e. AASM manual (Iber et al. 2007) is a memory-only lead.
+  ''resting_state'' is used as the closest stimulus_modality term (to maintainer). First-pass skeleton (curator_e, 2026-10-03);
+  all sources unverified. Sprint 2 (curator_e, 2026-10-03): protocol block added per D-057; see curation/work/pkg_E/sprint2/split_log.csv.
+  Sprint 3 (curator_d, 2026-10-05): bibliography not found (Crossref, 2026-10-05); no Crossref record for this item, citation
+  left as is.'
+status: draft
+contributors:
+- curator_e

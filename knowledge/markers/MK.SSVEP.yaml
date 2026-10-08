@@ -1,31 +1,44 @@
-schema_version: "0.1"
+schema_version: "0.2"
 id: MK.SSVEP
-name: {en: Steady-state visual evoked potential, zh: 稳态视觉诱发电位}
-aliases: [SSVEP, SSVEF]
+name:
+  en: Steady-state visual evoked potential
+  zh: 稳态视觉诱发电位
+aliases:
+- SSVEP
+- SSVEF
+- photic driving response
+- frequency-tagged visual response
 type: steady_state
-recording_modality: [EEG, MEG]
+recording_modality:
+- EEG
+- MEG
 signature:
-  frequency_hz: "stimulation frequency and harmonics"
+  frequency_hz: stimulation frequency and harmonics
   topography: occipital
 description:
-  en: Periodic response of visual cortex at the frequency of a flickering or pattern-reversing stimulus and its harmonics. Amplitude is modulated by selective attention to the stimulus.
+  en: Periodic response of visual cortex at the frequency of a flickering or pattern-reversing stimulus and its harmonics.
+    Amplitude is modulated by selective attention to the stimulus.
   zh: 视觉皮层对闪烁或图形翻转刺激产生的周期性响应，频率与刺激频率及其谐波一致。波幅受对该刺激的选择性注意调制。
 generators:
-  - region: BR.visual_cortex
-    evidence: B
-    sources:
-      - citation: "Regan D. Some characteristics of average steady-state and transient responses evoked by modulated light. Electroencephalogr Clin Neurophysiol. 1966;20(3):238-248."
-        doi: "10.1016/0013-4694(66)90088-5"
-        year: 1966
-        verified: false
+- region: BR.visual_cortex
+  evidence: B
+  sources:
+  - citation: Regan D. Some characteristics of average steady-state and transient responses evoked by modulated light. Electroencephalogr
+      Clin Neurophysiol. 1966;20(3):238-248.
+    doi: 10.1016/0013-4694(66)90088-5
+    year: 1966
+    verified: false
 indexes:
-  - construct: CN.sustained_visual_attention
-    relation: amplitude increases for the attended stimulus
-    evidence: B
-    sources:
-      - citation: "Morgan ST, Hansen JC, Hillyard SA. Selective attention to stimulus location modulates the steady-state visual evoked potential. Proc Natl Acad Sci USA. 1996;93(10):4770-4774."
-        doi: "10.1073/pnas.93.10.4770"
-        year: 1996
-        verified: false
+- construct: CN.sustained_visual_attention
+  relation: amplitude increases for the attended stimulus
+  evidence: B
+  sources:
+  - citation: Morgan ST, Hansen JC, Hillyard SA. Selective attention to stimulus location modulates the steady-state visual
+      evoked potential. Proc Natl Acad Sci USA. 1996;93(10):4770-4774.
+    doi: 10.1073/pnas.93.10.4770
+    year: 1996
+    verified: false
 status: draft
-contributors: [savorcode01]
+contributors:
+- savorcode01
+- curator_a

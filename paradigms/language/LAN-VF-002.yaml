@@ -1,0 +1,58 @@
+schema_version: '0.2'
+id: LAN-VF-002
+class: LAN-VF
+name:
+  en: Covert word generation mental task (fNIRS/EEG BCI)
+  zh: 默想生词心理任务（fNIRS/EEG BCI）
+aliases:
+- word generation (WG) mental task
+- covert verbal fluency BCI
+family: language
+bci_category:
+- active
+recording_modality:
+- fNIRS
+- EEG
+stimulus_modality:
+- cognitive_task
+- visual
+markers:
+- MK.HbO_prefrontal
+description:
+  en: In short cue-paced trials, a letter is shown and participants silently generate words beginning with it; generation
+    trials alternate with rest (baseline) trials. Prefrontal haemodynamic and EEG features are classified to distinguish word
+    generation from rest, so that the mental task can serve as a binary active-BCI command.
+  zh: 在短的提示试次中呈现一个字母，被试默想以该字母开头的词；生词试次与休息（基线）试次交替。对前额血流动力学与 EEG 特征分类，区分生词与休息，使该心理任务可作为二分类主动式 BCI 指令。
+trial_structure:
+  conditions:
+  - word generation
+  - baseline (rest)
+protocol:
+  n_classes: 2
+  classes:
+  - word generation
+  - baseline (rest)
+  cue: visual letter cue per trial
+  paradigm_timing: synchronous
+  feedback: none
+  distinguishing: 准则 1;3：由每线索一个计分时段的测验（LAN-VF-001）变为默想生词与休息两类的短提示试次，用作 BCI 分类；Shin 等数据集为开环（无反馈）。
+first_source:
+  citation: Shin J, von Lühmann A, Kim DW, Mehnert J, Hwang HJ, Müller KR. Simultaneous acquisition of EEG and NIRS during
+    cognitive tasks for an open access dataset. Scientific Data 5:180003. 2018.
+  doi: 10.1038/sdata.2018.3
+  year: 2018
+  verified: false
+datasets:
+- name: Simultaneous acquisition of EEG and NIRS during cognitive tasks for an open access dataset (n-back, DSR, word generation;
+    Shin et al.)
+  identifier: doi:10.1038/sdata.2018.3
+notes: 'Former variant of LAN-VF-001 (former IMG-WORD-001, D-036; ID retired, not revived). The variant''s source R0979 is
+  a review of clinical fNIRS verbal fluency and fits LAN-VF-003 better; first_source is therefore the earliest BCI source
+  seen (Shin et al. 2018 data descriptor, R1325), not necessarily the origin. Trial details (cue type, rest condition) follow
+  the dataset title and the earlier variant text and have to be checked. The maintainer''s first guess was criteria 3;4; feedback
+  is set to ''none'' because the Shin et al. dataset is open loop, so criterion 4 is not claimed (see split_log). Closed-loop
+  versions with feedback would get a new number. Leads: R1325, R0979, R1035, R0972 (pmid_suspect). (R#### = curation/literature.csv;
+  DN## = curation/work/pkg_D/new_leads.csv.) Numbering criterion (D-057): 1;3. bibliography confirmed (Crossref, 2026-10-05)'
+status: draft
+contributors:
+- curator_d

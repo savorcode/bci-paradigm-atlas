@@ -1,0 +1,28 @@
+schema_version: "0.2"
+id: MK.CNV
+name:
+  en: Contingent negative variation
+  zh: 关联性负变
+aliases:
+- CNV
+- contingent negative variation
+- expectancy wave
+- O-wave / E-wave
+type: erp_component
+recording_modality:
+- EEG
+- MEG
+signature:
+  latency_ms: develops over the S1-S2 interval (hundreds of ms to several s)
+  polarity: negative (slow shift)
+  topography: fronto-central / central
+description:
+  en: Slow negative potential that develops between a warning stimulus and an imperative stimulus that requires a response.
+    It reflects anticipation and preparation for the upcoming stimulus and response.
+  zh: 在警示刺激与要求反应的命令刺激之间逐渐形成的慢负电位。它反映对即将出现的刺激和反应的预期与准备。
+notes: 'Signature values are textbook-level approximations and await checking against sources (pass 2). Generators and indexes
+  not yet written. Used by (registry): CTL-ANT-001, CTL-CNV-001, CTL-CPT-001.'
+status: draft
+contributors:
+- maintainer
+- curator_c

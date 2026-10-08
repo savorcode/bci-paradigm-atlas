@@ -1,0 +1,60 @@
+schema_version: '0.2'
+id: MOT-GRASP-001
+class: MOT-GRASP
+name:
+  en: Grasping and hand gestures
+  zh: 抓握与手势
+aliases:
+- grasp type decoding
+- hand gesture decoding
+- hand posture classification
+- reach-and-grasp
+- grasp-and-lift
+family: motor
+bci_category:
+- active
+recording_modality:
+- ECoG
+- intracortical
+- EEG
+stimulus_modality:
+- motor_execution
+- visual
+markers:
+- MK.high_gamma
+- MK.motor_cortical_spiking
+description:
+  en: >-
+    Participants grasp objects with different natural grasp types after a cue, and the grasp type is decoded offline from
+    electrocorticographic activity. Grasp-specific high-gamma patterns over sensorimotor cortex carry the information used
+    for classification.
+  zh: 被试按提示以不同的自然抓握方式抓取物体，离线从皮层脑电中解码抓握类型。感觉运动皮层上抓握特异的高 γ 活动模式提供分类所需信息。
+protocol:
+  classes:
+  - natural grasp types (set to be checked against R0888)
+  cue: real objects grasped after a visual cue
+  paradigm_timing: synchronous
+  feedback: none
+  distinguishing: >-
+    Standard configuration (earliest published) / 标准配置（最早发表）: executed grasps of different natural grasp types decoded offline
+    from ECoG (R0888). Siblings: -002 four complex hand gestures (criterion 1), -003 self-paced reach-and-grasp with scalp
+    EEG (criteria 1, 3), -004 grasp-and-lift with load/friction changes (criteria 1, 2).
+first_source:
+  citation: >-
+    Pistohl T, Schulze-Bonhage A, Aertsen A, Mehring C, Ball T. Decoding natural grasp types from human ECoG. NeuroImage.
+    2012;59(1):248-260.
+  doi: 10.1016/j.neuroimage.2011.06.084
+  pmid: '21763434'
+  year: 2012
+  verified: false
+interop:
+  bids_task: grasp
+notes: >-
+  Leads: R0885, R0888, R0943. Task-sheet remark: dataset DOI inferred from URL sdata201447 (verify). R0885 is a research article,
+  not a review. ICMS sensory feedback (excluded STM-ICMS-001, D-009) may be mentioned as bidirectional-BCI background. Sprint
+  2 (D-057): narrowed to the ECoG grasp-type configuration. Hand gestures (R0943) moved to MOT-GRASP-002; reach-and-grasp
+  EEG (R0885, BNCI2020_001) is MOT-GRASP-003; WAY-EEG-GAL (grasp-and-lift) moved to MOT-GRASP-004. bibliography corrected
+  (OpenAlex, 2026-10-05)
+status: draft
+contributors:
+- curator_b

@@ -1,0 +1,48 @@
+schema_version: '0.2'
+id: ERR-OBS-002
+class: ERR-OBS
+name:
+  en: Observation of errors in a Go/NoGo task
+  zh: 观察他人 Go/NoGo 任务中的错误
+aliases:
+- Observed Go/NoGo errors
+family: error
+bci_category:
+- none
+recording_modality:
+- EEG
+stimulus_modality:
+- visual
+markers:
+- MK.oERN
+description:
+  en: Participants watch another person perform a Go/NoGo task and monitor whether the performer correctly withholds responses
+    on NoGo trials. Observed commission errors elicit an early medial frontal negativity in the observer.
+  zh: 被试观看另一人完成 Go/NoGo 任务，监视其在 NoGo 试次上是否成功抑制反应。被观察到的误按错误在观察者身上诱发早期内侧额区负波。
+trial_structure:
+  conditions:
+  - observed correct Go
+  - observed correct NoGo
+  - observed commission error
+protocol:
+  n_classes: 3
+  classes:
+  - observed correct Go
+  - observed correct NoGo
+  - observed commission error
+  cue: observer watches another person's Go/NoGo stimuli and responses
+  paradigm_timing: synchronous
+  feedback: none
+  distinguishing: 准则 1、2：被观察的任务是 Go/NoGo，被观察的错误是抑制失败（误按），条件集含 Go/NoGo 两类刺激（ERR-OBS-001 观察的是选择任务中的选错）。
+first_source:
+  citation: Bates et al. 2005, as cited in R0714 (Somon et al. 2017); full reference not seen
+  year: 2005
+  verified: false
+interop:
+  bids_task: observegonogo
+notes: 'Leads used: R0714 (Frontiers full text fetched in sprint 2). first_source and the second study (Koban et al. 2010)
+  seen only as citations in R0714; full references to be added by the maintainer (D-032). Sprint 2 (D-057, curator_c, 2026-10-03):
+  new concrete paradigm of class ERR-OBS; numbering criterion 1;2 relative to ERR-OBS-001; all sources unverified. [maintainer, sprint 2] Lead registered as R1319 (literature.csv).'
+status: draft
+contributors:
+- curator_c

@@ -1,0 +1,51 @@
+﻿proposed_id,status,first_source_ref,n_leads_used,blockers
+MOT-ATT-001,第一遍完成,R0922,4,first_source R0922 title/PMID only; intracortical origin (Hochberg 2006) unsearched
+MOT-CURSOR-001,第一遍完成,search,5,
+MOT-GRASP-001,第一遍完成,R0888,3,
+MOT-HW-001,第一遍完成,R0948,3,
+MOT-ME-001,第一遍完成,R0928,14,"first_source R0928 title/PMID only, authors/year unknown"
+MOT-MI-001,第一遍完成,R0996,8,
+MOT-MRCP-001,第一遍完成,R0012,5,
+MOT-REACH-001,第一遍完成,R1020,5,
+MOT-BIMAN-001,阻塞,search,5,no lead for EEG/MEG interhemispheric coherence or SMR evidence; origin behavioural
+MOT-FORCE-001,第一遍完成,R1050,4,
+MOT-MSL-001,第一遍完成,R0170,7,
+MOT-OBS-001,第一遍完成,R0995,4,origin choice R0995 (TMS-MEP) vs R0845 (MEG) to decide
+MOT-RT-001,第一遍完成,search,3,
+MOT-SACC-001,阻塞,R0001,6,first_source R0001 (Javal 1878) is not a saccade-task paper; no lead for presaccadic potential
+MOT-SRT-001,第一遍完成,R0078,7,
+MOT-TRACK-001,第一遍完成,R0889,5,no review lead
+MOT-IB-001,第一遍完成,R0241,6,
+MOT-MIRR-001,阻塞,R0106,6,first_source R0106 not the task origin; no brain-recording lead specific to mirror tracing
+IMG-CMD-001,第一遍完成,R0893,5,
+IMG-MA-001,第一遍完成,R0842,4,first_source R0842 title-only
+IMG-SPI-001,第一遍完成,search,7,
+IMG-AUD-001,第一遍完成,R0131,6,first_source R0131 lacks DOI/PMID; role 'other'
+IMG-ROT-001,第一遍完成,R0024,7,
+IMG-SAO-001,第一遍完成,search,2,
+IMG-VIS-001,第一遍完成,R0183,6,variant source S15 title not confirmed
+IMG-WORD-001,第一遍完成,R0082,4,
+STM-CCEP-001,第一遍完成,search,1,
+STM-DBSEP-001,第一遍完成,search,1,no lead for MK.DBS_cortical_EP
+STM-PAS-001,第一遍完成,search,1,origin used MEPs; no EEG/TEP PAS lead
+STM-SEP-001,第一遍完成,search,4,
+STM-TACS-001,第一遍完成,search,3,R0596 irrelevant (CES for depression)
+STM-TDCS-001,第一遍完成,R0192,8,"origin R0192 used MEPs, not brain recording"
+STM-TEP-001,第一遍完成,search,3,
+STM-TUS-001,第一遍完成,search,7,
+MOT-SMS-001,第一遍完成,search,2,leads are a dissertation and a title-only record
+MOT-PASS-001,第一遍完成,search,1,new marker MK.corticokinematic_coherence pending registry
+MOT-LIBET-001,第一遍完成,search,1,
+MOT-PURS-001,第一遍完成,search,1,
+MOT-PERT-001,第一遍完成,search,1,new marker MK.perturbation_N1 pending registry; origin paper not identified
+MOT-MVF-001,第一遍完成,search,1,origin paper not identified
+IMG-TACT-001,第一遍完成,search,1,
+IMG-OLF-001,第一遍完成,search,2,first_source is a secondary citation (N06); new marker MK.BOLD_olfactory_cortex pending
+STM-TMSFMRI-001,第一遍完成,search,1,
+STM-TAVNS-001,第一遍完成,search,1,
+STM-ADBS-001,第一遍完成,search,1,lead title+URL only; new marker MK.subthalamic_beta pending
+STM-TI-001,第一遍完成,search,1,lead lacks authors/year
+STM-VIB-001,第一遍完成,search,1,origin (Naito 1999) not confirmed
+STM-CLAS-001,第一遍完成,search,1,family (stimulation vs state) to confirm
+STM-GVS-001,第一遍完成,search,1,new marker MK.BOLD_vestibular_cortex pending
+STM-PHTMS-001,第一遍完成,search,1,

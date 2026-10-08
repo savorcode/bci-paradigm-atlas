@@ -1,0 +1,58 @@
+schema_version: '0.2'
+id: EMO-FILM-001
+class: EMO-FILM
+name:
+  en: Film-clip discrete emotion elicitation
+  zh: 影片片段离散情绪诱发
+aliases:
+- film-clip emotion induction
+- movie-induced emotion
+- emotional film elicitation
+- music-video emotion elicitation
+- music video affect induction
+- music-evoked emotion
+family: emotion
+bci_category:
+- passive
+- none
+recording_modality:
+- EEG
+stimulus_modality:
+- naturalistic
+- visual
+- auditory
+markers:
+- MK.frontal_alpha_asymmetry
+- MK.affective_band_power
+description:
+  en: Participants watch validated film clips, each chosen to elicit one discrete emotion such as amusement, sadness, fear
+    or disgust, or a neutral state, and report their emotional experience after each clip. Sustained affective states are
+    indexed by frontal alpha asymmetry and by band-power patterns across frequency bands.
+  zh: 被试观看经过验证的影片片段，每段用于诱发一种离散情绪（如愉悦、悲伤、恐惧、厌恶）或中性状态，每段之后报告情绪体验。持续的情绪状态以额叶 α 不对称与各频段功率模式为指标。
+protocol:
+  classes:
+  - film clips targeting discrete emotions (one target emotion per clip)
+  - neutral film clips
+  cue: validated short film clips, each selected to elicit one discrete emotion, followed by self-report
+  paradigm_timing: block
+  feedback: none
+  distinguishing: 'Standard configuration (earliest published or canonical; D-057 -001): standardised film set targeting discrete
+    emotions with self-report after each clip (lead R0918, Cognition and Emotion, doi 10.1080/02699939508408966; authors not
+    in literature.csv). Differs from EMO-FILM-002 (music videos with dimensional ratings), -003 (three valence classes) and
+    -004 (four emotion classes).'
+first_source:
+  citation: Gross JJ, Levenson RW. Emotion elicitation using films. Cognition & Emotion. 1995;9(1):87-108.
+  doi: 10.1080/02699939508408966
+  year: 1995
+  verified: false
+interop:
+  bids_task: emotionfilm
+notes: 'Lead refs (curation/literature.csv): R0853 [method], R0909 [review], R0918 [first_source_candidate], R1036 [method],
+  R1069 [review], R0862 [review; via merged EMO-MUS-001], R1079 [review; via merged EMO-MUS-001]. Name extended per D-018.
+  SEED dataset paper lead: ''Investigating critical frequency bands and channels for EEG-based emotion recognition with deep
+  neural networks'' (title only in candidates.csv). Lead R0918 has no authors/year in literature.csv. First-pass skeleton
+  (curator_e, 2026-10-03); all sources unverified. Sprint 2 (curator_e, 2026-10-03): protocol block added per D-057; see curation/work/pkg_E/sprint2/split_log.csv.
+  Sprint 3 (curator_d, 2026-10-05): bibliography corrected (Crossref, 2026-10-05): authors, year, volume, issue, pages added.'
+status: draft
+contributors:
+- curator_e

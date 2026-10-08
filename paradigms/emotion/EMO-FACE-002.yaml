@@ -1,0 +1,49 @@
+schema_version: '0.2'
+id: EMO-FACE-002
+class: EMO-FACE
+name:
+  en: Emotional face matching task (Hariri)
+  zh: 情绪面孔匹配任务（Hariri）
+aliases:
+- Hariri face matching task
+- faces-shapes matching task
+- emotion processing fMRI task
+family: emotion
+bci_category:
+- none
+recording_modality:
+- fMRI
+stimulus_modality:
+- visual
+markers:
+- MK.BOLD_amygdala
+description:
+  en: In blocks, participants choose which of two faces at the bottom of the screen matches the expression of a face at the
+    top (angry or fearful faces), alternating with blocks in which they match geometric shapes. Face blocks increase amygdala
+    BOLD relative to shape blocks.
+  zh: 以组块形式进行：被试从屏幕下方两张面孔中选出与上方面孔表情（愤怒或恐惧）相同的一张，与匹配几何图形的组块交替进行。与图形组块相比，面孔组块增强杏仁核 BOLD。
+protocol:
+  n_classes: 2
+  classes:
+  - emotional face matching
+  - shape matching
+  cue: triads of angry or fearful faces, or of geometric shapes, with a task cue before each block
+  paradigm_timing: block
+  feedback: none
+  distinguishing: 'Criteria 1 and 3 versus EMO-FACE-001: blocked face-versus-shape matching contrast instead of event-related
+    emotional-versus-neutral faces (Hariri et al. 2002).'
+first_source:
+  citation: 'Hariri AR, Tessitore A, Mattay VS, Fera F, Weinberger DR. The amygdala response to emotional stimuli: a comparison
+    of faces and scenes. NeuroImage. 2002;17(1):317-323.'
+  doi: 10.1006/nimg.2002.1179
+  pmid: '12482086'
+  year: 2002
+  verified: false
+notes: 'Sources: sprint-2 S2-06 [=R1335] (search result https://pubmed.ncbi.nlm.nih.gov/12482086/ for the title and PMID;
+  the page itself returned a captcha) and https://cognitiveatlas.org/task/id/trm_550b5b066d37b/ (block timing: 6-trial blocks,
+  2000 ms stimuli, 3000 ms cue, 21 s blocks; authors). Whether Hariri et al. 2002 is the first face-matching publication is
+  not confirmed. New concrete paradigm (curator_e, sprint 2, 2026-10-03, D-057); all sources unverified. Sprint 3 (curator_d,
+  2026-10-05): bibliography corrected (OpenAlex, 2026-10-05): doi, volume, issue, pages added.'
+status: draft
+contributors:
+- curator_e

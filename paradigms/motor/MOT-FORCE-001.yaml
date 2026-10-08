@@ -1,0 +1,55 @@
+schema_version: '0.2'
+id: MOT-FORCE-001
+class: MOT-FORCE
+name:
+  en: Isometric force control
+  zh: 等长力控制
+aliases:
+- isometric contraction
+- force tracking
+- corticomuscular coherence task
+- CMC
+family: motor
+bci_category:
+- none
+recording_modality:
+- EEG
+- MEG
+stimulus_modality:
+- motor_execution
+- visual
+markers:
+- MK.SMR_ERD
+- MK.corticomuscular_coherence
+description:
+  en: >-
+    Participants maintain or track a target force with an isometric muscle contraction (e.g. pinch or wrist extension) while
+    EEG/MEG and surface EMG are recorded. Sustained contraction is accompanied by beta-band coherence between contralateral
+    motor cortex and the active muscle, together with modulation of sensorimotor beta power.
+  zh: 被试以等长收缩（如捏力或伸腕）维持或跟踪目标力，同时记录 EEG/MEG 和表面肌电。持续收缩期间，对侧运动皮层与活动肌肉之间出现 β 频段相干，并伴随感觉运动 β 功率的调制。
+protocol:
+  n_classes: 1
+  classes:
+  - sustained isometric contraction
+  cue: instruction to hold a steady contraction
+  paradigm_timing: block
+  distinguishing: >-
+    Standard configuration (earliest published) / 标准配置（最早发表）: maintained isometric contraction with simultaneous EEG/MEG and
+    EMG for corticomuscular coherence (R1050). Feedback mode (force display or none) to be checked against the original. No
+    sibling protocol yet.
+first_source:
+  citation: >-
+    Conway BA, Halliday DM, Farmer SF, Shahani U, Maas P, Weir AI, Rosenberg JR. Synchronization between motor cortex and
+    spinal motoneuronal pool during the performance of a maintained motor task in man. The Journal of Physiology. 1995;489(3):917-924.
+  doi: 10.1113/jphysiol.1995.sp021104
+  pmid: '8788955'
+  year: 1995
+  verified: false
+interop:
+  bids_task: isometricforce
+notes: >-
+  Leads: R0762, R0881, R0952, R1050. Memory leads in task sheet: R1050 believed Conway et al. 1995 J Physiol; R0881 believed
+  Salenius et al. 1997 J Neurophysiol (unverified). bibliography corrected (OpenAlex, 2026-10-05)
+status: draft
+contributors:
+- curator_b

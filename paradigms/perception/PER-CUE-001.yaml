@@ -1,0 +1,54 @@
+schema_version: '0.2'
+id: PER-CUE-001
+class: PER-CUE
+name:
+  en: Posner spatial cueing
+  zh: Posner 空间线索
+aliases:
+- Posner Task
+- Posner cueing task
+- Spatial Cueing Task
+- endogenous/exogenous cueing
+- spatial cueing
+family: perception
+bci_category:
+- none
+recording_modality:
+- EEG
+stimulus_modality:
+- visual
+markers:
+- MK.P1_visual
+- MK.N1_visual
+description:
+  en: A central symbolic cue (an arrow) indicates where a target is likely to appear; on valid trials the target appears at
+    the cued location, on invalid trials at the other location, with neutral cues as baseline. Validly cued targets are detected
+    faster, and targets at attended locations elicit enlarged visual P1 and N1 components.
+  zh: 中央符号线索（箭头）提示靶刺激可能出现的位置；有效试次中靶出现在被提示位置，无效试次中出现在另一位置，中性线索作为基线。被有效提示的靶检测更快，被注意位置的靶诱发更大的视觉 P1 与 N1。
+protocol:
+  n_classes: 3
+  classes:
+  - valid
+  - invalid
+  - neutral
+  cue: central symbolic cue (arrow) predicting the target location (endogenous)
+  stimulus_coding: 外周闪光线索（外源性）拆为 PER-CUE-002（准则 2）。
+  paradigm_timing: synchronous
+  feedback: none
+  distinguishing: 标准配置（最早发表，即 first_source）：中央符号（箭头）线索，有效/无效/中性三种条件（内源性线索）。同类其他具体范式：PER-CUE-002（区别见各自 distinguishing；维护者 sprint
+    2 QA 更正）。
+first_source:
+  citation: Posner, M. I. Orienting of attention. Quarterly Journal of Experimental Psychology. 1980.
+  doi: 10.1080/00335558008248231
+  pmid: '7367577'
+  year: 1980
+  verified: false
+interop:
+  bids_task: posner
+notes: 'HED task page: https://www.hedtags.org/hed-task/tasks/hedtsk_posner_spatial_cueing.html. Leads used: R0049, R0050,
+  R1021, R0221, R0320, R0557, R0618, R0766, R0793. [curator_a sprint 2, 2026-10-03] D-057: -001 = endogenous (central symbolic)
+  cue; the exogenous peripheral-cue version is PER-CUE-002. [curator_e sprint 3, 2026-10-05] bibliography confirmed (Crossref,
+  2026-10-05).'
+status: draft
+contributors:
+- curator_a

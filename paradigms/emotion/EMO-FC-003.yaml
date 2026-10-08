@@ -1,0 +1,50 @@
+schema_version: '0.2'
+id: EMO-FC-003
+class: EMO-FC
+name:
+  en: Two-day fear conditioning with extinction recall
+  zh: 两日恐惧条件化与消退回忆
+aliases:
+- extinction recall paradigm
+family: emotion
+bci_category:
+- none
+recording_modality:
+- fMRI
+- EEG
+stimulus_modality:
+- visual
+- auditory
+- electrical_stimulation
+markers:
+- MK.BOLD_amygdala
+- MK.frontal_midline_theta
+description:
+  en: On day 1 a CS+ is paired with an aversive stimulus and then extinguished; on a later day the CS is presented again without
+    shocks to test recall of extinction. Extinction recall involves ventromedial prefrontal and amygdala activity and frontomedial
+    theta.
+  zh: 第一天，CS+ 与厌恶刺激配对并随后消退；在之后的某一天再次呈现 CS（不给电击），检验消退记忆的回忆。消退回忆涉及腹内侧前额叶与杏仁核活动及额中线 θ。
+protocol:
+  n_classes: 2
+  classes:
+  - CS+
+  - CS-
+  cue: visual CS with shock US on day 1; same CS without US at the recall test
+  paradigm_timing: synchronous
+  feedback: none
+  distinguishing: 'Criterion 3 versus EMO-FC-001: multi-session structure with acquisition and extinction on one day and an
+    extinction-recall test on a later day (leads R0276, R0933).'
+first_source:
+  citation: 'Phelps EA, Delgado MR, Nearing KI, LeDoux JE. Extinction learning in humans: role of the amygdala and vmPFC.
+    Neuron. 2004;43(6):897-905.'
+  doi: 10.1016/j.neuron.2004.08.042
+  pmid: '15363399'
+  year: 2004
+  verified: false
+notes: 'Lead refs: R0276 [key_reference] (provisional first_source: earliest lead in literature.csv with a separate-day extinction
+  test, origin not confirmed), R0933 [method] (frontomedial theta during extinction recall, EEG), R0413 [key_reference]. MK.frontal_midline_theta
+  (pkg B owner) used for R0933. New concrete paradigm (curator_e, sprint 2, 2026-10-03, D-057); all sources unverified. Sprint
+  3 (curator_d, 2026-10-05): bibliography corrected (Crossref, 2026-10-05): volume, issue, pages added.'
+status: draft
+contributors:
+- curator_e

@@ -1,0 +1,48 @@
+schema_version: '0.2'
+id: SSR-NSSEP-001
+class: SSR-NSSEP
+name:
+  en: Nociceptive steady-state evoked potentials
+  zh: 伤害性稳态诱发电位
+aliases:
+- nociceptive SS-EP
+- periodic thermal stimulation
+family: steady_state
+bci_category:
+- none
+recording_modality:
+- EEG
+stimulus_modality:
+- somatosensory
+markers:
+- MK.SSEP_nociceptive
+description:
+  en: Rapid periodic thermal (laser) stimulation of the skin, for example at 7 Hz, activates nociceptors repeatedly. The EEG
+    shows a steady-state response at the stimulation frequency with a topography different from non-nociceptive vibrotactile
+    steady-state responses.
+  zh: 以快速周期性热（激光）刺激皮肤（如 7 Hz），反复激活伤害感受器。脑电在刺激频率处出现稳态响应，其头皮分布不同于非伤害性振动触觉稳态响应。
+protocol:
+  n_classes: 1
+  classes:
+  - periodic laser heat stimulation
+  cue: rapid periodic thermal (laser) stimulation of the skin (e.g. 7 Hz)
+  paradigm_timing: continuous
+  feedback: none
+  distinguishing: 标准配置（最早发表，即 first_source）：皮肤快速周期性激光热刺激。本类暂无其他具体范式（no sibling protocol yet）。
+first_source:
+  citation: Mouraux A, Iannetti GD, Colon E, Nozaradan S, Legrain V, Plaghki L. Nociceptive steady-state evoked potentials
+    elicited by rapid periodic thermal stimulation of cutaneous nociceptors. The Journal of Neuroscience. 2011.
+  doi: 10.1523/JNEUROSCI.3977-10.2011
+  year: 2011
+  verified: false
+interop:
+  bids_task: nociceptivessep
+notes: 'Leads used: search SA23/SA28, search SA23b. first_source found by search in this sprint (SA23/SA28), not from the
+  lead list. New candidate proposed by package A on 2026-10-03 (curation/work/pkg_A/new_candidates.csv); registered in curation/candidates.csv
+  as C225 (D-053, milestone M1). Requested marker MK.SSEP_nociceptive; steady-state counterpart of PER-LEP-001, distinct from SSR-SSSEP-001
+  (non-nociceptive). [curator_a sprint 2, 2026-10-03] D-057: protocol block added for the canonical configuration; no other
+  concrete paradigm identified for this class in sprint 2. [curator_e sprint 3, 2026-10-05] bibliography confirmed (OpenAlex,
+  2026-10-05).'
+status: draft
+contributors:
+- curator_a

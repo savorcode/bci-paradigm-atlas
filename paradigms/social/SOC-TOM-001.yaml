@@ -1,0 +1,68 @@
+schema_version: '0.2'
+id: SOC-TOM-001
+class: SOC-TOM
+name:
+  en: Theory of mind (false belief)
+  zh: 心理理论（错误信念）
+aliases:
+- Sally-Anne Task
+- Theory of Mind Task
+- ToM Task
+- ToM localizer
+- false belief vs false photograph
+- false-belief task
+family: social
+bci_category:
+- none
+recording_modality:
+- fMRI
+stimulus_modality:
+- visual
+- auditory
+markers:
+- MK.BOLD_TPJ
+description:
+  en: Participants watch or listen to a short story in which a character does not see an object being moved and therefore
+    holds a false belief about its location, and then answer a question about where the character will look, alongside reality
+    and memory control questions. Belief attribution increases BOLD in the temporoparietal junction.
+  zh: 被试观看或聆听一个短故事：主人公没有看到物品被移走，因而对其位置持有错误信念；随后回答主人公会到哪里寻找，以及现实与记忆控制问题。信念归因增强颞顶联合区 BOLD。
+protocol:
+  n_classes: 2
+  classes:
+  - false-belief question
+  - reality or memory control question
+  cue: acted-out or narrated story with a location change unseen by the protagonist
+  paradigm_timing: synchronous
+  feedback: none
+  distinguishing: 'Standard configuration (earliest published or canonical; D-057 -001): unexpected-transfer false-belief
+    story with control questions (Wimmer & Perner 1983, R0060). Differs from SOC-TOM-002 (fMRI localizer contrasting false-belief
+    and false-photograph stories).'
+first_source:
+  citation: 'Wimmer, H., & Perner, J. Beliefs about beliefs: Representation and constraining function of wrong beliefs in
+    young children''s understanding of deception. Cognition, 13(1), 103–128. 1983.'
+  doi: 10.1016/0010-0277(83)90004-5
+  pmid: '6681741'
+  year: 1983
+  verified: false
+variants:
+- name: Sally-Anne doll version of the unexpected-transfer task
+  source:
+    citation: Baron-Cohen S, Leslie AM, Frith U. Does the autistic child have a "theory of mind"? Cognition. 1985;21(1):37-46.
+    doi: 10.1016/0010-0277(85)90022-8
+    pmid: '2934210'
+    year: 1985
+    verified: false
+  note: 'Same story structure with dolls; parameter-level (D-057). Lead R0068. Sprint 3 (curator_d, 2026-10-05): bibliography
+    corrected (OpenAlex, 2026-10-05): volume, issue, pages added.'
+interop:
+  bids_task: tom
+notes: 'HED task page: https://www.hedtags.org/hed-task/tasks/hedtsk_false_belief.html. Lead refs (curation/literature.csv):
+  R0060 [key_reference], R0068 [key_reference], R0207 [review], R0260 [first_source_candidate;key_reference], R0308 [further_reference],
+  R0435 [further_reference], R0561 [further_reference], R0604 [review], R0741 [review], R0875 [review], R0967 [method], R1074
+  [review]. first_source R0060 is the behavioural origin in children; R0260 (Saxe & Kanwisher 2003) is the neuroimaging first_source
+  candidate and is recorded as a variant. Early PET work (Fletcher et al. 1995) is a memory-only lead. First-pass skeleton
+  (curator_e, 2026-10-03); all sources unverified. Sprint 2 (curator_e, 2026-10-03): protocol block added per D-057; see curation/work/pkg_E/sprint2/split_log.csv.
+  Sprint 3 (curator_d, 2026-10-05): bibliography confirmed (OpenAlex, 2026-10-05).'
+status: draft
+contributors:
+- curator_e

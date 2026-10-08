@@ -1,0 +1,59 @@
+schema_version: '0.2'
+id: MOT-ME-004
+class: MOT-ME
+name:
+  en: Paced finger tapping (motor localizer)
+  zh: 节律提示手指敲击（运动定位任务）
+aliases:
+- finger tapping
+- finger tapping localizer
+- FTT
+- Tapping Task
+- paced finger tapping
+family: motor
+bci_category:
+- none
+recording_modality:
+- fMRI
+- EEG
+- fNIRS
+stimulus_modality:
+- motor_execution
+- visual
+- auditory
+markers:
+- MK.BOLD_motor_network
+description:
+  en: >-
+    Participants tap a finger at a rate set by a visual or auditory pacing stimulus in blocks alternating with rest, as a
+    standard motor localizer. Tapping blocks activate contralateral M1, SMA, premotor cortex and cerebellum.
+  zh: 被试按视觉或听觉节律刺激设定的频率敲击手指，敲击组块与休息组块交替，是标准的运动定位任务。敲击组块激活对侧 M1、辅助运动区、前运动区和小脑。
+protocol:
+  n_classes: 2
+  classes:
+  - paced tapping
+  - rest
+  cue: visual or auditory pacing stimulus
+  paradigm_timing: block
+  feedback: none
+  distinguishing: >-
+    Criteria 2 and 3 vs MOT-ME-001: a rhythmic pacing stimulus and a block design instead of a single cued movement per trial.
+    Differs from MOT-SMS (class: timing precision relative to the beat) in that only the motor activation is analysed.
+first_source:
+  citation: >-
+    Jäncke L, Loose R, Lutz K, Specht K, Shah NJ. Cortical activations during paced finger-tapping applying visual and auditory
+    pacing stimuli. Cognitive Brain Research. 2000;10(1-2):51-66.
+  doi: 10.1016/s0926-6410(00)00022-7
+  pmid: '10978692'
+  year: 2000
+  verified: false
+interop:
+  bids_task: fingertapping
+notes: >-
+  HED task page: https://www.hedtags.org/hed-task/tasks/hedtsk_finger_tapping.html. Leads: R0189 (first_source), R0145, R0280,
+  R0405 (ALE meta-analysis of tapping variations). Converted from the MOT-ME-001 variant 'Paced finger tapping' (seed/curator
+  variant listed in D-057). Visual vs auditory pacing is kept as a parameter (same pacing scheme). R0145 (1997) predates R0189
+  but is a timing study; origin of the localizer not established. bibliography corrected (Crossref, 2026-10-05)
+status: draft
+contributors:
+- curator_b

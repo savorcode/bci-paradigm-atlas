@@ -1,0 +1,53 @@
+schema_version: '0.2'
+id: CTL-AUT-001
+class: CTL-AUT
+name:
+  en: Alternative uses task (divergent thinking)
+  zh: 替代用途任务（发散思维）
+aliases:
+- AUT
+- Alternate uses task
+- Unusual uses test
+- Divergent thinking task
+family: control
+bci_category:
+- none
+recording_modality:
+- EEG
+- fMRI
+stimulus_modality:
+- visual
+- cognitive_task
+markers:
+- MK.alpha_posterior
+description:
+  en: Participants are given an everyday object and generate as many original uses for it as possible within a time limit,
+    compared with a less creative control task. Creative idea generation is accompanied by task-related increases in alpha
+    power at frontal and posterior sites.
+  zh: 给被试一个日常物品，要求在限定时间内想出尽可能多的新颖用途，并与创造性较低的对照任务比较。创造性观点生成伴随额区和后部 α 功率的任务相关升高。
+protocol:
+  n_classes: 2
+  classes:
+  - alternative-uses generation
+  - control task
+  cue: name of an everyday object presented visually; covert generation of uses within a time limit
+  paradigm_timing: synchronous
+  distinguishing: 标准配置（最早神经记录线索）：给出日常物品，限时生成新用途，与较低创造性要求的对照任务比较（Fink et al. 2009，R1151）。本包仅此一个配置。
+first_source:
+  citation: 'Fink A, Grabner RH, Benedek M, Reishofer G, Hauswirth V, Fally M, Neuper C, Ebner F, Neubauer AC. The creative
+    brain: Investigation of brain activity during creative problem solving by means of EEG and FMRI. Human Brain Mapping.
+    2009;30(3):734-748.'
+  doi: 10.1002/hbm.20538
+  year: 2009
+  verified: false
+interop:
+  bids_task: aut
+notes: 'Leads used: S_FINK2009 (search: https://link.springer.com/article/10.3758/s13415-016-0465-9); S_FINK2017 (search:
+  https://link.springer.com/article/10.3758/s13415-016-0465-9). first_source lead: S_FINK2009. First source is the earliest
+  neural lead seen (cited in S_FINK2017); behavioural origin (Guilford) not sourced. Alpha increase is frontal as well as
+  posterior; MK.alpha_posterior follows the registry choice for CTL-RAT-001 (see worklog). Pass 1 skeleton (curator_c, 2026-10-03);
+  all sources unverified. Sprint 2 (D-057): protocol added; single configuration, no split. bibliography corrected (Crossref,
+  2026-10-05)'
+status: draft
+contributors:
+- curator_c

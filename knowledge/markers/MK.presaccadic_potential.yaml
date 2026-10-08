@@ -1,0 +1,10 @@
+schema_version: "0.2"
+id: MK.presaccadic_potential
+name: {en: Presaccadic potential, zh: 眼跳前电位}
+aliases: [presaccadic negativity, presaccadic positivity, saccade-related potential]
+type: erp_component
+recording_modality: [EEG]
+description: {en: 'Cortical potentials preceding saccade onset, obtained by averaging EEG time-locked to the onset of eye movements; they include slow negativities related to saccade preparation and a positivity shortly before the saccade.', zh: 以眼动起始为锁时点平均脑电得到的眼跳起始前皮层电位，包括与眼跳准备相关的缓慢负电位及眼跳前不久出现的正电位。}
+notes: Must be separated from ocular and extraocular muscle artefacts (e.g. the saccadic spike potential). Signature not filled pending sources. Generators and indexes to be added in the second pass.
+status: draft
+contributors: [maintainer, curator_b]

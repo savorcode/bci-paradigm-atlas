@@ -1,0 +1,52 @@
+schema_version: '0.2'
+id: SOC-SFB-001
+class: SOC-SFB
+name:
+  en: Social evaluative feedback (social judgment paradigm)
+  zh: 社会评价反馈（社会判断范式）
+aliases:
+- social judgment paradigm
+- social feedback task
+- peer evaluation paradigm
+family: social
+bci_category:
+- none
+recording_modality:
+- fMRI
+stimulus_modality:
+- visual
+markers:
+- MK.BOLD_dACC
+description:
+  en: Participants are led to believe that peers have judged whether they like them, and receive acceptance or rejection feedback
+    that is consistent or inconsistent with their expectations. Dorsal anterior cingulate BOLD tracks expectancy violation,
+    whereas ventral anterior cingulate responds to the valence of the social feedback.
+  zh: 被试被告知同伴已判断是否喜欢他们，并接收与其预期一致或不一致的接纳或拒绝反馈。背侧前扣带 BOLD 反映预期违背，腹侧前扣带则对社会反馈的效价作出反应。
+protocol:
+  n_classes: 4
+  classes:
+  - expected acceptance
+  - unexpected acceptance
+  - expected rejection
+  - unexpected rejection
+  cue: peer photograph with the participant's expectation, followed by acceptance or rejection feedback
+  paradigm_timing: synchronous
+  feedback: discrete
+  distinguishing: 'Standard configuration (earliest published or canonical; D-057 -001): social judgment paradigm with expectancy-crossed
+    feedback (Somerville et al. 2006, R1188).'
+first_source:
+  citation: Somerville LH, Heatherton TF, Kelley WM. Anterior cingulate cortex responds differentially to expectancy violation
+    and social rejection. Nature Neuroscience 9:1007-1008. 2006.
+  doi: 10.1038/nn1728
+  year: 2006
+  verified: false
+interop:
+  bids_task: socialfeedback
+notes: 'Sources found by curator_e (curation/work/pkg_E/search_log.md): S16 = https://www.nature.com/articles/nn1728. New
+  candidate (curator_e). Related to SOC-CYB-001 (exclusion) but uses explicit evaluative feedback; ERP (FRN/P3) versions not
+  surfaced. First-pass skeleton (curator_e, 2026-10-03); all sources unverified. Sprint 2 (curator_e, 2026-10-03): protocol
+  block added per D-057; see curation/work/pkg_E/sprint2/split_log.csv. Sprint 3 (curator_d, 2026-10-05): bibliography confirmed
+  (OpenAlex, 2026-10-05).'
+status: draft
+contributors:
+- curator_e

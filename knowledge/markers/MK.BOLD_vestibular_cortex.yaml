@@ -1,0 +1,11 @@
+schema_version: "0.2"
+id: MK.BOLD_vestibular_cortex
+name: {en: Vestibular cortex BOLD, zh: 前庭皮层 BOLD}
+aliases: [parieto-insular vestibular cortex activation, PIVC BOLD]
+type: hemodynamic
+recording_modality: [fMRI]
+signature: {topography: 'posterior insula / parieto-insular vestibular cortex, temporoparietal regions'}
+description: {en: 'Haemodynamic response in multisensory vestibular cortex, centred on the posterior insula and parieto-insular region, during vestibular stimulation such as galvanic or caloric stimulation.', zh: 在直流电或冷热水等前庭刺激时，以后岛叶和顶-岛区域为中心的多感觉前庭皮层的血流动力学响应。}
+notes: Signature values are textbook-level characteristics and await source checking (first pass, curator_b). New marker requested by package B for STM-GVS-001 (marker_requests.csv); not yet in curation/registry/markers.csv. Generators and indexes to be added in the second pass.
+status: draft
+contributors: [curator_b]

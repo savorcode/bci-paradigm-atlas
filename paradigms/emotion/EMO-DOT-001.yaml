@@ -1,0 +1,53 @@
+schema_version: '0.2'
+id: EMO-DOT-001
+class: EMO-DOT
+name:
+  en: Dot-probe task
+  zh: 点探测注意偏向任务
+aliases:
+- Attentional Probe
+- Visual Probe Task
+- attentional bias task
+- dot-probe
+family: emotion
+bci_category:
+- none
+recording_modality:
+- EEG
+- fMRI
+stimulus_modality:
+- visual
+markers:
+- MK.N2pc
+- MK.P1_visual
+description:
+  en: Two cues, one emotional (e.g. threatening) and one neutral, appear briefly at two locations, and a probe then replaces
+    one of them; faster responses to probes at the emotional location index attentional bias. In EEG, the emotional cue elicits
+    an N2pc and modulates the P1 to the subsequent probe.
+  zh: 两个线索（一个情绪性如威胁性、一个中性）短暂呈现于两个位置，随后探测刺激替换其中之一；对出现在情绪线索位置的探测刺激反应更快，即为注意偏向。在脑电中，情绪线索诱发 N2pc，并调制随后探测刺激的 P1。
+protocol:
+  n_classes: 2
+  classes:
+  - probe at emotional-cue location
+  - probe at neutral-cue location
+  cue: pair of words (one threat-related, one neutral) followed by a dot probe at one of the two locations
+  paradigm_timing: synchronous
+  feedback: none
+  distinguishing: 'Standard configuration (earliest published or canonical; D-057 -001): word-pair dot-probe task (MacLeod,
+    Mathews & Tata 1986, R0072).'
+first_source:
+  citation: MacLeod, C., Mathews, A., & Tata, P. Attentional bias in emotional disorders. Journal of Abnormal Psychology,
+    95(1), 15–20. 1986.
+  doi: 10.1037/0021-843x.95.1.15
+  year: 1986
+  verified: false
+interop:
+  bids_task: dotprobe
+notes: 'HED task page: https://www.hedtags.org/hed-task/tasks/hedtsk_dot_probe.html. Lead refs (curation/literature.csv):
+  R0072 [key_reference], R0157 [key_reference], R0333 [further_reference], R0388 [review], R0643 [further_reference], R0660
+  [further_reference], R0757 [review]. R0333, R0643 and R0757 report reliability problems of the behavioural bias score. First-pass
+  skeleton (curator_e, 2026-10-03); all sources unverified. Sprint 2 (curator_e, 2026-10-03): protocol block added per D-057;
+  see curation/work/pkg_E/sprint2/split_log.csv. Sprint 3 (curator_d, 2026-10-05): bibliography confirmed (Crossref, 2026-10-05).'
+status: draft
+contributors:
+- curator_e

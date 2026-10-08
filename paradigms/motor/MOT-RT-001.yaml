@@ -1,0 +1,56 @@
+schema_version: '0.2'
+id: MOT-RT-001
+class: MOT-RT
+name:
+  en: Simple / choice reaction time
+  zh: 简单/选择反应时
+aliases:
+- choice reaction time
+- simple reaction time
+- Go/choice RT
+- LRP paradigm
+family: motor
+bci_category:
+- none
+recording_modality:
+- EEG
+- MEG
+stimulus_modality:
+- visual
+- auditory
+- motor_execution
+markers:
+- MK.LRP
+description:
+  en: >-
+    Participants respond as quickly as possible to a stimulus with a single response (simple RT) or select between left- and
+    right-hand responses according to stimulus identity (choice RT). The lateralized readiness potential, the contralateral-minus-ipsilateral
+    difference over motor cortex, indexes the timing and direction of response preparation.
+  zh: 被试对刺激尽快作出单一反应（简单反应时），或依据刺激身份在左右手反应之间选择（选择反应时）。偏侧化准备电位（运动皮层上对侧减同侧的差异波）反映反应准备的时间进程与方向。
+protocol:
+  n_classes: 2
+  classes:
+  - left-hand response
+  - right-hand response
+  cue: visual imperative stimulus mapped to a response hand
+  paradigm_timing: synchronous
+  feedback: none
+  distinguishing: >-
+    Standard configuration (earliest published) / 标准配置（最早发表）: two-choice reaction time with left/right-hand responses, LRP
+    (Gratton et al. 1988). A simple-RT protocol (single response) is proposed in split_log (no checked lead).
+first_source:
+  citation: >-
+    Gratton G, Coles MGH, Sirevaag EJ, Eriksen CW, Donchin E. Pre- and post-stimulus activation of response channels: a psychophysiological
+    analysis. Journal of Experimental Psychology: Human Perception and Performance 14(3):331-344. 1988.
+  doi: 10.1037/0096-1523.14.3.331
+  year: 1988
+  verified: false
+interop:
+  bids_task: reactiontime
+notes: >-
+  Leads: R0859, R0944. Search sources (curation/work/pkg_B/search_log.md): S03 https://digitalcommons.usf.edu/psy_facpub/292.
+  first_source found by search (S03); other memory leads in task sheet: de Jong et al. 1988; Coles 1989 Psychophysiology;
+  Eimer 1998 review (unverified). Relationship to CTL-SIM-001 (also uses MK.LRP). bibliography confirmed (OpenAlex, 2026-10-05)
+status: draft
+contributors:
+- curator_b

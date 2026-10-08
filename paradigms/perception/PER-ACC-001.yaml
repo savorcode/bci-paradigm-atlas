@@ -1,0 +1,52 @@
+schema_version: '0.2'
+id: PER-ACC-001
+class: PER-ACC
+name:
+  en: Acoustic change complex
+  zh: 声学变化复合波
+aliases:
+- ACC
+- acoustic change complex
+family: perception
+bci_category:
+- none
+recording_modality:
+- EEG
+stimulus_modality:
+- auditory
+markers:
+- MK.N1_auditory
+- MK.P2_auditory
+description:
+  en: A change is introduced within an ongoing sound (for example in frequency, intensity or a vowel transition) and is presented
+    in every trial without an oddball structure. The change evokes an N1-P2 complex, the acoustic change complex, which indicates
+    cortical detection of the change and is used clinically, for example in cochlear-implant users.
+  zh: 在持续的声音中引入变化（如频率、强度或元音过渡的变化），每个试次都出现该变化而不采用 oddball 结构。变化诱发 N1–P2 复合波，即声学变化复合波，表明皮层检测到了变化，临床上用于如人工耳蜗使用者。
+protocol:
+  n_classes: 1
+  classes:
+  - acoustic change within an ongoing sound
+  cue: sound containing a change (frequency, intensity or vowel transition) in every trial
+  stimulus_coding: D-041 若并入 PER-AEP，按 D-057 在 PER-AEP 下取新序号。本类暂无其他具体范式（no sibling protocol yet）。
+  paradigm_timing: synchronous
+  feedback: none
+  distinguishing: 标准配置（最早发表，即 first_source）：每个试次的持续声音中都含一次声学变化，无 oddball 结构。本类暂无其他具体范式（no sibling protocol yet）。
+first_source:
+  citation: Ostroff JM, Martin BA, Boothroyd A. Cortical evoked response to acoustic change within a syllable. Ear Hear. 1998;19(4):290-297.
+  doi: 10.1097/00003446-199808000-00004
+  year: 1998
+  verified: false
+interop:
+  bids_task: acc
+notes: 'Leads used: search SA10a. first_source: no origin source identified in this pass (blocker, see curation/work/pkg_A/status.csv).
+  New candidate proposed by package A on 2026-10-03 (curation/work/pkg_A/new_candidates.csv); registered in curation/candidates.csv
+  as C212 (D-053, milestone M1). Uses registry markers MK.N1_auditory and MK.P2_auditory; could alternatively be treated as a variant
+  of PER-AEP-001 (for the meeting). [curator_a sprint 2, 2026-10-03] D-057: protocol block added for the canonical configuration;
+  no other concrete paradigm identified for this class in sprint 2. [curator_e sprint 3, 2026-10-05] candidate origin found
+  by bibliographic search (OpenAlex, 2026-10-05); content unverified. [maintainer sprint 3, 2026-10-07] bibliography confirmed
+  (OpenAlex, 2026-10-05; origin candidate, content unverified). [maintainer sprint 3, 2026-10-07, D-073] origin candidate
+  recalled, record confirmed via OpenAlex.'
+status: draft
+contributors:
+- curator_a
+- curator_e

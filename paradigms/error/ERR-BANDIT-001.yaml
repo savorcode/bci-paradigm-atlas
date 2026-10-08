@@ -1,0 +1,63 @@
+schema_version: '0.2'
+id: ERR-BANDIT-001
+class: ERR-BANDIT
+name:
+  en: Multi-armed bandit
+  zh: 多臂老虎机（探索-利用）
+aliases:
+- Bandit Task
+- Explore-exploit task
+- K-Armed Bandit
+- MAB
+- Restless bandit
+- Volatile bandit
+- n-armed bandit
+family: error
+bci_category:
+- none
+recording_modality:
+- EEG
+- fMRI
+stimulus_modality:
+- visual
+markers:
+- MK.FRN
+- MK.BOLD_frontopolar
+description:
+  en: On each trial participants choose among several options (arms) whose reward payoffs drift or are uncertain, trading
+    off exploitation of the best-known option against exploration of others. Outcome feedback elicits the FRN/reward positivity,
+    and exploratory choices engage frontopolar cortex in fMRI.
+  zh: 每个试次中，被试在若干个回报会漂移或不确定的选项（摇臂）之间选择，在利用已知最佳选项与探索其他选项之间权衡。结果反馈诱发 FRN/奖赏正波，fMRI 中探索性选择激活额极皮层。
+trial_structure:
+  conditions:
+  - arm 1
+  - arm 2
+  - arm 3
+  - arm 4
+protocol:
+  n_classes: 4
+  classes:
+  - arm 1
+  - arm 2
+  - arm 3
+  - arm 4
+  cue: four visual options (slot machines) whose payoffs drift over trials
+  paradigm_timing: synchronous
+  feedback: discrete
+  distinguishing: 标准配置（最早发表）：四臂"不安定"老虎机，各臂报酬随时间漂移，每次选择后给出点数反馈（Daw et al. 2006，R0338）。本包仅此一个配置。
+first_source:
+  citation: Daw ND, O'Doherty JP, Dayan P, Seymour B, Dolan RJ. Cortical substrates for exploratory decisions in humans. Nature.
+    2006;441(7095):876-879.
+  doi: 10.1038/nature04766
+  pmid: '16778890'
+  year: 2006
+  verified: false
+interop:
+  bids_task: bandit
+notes: 'HED task page: https://www.hedtags.org/hed-task/tasks/hedtsk_multi_armed_bandit.html. Leads used: R0338; R0781; R0737.
+  first_source lead: R0338. Review: R0781. Pass 1 skeleton (curator_c, 2026-10-03); all sources unverified. Sprint 2 (D-057):
+  protocol added; single configuration (other bandit designs in R0737 not split for lack of evidence of a shared named protocol).
+  bibliography corrected (Crossref, 2026-10-05)'
+status: draft
+contributors:
+- curator_c

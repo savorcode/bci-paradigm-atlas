@@ -1,0 +1,46 @@
+schema_version: '0.2'
+id: SSR-FPAS-001
+class: SSR-FPAS
+name:
+  en: Fast periodic auditory stimulation
+  zh: 快速周期听觉刺激
+aliases:
+- FPAS
+- auditory frequency-tagging oddball
+family: steady_state
+bci_category:
+- none
+recording_modality:
+- EEG
+stimulus_modality:
+- auditory
+markers:
+- MK.FPAS_oddball
+description:
+  en: Short sounds are presented at a fast fixed rate, with sounds of a target category (for example voices) inserted at a
+    slower periodic rate. A response at the oddball frequency indicates category discrimination, analogous to visual FPVS.
+  zh: 以较快的固定速率呈现短声，并以较慢的周期速率插入目标类别的声音（如人声）。oddball 频率处的响应表明类别辨别，与视觉 FPVS 相类似。
+protocol:
+  n_classes: 2
+  classes:
+  - base-rate sounds
+  - oddball-category sounds (e.g. voices)
+  cue: sounds at a fast fixed rate with target-category sounds at a slower periodic rate
+  paradigm_timing: continuous
+  feedback: none
+  distinguishing: 标准配置（最早发表，即 first_source）：快速固定速率声音序列中按较慢周期插入目标类别声音。本类暂无其他具体范式（no sibling protocol yet）。
+first_source:
+  citation: Barbero F, Calce RP, Rossion B, Collignon O. Fast periodic auditory stimulation reveals a robust voice-selective
+    electrophysiological response in the human brain. B-Audio conference, Louvain-la-Neuve. 2019.
+  year: 2019
+  verified: false
+interop:
+  bids_task: fpas
+notes: 'Leads used: search SA24/SA29, search SA24b. first_source found by search in this sprint (SA24/SA29), not from the
+  lead list. New candidate proposed by package A on 2026-10-03 (curation/work/pkg_A/new_candidates.csv); registered in curation/candidates.csv
+  as C226 (D-053, milestone M1). Requested marker MK.FPAS_oddball (MK.FPVS_oddball is defined as visual). The meeting may instead
+  treat this as an auditory variant of SSR-FPVS-001. [curator_a sprint 2, 2026-10-03] D-057: protocol block added for the
+  canonical configuration; no other concrete paradigm identified for this class in sprint 2.'
+status: draft
+contributors:
+- curator_a

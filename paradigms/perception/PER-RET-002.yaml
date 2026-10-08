@@ -1,0 +1,51 @@
+schema_version: '0.2'
+id: PER-RET-002
+class: PER-RET
+name:
+  en: Population receptive field (pRF) mapping
+  zh: 群体感受野（pRF）映射
+aliases:
+- pRF mapping
+- population receptive field mapping
+- moving-bar retinotopy
+family: perception
+bci_category:
+- none
+recording_modality:
+- fMRI
+stimulus_modality:
+- visual
+markers:
+- MK.BOLD_visual_cortex
+description:
+  en: Apertures of high-contrast pattern, typically bars moving across the visual field in several directions with blank periods
+    (and also rings and wedges), are shown during fMRI. A model of each voxel's population receptive field (position and size)
+    is fitted to the time course, giving visual field maps together with receptive field size.
+  zh: 在 fMRI 中呈现高对比图案孔径，典型为沿多个方向扫过视野的条带并穿插空白期（也可用环和楔形）。对每个体素的时间进程拟合群体感受野模型（位置与大小），同时得到视野图与感受野大小。
+trial_structure:
+  conditions:
+  - bar sweeps in several directions
+  - mean-luminance blank periods
+protocol:
+  classes:
+  - visual field positions (model-based)
+  cue: aperture sequences (moving bars, rings, wedges) with blank periods
+  stimulus_coding: model-based aperture sequence (pRF)
+  paradigm_timing: continuous
+  feedback: none
+  distinguishing: 准则 2（编码方案）：基于模型拟合的孔径序列（含空白期），取代 -001 的相位编码行波；输出包含感受野大小。
+first_source:
+  citation: Dumoulin SO, Wandell BA. Population receptive field estimates in human visual cortex. NeuroImage. 2008;39(2):647-660.
+  doi: 10.1016/j.neuroimage.2007.09.034
+  year: 2008
+  verified: false
+interop:
+  bids_task: retinotopy
+notes: 'Lead: WebSearch S2A30 [=R1281] (several later pRF studies in the results, e.g. log-warped stimulus 2024, motion-defined
+  stimuli), Utrecht research portal record S2A31 (citation and abstract: responses to ring and wedge patterns at a series
+  of visual field locations; model of the population receptive field). The moving-bar aperture is the usual pRF stimulus in
+  later work (to be confirmed in the paper). Wikipedia Retinotopy (S2A11) has no method detail. R0334 (Wandell et al. 2005).
+  New in sprint 2. [curator_e sprint 3, 2026-10-05] bibliography confirmed (Crossref, 2026-10-05).'
+status: draft
+contributors:
+- curator_a

@@ -1,0 +1,42 @@
+schema_version: '0.2'
+id: CTL-RAT-001
+class: CTL-RAT
+name:
+  en: Remote associates test
+  zh: 远距离联想（创造力）
+aliases:
+- RAT
+- Remote Associates
+family: control
+bci_category:
+- none
+recording_modality:
+- EEG
+- fMRI
+stimulus_modality:
+- visual
+markers:
+- MK.alpha_posterior
+description:
+  en: Participants are shown three cue words and must find a fourth word that forms a compound or association with each of
+    them, often reporting whether the solution came by insight. Insight solutions are preceded by changes in posterior alpha
+    power.
+  zh: 被试看到三个线索词，须找出能与每个词构成复合词或联想的第四个词，并常需报告答案是否通过顿悟获得。顿悟解答之前出现后部 α 功率的变化。
+protocol:
+  cue: three visually presented cue words; find a fourth word associated with each
+  paradigm_timing: synchronous
+  distinguishing: 标准配置（最早发表）：三个线索词找共同联想词（Mednick 1962，R0008）；顿悟报告是附加测量，不另给号。
+first_source:
+  citation: Mednick S. The associative basis of the creative process. Psychological Review. 1962;69(3):220-232.
+  doi: 10.1037/h0048850
+  pmid: '14472013'
+  year: 1962
+  verified: false
+interop:
+  bids_task: rat
+notes: 'HED task page: https://www.hedtags.org/hed-task/tasks/hedtsk_remote_associates.html. Leads used: R0008; R0283; R0622.
+  first_source lead: R0008. Neural lead: R0283; review: R0622. Pass 1 skeleton (curator_c, 2026-10-03); all sources unverified.
+  Sprint 2 (D-057): protocol added; single configuration, no split. bibliography corrected (Crossref, 2026-10-05)'
+status: draft
+contributors:
+- curator_c

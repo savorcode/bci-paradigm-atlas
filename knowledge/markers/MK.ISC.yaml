@@ -1,0 +1,23 @@
+schema_version: "0.2"
+id: MK.ISC
+name:
+  en: Inter-subject correlation
+  zh: 被试间相关
+aliases:
+- ISC
+- inter-subject correlation
+- intersubject synchronization
+type: connectivity
+recording_modality:
+- EEG
+- MEG
+- fMRI
+- fNIRS
+description:
+  en: Correlation of neural time courses (BOLD, EEG or MEG components) across individuals exposed to the same naturalistic
+    stimulus, isolating stimulus-driven activity shared between viewers or listeners.
+  zh: 接受相同自然刺激的个体之间神经时间进程（BOLD、EEG 或 MEG 成分）的相关，用于分离被试间共享的刺激驱动活动。
+notes: First-pass skeleton by package A (2026-10-03). No generators/indexes yet.
+status: draft
+contributors:
+- curator_a

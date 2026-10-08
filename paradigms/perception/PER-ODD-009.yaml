@@ -1,0 +1,49 @@
+schema_version: '0.2'
+id: PER-ODD-009
+class: PER-ODD
+name:
+  en: Tactile P300 BCI
+  zh: 触觉 P300 脑机接口
+aliases:
+- tactile P300 BCI
+- vibrotactile P300
+family: perception
+bci_category:
+- reactive
+recording_modality:
+- EEG
+stimulus_modality:
+- somatosensory
+markers:
+- MK.P3b
+description:
+  en: Vibrotactile stimulators (tactors) placed at several body sites, for example around the waist, vibrate one at a time
+    in random order. The user attends to the vibrations of the target tactor among the distracters; target vibrations elicit
+    a P300 that identifies the chosen location.
+  zh: 放置在身体多个部位（如腰部一圈）的振动器按随机顺序逐一振动。用户在干扰振动中注意目标振动器，目标振动诱发 P300，据此识别所选位置。
+trial_structure:
+  conditions:
+  - vibration of attended tactor
+  - vibration of other tactors
+protocol:
+  classes:
+  - tactor locations (2, 4 or 6 around the waist in the original)
+  cue: vibrotactile stimuli delivered by tactors at different body sites
+  stimulus_coding: location of vibrotactile stimulus
+  paradigm_timing: synchronous
+  feedback: discrete
+  distinguishing: 准则 2（刺激类型）：振动触觉刺激取代视觉/听觉刺激。类别为振动器位置（同质目标），振动器个数（2/4/6 个）为参数，不构成准则 1（D-058）。
+first_source:
+  citation: Brouwer A-M, Van Erp JBF. A tactile P300 brain-computer interface. Front Neurosci. 2010;4:19.
+  doi: 10.3389/fnins.2010.00019
+  year: 2010
+  verified: false
+interop:
+  bids_task: p300
+notes: 'Resolves the sprint-1 D-012 blocker (tactile P300 BCI had no lead). Lead: WebSearch S2A38 [=R1284], DOAJ record S2A39
+  (abstract: tactors around the waist, two, four or six tactors, offline and real-time). Distinct from PER-TACT-001 (transient
+  somatosensory ERP, D-012) and SSR-SSSEP-002 (steady-state). New in sprint 2. [curator_e sprint 3, 2026-10-05] bibliography
+  confirmed (Crossref, 2026-10-05).'
+status: draft
+contributors:
+- curator_a

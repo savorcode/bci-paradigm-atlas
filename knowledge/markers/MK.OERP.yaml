@@ -1,0 +1,22 @@
+schema_version: "0.2"
+id: MK.OERP
+name:
+  en: Olfactory event-related potential
+  zh: 嗅觉事件相关电位
+aliases:
+- OERP
+- olfactory event-related potential
+- chemosensory event-related potential (olfactory)
+type: erp_component
+recording_modality:
+- EEG
+signature:
+  topography: central-parietal maximum
+description:
+  en: Long-latency event-related potential to odour onset in a constant air stream, comprising N1, P2 and later positive components.
+  zh: 在恒定气流中对气味起始产生的长潜伏期事件相关电位，包括 N1、P2 及更晚的正成分。
+notes: First-pass skeleton by package A (2026-10-03). No generators/indexes yet. Signature values are textbook-level approximations
+  and await source checking.
+status: draft
+contributors:
+- curator_a

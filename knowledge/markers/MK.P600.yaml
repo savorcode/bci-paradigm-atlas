@@ -1,0 +1,29 @@
+schema_version: "0.2"
+id: MK.P600
+name:
+  en: P600
+  zh: P600
+aliases:
+- syntactic positive shift
+- SPS
+type: erp_component
+recording_modality:
+- EEG
+- MEG
+signature:
+  latency_ms: 500-900
+  polarity: positive
+  topography: centro-parietal maximum
+description:
+  en: >-
+    Late positive ERP deflection elicited by syntactic violations, syntactically complex or temporarily ambiguous
+    structures, and some semantic-thematic anomalies. It is commonly interpreted as reflecting reanalysis or integration
+    difficulty during sentence processing.
+  zh: 由句法违例、句法复杂或暂时歧义的结构以及部分语义—题元异常诱发的晚期正向 ERP 成分，通常被解释为句子加工中的重新分析或整合困难。
+notes: >-
+  First-pass skeleton (curator_d, 2026-10-03). Signature values are textbook-level approximations that await source
+  checking; generators and indexes will be added in the second pass.
+status: draft
+contributors:
+- maintainer
+- curator_d

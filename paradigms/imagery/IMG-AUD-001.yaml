@@ -1,0 +1,62 @@
+schema_version: '0.2'
+id: IMG-AUD-001
+class: IMG-AUD
+name:
+  en: Auditory imagery
+  zh: 听觉想象
+aliases:
+- auditory imagery
+- imagined sounds
+- musical imagery
+- imagined music
+family: imagery
+bci_category:
+- active
+- none
+recording_modality:
+- fMRI
+- PET
+- EEG
+- ECoG
+stimulus_modality:
+- mental_imagery
+- auditory
+markers:
+- MK.BOLD_auditory_cortex
+- MK.high_gamma
+description:
+  en: >-
+    Participants see words from the lyrics of a familiar song and judge whether the pitch rises or falls between two of them,
+    either while hearing the song or while imagining it. Imagery activates secondary auditory cortex together with frontal
+    and supplementary motor regions.
+  zh: 被试看到一首熟悉歌曲歌词中的词，判断其中两个词之间音高是升还是降，条件为听到歌曲或在想象中重现歌曲。想象激活次级听皮层以及额叶和辅助运动区。
+protocol:
+  n_classes: 2
+  classes:
+  - imagined song pitch comparison
+  - perceived song pitch comparison
+  cue: visually presented words from a familiar song
+  paradigm_timing: block
+  feedback: none
+  distinguishing: >-
+    Standard configuration (earliest published) / 标准配置（最早发表）: pitch comparison between two words of a familiar song, in imagery
+    vs perception (Zatorre et al. 1996, PET). Sibling: -002 continuation of a familiar tune in imagery after its first notes
+    are heard (criteria 1, 2).
+first_source:
+  citation: >-
+    Zatorre RJ, Halpern AR, Perry DW, Meyer E, Evans AC. Hearing in the mind's ear: a PET investigation of musical imagery
+    and perception. Journal of Cognitive Neuroscience. 1996;8(1):29-46.
+  doi: 10.1162/jocn.1996.8.1.29
+  year: 1996
+  verified: false
+interop:
+  bids_task: auditoryimagery
+notes: >-
+  Leads: R0131, R0133, R0186, R0316, R0457, R0549. first_source R0131 is a Wikipedia-derived PET study (role 'other'); no
+  DOI in lead. R0133 is behavioural. Memory leads (unverified): OpenMIIR EEG music-imagery dataset. Sprint 2 (D-057): task
+  description narrowed to the pitch-comparison configuration from the file text; check against R0131. The musical-imagery
+  variant (D-006, tune continuation) moved to IMG-AUD-002. Intracranial high-gamma evidence remains a class-level marker.
+  bibliography corrected (Crossref, 2026-10-05)
+status: draft
+contributors:
+- curator_b

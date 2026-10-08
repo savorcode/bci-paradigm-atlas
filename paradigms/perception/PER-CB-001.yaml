@@ -1,0 +1,51 @@
+schema_version: '0.2'
+id: PER-CB-001
+class: PER-CB
+name:
+  en: Change blindness
+  zh: 变化盲
+aliases:
+- change blindness
+- flicker paradigm
+family: perception
+bci_category:
+- none
+recording_modality:
+- EEG
+stimulus_modality:
+- visual
+markers:
+- MK.VAN
+description:
+  en: Two versions of a scene alternate with a brief blank or other disruption, and participants report whether a change occurred.
+    Detected compared with undetected changes elicit a posterior negativity (visual awareness negativity) followed by later
+    positivity.
+  zh: 同一场景的两个版本交替出现，中间插入短暂空屏或其他干扰，被试报告是否发生变化。与未察觉的变化相比，被察觉的变化诱发后部负波（视觉觉知负波），其后出现晚期正波。
+protocol:
+  n_classes: 2
+  classes:
+  - change detected
+  - change not detected
+  cue: two versions of a scene alternating with a brief blank (flicker paradigm)
+  paradigm_timing: synchronous
+  feedback: none
+  distinguishing: 标准配置（最早发表，即 first_source）：两版场景以空屏间隔交替（闪烁范式），报告是否有变化。本类暂无其他具体范式（no sibling protocol yet）。
+first_source:
+  citation: 'Rensink RA, O''Regan JK, Clark JJ. To see or not to see: the need for attention to perceive changes in scenes.
+    Psychol Sci. 1997;8(5):368-373.'
+  doi: 10.1111/j.1467-9280.1997.tb00427.x
+  year: 1997
+  verified: false
+interop:
+  bids_task: changeblindness
+notes: 'Leads used: search SA18a. first_source: no origin source identified in this pass (blocker, see curation/work/pkg_A/status.csv).
+  New candidate proposed by package A on 2026-10-03 (curation/work/pkg_A/new_candidates.csv); registered in curation/candidates.csv
+  as C220 (D-053, milestone M1). Uses registry marker MK.VAN. [curator_a sprint 2, 2026-10-03] D-057: protocol block added for the
+  canonical configuration; no other concrete paradigm identified for this class in sprint 2. [curator_e sprint 3, 2026-10-05]
+  candidate origin found by bibliographic search (OpenAlex, 2026-10-05); content unverified. [maintainer sprint 3, 2026-10-07]
+  bibliography confirmed (OpenAlex, 2026-10-05; origin candidate, content unverified). [maintainer sprint 3, 2026-10-07, D-073]
+  origin candidate recalled, record confirmed via OpenAlex.'
+status: draft
+contributors:
+- curator_a
+- curator_e

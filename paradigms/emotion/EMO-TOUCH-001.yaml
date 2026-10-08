@@ -1,0 +1,52 @@
+schema_version: '0.2'
+id: EMO-TOUCH-001
+class: EMO-TOUCH
+name:
+  en: Affective (CT-optimal) touch
+  zh: 情感触觉（C 触觉纤维最适触摸）
+aliases:
+- affective touch
+- pleasant touch
+- CT-afferent touch
+- gentle stroking
+family: emotion
+bci_category:
+- none
+recording_modality:
+- fMRI
+stimulus_modality:
+- somatosensory
+markers:
+- MK.BOLD_posterior_insula
+description:
+  en: Slow, gentle brush strokes on hairy skin, which preferentially activate unmyelinated C-tactile afferents, are compared
+    with faster strokes or stimulation of glabrous skin. CT-optimal touch activates the posterior insular cortex.
+  zh: 以缓慢轻柔的刷触刺激有毛皮肤（优先激活无髓鞘的 C 触觉传入纤维），并与较快刷触或无毛皮肤刺激比较。C 触觉最适触摸激活后岛叶皮层。
+protocol:
+  n_classes: 2
+  classes:
+  - CT-optimal slow stroking on hairy skin
+  - control touch (faster stroking or glabrous skin)
+  cue: soft brush strokes delivered by an experimenter or robot
+  paradigm_timing: block
+  feedback: none
+  distinguishing: 'Standard configuration (earliest published or canonical; D-057 -001): slow brush stroking versus control
+    touch (Olausson et al. 2002, R1183).'
+first_source:
+  citation: Olausson H, Lamarre Y, Backlund H, Morin C, Wallin BG, Starck G, Ekholm S, Strigo I, Worsley K, Vallbo ÅB, Bushnell
+    MC. Unmyelinated tactile afferents signal touch and project to insular cortex. Nature Neuroscience. 2002;5(9):900-904.
+  doi: 10.1038/nn896
+  year: 2002
+  verified: false
+interop:
+  bids_task: affectivetouch
+notes: 'Sources found by curator_e (curation/work/pkg_E/search_log.md): S10 = https://link.springer.com/article/10.1038/news020722-12.
+  first_source note: Citation seen in a news item, not the article page; full author list to be added at verification. New
+  candidate (curator_e); requests new marker MK.BOLD_posterior_insula (marker_requests.csv). Family could also be perception
+  (pkg A, cf. PER-TACT-001); placed in emotion because the construct is touch pleasantness. First-pass skeleton (curator_e,
+  2026-10-03); all sources unverified. Sprint 2 (curator_e, 2026-10-03): protocol block added per D-057; see curation/work/pkg_E/sprint2/split_log.csv.
+  Sprint 3 (curator_d, 2026-10-05): bibliography corrected (OpenAlex, 2026-10-05): author list expanded, volume, issue, pages
+  added.'
+status: draft
+contributors:
+- curator_e

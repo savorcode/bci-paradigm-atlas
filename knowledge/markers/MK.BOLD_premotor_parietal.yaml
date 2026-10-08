@@ -1,0 +1,20 @@
+schema_version: "0.2"
+id: MK.BOLD_premotor_parietal
+name:
+  en: Premotor-parietal BOLD (action observation / body representation)
+  zh: 前运动-顶叶 BOLD（动作观察/身体表征）
+aliases:
+- premotor-parietal activation
+- mirror system BOLD
+- body representation network
+type: hemodynamic
+recording_modality:
+- fMRI
+description:
+  en: BOLD responses in ventral and dorsal premotor cortex and posterior parietal cortex during action observation and during
+    multisensory illusions of body ownership.
+  zh: 动作观察以及身体拥有感多感觉错觉期间，腹侧和背侧前运动皮层及后顶叶的 BOLD 响应。
+notes: First-pass skeleton by package A (2026-10-03). No generators/indexes yet.
+status: draft
+contributors:
+- curator_a

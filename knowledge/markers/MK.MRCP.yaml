@@ -1,0 +1,11 @@
+schema_version: "0.2"
+id: MK.MRCP
+name: {en: Movement-related cortical potential (Bereitschaftspotential), zh: 运动相关皮层电位（准备电位）}
+aliases: [MRCP, BP, Bereitschaftspotential, readiness potential, RP]
+type: erp_component
+recording_modality: [EEG, MEG]
+signature: {latency_ms: onset ~-2000 to -1000 before movement onset, polarity: negative, topography: 'central midline (Cz), becoming contralateral near movement onset'}
+description: {en: 'Slow negative cortical potential that precedes self-paced voluntary movement, beginning over central midline sites one to two seconds before movement and becoming steeper and more lateralised shortly before onset.', zh: 自定步调自主动作之前的缓慢负性皮层电位，在动作前一至两秒开始出现于中央中线区，临近动作起始时变陡并更加偏侧化。}
+notes: Signature values are textbook-level characteristics and await source checking (first pass, curator_b). Generators and indexes to be added in the second pass.
+status: draft
+contributors: [maintainer, curator_b]

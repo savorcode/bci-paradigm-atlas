@@ -1,0 +1,56 @@
+schema_version: '0.2'
+id: MEM-SRE-001
+class: MEM-SRE
+name:
+  en: Self-referential encoding
+  zh: 自我参照编码
+aliases:
+- SRET
+- Self-Reference Effect Paradigm
+- Self-Referential Processing Task
+- Trait Adjective Endorsement Task
+family: memory
+bci_category:
+- none
+recording_modality:
+- fMRI
+- EEG
+stimulus_modality:
+- visual
+markers:
+- MK.BOLD_mPFC
+description:
+  en: Participants judge trait adjectives under different encoding instructions, for example whether the word describes themselves,
+    describes another person, or has a particular structural property, and are later given a surprise memory test. Self-referential
+    judgments produce better memory and engage medial prefrontal cortex more than other-referential or semantic judgments.
+  zh: 被试在不同编码指令下判断人格形容词，例如该词是否描述自己、是否描述他人或是否具有某种字形特征，随后进行意外记忆测试。与他人参照或语义判断相比，自我参照判断带来更好的记忆，并更强地激活内侧前额叶。
+trial_structure:
+  conditions:
+  - self
+  - other
+  - structural
+protocol:
+  n_classes: 3
+  classes:
+  - self-reference
+  - other-reference
+  - structural/semantic judgement
+  cue: trait adjectives with an encoding question
+  paradigm_timing: synchronous
+  feedback: none
+  distinguishing: 标准配置（最早发表）：自我/他人/结构判断编码 + 意外记忆测试（Rogers et al. 1977, R0042）。本类只有这一配置。
+first_source:
+  citation: Rogers TB, Kuiper NA, Kirker WS. Self-reference and the encoding of personal information. Journal of Personality
+    and Social Psychology. 1977;35(9):677-688.
+  doi: 10.1037/0022-3514.35.9.677
+  year: 1977
+  verified: false
+interop:
+  bids_task: selfreference
+notes: 'HED task page: https://www.hedtags.org/hed-task/tasks/hedtsk_self_referential_encoding.html. Leads: R0042, R0053,
+  R0155, R0225, R0351, R0515, R0547 (R#### = curation/literature.csv; DN## = curation/work/pkg_D/new_leads.csv). Sprint 2
+  (D-057, curator_d, 2026-10-03): protocol block added (-001 = earliest/standard configuration). bibliography corrected (Crossref,
+  2026-10-05)'
+status: draft
+contributors:
+- curator_d

@@ -1,0 +1,61 @@
+schema_version: '0.2'
+id: MEM-MST-001
+class: MEM-MST
+name:
+  en: Mnemonic similarity task
+  zh: 记忆相似性（模式分离）
+aliases:
+- MST
+- Mnemonic Discrimination Task
+- Mnemonic Similarity
+- Pattern Separation Task
+family: memory
+bci_category:
+- none
+recording_modality:
+- fMRI
+stimulus_modality:
+- visual
+markers:
+- MK.BOLD_hippocampus
+description:
+  en: After an incidental encoding phase with pictures of everyday objects, participants judge test items as old, similar
+    or new; similar lures are perceptually related to studied items. Correctly calling lures 'similar' indexes behavioural
+    pattern separation, and fMRI studies show lure-related BOLD responses in the hippocampal dentate gyrus/CA3 region that
+    resemble responses to new items.
+  zh: 被试在附带编码阶段观看日常物体图片，随后把测试项目判断为“旧”“相似”或“新”；相似诱饵与学过的项目在知觉上相近。把诱饵正确判断为“相似”反映行为上的模式分离；fMRI 研究显示海马齿状回/CA3 区对诱饵的 BOLD 响应与对新项目的响应相似。
+trial_structure:
+  conditions:
+  - repeat
+  - lure (similarity bins, parameter)
+  - foil
+protocol:
+  n_classes: 3
+  classes:
+  - old (repeat)
+  - similar (lure)
+  - new (foil)
+  cue: colour photographs of everyday objects
+  paradigm_timing: synchronous
+  feedback: none
+  distinguishing: 标准配置（最早发表）：显式“旧/相似/新”三择判断（类源头 Kirwan & Stark 2007, R0373；标准化 MST 见 Stark et al. 2013, R0565，连续再认与学习—测试两阶段呈现作为参数范围，待核对）。与
+    -002（偶然编码、无记忆判断的重复抑制设计，准则 1）区别。
+first_source:
+  citation: 'Kirwan, C. B., & Stark, C. E. L. Overcoming interference: An fMRI investigation of pattern separation in the
+    medial temporal lobe. Learning & Memory, 14(9), 625–633. 2007.'
+  doi: 10.1101/lm.663507
+  pmid: '17848502'
+  year: 2007
+  verified: false
+interop:
+  bids_task: mst
+notes: 'HED task page: https://www.hedtags.org/hed-task/tasks/hedtsk_mnemonic_similarity.html. Leads: R0373, R0416, R0499,
+  R0513, R0565, R0612, R0695 (R#### = curation/literature.csv; DN## = curation/work/pkg_D/new_leads.csv). R0373 (Kirwan &
+  Stark 2007) is the earliest fMRI lead; R0565 (Stark et al. 2013) describes the standardised behavioural task. Sprint 2 (D-057,
+  curator_d, 2026-10-03): protocol block added (-001 = earliest/standard configuration). Explicit old/similar/new judgement.
+  Continuous-recognition and study-test presentation are kept in one protocol pending a check of R0373 vs R0565; the incidental
+  repetition-suppression design moved to MEM-MST-002. Sibling concrete paradigms: MEM-MST-002. bibliography confirmed (Crossref,
+  2026-10-05)'
+status: draft
+contributors:
+- curator_d

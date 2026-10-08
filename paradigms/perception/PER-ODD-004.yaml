@@ -1,0 +1,59 @@
+schema_version: '0.2'
+id: PER-ODD-004
+class: PER-ODD
+name:
+  en: RSVP target detection (image triage)
+  zh: RSVP 靶检测（图像筛查）
+aliases:
+- Rapid serial visual presentation (RSVP)
+- RSVP
+- RSVP Stream Task
+- RSVP Target Detection
+- RSVP Task
+- RSVP-BCI
+- cortically coupled computer vision (C3Vision)
+family: perception
+bci_category:
+- reactive
+recording_modality:
+- EEG
+stimulus_modality:
+- visual
+markers:
+- MK.P3b
+description:
+  en: Images are shown one after another at the same location at a high rate (several per second). The participant looks for
+    a rare target category among non-target images; single-trial P300 responses to targets are detected to label or rank images,
+    as in cortically coupled computer vision.
+  zh: 图像在同一位置以高速率（每秒数张）逐张呈现。被试在非靶图像中寻找低频出现的靶类别图像；通过单试次检测靶图像诱发的 P300 来标记或排序图像（如皮层耦合计算机视觉）。
+trial_structure:
+  conditions:
+  - target image
+  - non-target image
+protocol:
+  n_classes: 2
+  classes:
+  - target image
+  - non-target image
+  cue: rapid serial visual presentation of images at one location
+  paradigm_timing: continuous
+  feedback: none
+  distinguishing: 准则 2;3：刺激为同一位置的高速图像流（RSVP），以连续流而非离散试次呈现；与 -001 同为二类开环检测。
+first_source:
+  citation: 'Potter, M. C. Short-term conceptual memory for pictures. Journal of Experimental Psychology: Human Learning and
+    Memory. 1976.'
+  doi: 10.1037/0278-7393.2.5.509
+  pmid: '1003124'
+  year: 1976
+  verified: false
+datasets:
+- name: EEG Study data of Rapid Serial Visual Presentation (RSVP) in ESS format (NITRC)
+interop:
+  bids_task: rsvp
+notes: Former variant "Rapid serial visual presentation (RSVP) target detection" of PER-ODD-001 (merged candidate PER-RSVP-001,
+  D-011), split under D-057; the RSVP typing part of the old variant is PER-ODD-005. first_source R0038 (Potter 1976) is the
+  RSVP presentation origin, not an EEG study; BCI leads R0869 (C3Vision history page), R0843 (RSVP-BCI review). Dataset moved
+  from PER-ODD-001. [curator_e sprint 3, 2026-10-05] bibliography confirmed (Crossref, 2026-10-05).
+status: draft
+contributors:
+- curator_a

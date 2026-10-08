@@ -1,0 +1,58 @@
+schema_version: '0.2'
+id: MEM-RPT-001
+class: MEM-RPT
+name:
+  en: Recent-probes task
+  zh: 近期探测任务（前摄干扰）
+aliases:
+- recent negative probes
+- item-recognition with recent probes
+- proactive interference in working memory
+family: memory
+bci_category:
+- none
+recording_modality:
+- fMRI
+stimulus_modality:
+- visual
+markers:
+- MK.BOLD_left_IFG
+description:
+  en: An item-recognition (Sternberg-type) task in which some negative probes were members of the previous trial's memory
+    set (recent negatives) while others were not; rejecting recent negatives is slower and more error-prone, indexing proactive
+    interference in working memory. Resolution of this interference is consistently associated with increased BOLD activity
+    in left inferior frontal gyrus.
+  zh: 一种项目再认（Sternberg 型）任务，其中部分负探测项属于上一试次的记忆集（近期负探测项），其余不属于；拒绝近期负探测项更慢、更易出错，反映工作记忆中的前摄干扰。解决该干扰稳定地伴随左侧额下回 BOLD 活动增强。
+trial_structure:
+  conditions:
+  - positive
+  - recent negative
+  - non-recent negative
+protocol:
+  n_classes: 3
+  classes:
+  - positive probe
+  - recent negative probe
+  - non-recent negative probe
+  cue: small memory set of letters or words, then a single probe
+  paradigm_timing: synchronous
+  feedback: none
+  distinguishing: 标准配置（最早发表）：Sternberg 式项目再认中加入近期负探测（源头 TBD，Monsell 1978 待核）。本类只有这一配置。
+first_source:
+  citation: Monsell S. Recency, immediate recognition memory, and reaction time. Cognitive Psychology. 1978;10(4):465-501.
+  doi: 10.1016/0010-0285(78)90008-7
+  year: 1978
+  verified: false
+interop:
+  bids_task: recentprobes
+notes: 'Leads: DN15 (R#### = curation/literature.csv; DN## = curation/work/pkg_D/new_leads.csv). New candidate (curator_d).
+  Jonides & Nee 2006 (DN15) state that the paradigm is due originally to Monsell (1978); that paper has not been retrieved,
+  so first_source is TBD. New marker MK.BOLD_left_IFG requested (marker_requests.csv); the maintainer should check overlap
+  with MK.BOLD_language_network, which includes left IFG. first_source blocked: see curation/work/pkg_D/status.csv. Sprint
+  2 (D-057, curator_d, 2026-10-03): protocol block added (-001 = earliest/standard configuration). first_source TBD resolved
+  by bibliographic search (OpenAlex, 2026-10-05; curator_c): candidate origin found by bibliographic search; content unverified.
+  Previous entry: "TBD: no origin source identified yet (see curation/work/pkg_D/status.csv)" [maintainer sprint 3, 2026-10-07]
+  bibliography confirmed (OpenAlex, 2026-10-05; origin candidate, content unverified).'
+status: draft
+contributors:
+- curator_d

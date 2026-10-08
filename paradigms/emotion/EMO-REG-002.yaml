@@ -1,0 +1,49 @@
+schema_version: '0.2'
+id: EMO-REG-002
+class: EMO-REG
+name:
+  en: Reappraisal versus expressive suppression
+  zh: 认知重评与表达抑制对比
+aliases:
+- reappraisal and suppression task
+family: emotion
+bci_category:
+- none
+recording_modality:
+- fMRI
+- EEG
+stimulus_modality:
+- visual
+markers:
+- MK.LPP
+- MK.BOLD_amygdala
+description:
+  en: Instruction cues ask participants to watch a negative stimulus naturally, to reappraise it, or to suppress any outward
+    expression of emotion, so that two regulation strategies are compared with each other and with watching. Reappraisal and
+    suppression differ in the timing of prefrontal recruitment and in their effect on amygdala responses.
+  zh: 指导语要求被试自然观看负性刺激、对其进行重评，或抑制情绪的外部表达，从而比较两种调节策略之间及其与观看条件的差异。重评与抑制在前额叶激活的时程及对杏仁核反应的影响上不同。
+protocol:
+  n_classes: 3
+  classes:
+  - watch
+  - reappraise
+  - expressive suppression
+  cue: instruction cue followed by a negative emotional stimulus
+  paradigm_timing: synchronous
+  feedback: none
+  distinguishing: 'Criterion 1 versus EMO-REG-001: the condition set adds expressive suppression as a second regulation strategy
+    (lead R1065; multi-strategy designs in R0599).'
+first_source:
+  citation: 'Goldin PR, McRae K, Ramel W, Gross JJ. The neural bases of emotion regulation: reappraisal and suppression of
+    negative emotion. Biological Psychiatry. 2008;63(6):577-586.'
+  doi: 10.1016/j.biopsych.2007.05.031
+  pmid: '17888411'
+  year: 2008
+  verified: false
+notes: 'Lead refs: R1065 [method] (authors/year missing in literature.csv), R0599 [further_reference] (detachment, reinterpretation,
+  distraction, expressive suppression), R0723 [review]. Stimulus type of R1065 (pictures or film clips) to be checked. New
+  concrete paradigm (curator_e, sprint 2, 2026-10-03, D-057); all sources unverified. Sprint 3 (curator_d, 2026-10-05): bibliography
+  corrected (OpenAlex, 2026-10-05): doi, authors, year, volume, issue, pages added.'
+status: draft
+contributors:
+- curator_e

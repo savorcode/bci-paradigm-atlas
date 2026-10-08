@@ -1,0 +1,51 @@
+schema_version: '0.2'
+id: IMG-SAO-002
+class: IMG-SAO
+name:
+  en: Somatosensory attentional orientation without stimulation
+  zh: 无刺激的体感注意定向
+aliases:
+- SAO BCI
+- attention to body part
+family: imagery
+bci_category:
+- active
+recording_modality:
+- EEG
+stimulus_modality:
+- mental_imagery
+- visual
+markers:
+- MK.SMR_ERD
+description:
+  en: >-
+    Without any tactile stimulation, the participant orients attention to the sensation of one hand (left or right) on cue.
+    Somatosensory attentional orientation alone produces lateralised sensorimotor rhythm ERD that can be classified like motor
+    imagery.
+  zh: 在没有任何触觉刺激的情况下，被试按提示将注意定向到一只手（左或右）的感觉上。仅凭体感注意定向即可产生偏侧化的感觉运动节律 ERD，可像运动想象一样分类。
+protocol:
+  n_classes: 2
+  classes:
+  - attend left hand
+  - attend right hand
+  cue: visual cue (no tactile stimulus)
+  paradigm_timing: synchronous
+  feedback: none
+  distinguishing: 'Criterion 2 vs IMG-SAO-001: attention is oriented to a body part without any vibrotactile stimulus.'
+first_source:
+  citation: >-
+    Yao L, Sheng X, Zhang D, Jiang N, Farina D, Zhu X. A BCI system based on somatosensory attentional orientation. IEEE Transactions
+    on Neural Systems and Rehabilitation Engineering. 2017;25(1):81-90.
+  doi: 10.1109/tnsre.2016.2572226
+  pmid: '27244745'
+  year: 2017
+  verified: false
+interop:
+  bids_task: sao
+notes: >-
+  Lead: S06 from sprint 1 (https://read.qxmd.com/read/27244745/a-bci-system-based-on-somatosensory-attentional-orientation;
+  PMID taken from the URL). Body sites and feedback mode to be checked. [maintainer, sprint 2] Lead registered as R1305 (literature.csv).
+  bibliography corrected (OpenAlex, 2026-10-05)
+status: draft
+contributors:
+- curator_b

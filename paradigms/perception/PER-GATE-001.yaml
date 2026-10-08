@@ -1,0 +1,51 @@
+schema_version: '0.2'
+id: PER-GATE-001
+class: PER-GATE
+name:
+  en: Paired-click sensory gating
+  zh: 配对短声感觉门控
+aliases:
+- P50 suppression
+- conditioning-test paradigm
+- paired-click paradigm
+- sensory gating
+family: perception
+bci_category:
+- none
+recording_modality:
+- EEG
+- MEG
+stimulus_modality:
+- auditory
+markers:
+- MK.P50_gating
+description:
+  en: Pairs of identical clicks are presented about 500 ms apart, with several seconds between pairs. The P50 to the second
+    click is normally smaller than to the first, and the S2/S1 amplitude ratio is used as an index of sensory gating.
+  zh: 以约 500 ms 间隔呈现成对的相同短声，每对之间间隔数秒。第二个短声诱发的 P50 通常小于第一个，S2/S1 波幅比被用作感觉门控指标。
+protocol:
+  n_classes: 2
+  classes:
+  - S1 (first click)
+  - S2 (second click)
+  cue: pairs of identical clicks about 500 ms apart, several seconds between pairs
+  paradigm_timing: synchronous
+  feedback: none
+  distinguishing: 标准配置（最早发表，即 first_source）：成对短声（约 500 ms 间隔），比较 S2/S1 的 P50。本类暂无其他具体范式（no sibling protocol yet）。
+first_source:
+  citation: Adler LE, Pachtman E, Franks RD, Pecevich M, Waldo MC, Freedman R. Neurophysiological evidence for a defect in
+    neuronal mechanisms involved in sensory gating in schizophrenia. Biol Psychiatry. 1982;17(6):639-654.
+  year: 1982
+  verified: false
+interop:
+  bids_task: pairedclick
+notes: 'Leads used: R0983, R1023. first_source: no origin source identified in this pass (blocker, see curation/work/pkg_A/status.csv).
+  R1023 (Wikipedia, read in this sprint, SA37) describes the paired-click paradigm but credits no originator; a search for
+  the commonly cited 1982 schizophrenia gating paper (SA39) did not surface it. [curator_a sprint 2, 2026-10-03] D-057: protocol
+  block added for the canonical configuration; no other concrete paradigm identified for this class in sprint 2. [curator_e
+  sprint 3, 2026-10-05] candidate origin found by bibliographic search (OpenAlex, 2026-10-05); content unverified. [maintainer
+  sprint 3, 2026-10-07] bibliography confirmed (OpenAlex, 2026-10-05; origin candidate, content unverified).'
+status: draft
+contributors:
+- curator_a
+- curator_e

@@ -1,0 +1,21 @@
+schema_version: "0.2"
+id: MK.BOLD_frontoparietal
+name:
+  en: Frontoparietal network BOLD
+  zh: 额顶网络 BOLD
+aliases:
+- frontoparietal network activation
+- dorsal attention network BOLD
+- multiple-demand network
+type: hemodynamic
+recording_modality:
+- fMRI
+- fNIRS
+description:
+  en: BOLD (or fNIRS HbO) increases in lateral prefrontal and posterior parietal cortex, including the intraparietal sulcus,
+    that scale with attentional or working-memory load.
+  zh: 外侧前额叶与后顶叶（包括顶内沟）的 BOLD（或 fNIRS HbO）升高，其幅度随注意或工作记忆负荷增加。
+notes: First-pass skeleton by package A (2026-10-03). No generators/indexes yet.
+status: draft
+contributors:
+- curator_a

@@ -1,0 +1,53 @@
+schema_version: '0.2'
+id: STA-PVT-001
+class: STA-PVT
+name:
+  en: Psychomotor vigilance task (PVT)
+  zh: 精神运动警觉任务（PVT）
+aliases:
+- PVT
+- Psychomotor Vigilance
+- psychomotor vigilance test
+family: state
+bci_category:
+- passive
+- none
+recording_modality:
+- EEG
+stimulus_modality:
+- visual
+- motor_execution
+markers:
+- MK.alpha_posterior
+- MK.theta_drowsiness
+description:
+  en: A simple visual stimulus such as a millisecond counter appears at random intervals of a few seconds over a 3-10 minute
+    session, and participants respond as fast as possible; lapses and slowing index reduced vigilance, particularly after
+    sleep loss. Slower responses are preceded by increased theta and posterior alpha power.
+  zh: 在 3–10 分钟的测试中，简单视觉刺激（如毫秒计数器）以数秒的随机间隔出现，被试尽快反应；反应失误和变慢反映警觉下降，尤其在睡眠不足后。反应变慢之前 θ 与后部 α 功率升高。
+protocol:
+  n_classes: 1
+  classes:
+  - simple reaction to counter onset
+  cue: millisecond counter appearing at random intervals; the reaction time is displayed
+  paradigm_timing: synchronous
+  feedback: discrete
+  distinguishing: 'Standard configuration (earliest published or canonical; D-057 -001): 10-minute visual PVT with response-time
+    display after each response (Dinges & Powell 1985, R0070).'
+first_source:
+  citation: Dinges DF, Powell JW. Microcomputer analyses of performance on a portable, simple visual RT task during sustained
+    operations. Behavior Research Methods, Instruments, & Computers. 1985;17(6):652-655.
+  doi: 10.3758/bf03200977
+  year: 1985
+  verified: false
+interop:
+  bids_task: pvt
+notes: 'HED task page: https://www.hedtags.org/hed-task/tasks/hedtsk_psychomotor_vigilance.html. Lead refs (curation/literature.csv):
+  R0070 [first_source_candidate;key_reference], R0174 [further_reference], R0330 [further_reference], R0453 [review], R0508
+  [key_reference], R0524 [further_reference], R0912 [method], R1031 [method], R1076 [method]. EEG leads: R0912, R1076. Overlaps
+  conceptually with STA-DRV-001 (vigilance). First-pass skeleton (curator_e, 2026-10-03); all sources unverified. Sprint 2
+  (curator_e, 2026-10-03): protocol block added per D-057; see curation/work/pkg_E/sprint2/split_log.csv. Sprint 3 (curator_d,
+  2026-10-05): bibliography corrected (OpenAlex, 2026-10-05): volume, issue, pages added.'
+status: draft
+contributors:
+- curator_e

@@ -1,0 +1,67 @@
+schema_version: '0.2'
+id: STA-NF-002
+class: STA-NF
+name:
+  en: Haemodynamic regional neurofeedback (rtfMRI / fNIRS)
+  zh: 血流动力学区域神经反馈（rtfMRI／fNIRS）
+aliases:
+- real-time fMRI neurofeedback
+- rtfMRI-NF
+- fNIRS neurofeedback
+family: state
+bci_category:
+- active
+recording_modality:
+- fMRI
+- fNIRS
+stimulus_modality:
+- visual
+- cognitive_task
+markers:
+- MK.BOLD_amygdala
+description:
+  en: The haemodynamic signal of a predefined target region is computed in real time and shown, for example as a thermometer
+    bar, while participants alternate between blocks in which they try to up- or down-regulate it and rest blocks. Learned
+    regulation is read out from the target region itself, such as the amygdala in emotion-regulation training.
+  zh: 实时计算预先选定的目标脑区的血流动力学信号并加以显示（如温度计条），被试在试图上调或下调该信号的组块与休息组块之间交替。习得的调节由目标脑区本身读出，如情绪调节训练中的杏仁核。
+protocol:
+  n_classes: 2
+  classes:
+  - regulate target region
+  - rest baseline
+  cue: feedback display (e.g. thermometer) updated each volume, with block instructions
+  paradigm_timing: block
+  feedback: continuous
+  distinguishing: 'Criteria 1 and 3 versus STA-NF-001: a regional haemodynamic signal is trained in alternating regulate and
+    rest blocks, instead of continuous training of an EEG frequency band (Weiskopf et al. 2003).'
+first_source:
+  citation: 'Weiskopf N, Veit R, Erb M, Mathiak K, Grodd W, Goebel R, Birbaumer N. Physiological self-regulation of regional
+    brain activity using real-time functional magnetic resonance imaging (fMRI): methodology and exemplary data. NeuroImage.
+    2003;19(3):577-586.'
+  doi: 10.1016/S1053-8119(03)00145-9
+  year: 2003
+  verified: false
+variants:
+- name: fNIRS haemodynamic neurofeedback
+  source:
+    citation: 'Klein F, Kohl SH, Lührs M, Mehler DMA, Sorger B. From lab to life: challenges and perspectives of fNIRS for
+      haemodynamic-based neurofeedback in real-world environments. Philosophical Transactions of the Royal Society B: Biological
+      Sciences. 2024;379(1915):20230087.'
+    doi: 10.1098/rstb.2023.0087
+    pmid: '39428887'
+    year: 2024
+    verified: false
+  note: 'Moved from STA-NF-001. Same block structure and feedback mode with fNIRS HbO as the signal; recording modality alone
+    is not a numbering criterion (D-057). Sprint 3 (curator_d, 2026-10-05): bibliography corrected (OpenAlex, 2026-10-05):
+    doi, authors, year, volume, issue, article number added.'
+notes: 'Former STA-NF-001 variants (D-020). Source: sprint-2 S2-08 [=R1336] (https://hdl.handle.net/21.11116/0000-0005-6A4C-0).
+  Lead refs: R0940 [review], R0977 [review], R1028 [method] (amygdala rtfMRI neurofeedback; basis for MK.BOLD_amygdala as
+  example marker), R0936 [review] (fNIRS). The feedback signal is the target region''s BOLD, which varies by study; a generic
+  marker is not registered (to maintainer). D-061 (maintainer, 2026-10-05): stand-in marker - MK.BOLD_amygdala stands for
+  the BOLD signal of the trained region; sprint 3: write the marker of the region actually trained in the first_source, or
+  request one. Block timings of Weiskopf et al. 2003 not checked. New concrete paradigm (curator_e, sprint 2, 2026-10-03,
+  D-057); all sources unverified. Sprint 3 (curator_d, 2026-10-05): bibliography corrected (OpenAlex, 2026-10-05): author
+  list expanded (et al. -> Birbaumer N).'
+status: draft
+contributors:
+- curator_e

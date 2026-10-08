@@ -1,0 +1,25 @@
+schema_version: "0.2"
+id: MK.FPVS_oddball
+name:
+  en: FPVS oddball-frequency response
+  zh: 快速周期视觉刺激 oddball 频率响应
+aliases:
+- FPVS oddball response
+- oddball frequency response
+- categorization response (FPVS)
+type: steady_state
+recording_modality:
+- EEG
+- MEG
+signature:
+  frequency_hz: oddball frequency and harmonics (e.g. base/5)
+  topography: occipito-temporal, often right-lateralised for faces
+description:
+  en: Response at the oddball presentation frequency and its harmonics in fast periodic visual stimulation, distinct from
+    the base-frequency response; it is present only if the brain discriminates the oddball stimuli from the base stimuli.
+  zh: 快速周期视觉刺激中，在 oddball 呈现频率及其谐波处出现、区别于基频响应的反应；只有当大脑将 oddball 刺激与基础刺激区分开时才会出现。
+notes: First-pass skeleton by package A (2026-10-03). No generators/indexes yet. Signature values are textbook-level approximations
+  and await source checking.
+status: draft
+contributors:
+- curator_a

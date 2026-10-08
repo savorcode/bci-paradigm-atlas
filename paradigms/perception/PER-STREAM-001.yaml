@@ -1,0 +1,52 @@
+schema_version: '0.2'
+id: PER-STREAM-001
+class: PER-STREAM
+name:
+  en: Auditory stream segregation
+  zh: 听觉流分离
+aliases:
+- auditory streaming
+- ABA triplet paradigm
+- stream segregation
+family: perception
+bci_category:
+- none
+recording_modality:
+- EEG
+- MEG
+stimulus_modality:
+- auditory
+markers:
+- MK.MMN
+description:
+  en: Alternating tone sequences (for example ABA- triplets) are presented with varying frequency separation and rate, so
+    that they are heard as one or as two streams. Deviants defined within one stream elicit an MMN only when the streams are
+    segregated, which is used as an index of stream formation.
+  zh: 以不同频率间隔和速率呈现交替音序列（如 ABA- 三音组），使其被听成一个或两个声流。只有在声流分离时，定义在单一声流内的偏差才诱发 MMN，以此作为声流形成的指标。
+protocol:
+  n_classes: 2
+  classes:
+  - segregated (two-stream) condition
+  - integrated (one-stream) condition
+  cue: alternating ABA- tone sequences with deviants defined within one stream; frequency separation and rate varied
+  paradigm_timing: block
+  feedback: none
+  distinguishing: 标准配置（最早发表，即 first_source）：ABA- 交替音序列，频率间隔/速率决定是否分流，流内偏差诱发 MMN。本类暂无其他具体范式（no sibling protocol yet）。
+first_source:
+  citation: Sussman E, Ritter W, Vaughan HG. An investigation of the auditory streaming effect using event-related brain potentials.
+    Psychophysiology. 1999;36(1):22-34.
+  doi: 10.1017/S0048577299971056
+  year: 1999
+  verified: false
+interop:
+  bids_task: streaming
+notes: 'Leads used: search SA12. first_source found by search in this sprint (SA12), not from the lead list. New candidate
+  proposed by package A on 2026-10-03 (curation/work/pkg_A/new_candidates.csv); registered in curation/candidates.csv as C214
+  (D-053, milestone M1). Uses registry marker MK.MMN; differs from PER-MMN-001 in the construct probed (auditory scene analysis).
+  [curator_a sprint 2, 2026-10-03] D-057: protocol block added for the canonical configuration; no other concrete paradigm
+  identified for this class in sprint 2. [curator_e sprint 3, 2026-10-05] bibliography corrected (OpenAlex, 2026-10-05). [maintainer
+  sprint 3, 2026-10-07, D-073] origin candidate recalled, record confirmed via OpenAlex.'
+status: draft
+contributors:
+- curator_a
+- curator_e

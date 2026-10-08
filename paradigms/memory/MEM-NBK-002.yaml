@@ -1,0 +1,68 @@
+schema_version: '0.2'
+id: MEM-NBK-002
+class: MEM-NBK
+name:
+  en: Parametric n-back with 0-back control (block design)
+  zh: 含 0-back 控制的多负荷 n-back（组块设计）
+aliases:
+- parametric n-back
+- 0-back/1-back/2-back/3-back
+- n-back workload paradigm
+family: memory
+bci_category:
+- passive
+- none
+recording_modality:
+- EEG
+- fNIRS
+- fMRI
+stimulus_modality:
+- visual
+- auditory
+markers:
+- MK.frontal_midline_theta
+- MK.P3b
+- MK.alpha_posterior
+- MK.HbO_prefrontal
+- MK.BOLD_frontoparietal
+description:
+  en: 'Blocks of n-back with different loads (typically a 0-back control in which participants respond to a fixed target,
+    and two or more n > 0 levels) alternate with rest or with each other, and neural activity is compared or classified across
+    load levels. This is the standard neuroimaging and passive-BCI mental-workload protocol: load increases frontal-midline
+    theta, decreases posterior alpha and P3b amplitude, and increases prefrontal and frontoparietal hemodynamic responses.'
+  zh: 不同负荷的 n-back 组块（通常包括对固定靶反应的 0-back 控制以及两个或以上 n > 0 的水平）与休息或彼此交替，比较或分类不同负荷水平的神经活动。这是神经影像与被动式 BCI 心理负荷研究的标准协议：负荷增加使额中线
+    θ 增强、后部 α 与 P3b 波幅降低、前额与额顶血流动力学响应增加。
+trial_structure:
+  conditions:
+  - 0-back (control)
+  - 'n-back levels (set: parameter)'
+  - rest
+protocol:
+  n_classes: 3
+  classes:
+  - 0-back
+  - lower load n-back
+  - higher load n-back
+  cue: single stimulus stream (letters, digits or locations) with a block instruction screen indicating n
+  paradigm_timing: block
+  feedback: none
+  distinguishing: 准则 1;3：条件集由单一固定 n（MEM-NBK-001）变为含 0-back 控制的多个负荷水平，并采用负荷组块（与休息）交替的组块设计；具体负荷水平组合（如 0/1/2/3 或 0/2/3）为参数。
+first_source:
+  citation: Braver TS, Cohen JD, Nystrom LE, Jonides J, Smith EE, Noll DC. A Parametric Study of Prefrontal Cortex Involvement
+    in Human Working Memory. NeuroImage. 1997;5(1):49-62.
+  doi: 10.1006/nimg.1996.0247
+  year: 1997
+  verified: false
+datasets:
+- name: Simultaneous acquisition of EEG and NIRS during cognitive tasks (Shin et al. 2018), dataset with n-back blocks
+  identifier: doi:10.1038/sdata.2018.3
+notes: 'New configuration (sprint 2). Leads: R0319, R0154, R0486, R1325 (Shin et al. 2018 data descriptor, bibliographic data
+  from the TU Berlin BibTeX file; the article page itself returned reCAPTCHA, so the load levels used in the dataset were
+  not checked). Passive-BCI workload classification uses this protocol. (R#### = curation/literature.csv; DN## = curation/work/pkg_D/new_leads.csv.)
+  Numbering criterion (D-057): 1;3. first_source TBD resolved by bibliographic search (Crossref, 2026-10-05; curator_c): candidate
+  origin found by bibliographic search; content unverified. Previous entry: "TBD: first publication of the parametric block
+  design with a 0-back control not identified; R0154 (Jonides et al., volume_mismatch) and R0319 (Owen et al. 2005 meta-analysis)
+  are leads" [maintainer sprint 3, 2026-10-07] bibliography confirmed (Crossref, 2026-10-05; origin candidate, content unverified).'
+status: draft
+contributors:
+- curator_d

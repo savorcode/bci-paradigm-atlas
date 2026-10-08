@@ -1,0 +1,56 @@
+schema_version: '0.2'
+id: LAN-LDT-001
+class: LAN-LDT
+name:
+  en: Lexical decision
+  zh: 词汇判断
+aliases:
+- LDT
+- word/nonword decision
+family: language
+bci_category:
+- none
+recording_modality:
+- EEG
+- fMRI
+stimulus_modality:
+- visual
+markers:
+- MK.N400
+description:
+  en: Letter strings are presented one at a time and participants decide as quickly as possible whether each is a real word
+    or a pronounceable pseudoword, while lexical variables such as frequency are manipulated. Words and pseudowords differ
+    in the N400, whose amplitude is also modulated by lexical variables such as word frequency.
+  zh: 逐个呈现字母串，被试尽快判断它是真词还是可发音的假词，同时操纵词频等词汇变量。真词与假词的 N400 不同，其波幅还受词频等词汇变量调制。
+trial_structure:
+  conditions:
+  - 'word (frequency: parameter)'
+  - pseudoword
+protocol:
+  n_classes: 2
+  classes:
+  - word
+  - pseudoword
+  cue: visually presented letter strings, one at a time
+  paradigm_timing: synchronous
+  feedback: none
+  distinguishing: 标准配置（最早发表）：视觉词汇判断（类源头 Meyer & Schvaneveldt 1971, R0022）。听觉词汇判断暂记为提议（无线索）。
+first_source:
+  citation: 'Meyer, D. E., & Schvaneveldt, R. W. Facilitation in recognizing pairs of words: Evidence of a dependence between
+    retrieval operations. Journal of Experimental Psychology, 90(2), 227-234. 1971.'
+  doi: 10.1037/h0031564
+  pmid: '5134329'
+  year: 1971
+  verified: false
+interop:
+  bids_task: lexicaldecision
+notes: 'HED task page: https://www.hedtags.org/hed-task/tasks/hedtsk_lexical_decision.html. Leads: R0022, R0043, R0242, R0268,
+  R0379, R0492, R0568, R0832, R0925, R0970, R0971, R1053 (R#### = curation/literature.csv; DN## = curation/work/pkg_D/new_leads.csv).
+  D-016: LDT and LAN-PRIME-001 are separate; priming studies that use lexical decision as the response belong to LAN-PRIME-001.
+  R0022 (Meyer & Schvaneveldt 1971) is the oldest lead, but it is a priming study; an earlier lexical-decision origin may
+  exist. Leads R0970/R0971 are web pages. Sprint 2 (D-057, curator_d, 2026-10-03): protocol block added (-001 = earliest/standard
+  configuration). Narrowed to visual lexical decision; auditory lexical decision logged as proposed. bibliography confirmed
+  (Crossref, 2026-10-05)'
+status: draft
+contributors:
+- curator_d

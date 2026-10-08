@@ -1,0 +1,59 @@
+schema_version: '0.2'
+id: MOT-MI-007
+class: MOT-MI
+name:
+  en: Right-hand vs feet motor imagery with continuous feedback
+  zh: 带连续反馈的右手对双脚运动想象
+aliases:
+- hand vs foot MI with cursor feedback
+- plug-and-play ERD-BCI
+family: motor
+bci_category:
+- active
+recording_modality:
+- EEG
+stimulus_modality:
+- mental_imagery
+- visual
+markers:
+- MK.SMR_ERD
+description:
+  en: >-
+    Participants imagine right-hand or feet movement on cue while an online, adaptively calibrated classifier drives continuous
+    visual feedback (a cursor or bar) during the imagery period. The protocol is used to train naive users from the first
+    session.
+  zh: 被试按提示想象右手或双脚运动，想象期内由在线、自适应校准的分类器驱动连续视觉反馈（光标或条形图）。该协议用于从第一次实验起训练无经验的用户。
+protocol:
+  n_classes: 2
+  classes:
+  - right hand
+  - feet
+  cue: visual cue
+  paradigm_timing: synchronous
+  feedback: continuous
+  distinguishing: >-
+    Criteria 1 and 4 vs MOT-MI-001 (right hand vs feet; continuous feedback). Criterion 4 vs MOT-MI-006 (same classes, feedback
+    added).
+first_source:
+  citation: >-
+    Faller J, Vidaurre C, Solis-Escalante T, Neuper C, Scherer R. Autocalibration and recurrent adaptation: towards a plug
+    and play online ERD-BCI. IEEE Transactions on Neural Systems and Rehabilitation Engineering 20(3):313-319. 2012.
+  doi: 10.1109/tnsre.2012.2189584
+  year: 2012
+  verified: false
+datasets:
+- name: BNCI2015_001 (cursor feedback)
+  url: https://moabb.neurotechx.com/docs/generated/moabb.datasets.BNCI2015_001.html
+  subjects: 12
+- name: BNCI2014_002 (bar graph feedback)
+  url: https://moabb.neurotechx.com/docs/dataset_summary.html
+  subjects: 14
+interop:
+  bids_task: motorimagery
+notes: >-
+  Leads: WF-B2-07 [=R1289] (MOABB BNCI2015_001 page: 12 naive subjects, right hand vs feet, visual cursor feedback, reference
+  Faller et al. 2012) and WF-B2-01 (summary: BNCI2014_002, 14 subjects, right_hand/feet, bar graph feedback). First source
+  is the earliest of the two seen; origin of the configuration not established. bibliography confirmed (Crossref, 2026-10-05)
+status: draft
+contributors:
+- curator_b

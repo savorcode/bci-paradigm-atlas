@@ -1,0 +1,58 @@
+schema_version: '0.2'
+id: STA-MED-001
+class: STA-MED
+name:
+  en: Meditation
+  zh: 冥想
+aliases:
+- focused-attention meditation
+- mindfulness meditation
+- open-monitoring meditation
+family: state
+bci_category:
+- none
+recording_modality:
+- EEG
+stimulus_modality:
+- cognitive_task
+- resting_state
+markers:
+- MK.alpha_posterior
+- MK.frontal_midline_theta
+description:
+  en: Practitioners or trained novices perform focused-attention, open-monitoring or other meditation for minutes, compared
+    with mind-wandering or rest baselines. Meditation states are associated with changes in posterior alpha and frontal midline
+    theta power.
+  zh: 冥想者或受训新手进行数分钟的专注型、开放觉察型或其他冥想，并与走神或静息基线比较。冥想状态与后部 α 及额中线 θ 功率的变化有关。
+protocol:
+  n_classes: 2
+  classes:
+  - meditation
+  - rest or mind-wandering baseline
+  cue: verbal instruction; eyes closed or open depending on tradition
+  paradigm_timing: block
+  feedback: none
+  distinguishing: 'Standard configuration (earliest published or canonical; D-057 -001): meditation blocks versus baseline;
+    meditation style (focused attention, open monitoring) is kept as a parameter for now (split_log).'
+first_source:
+  citation: Kasamatsu A, Hirai T. An electroencephalographic study on the Zen meditation (Zazen). Folia Psychiatrica et Neurologica
+    Japonica. 1966;20(4):315-336.
+  doi: 10.1111/j.1440-1819.1966.tb02646.x
+  year: 1966
+  verified: false
+interop:
+  bids_task: meditation
+notes: 'Lead refs (curation/literature.csv): R0368 [other], R0369 [other]. Sources found by curator_e (curation/work/pkg_E/search_log.md):
+  S05 = https://dlbs.liberal.ntu.edu.tw/search/search_detail.jsp?seq=282367. first_source note: Record is a 1973 publication;
+  an earlier 1966 Kasamatsu & Hirai paper (Folia Psychiatrica et Neurologica Japonica) is widely cited but was not surfaced/verified.
+  Existing leads R0368, R0369 are reviews. S05 found by curator_e (1973 record; 1966 original not verified). OpenNeuro meditation
+  dataset is a memory-only lead. First-pass skeleton (curator_e, 2026-10-03); all sources unverified. D-031 (maintainer, 2026-10-03):
+  first_source currently holds the earliest neural recording study found, not the paradigm origin; in sprint 2 move it to
+  a "First neural recording:" line and fill first_source with the origin. Sprint 2 (curator_e, 2026-10-03): protocol block
+  added per D-057; see curation/work/pkg_E/sprint2/split_log.csv. Sprint 3 (curator_d, 2026-10-05): bibliography corrected
+  (OpenAlex, 2026-10-05): replaced 1973 reprint record with the 1966 original: authors (order Kasamatsu, Hirai), journal,
+  year, volume, issue, pages, doi. [maintainer sprint 3, 2026-10-07, D-073] origin candidate recalled, record confirmed via
+  OpenAlex.'
+status: draft
+contributors:
+- curator_e

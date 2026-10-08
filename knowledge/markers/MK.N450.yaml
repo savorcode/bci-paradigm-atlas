@@ -1,0 +1,26 @@
+schema_version: "0.2"
+id: MK.N450
+name:
+  en: N450 (Stroop interference)
+  zh: N450（Stroop 干扰）
+aliases:
+- N450
+- Stroop N450
+- medial frontal negativity (Stroop)
+type: erp_component
+recording_modality:
+- EEG
+signature:
+  latency_ms: 350-500 after stimulus onset
+  polarity: negative
+  topography: fronto-central / centro-medial
+description:
+  en: Negative deflection that is larger for incongruent than for congruent Stroop stimuli, reflecting detection of interference
+    between word meaning and ink colour. It is often followed by a sustained conflict-related slow potential.
+  zh: 不一致 Stroop 刺激比一致刺激诱发更大的负向波，反映对词义与墨水颜色之间干扰的检测。其后常出现持续的与冲突相关的慢电位。
+notes: 'Signature values are textbook-level approximations and await checking against sources (pass 2). Generators and indexes
+  not yet written. Used by (registry): CTL-STR-001.'
+status: draft
+contributors:
+- maintainer
+- curator_c

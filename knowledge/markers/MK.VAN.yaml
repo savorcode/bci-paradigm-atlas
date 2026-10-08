@@ -1,0 +1,25 @@
+schema_version: "0.2"
+id: MK.VAN
+name:
+  en: Visual awareness negativity
+  zh: 视觉觉知负波
+aliases:
+- VAN
+- visual awareness negativity
+type: erp_component
+recording_modality:
+- EEG
+- MEG
+signature:
+  latency_ms: ~150-300
+  polarity: negative
+  topography: posterior (occipito-temporal)
+description:
+  en: Posterior negativity in the difference between consciously perceived and unperceived visual stimuli, proposed as an
+    early electrophysiological correlate of visual awareness.
+  zh: 有意识知觉与未被知觉的视觉刺激之间差异波中的后部负波，被认为是视觉觉知的早期电生理相关物。
+notes: First-pass skeleton by package A (2026-10-03). No generators/indexes yet. Signature values are textbook-level approximations
+  and await source checking.
+status: draft
+contributors:
+- curator_a

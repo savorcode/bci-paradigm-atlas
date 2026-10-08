@@ -1,0 +1,28 @@
+schema_version: "0.2"
+id: MK.ERAN
+name:
+  en: Early right anterior negativity (ERAN)
+  zh: 早期右前负波（ERAN）
+aliases:
+- ERAN
+type: erp_component
+recording_modality:
+- EEG
+- MEG
+signature:
+  latency_ms: 150-250
+  polarity: negative
+  topography: frontal, often right-lateralised
+description:
+  en: >-
+    Early negative ERP deflection elicited by music-syntactically irregular events, such as harmonically unexpected
+    chords in a chord sequence, and also reported for violations of learned artificial grammars. It is interpreted
+    as reflecting the detection of violations of structural regularities.
+  zh: 由音乐句法不规则事件（如和弦序列中和声上出乎预期的和弦）诱发的早期负向 ERP 成分，在习得的人工语法违例中也有报告，被解释为对结构规则违例的检测。
+notes: >-
+  First-pass skeleton (curator_d, 2026-10-03). Signature values are textbook-level approximations that await source
+  checking; generators and indexes will be added in the second pass.
+status: draft
+contributors:
+- maintainer
+- curator_d

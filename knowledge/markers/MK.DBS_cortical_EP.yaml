@@ -1,0 +1,10 @@
+schema_version: "0.2"
+id: MK.DBS_cortical_EP
+name: {en: DBS-evoked cortical potential, zh: 深部脑刺激诱发皮层电位}
+aliases: [DBS cortical evoked potential, cortical EP to DBS]
+type: erp_component
+recording_modality: [EEG]
+description: {en: Cortical potential recorded with scalp EEG (or cortical electrodes) time-locked to single pulses or low-frequency trains of deep brain stimulation. Its components vary with the stimulated target and contact and are studied as indicators of the pathways activated by stimulation., zh: 以头皮脑电（或皮层电极）记录、与深部脑刺激单脉冲或低频串锁时的皮层电位。其成分随刺激靶点与触点而变化，用作刺激所激活通路的指标。}
+notes: No dedicated lead yet (STM-DBSEP-001 blocker); signature not filled. Generators and indexes to be added in the second pass.
+status: draft
+contributors: [maintainer, curator_b]

@@ -1,0 +1,27 @@
+schema_version: "0.2"
+id: MK.left_anterior_negativity
+name:
+  en: Left anterior negativity (LAN)
+  zh: 左前负波（LAN）
+aliases:
+- LAN
+- ELAN (early variant)
+type: erp_component
+recording_modality:
+- EEG
+signature:
+  latency_ms: 300-500 (early variant 100-300)
+  polarity: negative
+  topography: left anterior
+description:
+  en: >-
+    Negative ERP deflection over left anterior sites elicited by morphosyntactic violations such as agreement errors,
+    often preceding a P600. An earlier variant (ELAN) has been reported for phrase-structure violations.
+  zh: 由一致性错误等形态句法违例在左前部电极诱发的负向 ERP 成分，常出现在 P600 之前。短语结构违例中报告过更早出现的变体（ELAN）。
+notes: >-
+  First-pass skeleton (curator_d, 2026-10-03). Signature values are textbook-level approximations that await source
+  checking; generators and indexes will be added in the second pass.
+status: draft
+contributors:
+- maintainer
+- curator_d

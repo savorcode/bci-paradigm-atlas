@@ -1,0 +1,51 @@
+schema_version: '0.2'
+id: CTL-ANAL-001
+class: CTL-ANAL
+name:
+  en: Analogical reasoning
+  zh: 类比推理
+aliases:
+- Verbal analogy task
+- A:B::C:D analogy task
+- Semantic analogy task
+family: control
+bci_category:
+- none
+recording_modality:
+- fMRI
+stimulus_modality:
+- visual
+markers:
+- MK.BOLD_frontopolar
+description:
+  en: 'Participants judge whether two word pairs share the same relation (A:B :: C:D) compared with judging semantic association
+    alone, so that relational integration can be separated from semantic retrieval. Analogical integration engages rostrolateral
+    (frontopolar) prefrontal cortex, whereas retrieval engages anterior inferior frontal cortex.'
+  zh: '被试判断两组词对是否具有相同关系（A:B :: C:D），并与只判断语义联想的条件比较，以区分关系整合与语义提取。类比整合激活前额叶喙外侧（额极）区，而语义提取激活前部额下回。'
+trial_structure:
+  conditions:
+  - analogy
+  - semantic
+protocol:
+  n_classes: 2
+  classes:
+  - analogy judgement
+  - semantic association judgement
+  cue: 'two visually presented word pairs (A:B :: C:D)'
+  paradigm_timing: synchronous
+  distinguishing: 标准配置（最早发表线索）：判断两词对是否关系相同，对照为语义关联判断（Bunge et al. 2005，R1150）。本包仅此一个配置。
+first_source:
+  citation: 'Bunge SA, Wendelken C, Badre D, Wagner AD. Analogical reasoning and prefrontal cortex: evidence for separable
+    retrieval and integration mechanisms. Cerebral Cortex. 2005.'
+  doi: 10.1093/cercor/bhh126
+  pmid: '15238433'
+  year: 2005
+  verified: false
+interop:
+  bids_task: analogy
+notes: 'Leads used: S_BUNGE2005 (search: https://neurosynth.org/studies/15238433). first_source lead: S_BUNGE2005. Region-to-marker
+  mapping (rostrolateral PFC -> MK.BOLD_frontopolar) to be confirmed. Pass 1 skeleton (curator_c, 2026-10-03); all sources
+  unverified. Sprint 2 (D-057): protocol added; single configuration, no split. bibliography corrected (Crossref, 2026-10-05)'
+status: draft
+contributors:
+- curator_c

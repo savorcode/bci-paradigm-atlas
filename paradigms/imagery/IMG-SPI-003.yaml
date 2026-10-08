@@ -1,0 +1,62 @@
+schema_version: '0.2'
+id: IMG-SPI-003
+class: IMG-SPI
+name:
+  en: Imagined phonemes, syllables and words (mixed set)
+  zh: 想象音素、音节与词（混合集合）
+aliases:
+- KaraOne paradigm
+- imagined phonemes
+family: imagery
+bci_category:
+- active
+recording_modality:
+- EEG
+stimulus_modality:
+- mental_imagery
+- visual
+markers:
+- MK.high_gamma
+description:
+  en: >-
+    Participants are shown a prompt for one item of a mixed set of phonemes, syllables and phonologically similar words and
+    imagine speaking it; the item is classified from 62-channel EEG.
+  zh: 向被试呈现一个提示，项目来自由音素、音节和语音相近的词组成的混合集合，被试想象说出该项目；依据 62 导脑电对项目分类。
+protocol:
+  n_classes: 11
+  classes:
+  - iy
+  - uw
+  - piy
+  - tiy
+  - diy
+  - m
+  - n
+  - pat
+  - pot
+  - knew
+  - gnaw
+  cue: visual prompt
+  paradigm_timing: synchronous
+  feedback: none
+  distinguishing: >-
+    Criterion 1 vs IMG-SPI-001 (vowels only) and vs IMG-SPI-002 (directional command words): a mixed set of seven phonemes/syllables
+    and four phonologically similar words.
+first_source:
+  citation: >-
+    Zhao S, Rudzicz F. Classifying phonological categories in imagined and articulated speech. 2015 IEEE International Conference
+    on Acoustics, Speech and Signal Processing (ICASSP). 2015:992-996.
+  doi: 10.1109/ICASSP.2015.7178118
+  year: 2015
+  verified: false
+interop:
+  bids_task: innerspeech
+notes: >-
+  Lead: WF-B2-23 [=R1303] (Varshney & Khan 2022, doi 10.3389/frsip.2022.760643: Zhao & Rudzicz 2015 'seven syllables/phonemes
+  (iy, uw, piy, tiy, diy, /m/, /n/) plus four phonologically similar words (pat, pot, knew, gnaw); 62-channel EEG from 12
+  subjects'). Secondary citation; cue type and trial structure must be checked in the original. Varshney & Khan's own six-word
+  set is a further candidate (not filed: one study). [maintainer, sprint 2] Lead registered as R1304 (literature.csv). bibliography
+  corrected (OpenAlex, 2026-10-05)
+status: draft
+contributors:
+- curator_b

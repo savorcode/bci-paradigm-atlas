@@ -1,0 +1,55 @@
+schema_version: '0.2'
+id: PER-TACT-001
+class: PER-TACT
+name:
+  en: Tactile spatial attention
+  zh: 触觉空间注意
+aliases:
+- tactile P300 BCI
+- tactile spatial attention
+- vibrotactile oddball
+family: perception
+bci_category:
+- reactive
+- none
+recording_modality:
+- EEG
+stimulus_modality:
+- somatosensory
+markers:
+- MK.N140_somatosensory
+- MK.P3b
+description:
+  en: Tactile stimuli are delivered to the left and right hands (or several body sites) while participants attend to one location
+    to detect infrequent targets. Stimuli at the attended location elicit an enhanced somatosensory N140, and attended targets
+    additionally elicit a P3b.
+  zh: 对左右手（或多个身体部位）给予触觉刺激，被试注意其中一个部位以检测低频靶刺激。被注意部位的刺激诱发增强的体感 N140，被注意的靶刺激还会诱发 P3b。
+protocol:
+  n_classes: 2
+  classes:
+  - attended location
+  - unattended location
+  cue: tactile stimuli to left and right hands, attend one side to detect infrequent targets
+  paradigm_timing: synchronous
+  feedback: none
+  distinguishing: 标准配置（最早发表，即 first_source）：左右手触觉刺激，注意一侧检测低频靶。本类暂无其他具体范式（no sibling protocol yet）。
+first_source:
+  citation: Desmedt JE, Robertson D. Differential enhancement of early and late components of the cerebral somatosensory evoked
+    potentials during forced-paced cognitive tasks in man. J Physiol. 1977;271(3):761-782.
+  doi: 10.1113/jphysiol.1977.sp012025
+  year: 1977
+  verified: false
+interop:
+  bids_task: tactileattention
+notes: 'Leads used: search SA31/SA35. first_source: no origin source identified in this pass (blocker, see curation/work/pkg_A/status.csv).
+  D-012: scope limited to transient somatosensory ERPs; tactile P300 BCI is a variant of PER-ODD-001 and steady-state tactile
+  attention a variant of SSR-SSSEP-001. The candidate had no leads; one study was found in this sprint (SA31/SA35) but no
+  origin paper. [curator_a sprint 2, 2026-10-03] D-057: protocol block added for the canonical configuration; no other concrete
+  paradigm identified for this class in sprint 2. [curator_e sprint 3, 2026-10-05] candidate origin found by bibliographic
+  search (Crossref, 2026-10-05); content unverified. [maintainer sprint 3, 2026-10-07] bibliography confirmed (Crossref, 2026-10-05;
+  origin candidate, content unverified). [maintainer sprint 3, 2026-10-07, D-073] origin candidate recalled, record confirmed
+  via Crossref.'
+status: draft
+contributors:
+- curator_a
+- curator_e

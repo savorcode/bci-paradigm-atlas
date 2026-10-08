@@ -1,0 +1,56 @@
+schema_version: '0.2'
+id: MEM-RC-001
+class: MEM-RC
+name:
+  en: Retro-cue paradigm
+  zh: 回溯线索
+aliases:
+- Retrocue task
+- Retrospective cueing
+family: memory
+bci_category:
+- none
+recording_modality:
+- EEG
+- MEG
+stimulus_modality:
+- visual
+markers:
+- MK.alpha_lateralization
+description:
+  en: A memory array is encoded and, during the retention interval, a cue indicates which item or hemifield will be tested;
+    performance improves for the cued item relative to no-cue or uninformative-cue trials. Retro-cues directing attention
+    to one hemifield of the internal representation produce posterior alpha lateralization, with relative alpha decrease contralateral
+    to the cued location.
+  zh: 被试编码记忆阵列，在保持期中出现线索，指示哪个项目或哪一侧视野将被测试；与无线索或无信息线索相比，被提示项目的成绩提高。指向内部表征一侧的回溯线索引起后部 α 偏侧化，表现为被提示位置对侧的 α 相对降低。
+trial_structure:
+  conditions:
+  - retro-cue left
+  - retro-cue right
+  - neutral
+protocol:
+  n_classes: 2
+  classes:
+  - informative retro-cue
+  - neutral cue
+  cue: memory array, then a spatial cue during the retention interval, then a probe
+  paradigm_timing: synchronous
+  feedback: none
+  distinguishing: 标准配置（最早发表）：保持期空间回溯线索 vs 中性线索（Griffin & Nobre 2003, R1156）。本类目前只有这一配置。
+first_source:
+  citation: Griffin IC, Nobre AC. Orienting Attention to Locations in Internal Representations. Journal of Cognitive Neuroscience.
+    2003;15(8):1176-1194.
+  doi: 10.1162/089892903322598139
+  year: 2003
+  verified: false
+interop:
+  bids_task: retrocue
+notes: 'Leads: R0031, R0151, R0267, R0402, DN03 (R#### = curation/literature.csv; DN## = curation/work/pkg_D/new_leads.csv).
+  The four leads in curation/paradigm_literature.csv (R0031, R0151, R0267, R0402) are change-detection/working-memory papers
+  taken from a Wikipedia page and do not describe retro-cueing; Griffin & Nobre (2003) located via search. Leads should be
+  reassigned (lead check). Sprint 2 (D-057, curator_d, 2026-10-03): protocol block added (-001 = earliest/standard configuration).
+  bibliography corrected (Crossref, 2026-10-05) [maintainer sprint 3, 2026-10-07, D-073] origin candidate recalled, record
+  confirmed via Crossref.'
+status: draft
+contributors:
+- curator_d

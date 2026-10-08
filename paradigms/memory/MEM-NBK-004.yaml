@@ -1,0 +1,58 @@
+schema_version: '0.2'
+id: MEM-NBK-004
+class: MEM-NBK
+name:
+  en: Adaptive dual n-back training
+  zh: 自适应双 n-back 训练
+aliases:
+- n-back training
+- adaptive n-back
+- working memory training (dual n-back)
+family: memory
+bci_category:
+- none
+recording_modality:
+- fMRI
+stimulus_modality:
+- visual
+- auditory
+markers:
+- MK.BOLD_frontoparietal
+description:
+  en: Participants train on the dual n-back over many sessions, and the level n is adjusted from block to block according
+    to their performance so that the task stays demanding; transfer is assessed with untrained tests before and after training.
+    The paradigm is used to study working-memory training and its neural and behavioural transfer effects.
+  zh: 被试多次训练双 n-back，每个组块后根据成绩调整 n，使任务始终保持较高难度；训练前后以未训练的测验评估迁移。该范式用于研究工作记忆训练及其神经与行为迁移效应。
+trial_structure:
+  conditions:
+  - 'training sessions (number: parameter)'
+  - pre-test
+  - post-test
+protocol:
+  n_classes: 4
+  classes:
+  - visual match
+  - auditory match
+  - both match
+  - no match
+  cue: simultaneous visual-spatial stream and auditory letter stream; level changes between blocks
+  stimulus_coding: two concurrent streams; performance-adaptive n
+  paradigm_timing: block
+  feedback: discrete
+  distinguishing: 准则 4（及 3）：在双通道 n-back（MEM-NBK-003）基础上按组块成绩自适应调整 n 并给出成绩反馈，构成闭环训练；以多次训练组块取代单次测试。
+first_source:
+  citation: Jaeggi SM, Buschkuehl M, Jonides J, Perrig WJ. Improving fluid intelligence with training on working memory. Proceedings
+    of the National Academy of Sciences. 2008;105(19):6829-6833.
+  doi: 10.1073/pnas.0801268105
+  year: 2008
+  verified: false
+notes: 'New configuration (sprint 2). Leads: R1324 (Jaeggi et al. 2008, reference copied from the Wikipedia ''N-back'' reference
+  list), R0728 (Soveri et al. 2017 meta-analysis of n-back training studies). The original training study is behavioural;
+  MK.BOLD_frontoparietal is the class marker and neural training studies still have to be collected. D-061 (maintainer, 2026-10-05):
+  marker inherited from class - MK.BOLD_frontoparietal measured in the siblings MEM-NBK-001/-003 (single-session n-back),
+  not in the behavioural dual n-back training study. (R#### = curation/literature.csv; DN## = curation/work/pkg_D/new_leads.csv.)
+  Numbering criterion (D-057): 4;3. bibliography corrected (Crossref, 2026-10-05) [maintainer sprint 3, 2026-10-07, D-073]
+  origin candidate recalled, record confirmed via Crossref.'
+status: draft
+contributors:
+- curator_d

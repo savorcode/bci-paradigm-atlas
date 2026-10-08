@@ -1,0 +1,61 @@
+schema_version: '0.2'
+id: STA-REST-001
+class: STA-REST
+name:
+  en: Resting state (single continuous condition)
+  zh: 静息态（单一连续条件）
+aliases:
+- Baseline Rest
+- EO/EC baseline
+- Rest Block
+- Resting State
+- Resting-State Recording
+- alpha blocking / Berger effect
+- resting-state
+family: state
+bci_category:
+- none
+- passive
+recording_modality:
+- EEG
+- MEG
+- fMRI
+- fNIRS
+stimulus_modality:
+- resting_state
+markers:
+- MK.alpha_posterior
+- MK.DMN_connectivity
+description:
+  en: Participants rest quietly without a task for several minutes in a single condition, either with eyes closed or with
+    eyes open on a fixation cross. Spontaneous fluctuations reveal functional networks such as the default mode network, and
+    eyes-closed rest shows strong posterior alpha.
+  zh: 被试在单一条件下安静休息数分钟，不执行任务，闭眼或睁眼注视十字。自发波动揭示默认模式网络等功能网络，闭眼静息时后部 α 明显。
+protocol:
+  n_classes: 1
+  classes:
+  - rest (one eye condition held for the whole run)
+  cue: no task; eyes closed, or eyes open on a fixation cross
+  paradigm_timing: continuous
+  feedback: none
+  distinguishing: 'Standard configuration (earliest published or canonical; D-057 -001): one continuous rest run without a
+    task (Biswal et al. 1995, R0124). Differs from STA-REST-002 (alternating eyes-closed and eyes-open blocks).'
+first_source:
+  citation: Biswal B, Yetkin FZ, Haughton VM, Hyde JS. Functional connectivity in the motor cortex of resting human brain
+    using echo-planar MRI. Magnetic Resonance in Medicine. 1995;34(4):537-541.
+  doi: 10.1002/mrm.1910340409
+  year: 1995
+  verified: false
+datasets:
+- name: A resting-state EEG dataset for sleep deprivation
+interop:
+  bids_task: rest
+notes: 'HED task page: https://www.hedtags.org/hed-task/tasks/hedtsk_rest.html. Lead refs (curation/literature.csv): R0124
+  [key_reference], R0201 [key_reference], R0362 [further_reference;method], R0935 [method], R1046 [method], R1078 [review].
+  R0124 (resting fMRI connectivity, 1995) is the oldest lead; the alpha rhythm and its blocking on eye opening (Berger 1929)
+  predates it but is not in leads. Used as BCI baseline/calibration. First-pass skeleton (curator_e, 2026-10-03); all sources
+  unverified. Sprint 2 (curator_e, 2026-10-03): protocol block added per D-057; see curation/work/pkg_E/sprint2/split_log.csv.
+  Sprint 3 (curator_d, 2026-10-05): bibliography corrected (Crossref, 2026-10-05): volume, issue, pages added.'
+status: draft
+contributors:
+- curator_e

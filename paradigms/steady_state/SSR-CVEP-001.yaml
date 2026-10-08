@@ -1,0 +1,59 @@
+schema_version: '0.2'
+id: SSR-CVEP-001
+class: SSR-CVEP
+name:
+  en: Code-modulated VEP (c-VEP)
+  zh: 编码调制视觉诱发电位
+aliases:
+- broadband VEP
+- c-VEP
+- code-modulated VEP
+- m-sequence VEP
+family: steady_state
+bci_category:
+- reactive
+recording_modality:
+- EEG
+stimulus_modality:
+- visual
+markers:
+- MK.cVEP
+description:
+  en: Each target flickers according to a pseudorandom binary code, typically circularly shifted versions of one m-sequence.
+    The attended target is identified by matching the EEG response to code-specific templates, which allows many targets in
+    a speller.
+  zh: 每个目标按照伪随机二值编码闪烁，通常为同一 m 序列的不同循环移位。将脑电响应与各编码对应的模板进行匹配，识别被注视的目标，从而在拼写器中支持大量目标。
+protocol:
+  classes:
+  - targets coded by circular shifts of one m-sequence
+  cue: targets flickering by time-shifted versions of one binary m-sequence
+  stimulus_coding: circularly shifted m-sequence
+  paradigm_timing: synchronous
+  feedback: discrete
+  distinguishing: 标准配置（最早发表，即 first_source）：各目标使用同一 m 序列的循环移位编码，模板匹配，逐次选择反馈。Gold 码拆为 -002（准则 2），burst 码拆为 -003（准则 2）。
+first_source:
+  citation: 'Sutter EE. The brain response interface: communication through visually-induced electrical brain responses. J
+    Microcomput Appl. 1992;15(1):31-45.'
+  doi: 10.1016/0745-7138(92)90045-7
+  year: 1992
+  verified: false
+datasets:
+- name: Castillos c-VEP dataset, m-sequence, 100 % amplitude (4 targets)
+  url: https://moabb.neurotechx.com/docs/generated/moabb.datasets.CastillosCVEP100.html
+  identifier: CastillosCVEP100
+  subjects: 12
+interop:
+  bids_task: cvep
+notes: 'Leads used: R0844, R0866. first_source: no origin source identified in this pass (blocker, see curation/work/pkg_A/status.csv).
+  Leads are reviews (R0866 details read in this sprint, SA44); the origin paper of the c-VEP BCI was not identified. [curator_a
+  sprint 2, 2026-10-03] D-057: -001 = circularly shifted m-sequence coding. Modulated Gold codes (Thielen et al. 2015) ->
+  SSR-CVEP-002; burst codes (Castillos et al. 2023) -> SSR-CVEP-003. Dataset CastillosCVEP100 (MOABB, S2A26 [=R1278]) is a
+  4-target m-sequence instance (the MOABB summary S2A01 lists it with 2 classes, target/non-target); the 40 % amplitude version
+  is a parameter. Origin search for the m-sequence c-VEP BCI (Sutter) in S2A25 returned no record. [curator_e sprint 3, 2026-10-05]
+  candidate origin found by bibliographic search (OpenAlex, 2026-10-05); content unverified. [maintainer sprint 3, 2026-10-07]
+  bibliography confirmed (OpenAlex, 2026-10-05; origin candidate, content unverified). [maintainer sprint 3, 2026-10-07, D-073]
+  origin candidate recalled, record confirmed via OpenAlex.'
+status: draft
+contributors:
+- curator_a
+- curator_e

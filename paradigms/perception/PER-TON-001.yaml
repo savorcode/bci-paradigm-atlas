@@ -1,0 +1,49 @@
+schema_version: '0.2'
+id: PER-TON-001
+class: PER-TON
+name:
+  en: Tonotopic mapping
+  zh: 音调拓扑映射
+aliases:
+- frequency mapping of auditory cortex
+- tonotopic mapping
+- tonotopy
+family: perception
+bci_category:
+- none
+recording_modality:
+- fMRI
+stimulus_modality:
+- auditory
+markers:
+- MK.BOLD_auditory_cortex
+description:
+  en: Tones or narrow-band sounds are presented in progressions of frequency (or in randomised order). Fitting the preferred
+    frequency of the auditory cortex BOLD response at each voxel reveals the tonotopic gradients of primary and surrounding
+    auditory fields.
+  zh: 按频率递进（或随机顺序）呈现纯音或窄带声。拟合每个体素听皮层 BOLD 响应的最佳频率，可显示初级听皮层及周边听区的音调拓扑梯度。
+protocol:
+  classes:
+  - tone frequency bands
+  cue: tones or narrow-band sounds in progressions of frequency
+  stimulus_coding: phase-encoded frequency progression
+  paradigm_timing: continuous
+  feedback: none
+  distinguishing: 标准配置（最早发表，即 first_source）：纯音/窄带声按频率递进呈现。本类暂无其他具体范式（no sibling protocol yet）。
+first_source:
+  citation: Talavage TM, Sereno MI, Melcher JR, Ledden PJ, Rosen BR, Dale AM. Tonotopic organization in human auditory cortex
+    revealed by progressions of frequency sensitivity. J Neurophysiol. 2004;91(3):1282-1296.
+  doi: 10.1152/jn.01125.2002
+  pmid: '14614108'
+  year: 2004
+  verified: false
+interop:
+  bids_task: tonotopy
+notes: 'Leads used: R0295, R0628, R0007, R0027, R0135, R0535. R0295 (2004) is the earliest human tonotopy imaging study among
+  the leads; earlier human fMRI tonotopy reports may exist. [curator_a sprint 2, 2026-10-03] D-057: protocol block added for
+  the canonical configuration; no other concrete paradigm identified for this class in sprint 2. [curator_e sprint 3, 2026-10-05]
+  bibliography corrected (OpenAlex, 2026-10-05).'
+status: draft
+contributors:
+- curator_a
+- curator_e

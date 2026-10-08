@@ -1,0 +1,57 @@
+schema_version: '0.2'
+id: MOT-MI-009
+class: MOT-MI
+name:
+  en: Asynchronous (self-paced) motor imagery with idle state
+  zh: 异步（自定步调）运动想象（含空闲态）
+aliases:
+- self-paced motor imagery
+- asynchronous MI
+- BCI Competition IV dataset 1 paradigm
+family: motor
+bci_category:
+- active
+recording_modality:
+- EEG
+stimulus_modality:
+- mental_imagery
+- visual
+- auditory
+markers:
+- MK.SMR_ERD
+description:
+  en: After a cue-based calibration with two motor imagery classes, the evaluation data consist of continuous EEG in which
+    periods of imagery of varying length alternate with idle periods, without trial demarcation. The decoder must output the
+    imagery class or the idle state continuously.
+  zh: 先以两类运动想象做提示驱动的校准；评估数据为连续脑电，长度不等的想象期与空闲期交替出现，没有试次分界。解码器须连续输出想象类别或空闲态。
+protocol:
+  n_classes: 3
+  classes:
+  - motor imagery class A (two of left hand / right hand / foot)
+  - motor imagery class B
+  - idle state
+  cue: cue-based calibration; evaluation periods of varying length without trial structure
+  paradigm_timing: asynchronous
+  feedback: none
+  distinguishing: 'Criterion 3 vs MOT-MI-001: asynchronous classification of continuous EEG with an idle class instead of
+    cue-paced trials (criterion 1 also differs: idle state added; imagery pair chosen per participant).'
+first_source:
+  citation: 'Blankertz B, Dornhege G, Krauledat M, Müller KR, Curio G. The non-invasive Berlin Brain-Computer Interface: fast
+    acquisition of effective performance in untrained subjects. NeuroImage. 2007;37(2):539-550.'
+  doi: 10.1016/j.neuroimage.2007.01.051
+  year: 2007
+  verified: false
+datasets:
+- name: BCI Competition IV, dataset 1
+  url: https://www.bbci.de/competition/iv/
+interop:
+  bids_task: motorimagery
+notes: 'Lead: WF-B2-09 (BCI Competition IV page: 64-channel EEG, ''classification of continuous EEG without trial structure'',
+  evaluation data ''contains also periods of idle state'', 2 classes from left hand/right hand/foot). Moved from MOT-MI-001.
+  [curator_a, sprint 3] Former first_source: "TBD: earliest asynchronous two-class + idle MI protocol not identified; BCI
+  Competition IV dataset 1 (Berlin BCI group) seen, publication not displayed". candidate origin found by bibliographic search;
+  content unverified. bibliography corrected (OpenAlex, 2026-10-05) [maintainer sprint 3, 2026-10-07, D-073] origin candidate
+  recalled, record confirmed via OpenAlex.'
+status: draft
+contributors:
+- curator_b

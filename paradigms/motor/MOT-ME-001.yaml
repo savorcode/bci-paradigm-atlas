@@ -1,0 +1,72 @@
+schema_version: '0.2'
+id: MOT-ME-001
+class: MOT-ME
+name:
+  en: Motor execution
+  zh: 运动执行
+aliases:
+- executed movement
+- overt movement
+family: motor
+bci_category:
+- active
+- none
+recording_modality:
+- EEG
+- MEG
+- ECoG
+- fMRI
+- fNIRS
+stimulus_modality:
+- motor_execution
+- visual
+- auditory
+markers:
+- MK.SMR_ERD
+- MK.high_gamma
+- MK.BOLD_motor_network
+description:
+  en: >-
+    Participants perform a brief overt movement of one hand or finger (e.g. finger flexion, hand opening/closing) on cue,
+    alternating with rest. Movement produces contralateral sensorimotor mu/beta ERD with post-movement beta rebound and, in
+    intracranial recordings, focal high-gamma increases.
+  zh: 被试按提示完成一侧手或手指的短暂实际动作（如手指屈曲、手的张合），与休息交替。运动引起对侧感觉运动区 mu/β ERD 及运动后 β 反弹，颅内记录中可见局灶性高 γ 增强。
+protocol:
+  n_classes: 2
+  classes:
+  - hand/finger movement
+  - rest
+  cue: visual cue
+  paradigm_timing: synchronous
+  feedback: none
+  distinguishing: >-
+    Standard configuration (earliest published) / 标准配置（最早发表）: cued overt unilateral hand or finger movement contrasted with
+    rest, sensorimotor ERD/ERS (class origin R0928). Siblings: -002 individual finger movements (criterion 1), -003 walking
+    (criteria 1, 3), -004 paced finger tapping blocks (criteria 2, 3), -005 single upper-limb multi-joint movements (criterion
+    1).
+first_source:
+  citation: >-
+    Szurhaj W, Labyt E, Bourriez JL, Cassim F, Defebvre L, Hauser JJ, Guieu JD, Derambure P. Event-related variations in the
+    activity of EEG-rhythms. Application to the physiology and the pathology of movements. 2001;(Spec Issue 2):59-66.
+  pmid: '11781201'
+  year: 2001
+  verified: false
+datasets:
+- name: PhysioNet EEG Motor Movement/Imagery Dataset (eegmmidb), left/right fist execution runs
+  url: https://moabb.neurotechx.com/docs/generated/moabb.datasets.PhysionetMI.html
+  subjects: 109
+interop:
+  bids_task: motor
+notes: >-
+  HED task page: https://www.hedtags.org/hed-task/tasks/hedtsk_finger_tapping.html. Leads: R0145, R0189, R0280, R0405, R0837,
+  R0871, R0878, R0908, R0928, R0946, R0955, R0959, R0960, R0994. first_source R0928 is a title-only lead (PMID present); authors/year
+  to be confirmed. Memory leads (unverified): Pfurtscheller & Aranibar 1979; Crone et al. 1998 Brain (ECoG high gamma). BCI
+  Competition IV dataset 4 entered from the merged MOT-FING-001 candidate (content from memory per task sheet; verify). Sprint
+  2 (D-057): the three variants were configuration changes and are now MOT-ME-002 (individual fingers, BCI Competition IV
+  dataset 4 moved there), MOT-ME-003 (walking) and MOT-ME-004 (paced finger tapping; tapping aliases and the HED finger-tapping
+  page moved there). The configuration of R0928 (title-only lead) is still to be confirmed; the PhysioNet runs use a visual
+  target and opening/closing of the fist (MOABB page). [maintainer, sprint 2] Lead registered as R1291 (literature.csv). bibliography
+  corrected (OpenAlex, 2026-10-05)
+status: draft
+contributors:
+- curator_b

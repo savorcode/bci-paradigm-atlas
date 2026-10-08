@@ -1,4 +1,4 @@
-schema_version: "0.1"
+schema_version: "0.2"
 id: MK.P3b
 name: {en: P3b (P300), zh: P3b（P300）}
 aliases: [P300, P3]

@@ -1,0 +1,51 @@
+schema_version: '0.2'
+id: SOC-MORAL-001
+class: SOC-MORAL
+name:
+  en: Moral dilemma judgment
+  zh: 道德两难判断
+aliases:
+- moral dilemmas
+- trolley problem paradigm
+- personal vs impersonal dilemmas
+family: social
+bci_category:
+- none
+recording_modality:
+- fMRI
+stimulus_modality:
+- visual
+markers:
+- MK.BOLD_mPFC
+description:
+  en: Participants read moral dilemmas, such as variants of the trolley problem, that differ in how personally the harmful
+    action is carried out, and judge whether the action is appropriate. Personal dilemmas increase medial prefrontal BOLD
+    relative to impersonal and non-moral dilemmas.
+  zh: 被试阅读道德两难情境（如电车难题的各种变体），这些情境在伤害行为是否由本人亲自实施上有所不同，并判断该行为是否恰当。与非亲身及非道德两难相比，亲身两难增强内侧前额叶 BOLD。
+protocol:
+  n_classes: 3
+  classes:
+  - moral-personal dilemmas
+  - moral-impersonal dilemmas
+  - non-moral dilemmas
+  cue: written dilemmas with appropriateness judgement
+  paradigm_timing: synchronous
+  feedback: none
+  distinguishing: 'Standard configuration (earliest published or canonical; D-057 -001): personal versus impersonal versus
+    non-moral dilemmas (Greene et al. 2001, R1186).'
+first_source:
+  citation: Greene J, Sommerville B, Nystrom L, Darley J, Cohen J. An fMRI Investigation of Emotional Engagement in Moral
+    Judgment. Science 293(5537):2105-2108. 2001.
+  doi: 10.1126/science.1062872
+  pmid: '11557895'
+  year: 2001
+  verified: false
+interop:
+  bids_task: moral
+notes: 'Sources found by curator_e (curation/work/pkg_E/search_log.md): S14 = https://nystrom.scholar.princeton.edu/bibcite/export/bibtex/bibcite_reference/91.
+  New candidate (curator_e). First-pass skeleton (curator_e, 2026-10-03); all sources unverified. Sprint 2 (curator_e, 2026-10-03):
+  protocol block added per D-057; see curation/work/pkg_E/sprint2/split_log.csv. Sprint 3 (curator_d, 2026-10-05): bibliography
+  confirmed (OpenAlex, 2026-10-05).'
+status: draft
+contributors:
+- curator_e

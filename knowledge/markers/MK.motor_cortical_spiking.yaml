@@ -1,0 +1,11 @@
+schema_version: "0.2"
+id: MK.motor_cortical_spiking
+name: {en: Motor / premotor cortical spiking activity, zh: 运动/前运动皮层神经元放电}
+aliases: [motor cortex single-unit activity, multi-unit activity, directional tuning, spike-band power]
+type: single_unit
+recording_modality: [intracortical]
+signature: {topography: M1 and premotor cortex (hand/arm area)}
+description: {en: 'Single- and multi-unit action potentials recorded with microelectrode arrays in primary motor and premotor cortex. Firing rates are tuned to movement direction, velocity and other kinematic or effector variables, and population activity is decoded in intracortical BCIs.', zh: 以微电极阵列在初级运动皮层和前运动皮层记录的单/多神经元动作电位。放电率对运动方向、速度及其他运动学或效应器变量具有调谐，群体活动在皮层内脑机接口中被解码。}
+notes: Signature values are textbook-level characteristics and await source checking (first pass, curator_b). Includes directional tuning, kinematic coding and speech-motor cortex firing (registry note). Generators and indexes to be added in the second pass.
+status: draft
+contributors: [maintainer, curator_b]

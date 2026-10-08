@@ -1,0 +1,49 @@
+schema_version: '0.2'
+id: SOC-TOM-002
+class: SOC-TOM
+name:
+  en: False-belief versus false-photograph localizer
+  zh: 错误信念－错误照片定位任务
+aliases:
+- false-belief localizer
+- ToM localizer
+- false photograph task
+family: social
+bci_category:
+- none
+recording_modality:
+- fMRI
+stimulus_modality:
+- visual
+markers:
+- MK.BOLD_TPJ
+description:
+  en: Participants read short written stories in blocks; false-belief stories describe a character's outdated belief, and
+    matched false-photograph stories describe an outdated physical representation such as a photograph or map, each followed
+    by a true/false question. The contrast isolates belief attribution and increases BOLD in the temporoparietal junction.
+  zh: 被试以组块方式阅读简短文字故事：错误信念故事描述人物过时的信念，与之匹配的错误照片故事描述照片或地图等过时的物理表征，每个故事后回答判断题。二者之差分离出信念归因，增强颞顶联合区 BOLD。
+protocol:
+  n_classes: 2
+  classes:
+  - false-belief stories
+  - false-photograph stories
+  cue: written stories followed by a true/false question
+  paradigm_timing: block
+  feedback: none
+  distinguishing: 'Criteria 1 and 3 versus SOC-TOM-001: the control condition is a matched false-photograph story rather than
+    reality questions, presented as a blocked fMRI localizer (Saxe & Kanwisher 2003, R0260).'
+first_source:
+  citation: 'Saxe, R., & Kanwisher, N. People thinking about thinking people: The role of the temporo-parietal junction in
+    "theory of mind.". NeuroImage, 19(4), 1835-1842. 2003.'
+  doi: 10.1016/s1053-8119(03)00230-1
+  pmid: '12948738'
+  year: 2003
+  verified: false
+interop:
+  bids_task: tomloc
+notes: 'Former SOC-TOM-001 variant. Lead refs: R0260 [first_source_candidate;key_reference], R0967 [method], R0604 [review].
+  The interop label is curator-chosen. New concrete paradigm (curator_e, sprint 2, 2026-10-03, D-057); all sources unverified.
+  Sprint 3 (curator_d, 2026-10-05): bibliography confirmed (OpenAlex, 2026-10-05).'
+status: draft
+contributors:
+- curator_e

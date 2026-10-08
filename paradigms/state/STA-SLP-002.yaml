@@ -1,0 +1,52 @@
+schema_version: '0.2'
+id: STA-SLP-002
+class: STA-SLP
+name:
+  en: Sleep staging (AASM rules)
+  zh: 睡眠分期（AASM 规则）
+aliases:
+- AASM scoring
+- N1-N3 staging
+family: state
+bci_category:
+- passive
+- none
+recording_modality:
+- EEG
+stimulus_modality:
+- resting_state
+markers:
+- MK.sleep_spindle
+- MK.slow_wave
+description:
+  en: Overnight polysomnography is scored in 30-s epochs into five stages, wake, N1, N2, N3 and R, according to the American
+    Academy of Sleep Medicine manual, which merges the former stages 3 and 4 into N3 and adds frontal EEG derivations for
+    slow-wave scoring. These labels are the targets of most current automatic sleep-staging models.
+  zh: 按美国睡眠医学会手册将整夜多导睡眠图以 30 秒一帧判读为清醒、N1、N2、N3 与 R 五期；该手册把原 3、4 期合并为 N3，并为慢波判读增加额区导联。目前多数自动睡眠分期模型以这一标注为目标。
+protocol:
+  n_classes: 5
+  classes:
+  - wake
+  - N1
+  - N2
+  - N3
+  - R
+  cue: none (overnight polysomnography)
+  paradigm_timing: continuous
+  feedback: none
+  distinguishing: 'Criterion 1 versus STA-SLP-001: five AASM classes (stages 3 and 4 merged into N3; REM renamed R) instead
+    of six R&K stages (Iber et al. 2007).'
+first_source:
+  citation: 'Iber C, Ancoli-Israel S, Chesson A, Quan SF, for the American Academy of Sleep Medicine. The AASM Manual for
+    the Scoring of Sleep and Associated Events: Rules, Terminology and Technical Specifications. Westchester, Ill: American
+    Academy of Sleep Medicine. 2007.'
+  year: 2007
+  verified: false
+notes: 'Source: sprint-2 S2-09 [=R1337] (https://sleepreviewmag.com/sleep-diagnostics/in-lab-tests/polysomnography/coming-to-consensus/)
+  for the citation and the differences from R&K. Lead refs: R0890, R0891, R0892 (automatic staging; which scheme each uses
+  not checked). Sleep-EDF stays with STA-SLP-001 (R&K labels). New concrete paradigm (curator_e, sprint 2, 2026-10-03, D-057);
+  all sources unverified. Sprint 3 (curator_d, 2026-10-05): bibliography not found (Crossref, 2026-10-05); no Crossref record
+  for this item, citation left as is.'
+status: draft
+contributors:
+- curator_e

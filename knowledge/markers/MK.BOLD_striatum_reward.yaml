@@ -1,0 +1,22 @@
+schema_version: "0.2"
+id: MK.BOLD_striatum_reward
+name:
+  en: Striatal reward/prediction-error BOLD
+  zh: 纹状体奖赏/预测误差 BOLD
+aliases:
+- striatal reward BOLD
+- ventral striatum prediction error
+- striatal RPE signal
+type: hemodynamic
+recording_modality:
+- fMRI
+description:
+  en: BOLD activity in the striatum, especially the ventral striatum, that scales with reward anticipation, reward outcomes
+    and reward prediction errors during learning and choice.
+  zh: 纹状体（尤其是腹侧纹状体）的 BOLD 活动，在学习和选择过程中随奖赏预期、奖赏结果和奖赏预测误差变化。
+notes: 'No signature given in pass 1 (hemodynamic marker; region described in the description). Generators and indexes not
+  yet written. Used by (registry): ERR-PRL-001, ERR-INST-001, ERR-PCL-001, ERR-TS-001, CTL-DD-001, EMO-MID-001, SOC-TRUST-001.'
+status: draft
+contributors:
+- maintainer
+- curator_c

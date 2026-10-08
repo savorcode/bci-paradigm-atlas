@@ -1,0 +1,23 @@
+schema_version: "0.2"
+id: MK.theta_drowsiness
+name:
+  en: Theta power increase with drowsiness
+  zh: 困倦相关 θ 功率升高
+aliases:
+- drowsiness theta
+- fatigue-related theta
+type: oscillatory
+recording_modality:
+- EEG
+signature:
+  frequency_hz: 4-8
+  topography: widespread, often central and posterior
+description:
+  en: Increase in theta-band power as alertness declines during prolonged monotonous tasks or sleep deprivation, often together
+    with changes in alpha power. It is distinct from task-related frontal midline theta.
+  zh: 在长时间单调任务或睡眠剥夺中，随警觉下降出现的 θ 频段功率升高，常伴随 α 功率变化。与任务相关的额中线 θ 不同。
+notes: Signature values are textbook-level characteristics entered in the first pass and await source checking.
+status: draft
+contributors:
+- maintainer
+- curator_e

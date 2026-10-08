@@ -1,0 +1,60 @@
+schema_version: '0.2'
+id: MOT-BIMAN-001
+class: MOT-BIMAN
+name:
+  en: Bimanual coordination
+  zh: 双手协调
+aliases:
+- bimanual coordination
+- in-phase/anti-phase tapping
+- bimanual anti-phase movement
+family: motor
+bci_category:
+- none
+recording_modality:
+- EEG
+- MEG
+- fMRI
+stimulus_modality:
+- motor_execution
+- visual
+- auditory
+markers:
+- MK.SMR_ERD
+- MK.interhemispheric_coherence
+description:
+  en: >-
+    Participants move both hands rhythmically in in-phase (mirror-symmetric) or anti-phase patterns, often paced by a metronome
+    whose rate is increased until anti-phase coordination becomes unstable. Coordination demands are reflected in sensorimotor
+    rhythm modulation and in coherence between left and right sensorimotor cortices.
+  zh: 被试以同相（镜像对称）或反相模式有节律地移动双手，通常由节拍器定速，并逐步加快直至反相协调失稳。协调需求反映在感觉运动节律的调制以及左右感觉运动皮层之间的相干上。
+protocol:
+  n_classes: 2
+  classes:
+  - in-phase
+  - anti-phase
+  cue: auditory metronome whose rate is increased within the trial
+  paradigm_timing: continuous
+  feedback: none
+  distinguishing: >-
+    Standard configuration (earliest published) / 标准配置（最早发表）: rhythmic bimanual in-phase vs anti-phase movement with metronome
+    frequency scaling (Kelso 1984). No sibling protocol in this class yet.
+first_source:
+  citation: >-
+    Kelso JA. Phase transitions and critical behavior in human bimanual coordination. American Journal of Physiology-Regulatory,
+    Integrative and Comparative Physiology. 1984;246(6):R1000-R1004.
+  doi: 10.1152/ajpregu.1984.246.6.r1000
+  year: 1984
+  verified: false
+interop:
+  bids_task: bimanual
+notes: >-
+  Leads: R0233, R0286, R0314, R0481. Search sources (curation/work/pkg_B/search_log.md): S02 https://api.crossref.org/works/10.1152/ajpregu.1984.246.6.R1000.
+  first_source found by search (S02); it is a behavioural study. Leads R0233-R0481 are Wikipedia-derived and mostly behavioural;
+  R0481 is fMRI. Memory leads (unverified): Swinnen 2002 Nat Rev Neurosci; Serrien & Brown 2002 EEG coherence. The EEG/MEG
+  marker evidence still needs a dedicated lead (blocker). D-031 (maintainer, 2026-10-03): first_source is a behavioural or
+  EMG/MEP-only origin, which is acceptable; add the earliest brain-recording study as a "First neural recording: <citation>
+  (R####)" line in sprint 2. bibliography corrected (Crossref, 2026-10-05)
+status: draft
+contributors:
+- curator_b

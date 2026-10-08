@@ -1,0 +1,51 @@
+schema_version: '0.2'
+id: MOT-ME-003
+class: MOT-ME
+name:
+  en: Overground / treadmill walking
+  zh: 地面/跑步机行走
+aliases:
+- gait EEG
+- walking
+- treadmill walking
+family: motor
+bci_category:
+- active
+- none
+recording_modality:
+- EEG
+stimulus_modality:
+- motor_execution
+markers:
+- MK.SMR_ERD
+description:
+  en: Participants walk overground or on a treadmill, typically contrasted with standing, while mobile EEG is recorded. Walking
+    modulates sensorimotor mu/beta power over the leg area within the gait cycle; there is no trial segmentation.
+  zh: 被试在地面或跑步机上行走，通常与站立对照，同时记录移动脑电。行走在步态周期内调制腿区感觉运动 mu/β 功率；没有试次分段。
+protocol:
+  n_classes: 2
+  classes:
+  - walking
+  - standing
+  cue: instruction to start and stop walking
+  paradigm_timing: continuous
+  feedback: none
+  distinguishing: 'Criteria 1 and 3 vs MOT-ME-001: whole-body gait vs standing, recorded continuously rather than as cued
+    single movements.'
+first_source:
+  citation: Gwin JT, Gramann K, Makeig S, Ferris DP. Removal of movement artifact from high-density EEG recorded during walking
+    and running. Journal of Neurophysiology. 2010;103(6):3526-3534.
+  doi: 10.1152/jn.00105.2010
+  year: 2010
+  verified: false
+interop:
+  bids_task: walking
+notes: 'Lead: R0955 (topical overview of lower-limb BCI tasks). Converted from the MOT-ME-001 variant ''Overground / treadmill
+  walking'' (D-014; MOT-GAIT-001 stays void). Class set and timing follow the variant description; the overview has not been
+  read for specific protocols. [curator_a, sprint 3] Former first_source: "TBD: origin of the EEG walking protocol not identified;
+  only the topical overview R0955 is available". candidate origin found by bibliographic search; content unverified. bibliography
+  corrected (OpenAlex, 2026-10-05) [maintainer sprint 3, 2026-10-07, D-073] origin candidate recalled, record confirmed via
+  OpenAlex.'
+status: draft
+contributors:
+- curator_b

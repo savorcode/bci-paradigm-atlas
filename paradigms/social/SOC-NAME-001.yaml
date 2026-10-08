@@ -1,0 +1,52 @@
+schema_version: '0.2'
+id: SOC-NAME-001
+class: SOC-NAME
+name:
+  en: Own-name paradigm
+  zh: 自我名字范式
+aliases:
+- subject's own name (SON) paradigm
+- own name P300
+- self-name oddball
+family: social
+bci_category:
+- reactive
+- none
+recording_modality:
+- EEG
+stimulus_modality:
+- auditory
+- visual
+markers:
+- MK.P3b
+description:
+  en: The participant's own first name is presented infrequently among other names while the participant listens passively.
+    The own name elicits a larger P3b than other names, a response also probed in patients with disorders of consciousness.
+  zh: 被试被动聆听，自己的名字以较低概率夹在其他名字中出现。自身名字比其他名字诱发更大的 P3b，这一反应也用于意识障碍患者的检测。
+protocol:
+  n_classes: 2
+  classes:
+  - own name
+  - other names
+  cue: spoken (or visual) first names, own name presented infrequently
+  paradigm_timing: synchronous
+  feedback: none
+  distinguishing: 'Standard configuration (earliest published or canonical; D-057 -001): passive own-name oddball (Berlad
+    & Pratt 1995, R1185). Differs from SOC-NAME-002 (instructed counting of own or other target name).'
+first_source:
+  citation: Berlad I, Pratt H. P300 in response to subject's own name. Electroencephalogr Clin Neurophysiol 96:472-474. 1995.
+  doi: 10.1016/0168-5597(95)00116-a
+  year: 1995
+  verified: false
+interop:
+  bids_task: ownname
+notes: 'Sources found by curator_e (curation/work/pkg_E/search_log.md): S12 = https://www.frontiersin.org/journals/human-neuroscience/articles/10.3389/fnhum.2014.00194/full;
+  S12b = https://www.frontiersin.org/journals/human-neuroscience/articles/10.3389/fnhum.2014.00194/full. first_source note:
+  Seen only as a reference-list entry in S12b (secondary); must be checked against the original. New candidate (curator_e).
+  Could be treated as a variant of PER-ODD-001 (same marker); kept separate because the construct is self-relevance rather
+  than target detection - maintainer to decide. First-pass skeleton (curator_e, 2026-10-03); all sources unverified. Sprint
+  2 (curator_e, 2026-10-03): protocol block added per D-057; see curation/work/pkg_E/sprint2/split_log.csv. Sprint 3 (curator_d,
+  2026-10-05): bibliography confirmed (OpenAlex, 2026-10-05).'
+status: draft
+contributors:
+- curator_e

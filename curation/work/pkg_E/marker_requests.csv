@@ -1,0 +1,2 @@
+﻿marker_id,name_en,name_zh,type,recording_modality,requested_by_paradigm,reason
+MK.BOLD_posterior_insula,Posterior insula BOLD,后岛叶 BOLD,hemodynamic,fMRI,EMO-TOUCH-001,"CT-optimal affective touch activates posterior (not anterior) insular cortex (S10, Olausson et al. 2002, doi:10.1038/nn896); no synonym in registry (MK.BOLD_anterior_insula is a different region). File created by pkg E per D-028 item 7."

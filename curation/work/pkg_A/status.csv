@@ -1,0 +1,60 @@
+﻿proposed_id,status,first_source_ref,n_leads_used,blockers
+PER-ODD-001,第一遍完成,R0011,18,种子条目补充：RSVP 变体与别名；D-012 触觉 P300 BCI 变体无线索未写
+SSR-SSVEP-001,第一遍完成,search,11,种子条目补充：3 个并入变体；高频 SSVEP 变体出处来自检索（SA32）
+PER-AAD-001,第一遍完成,R0855,4,
+PER-CVA-001,第一遍完成,R0343,3,R0343 线索缺标题，已用期刊页面（SA48）补全
+PER-MMN-001,第一遍完成,R0044,11,
+PER-MVEP-001,阻塞,none,3,无源头文献（first_source = TBD）
+PER-AB-001,第一遍完成,R0101,3,
+PER-ABR-001,阻塞,none,3,无源头文献（first_source = TBD）
+PER-AEP-001,阻塞,none,2,无源头文献（first_source = TBD）
+PER-BR-001,阻塞,none,2,无源头文献（first_source = TBD）
+PER-CAT-001,第一遍完成,R0059,5,R0059 为理论章节，源头认定待议
+PER-CUE-001,第一遍完成,R0049,9,
+PER-FACE-001,第一遍完成,R0917,9,
+PER-FVEP-001,阻塞,none,3,无源头文献（first_source = TBD）
+PER-GATE-001,阻塞,none,2,无源头文献（first_source = TBD）
+PER-HBD-001,第一遍完成,R0041,6,
+PER-LEP-001,第一遍完成,R0097,3,
+PER-LG-001,第一遍完成,R1006,3,
+PER-MASK-001,第一遍完成,R0359,17,
+PER-MSI-001,第一遍完成,R0035,6,
+PER-NAT-001,第一遍完成,search,7,源头来自本轮检索，非线索表
+PER-OLF-001,阻塞,none,1,无源头文献（first_source = TBD）；R0046 疑为动物研究，未采用
+PER-OMIT-001,阻塞,none,3,无源头文献（first_source = TBD）
+PER-PRVEP-001,阻塞,none,3,无源头文献（first_source = TBD）
+PER-RET-001,第一遍完成,search,6,源头来自本轮检索，非线索表
+PER-TACT-001,阻塞,none,1,无源头文献（first_source = TBD）；原无文献线索；D-012 触觉 P300 BCI 变体无线索未写
+PER-TON-001,第一遍完成,R0295,6,
+PER-VS-001,第一遍完成,R0047,9,
+PER-AMASK-001,阻塞,none,2,无源头文献（first_source = TBD）
+PER-BOI-001,第一遍完成,R0168,6,
+PER-CTXC-001,第一遍完成,R0160,7,
+PER-MOT-001,第一遍完成,R0083,6,
+PER-NAVON-001,第一遍完成,R0040,9,
+SSR-ASSR-001,第一遍完成,R0833,3,
+SSR-CVEP-001,阻塞,none,2,无源头文献（first_source = TBD）
+SSR-SSMVEP-001,第一遍完成,R0556,2,
+SSR-SSSEP-001,阻塞,none,2,无源头文献（first_source = TBD）
+SSR-BEAT-001,第一遍完成,search,5,源头来自本轮检索，非线索表
+SSR-FFR-001,第一遍完成,search,4,源头来自本轮检索，非线索表；Worden & Marsh 1968 是否为人类记录待核
+SSR-FPVS-001,阻塞,none,3,无源头文献（first_source = TBD）
+SSR-SWEEP-001,阻塞,none,1,无源头文献（first_source = TBD）；例会候议：可能并入 SSR-SSVEP-001
+PER-VMMN-001,阻塞,none,3,无源头文献（first_source = TBD）；新候选，待维护者审查并写入 candidates.csv
+PER-MLR-001,阻塞,none,3,无源头文献（first_source = TBD）；新候选，待维护者审查并写入 candidates.csv
+PER-ACC-001,阻塞,none,1,无源头文献（first_source = TBD）；新候选，待维护者审查并写入 candidates.csv
+PER-ORN-001,第一遍完成,search,2,源头来自本轮检索，非线索表；新候选，待维护者审查并写入 candidates.csv
+PER-STREAM-001,第一遍完成,search,1,源头来自本轮检索，非线索表；新候选，待维护者审查并写入 candidates.csv
+PER-GEP-001,阻塞,none,3,无源头文献（first_source = TBD）；新候选，待维护者审查并写入 candidates.csv
+PER-SPN-001,阻塞,none,1,无源头文献（first_source = TBD）；新候选，待维护者审查并写入 candidates.csv
+PER-IC-001,阻塞,none,1,无源头文献（first_source = TBD）；新候选，待维护者审查并写入 candidates.csv
+PER-ADDS-001,阻塞,none,1,无源头文献（first_source = TBD）；新候选，待维护者审查并写入 candidates.csv
+PER-IB-001,阻塞,none,2,无源头文献（first_source = TBD）；新候选，待维护者审查并写入 candidates.csv
+PER-CB-001,阻塞,none,1,无源头文献（first_source = TBD）；新候选，待维护者审查并写入 candidates.csv
+PER-RREP-001,阻塞,none,2,无源头文献（first_source = TBD）；新候选，待维护者审查并写入 candidates.csv
+PER-VOICE-001,阻塞,none,2,无源头文献（first_source = TBD）；新候选，待维护者审查并写入 candidates.csv
+PER-BODY-001,第一遍完成,search,2,源头来自本轮检索，非线索表；新候选，待维护者审查并写入 candidates.csv
+SSR-IM-001,第一遍完成,search,1,源头来自本轮检索，非线索表；新候选，待维护者审查并写入 candidates.csv
+SSR-NSSEP-001,第一遍完成,search,2,源头来自本轮检索，非线索表；新候选，待维护者审查并写入 candidates.csv
+SSR-FPAS-001,第一遍完成,search,2,源头来自本轮检索，非线索表；待例会：独立或作为 SSR-FPVS-001 变体；新候选，待维护者审查并写入 candidates.csv
+SSR-RVS-001,阻塞,none,1,无源头文献（first_source = TBD）；使用包 B 的 MK.oscillatory_entrainment，需通知包 B；新候选，待维护者审查并写入 candidates.csv

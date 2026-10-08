@@ -1,0 +1,70 @@
+schema_version: '0.2'
+id: MOT-REACH-001
+class: MOT-REACH
+name:
+  en: Center-out reaching
+  zh: 中心外伸伸够任务
+aliases:
+- center-out task
+- centre-out reaching
+- 8-target reaching
+family: motor
+bci_category:
+- active
+- none
+recording_modality:
+- intracortical
+- ECoG
+- MEG
+- EEG
+stimulus_modality:
+- motor_execution
+- visual
+markers:
+- MK.motor_cortical_spiking
+- MK.high_gamma
+description:
+  en: >-
+    From a central start position, the participant reaches (or moves a cursor/manipulandum) to one of several targets arranged
+    radially around the centre. Firing rates of motor cortical neurons are broadly tuned to movement direction, and population
+    activity or high-gamma features are used to decode reach direction.
+  zh: 被试从中央起始位置伸手（或移动光标/操纵杆）指向环绕中心径向排列的若干目标之一。运动皮层神经元放电率对运动方向呈宽调谐，群体活动或高 γ 特征用于解码伸够方向。
+protocol:
+  n_classes: 8
+  classes:
+  - 0 deg
+  - 45 deg
+  - 90 deg
+  - 135 deg
+  - 180 deg
+  - 225 deg
+  - 270 deg
+  - 315 deg
+  cue: visual target light at one of eight radial positions
+  paradigm_timing: synchronous
+  feedback: none
+  distinguishing: >-
+    Standard configuration (earliest published) / 标准配置（最早发表）: two-dimensional centre-out arm movements to eight radially arranged
+    targets (R1020, non-human primate origin, D-031). Sibling: -002 four-direction wrist centre-out movements with MEG (criterion
+    1).
+first_source:
+  citation: >-
+    Georgopoulos AP, Kalaska JF, Caminiti R, Massey JT. On the relations between the direction of two-dimensional arm movements
+    and cell discharge in primate motor cortex. Journal of Neuroscience. 1982;2(11):1527-1537.
+  doi: 10.1523/jneurosci.02-11-01527.1982
+  pmid: '7143039'
+  year: 1982
+  verified: false
+datasets:
+- name: Neural Latents Benchmark '21 (MC_Maze etc.; non-human primate reaching; DANDI)
+interop:
+  bids_task: centerout
+notes: >-
+  Leads: R0834, R1002, R1012, R1020, R1038. Origin (R1020) and population-vector work (R1012) are non-human primate studies;
+  the human use is via ECoG, Utah arrays and MEG/EEG (e.g. R1002). The listed dataset is non-human primate and is recorded
+  for reference only. Sprint 2 (D-057): eight-target layout as commonly attributed to R1020; check against the original. Neural
+  Latents Benchmark (non-human primate maze reaching) is a different target layout and is kept for reference only. bibliography
+  corrected (OpenAlex, 2026-10-05)
+status: draft
+contributors:
+- curator_b

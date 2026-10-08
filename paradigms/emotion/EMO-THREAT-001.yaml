@@ -1,0 +1,61 @@
+schema_version: '0.2'
+id: EMO-THREAT-001
+class: EMO-THREAT
+name:
+  en: NPU threat-of-shock test
+  zh: NPU 电击威胁测试
+aliases:
+- threat of shock
+- NPU-threat
+- anticipatory anxiety paradigm
+- instructed threat
+family: emotion
+bci_category:
+- none
+recording_modality:
+- fMRI
+stimulus_modality:
+- visual
+- electrical_stimulation
+markers:
+- MK.BOLD_amygdala
+- MK.BOLD_anterior_insula
+description:
+  en: Cues or contexts signal periods in which an aversive electric shock may be delivered predictably, unpredictably or not
+    at all, and shocks are rarely or never actually given. Phasic and sustained threat produce distinct BOLD responses, including
+    amygdala and anterior insula activation.
+  zh: 线索或情境提示在某段时间内可能以可预测、不可预测的方式施加厌恶性电击或不会施加，实际电击很少或从不施加。短时与持续威胁产生不同的 BOLD 响应，包括杏仁核与前岛叶激活。
+protocol:
+  n_classes: 3
+  classes:
+  - neutral (no shock)
+  - predictable shock (cued)
+  - unpredictable shock
+  cue: visual cues within condition blocks; shocks delivered only during cues (P) or at any time (U)
+  paradigm_timing: block
+  feedback: none
+  distinguishing: 'Standard configuration (earliest published or canonical; D-057 -001): NPU-threat test contrasting predictable
+    and unpredictable threat with a neutral condition (Schmitz & Grillon 2012 protocol paper, sprint-2 S2-04).'
+first_source:
+  citation: Schmitz A, Grillon C. Assessing fear and anxiety in humans using the threat of predictable and unpredictable aversive
+    events (the NPU-threat test). Nature Protocols. 2012;7(3):527-532.
+  doi: 10.1038/nprot.2012.001
+  year: 2012
+  verified: false
+interop:
+  bids_task: threat
+notes: 'Sources found by curator_e (curation/work/pkg_E/search_log.md): S09 = https://neurosynth.org/studies/21111828. first_source
+  note: Threat-of-shock (NPU-type) fMRI; earlier startle-based threat-of-shock work (Grillon) not surfaced. New candidate
+  (curator_e). Differs from EMO-FC-001: no CS-US learning; the threat is instructed. Earlier startle-based threat-of-shock
+  work not surfaced. First-pass skeleton (curator_e, 2026-10-03); all sources unverified. D-031 (maintainer, 2026-10-03):
+  first_source currently holds the earliest neural recording study found, not the paradigm origin; in sprint 2 move it to
+  a "First neural recording:" line and fill first_source with the origin. Sprint 2 (curator_e, 2026-10-03): protocol block
+  added per D-057; see curation/work/pkg_E/sprint2/split_log.csv. D-031 resolved in sprint 2: first_source now the NPU-threat
+  protocol paper (S2-04 [=R1332], https://cognitiveatlas.org/task/id/trm_502420a682976/); earlier NPU publications by Grillon
+  and colleagues not surfaced, so this is the earliest seen description, not necessarily the origin. First neural recording:
+  Alvarez RP, Chen G, Bodurka J, Kaplan R, Grillon C 2011, Phasic and sustained fear in humans elicits distinct patterns of
+  brain activity, NeuroImage (R1182). Sprint 3 (curator_d, 2026-10-05): bibliography corrected (Crossref, 2026-10-05): doi,
+  pages added. [maintainer sprint 3, 2026-10-07, D-073] origin candidate recalled, record confirmed via Crossref.'
+status: draft
+contributors:
+- curator_e

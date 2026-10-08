@@ -1,0 +1,59 @@
+schema_version: '0.2'
+id: MOT-OBS-001
+class: MOT-OBS
+name:
+  en: Action observation
+  zh: 动作观察
+aliases:
+- AO
+- action observation
+- mirror neuron paradigm
+- mu suppression paradigm
+family: motor
+bci_category:
+- none
+- active
+recording_modality:
+- EEG
+- MEG
+- fMRI
+stimulus_modality:
+- visual
+markers:
+- MK.SMR_ERD
+- MK.BOLD_premotor_parietal
+description:
+  en: >-
+    Participants watch videos or live demonstrations of actions (typically hand movements) without moving, compared with static
+    or non-biological control stimuli. Observation suppresses mu/beta rhythms over sensorimotor cortex and activates premotor
+    and parietal regions of the action observation network.
+  zh: 被试在不运动的情况下观看动作视频或现场示范（通常为手部动作），并与静态或非生物运动对照刺激比较。动作观察使感觉运动皮层上的 mu/β 节律受抑制，并激活动作观察网络中的前运动区与顶叶区域。
+protocol:
+  n_classes: 2
+  classes:
+  - action observation
+  - static or non-biological control
+  cue: video or live demonstration of hand actions
+  paradigm_timing: block
+  feedback: none
+  distinguishing: >-
+    Standard configuration (earliest published) / 标准配置（最早发表）: passive observation of hand actions vs control stimuli (R0995,
+    MEP readout; first neural recording R0845). Observation combined with imagery is not split (no lead).
+first_source:
+  citation: >-
+    Fadiga L, Fogassi L, Pavesi G, Rizzolatti G. Motor facilitation during action observation: a magnetic stimulation study.
+    Journal of Neurophysiology. 1995;73(6):2608-2611.
+  doi: 10.1152/jn.1995.73.6.2608
+  pmid: '7666169'
+  year: 1995
+  verified: false
+interop:
+  bids_task: actionobservation
+notes: >-
+  Leads: R0845, R0851, R0987, R0995. first_source R0995 (TMS motor facilitation; memory lead Fadiga et al. 1995) is the oldest
+  lead but measures MEPs, not brain activity; R0845 (MEG; memory lead Hari et al. 1998) is the earliest neural-recording lead.
+  Memory lead (unverified): Gastaut & Bert 1954 rolandic rhythm blocking during film viewing. Candidate note: action observation
+  combined with imagery was proposed as a MOT-MI-001 variant (no lead yet). bibliography corrected (OpenAlex, 2026-10-05)
+status: draft
+contributors:
+- curator_b

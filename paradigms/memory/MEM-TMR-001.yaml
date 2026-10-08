@@ -1,0 +1,58 @@
+schema_version: '0.2'
+id: MEM-TMR-001
+class: MEM-TMR
+name:
+  en: Targeted memory reactivation
+  zh: 睡眠中目标记忆再激活
+aliases:
+- Cued memory reactivation during sleep
+- TMR
+family: memory
+bci_category:
+- none
+recording_modality:
+- EEG
+stimulus_modality:
+- auditory
+markers:
+- MK.sleep_spindle
+- MK.slow_wave
+description:
+  en: During learning, each item is associated with its own sound (for example an object sound paired with an object location);
+    during subsequent sleep, a subset of the sounds is re-presented, usually in slow-wave sleep, and memory for cued and uncued
+    items is compared after waking. Cue presentation evokes slow oscillations and sleep spindles, and these responses are
+    related to the memory benefit for cued items.
+  zh: 学习时每个项目与各自的声音相关联（如物体声音与物体位置配对）；随后睡眠中（通常在慢波睡眠）重放其中一部分声音，醒后比较被提示与未被提示项目的记忆。线索呈现诱发慢振荡与睡眠纺锤波，这些反应与被提示项目的记忆获益相关。
+trial_structure:
+  conditions:
+  - cued
+  - uncued
+protocol:
+  n_classes: 2
+  classes:
+  - cued items
+  - uncued items
+  cue: item-specific sounds paired with items at learning and re-presented during slow-wave sleep
+  stimulus_coding: item-specific auditory cues
+  paradigm_timing: synchronous
+  feedback: none
+  distinguishing: 标准配置（公认）/ canonical configuration：学习时项目特异的声音线索，在慢波睡眠中重放一部分（Rudoy et al. 2009, R0443）。与 -002（整段学习情境的气味线索，准则
+    1;2）区别；-001 为公认的项目特异 TMR 配置而非最早发表的配置——更早的兄弟为 -002（Rasch et al. 2007, R1327），范式类源头取自 -002（D-062）。
+first_source:
+  citation: Rudoy JD, Voss JL, Westerberg CE, Paller KA. Strengthening Individual Memories by Reactivating Them During Sleep.
+    Science. 2009;326(5956):1079.
+  doi: 10.1126/science.1179013
+  pmid: '19965421'
+  year: 2009
+  verified: false
+interop:
+  bids_task: tmr
+notes: 'Leads: R0443, R0798 (R#### = curation/literature.csv; DN## = curation/work/pkg_D/new_leads.csv). Sensory cues during
+  sleep are usually sounds or odours; stimulus_modality reflects this. Sprint 2 (D-057, curator_d, 2026-10-03): protocol block
+  added (-001 = earliest/standard configuration). Narrowed to item-specific auditory cueing; odour context reactivation (Rasch
+  et al. 2007) is MEM-TMR-002. Sibling concrete paradigms: MEM-TMR-002. D-062 (maintainer, 2026-10-05): -001 is the canonical,
+  not the earliest, configuration; the class origin is the earlier sibling MEM-TMR-002 (R1327, 2007); numbers are not swapped
+  (permanence). bibliography corrected (Crossref, 2026-10-05)'
+status: draft
+contributors:
+- curator_d

@@ -1,0 +1,52 @@
+schema_version: '0.2'
+id: LAN-READ-001
+class: LAN-READ
+name:
+  en: Natural reading with eye tracking
+  zh: 自然阅读（眼动同步）
+aliases:
+- co-registered EEG/eye-tracking reading
+- fixation-related potentials (FRP)
+- natural reading
+family: language
+bci_category:
+- none
+recording_modality:
+- EEG
+stimulus_modality:
+- visual
+- naturalistic
+markers:
+- MK.FRP
+description:
+  en: Participants read sentences or texts freely while EEG and eye movements are recorded simultaneously, and EEG epochs
+    are time-locked to the onset of fixations on words. Fixation-related potentials reveal word-level effects such as predictability,
+    which can be compared with ERPs from serial word-by-word presentation.
+  zh: 被试自由阅读句子或文本，同时记录 EEG 和眼动，EEG 以注视词语的起始时刻为锁时点进行分段。注视相关电位可揭示可预测性等词汇层面的效应，并可与逐词序列呈现所得的 ERP 相比较。
+trial_structure:
+  conditions:
+  - 'fixation on word (lexical variables: parameter)'
+protocol:
+  n_classes: 1
+  classes:
+  - 'word fixations (predictability: parameter)'
+  cue: sentences or texts read freely
+  paradigm_timing: continuous
+  feedback: none
+  distinguishing: 标准配置（最早发表）：自由阅读 + EEG/眼动同步，注视锁时（Dimigen et al. 2011, R1163）。本类只有这一配置。
+first_source:
+  citation: 'Dimigen O, Sommer W, Hohlfeld A, Jacobs AM, Kliegl R. Coregistration of eye movements and EEG in natural reading:
+    Analyses and review. Journal of Experimental Psychology: General. 2011;140(4):552-572.'
+  doi: 10.1037/a0023885
+  year: 2011
+  verified: false
+interop:
+  bids_task: naturalreading
+notes: 'Leads: R0033, R0048, R0255, R0311, DN10 (R#### = curation/literature.csv; DN## = curation/work/pkg_D/new_leads.csv).
+  The four leads in curation/paradigm_literature.csv are eye-movement-in-reading papers (Wikipedia) without EEG. Dimigen et
+  al. (2011) located via search; it is a methods paper and review, not necessarily the first co-registration study, so the
+  origin attribution is provisional. Sprint 2 (D-057, curator_d, 2026-10-03): protocol block added (-001 = earliest/standard
+  configuration). bibliography corrected (OpenAlex, 2026-10-05)'
+status: draft
+contributors:
+- curator_d

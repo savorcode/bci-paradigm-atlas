@@ -1,0 +1,55 @@
+schema_version: '0.2'
+id: LAN-PCAT-001
+class: LAN-PCAT
+name:
+  en: Phoneme categorization
+  zh: 音位范畴化
+aliases:
+- categorical speech perception
+- speech continuum identification
+- phonetic categorization
+family: language
+bci_category:
+- none
+recording_modality:
+- ECoG
+- EEG
+- fMRI
+stimulus_modality:
+- auditory
+markers:
+- MK.high_gamma
+description:
+  en: Participants hear syllables drawn from an acoustic continuum between two phonemes (for example /ba/-/da/-/ga/) and identify
+    each token. Population activity in the superior temporal gyrus, measured as high-gamma responses, reflects the perceived
+    phoneme category rather than the linear acoustic change, mirroring categorical perception.
+  zh: 被试聆听取自两个音位之间声学连续体的音节（如 /ba/-/da/-/ga/），并识别每个刺激。以高 γ 响应测得的颞上回群体活动反映的是被知觉到的音位范畴，而非线性变化的声学参数，与范畴知觉相对应。
+trial_structure:
+  conditions:
+  - continuum step (parameter)
+protocol:
+  n_classes: 2
+  classes:
+  - phoneme category A
+  - phoneme category B
+  cue: syllables from an acoustic continuum between two (or three) phonemes
+  paradigm_timing: synchronous
+  feedback: none
+  distinguishing: 标准配置（最早发表）：音位连续体上的音节辨认（R1169）。本类只有这一配置。
+first_source:
+  citation: Chang EF, Rieger JW, Johnson K, Berger MS, Barbaro NM, Knight RT. Categorical speech representation in human superior
+    temporal gyrus. Nature Neuroscience. 2010;13(11):1428-1432.
+  doi: 10.1038/nn.2641
+  pmid: '20890293'
+  year: 2010
+  verified: false
+interop:
+  bids_task: phonemecategorization
+notes: 'Leads: DN43, DN44 (R#### = curation/literature.csv; DN## = curation/work/pkg_D/new_leads.csv). New candidate (curator_d).
+  Possible overlap with the speech-sound MMN variant of PER-MMN-001 (D-017); kept separate because the marker (STG high-gamma
+  population encoding) and the active identification task differ. DN43 (title/PMID only). Leads: DN43, DN44. Sprint 2 (D-057,
+  curator_d, 2026-10-03): protocol block added (-001 = earliest/standard configuration). bibliography corrected (OpenAlex,
+  2026-10-05)'
+status: draft
+contributors:
+- curator_d

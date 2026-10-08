@@ -1,0 +1,60 @@
+schema_version: '0.2'
+id: LAN-SC-001
+class: LAN-SC
+name:
+  en: Sentence comprehension
+  zh: 句子理解
+aliases:
+- Garden-Path Reading
+- Syntactic Ambiguity Task
+- sign language sentence comprehension
+family: language
+bci_category:
+- none
+recording_modality:
+- EEG
+- fMRI
+stimulus_modality:
+- visual
+- auditory
+markers:
+- MK.N400
+- MK.P600
+- MK.BOLD_language_network
+description:
+  en: Participants read or listen to sentences that vary in structural complexity or temporary ambiguity, such as object-
+    versus subject-relative clauses or garden-path sentences, and answer comprehension questions. Complex or reanalysis-requiring
+    sentences increase BOLD activity in the left frontotemporal language network and modulate N400 and P600 responses at the
+    critical words.
+  zh: 被试阅读或聆听结构复杂度或暂时歧义程度不同的句子（如宾语关系从句与主语关系从句、花园路径句），并回答理解问题。复杂句或需要重新分析的句子提高左侧额颞语言网络的 BOLD 活动，并在关键词处调制 N400 和 P600 响应。
+trial_structure:
+  conditions:
+  - complex (e.g. object relative)
+  - simple (e.g. subject relative)
+protocol:
+  n_classes: 2
+  classes:
+  - complex sentence
+  - simple sentence
+  cue: written or spoken sentences followed by comprehension questions
+  paradigm_timing: synchronous
+  feedback: none
+  distinguishing: 标准配置（最早发表）：结构复杂/暂时歧义句 vs 简单句的理解（类源头 Frazier & Rayner 1982, R0055）。与 -002（手语句子理解，准则 2，D-044）区别。
+first_source:
+  citation: 'Frazier L, Rayner K. Making and correcting errors during sentence comprehension: Eye movements in the analysis
+    of structurally ambiguous sentences. Cognitive Psychology. 1982;14(2):178-210.'
+  doi: 10.1016/0010-0285(82)90008-1
+  year: 1982
+  verified: false
+interop:
+  bids_task: sentencecomprehension
+notes: 'HED task page: https://www.hedtags.org/hed-task/tasks/hedtsk_sentence_comprehension.html. Leads: R0055, R0238, R0301,
+  R0404, R0613, R0663 (R#### = curation/literature.csv; DN## = curation/work/pkg_D/new_leads.csv). R0055 (Frazier & Rayner
+  1982) is an eye-movement study of garden-path sentences and the oldest lead; it is behavioural. Boundaries with LAN-N400-001
+  and LAN-P600-001 (which are restricted to violation designs) need discussion. Proposed new candidate LAN-SIGN-001 recorded
+  as a variant (modality change only). Sprint 2 (D-057, curator_d, 2026-10-03): protocol block added (-001 = earliest/standard
+  configuration). Spoken/written language; sign-language sentence comprehension moved to LAN-SC-002. Sibling concrete paradigms:
+  LAN-SC-002. bibliography corrected (Crossref, 2026-10-05)'
+status: draft
+contributors:
+- curator_d

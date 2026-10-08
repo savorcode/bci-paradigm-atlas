@@ -1,0 +1,62 @@
+schema_version: '0.2'
+id: LAN-PRIME-001
+class: LAN-PRIME
+name:
+  en: Semantic priming
+  zh: 语义启动
+aliases:
+- Associative Priming
+- Morphological Priming
+- Orthographic Priming
+- Phonological Priming
+- Priming
+- masked semantic priming
+- word-pair priming
+family: language
+bci_category:
+- none
+recording_modality:
+- EEG
+stimulus_modality:
+- visual
+- auditory
+markers:
+- MK.N400
+description:
+  en: A prime word is followed by a target word that is either semantically related or unrelated to it, and participants respond
+    to the target, for example with a lexical decision, or simply read it. Related targets are processed faster and elicit
+    a smaller N400 than unrelated targets.
+  zh: 先呈现启动词，随后呈现与之语义相关或无关的目标词，被试对目标词作出反应（如词汇判断）或仅阅读。与无关目标词相比，相关目标词加工更快，诱发的 N400 更小。
+trial_structure:
+  conditions:
+  - related
+  - unrelated
+  - SOA (parameter)
+protocol:
+  n_classes: 2
+  classes:
+  - related prime-target
+  - unrelated prime-target
+  cue: visible prime word followed by a target word
+  paradigm_timing: synchronous
+  feedback: none
+  distinguishing: 标准配置（最早发表）：可见启动词 + 目标词（词汇判断或阅读；Meyer & Schvaneveldt 1971, R0022）。与 -002（掩蔽启动，准则 2）区别。
+first_source:
+  citation: 'Meyer, D. E., & Schvaneveldt, R. W. Facilitation in recognizing pairs of words: Evidence of a dependence between
+    retrieval operations. Journal of Experimental Psychology, 90(2), 227-234. 1971.'
+  doi: 10.1037/h0031564
+  pmid: '5134329'
+  year: 1971
+  verified: false
+interop:
+  bids_task: semanticpriming
+notes: 'HED task page: https://www.hedtags.org/hed-task/tasks/hedtsk_semantic_priming.html. Leads: R0022, R0032, R0084, R0247,
+  R0392, R0409, R0537, R0590, R0829, R0847, R0926, R1039 (R#### = curation/literature.csv; DN## = curation/work/pkg_D/new_leads.csv).
+  D-016: response task is not restricted (lexical decision, semantic judgement or passive reading); see LAN-LDT-001 for the
+  boundary. R0022 (Meyer & Schvaneveldt 1971) chosen as origin. Sprint 2 (D-057, curator_d, 2026-10-03): protocol block added
+  (-001 = earliest/standard configuration). Visible (unmasked) priming; masked priming moved to LAN-PRIME-002. Indirect (mediated)
+  priming logged as proposed (single lead R0847). Sibling concrete paradigms: LAN-PRIME-002. bibliography confirmed (Crossref,
+  2026-10-05)'
+status: draft
+contributors:
+- curator_d

@@ -1,0 +1,22 @@
+schema_version: "0.2"
+id: MK.AV_interaction_ERP
+name:
+  en: Early audiovisual interaction ERP
+  zh: 早期视听交互 ERP
+aliases:
+- AV interaction
+- multisensory interaction ERP
+- AV-(A+V) difference
+type: erp_component
+recording_modality:
+- EEG
+- MEG
+description:
+  en: Difference between the ERP to combined audiovisual stimuli and the sum of the ERPs to the auditory and visual stimuli
+    alone (additive model). Non-zero differences, including in early latency ranges, are taken as evidence of multisensory
+    interaction.
+  zh: 视听联合刺激 ERP 与单独听觉、单独视觉刺激 ERP 之和之间的差异（加性模型）。差异不为零（包括在早期潜伏期）被视为多感觉交互的证据。
+notes: First-pass skeleton by package A (2026-10-03). No generators/indexes yet.
+status: draft
+contributors:
+- curator_a

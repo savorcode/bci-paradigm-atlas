@@ -1,0 +1,55 @@
+schema_version: '0.2'
+id: SOC-ANIM-001
+class: SOC-ANIM
+name:
+  en: Animated shapes mentalizing (Frith-Happé animations)
+  zh: 几何图形动画心智化（Frith-Happé 动画）
+aliases:
+- Frith-Happé animations
+- Heider-Simmel animations
+- animated triangles task
+family: social
+bci_category:
+- none
+recording_modality:
+- PET
+- fMRI
+stimulus_modality:
+- visual
+markers:
+- MK.BOLD_TPJ
+- MK.BOLD_mPFC
+description:
+  en: Short animations of moving geometric shapes depict interactions that invite mental-state attribution (e.g. coaxing,
+    mocking), goal-directed actions or random movement, and participants describe or classify them. Mental-state animations
+    increase activity in the temporoparietal junction and medial prefrontal cortex.
+  zh: 短动画中移动的几何图形表现出诱发心理状态归因的互动（如哄骗、嘲弄）、目标导向动作或随机运动，被试对其进行描述或分类。心理状态类动画增强颞顶联合区与内侧前额叶的活动。
+protocol:
+  n_classes: 3
+  classes:
+  - theory-of-mind animations
+  - goal-directed animations
+  - random-movement animations
+  cue: animations of moving geometric shapes, described or classified by the participant
+  paradigm_timing: block
+  feedback: none
+  distinguishing: 'Standard configuration (earliest published or canonical; D-057 -001): Frith-Happé animations in three categories
+    (Castelli et al. 2000, R1189).'
+first_source:
+  citation: 'Castelli F, Happé F, Frith U, Frith C. Movement and mind: a functional imaging study of perception and interpretation
+    of complex intentional movement patterns. NeuroImage. 2000;12(3):314-325.'
+  doi: 10.1006/nimg.2000.0612
+  pmid: '10944414'
+  year: 2000
+  verified: false
+interop:
+  bids_task: animations
+notes: 'Sources found by curator_e (curation/work/pkg_E/search_log.md): S17 = https://iris.unipv.it/handle/11571/1511996;
+  S17b = https://elifesciences.org/articles/86327v1/figures. first_source note: Venue not shown on record (PET study). Heider
+  & Simmel animations (1944) not surfaced. New candidate (curator_e). Related to SOC-TOM-001 (same network, non-verbal stimuli).
+  S17 is a PET study; hemodynamic markers are BOLD-named in the registry. First-pass skeleton (curator_e, 2026-10-03); all
+  sources unverified. Sprint 2 (curator_e, 2026-10-03): protocol block added per D-057; see curation/work/pkg_E/sprint2/split_log.csv.
+  Sprint 3 (curator_d, 2026-10-05): bibliography corrected (OpenAlex, 2026-10-05): doi, journal, volume, issue, pages added.'
+status: draft
+contributors:
+- curator_e

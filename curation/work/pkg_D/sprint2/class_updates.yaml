@@ -1,0 +1,345 @@
+# 包 D sprint 2 范式类修改（D-057）。维护者合入 paradigms/_classes.yaml；策展人不要直接改登记表。
+# Class edits for package D; the maintainer applies them to paradigms/_classes.yaml.
+# action: modify | add | deprecate；fields 只写要改的字段（schema/paradigm_class.schema.json）。
+updates:
+- id: LAN-CPS
+  action: modify
+  fields:
+    aliases:
+    - CPS paradigm
+    - intonational phrase boundary
+    - prosodic phrasing
+    - comma CPS
+    - reading CPS
+  reason: 'D-057 split: union of aliases of the concrete paradigms LAN-CPS-001, LAN-CPS-002 (added: comma CPS; reading CPS).
+    Class description, markers and origin unchanged.'
+- id: LAN-LOC
+  action: modify
+  fields:
+    aliases:
+    - Fedorenko localizer
+    - language localizer
+    - sentences vs nonwords
+    - auditory language localizer
+    - intact > degraded speech localizer
+  reason: 'D-057 split: union of aliases of the concrete paradigms LAN-LOC-001, LAN-LOC-002 (added: auditory language localizer;
+    intact > degraded speech localizer). Class description, markers and origin unchanged.'
+- id: LAN-N400
+  action: modify
+  fields:
+    aliases:
+    - semantic anomaly
+    - semantic incongruity
+    - sentence N400 paradigm
+    - cloze probability N400
+    - word expectancy N400
+  reason: 'D-057 split: union of aliases of the concrete paradigms LAN-N400-001, LAN-N400-002 (added: cloze probability N400;
+    word expectancy N400). Class description, markers and origin unchanged.'
+- id: LAN-OVS
+  action: modify
+  fields:
+    aliases:
+    - articulation decoding
+    - attempted speech
+    - speech neuroprosthesis
+    - speech neuroprosthesis (word classification)
+    - attempted word production
+    - speech-to-text BCI
+    - high-performance speech neuroprosthesis
+    - speech BCI (sentences)
+  reason: 'D-057 split: union of aliases of the concrete paradigms LAN-OVS-001, LAN-OVS-002, LAN-OVS-003 (added: speech neuroprosthesis
+    (word classification); attempted word production; speech-to-text BCI; high-performance speech neuroprosthesis; speech
+    BCI (sentences)). Class description, markers and origin unchanged.'
+- id: LAN-P600
+  action: modify
+  fields:
+    aliases:
+    - agreement violation
+    - garden-path sentences
+    - syntactic anomaly
+    - syntactic positive shift (SPS)
+    - garden-path P600
+    - temporary syntactic ambiguity
+  reason: 'D-057 split: union of aliases of the concrete paradigms LAN-P600-001, LAN-P600-002 (added: garden-path P600; temporary
+    syntactic ambiguity). Class description, markers and origin unchanged.'
+- id: LAN-PN
+  action: modify
+  fields:
+    aliases:
+    - Confrontation Naming
+    - Object Naming
+    - picture-word interference (variant)
+    - visual naming
+    - PWI
+    - picture-word interference paradigm
+    - semantic interference in naming
+  reason: 'D-057 split: union of aliases of the concrete paradigms LAN-PN-001, LAN-PN-002 (added: PWI; picture-word interference
+    paradigm; semantic interference in naming). Class description, markers and origin unchanged.'
+- id: LAN-PRIME
+  action: modify
+  fields:
+    aliases:
+    - Associative Priming
+    - Morphological Priming
+    - Orthographic Priming
+    - Phonological Priming
+    - Priming
+    - masked semantic priming
+    - word-pair priming
+    - masked priming
+    - subliminal semantic priming
+  reason: 'D-057 split: union of aliases of the concrete paradigms LAN-PRIME-001, LAN-PRIME-002 (added: masked priming; subliminal
+    semantic priming). Class description, markers and origin unchanged.'
+- id: LAN-SC
+  action: modify
+  fields:
+    aliases:
+    - Garden-Path Reading
+    - Syntactic Ambiguity Task
+    - sign language sentence comprehension
+    - sign language comprehension
+    - ASL sentence processing
+  reason: 'D-057 split: union of aliases of the concrete paradigms LAN-SC-001, LAN-SC-002 (added: sign language comprehension;
+    ASL sentence processing). Class description, markers and origin unchanged.'
+- id: LAN-SIS
+  action: modify
+  fields:
+    aliases:
+    - speaking-induced suppression
+    - SIS
+    - altered auditory feedback
+    - speak vs listen
+    - pitch perturbation
+    - feedback perturbation during speech
+  reason: 'D-057 split: union of aliases of the concrete paradigms LAN-SIS-001, LAN-SIS-002 (added: feedback perturbation
+    during speech). Class description, markers and origin unchanged.'
+- id: LAN-SWITCH
+  action: modify
+  fields:
+    aliases:
+    - language switching
+    - cued language switching
+    - mixed-language picture naming
+    - comprehension language switching
+    - bilingual word reading switch
+  reason: 'D-057 split: union of aliases of the concrete paradigms LAN-SWITCH-001, LAN-SWITCH-002 (added: comprehension language
+    switching; bilingual word reading switch). Class description, markers and origin unchanged.'
+- id: LAN-VF
+  action: modify
+  fields:
+    aliases:
+    - COWAT
+    - Category Fluency
+    - Controlled Oral Word Association Test
+    - FAS Test
+    - Letter Fluency
+    - Phonemic Fluency
+    - Semantic Fluency
+    - word generation
+    - word association task
+    - verbal fluency task
+    - VFT
+    - word generation (WG) mental task
+    - covert verbal fluency BCI
+    - fNIRS VFT
+    - clinical fNIRS verbal fluency task
+  reason: 'D-057 split: union of aliases of the concrete paradigms LAN-VF-001, LAN-VF-002, LAN-VF-003 (added: word generation
+    (WG) mental task; covert verbal fluency BCI; fNIRS VFT; clinical fNIRS verbal fluency task). Class description, markers
+    and origin unchanged.'
+- id: MEM-CD
+  action: modify
+  fields:
+    aliases:
+    - CDA paradigm
+    - Change detection task
+    - Lateralized change detection
+    - Luck-Vogel Task
+    - VWM Capacity Task
+    - Visual working memory change detection
+    - delayed estimation
+    - continuous report
+    - colour wheel task
+    - Vogel-Machizawa task
+  reason: 'D-057 split: union of aliases of the concrete paradigms MEM-CD-001, MEM-CD-002, MEM-CD-003 (added: colour wheel
+    task; Vogel-Machizawa task). Class description, markers and origin unchanged.'
+- id: MEM-CIT
+  action: modify
+  fields:
+    aliases:
+    - CIT
+    - guilty knowledge test
+    - P300-based concealed information test
+    - memory detection
+    - P300-based CIT
+    - brain fingerprinting
+    - ERP lie detection
+    - Complex Trial Protocol
+    - CTP
+  reason: 'D-057 split: union of aliases of the concrete paradigms MEM-CIT-001, MEM-CIT-002 (added: Complex Trial Protocol;
+    CTP). Class description, markers and origin unchanged.'
+- id: MEM-DF
+  action: modify
+  fields:
+    aliases:
+    - DF Task
+    - Item-Method DF
+    - List-Method DF
+    - list-method directed forgetting
+    - LMDF
+  reason: 'D-057 split: union of aliases of the concrete paradigms MEM-DF-001, MEM-DF-002 (added: list-method directed forgetting;
+    LMDF). Class description, markers and origin unchanged.'
+- id: MEM-DS
+  action: modify
+  fields:
+    aliases:
+    - DS
+    - Forward/Backward Span
+    - digit span backward
+    - backward span
+  reason: 'D-057 split: union of aliases of the concrete paradigms MEM-DS-001, MEM-DS-002 (added: digit span backward; backward
+    span). Class description, markers and origin unchanged.'
+- id: MEM-FR
+  action: modify
+  fields:
+    aliases:
+    - RAVLT
+    - Recall Task
+    - Rey Auditory Verbal Learning Test
+    - Rey Verbal Learning
+    - Rey AVLT
+  reason: 'D-057 split: union of aliases of the concrete paradigms MEM-FR-001, MEM-FR-002 (added: Rey AVLT). Class description,
+    markers and origin unchanged.'
+- id: MEM-META
+  action: modify
+  fields:
+    aliases:
+    - FOK Task
+    - Feeling-of-Knowing Judgment
+    - Hart FOK Paradigm
+    - JOL Task
+    - Judgment-of-Learning Paradigm
+    - Metacognitive Prediction Task
+    - JOL
+    - judgment of learning
+    - delayed JOL
+  reason: 'D-057 split: union of aliases of the concrete paradigms MEM-META-001, MEM-META-002 (added: JOL; judgment of learning;
+    delayed JOL). Class description, markers and origin unchanged.'
+- id: MEM-MST
+  action: modify
+  fields:
+    aliases:
+    - MST
+    - Mnemonic Discrimination Task
+    - Mnemonic Similarity
+    - Pattern Separation Task
+    - pattern separation repetition-suppression design
+  reason: 'D-057 split: union of aliases of the concrete paradigms MEM-MST-001, MEM-MST-002 (added: pattern separation repetition-suppression
+    design). Class description, markers and origin unchanged.'
+- id: MEM-NAV
+  action: modify
+  fields:
+    aliases:
+    - Morris Water Maze
+    - RAM
+    - Radial Arm Maze
+    - Spatial navigation memory
+    - Virtual Morris water maze
+    - Virtual Radial Arm Maze
+    - Virtual Water Maze
+    - Virtual navigation task
+    - Virtual town navigation
+    - vMWM
+    - vRAM
+    - virtual radial maze
+    - virtual Morris water task
+  reason: 'D-057 split: union of aliases of the concrete paradigms MEM-NAV-001, MEM-NAV-002, MEM-NAV-003 (added: virtual radial
+    maze; virtual Morris water task). Class description, markers and origin unchanged.'
+- id: MEM-NBK
+  action: modify
+  fields:
+    aliases:
+    - Dual N-Back
+    - Kirchner task
+    - N-Back
+    - parametric n-back
+    - 0-back/1-back/2-back/3-back
+    - n-back workload paradigm
+    - dual-modality n-back
+    - audio-visual n-back
+    - n-back training
+    - adaptive n-back
+    - working memory training (dual n-back)
+  reason: 'D-057 split: union of aliases of the concrete paradigms MEM-NBK-001, MEM-NBK-002, MEM-NBK-003, MEM-NBK-004 (added:
+    parametric n-back; 0-back/1-back/2-back/3-back; n-back workload paradigm; dual-modality n-back; audio-visual n-back; n-back
+    training; adaptive n-back; working memory training (dual n-back)). Class description, markers and origin unchanged.'
+- id: MEM-ON
+  action: modify
+  fields:
+    aliases:
+    - ERP old/new effect
+    - Old/new paradigm
+    - Recognition Memory Test
+    - Yes/No Recognition
+    - Remember/know paradigm
+    - R/K Paradigm
+    - Remember-Know
+    - Remember/know
+    - R/K procedure
+    - remember-know paradigm
+  reason: 'D-057 split: union of aliases of the concrete paradigms MEM-ON-001, MEM-ON-002 (added: Remember/know; R/K procedure;
+    remember-know paradigm). Class description, markers and origin unchanged.'
+- id: MEM-PA
+  action: modify
+  fields:
+    aliases:
+    - Associative memory task
+    - Cued recall of word pairs
+    - PAL
+    - Paired Associate Learning
+    - Paired Associates Learning
+    - object-location paired associates
+    - visuospatial PAL
+  reason: 'D-057 split: union of aliases of the concrete paradigms MEM-PA-001, MEM-PA-002 (added: object-location paired associates;
+    visuospatial PAL). Class description, markers and origin unchanged.'
+- id: MEM-PM
+  action: modify
+  fields:
+    aliases:
+    - Einstein-McDaniel Paradigm
+    - Event-Based Prospective Memory
+    - PM Task
+    - PMTASK
+    - Time-Based Prospective Memory
+    - TBPM
+  reason: 'D-057 split: union of aliases of the concrete paradigms MEM-PM-001, MEM-PM-002 (added: TBPM). Class description,
+    markers and origin unchanged.'
+- id: MEM-TMR
+  action: modify
+  fields:
+    description:
+      en: During learning, material is associated with sensory cues (item-specific sounds, or an odour present throughout
+        the learning session); during subsequent sleep, usually slow-wave sleep, the cues are re-presented, and memory is
+        compared after waking between cued and uncued items or between sleep with and without the cue. Cue presentation evokes
+        slow oscillations and sleep spindles and activates the hippocampus, and these responses are related to the memory
+        benefit of reactivation.
+      zh: 学习时材料与感觉线索相关联（项目特异的声音，或整个学习过程中存在的气味）；随后在睡眠中（通常是慢波睡眠）重放线索，醒后比较被提示与未被提示的项目，或比较有/无线索的睡眠条件下的记忆。线索呈现诱发慢振荡与睡眠纺锤波并激活海马，这些反应与再激活带来的记忆获益相关。
+    markers:
+    - MK.sleep_spindle
+    - MK.slow_wave
+    - MK.BOLD_hippocampus
+    first_source:
+      citation: Odor cues during slow-wave sleep prompt declarative memory consolidation. Science. 2007.
+      pmid: '17347444'
+      year: 2007
+      verified: false
+    aliases:
+    - Cued memory reactivation during sleep
+    - TMR
+    - odour TMR
+    - olfactory memory reactivation
+    - odor cueing during slow-wave sleep
+  reason: 'D-057 split: MEM-TMR-002 (odour context reactivation, DN52, 2007) predates MEM-TMR-001 (Rudoy et al. 2009, R0443),
+    so the class origin is proposed to move to DN52 (authors not visible on the fetched page; maintainer to complete the citation).
+    Description generalised to both cue types; MK.BOLD_hippocampus added because DN52 reports hippocampal activation to odour
+    re-exposure. If the maintainer prefers Rudoy 2009 as the class origin (item-specific TMR proper), drop first_source from
+    this update.'

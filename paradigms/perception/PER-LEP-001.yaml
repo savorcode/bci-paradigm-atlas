@@ -1,0 +1,48 @@
+schema_version: '0.2'
+id: PER-LEP-001
+class: PER-LEP
+name:
+  en: Laser-evoked potentials (nociception)
+  zh: 激光诱发电位（痛觉）
+aliases:
+- CO2/Nd:YAP laser stimulation
+- LEP
+- laser-evoked potentials
+- nociceptive evoked potentials
+family: perception
+bci_category:
+- none
+recording_modality:
+- EEG
+stimulus_modality:
+- somatosensory
+markers:
+- MK.LEP
+description:
+  en: Brief radiant heat pulses from a CO2 or solid-state laser selectively activate skin nociceptors without touching the
+    skin. They evoke a vertex N2-P2 complex, preceded by a lateralised N1, that is used to assess nociceptive pathways.
+  zh: CO2 或固体激光发出的短暂辐射热脉冲在不接触皮肤的情况下选择性激活皮肤伤害感受器，诱发顶部 N2–P2 复合波，其前有偏侧化的 N1，用于评估伤害性感觉通路。
+protocol:
+  n_classes: 1
+  classes:
+  - laser heat pulse
+  cue: brief radiant heat pulses (CO2 or solid-state laser) on the skin
+  paradigm_timing: synchronous
+  feedback: none
+  distinguishing: 标准配置（最早发表，即 first_source）：短激光热脉冲刺激皮肤。本类暂无其他具体范式（no sibling protocol yet）。
+first_source:
+  citation: Bromm B, Treede RD. Laser-evoked cerebral potentials in the assessment of cutaneous pain sensitivity in normal
+    subjects and patients. Rev Neurol (Paris). 1991;147(10):625-643.
+  pmid: '1763252'
+  year: 1991
+  verified: false
+interop:
+  bids_task: lep
+notes: 'Leads used: R0097, R0249, R0250. R0097 (1991) is the only origin candidate among the leads; earlier laser-evoked potential
+  reports may exist and should be checked. [curator_a sprint 2, 2026-10-03] D-057: protocol block added for the canonical
+  configuration; no other concrete paradigm identified for this class in sprint 2. [curator_e sprint 3, 2026-10-05] bibliography
+  corrected (OpenAlex, 2026-10-05).'
+status: draft
+contributors:
+- curator_a
+- curator_e

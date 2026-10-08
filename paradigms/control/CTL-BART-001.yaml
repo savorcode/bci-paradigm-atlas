@@ -1,0 +1,63 @@
+schema_version: '0.2'
+id: CTL-BART-001
+class: CTL-BART
+name:
+  en: Balloon analogue risk task
+  zh: 气球模拟风险任务
+aliases:
+- BART
+- Balloon Analog Risk
+- Balloon Task
+family: control
+bci_category:
+- none
+recording_modality:
+- EEG
+- fMRI
+stimulus_modality:
+- visual
+markers:
+- MK.FRN
+- MK.BOLD_dlPFC
+description:
+  en: Participants pump up a virtual balloon, earning money for each pump, and can bank the money at any time; if the balloon
+    bursts at its random explosion point, the money for that balloon is lost. Outcome feedback elicits the FRN, and risk taking
+    engages dorsolateral prefrontal cortex in fMRI.
+  zh: 被试为虚拟气球充气，每充一次获得一定金钱，并可随时存入收益；若气球在其随机爆破点爆炸，该气球的收益全部损失。结果反馈诱发 FRN，fMRI 中冒险行为激活背外侧前额叶。
+trial_structure:
+  conditions:
+  - pump
+  - cash out
+  - explosion
+protocol:
+  n_classes: 3
+  classes:
+  - pump
+  - cash out
+  - balloon explosion
+  cue: virtual balloon inflated by key presses; money accrues per pump and is lost if the balloon bursts
+  paradigm_timing: synchronous
+  feedback: discrete
+  distinguishing: 标准配置（最早发表）：自定步调地充气或兑现，气球在随机爆点爆炸（Lejuez et al. 2002，R0224）；fMRI 版（ds000001）只改参数。
+first_source:
+  citation: 'Lejuez CW, Read JP, Kahler CW, Richards JB, Ramsey SE, Stuart GL, Strong DR, Brown RA. Evaluation of a behavioral
+    measure of risk taking: The Balloon Analogue Risk Task (BART). Journal of Experimental Psychology: Applied. 2002;8(2):75-84.'
+  doi: 10.1037/1076-898x.8.2.75
+  pmid: '12075692'
+  year: 2002
+  verified: false
+datasets:
+- name: Balloon Analog Risk-taking Task (OpenfMRI)
+  url: https://openfmri.org/dataset/ds000001
+  identifier: ds000001
+  subjects: 16
+interop:
+  bids_task: bart
+notes: 'HED task page: https://www.hedtags.org/hed-task/tasks/hedtsk_balloon_analog_risk.html. Leads used: R0224; R0411; R0509.
+  first_source lead: R0224. fMRI lead: R0411; review: R0509. Pass 1 skeleton (curator_c, 2026-10-03); all sources unverified.
+  Sprint 2 (D-057): protocol added; dataset ds000001 (Schonberg et al. 2012, as listed on the OpenfMRI page) added. Rao et
+  al. 2008 (R0411) voluntary vs involuntary risk taking not split (single study seen). [maintainer, sprint 2] Lead registered
+  as R1318 (literature.csv). bibliography corrected (Crossref, 2026-10-05)'
+status: draft
+contributors:
+- curator_c

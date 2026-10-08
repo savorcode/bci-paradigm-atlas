@@ -1,0 +1,77 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://github.com/savorcode/bci-paradigm-atlas/schema/paradigm_class.schema.json",
+  "title": "BCI paradigm class registry",
+  "description": "Registry of paradigm classes (<FAMILY>-<SHORT>): the shared mechanism of a group of concrete paradigms. Schema 0.2 (draft). See docs/methodology.md §1, §6 and curation/decisions.md D-057.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schema_version",
+    "terms"
+  ],
+  "properties": {
+    "schema_version": {
+      "const": "0.2"
+    },
+    "terms": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "id",
+          "name",
+          "family",
+          "description",
+          "markers",
+          "first_source",
+          "status"
+        ],
+        "properties": {
+          "id": {
+            "type": "string",
+            "pattern": "^[A-Z]{3}-[A-Z0-9]{2,8}$"
+          },
+          "name": {
+            "$ref": "common.schema.json#/$defs/bilingual"
+          },
+          "family": {
+            "type": "string"
+          },
+          "description": {
+            "$ref": "common.schema.json#/$defs/bilingual"
+          },
+          "markers": {
+            "type": "array",
+            "items": {
+              "type": "string",
+              "pattern": "^MK\\.[A-Za-z0-9_]+$"
+            },
+            "minItems": 1,
+            "uniqueItems": true,
+            "description": "Neural markers shared by the class, ids from knowledge/markers/"
+          },
+          "first_source": {
+            "$ref": "common.schema.json#/$defs/source"
+          },
+          "aliases": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            },
+            "uniqueItems": true
+          },
+          "notes": {
+            "type": "string"
+          },
+          "status": {
+            "$ref": "common.schema.json#/$defs/status"
+          },
+          "contributors": {
+            "$ref": "common.schema.json#/$defs/contributors"
+          }
+        }
+      }
+    }
+  }
+}

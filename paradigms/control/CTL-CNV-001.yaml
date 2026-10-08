@@ -1,0 +1,48 @@
+schema_version: '0.2'
+id: CTL-CNV-001
+class: CTL-CNV
+name:
+  en: S1-S2 paradigm
+  zh: S1-S2 预期任务
+aliases:
+- CNV paradigm
+- Contingent negative variation paradigm
+- Warned reaction-time paradigm
+family: control
+bci_category:
+- none
+recording_modality:
+- EEG
+stimulus_modality:
+- auditory
+- visual
+markers:
+- MK.CNV
+description:
+  en: A warning stimulus (S1) is followed after a fixed interval by an imperative stimulus (S2) that requires a speeded response.
+    During the S1-S2 interval a slow negative shift, the contingent negative variation, develops over fronto-central scalp
+    sites.
+  zh: 警示刺激（S1）出现后经固定间隔呈现要求快速反应的命令刺激（S2）。在 S1–S2 间隔中，额中央头皮区逐渐形成一个缓慢的负向偏移，即关联性负变（CNV）。
+protocol:
+  n_classes: 1
+  classes:
+  - warning S1 followed by imperative S2
+  cue: auditory or visual warning stimulus (S1) followed after a fixed interval by an imperative stimulus (S2) requiring a
+    speeded response
+  paradigm_timing: synchronous
+  feedback: none
+  distinguishing: 标准配置（最早发表）：固定 S1–S2 间隔的预警反应时任务（Walter et al. 1964，R0010）。本包仅此一个配置。
+first_source:
+  citation: 'Walter WG, Cooper R, Aldridge VJ, McCallum WC, Winter AL. Contingent Negative Variation: An Electric Sign of
+    Sensori-Motor Association and Expectancy in the Human Brain. Nature. 1964;203(4943):380-384.'
+  doi: 10.1038/203380a0
+  pmid: '14197376'
+  year: 1964
+  verified: false
+interop:
+  bids_task: cnv
+notes: 'Leads used: R0010; R0026. first_source lead: R0010. Review: R0026. Pass 1 skeleton (curator_c, 2026-10-03); all sources
+  unverified. Sprint 2 (D-057): protocol added; single configuration, no split. bibliography corrected (Crossref, 2026-10-05)'
+status: draft
+contributors:
+- curator_c

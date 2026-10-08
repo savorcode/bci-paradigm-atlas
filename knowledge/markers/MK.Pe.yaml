@@ -1,0 +1,26 @@
+schema_version: "0.2"
+id: MK.Pe
+name:
+  en: Error positivity
+  zh: 错误正波
+aliases:
+- Pe
+- error positivity
+- late Pe
+type: erp_component
+recording_modality:
+- EEG
+signature:
+  latency_ms: 200-500 after response onset
+  polarity: positive
+  topography: centro-parietal maximum
+description:
+  en: Positive deflection following the ERN after erroneous responses. Its amplitude is larger for errors the participant
+    is aware of, and varies with post-decision confidence.
+  zh: 错误反应后紧随 ERN 出现的正向波。被试觉察到的错误上其波幅更大，并随决策后信心变化。
+notes: 'Signature values are textbook-level approximations and await checking against sources (pass 2). Generators and indexes
+  not yet written. Used by (registry): ERR-AWARE-001, CTL-FLK-001.'
+status: draft
+contributors:
+- maintainer
+- curator_c

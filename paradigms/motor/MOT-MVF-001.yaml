@@ -1,0 +1,55 @@
+schema_version: '0.2'
+id: MOT-MVF-001
+class: MOT-MVF
+name:
+  en: Mirror visual feedback
+  zh: 镜像视觉反馈
+aliases:
+- mirror therapy
+- mirror visual feedback
+- mirror box illusion
+- MVF
+family: motor
+bci_category:
+- none
+recording_modality:
+- EEG
+- fMRI
+stimulus_modality:
+- visual
+- motor_execution
+markers:
+- MK.SMR_ERD
+description:
+  en: >-
+    Participants move one hand while viewing its mirror reflection (or a digitally mirrored video) in the position of the
+    other, hidden hand, creating the illusion that the hidden hand moves. Mirror feedback modulates mu and beta ERD over the
+    sensorimotor cortex ipsilateral to the moving hand, which is used in post-stroke rehabilitation studies.
+  zh: 被试移动一只手，同时在另一只被遮挡的手的位置看到该手的镜像（或数字镜像视频），产生被遮挡的手在运动的错觉。镜像反馈调制运动手同侧感觉运动皮层上的 mu 与 β ERD，相关研究用于卒中后康复。
+protocol:
+  n_classes: 2
+  classes:
+  - movement with mirrored visual feedback
+  - movement without mirror feedback
+  cue: digital mirror display of the moving hand
+  paradigm_timing: block
+  feedback: continuous
+  distinguishing: >-
+    Standard configuration (earliest published) / 标准配置（最早发表）: unilateral movement viewed as a (digitally) mirrored image in
+    place of the hidden hand (R1123; origin not established). No sibling protocol yet.
+first_source:
+  citation: >-
+    Chang C-S, Lo Y-Y, Chen C-L, Lee H-M, Chiang W-C, Li P-C. Alternative motor task-based pattern training with a digital
+    mirror therapy system enhances sensorimotor signal rhythms post-stroke. Frontiers in Neurology 10:1227. 2019.
+  doi: 10.3389/fneur.2019.01227
+  year: 2019
+  verified: false
+interop:
+  bids_task: mirrorfeedback
+notes: >-
+  Search sources (curation/work/pkg_B/search_log.md): N14 https://www.frontiersin.org/journals/neurology/articles/10.3389/fneur.2019.01227/pdf.
+  New candidate (pkg B). Distinct from MOT-MIRR-001 (mirror tracing, reversed visuomotor mapping) and MOT-OBS-001. Lead N14
+  is a stroke-rehabilitation study; origin paper not yet identified. bibliography confirmed (Crossref, 2026-10-05)
+status: draft
+contributors:
+- curator_b

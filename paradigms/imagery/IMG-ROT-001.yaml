@@ -1,0 +1,61 @@
+schema_version: '0.2'
+id: IMG-ROT-001
+class: IMG-ROT
+name:
+  en: Mental rotation
+  zh: 心理旋转
+aliases:
+- MRT
+- Mental Rotation
+- mental rotation task
+- Shepard-Metzler Task
+- hand laterality judgement
+family: imagery
+bci_category:
+- none
+- active
+recording_modality:
+- EEG
+- fMRI
+- fNIRS
+stimulus_modality:
+- visual
+- mental_imagery
+markers:
+- MK.alpha_posterior
+- MK.BOLD_frontoparietal
+description:
+  en: >-
+    Participants judge whether two visually presented objects (or a rotated object and its standard) are identical or mirror
+    images; reaction time increases with the angular disparity between them. Rotation engages posterior parietal and frontal
+    regions and is accompanied by task-related changes in posterior alpha power and a parietal negativity that scales with
+    rotation angle.
+  zh: 被试判断两个视觉呈现的物体（或旋转后的物体与标准物体）是相同还是镜像；反应时随二者角度差增大而延长。旋转过程调用后顶叶与额叶区域，并伴随后部 α 功率的任务相关变化以及随旋转角度增大的顶叶负波。
+protocol:
+  n_classes: 2
+  classes:
+  - same object (rotated)
+  - mirror-image object
+  cue: pairs of three-dimensional block figures at different angular disparities
+  paradigm_timing: synchronous
+  feedback: none
+  distinguishing: >-
+    Standard configuration (earliest published) / 标准配置（最早发表）: same/mirror judgement of rotated 3-D object pairs (Shepard &
+    Metzler 1971, behavioural origin, D-031). No sibling protocol yet.
+first_source:
+  citation: Shepard, R. N., & Metzler, J. Mental rotation of three-dimensional objects. Science, 171(3972), 701-703. 1971.
+  doi: 10.1126/science.171.3972.701
+  pmid: '5540314'
+  year: 1971
+  verified: false
+interop:
+  bids_task: mentalrotation
+notes: >-
+  HED task page: https://www.hedtags.org/hed-task/tasks/hedtsk_mental_rotation.html. Leads: R0024, R0414, R0820, R0961, R0981,
+  R1060, R1077. D-001: active mental task kept in imagery family. first_source R0024 is behavioural. Lead R0820 lists volume
+  147 article 105131 but DOI ends 105187; check. D-031 (maintainer, 2026-10-03): first_source is a behavioural or EMG/MEP-only
+  origin, which is acceptable; add the earliest brain-recording study as a "First neural recording: <citation> (R####)" line
+  in sprint 2. bibliography confirmed (Crossref, 2026-10-05)
+status: draft
+contributors:
+- curator_b

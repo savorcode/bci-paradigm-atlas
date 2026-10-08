@@ -1,0 +1,59 @@
+schema_version: '0.2'
+id: CTL-FLK-002
+class: CTL-FLK
+name:
+  en: Eriksen flanker task (arrow version)
+  zh: Flanker 任务（箭头版）
+aliases:
+- Arrow flanker task
+- Arrowhead flanker
+family: control
+bci_category:
+- none
+recording_modality:
+- EEG
+- fMRI
+stimulus_modality:
+- visual
+markers:
+- MK.ERN
+- MK.Pe
+- MK.N2_frontocentral
+- MK.LRP
+description:
+  en: Participants indicate the direction of a central arrow flanked by arrows pointing in the same (congruent) or the opposite
+    (incongruent) direction. The arrow version is the standard form in current ERP research, where errors elicit the ERN and
+    Pe, incongruent trials a fronto-central N2, and flankers an initial lateralised readiness potential towards the wrong
+    hand.
+  zh: 被试判断中央箭头的方向，两侧箭头指向相同（一致）或相反（不一致）方向。箭头版是目前 ERP 研究的标准形式：错误诱发 ERN 与 Pe，不一致试次诱发额中央 N2，干扰箭头引起先偏向错误手的偏侧化准备电位。
+trial_structure:
+  conditions:
+  - congruent
+  - incongruent
+protocol:
+  n_classes: 2
+  classes:
+  - congruent
+  - incongruent
+  cue: central arrow flanked by arrows pointing in the same or opposite direction
+  paradigm_timing: synchronous
+  feedback: none
+  distinguishing: 准则 2：刺激为箭头（方向判断），刺激–反应映射直接由箭头方向给出（CTL-FLK-001 为字母目标与干扰字母，映射需学习）。
+first_source:
+  citation: 'TBD: origin of the arrow flanker not identified; HED task catalog lists it as the standard variant without a
+    reference'
+  verified: false
+datasets:
+- name: 'ERP CORE (flankers paradigm: ERN and LRP)'
+  url: https://doi.org/10.18115/D5JW4R
+interop:
+  bids_task: flanker
+notes: 'Leads used: HED task page (variant list fetched in sprint 2); ERP CORE (https://erpinfo.org/erp-core: flankers paradigm
+  for LRP and ERN; preprint Kappenman et al. 2020, doi 10.31234/osf.io/4azqm; data doi 10.18115/D5JW4R). The ERP CORE page
+  did not state the stimulus type: assignment of ERP CORE to the arrow version is from memory and must be checked (if letters,
+  move the dataset back to CTL-FLK-001). first_source TBD (D-032). The ANT (CTL-ANT) also uses arrow flankers. Sprint 2 (D-057,
+  curator_c, 2026-10-03): new concrete paradigm of class CTL-FLK; numbering criterion 2 relative to CTL-FLK-001; all sources
+  unverified. [maintainer, sprint 2] Lead registered as R1317 (literature.csv).'
+status: draft
+contributors:
+- curator_c

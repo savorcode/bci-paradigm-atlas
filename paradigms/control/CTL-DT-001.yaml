@@ -1,0 +1,56 @@
+schema_version: '0.2'
+id: CTL-DT-001
+class: CTL-DT
+name:
+  en: Dual-task / PRP
+  zh: 双任务
+aliases:
+- Dual-task paradigm
+- PRP
+- PRP paradigm
+- Psychological Refractory Period
+family: control
+bci_category:
+- none
+recording_modality:
+- EEG
+- fMRI
+stimulus_modality:
+- auditory
+- visual
+markers:
+- MK.P3b
+- MK.frontal_midline_theta
+description:
+  en: Two stimuli, each requiring its own speeded response, are presented with a variable stimulus onset asynchrony; responses
+    to the second stimulus slow down as the asynchrony shortens (psychological refractory period). The latency of the P3 to
+    the second stimulus and frontal midline theta are used to localise and quantify the central processing bottleneck.
+  zh: 两个各需单独快速反应的刺激以可变的刺激起始间隔先后呈现；间隔越短，对第二个刺激的反应越慢（心理不应期）。对第二个刺激的 P3 潜伏期和额中线 θ 被用来定位和量化中枢加工瓶颈。
+trial_structure:
+  conditions:
+  - short SOA
+  - long SOA
+protocol:
+  n_classes: 2
+  classes:
+  - task 1 stimulus
+  - task 2 stimulus
+  cue: two stimuli each requiring its own speeded response, separated by a variable stimulus onset asynchrony
+  paradigm_timing: synchronous
+  feedback: none
+  distinguishing: 标准配置（最早发表线索）：心理不应期范式，两刺激间 SOA 可变（Telford 1931，R1135）；SOA 取值是参数。
+first_source:
+  citation: Telford CW. The refractory phase of voluntary and associative responses. Journal of Experimental Psychology. 1931;14(1):1-36.
+  doi: 10.1037/h0073262
+  year: 1931
+  verified: false
+interop:
+  bids_task: prp
+notes: 'HED task page: https://www.hedtags.org/hed-task/tasks/hedtsk_psychological_refractory_period.html. Leads used: S_TELFORD1931
+  (search: https://www.millisecond.com/library/psychologicalrefractoryperiod); R0113; R0397. first_source lead: S_TELFORD1931.
+  No origin paper among leads (R0113 is a 1994 review); first_source found by search (Telford 1931, as listed on the Millisecond
+  PRP task page). Neural lead: R0397. Pass 1 skeleton (curator_c, 2026-10-03); all sources unverified. Sprint 2 (D-057): protocol
+  added; single configuration, no split. bibliography corrected (Crossref, 2026-10-05)'
+status: draft
+contributors:
+- curator_c

@@ -1,0 +1,65 @@
+schema_version: '0.2'
+id: PER-ODD-007
+class: PER-ODD
+name:
+  en: Single-item flashing P300 interface (six images)
+  zh: 单项闪烁 P300 界面（六幅图像）
+aliases:
+- EPFL P300 paradigm
+- single-stimulus flashing P300 BCI
+family: perception
+bci_category:
+- reactive
+recording_modality:
+- EEG
+stimulus_modality:
+- visual
+markers:
+- MK.P3b
+description:
+  en: A small set of images (six, showing household devices such as a television, lamp or door) is displayed, and each image
+    is flashed on its own in random order. The user attends to the image of the desired command, whose flashes elicit a P300;
+    the command is selected from the image with the largest response. The interface was designed for disabled users.
+  zh: 屏幕显示少量图像（六幅，电视、台灯、门等家居设备），每幅图像单独按随机顺序闪烁。用户注意目标指令的图像，其闪烁诱发 P300，响应最大的图像对应的指令被选中。该界面为残障用户设计。
+trial_structure:
+  phases:
+  - name: image flash
+    duration_ms: 100
+  - name: inter-stimulus interval
+    duration_ms: 300
+  conditions:
+  - flash of attended image
+  - flash of other images
+protocol:
+  n_classes: 6
+  classes:
+  - television
+  - telephone
+  - lamp
+  - door
+  - window
+  - radio
+  cue: six images each flashed individually in random order
+  stimulus_coding: single-item flashing
+  paradigm_timing: synchronous
+  feedback: discrete
+  distinguishing: 准则 1;2（相对 -003）：6 个图像指令而非字符矩阵，每次只闪烁单个项目而非整行/整列。
+first_source:
+  citation: Hoffmann U, Vesin J-M, Ebrahimi T, Diserens K. An efficient P300-based brain-computer interface for disabled subjects.
+    J Neurosci Methods. 2008.
+  doi: 10.1016/j.jneumeth.2007.03.005
+  year: 2008
+  verified: false
+datasets:
+- name: EPFL P300 dataset (5 disabled, 4 able-bodied subjects)
+  url: https://moabb.neurotechx.com/docs/generated/moabb.datasets.EPFLP300.html
+  identifier: EPFLP300
+  subjects: 9
+interop:
+  bids_task: p300
+notes: 'Lead: MOABB dataset page EPFLP300 (S2A07 [=R1269]): six images flashed in random order, 100 ms flash, 300 ms ISI,
+  4 sessions, subject 5 excluded in MOABB. Volume/pages of the reference not shown on the page. New in sprint 2. [curator_e
+  sprint 3, 2026-10-05] bibliography confirmed (Crossref, 2026-10-05).'
+status: draft
+contributors:
+- curator_a

@@ -1,0 +1,11 @@
+schema_version: "0.2"
+id: MK.BOLD_olfactory_cortex
+name: {en: Olfactory (piriform) cortex BOLD, zh: 嗅觉（梨状）皮层 BOLD}
+aliases: [piriform cortex activation]
+type: hemodynamic
+recording_modality: [fMRI]
+signature: {topography: 'piriform cortex, orbitofrontal cortex, insula'}
+description: {en: Haemodynamic response in primary olfactory (piriform) cortex and associated orbitofrontal and insular regions during odour perception or odour imagery., zh: 嗅觉知觉或气味想象时初级嗅觉（梨状）皮层及相关眶额、岛叶区域的血流动力学响应。}
+notes: Signature values are textbook-level characteristics and await source checking (first pass, curator_b). New marker requested by package B for IMG-OLF-001 (marker_requests.csv); not yet in curation/registry/markers.csv. Generators and indexes to be added in the second pass.
+status: draft
+contributors: [curator_b]

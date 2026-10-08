@@ -1,0 +1,54 @@
+schema_version: '0.2'
+id: PER-HBD-001
+class: PER-HBD
+name:
+  en: Heartbeat detection
+  zh: 心跳觉察（内感受）
+aliases:
+- Whitehead Heartbeat Discrimination Task
+- heartbeat discrimination task
+- Heartbeat Perception Task
+- Cardiac Interoceptive Accuracy Task
+family: perception
+bci_category:
+- none
+recording_modality:
+- EEG
+- MEG
+stimulus_modality:
+- cognitive_task
+markers:
+- MK.HEP
+description:
+  en: External tones (or lights) are triggered by the participant's R-waves either with a short delay, so that they seem simultaneous
+    with the heartbeat, or with a longer delay. Participants judge whether the stimuli are synchronous with their heartbeats;
+    cortical responses time-locked to the R-peak (heartbeat-evoked potential) can be compared between conditions.
+  zh: 外部声音（或光）由被试的 R 波触发，延迟较短（感觉与心跳同时）或较长。被试判断刺激是否与心跳同步；可比较不同条件下与 R 波锁时的皮层响应（心跳诱发电位）。
+protocol:
+  n_classes: 2
+  classes:
+  - tones synchronous with heartbeat
+  - tones delayed relative to heartbeat
+  cue: external tones triggered by the R-wave at short or long delays
+  stimulus_coding: 默数心跳（Schandry 计数版）拆为 PER-HBD-002（准则 2）。
+  paradigm_timing: synchronous
+  feedback: none
+  distinguishing: 标准配置（最早发表，即 first_source）：心跳辨别：外部声音与心跳同步或延迟，被试判断是否同步。同类其他具体范式：PER-HBD-002（区别见各自 distinguishing；维护者 sprint
+    2 QA 更正）。
+first_source:
+  citation: Whitehead, W. E., Drescher, V. M., Heiman, P., & Blackwell, B. Relation of heart rate control to heartbeat perception.
+    Biofeedback and Self-Regulation, 2(4), 371-392. 1977.
+  doi: 10.1007/bf00998623
+  pmid: '612350'
+  year: 1977
+  verified: false
+interop:
+  bids_task: heartbeat
+notes: 'HED task page: https://www.hedtags.org/hed-task/tasks/hedtsk_heartbeat_detection.html. Leads used: R0041, R0052, R0647,
+  R0705, R0742, R0752. R0041 (1977, discrimination task) is older than R0052 (1981, counting task); both are behavioural origin
+  papers, the HEP marker comes from later EEG work. [curator_a sprint 2, 2026-10-03] D-057: narrowed to the heartbeat discrimination
+  version (R0041, 1977, the earliest); the counting version (Schandry 1981, R0052) is PER-HBD-002. [curator_e sprint 3, 2026-10-05]
+  bibliography confirmed (Crossref, 2026-10-05).'
+status: draft
+contributors:
+- curator_a

@@ -1,0 +1,61 @@
+schema_version: '0.2'
+id: CTL-ANT-001
+class: CTL-ANT
+name:
+  en: Attention Network Test (ANT)
+  zh: 注意网络测试
+aliases:
+- ANT
+- Attention Network Test
+- Clinical Screening ANT
+family: control
+bci_category:
+- none
+recording_modality:
+- EEG
+- fMRI
+stimulus_modality:
+- visual
+markers:
+- MK.N1_visual
+- MK.P3b
+- MK.CNV
+description:
+  en: A cued flanker task in which warning and spatial cues precede an arrow flanked by congruent or incongruent arrows, yielding
+    separate reaction-time measures of alerting, orienting and executive control. Cues elicit visual N1 and contingent negative
+    variation, and targets elicit a P3.
+  zh: 一种带提示的 Flanker 任务：警示提示与空间提示先于被一致或不一致箭头包围的目标箭头出现，从而分别得到警觉、定向和执行控制的反应时指标。提示诱发视觉 N1 与关联性负变，目标诱发 P3。
+trial_structure:
+  conditions:
+  - 4 cue conditions
+  - 3 flanker conditions
+protocol:
+  n_classes: 7
+  classes:
+  - no cue
+  - centre cue
+  - double cue
+  - spatial cue
+  - congruent flankers
+  - incongruent flankers
+  - neutral flankers
+  cue: visual warning/spatial cues (asterisks) preceding a central arrow flanked by arrows or lines
+  paradigm_timing: synchronous
+  feedback: none
+  distinguishing: 标准配置（最早发表）：4 种视觉线索 × 3 种 flanker 条件（classes 列出两个因素的水平），得出警觉、定向、执行控制三个分数（Fan et al. 2002，R0234）。
+first_source:
+  citation: Fan J, McCandliss BD, Sommer T, Raz A, Posner MI. Testing the Efficiency and Independence of Attentional Networks.
+    Journal of Cognitive Neuroscience. 2002;14(3):340-347.
+  doi: 10.1162/089892902317361886
+  pmid: '11970796'
+  year: 2002
+  verified: false
+interop:
+  bids_task: ant
+notes: 'HED task page: https://www.hedtags.org/hed-task/tasks/hedtsk_attention_network.html. Leads used: R0234; R0329; R0557.
+  first_source lead: R0234. fMRI lead: R0329. Review: R0557. Pass 1 skeleton (curator_c, 2026-10-03); all sources unverified.
+  Sprint 2 (D-057): protocol added; ANT-I (Callejas et al. 2004) added as CTL-ANT-002. Other HED-listed versions (ANT-R, lateralized
+  ANT, child ANT) logged as proposals only. bibliography corrected (Crossref, 2026-10-05)'
+status: draft
+contributors:
+- curator_c

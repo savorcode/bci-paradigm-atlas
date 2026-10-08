@@ -1,0 +1,26 @@
+schema_version: "0.2"
+id: MK.P1_visual
+name:
+  en: Visual P1
+  zh: 视觉 P1
+aliases:
+- P1
+- P100 (visual, transient)
+- visual P1
+type: erp_component
+recording_modality:
+- EEG
+- MEG
+signature:
+  latency_ms: ~80-130
+  polarity: positive
+  topography: lateral occipital
+description:
+  en: First major positive component of the transient visual ERP over lateral occipital sites; it is enhanced for stimuli
+    at attended locations.
+  zh: 瞬态视觉 ERP 中第一个主要正成分，位于外侧枕区；被注意位置的刺激使其增强。
+notes: First-pass skeleton by package A (2026-10-03). No generators/indexes yet. Signature values are textbook-level approximations
+  and await source checking.
+status: draft
+contributors:
+- curator_a

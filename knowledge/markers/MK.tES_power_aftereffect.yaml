@@ -1,0 +1,11 @@
+schema_version: "0.2"
+id: MK.tES_power_aftereffect
+name: {en: Band-power aftereffect of transcranial electrical stimulation, zh: 经颅电刺激后功率改变}
+aliases: [tACS aftereffect, tDCS-induced power change]
+type: oscillatory
+recording_modality: [EEG]
+signature: {frequency_hz: stimulated band (e.g. alpha for alpha-tACS)}
+description: {en: 'Change in EEG band power (typically an increase in the stimulated band for tACS, or polarity-dependent changes for tDCS) measured after transcranial electrical stimulation relative to pre-stimulation or sham.', zh: 经颅电刺激后相对于刺激前或伪刺激测得的脑电频段功率改变（tACS 通常为刺激频段功率升高，tDCS 为依极性而定的变化）。}
+notes: Signature values are textbook-level characteristics and await source checking (first pass, curator_b). Generators and indexes to be added in the second pass.
+status: draft
+contributors: [maintainer, curator_b]

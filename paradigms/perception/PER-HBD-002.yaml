@@ -1,0 +1,50 @@
+schema_version: '0.2'
+id: PER-HBD-002
+class: PER-HBD
+name:
+  en: Heartbeat counting task
+  zh: 心跳计数任务
+aliases:
+- Heartbeat Counting Task
+- Schandry Task
+- Heartbeat Tracking Task
+- mental tracking task
+family: perception
+bci_category:
+- none
+recording_modality:
+- EEG
+- MEG
+stimulus_modality:
+- cognitive_task
+markers:
+- MK.HEP
+description:
+  en: Without external stimuli or feeling for the pulse, participants silently count their heartbeats during intervals of
+    different lengths and report the number. Accuracy is computed against the ECG count. The heartbeat-evoked potential is
+    compared between periods of attention to the heartbeat and to external stimuli.
+  zh: 在没有外部刺激、也不触摸脉搏的情况下，被试在不同长度的时间段内默数自己的心跳并报告次数，与心电记录的实际次数比较计算准确度。比较注意心跳与注意外部刺激时的心跳诱发电位。
+trial_structure:
+  conditions:
+  - counting intervals of different lengths (e.g. 25-45 s)
+protocol:
+  n_classes: 1
+  classes:
+  - silent heartbeat counting
+  cue: start and stop signals only; no external stimulus during counting
+  paradigm_timing: block
+  feedback: none
+  distinguishing: 准则 2;3：无外部刺激的默数任务（以时段为单位的组块），取代 -001 由 R 波触发的外部刺激同步判断。
+first_source:
+  citation: Schandry R. Heart beat perception and emotional experience. Psychophysiology. 1981.
+  doi: 10.1111/j.1469-8986.1981.tb02486.x
+  year: 1981
+  verified: false
+interop:
+  bids_task: heartbeat
+notes: 'Split from PER-HBD-001 under D-057 (that file described both versions). Leads: R0052 (= first_source), R0742 and R0752
+  (2018 critiques of the counting task), R0647. Interval lengths in trial_structure are illustrative; check against R0052.
+  [curator_e sprint 3, 2026-10-05] bibliography confirmed (Crossref, 2026-10-05).'
+status: draft
+contributors:
+- curator_a

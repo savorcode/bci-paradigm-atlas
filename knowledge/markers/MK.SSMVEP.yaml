@@ -1,0 +1,24 @@
+schema_version: "0.2"
+id: MK.SSMVEP
+name:
+  en: Steady-state motion visual evoked potential
+  zh: 稳态运动视觉诱发电位
+aliases:
+- SSMVEP
+- steady-state motion VEP
+- steady-state motion visual evoked potential
+type: steady_state
+recording_modality:
+- EEG
+signature:
+  frequency_hz: motion reversal frequency and harmonics
+  topography: occipital / occipito-parietal
+description:
+  en: Steady-state response of motion-sensitive visual cortex to periodic motion stimuli (oscillating, expanding-contracting
+    or moving patterns) at the motion frequency, obtained with little luminance flicker.
+  zh: 运动敏感视皮层对周期性运动刺激（振荡、收缩—扩张或移动图案）在运动频率处产生的稳态响应，基本不需要亮度闪烁。
+notes: First-pass skeleton by package A (2026-10-03). No generators/indexes yet. Signature values are textbook-level approximations
+  and await source checking.
+status: draft
+contributors:
+- curator_a

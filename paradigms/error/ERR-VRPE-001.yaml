@@ -1,0 +1,71 @@
+schema_version: '0.2'
+id: ERR-VRPE-001
+class: ERR-VRPE
+name:
+  en: Visuo-haptic mismatch in virtual reality
+  zh: 虚拟现实视觉–触觉失配（预测误差负波）
+aliases:
+- Prediction error negativity paradigm
+- PEN paradigm
+- VR haptic mismatch task
+family: error
+bci_category:
+- passive
+recording_modality:
+- EEG
+stimulus_modality:
+- visual
+- somatosensory
+- motor_execution
+markers:
+- MK.ErrP
+description:
+  en: Participants reach to touch virtual objects in VR, and on a minority of trials the visual/haptic touch feedback is delivered
+    prematurely, creating a mismatch between predicted and actual sensory feedback. Mismatching feedback elicits a fronto-central
+    negativity (prediction error negativity, ~100-200 ms), proposed as a passive-BCI signal of interaction errors.
+  zh: 被试在虚拟现实中伸手触碰虚拟物体，少数试次中视觉/触觉的触碰反馈被提前给出，造成预测感觉反馈与实际反馈之间的失配。失配反馈诱发额中央负波（预测误差负波，约 100–200 ms），被提出可作为被动式脑机接口检测交互错误的信号。
+trial_structure:
+  conditions:
+  - match
+  - mismatch
+protocol:
+  n_classes: 2
+  classes:
+  - match (feedback at expected touch)
+  - mismatch (premature feedback)
+  cue: visual (and vibrotactile) touch feedback when reaching to tap a virtual object; on a minority of trials feedback is
+    triggered prematurely
+  paradigm_timing: synchronous
+  feedback: discrete
+  distinguishing: 标准配置（最早发表）：VR 中伸手触碰虚拟物体，少数试次的触碰反馈提前出现（失配，oddball 结构）（Gehrke et al. 2019，R1142）。
+first_source:
+  citation: Gehrke L, Akman S, Lopes P, Chen A, Singh AK, Chen HT, Lin CT, Gramann K. Detecting Visuo-Haptic Mismatches in
+    Virtual Reality using the Prediction Error Negativity of Event-Related Brain Potentials. Proceedings of the 2019 CHI Conference
+    on Human Factors in Computing Systems. 2019:1-11.
+  doi: 10.1145/3290605.3300657
+  year: 2019
+  verified: false
+variants:
+- name: EMS force-feedback condition (visual + vibrotactile + electrical muscle stimulation)
+  source:
+    citation: 'Gehrke L, Terfurth L, Akman S, Gramann K. Visuo-haptic prediction errors: a multimodal dataset (EEG, motion)
+      in BIDS format indexing mismatches in haptic interaction. Frontiers in Neuroergonomics. 2024;5:1411305.'
+    doi: 10.3389/fnrgo.2024.1411305
+    year: 2024
+    verified: false
+  note: Exploratory condition with fewer trials and participants in the dataset; kept as a variant pending the meeting (feedback
+    modality may count as criterion 2, see split_log). bibliography corrected (Crossref, 2026-10-05)
+datasets:
+- name: Visuo-haptic prediction errors (EEG, motion), BIDS
+  url: https://openneuro.org/datasets/ds003846/versions/2.0.2
+  identifier: ds003846
+interop:
+  bids_task: vrmismatch
+notes: 'Leads used: S_GEHRKE2019 (search: https://lab.plopes.org/published/2019-CHI-EEG.pdf); S_GEHRKE2024 (search: https://frontiersin.org/articles/10.3389/fnrgo.2024.1411305/full).
+  first_source lead: S_GEHRKE2019. The source calls the component ''prediction error negativity'' (PEN); mapped to MK.ErrP
+  as an interaction-error potential pending maintainer decision (see worklog; a separate MK.PEN may be preferable). Dataset
+  paper: S_GEHRKE2024. Pass 1 skeleton (curator_c, 2026-10-03); all sources unverified. Sprint 2 (D-057): protocol added;
+  EMS feedback condition (R1258) recorded as a variant and flagged in split_log (待例会). bibliography corrected (Crossref, 2026-10-05)'
+status: draft
+contributors:
+- curator_c

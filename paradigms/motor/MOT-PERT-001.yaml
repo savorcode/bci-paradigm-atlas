@@ -1,0 +1,54 @@
+schema_version: '0.2'
+id: MOT-PERT-001
+class: MOT-PERT
+name:
+  en: Balance perturbation
+  zh: 姿势平衡扰动
+aliases:
+- postural perturbation
+- perturbation-evoked potential
+- PEP
+- support-surface perturbation
+family: motor
+bci_category:
+- none
+recording_modality:
+- EEG
+stimulus_modality:
+- somatosensory
+- motor_execution
+markers:
+- MK.perturbation_N1
+description:
+  en: >-
+    Standing (or seated) participants receive sudden, unpredictable perturbations of balance, such as support-surface translations
+    or pulls, and respond to maintain stability. Each perturbation evokes a large fronto-central negativity (perturbation-evoked
+    N1) about 100-200 ms after onset, together with theta-band power increases.
+  zh: 站立（或坐位）被试受到突然、不可预测的平衡扰动（如支撑面平移或牵拉），并作出反应以维持稳定。每次扰动在起始后约 100-200 ms 诱发显著的额中央负波（扰动诱发 N1），并伴随 θ 频段功率增强。
+protocol:
+  n_classes: 1
+  classes:
+  - unpredictable balance perturbation
+  cue: none (unpredictable support-surface translation or pull)
+  paradigm_timing: synchronous
+  feedback: none
+  distinguishing: >-
+    Standard configuration (earliest published) / 标准配置（最早发表）: unpredictable whole-body balance perturbations, perturbation-evoked
+    N1 and theta (R1122; origin not established). No sibling protocol yet.
+first_source:
+  citation: >-
+    Varghese JP, Marlin A, Beyer KB, Staines WR, Mochizuki G, McIlroy WE. Frequency characteristics of cortical activity associated
+    with perturbations to upright stability. Neuroscience Letters 578:33-38. 2014.
+  doi: 10.1016/j.neulet.2014.06.017
+  year: 2014
+  verified: false
+interop:
+  bids_task: balanceperturbation
+notes: >-
+  Search sources (curation/work/pkg_B/search_log.md): N04 https://experts.mcmaster.ca/scholarly-works/270349. New candidate
+  (pkg B). Requests new marker MK.perturbation_N1. The lead found (N04) is a frequency-domain study; an origin paper for the
+  perturbation N1 is still needed. Latency in the description is textbook-level and awaits source checking. bibliography confirmed
+  (OpenAlex, 2026-10-05)
+status: draft
+contributors:
+- curator_b

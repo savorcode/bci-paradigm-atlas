@@ -1,0 +1,49 @@
+schema_version: '0.2'
+id: LAN-SC-002
+class: LAN-SC
+name:
+  en: Sign language sentence comprehension
+  zh: 手语句子理解
+aliases:
+- sign language comprehension
+- ASL sentence processing
+family: language
+bci_category:
+- none
+recording_modality:
+- fMRI
+stimulus_modality:
+- visual
+markers:
+- MK.BOLD_language_network
+description:
+  en: Deaf or hearing native signers watch videos of signed sentences, compared with meaningless gesture sequences or other
+    baselines, and in some designs with written or spoken sentences in hearing participants. Sign language comprehension engages
+    the left-lateralised perisylvian language network, with additional right-hemisphere involvement reported in native signers.
+  zh: 聋人或听人母语手语者观看手语句子视频，与无意义手势序列或其他基线比较；部分设计还与听人被试的书面或口语句子比较。手语理解激活左偏侧的外侧裂周围语言网络，母语手语者中还报告了额外的右半球参与。
+trial_structure:
+  conditions:
+  - signed sentences
+  - non-sign gesture baseline
+protocol:
+  n_classes: 2
+  classes:
+  - signed sentences
+  - non-linguistic gesture baseline
+  cue: videos of a signer
+  paradigm_timing: block
+  feedback: none
+  distinguishing: 准则 2：输入由书面/口语句子（LAN-SC-001）变为视觉—手势模态的手语句子。
+first_source:
+  citation: 'Neville HJ, Bavelier D, Corina DP, Rauschecker JP, Karni A, Lalwani AK, Braun AR, Clark VP, Jezzard P, Turner
+    R. Cerebral organization for language in deaf and hearing subjects: Biological constraints and effects of experience.
+    Proceedings of the National Academy of Sciences. 1998;95(3):922-929.'
+  doi: 10.1073/pnas.95.3.922
+  year: 1998
+  verified: false
+notes: 'Former variant of LAN-SC-001 (proposed candidate LAN-SIGN-001, merged by D-044; ID retired, not revived). Leads: R1223
+  (Neville et al. 1998, PNAS), R1224. (R#### = curation/literature.csv; DN## = curation/work/pkg_D/new_leads.csv.) Numbering
+  criterion (D-057): 2. bibliography corrected (OpenAlex, 2026-10-05)'
+status: draft
+contributors:
+- curator_d

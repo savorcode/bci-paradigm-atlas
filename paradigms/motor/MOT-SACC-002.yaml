@@ -1,0 +1,63 @@
+schema_version: '0.2'
+id: MOT-SACC-002
+class: MOT-SACC
+name:
+  en: Memory-guided saccade
+  zh: 记忆引导眼跳
+aliases:
+- delayed saccade
+- memory-guided saccade task
+- oculomotor delayed response
+family: motor
+bci_category:
+- none
+recording_modality:
+- fMRI
+- EEG
+stimulus_modality:
+- visual
+- motor_execution
+markers:
+- MK.BOLD_oculomotor
+- MK.BOLD_frontoparietal
+description:
+  en: >-
+    While fixating centrally, the participant sees a peripheral target briefly, holds its location in memory during a delay
+    of several seconds, and makes a saccade to the remembered location when the fixation point dims; the target then reappears
+    for a corrective saccade. Delay-period activity is sustained in topographic posterior parietal areas and the frontal eye
+    fields.
+  zh: 被试注视中央时短暂看到一个周边目标，在数秒的延迟期内记住其位置，注视点变暗时向记忆中的位置眼跳；随后目标重新出现，供纠正性眼跳。延迟期活动持续存在于具有拓扑组织的后顶叶区和额叶眼区。
+trial_structure:
+  phases:
+  - name: target flash
+    duration_ms: 100
+  - name: delay
+    duration_ms: 3000-15000
+  - name: memory-guided saccade + target reappearance
+protocol:
+  n_classes: 1
+  classes:
+  - saccade to remembered target location
+  cue: brief peripheral target; fixation-point dimming as go signal
+  paradigm_timing: synchronous
+  feedback: discrete
+  distinguishing: >-
+    Criteria 2 and 3 vs MOT-SACC-001: the target is absent at saccade time (memory cue and go signal) and a delay period is
+    inserted; target reappearance gives discrete feedback for a corrective saccade.
+first_source:
+  citation: >-
+    Schluppeck D, Curtis CE, Glimcher PW, Heeger DJ. Sustained activity in topographic areas of human posterior parietal cortex
+    during memory-guided saccades. Journal of Neuroscience. 2006;26(19):5098-5108.
+  doi: 10.1523/JNEUROSCI.5330-05.2006
+  year: 2006
+  verified: false
+interop:
+  bids_task: memorysaccade
+notes: >-
+  Leads: WS-B2-06 [=R1299], WF-B2-22 (author PDF at cns.nyu.edu: task timing above). Animal origin (D-031 item 2): Gnadt &
+  Andersen 1988 Exp Brain Res 70:216-220 (macaque), cited in the source; earlier human studies probably exist, so first_source
+  is a placeholder for the human version. MK.BOLD_frontoparietal is owned by package A. bibliography corrected (OpenAlex,
+  2026-10-05)
+status: draft
+contributors:
+- curator_b

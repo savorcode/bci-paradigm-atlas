@@ -1,0 +1,59 @@
+schema_version: '0.2'
+id: MOT-SRT-001
+class: MOT-SRT
+name:
+  en: Serial reaction time task
+  zh: 序列反应时（运动序列学习）
+aliases:
+- SRTT
+- Serial RT
+- Serial Reaction Time
+- serial reaction time task
+- implicit sequence learning
+family: motor
+bci_category:
+- none
+recording_modality:
+- EEG
+- fMRI
+stimulus_modality:
+- visual
+- motor_execution
+markers:
+- MK.LRP
+- MK.SMR_ERD
+description:
+  en: >-
+    Participants press the key corresponding to the location of a visual cue; unknown to them, cue locations follow a repeating
+    sequence, and switching to a random sequence reveals implicit learning as a reaction-time cost. Sequence learning is reflected
+    in earlier lateralized readiness potentials and in modulation of sensorimotor beta activity.
+  zh: 被试按与视觉提示位置对应的键作答；提示位置在被试不知情的情况下遵循重复序列，切换为随机序列时出现的反应时代价揭示了内隐学习。序列学习表现为偏侧化准备电位提前以及感觉运动 β 活动的调制。
+protocol:
+  n_classes: 2
+  classes:
+  - repeating sequence block
+  - random sequence block
+  cue: visual location cue mapped to keys
+  paradigm_timing: block
+  feedback: none
+  distinguishing: >-
+    Standard configuration (earliest published) / 标准配置（最早发表）: implicit repeating sequence of cue locations vs random blocks
+    (Nissen & Bullemer 1987). No sibling protocol yet.
+first_source:
+  citation: >-
+    Nissen MJ, Bullemer P. Attentional requirements of learning: evidence from performance measures. Cognitive Psychology.
+    1987;19(1):1-32.
+  doi: 10.1016/0010-0285(87)90002-8
+  year: 1987
+  verified: false
+interop:
+  bids_task: srt
+notes: >-
+  HED task page: https://www.hedtags.org/hed-task/tasks/hedtsk_serial_reaction_time.html. Leads: R0078, R0125, R0342, R0386,
+  R0477, R0553, R0594. first_source is behavioural (R0078). Possible overlap with MOT-MSL-001 (decisions.md next-meeting list).
+  D-031 (maintainer, 2026-10-03): first_source is a behavioural or EMG/MEP-only origin, which is acceptable; add the earliest
+  brain-recording study as a "First neural recording: <citation> (R####)" line in sprint 2. bibliography corrected (OpenAlex,
+  2026-10-05)
+status: draft
+contributors:
+- curator_b

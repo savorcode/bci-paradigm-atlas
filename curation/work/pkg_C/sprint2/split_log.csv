@@ -1,0 +1,82 @@
+﻿class_id,new_id,criterion,distinguishing,source_ref,lead_url,status,note
+CTL-AMBIG,CTL-AMBIG-001,,标准配置（最早发表线索）：确定收益 vs 概率已知/未知的赌局（Hsu et al. 2005，R1152）。本包仅此一个配置。,S_HSU2005,,已建文件,-001 标准配置；仅补 protocol
+CTL-ANAL,CTL-ANAL-001,,标准配置（最早发表线索）：判断两词对是否关系相同，对照为语义关联判断（Bunge et al. 2005，R1150）。本包仅此一个配置。,S_BUNGE2005,,已建文件,-001 标准配置；仅补 protocol
+CTL-ANT,CTL-ANT-001,,标准配置（最早发表）：4 种视觉线索 × 3 种 flanker 条件（classes 列出两个因素的水平），得出警觉、定向、执行控制三个分数（Fan et al. 2002，R0234）。,R0234,,已建文件,-001 标准配置；仅补 protocol
+CTL-AS,CTL-AS-001,,标准配置（最早发表）：外周目标出现后向镜像位置扫视（Hallett 1978，R0045）；与前向扫视混合或分组只是参数。,R0045,,已建文件,-001 标准配置；仅补 protocol
+CTL-AUT,CTL-AUT-001,,标准配置（最早神经记录线索）：给出日常物品，限时生成新用途，与较低创造性要求的对照任务比较（Fink et al. 2009，R1151）。本包仅此一个配置。,S_FINK2009,,已建文件,-001 标准配置；仅补 protocol
+CTL-BART,CTL-BART-001,,标准配置（最早发表）：自定步调地充气或兑现，气球在随机爆点爆炸（Lejuez et al. 2002，R0224）；fMRI 版（ds000001）只改参数。,R0224,,已建文件,-001 标准配置；仅补 protocol
+CTL-CNV,CTL-CNV-001,,标准配置（最早发表）：固定 S1–S2 间隔的预警反应时任务（Walter et al. 1964，R0010）。本包仅此一个配置。,R0010,,已建文件,-001 标准配置；仅补 protocol
+CTL-CONF,CTL-CONF-001,,"标准配置（最早发表线索）：每次知觉判断后作从""肯定错""到""肯定对""的信心评分（Boldt & Yeung 2015，R1145）。本包仅此一个配置。",S_BOLDT2015,,已建文件,-001 标准配置；仅补 protocol
+CTL-CPT,CTL-CPT-001,,标准配置（最早发表）：在快速字母流中对目标字母作反应（Rosvold et al. 1956，R0003）。,R0003,,已建文件,-001 标准配置；名称/描述已收窄
+CTL-DD,CTL-DD-001,,标准配置（最早发表线索）：反复在较小的即时奖赏与较大的延迟奖赏间选择以求无差异点（Rachlin et al. 1991，R1134）。本包仅此一个配置。,S_RACHLIN1991,,已建文件,-001 标准配置；仅补 protocol
+CTL-DT,CTL-DT-001,,标准配置（最早发表线索）：心理不应期范式，两刺激间 SOA 可变（Telford 1931，R1135）；SOA 取值是参数。,S_TELFORD1931,,已建文件,-001 标准配置；仅补 protocol
+CTL-EFF,CTL-EFF-001,,标准配置（最早发表）：EEfRT，按键努力程度不同的两选项在不同奖赏概率下选择（Treadway et al. 2009，R0451）。本包仅此一个配置；认知努力折扣（R0437、R0639）未拆分，待核对。,R0451,,已建文件,-001 标准配置；仅补 protocol
+CTL-FLK,CTL-FLK-001,,标准配置（最早发表）：中央目标字母两侧为与其同反应或异反应的干扰字母（Eriksen & Eriksen 1974，R0030）。,R0030,,已建文件,-001 标准配置；名称/描述已收窄
+CTL-FORAGE,CTL-FORAGE-001,,标准配置（最早发表）：接受当前选项或付出代价搜索（Kolling et al. 2012，R1147）。本包仅此一个配置。,S_KOLLING2012,,已建文件,-001 标准配置；仅补 protocol
+CTL-GNG,CTL-GNG-001,,标准配置（最早发表）：对 Go 刺激反应、对 NoGo 刺激抑制（Donders 1868/1969，R0019）；Go/NoGo 比例、刺激种类（字母、情绪面孔）只是参数。,R0019,,已建文件,-001 标准配置；仅补 protocol
+CTL-IGT,CTL-IGT-001,,标准配置（最早发表）：四副牌，两副短期高收益但长期亏损（Bechara et al. 1994，R0116）。本包仅此一个配置。,R0116,,已建文件,-001 标准配置；仅补 protocol
+CTL-MIXG,CTL-MIXG-001,,标准配置（最早发表）：接受或拒绝得失独立变化的 50/50 混合赌局（Tom et al. 2007，R1146）。本包仅此一个配置。,S_TOM2007,,已建文件,-001 标准配置；仅补 protocol
+CTL-MRP,CTL-MRP-001,,标准配置（最早发表）：掩蔽箭头启动刺激与可见目标相容/不相容（Eimer & Schlaghecken 1998，R1144）；启动–目标间隔是参数。,S_EIMER1998,,已建文件,-001 标准配置；仅补 protocol
+CTL-MSIT,CTL-MSIT-001,,标准配置（最早发表）：三位数字中报告不同的那个，干扰与控制试次分组块呈现（Bush et al. 2003 线索 R1143）；组块设计待核对原文。,S_BUSH2003,,已建文件,-001 标准配置；仅补 protocol
+CTL-PDM,CTL-PDM-001,,标准配置（最早发表）：每个试次呈现一段随机点运动，报告净运动方向（Britten et al. 1992，R0102，动物源头）。,R0102,,已建文件,-001 标准配置；名称/描述已收窄
+CTL-RAT,CTL-RAT-001,,标准配置（最早发表）：三个线索词找共同联想词（Mednick 1962，R0008）；顿悟报告是附加测量，不另给号。,R0008,,已建文件,-001 标准配置；仅补 protocol
+CTL-RAVEN,CTL-RAVEN-001,,标准配置（最早发表线索）：选择补全矩阵的图块（Penrose & Raven 1936，R1137）；神经影像中的计算机化版本只改呈现参数。,S_PENROSE1936,,已建文件,-001 标准配置；仅补 protocol
+CTL-RNG,CTL-RNG-001,,标准配置（最早发表线索）：按节拍声随机生成数字，与计数对照，PET 组块设计（Jahanshahi et al. 2000，R1149）；节拍速率是参数。,S_JAHANSHAHI2000,,已建文件,-001 标准配置；仅补 protocol
+CTL-SART,CTL-SART-001,,标准配置（最早发表）：对所有数字反应、对罕见目标数字抑制（Robertson et al. 1997，R0139）。本包仅此一个配置。,R0139,,已建文件,-001 标准配置；仅补 protocol
+CTL-SIM,CTL-SIM-001,,标准配置（最早发表）：听觉刺激呈现于左/右耳，按非空间特征作左/右反应（Simon & Rudell 1967，R0016）。,R0016,,已建文件,-001 标准配置；名称/描述已收窄
+CTL-SST,CTL-SST-001,,标准配置（最早发表线索）：少数试次在可变延迟后出现停止信号，按赛跑模型估计 SSRT（Logan & Cowan 1984，R0067）；延迟固定或阶梯追踪是参数。,R0067,,已建文件,-001 标准配置；仅补 protocol
+CTL-STR,CTL-STR-001,,标准配置（最早发表）：整张卡片/列表连续口头命名，以完成时间计干扰（Stroop 1935，R0002）。,R0002,,已建文件,-001 标准配置；名称/描述已收窄
+CTL-SW,CTL-SW-001,,标准配置（最早发表）：可预测的 AABB 交替序列，任务由位置决定、无显式线索（Rogers & Monsell 1995，R0121）。,R0121,,已建文件,-001 标准配置；名称/描述已收窄
+CTL-SYLL,CTL-SYLL-001,,标准配置（最早发表线索）：判断三段论结论是否有效，内容具体/抽象/与信念相关（Goel et al. 2000，R1153）；内容类型是条件水平，不另给号。,S_GOEL2000,,已建文件,-001 标准配置；仅补 protocol
+CTL-TOL,CTL-TOL-001,,标准配置（最早发表）：把起始状态的彩球移成目标状态，难度按最少步数（Shallice 1982，R0057）。计算机化与 Stockings of Cambridge 等版本未拆分（无线索核对其配置差异）。,R0057,,已建文件,-001 标准配置；仅补 protocol
+CTL-VBC,CTL-VBC-001,,标准配置（最早发表）：对食物出价的 BDM 拍卖（Plassmann et al. 2007，R1148）。本包仅此一个配置。,S_PLASSMANN2007,,已建文件,-001 标准配置；仅补 protocol
+CTL-WASON,CTL-WASON-001,,标准配置（最早发表）：四卡选择任务（Wason 1966，R0015）；抽象 vs 主题/社会交换内容（R0058、R0089）是内容条件，未拆分。,R0015,,已建文件,-001 标准配置；仅补 protocol
+CTL-WCST,CTL-WCST-001,,标准配置（最早发表线索）：按颜色/形状/数量分类，规则由反馈推断且无预告地改变（Grant & Berg 1948，R1136）。本包仅此一个配置。,S_GRANTBERG1948,,已建文件,-001 标准配置；仅补 protocol
+ERR-AAF,ERR-AAF-001,,标准配置：持续元音发声时，耳机中实时回放的自身嗓音被短暂上移或下移音高（闭环听觉反馈扰动）。出处未定（TBD，见 first_source）；本包仅此一个配置。,,,已建文件,-001 标准配置；仅补 protocol
+ERR-ADAPT,ERR-ADAPT-001,,标准配置（最早发表线索）：伸手/光标运动中施加视觉旋转，被试依据光标位置的感觉误差逐渐适应（Krakauer et al. 2000，R0194）。光标反馈为连续或仅终点显示的区别待核对原文（见 split_log 待例会行）。,R0194,,已建文件,-001 标准配置；名称/描述已收窄
+ERR-APC,ERR-APC-001,,标准配置：视觉条件刺激预测味觉奖赏，偶尔省略或意外给予奖赏，不要求反应（O'Doherty et al. 2003 线索 S_ODOHERTY2003）。本包仅此一个配置。,S_ODOHERTY2003,,已建文件,-001 标准配置；仅补 protocol
+ERR-AWARE,ERR-AWARE-001,,标准配置（最早发表）：快速手动选择任务后，每次反应都作正确性判断，据此把错误分为觉察/未觉察（Scheffers & Coles 2000，R0195）。,R0195,,已建文件,-001 标准配置；名称/描述已收窄
+ERR-BANDIT,ERR-BANDIT-001,,"标准配置（最早发表）：四臂""不安定""老虎机，各臂报酬随时间漂移，每次选择后给出点数反馈（Daw et al. 2006，R0338）。本包仅此一个配置。",R0338,,已建文件,-001 标准配置；仅补 protocol
+ERR-CAUS,ERR-CAUS-001,,标准配置（最早行为学线索）：动作/线索与结果事件的统计关联被操纵，被试判断因果强度（Dickinson et al. 1984，R0066）。本包仅此一个配置。,R0066,,已建文件,-001 标准配置；仅补 protocol
+ERR-CHGPT,ERR-CHGPT-001,,标准配置（最早发表）：结果分布的均值在无提示的变点处突变，只有变点一种生成条件（Nassar et al. 2010，R1138）。,S_NASSAR2010,,已建文件,-001 标准配置；名称/描述已收窄
+ERR-ERRP,ERR-ERRP-001,,标准配置（最早发表）：用户发出离散指令移动光标，界面以固定概率执行相反动作（模拟 BCI 交互），错误反馈锁时诱发 ErrP（Ferrez & Millán 2008，R0403）。,R0403,,已建文件,-001 标准配置；名称/描述已收窄
+ERR-GAM,ERR-GAM-001,,标准配置（最早发表）：在两个标有金额的选项中选择，随后呈现得/失反馈，得失与表现基本无关（Gehring & Willoughby 2002，R0235）；金额大小是否作为因素与 ERR-GAM-002 相区别，待核对原文。,R0235,,已建文件,-001 标准配置；仅补 protocol
+ERR-INST,ERR-INST-001,,标准配置（首个人类 fMRI 线索）：被试通过选择学习动作–结果关联，结果给出奖赏反馈（O'Doherty et al. 2004，S_ODOHERTY2004）。本包仅此一个配置。,S_ODOHERTY2004,,已建文件,-001 标准配置；仅补 protocol
+ERR-OBS,ERR-OBS-001,,标准配置（最早发表）：观察者观看另一名被试完成 Eriksen flanker 任务（van Schie et al. 2004，R0279；同类研究见 R0714 所列 Carp et al. 2009 等）。,R0279,,已建文件,-001 标准配置；名称/描述已收窄
+ERR-OGNG,ERR-OGNG-001,,标准配置（最早发表线索）：4 个线索分别对应 动作（做/不做）× 结果效价（得奖/免罚），由概率反馈学习（S_GUITARTMASIP_GNG）。本包仅此一个配置。,S_GUITARTMASIP_GNG,,已建文件,-001 标准配置；仅补 protocol
+ERR-PCL,ERR-PCL-001,,标准配置（最早发表）：天气预报任务，卡片组合概率性地预测两种结果之一，每次预测后给反馈（Knowlton et al. 1994，R0118）。本包仅此一个配置。,R0118,,已建文件,-001 标准配置；仅补 protocol
+ERR-PRL,ERR-PRL-001,,标准配置（首个人类神经影像线索）：两刺激概率反馈学习，达到标准后无提示反转（Cools et al. 2002，R0223）。本包仅此一个配置。,R0223,,已建文件,-001 标准配置；仅补 protocol
+ERR-PRT,ERR-PRT-001,,标准配置（最早发表）：信号检测任务，两类刺激的正确识别以不对称比例给奖赏，产生反应偏向（Pizzagalli et al. 2005，S_PIZZAGALLI2005）。本包仅此一个配置。,S_PIZZAGALLI2005,,已建文件,-001 标准配置；仅补 protocol
+ERR-PSEL,ERR-PSEL-001,,标准配置（最早发表）：训练阶段 3 对固定刺激对的概率反馈学习，测试阶段新组合、无反馈（Frank et al. 2004，R0272）。本包仅此一个配置。,R0272,,已建文件,-001 标准配置；仅补 protocol
+ERR-TE,ERR-TE-001,,标准配置（最早发表）：时间估计后给出正确/错误反馈，时间窗自适应调整（Miltner et al. 1997，R0146）。本包仅此一个配置。,R0146,,已建文件,-001 标准配置；仅补 protocol
+ERR-TS,ERR-TS-001,,标准配置（公认标准两步任务）：第一阶段选择以常见/罕见转移进入第二阶段，第二阶段奖赏概率缓慢漂移（Daw et al. 2011，R0510）。,R0510,,已建文件,-001 标准配置；仅补 protocol
+ERR-VRPE,ERR-VRPE-001,,标准配置（最早发表）：VR 中伸手触碰虚拟物体，少数试次的触碰反馈提前出现（失配，oddball 结构）（Gehrke et al. 2019，R1142）。,S_GEHRKE2019,,已建文件,-001 标准配置；仅补 protocol
+ERR-ERRP,ERR-ERRP-002,3,准则 3：试次中没有用户指令阶段，用户只监视自主运行的设备（ERR-ERRP-001 中错误是对用户离散指令的错误执行）。,"R0714 (Somon et al. 2017, lists Chavarriaga & Millán 2010 under BCI systems); BNCI data sets page (S2C-F01)",https://bnci-horizon-2020.eu/database/data-sets,已建文件,
+ERR-ERRP,ERR-ERRP-003,2,准则 2：错误刺激是 P300 拼写器给出的字符反馈（真实解码错误、错误率由拼写器决定），而不是 ERR-ERRP-001 中按固定概率人为插入的光标动作错误。,BCI Challenge page (S2C-S01/F02),https://neuro.embs.org/2015/bci-challenge/,已建文件,TBD 源头（D-032）
+ERR-ERRP,ERR-ERRP-004,3;4,准则 3、4：连续控制、无试次划分，反馈连续（ERR-ERRP-001 为离散指令与离散反馈）；准则 1：区分执行错误与结果错误两类错误。,S_SPULER2015 (Frontiers page fetched); second study seen as title only: 'Classification of error-related potentials in EEG during continuous feedback' (Tübingen repository),https://public-pages-files-2025.frontiersin.org/journals/human-neuroscience/articles/10.3389/fnhum.2015.00155/text,已建文件,
+ERR-OBS,ERR-OBS-002,1;2,准则 1、2：被观察的任务是 Go/NoGo，被观察的错误是抑制失败（误按），条件集含 Go/NoGo 两类刺激（ERR-OBS-001 观察的是选择任务中的选错）。,R0714 (lists Bates et al. 2005 and Koban et al. 2010 for observed Go/NoGo; negative waves 135-150 ms post-error),https://www.frontiersin.org/journals/human-neuroscience/articles/10.3389/fnhum.2017.00360/full,已建文件,
+ERR-OBS,ERR-OBS-003,2,准则 2：被观察的刺激是 VR 中化身的伸手抓握动作（第一/第三人称视角），而不是 ERR-OBS-001 中他人在选择任务上的按键反应。,"R0714 (lists Padrão et al. 2016 and Pavone et al. 2016, VR avatars 1PP/3PP)",https://www.frontiersin.org/journals/human-neuroscience/articles/10.3389/fnhum.2017.00360/full,已建文件,
+ERR-AWARE,ERR-AWARE-002,2,准则 2：刺激与反应换为反向眼跳（眼动反应、外周目标），错误为反射性前向扫视（ERR-AWARE-001 为手动选择任务）。,R0205 (moved from ERR-AWARE-001 variants),,已建文件,D-015 变体转出；
+ERR-AWARE,ERR-AWARE-003,1;2,准则 1、2：Go/NoGo 结构，错误是抑制失败（误按），用 Stroop 式颜色词作刺激，觉知用下一试次的错误报告键标示（ERR-AWARE-001 为选择任务 + 每次正确性判断）。,S_HESTER2005 (TARA record + Cognitive Atlas EAT page); second study seen as title: 'Assessing error awareness without relying on introspective judgment?' (PMC3703527),https://cognitiveatlas.org/task/id/tsk_nzi0bkdoO8a23,已建文件,
+ERR-GAM,ERR-GAM-002,1;2,准则 2：刺激为两扇门与固定金额的得失箭头，纯猜测；准则 1：只有得/失两个条件，金额不作为因素（与 ERR-GAM-001 的金额标注选项相区别，后者金额因素待核对原文）。,"R1093 (Proudfit GH. The reward positivity: from basic research on reward to a biomarker for depression. Psychophysiology 2015, doi 10.1111/psyp.12370 - PDF fetched in sprint 2)",https://cprlab.psy.fsu.edu/uploads/1/0/8/8/108887279/the_reward_positivity.pdf,已建文件,TBD 源头（D-032）
+ERR-GAM,ERR-GAM-003,3,准则 3：试次中没有选择/反应阶段，结果与被试行为无关（ERR-GAM-001 先选择再得反馈）。,R0714 (lists Yeung et al. 2004 and Donkers et al. 2005 for the slot-machine task),https://www.frontiersin.org/journals/human-neuroscience/articles/10.3389/fnhum.2017.00360/full,已建文件,
+ERR-ADAPT,ERR-ADAPT-002,4,准则 4：反馈为二值奖赏（成功/失败），不显示手或光标位置（ERR-ADAPT-001 为旋转光标的感觉误差反馈）。,R1001 (bioRxiv page fetched in sprint 2); R1009 (related),https://www.biorxiv.org/content/10.1101/262576v2,已建文件,
+ERR-CHGPT,ERR-CHGPT-002,1,准则 1：条件集由单一变点条件扩为变点 + oddball 两种生成统计（ERR-CHGPT-001 只有变点条件）。,R1255,,已建文件,
+ERR-TS,ERR-TS-002,1;2,准则 1、2：去掉常见/罕见转移（确定性转移），引入两个起始状态，奖赏为连续分数（ERR-TS-001 为概率转移与二值奖赏）。,R0692,,已建文件,
+CTL-FLK,CTL-FLK-002,2,准则 2：刺激为箭头（方向判断），刺激–反应映射直接由箭头方向给出（CTL-FLK-001 为字母目标与干扰字母，映射需学习）。,HED Eriksen flanker page (variant 'Arrow Flanker (Standard)'); ERP CORE page (erpinfo.org/erp-core),https://www.hedtags.org/hed-task/tasks/hedtsk_eriksen_flanker.html,已建文件,TBD 源头（D-032）
+CTL-SIM,CTL-SIM-002,2,准则 2：刺激为左右视野中的彩色视觉刺激（CTL-SIM-001 为左右耳的听觉刺激）。,HED Simon page (variant 'Visual Simon Task (Standard)'); R0516 (Hommel 2011 review),https://www.hedtags.org/hed-task/tasks/hedtsk_simon.html,已建文件,TBD 源头（D-032）
+CTL-STR,CTL-STR-002,3,准则 3：单试次呈现、逐试次反应（CTL-STR-001 为整张卡片/列表连续命名的组块结构）；按键或口头反应、是否含中性试次只是参数。,"HED Stroop page (variants 'Manual (Button-Press) Stroop', 'Vocal Response Stroop'); R0096 (MacLeod 1991 review)",https://www.hedtags.org/hed-task/tasks/hedtsk_stroop_color_word.html,已建文件,TBD 源头（D-032）
+CTL-SW,CTL-SW-002,2,准则 2：每试次有显式任务线索、任务顺序随机（CTL-SW-001 为可预测 AABB 序列、无线索）；线索–刺激间隔是参数。,"S_MEIRAN1996 (PsyToolkit cued task-switching page cites it; author PDF URL seen in search); HED task-switching page (variant 'Cued Task-Switching'); R0258 (Braver et al. 2003), R0261 (Monsell 2003)",https://www.psytoolkit.org/library/taskswitching_cued.html,已建文件,
+CTL-SW,CTL-SW-003,2;3,准则 2、3：没有外部任务线索或预定序列，任务由被试逐试次自主选择（CTL-SW-001 为预定 AABB 序列，CTL-SW-002 为外部线索）。,HED task-switching page (variant 'Voluntary Task Switching'),https://www.hedtags.org/hed-task/tasks/hedtsk_task_switching.html,已建文件,TBD 源头（D-032）
+CTL-CPT,CTL-CPT-002,1,"准则 1：条件集由""目标/非目标""变为 AX、AY、BX、BY 四种线索–探测组合，目标定义取决于前一线索（CTL-CPT-001 为单一目标字母）。","S_SERVANSCHREIBER1996 (Princeton research portal record fetched); R0158 (Carter et al. 1998, AX-CPT in fMRI); HED CPT page (variant 'AX-CPT (Context Processing)')",https://collaborate.princeton.edu/en/publications/schizophrenic-deficits-in-the-processing-of-context-a-test-of-a-t/,已建文件,
+CTL-CPT,CTL-CPT-003,2;3,准则 2、3：刺激为渐变过渡的场景图片、无离散刺激起始，按连续时间序列分析注意状态（CTL-CPT-001 为离散字母流的目标检测）。,R0575; HED CPT page (variant 'Gradual-Onset CPT (gradCPT)'),https://www.hedtags.org/hed-task/tasks/hedtsk_continuous_performance.html,已建文件,
+CTL-ANT,CTL-ANT-002,1;2,准则 2：警觉信号改为听觉提示音；准则 1：定向线索引入有效/无效条件（CTL-ANT-001 为视觉警觉线索、只有有效的空间线索）。,"S_CALLEJAS2004 (UGR record fetched); Millisecond ANT-I page (introduced 2005; cites Callejas et al. 2005 Exp Brain Res 167(1):27-37); R0476 (Ishigami & Klein 2010, two ANT versions); HED ANT page",https://produccioncientifica.ugr.es/documentos/61a1f638bd93e62bb6018a4e?lang=en,已建文件,
+CTL-PDM,CTL-PDM-002,3,准则 3：连续监视、目标出现没有试次起始标记（CTL-PDM-001 为按试次呈现的随机点运动）。,"S_KELLY2013 (edepositireland record fetched); R0736 (Steinemann et al. 2018, same lab)",https://edepositireland.ie/handle/2262/71242,已建文件,
+ERR-TS,（未给号）,1;3,Gläscher et al. 2010 两阶段 Markov 决策任务：先无奖赏学习状态转移、后引入奖赏，状态预测误差 vs 奖赏预测误差,R0482,,提议,配置细节未核对原文；若确认，取 ERR-TS-003
+CTL-STR,（未给号）,2,计数 Stroop：数项目个数、忽略数字词（HED：fMRI 中广泛使用）,HED Stroop page,https://www.hedtags.org/hed-task/tasks/hedtsk_stroop_color_word.html,提议,缺神经标记物线索（类标记物 MK.N450 不适用于 fMRI 版本）；Bush et al. 1998 为记忆线索
+CTL-ANT,（未给号）,1,ANT-R（修订版，分离冲突与抑制测量）,HED ANT page,https://www.hedtags.org/hed-task/tasks/hedtsk_attention_network.html,提议,HED 未给出处
+CTL-CPT,（未给号）,1,Conners CPT（not-X，对除 X 外所有字母反应）,HED CPT page,https://www.hedtags.org/hed-task/tasks/hedtsk_continuous_performance.html,提议,商业测验；与 CTL-SART-001 结构相近，需例会判断
+CTL-GNG,（未给号）,3,线索 Go/NoGo（试次前线索预示 Go/NoGo 概率）,HED Go/No-Go page,https://www.hedtags.org/hed-task/tasks/hedtsk_go_no_go.html,提议,HED 未给出处
+ERR-VRPE,ERR-VRPE-001,,EMS 力反馈条件（视觉+振动+肌电刺激）,R1258,https://frontiersin.org/articles/10.3389/fnrgo.2024.1411305/full,待例会,暂记为变体；反馈通道改变是否属准则 2 待定
+ERR-OBS,ERR-ERRP-002,,观察计算机光标/自动系统的错误（Ullsperger et al. 2007；Gentsch et al. 2009，见 R0714）与监视型 ErrP 是否同一具体范式,R0714,https://www.frontiersin.org/journals/human-neuroscience/articles/10.3389/fnhum.2017.00360/full,待例会,现归 ERR-ERRP-002；ERR-OBS 与 ERR-ERRP 的类边界待议
+ERR-ADAPT,ERR-ADAPT-001,,终点光标反馈（R1001 VMR）vs 连续光标反馈（Krakauer 2000？）,R1001,https://www.biorxiv.org/content/10.1101/262576v2,待例会,若 Krakauer 2000 为连续反馈，终点反馈版按准则 4 另给号

@@ -1,0 +1,11 @@
+schema_version: "0.2"
+id: MK.corticokinematic_coherence
+name: {en: Corticokinematic coherence, zh: 皮层-运动学相干}
+aliases: [CKC]
+type: connectivity
+recording_modality: [MEG, EEG]
+signature: {frequency_hz: movement frequency and its first harmonic, topography: contralateral primary sensorimotor cortex}
+description: {en: 'Coherence between MEG/EEG over the primary sensorimotor cortex and limb kinematics (e.g. acceleration) during rhythmic active or passive movements, mainly reflecting proprioceptive afference.', zh: 节律性主动或被动运动时，初级感觉运动皮层上的 MEG/EEG 与肢体运动学信号（如加速度）之间的相干，主要反映本体感觉传入。}
+notes: Signature values are textbook-level characteristics and await source checking (first pass, curator_b). New marker requested by package B for MOT-PASS-001 (marker_requests.csv); not yet in curation/registry/markers.csv. Generators and indexes to be added in the second pass.
+status: draft
+contributors: [curator_b]

@@ -1,0 +1,58 @@
+schema_version: '0.2'
+id: EMO-IAPS-001
+class: EMO-IAPS
+name:
+  en: Affective picture viewing
+  zh: 情绪图片观看
+aliases:
+- IAPS Viewing
+- LPP paradigm
+- Passive Viewing Task
+- affective picture viewing
+family: emotion
+bci_category:
+- passive
+- none
+recording_modality:
+- EEG
+- fMRI
+stimulus_modality:
+- visual
+markers:
+- MK.LPP
+- MK.EPN
+- MK.BOLD_amygdala
+description:
+  en: Pleasant, unpleasant and neutral pictures, typically from the International Affective Picture System, are viewed for
+    a few seconds each, often followed by valence and arousal ratings. Arousing pictures elicit a larger early posterior negativity
+    and late positive potential in EEG and increase amygdala BOLD.
+  zh: 被试观看愉快、不愉快和中性图片（通常取自国际情绪图片系统 IAPS），每张数秒，常随后进行效价与唤醒度评分。高唤醒图片在脑电中诱发更大的早期后部负波（EPN）与晚期正电位（LPP），并增强杏仁核 BOLD。
+protocol:
+  n_classes: 3
+  classes:
+  - pleasant pictures
+  - neutral pictures
+  - unpleasant pictures
+  cue: affective pictures (IAPS) shown for a few seconds each, often followed by ratings
+  paradigm_timing: synchronous
+  feedback: none
+  distinguishing: 'Standard configuration (earliest published or canonical; D-057 -001): passive viewing of pleasant, neutral
+    and unpleasant pictures (ERP lead R0865).'
+first_source:
+  citation: 'Cuthbert BN, Schupp HT, Bradley MM, Birbaumer N, Lang PJ. Brain potentials in affective picture processing: covariation
+    with autonomic arousal and affective report. Biological Psychology. 2000;52(2):95-111.'
+  doi: 10.1016/s0301-0511(99)00044-7
+  pmid: '10699350'
+  year: 2000
+  verified: false
+interop:
+  bids_task: affectivepictures
+notes: 'HED task page: https://www.hedtags.org/hed-task/tasks/hedtsk_affective_picture_viewing.html. Lead refs (curation/literature.csv):
+  R0226 [review], R0322 [key_reference], R0558 [review], R0633 [further_reference], R0865 [first_source_candidate], R0927
+  [review], R0993 [method], R1040 [review]. IAPS technical manual (Lang, Bradley & Cuthbert) not in leads. First-pass skeleton
+  (curator_e, 2026-10-03); all sources unverified. Sprint 2 (curator_e, 2026-10-03): protocol block added per D-057; see curation/work/pkg_E/sprint2/split_log.csv.
+  Sprint 3 (curator_d, 2026-10-05): bibliography corrected (OpenAlex, 2026-10-05): doi, authors, year, volume, issue, pages
+  added.'
+status: draft
+contributors:
+- curator_e

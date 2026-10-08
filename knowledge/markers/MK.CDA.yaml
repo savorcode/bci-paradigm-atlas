@@ -1,0 +1,25 @@
+schema_version: "0.2"
+id: MK.CDA
+name:
+  en: Contralateral delay activity
+  zh: 对侧延迟活动
+aliases:
+- CDA
+- contralateral delay activity
+- sustained posterior contralateral negativity
+type: erp_component
+recording_modality:
+- EEG
+signature:
+  latency_ms: from ~300 ms after memory array, sustained through retention
+  polarity: negative (contralateral minus ipsilateral)
+  topography: posterior parietal-occipital
+description:
+  en: Sustained negativity over posterior sites contralateral to the memorised or tracked hemifield during the retention or
+    tracking interval. Its amplitude increases with the number of items held, up to individual capacity.
+  zh: 保持或追踪期间在被记忆或被追踪视野对侧后部电极出现的持续负波。其波幅随所保持项目数增加，直至达到个体容量上限。
+notes: First-pass skeleton by package A (2026-10-03). No generators/indexes yet. Signature values are textbook-level approximations
+  and await source checking.
+status: draft
+contributors:
+- curator_a

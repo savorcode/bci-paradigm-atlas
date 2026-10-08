@@ -1,0 +1,53 @@
+schema_version: '0.2'
+id: STA-REST-002
+class: STA-REST
+name:
+  en: Alternating eyes-closed / eyes-open rest
+  zh: 闭眼／睁眼交替静息
+aliases:
+- EO/EC resting state
+- Berger effect protocol
+family: state
+bci_category:
+- none
+- passive
+recording_modality:
+- EEG
+- MEG
+stimulus_modality:
+- resting_state
+markers:
+- MK.alpha_posterior
+description:
+  en: Participants rest without a task in alternating blocks with eyes closed and eyes open, and the two conditions are compared.
+    Eye opening blocks posterior alpha power (alpha reactivity), which serves as a quick check of signal quality and as a
+    resting biomarker.
+  zh: 被试不执行任务，在闭眼与睁眼组块之间交替休息，比较两种条件。睁眼使后部 α 功率被阻断（α 反应性），可用于快速检查信号质量，也作为静息态生物标志物。
+protocol:
+  n_classes: 2
+  classes:
+  - eyes closed
+  - eyes open
+  cue: verbal or auditory instruction to open or close the eyes
+  paradigm_timing: block
+  feedback: none
+  distinguishing: 'Criteria 1 and 3 versus STA-REST-001: two eye conditions alternate in blocks within a run, so eyes-closed
+    and eyes-open rest are contrasted (Barry et al. 2007, R0362).'
+first_source:
+  citation: Barry RJ, Clarke AR, Johnstone SJ, Magee CA, Rushby JA. EEG differences between eyes-closed and eyes-open resting
+    conditions. Clinical Neurophysiology. 2007;118(12):2765-2773.
+  doi: 10.1016/j.clinph.2007.07.028
+  pmid: '17911042'
+  year: 2007
+  verified: false
+datasets:
+- name: 'MPI LEMON: A mind-brain-body dataset of MRI, EEG, cognition, emotion, and peripheral physiology in young and old
+    adults'
+notes: 'Lead refs: R0362 [further_reference;method] (provisional first_source: alpha blocking on eye opening goes back to
+  Berger 1929, which is not in leads), R0935 [method], R1046 [method]. LEMON moved here from STA-REST-001 on the assumption
+  that its resting EEG alternates eyes-closed and eyes-open blocks (to be checked). New concrete paradigm (curator_e, sprint
+  2, 2026-10-03, D-057); all sources unverified. Sprint 3 (curator_d, 2026-10-05): bibliography corrected (Crossref, 2026-10-05):
+  volume, issue, pages added.'
+status: draft
+contributors:
+- curator_e

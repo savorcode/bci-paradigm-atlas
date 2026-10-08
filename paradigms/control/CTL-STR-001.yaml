@@ -1,0 +1,58 @@
+schema_version: '0.2'
+id: CTL-STR-001
+class: CTL-STR
+name:
+  en: Stroop task (card version, vocal naming)
+  zh: Stroop 任务（卡片版，口头命名）
+aliases:
+- CWIT
+- Color-Word Interference Test
+- Color-word interference task
+- Stroop
+- Stroop color-word task
+family: control
+bci_category:
+- none
+recording_modality:
+- EEG
+- fMRI
+stimulus_modality:
+- visual
+markers:
+- MK.N450
+description:
+  en: Participants name aloud, as fast as possible, the ink colours of a list or card of colour words printed in incongruent
+    colours, compared with naming colour patches; the extra time needed for the incongruent list measures interference. Neural
+    recordings mostly use single-trial versions (CTL-STR-002), in which incongruent trials elicit the N450.
+  zh: 被试尽快口头命名一整张卡片或列表上颜色词的墨水颜色（词义与墨色不一致），与命名色块相比，多用的时间即为干扰量。神经记录多用单试次版本（CTL-STR-002），其中不一致试次诱发 N450。
+trial_structure:
+  conditions:
+  - incongruent colour words
+  - colour patches
+protocol:
+  n_classes: 2
+  classes:
+  - naming ink colours of incongruent colour words
+  - naming colour patches
+  cue: cards or lists of colour words printed in incongruent ink colours, or colour patches; serial vocal naming
+  paradigm_timing: block
+  feedback: none
+  distinguishing: 标准配置（最早发表）：整张卡片/列表连续口头命名，以完成时间计干扰（Stroop 1935，R0002）。
+first_source:
+  citation: Stroop JR. Studies of interference in serial verbal reactions. Journal of Experimental Psychology. 1935;18(6):643-662.
+  doi: 10.1037/h0054651
+  year: 1935
+  verified: false
+interop:
+  bids_task: stroop
+notes: 'HED task page: https://www.hedtags.org/hed-task/tasks/hedtsk_stroop_color_word.html. Leads used: R0002; R0096; R0303.
+  first_source lead: R0002. Per D-019 emotional Stroop is a separate entry (EMO-EST-001) and is not listed as a variant or
+  alias here. N450 origin (task sheet: Liotti et al. 2000, unconfirmed) not among leads. Review: R0096. Pass 1 skeleton (curator_c,
+  2026-10-03); all sources unverified. Sprint 2 (D-057): protocol added; -001 narrowed to the original card/list version (block,
+  vocal); the single-trial computerised colour-word Stroop split off as CTL-STR-002 (criterion 3). MK.N450 is a class-level
+  marker recorded in single-trial versions; whether to keep it on -001 is for the maintainer. Counting Stroop logged as proposal
+  (no marker lead). D-061 (maintainer, 2026-10-05): marker inherited from class - MK.N450 measured in the single-trial sibling
+  CTL-STR-002, not in this card/list configuration. bibliography corrected (Crossref, 2026-10-05)'
+status: draft
+contributors:
+- curator_c

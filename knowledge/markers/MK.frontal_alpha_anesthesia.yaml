@@ -1,0 +1,23 @@
+schema_version: "0.2"
+id: MK.frontal_alpha_anesthesia
+name:
+  en: Anteriorized frontal alpha under anesthesia
+  zh: 麻醉相关额区 α
+aliases:
+- alpha anteriorization
+- propofol frontal alpha
+type: oscillatory
+recording_modality:
+- EEG
+signature:
+  frequency_hz: 8-12
+  topography: frontal (shift of alpha power from occipital to frontal sites)
+description:
+  en: Coherent frontal alpha oscillations that appear as GABAergic anaesthetics such as propofol induce unconsciousness, while
+    occipital alpha decreases. The pattern reverses on emergence.
+  zh: 在丙泊酚等 GABA 能麻醉药导致意识丧失时出现的额区相干 α 振荡，同时枕区 α 降低；苏醒时该模式逆转。
+notes: Signature values are textbook-level characteristics entered in the first pass and await source checking.
+status: draft
+contributors:
+- maintainer
+- curator_e

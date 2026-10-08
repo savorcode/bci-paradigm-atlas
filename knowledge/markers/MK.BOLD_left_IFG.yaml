@@ -1,0 +1,24 @@
+schema_version: "0.2"
+id: MK.BOLD_left_IFG
+name:
+  en: Left inferior frontal gyrus BOLD (interference resolution)
+  zh: 左侧额下回 BOLD（干扰解决）
+aliases:
+- left IFG activation
+- left ventrolateral prefrontal activation
+type: hemodynamic
+recording_modality:
+- fMRI
+description:
+  en: >-
+    BOLD activity in left inferior frontal gyrus that increases when competing or recently relevant information
+    must be resolved, as for recent negative probes in item recognition. Its relation to the language-network marker
+    (MK.BOLD_language_network), which also covers left IFG, is pending maintainer review.
+  zh: >-
+    当需要解决竞争性或近期相关信息（如项目再认中的近期负探测项）时增强的左侧额下回 BOLD 活动。它与同样包含左侧额下回的语言网络标记物（MK.BOLD_language_network）的关系有待维护者审查。
+notes: >-
+  First-pass skeleton (curator_d, 2026-10-03). No signature is given for this hemodynamic marker; generators and
+  indexes will be added in the second pass. New marker requested by package D (see curation/work/pkg_D/marker_requests.csv).
+status: draft
+contributors:
+- curator_d

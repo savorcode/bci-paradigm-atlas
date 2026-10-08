@@ -1,0 +1,54 @@
+schema_version: '0.2'
+id: MEM-ON-002
+class: MEM-ON
+name:
+  en: Remember/know recognition
+  zh: 记得/知道再认
+aliases:
+- Remember/know
+- R/K procedure
+- remember-know paradigm
+family: memory
+bci_category:
+- none
+recording_modality:
+- EEG
+- fMRI
+stimulus_modality:
+- visual
+- auditory
+markers:
+- MK.FN400
+- MK.parietal_old_new
+description:
+  en: At test, participants classify each item they recognise as 'remember' (recollection of specific details of the study
+    episode) or 'know' (familiarity without recollection), and other items as new. ERP and fMRI studies compare remember and
+    know responses to separate recollection- and familiarity-related activity such as the parietal old/new effect and the
+    FN400.
+  zh: 测试时，被试把认出的项目分为“记得”（能回想起学习情节的具体细节）或“知道”（只有熟悉感而无回想），其他项目判为新。ERP 与 fMRI 研究比较“记得”与“知道”反应，以分离与回想和熟悉性相关的活动，如顶叶新旧效应与 FN400。
+trial_structure:
+  conditions:
+  - remember
+  - know
+  - new
+protocol:
+  n_classes: 3
+  classes:
+  - remember
+  - know
+  - new
+  cue: studied and unstudied items intermixed at test
+  paradigm_timing: synchronous
+  feedback: none
+  distinguishing: 准则 1：报告类别由“旧/新”二类（MEM-ON-001）变为“记得/知道/新”三类。
+first_source:
+  citation: Tulving E. Memory and consciousness. Canadian Psychology / Psychologie canadienne. 1985;26(1):1-12.
+  doi: 10.1037/h0080017
+  year: 1985
+  verified: false
+notes: 'Former variant of MEM-ON-001 (D-024 merged MEM-RK-001; that ID stays retired). Leads: R0069 (Tulving 1985), R0080
+  (Gardiner 1988), R0179 (Henson et al. 1999, fMRI), R0452, R0545. (R#### = curation/literature.csv; DN## = curation/work/pkg_D/new_leads.csv.)
+  Numbering criterion (D-057): 1. bibliography corrected (Crossref, 2026-10-05)'
+status: draft
+contributors:
+- curator_d

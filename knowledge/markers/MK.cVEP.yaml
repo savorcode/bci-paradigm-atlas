@@ -1,0 +1,24 @@
+schema_version: "0.2"
+id: MK.cVEP
+name:
+  en: Code-modulated visual evoked potential
+  zh: 编码调制视觉诱发电位
+aliases:
+- c-VEP
+- code-modulated VEP
+- m-sequence VEP
+- broadband VEP
+type: steady_state
+recording_modality:
+- EEG
+signature:
+  topography: occipital
+description:
+  en: Visual evoked response to stimuli flickering according to a pseudorandom binary code; responses to different circular
+    shifts of the code are distinguishable by template matching.
+  zh: 对按伪随机二值编码闪烁刺激的视觉诱发响应；对编码不同循环移位的响应可通过模板匹配加以区分。
+notes: First-pass skeleton by package A (2026-10-03). No generators/indexes yet. Signature values are textbook-level approximations
+  and await source checking.
+status: draft
+contributors:
+- curator_a

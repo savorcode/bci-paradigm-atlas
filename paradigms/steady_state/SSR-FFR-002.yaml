@@ -1,0 +1,57 @@
+schema_version: '0.2'
+id: SSR-FFR-002
+class: SSR-FFR
+name:
+  en: Speech-evoked FFR (complex auditory brainstem response)
+  zh: 语音诱发 FFR（复杂声听觉脑干反应）
+aliases:
+- cABR
+- speech ABR
+- speech-evoked FFR
+- /da/ FFR
+family: steady_state
+bci_category:
+- none
+recording_modality:
+- EEG
+stimulus_modality:
+- auditory
+markers:
+- MK.FFR
+description:
+  en: A short consonant-vowel syllable such as /da/ (or another complex sound) is repeated thousands of times, often in alternating
+    polarity. The averaged brainstem response contains an onset response to the consonant and a frequency-following component
+    that reproduces the fundamental frequency and harmonics of the vowel; its fidelity is used to study speech encoding in
+    development, ageing, musicians and language disorders.
+  zh: 短辅音–元音音节（如 /da/）或其他复杂声重复呈现数千次，常采用交替极性。平均后的脑干反应包含对辅音的起始响应，以及重现元音基频与谐波的频率跟随成分；其保真度用于研究发育、老化、音乐训练和语言障碍中的语音编码。
+trial_structure:
+  conditions:
+  - speech syllable (e.g. /da/)
+  - alternating stimulus polarity
+protocol:
+  n_classes: 1
+  classes:
+  - speech syllable
+  cue: repeated consonant-vowel syllable or other complex sound
+  paradigm_timing: synchronous
+  feedback: none
+  distinguishing: 准则 2（刺激类型）：语音音节/复杂声取代 -001 的纯音，分析起始响应与基频/谐波跟随。
+first_source:
+  citation: Russo-Ponsaran NM, Nicol TG, Musacchia G, Kraus N. Brainstem responses to speech syllables. Clin Neurophysiol.
+    2004;115(9):2021-2030.
+  doi: 10.1016/j.clinph.2004.04.003
+  year: 2004
+  verified: false
+interop:
+  bids_task: ffr
+notes: 'Leads: R0770 (Krizman & Kraus 2019 FFR tutorial), WebSearch S2A20 [=R1276], Skoe E, Kraus N. Auditory brain stem response
+  to complex sounds: a tutorial. Ear Hear. 2010;31(3) (PDF read in S2A21; it states that Greenberg 1980 was one of the first
+  to adopt complex stimuli for ABRs). The reference-list entries returned by the fetch summary looked unreliable, so no candidate
+  citation is filled. R0773 (Coffey et al. 2019). New in sprint 2. [curator_e sprint 3, 2026-10-05] candidate origin found
+  by bibliographic search (OpenAlex, 2026-10-05); content unverified. [maintainer sprint 3, 2026-10-07] bibliography confirmed
+  (OpenAlex, 2026-10-05; origin candidate, content unverified). [maintainer sprint 3, 2026-10-07, D-073] origin candidate
+  recalled, record confirmed via OpenAlex.'
+status: draft
+contributors:
+- curator_a
+- curator_e

@@ -1,0 +1,50 @@
+schema_version: '0.2'
+id: SOC-TRUST-002
+class: SOC-TRUST
+name:
+  en: Iterated prisoner's dilemma
+  zh: 重复囚徒困境
+aliases:
+- prisoner's dilemma game
+- PD game
+family: social
+bci_category:
+- none
+recording_modality:
+- fMRI
+- EEG
+stimulus_modality:
+- visual
+markers:
+- MK.FRN
+- MK.BOLD_striatum_reward
+description:
+  en: Two players repeatedly and simultaneously choose to cooperate or defect, and after each round both choices and payoffs
+    are revealed; mutual cooperation pays more than mutual defection but each player is tempted to defect. Mutual cooperation
+    is associated with striatal reward BOLD, and partner choices elicit the feedback-related negativity.
+  zh: 两名玩家在多轮中同时选择合作或背叛，每轮后公布双方选择与收益；双方合作的收益高于双方背叛，但每人都有背叛的诱惑。相互合作与纹状体奖赏 BOLD 有关，对方的选择诱发反馈相关负波。
+protocol:
+  n_classes: 2
+  classes:
+  - cooperate
+  - defect
+  cue: payoff matrix display; simultaneous choices, then both choices revealed
+  paradigm_timing: synchronous
+  feedback: discrete
+  distinguishing: 'Criteria 1 and 3 versus SOC-TRUST-001: symmetric simultaneous cooperate/defect choices over repeated rounds
+    instead of a sequential one-shot investment (Rilling et al. 2002, R0217).'
+first_source:
+  citation: Rilling JK, Gutman DA, Zeh TR, Pagnoni G, Berns GS, Kilts CD. A neural basis for social cooperation. Neuron. 2002;35(2):395-405.
+  doi: 10.1016/s0896-6273(02)00755-9
+  pmid: '12160756'
+  year: 2002
+  verified: false
+interop:
+  bids_task: prisonersdilemma
+notes: 'Lead refs: R0217 [key_reference] (first neural recording; the behavioural origin of the prisoner''s dilemma is not
+  in leads, so first_source is provisional, D-031), R0693 [further_reference], R0965 [method]. HED task page: https://www.hedtags.org/hed-task/tasks/hedtsk_prisoners_dilemma.html.
+  New concrete paradigm (curator_e, sprint 2, 2026-10-03, D-057); all sources unverified. Sprint 3 (curator_d, 2026-10-05):
+  bibliography corrected (OpenAlex, 2026-10-05): volume, issue, pages added.'
+status: draft
+contributors:
+- curator_e

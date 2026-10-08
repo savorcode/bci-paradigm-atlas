@@ -1,0 +1,71 @@
+schema_version: '0.2'
+id: EMO-FILM-002
+class: EMO-FILM
+name:
+  en: Music-video emotion elicitation with dimensional ratings
+  zh: 音乐视频情绪诱发（维度评定）
+aliases:
+- DEAP paradigm
+- music video emotion elicitation
+family: emotion
+bci_category:
+- passive
+- none
+recording_modality:
+- EEG
+stimulus_modality:
+- naturalistic
+- visual
+- auditory
+markers:
+- MK.frontal_alpha_asymmetry
+- MK.affective_band_power
+description:
+  en: Participants watch one-minute excerpts of music videos and after each one rate arousal, valence, dominance, liking and
+    familiarity; the continuous ratings are usually split into high and low classes for EEG decoding. Valence and arousal
+    relate to frontal alpha asymmetry and band-power patterns.
+  zh: 被试观看一分钟的音乐视频片段，每段之后评定唤醒度、效价、优势度、喜爱度与熟悉度；连续评分通常被划分为高、低两类用于脑电解码。效价与唤醒度与额叶 α 不对称及各频段功率模式有关。
+protocol:
+  classes:
+  - valence rating
+  - arousal rating
+  - dominance rating
+  - liking rating
+  cue: one-minute music-video excerpts, each followed by self-assessment
+  paradigm_timing: block
+  feedback: none
+  distinguishing: 'Criteria 1 and 2 versus EMO-FILM-001: targets are continuous self-rated dimensions (valence, arousal, dominance,
+    liking) rather than discrete emotion categories, and the stimuli are music videos rather than film clips (DEAP, Koelstra
+    et al. 2012).'
+first_source:
+  citation: 'Koelstra S, Mühl C, Soleymani M, Lee JS, Yazdani A, Ebrahimi T, Pun T, Nijholt A, Patras I. DEAP: A Database
+    for Emotion Analysis Using Physiological Signals. IEEE Transactions on Affective Computing 3(1):18-31. 2012.'
+  doi: 10.1109/T-AFFC.2011.15
+  year: 2012
+  verified: false
+variants:
+- name: Music-evoked emotion without video
+  source:
+    citation: Koelsch S. Brain correlates of music-evoked emotions. Nature Reviews Neuroscience. 2014;15(3):170-180.
+    doi: 10.1038/nrn3666
+    pmid: '24552785'
+    year: 2014
+    verified: false
+  note: 'Former EMO-FILM-001 variant from merged EMO-MUS-001 (D-018). Kept here provisionally; audio-only music is a stimulus-type
+    change (criterion 2) and should become its own number once an origin paper is identified (split_log, status 提议). R0862,
+    R1079 are reviews. Sprint 3 (curator_d, 2026-10-05): bibliography corrected (OpenAlex, 2026-10-05): doi, author, year,
+    volume, issue, pages added.'
+datasets:
+- name: 'DEAP: a database for emotion analysis using physiological signals'
+  url: https://www.eecs.qmul.ac.uk/mmv/datasets/deap/
+  subjects: 32
+- name: 'AMIGOS: A Dataset for Affect, Personality and Mood Research on Individuals and Groups'
+notes: 'Sources: sprint-2 S2-01 [=R1329] (https://research.utwente.nl/en/publications/deap-a-database-for-emotion-analysis-using-physiological-signals/)
+  for the citation; sprint-2 F01 (DEAP dataset page) for 32 participants, 40 one-minute music-video excerpts and the five
+  rating scales. AMIGOS moved here from EMO-FILM-001 because it also uses dimensional self-ratings; its stimuli are film videos,
+  so its placement should be checked (to maintainer). Lead refs: R0862, R1079 (music variant). New concrete paradigm (curator_e,
+  sprint 2, 2026-10-03, D-057); all sources unverified. Sprint 3 (curator_d, 2026-10-05): bibliography confirmed (Crossref,
+  2026-10-05).'
+status: draft
+contributors:
+- curator_e

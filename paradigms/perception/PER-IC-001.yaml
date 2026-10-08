@@ -1,0 +1,51 @@
+schema_version: '0.2'
+id: PER-IC-001
+class: PER-IC
+name:
+  en: Illusory contour perception
+  zh: 错觉轮廓知觉
+aliases:
+- Kanizsa illusory contours
+- IC paradigm
+family: perception
+bci_category:
+- none
+recording_modality:
+- EEG
+stimulus_modality:
+- visual
+markers:
+- MK.N1_visual
+description:
+  en: Inducers (for example Kanizsa 'pac-man' elements) are arranged so that they either form an illusory shape or not. Illusory
+    contour configurations modulate the visual N1 range over lateral occipital sites (the IC effect) compared with rotated
+    inducers.
+  zh: 将诱导元素（如 Kanizsa “吃豆人”图形）排列成能形成或不能形成错觉图形的两种布局。与旋转诱导元素相比，错觉轮廓布局在外侧枕区调制视觉 N1 时程（IC 效应）。
+protocol:
+  n_classes: 2
+  classes:
+  - illusory contour configuration
+  - rotated inducers
+  cue: Kanizsa-type inducers forming or not forming an illusory shape
+  paradigm_timing: synchronous
+  feedback: none
+  distinguishing: 标准配置（最早发表，即 first_source）：Kanizsa 诱导物构成/不构成错觉图形。本类暂无其他具体范式（no sibling protocol yet）。
+first_source:
+  citation: Kanizsa G. Subjective contours. Sci Am. 1976;234(4):48-52.
+  doi: 10.1038/scientificamerican0476-48
+  year: 1976
+  verified: false
+interop:
+  bids_task: illusorycontour
+notes: 'Leads used: search SA15a. first_source: no origin source identified in this pass (blocker, see curation/work/pkg_A/status.csv).
+  New candidate proposed by package A on 2026-10-03 (curation/work/pkg_A/new_candidates.csv); registered in curation/candidates.csv
+  as C217 (D-053, milestone M1). Uses registry marker MK.N1_visual; a dedicated MK.IC_effect could be requested if the meeting prefers.
+  [curator_a sprint 2, 2026-10-03] D-057: protocol block added for the canonical configuration; no other concrete paradigm
+  identified for this class in sprint 2. [curator_e sprint 3, 2026-10-05] candidate origin found by bibliographic search (OpenAlex,
+  2026-10-05); content unverified. [maintainer sprint 3, 2026-10-07] bibliography confirmed (OpenAlex, 2026-10-05; origin
+  candidate, content unverified). [maintainer sprint 3, 2026-10-07, D-073] origin candidate recalled, record confirmed via
+  OpenAlex.'
+status: draft
+contributors:
+- curator_a
+- curator_e

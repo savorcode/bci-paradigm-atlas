@@ -1,0 +1,56 @@
+schema_version: '0.2'
+id: EMO-SOUND-001
+class: EMO-SOUND
+name:
+  en: Emotional sounds and vocal prosody
+  zh: 情绪声音与语音韵律
+aliases:
+- IADS sounds
+- affective vocalizations
+- emotional prosody
+family: emotion
+bci_category:
+- none
+recording_modality:
+- EEG
+- fMRI
+stimulus_modality:
+- auditory
+markers:
+- MK.P2_auditory
+- MK.LPP
+description:
+  en: Emotional and neutral non-verbal vocalizations, environmental sounds or sentences spoken with emotional prosody are
+    presented, with passive listening or emotion identification. Emotional prosody modulates the auditory P200 and later positivities.
+  zh: 呈现情绪性与中性的非言语发声、环境声音或带情绪韵律的语句，任务为被动聆听或情绪识别。情绪韵律调制听觉 P200 及其后的晚期正成分。
+protocol:
+  n_classes: 2
+  classes:
+  - emotional prosody
+  - neutral prosody
+  cue: spoken sentences or pseudo-sentences with emotional or neutral prosody
+  paradigm_timing: synchronous
+  feedback: none
+  distinguishing: 'Standard configuration (earliest published or canonical; D-057 -001): emotional versus neutral speech prosody
+    with passive listening or emotion identification; origin publication TBD (first_source holds an early ERP study, D-031).'
+first_source:
+  citation: Paulmann S, Kotz SA. Early emotional prosody perception based on different speaker voices. NeuroReport 19(2):209-213.
+    2008.
+  doi: 10.1097/wnr.0b013e3282f454db
+  year: 2008
+  verified: false
+interop:
+  bids_task: emotionalprosody
+notes: 'Lead refs (curation/literature.csv): R0128 [other], R0161 [other], R0185 [other], R0281 [other], R0473 [other], R0512
+  [other]. Sources found by curator_e (curation/work/pkg_E/search_log.md): S25 = https://repository.essex.ac.uk/3391/. first_source
+  note: P200 prosody study; not necessarily the earliest neural prosody paradigm. Existing leads (R0128, R0161, R0185, R0281,
+  R0473, R0512) are acoustic/behavioural or reviews; first_source S25 found by curator_e is an ERP prosody study but not necessarily
+  the origin. First-pass skeleton (curator_e, 2026-10-03); all sources unverified. D-031 (maintainer, 2026-10-03): first_source
+  currently holds the earliest neural recording study found, not the paradigm origin; in sprint 2 move it to a "First neural
+  recording:" line and fill first_source with the origin. Sprint 2 (curator_e, 2026-10-03): protocol block added per D-057;
+  see curation/work/pkg_E/sprint2/split_log.csv. First neural recording: Paulmann & Kotz 2008 (R1170), currently also in first_source
+  (D-031); origin of the prosody-identification procedure not surfaced (R0128 Banse & Scherer 1996 is a candidate behavioural
+  lead). Sprint 3 (curator_d, 2026-10-05): bibliography confirmed (OpenAlex, 2026-10-05).'
+status: draft
+contributors:
+- curator_e

@@ -1,0 +1,55 @@
+schema_version: '0.2'
+id: MOT-HW-001
+class: MOT-HW
+name:
+  en: Attempted handwriting
+  zh: 尝试手写
+aliases:
+- brain-to-text handwriting
+- imagined handwriting
+- mental handwriting
+family: motor
+bci_category:
+- active
+recording_modality:
+- intracortical
+- EEG
+stimulus_modality:
+- motor_execution
+- visual
+markers:
+- MK.motor_cortical_spiking
+description:
+  en: >-
+    A participant with paralysis attempts to handwrite cued letters or sentences as if holding a pen. Motor cortical spiking
+    during each attempted character is decoded into pen trajectories or character identities to produce text.
+  zh: 瘫痪被试仿佛握笔一样尝试书写提示的字母或句子。解码每个尝试书写字符期间的运动皮层神经元放电，得到笔迹轨迹或字符身份，从而输出文本。
+protocol:
+  classes:
+  - handwritten characters (letters and punctuation; set to be checked against R0947)
+  cue: visual prompt of the character or sentence to write
+  paradigm_timing: synchronous
+  feedback: discrete
+  distinguishing: >-
+    Standard configuration (earliest published) / 标准配置（最早发表）: attempted handwriting by a participant with paralysis, intracortical
+    spiking decoded into characters, decoded text shown (R0948/R0947). Sibling: -002 executed handwriting of a 10-letter set
+    with scalp EEG and no feedback (criteria 1, 4).
+first_source:
+  citation: >-
+    Willett FR, Avansino DT, Hochberg LR, Henderson JM, Shenoy KV. High-performance brain-to-text communication via imagined
+    handwriting. bioRxiv (preprint). 2020.
+  doi: 10.1101/2020.07.01.183384
+  year: 2020
+  verified: false
+datasets:
+- name: 'Data from: High-performance brain-to-text communication via handwriting (Dryad)'
+interop:
+  bids_task: handwriting
+notes: >-
+  Leads: R0886, R0947, R0948. first_source uses the bioRxiv preprint (R0948, earliest dated, DOI present); the peer-reviewed
+  version is R0947 (memory lead: Willett et al. 2021 Nature, unverified). R0886 is an EEG imagined-handwriting method paper
+  (arXiv). Sprint 2 (D-057): feedback mode set to discrete (decoded characters shown) from the file description; check against
+  R0947. EEG imagined handwriting (R0886, arXiv) is noted under MOT-HW-002. bibliography corrected (Crossref, 2026-10-05)
+status: draft
+contributors:
+- curator_b

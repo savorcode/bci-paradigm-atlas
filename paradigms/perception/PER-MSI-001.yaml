@@ -1,0 +1,56 @@
+schema_version: '0.2'
+id: PER-MSI-001
+class: PER-MSI
+name:
+  en: Audiovisual multisensory integration
+  zh: 视听多感觉整合
+aliases:
+- AV vs A+V additive model
+- McGurk paradigm
+- audiovisual integration
+- multisensory integration
+- sound-induced flash illusion
+family: perception
+bci_category:
+- none
+recording_modality:
+- EEG
+- MEG
+- fMRI
+stimulus_modality:
+- visual
+- auditory
+markers:
+- MK.AV_interaction_ERP
+description:
+  en: Audiovisual syllables are presented in which the lip movements either match the speech sound or conflict with it (for
+    example visual /ga/ with auditory /ba/), together with unimodal controls. Incongruent stimuli often produce a fused percept
+    (the McGurk illusion), and neural responses are compared between congruent, incongruent and unimodal speech.
+  zh: 呈现视听音节，口型与语音一致或冲突（如视觉 /ga/ 配听觉 /ba/），并设单通道对照。不一致刺激常产生融合知觉（McGurk 错觉），比较一致、不一致与单通道语音条件下的神经响应。
+protocol:
+  n_classes: 3
+  classes:
+  - congruent audiovisual speech
+  - incongruent audiovisual speech (McGurk)
+  - auditory-only speech
+  cue: audiovisual syllables with congruent or incongruent lip movements
+  stimulus_coding: 简单刺激（纯音 + 闪光）的加性模型配置拆为 PER-MSI-002（准则 1;2）。
+  paradigm_timing: synchronous
+  feedback: none
+  distinguishing: 标准配置（最早发表，即 first_source）：视听音节，口型与语音一致或不一致（McGurk）。同类其他具体范式：PER-MSI-002（区别见各自 distinguishing；维护者 sprint
+    2 QA 更正）。
+first_source:
+  citation: 'McGurk, H.; MacDonald, J. Hearing lips and seeing voices. Nature 264 (5588): 746–748. 1976.'
+  doi: 10.1038/264746a0
+  pmid: '1012311'
+  year: 1976
+  verified: false
+interop:
+  bids_task: audiovisual
+notes: 'Leads used: R0035, R0143, R0275, R0293, R0478, R0527. R0035 (McGurk & MacDonald 1976) is the behavioural origin of
+  the audiovisual speech paradigm; the additive-model ERP marker comes from later work not in the leads. [curator_a sprint
+  2, 2026-10-03] D-057: -001 = McGurk audiovisual speech configuration (R0035, the earliest); the additive-model configuration
+  with simple stimuli is PER-MSI-002. [curator_e sprint 3, 2026-10-05] bibliography confirmed (Crossref, 2026-10-05).'
+status: draft
+contributors:
+- curator_a

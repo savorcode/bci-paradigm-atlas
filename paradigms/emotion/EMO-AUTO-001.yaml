@@ -1,0 +1,61 @@
+schema_version: '0.2'
+id: EMO-AUTO-001
+class: EMO-AUTO
+name:
+  en: Autobiographical recall emotion induction
+  zh: 自传体回忆情绪诱发
+aliases:
+- AMI
+- Autobiographical Memory Interview
+- Autobiographical Memory Test
+- Cue-Word Autobiographical Memory Task
+- Galton-Crovitz Task
+- autobiographical memory recall
+- emotional recall induction
+- personal imagery induction
+family: emotion
+bci_category:
+- none
+recording_modality:
+- EEG
+- fMRI
+stimulus_modality:
+- cognitive_task
+- mental_imagery
+markers:
+- MK.affective_band_power
+- MK.BOLD_amygdala
+description:
+  en: Participants retrieve and relive personal memories, typically cued by words or by scripts prepared beforehand, without
+    external affective stimuli. Recall of emotional versus neutral episodes modulates amygdala BOLD and EEG band power.
+  zh: 被试在无外部情绪刺激的条件下提取并重新体验个人记忆，通常由线索词或事先准备的脚本引导。回忆情绪性与中性事件的差异体现在杏仁核 BOLD 与脑电频段功率的调制上。
+protocol:
+  n_classes: 2
+  classes:
+  - emotional memory recall
+  - neutral memory recall
+  cue: cue words prompting retrieval of a specific personal memory
+  paradigm_timing: block
+  feedback: none
+  distinguishing: 'Standard configuration (earliest published or canonical; D-057 -001): cue-word autobiographical recall
+    of emotional versus neutral episodes (cue-word method of R0073); no external affective stimulus.'
+first_source:
+  citation: Williams, J. M. G., & Broadbent, K. Autobiographical memory in suicide attempters. Journal of Abnormal Psychology,
+    95(2), 144-149. 1986.
+  doi: 10.1037/0021-843x.95.2.144
+  pmid: '3711438'
+  year: 1986
+  verified: false
+interop:
+  bids_task: autobiographical
+notes: 'HED task page: https://www.hedtags.org/hed-task/tasks/hedtsk_autobiographical_memory.html. Lead refs (curation/literature.csv):
+  R0073 [key_reference], R0088 [key_reference], R0152 [further_reference], R0198 [key_reference], R0376 [further_reference],
+  R0472 [review], R0696 [review], R0879 [review], R1034 [method]. first_source R0073 introduced the cue-word Autobiographical
+  Memory Test in a clinical context, not as an emotion-induction paradigm; Damasio et al. 2000 (self-generated emotion, PET)
+  is a memory-only lead in the task sheet and was not searched. Kept independent of EMO-FILM-001 (no external stimulus, D-018).
+  First-pass skeleton (curator_e, 2026-10-03); all sources unverified. Sprint 2 (curator_e, 2026-10-03): protocol block added
+  per D-057; see curation/work/pkg_E/sprint2/split_log.csv. Sprint 3 (curator_d, 2026-10-05): bibliography confirmed (OpenAlex,
+  2026-10-05).'
+status: draft
+contributors:
+- curator_e

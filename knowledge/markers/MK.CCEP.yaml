@@ -1,0 +1,11 @@
+schema_version: "0.2"
+id: MK.CCEP
+name: {en: Cortico-cortical evoked potential, zh: 皮层-皮层诱发电位}
+aliases: [CCEP, SPES response]
+type: erp_component
+recording_modality: [ECoG, sEEG]
+signature: {latency_ms: N1 ~10-50; N2 ~50-300, polarity: early negative N1 followed by slower N2, topography: sites connected to the stimulated contact pair}
+description: {en: Evoked response recorded at intracranial contacts distant from a site stimulated with single electrical pulses. Its early component (N1) is commonly taken to reflect direct cortico-cortical connections and the later component (N2) indirect or local recurrent activity., zh: 以单个电脉冲刺激某一部位时，在远隔颅内触点记录到的诱发响应。早期成分（N1）通常被认为反映直接的皮层-皮层连接，晚期成分（N2）反映间接或局部回返活动。}
+notes: Signature values are textbook-level characteristics and await source checking (first pass, curator_b). Generators and indexes to be added in the second pass.
+status: draft
+contributors: [maintainer, curator_b]

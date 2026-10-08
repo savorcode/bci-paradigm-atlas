@@ -1,0 +1,11 @@
+schema_version: "0.2"
+id: MK.alpha_posterior
+name: {en: Posterior alpha power, zh: 后部 α 功率}
+aliases: [posterior alpha, parieto-occipital alpha, resting alpha, alpha modulation]
+type: oscillatory
+recording_modality: [EEG, MEG]
+signature: {frequency_hz: 8-13, topography: parieto-occipital}
+description: {en: 'Power of 8-13 Hz oscillations over parieto-occipital cortex. It is high during eyes-closed rest and decreases with visual input and visual or attentional engagement, while it can increase during internally directed tasks such as imagery or memory retention.', zh: 顶枕区 8-13 Hz 节律的功率。闭眼静息时较高，视觉输入及视觉或注意投入时下降；在想象、记忆保持等内向任务中可升高。}
+notes: Signature values are textbook-level characteristics and await source checking (first pass, curator_b). Distinct from MK.alpha_lateralization, MK.frontal_alpha_asymmetry and MK.frontal_alpha_anesthesia (D-028). Generators and indexes to be added in the second pass.
+status: draft
+contributors: [maintainer, curator_b]

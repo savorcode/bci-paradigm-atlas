@@ -1,0 +1,28 @@
+schema_version: "0.2"
+id: MK.ABR
+name:
+  en: Auditory brainstem response (waves I-V)
+  zh: 听觉脑干反应（I-V 波）
+aliases:
+- ABR
+- BAEP
+- BAER
+- brainstem auditory evoked potential
+- waves I-V
+type: erp_component
+recording_modality:
+- EEG
+signature:
+  latency_ms: 1-10
+  polarity: vertex-positive peaks (I-V)
+  topography: vertex referenced to mastoid/earlobe
+description:
+  en: Series of small far-field waves within about 10 ms after a click or tone burst, labelled I to V, generated sequentially
+    along the auditory nerve and brainstem auditory pathway. Wave latencies and inter-peak intervals are used in hearing screening
+    and neurodiagnosis.
+  zh: 短声或短纯音后约 10 ms 内出现的一系列远场小波（I–V 波），依次由听神经和脑干听觉通路产生。各波潜伏期及波间期用于听力筛查和神经诊断。
+notes: First-pass skeleton by package A (2026-10-03). No generators/indexes yet. Signature values are textbook-level approximations
+  and await source checking.
+status: draft
+contributors:
+- curator_a

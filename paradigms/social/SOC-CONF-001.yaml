@@ -1,0 +1,52 @@
+schema_version: '0.2'
+id: SOC-CONF-001
+class: SOC-CONF
+name:
+  en: Social conformity
+  zh: 社会从众
+aliases:
+- social conformity paradigm
+- group opinion conflict
+- Asch-type conformity
+family: social
+bci_category:
+- none
+recording_modality:
+- fMRI
+- EEG
+stimulus_modality:
+- visual
+markers:
+- MK.BOLD_striatum_reward
+- MK.BOLD_dACC
+description:
+  en: Participants rate items such as faces, are then shown a group rating that agrees or conflicts with theirs, and later
+    re-rate the items. Conflict with the group elicits a prediction-error-like response, with increased posterior medial frontal
+    (rostral cingulate) BOLD and decreased ventral striatal BOLD, which predicts later conformity.
+  zh: 被试先对面孔等项目评分，随后看到与其一致或冲突的群体评分，之后再次评分。与群体意见冲突引发类似预测误差的反应：后内侧额叶（喙部扣带区）BOLD 增强、腹侧纹状体 BOLD 减弱，并可预测之后的从众。
+protocol:
+  n_classes: 2
+  classes:
+  - group rating agrees with own rating
+  - group rating conflicts with own rating
+  cue: face attractiveness rating followed by display of the group rating, then later re-rating
+  paradigm_timing: synchronous
+  feedback: discrete
+  distinguishing: 'Standard configuration (earliest published or canonical; D-057 -001): rate-feedback-rerate conformity design
+    with per-trial group feedback (Klucharev et al. 2009, R1187).'
+first_source:
+  citation: Klucharev V, Hytönen K, Rijpkema M, Smidts A, Fernandez G. Reinforcement Learning Signal Predicts Social Conformity.
+    Neuron 61(1):140-151. 2009.
+  doi: 10.1016/j.neuron.2008.11.027
+  pmid: '19146819'
+  year: 2009
+  verified: false
+interop:
+  bids_task: conformity
+notes: 'Sources found by curator_e (curation/work/pkg_E/search_log.md): S15 = https://repub.eur.nl/pub/15056. New candidate
+  (curator_e). EEG (FRN) studies of conformity not surfaced. First-pass skeleton (curator_e, 2026-10-03); all sources unverified.
+  Sprint 2 (curator_e, 2026-10-03): protocol block added per D-057; see curation/work/pkg_E/sprint2/split_log.csv. Sprint
+  3 (curator_d, 2026-10-05): bibliography confirmed (OpenAlex, 2026-10-05).'
+status: draft
+contributors:
+- curator_e

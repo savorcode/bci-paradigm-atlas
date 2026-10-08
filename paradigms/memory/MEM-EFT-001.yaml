@@ -1,0 +1,54 @@
+schema_version: '0.2'
+id: MEM-EFT-001
+class: MEM-EFT
+name:
+  en: Episodic future thinking
+  zh: 情景未来思维
+aliases:
+- EFT
+- future event simulation
+- past-future event construction
+family: memory
+bci_category:
+- none
+recording_modality:
+- fMRI
+stimulus_modality:
+- visual
+- cognitive_task
+markers:
+- MK.BOLD_hippocampus
+- MK.BOLD_mPFC
+description:
+  en: Cued by words, participants either remember specific past personal events or imagine specific plausible future events,
+    typically with separate construction and elaboration phases. Both remembering and imagining engage a common core network
+    including the hippocampus and medial prefrontal cortex, with some regions more active for future than past events.
+  zh: 在词语线索提示下，被试回忆具体的个人过去事件，或想象具体而合理的未来事件，通常分为构建和细化两个阶段。回忆与想象都激活包括海马和内侧前额叶在内的共同核心网络，部分区域在想象未来时比回忆过去时更活跃。
+trial_structure:
+  conditions:
+  - past
+  - future
+protocol:
+  n_classes: 2
+  classes:
+  - remember past event
+  - imagine future event
+  cue: cue words prompting a specific personal event
+  paradigm_timing: synchronous
+  feedback: none
+  distinguishing: 标准配置（最早发表）：线索词引发回忆过去/想象未来事件，分构建与细化两阶段（Addis et al. 2007, R0376）。本类只有这一配置。
+first_source:
+  citation: 'Addis DR, Wong AT, Schacter DL. Remembering the past and imagining the future: Common and distinct neural substrates
+    during event construction and elaboration. Neuropsychologia. 2007;45(7):1363-1377.'
+  doi: 10.1016/j.neuropsychologia.2006.10.016
+  year: 2007
+  verified: false
+interop:
+  bids_task: eft
+notes: 'Leads: DN18, DN19 (R#### = curation/literature.csv; DN## = curation/work/pkg_D/new_leads.csv). New candidate (curator_d);
+  distinct from EMO-AUTO-001 (autobiographical recall for emotion induction) because the construct is constructive simulation
+  of future events. Leads: DN18, DN19. Sprint 2 (D-057, curator_d, 2026-10-03): protocol block added (-001 = earliest/standard
+  configuration). bibliography corrected (Crossref, 2026-10-05)'
+status: draft
+contributors:
+- curator_d

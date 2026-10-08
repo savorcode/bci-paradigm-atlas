@@ -1,0 +1,55 @@
+schema_version: '0.2'
+id: SSR-SSVEP-008
+class: SSR-SSVEP
+name:
+  en: Asynchronous (self-paced) SSVEP BCI
+  zh: 异步（自定步调）SSVEP 脑机接口
+aliases:
+- self-paced SSVEP BCI
+- asynchronous SSVEP
+family: steady_state
+bci_category:
+- reactive
+recording_modality:
+- EEG
+stimulus_modality:
+- visual
+markers:
+- MK.SSVEP
+description:
+  en: Frequency-coded targets flicker continuously and the user decides when to look at a target. The system first detects
+    whether the user is in a control state or an idle state and only then discriminates the attended frequency, so commands
+    are issued at self-chosen times without cue-paced trials.
+  zh: 频率编码的目标持续闪烁，用户自行决定何时注视某个目标。系统先判断用户处于控制状态还是空闲状态，再判别被注视的频率，因此指令在用户自选的时刻发出，没有提示驱动的试次。
+trial_structure:
+  conditions:
+  - idle state
+  - 'control state: one class per target frequency'
+protocol:
+  classes:
+  - idle state
+  - one control class per target frequency
+  cue: continuously flickering frequency-coded targets, no trial cue
+  stimulus_coding: frequency coding
+  paradigm_timing: asynchronous
+  feedback: discrete
+  distinguishing: 准则 3（试次结构）：异步、自定步调，需检测空闲/控制状态；-002、-007 为提示驱动的同步试次。
+first_source:
+  citation: 'Parini S, Maggi L, Turconi AC, Andreoni G. A robust and self-paced BCI system based on a four class SSVEP paradigm:
+    algorithms and protocols for a high-transfer-rate direct brain communication. Comput Intell Neurosci. 2009;2009:864564.'
+  doi: 10.1155/2009/864564
+  year: 2009
+  verified: false
+interop:
+  bids_task: ssvep
+notes: 'Leads: WebSearch S2A28 [=R1280]; Zhang Z, Deng Z. A two-stage state recognition method for asynchronous SSVEP-based
+  BCI system. Robot. 2013;35(1):45-51 (record read in S2A29: idle-state detection and control-state discrimination modules);
+  DTU record "An asynchronous P300 BCI with SSVEP-based control state detection" (S2A28 result, not read; hybrid, D-022).
+  Origin to be located by the maintainer (D-032). New in sprint 2. [curator_e sprint 3, 2026-10-05] candidate origin found
+  by bibliographic search (OpenAlex, 2026-10-05); content unverified. [maintainer sprint 3, 2026-10-07] bibliography confirmed
+  (OpenAlex, 2026-10-05; origin candidate, content unverified). [maintainer sprint 3, 2026-10-07, D-073] origin candidate
+  recalled, record confirmed via OpenAlex.'
+status: draft
+contributors:
+- curator_a
+- curator_e

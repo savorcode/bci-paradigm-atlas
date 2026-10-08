@@ -1,0 +1,55 @@
+schema_version: '0.2'
+id: MOT-LIBET-001
+class: MOT-LIBET
+name:
+  en: Libet intention-timing task
+  zh: Libet 意图时刻判断任务
+aliases:
+- Libet task
+- W judgement
+- conscious intention timing
+- Libet clock task
+family: motor
+bci_category:
+- none
+recording_modality:
+- EEG
+stimulus_modality:
+- motor_execution
+- visual
+markers:
+- MK.MRCP
+description:
+  en: >-
+    Participants make spontaneous wrist or finger movements while watching a rotating clock and afterwards report the clock
+    position at which they first felt the urge or intention to move (W) or actually moved (M). The readiness potential averaged
+    to movement onset begins before the reported time of intention.
+  zh: 被试一边观看旋转的时钟，一边做自发的手腕或手指动作，事后报告首次感到想动的冲动或意图（W）时、或实际动作（M）时时钟指针的位置。以动作起始为零点平均的准备电位早于所报告的意图时刻出现。
+protocol:
+  n_classes: 2
+  classes:
+  - W judgement (urge/intention)
+  - M judgement (movement)
+  cue: rotating clock
+  paradigm_timing: asynchronous
+  feedback: none
+  distinguishing: >-
+    Standard configuration (earliest published) / 标准配置（最早发表）: spontaneous self-paced movements with clock-position reports
+    of intention (W) or movement (M) time (Libet et al. 1983). No sibling protocol yet.
+first_source:
+  citation: >-
+    Libet B, Gleason CA, Wright EW, Pearl DK. Time of conscious intention to act in relation to onset of cerebral activity
+    (readiness-potential): the unconscious initiation of a freely voluntary act. Brain 106(3):623-642. 1983.
+  doi: 10.1093/brain/106.3.623
+  pmid: '6640273'
+  year: 1983
+  verified: false
+interop:
+  bids_task: libet
+notes: >-
+  Search sources (curation/work/pkg_B/search_log.md): N02 https://pure.psu.edu/en/publications/time-of-conscious-intention-to-act-in-relation-to-onset-of-cerebr/.
+  New candidate (pkg B). Shares MK.MRCP with MOT-MRCP-001 but probes the construct of conscious intention; separate from MOT-IB-001
+  (perceived action-outcome timing). Maintainer to decide independence vs variant. bibliography confirmed (OpenAlex, 2026-10-05)
+status: draft
+contributors:
+- curator_b

@@ -1,0 +1,50 @@
+schema_version: '0.2'
+id: EMO-FC-002
+class: EMO-FC
+name:
+  en: Fear generalization (graded CS similarity)
+  zh: 恐惧泛化（CS 相似度梯度）
+aliases:
+- fear generalization gradient
+family: emotion
+bci_category:
+- none
+recording_modality:
+- fMRI
+- EEG
+stimulus_modality:
+- visual
+- auditory
+- electrical_stimulation
+markers:
+- MK.BOLD_amygdala
+description:
+  en: After differential conditioning, a set of generalization stimuli that vary stepwise in similarity between the CS+ and
+    the CS- (for example rings of graded size) is presented, and responses are compared along the similarity gradient. Neural
+    and autonomic responses decline with decreasing similarity to the CS+.
+  zh: 在差别条件化之后，呈现一组在 CS+ 与 CS- 之间按相似度逐级变化的泛化刺激（如大小分级的圆环），比较沿相似度梯度的反应。神经与自主反应随与 CS+ 相似度的降低而减弱。
+protocol:
+  classes:
+  - CS+
+  - graded generalization stimuli
+  - CS-
+  cue: series of perceptually graded stimuli spanning the CS+ and CS-; aversive US on CS+ trials
+  paradigm_timing: synchronous
+  feedback: none
+  distinguishing: 'Criterion 1 versus EMO-FC-001: the condition set adds graded generalization stimuli between CS+ and CS-,
+    so the contrast is a similarity gradient rather than CS+ versus CS- (lead R1010).'
+first_source:
+  citation: 'Lissek S, Bradford DE, Alvarez RP, Burton P, Espensen-Sturges T, Reynolds RC, Grillon C. Neural substrates of
+    classically conditioned fear-generalization in humans: a parametric fMRI study. Social Cognitive and Affective Neuroscience.
+    2014;9(8):1134-1142.'
+  doi: 10.1093/scan/nst096
+  pmid: '23748500'
+  year: 2014
+  verified: false
+notes: 'Former EMO-FC-001 variant. Lead refs: R1010 [first_source_candidate] (authors/year missing in literature.csv). The
+  example stimulus (rings of graded size) and the gradient description are to be checked against the original. New concrete
+  paradigm (curator_e, sprint 2, 2026-10-03, D-057); all sources unverified. Sprint 3 (curator_d, 2026-10-05): bibliography
+  corrected (OpenAlex, 2026-10-05): doi, authors, year, volume, issue, pages added.'
+status: draft
+contributors:
+- curator_e

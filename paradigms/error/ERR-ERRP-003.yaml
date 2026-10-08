@@ -1,0 +1,55 @@
+schema_version: '0.2'
+id: ERR-ERRP-003
+class: ERR-ERRP
+name:
+  en: Error-related potentials to P300-speller feedback
+  zh: P300 拼写器反馈错误电位
+aliases:
+- BCI Challenge @ NER 2015
+- Speller ErrP
+family: error
+bci_category:
+- passive
+- reactive
+recording_modality:
+- EEG
+stimulus_modality:
+- visual
+markers:
+- MK.ErrP
+description:
+  en: Users spell with an online P300 speller and, after each selection, see the character chosen by the speller. Selections
+    that differ from the intended character are genuine BCI errors and elicit an error-related potential to the feedback,
+    which can be detected to cancel or correct the selection.
+  zh: 用户使用在线 P300 拼写器，每次选择后看到拼写器选出的字符。与目标字符不符的选择是真实的 BCI 错误，在反馈后诱发错误相关电位，检测它可撤销或纠正该选择。
+trial_structure:
+  conditions:
+  - correct character feedback
+  - erroneous character feedback
+protocol:
+  n_classes: 2
+  classes:
+  - correct character feedback
+  - erroneous character feedback
+  cue: visual feedback of the character selected by an online P300 speller
+  paradigm_timing: synchronous
+  feedback: discrete
+  distinguishing: 准则 2：错误刺激是 P300 拼写器给出的字符反馈（真实解码错误、错误率由拼写器决定），而不是 ERR-ERRP-001 中按固定概率人为插入的光标动作错误。
+first_source:
+  citation: 'TBD: origin of the P300-speller feedback ErrP protocol not identified; public dataset seen (BCI Challenge @ NER
+    2015 page, which cites no publication)'
+  verified: false
+datasets:
+- name: 'BCI Challenge @ NER 2015 (Kaggle): error potential detection in an online P300 speller'
+  url: https://neuro.embs.org/2015/bci-challenge/
+interop:
+  bids_task: errpspeller
+notes: 'Leads used: BCI Challenge @ NER 2015 page (online P300 speller, error potential detection with cross-subject generalisation;
+  the page states 25 healthy subjects - number not entered pending the dataset paper). first_source TBD (D-032); candidate
+  origins from memory (Perrin et al.; Dal Seno et al.; Spüler et al.) not seen. Hybrid-type configuration: the ErrP rides
+  on a reactive P300 BCI (PER-ODD, package A); D-022 ''Hybrid:'' convention does not apply because the ErrP is the target
+  signal. Sprint 2 (D-057, curator_c, 2026-10-03): new concrete paradigm of class ERR-ERRP; numbering criterion 2 relative
+  to ERR-ERRP-001; all sources unverified. [maintainer, sprint 2] Lead registered as R1311 (literature.csv).'
+status: draft
+contributors:
+- curator_c

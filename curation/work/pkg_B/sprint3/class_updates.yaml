@@ -1,0 +1,491 @@
+# 包 B sprint 3 范式类出处书目核实结果（D-072，仅书目级；verified 仍为 false）。维护者合入 paradigms/_classes.yaml；审核人不直接改登记表。
+# Class first_source bibliographic checks for package B (curator_a, 2026-10-05); the maintainer applies them to paradigms/_classes.yaml.
+# action: modify；fields 只写要改的字段：first_source（有更正时）与 notes（追加 bibliography confirmed/corrected 句）。
+updates:
+- id: MOT-ATT
+  action: modify
+  fields:
+    first_source:
+      citation: Müller-Putz GR, Zimmermann D, Graimann B, Nestinger K, Korisek G, Pfurtscheller G. Event-related beta EEG-changes
+        during passive and attempted foot movements in paraplegic patients. Brain Research. 2007;1137(1):84-91.
+      doi: 10.1016/j.brainres.2006.12.052
+      pmid: '17229403'
+      year: 2007
+      verified: false
+    notes: 'migrated from schema-0.1 file MOT-ATT-001; sprint 2 (D-057): description, markers updated from curation/work/pkg_B/sprint2/class_updates.yaml
+      bibliography corrected (OpenAlex, 2026-10-05)'
+  reason: 'Sprint 3 bibliographic verification (curator_a, 2026-10-05): corrected; corrected: authors;venue;year;volume;issue;pages;doi.
+    title-only record completed; DOI added. OpenAlex publication_year 2006 (online); vol. 1137 is the 2007 print volume, year
+    2007 used'
+- id: MOT-BIMAN
+  action: modify
+  fields:
+    first_source:
+      citation: Kelso JA. Phase transitions and critical behavior in human bimanual coordination. American Journal of Physiology-Regulatory,
+        Integrative and Comparative Physiology. 1984;246(6):R1000-R1004.
+      doi: 10.1152/ajpregu.1984.246.6.r1000
+      year: 1984
+      verified: false
+    notes: migrated from schema-0.1 file MOT-BIMAN-001 bibliography corrected (Crossref, 2026-10-05)
+  reason: 'Sprint 3 bibliographic verification (curator_a, 2026-10-05): corrected; corrected: issue. issue number added'
+- id: MOT-CURSOR
+  action: modify
+  fields:
+    first_source:
+      citation: Wolpaw JR, McFarland DJ, Neat GW, Forneris CA. An EEG-based brain-computer interface for cursor control. Electroencephalography
+        and Clinical Neurophysiology. 1991;78(3):252-259.
+      doi: 10.1016/0013-4694(91)90040-B
+      pmid: '1707798'
+      year: 1991
+      verified: false
+    notes: 'migrated from schema-0.1 file MOT-CURSOR-001; sprint 2 (D-057): aliases updated from curation/work/pkg_B/sprint2/class_updates.yaml
+      bibliography corrected (Crossref, 2026-10-05)'
+  reason: 'Sprint 3 bibliographic verification (curator_a, 2026-10-05): corrected; corrected: author initials;issue. Wolpaw
+    J -> Wolpaw JR; issue added'
+- id: MOT-FORCE
+  action: modify
+  fields:
+    first_source:
+      citation: Conway BA, Halliday DM, Farmer SF, Shahani U, Maas P, Weir AI, Rosenberg JR. Synchronization between motor
+        cortex and spinal motoneuronal pool during the performance of a maintained motor task in man. The Journal of Physiology.
+        1995;489(3):917-924.
+      doi: 10.1113/jphysiol.1995.sp021104
+      pmid: '8788955'
+      year: 1995
+      verified: false
+    notes: migrated from schema-0.1 file MOT-FORCE-001 bibliography corrected (OpenAlex, 2026-10-05)
+  reason: 'Sprint 3 bibliographic verification (curator_a, 2026-10-05): corrected; corrected: authors;venue;year;volume;issue;pages;doi.
+    title-only record completed; DOI added'
+- id: MOT-GRASP
+  action: modify
+  fields:
+    first_source:
+      citation: Pistohl T, Schulze-Bonhage A, Aertsen A, Mehring C, Ball T. Decoding natural grasp types from human ECoG.
+        NeuroImage. 2012;59(1):248-260.
+      doi: 10.1016/j.neuroimage.2011.06.084
+      pmid: '21763434'
+      year: 2012
+      verified: false
+    notes: 'migrated from schema-0.1 file MOT-GRASP-001; sprint 2 (D-057): markers updated from curation/work/pkg_B/sprint2/class_updates.yaml;
+      maintainer: MK.low_freq_kinematics added to the class (used by a concrete MOT-GRASP paradigm but missing from the class_updates
+      union) bibliography corrected (OpenAlex, 2026-10-05)'
+  reason: 'Sprint 3 bibliographic verification (curator_a, 2026-10-05): corrected; corrected: authors;venue;year;volume;issue;pages;doi.
+    title-only record completed; DOI added. OpenAlex publication_year 2011 (online); 59(1) is the January 2012 print issue,
+    year 2012 used'
+- id: MOT-HW
+  action: modify
+  fields:
+    first_source:
+      citation: Willett FR, Avansino DT, Hochberg LR, Henderson JM, Shenoy KV. High-performance brain-to-text communication
+        via imagined handwriting. bioRxiv (preprint). 2020.
+      doi: 10.1101/2020.07.01.183384
+      year: 2020
+      verified: false
+    notes: 'migrated from schema-0.1 file MOT-HW-001; sprint 2 (D-057): name, description, markers, aliases updated from curation/work/pkg_B/sprint2/class_updates.yaml
+      bibliography corrected (Crossref, 2026-10-05)'
+  reason: 'Sprint 3 bibliographic verification (curator_a, 2026-10-05): corrected; corrected: title;authors;year. title-only
+    record; Crossref title reads "via imagined handwriting"; authors and year added; posted-content (preprint). Peer-reviewed
+    version (Nature 2021, R0947) not fetched'
+- id: MOT-IB
+  action: modify
+  fields:
+    notes: migrated from schema-0.1 file MOT-IB-001 bibliography confirmed (Crossref, 2026-10-05)
+  reason: 'Sprint 3 bibliographic verification (curator_a, 2026-10-05): confirmed'
+- id: MOT-LIBET
+  action: modify
+  fields:
+    notes: migrated from schema-0.1 file MOT-LIBET-001 bibliography confirmed (OpenAlex, 2026-10-05)
+  reason: 'Sprint 3 bibliographic verification (curator_a, 2026-10-05): confirmed. YAML title carries the full subtitle; record
+    title is the main title only; same paper'
+- id: MOT-ME
+  action: modify
+  fields:
+    first_source:
+      citation: Szurhaj W, Labyt E, Bourriez JL, Cassim F, Defebvre L, Hauser JJ, Guieu JD, Derambure P. Event-related variations
+        in the activity of EEG-rhythms. Application to the physiology and the pathology of movements. 2001;(Spec Issue 2):59-66.
+      pmid: '11781201'
+      year: 2001
+      verified: false
+    notes: 'migrated from schema-0.1 file MOT-ME-001; sprint 2 (D-057): markers, aliases updated from curation/work/pkg_B/sprint2/class_updates.yaml
+      bibliography corrected (OpenAlex, 2026-10-05)'
+  reason: 'Sprint 3 bibliographic verification (curator_a, 2026-10-05): corrected; corrected: authors;year;pages. authors,
+    year and pages from the OpenAlex PMID record; the record carries no journal name and no DOI, so the venue is left out
+    (to be completed from PubMed when reachable)'
+- id: MOT-MI
+  action: modify
+  fields:
+    notes: 'migrated from schema-0.1 file MOT-MI-001; sprint 2 (D-057): description, markers, aliases updated from curation/work/pkg_B/sprint2/class_updates.yaml
+      bibliography confirmed (OpenAlex, 2026-10-05)'
+  reason: 'Sprint 3 bibliographic verification (curator_a, 2026-10-05): confirmed. Crossref 429; OpenAlex agrees'
+- id: MOT-MIRR
+  action: modify
+  fields:
+    notes: migrated from schema-0.1 file MOT-MIRR-001 bibliography confirmed (Crossref, 2026-10-05)
+  reason: 'Sprint 3 bibliographic verification (curator_a, 2026-10-05): confirmed'
+- id: MOT-MRCP
+  action: modify
+  fields:
+    first_source:
+      citation: 'Kornhuber HH, Deecke L. Hirnpotentialänderungen bei Willkürbewegungen und passiven Bewegungen des Menschen:
+        Bereitschaftspotential und reafferente Potentiale. Pflügers Archiv für die gesamte Physiologie des Menschen und der
+        Tiere. 1965;284(1):1-17.'
+      doi: 10.1007/bf00412364
+      year: 1965
+      verified: false
+    notes: 'migrated from schema-0.1 file MOT-MRCP-001; sprint 2 (D-057): name, description, aliases updated from curation/work/pkg_B/sprint2/class_updates.yaml
+      bibliography corrected (OpenAlex, 2026-10-05)'
+  reason: 'Sprint 3 bibliographic verification (curator_a, 2026-10-05): corrected; corrected: volume;issue;pages. volume/issue/pages
+    added (284(1):1-17); journal name kept as the historical title (OpenAlex lists the current title Pflügers Archiv - European
+    Journal of Physiology)'
+- id: MOT-MSL
+  action: modify
+  fields:
+    first_source:
+      citation: 'Karni A, Meyer G, Rey-Hipolito C, Jezzard P, Adams MM, Turner R, Ungerleider LG. The acquisition of skilled
+        motor performance: fast and slow experience-driven changes in primary motor cortex. Proceedings of the National Academy
+        of Sciences. 1998;95(3):861-868.'
+      doi: 10.1073/pnas.95.3.861
+      pmid: '9448252'
+      year: 1998
+      verified: false
+    notes: migrated from schema-0.1 file MOT-MSL-001 bibliography corrected (OpenAlex, 2026-10-05)
+  reason: 'Sprint 3 bibliographic verification (curator_a, 2026-10-05): corrected; corrected: authors. "et al." expanded to
+    the full 7-author list'
+- id: MOT-MVF
+  action: modify
+  fields:
+    notes: migrated from schema-0.1 file MOT-MVF-001 bibliography confirmed (Crossref, 2026-10-05)
+  reason: 'Sprint 3 bibliographic verification (curator_a, 2026-10-05): confirmed'
+- id: MOT-OBS
+  action: modify
+  fields:
+    first_source:
+      citation: 'Fadiga L, Fogassi L, Pavesi G, Rizzolatti G. Motor facilitation during action observation: a magnetic stimulation
+        study. Journal of Neurophysiology. 1995;73(6):2608-2611.'
+      doi: 10.1152/jn.1995.73.6.2608
+      pmid: '7666169'
+      year: 1995
+      verified: false
+    notes: migrated from schema-0.1 file MOT-OBS-001 bibliography corrected (OpenAlex, 2026-10-05)
+  reason: 'Sprint 3 bibliographic verification (curator_a, 2026-10-05): corrected; corrected: authors;venue;year;volume;issue;pages;doi.
+    title-only record completed; DOI added'
+- id: MOT-PASS
+  action: modify
+  fields:
+    notes: migrated from schema-0.1 file MOT-PASS-001 bibliography confirmed (OpenAlex, 2026-10-05)
+  reason: 'Sprint 3 bibliographic verification (curator_a, 2026-10-05): confirmed. OpenAlex publication_year 2014 (online
+    first); YAML keeps print year 2015 for vol. 106; Crossref 429 so the print date was not re-checked'
+- id: MOT-PERT
+  action: modify
+  fields:
+    notes: migrated from schema-0.1 file MOT-PERT-001 bibliography confirmed (OpenAlex, 2026-10-05)
+  reason: 'Sprint 3 bibliographic verification (curator_a, 2026-10-05): confirmed'
+- id: MOT-PURS
+  action: modify
+  fields:
+    first_source:
+      citation: Petit L, Haxby JV. Functional anatomy of pursuit eye movements in humans as revealed by fMRI. Journal of Neurophysiology.
+        1999;82(1):463-471.
+      doi: 10.1152/jn.1999.82.1.463
+      pmid: '10400972'
+      year: 1999
+      verified: false
+    notes: migrated from schema-0.1 file MOT-PURS-001 bibliography corrected (OpenAlex, 2026-10-05)
+  reason: 'Sprint 3 bibliographic verification (curator_a, 2026-10-05): corrected; corrected: volume;issue;pages;doi. volume/issue/pages
+    and DOI added'
+- id: MOT-REACH
+  action: modify
+  fields:
+    first_source:
+      citation: Georgopoulos AP, Kalaska JF, Caminiti R, Massey JT. On the relations between the direction of two-dimensional
+        arm movements and cell discharge in primate motor cortex. Journal of Neuroscience. 1982;2(11):1527-1537.
+      doi: 10.1523/jneurosci.02-11-01527.1982
+      pmid: '7143039'
+      year: 1982
+      verified: false
+    notes: 'migrated from schema-0.1 file MOT-REACH-001; sprint 2 (D-057): markers, aliases updated from curation/work/pkg_B/sprint2/class_updates.yaml
+      bibliography corrected (OpenAlex, 2026-10-05)'
+  reason: 'Sprint 3 bibliographic verification (curator_a, 2026-10-05): corrected; corrected: authors;venue;year;volume;issue;pages;doi.
+    title-only record completed; DOI added (animal study; see D-031)'
+- id: MOT-RT
+  action: modify
+  fields:
+    notes: migrated from schema-0.1 file MOT-RT-001 bibliography confirmed (OpenAlex, 2026-10-05)
+  reason: 'Sprint 3 bibliographic verification (curator_a, 2026-10-05): confirmed'
+- id: MOT-SRT
+  action: modify
+  fields:
+    first_source:
+      citation: 'Nissen MJ, Bullemer P. Attentional requirements of learning: evidence from performance measures. Cognitive
+        Psychology. 1987;19(1):1-32.'
+      doi: 10.1016/0010-0285(87)90002-8
+      year: 1987
+      verified: false
+    notes: migrated from schema-0.1 file MOT-SRT-001 bibliography corrected (OpenAlex, 2026-10-05)
+  reason: 'Sprint 3 bibliographic verification (curator_a, 2026-10-05): corrected; corrected: volume;issue;pages. volume/issue/pages
+    added'
+- id: MOT-TRACK
+  action: modify
+  fields:
+    first_source:
+      citation: Bradberry TJ, Gentili RJ, Contreras-Vidal JL. Decoding three-dimensional hand kinematics from electroencephalographic
+        signals. Annual International Conference of the IEEE Engineering in Medicine and Biology Society. 2009;2009:5010-5013.
+      doi: 10.1109/iembs.2009.5334606
+      pmid: '19965033'
+      year: 2009
+      verified: false
+    notes: migrated from schema-0.1 file MOT-TRACK-001 bibliography corrected (OpenAlex, 2026-10-05)
+  reason: 'Sprint 3 bibliographic verification (curator_a, 2026-10-05): corrected; corrected: authors;venue;year;pages;doi.
+    title-only record completed; DOI added (conference paper)'
+- id: IMG-AUD
+  action: modify
+  fields:
+    first_source:
+      citation: 'Zatorre RJ, Halpern AR, Perry DW, Meyer E, Evans AC. Hearing in the mind''s ear: a PET investigation of musical
+        imagery and perception. Journal of Cognitive Neuroscience. 1996;8(1):29-46.'
+      doi: 10.1162/jocn.1996.8.1.29
+      year: 1996
+      verified: false
+    notes: migrated from schema-0.1 file IMG-AUD-001 bibliography corrected (Crossref, 2026-10-05)
+  reason: 'Sprint 3 bibliographic verification (curator_a, 2026-10-05): corrected; corrected: doi. Crossref bibliographic
+    search top hit matches title, first author, year and venue; DOI added'
+- id: IMG-CMD
+  action: modify
+  fields:
+    first_source:
+      citation: Owen AM, Coleman MR, Boly M, Davis MH, Laureys S, Pickard JD. Detecting awareness in the vegetative state.
+        Science. 2006;313(5792):1402.
+      doi: 10.1126/science.1130197
+      pmid: '16959998'
+      year: 2006
+      verified: false
+    notes: 'migrated from schema-0.1 file IMG-CMD-001; sprint 2 (D-057): aliases updated from curation/work/pkg_B/sprint2/class_updates.yaml
+      bibliography corrected (OpenAlex, 2026-10-05)'
+  reason: 'Sprint 3 bibliographic verification (curator_a, 2026-10-05): corrected; corrected: authors;venue;year;volume;issue;pages;doi.
+    title-only record completed from the OpenAlex PMID record; DOI added'
+- id: IMG-OLF
+  action: modify
+  fields:
+    first_source:
+      citation: Djordjevic J, Zatorre RJ, Petrides M, Boyle JA, Jones-Gotman M. Functional neuroimaging of odor imagery. NeuroImage.
+        2005;24(3):791-801.
+      doi: 10.1016/j.neuroimage.2004.09.035
+      year: 2005
+      verified: false
+    notes: migrated from schema-0.1 file IMG-OLF-001 bibliography corrected (OpenAlex, 2026-10-05)
+  reason: 'Sprint 3 bibliographic verification (curator_a, 2026-10-05): corrected; corrected: doi;authors;issue. search endpoints
+    429; candidate DOI verified against the OpenAlex record (title, first author, vol/pages match). "et al." expanded; issue
+    added. OpenAlex publication_year 2004 (online); print year 2005 kept'
+- id: IMG-ROT
+  action: modify
+  fields:
+    notes: migrated from schema-0.1 file IMG-ROT-001 bibliography confirmed (Crossref, 2026-10-05)
+  reason: 'Sprint 3 bibliographic verification (curator_a, 2026-10-05): confirmed'
+- id: IMG-SAO
+  action: modify
+  fields:
+    notes: migrated from schema-0.1 file IMG-SAO-001 bibliography confirmed (OpenAlex, 2026-10-05)
+  reason: 'Sprint 3 bibliographic verification (curator_a, 2026-10-05): confirmed. Crossref 429; OpenAlex record agrees (title,
+    authors, PLoS ONE 2013;8(6):e64784)'
+- id: IMG-SPI
+  action: modify
+  fields:
+    first_source:
+      citation: DaSalla CS, Kambara H, Sato M, Koike Y. Single-trial classification of vowel speech imagery using common spatial
+        patterns. Neural Networks. 2009;22(9):1334-1339.
+      doi: 10.1016/j.neunet.2009.05.008
+      year: 2009
+      verified: false
+    notes: migrated from schema-0.1 file IMG-SPI-001 bibliography corrected (OpenAlex, 2026-10-05)
+  reason: 'Sprint 3 bibliographic verification (curator_a, 2026-10-05): corrected; corrected: doi. search endpoints 429; candidate
+    DOI verified against the OpenAlex record (exact match); DOI added'
+- id: IMG-TACT
+  action: modify
+  fields:
+    notes: migrated from schema-0.1 file IMG-TACT-001 bibliography confirmed (Crossref, 2026-10-05)
+  reason: 'Sprint 3 bibliographic verification (curator_a, 2026-10-05): confirmed'
+- id: IMG-VIS
+  action: modify
+  fields:
+    first_source:
+      citation: 'Kosslyn SM, Pascual-Leone A, Felician O, Camposano S, Keenan JP, Thompson WL, Ganis G, Sukel KE, Alpert NM.
+        The role of area 17 in visual imagery: convergent evidence from PET and rTMS. Science. 1999;284(5411):167-170.'
+      doi: 10.1126/science.284.5411.167
+      pmid: '10102821'
+      year: 1999
+      verified: false
+    notes: migrated from schema-0.1 file IMG-VIS-001 bibliography corrected (Crossref, 2026-10-05)
+  reason: 'Sprint 3 bibliographic verification (curator_a, 2026-10-05): corrected; corrected: authors. mixed author format
+    and "et al."; full 9-author list from Crossref'
+- id: STM-ADBS
+  action: modify
+  fields:
+    first_source:
+      citation: Little S, Pogosyan A, Neal S, Zrinzo L, Hariz M, Foltynie T, Limousin P, Brown P. Controlling Parkinson's
+        disease with adaptive deep brain stimulation. Journal of Visualized Experiments. 2014;(89):51403.
+      doi: 10.3791/51403
+      year: 2014
+      verified: false
+    notes: migrated from schema-0.1 file STM-ADBS-001 bibliography corrected (OpenAlex, 2026-10-05)
+  reason: 'Sprint 3 bibliographic verification (curator_a, 2026-10-05): corrected; corrected: authors;venue;year;issue;pages;doi.
+    title-only record (lead N10 = PMC4217393) completed from the OpenAlex record (PMCID matches); this is a JoVE methods article;
+    the original aDBS study (Little et al. 2013 Ann Neurol, memory lead) was not fetched - D-031 origin check pending'
+- id: STM-CCEP
+  action: modify
+  fields:
+    first_source:
+      citation: 'Matsumoto R, Nair DR, LaPresto E, Najm I, Bingaman W, Shibasaki H, Lüders HO. Functional connectivity in
+        the human language system: a cortico-cortical evoked potential study. Brain. 2004;127(10):2316-2330.'
+      doi: 10.1093/brain/awh246
+      pmid: '15269116'
+      year: 2004
+      verified: false
+    notes: migrated from schema-0.1 file STM-CCEP-001 bibliography corrected (Crossref, 2026-10-05)
+  reason: 'Sprint 3 bibliographic verification (curator_a, 2026-10-05): corrected; corrected: issue;pages. issue and pages
+    added'
+- id: STM-DBSEP
+  action: modify
+  fields:
+    first_source:
+      citation: Sinclair NC, McDermott HJ, Bulluss KJ, Fallon JB, Perera T, Xu SS, Brown P, Thevathasan W. Subthalamic nucleus
+        deep brain stimulation evokes resonant neural activity. Annals of Neurology. 2018;83(5):1027-1031.
+      doi: 10.1002/ana.25234
+      year: 2018
+      verified: false
+    notes: migrated from schema-0.1 file STM-DBSEP-001 bibliography corrected (OpenAlex, 2026-10-05)
+  reason: 'Sprint 3 bibliographic verification (curator_a, 2026-10-05): corrected; corrected: volume;issue;pages;doi. candidate
+    DOI verified against the OpenAlex record (exact match); volume/issue/pages and DOI added'
+- id: STM-GVS
+  action: modify
+  fields:
+    first_source:
+      citation: Bense S, Stephan T, Yousry TA, Brandt T, Dieterich M. Multisensory cortical signal increases and decreases
+        during vestibular galvanic stimulation (fMRI). Journal of Neurophysiology. 2001;85(2):886-899.
+      doi: 10.1152/jn.2001.85.2.886
+      pmid: '11160520'
+      year: 2001
+      verified: false
+    notes: migrated from schema-0.1 file STM-GVS-001 bibliography corrected (OpenAlex, 2026-10-05)
+  reason: 'Sprint 3 bibliographic verification (curator_a, 2026-10-05): corrected; corrected: volume;issue;pages;doi. volume/issue/pages
+    and DOI added'
+- id: STM-PAS
+  action: modify
+  fields:
+    first_source:
+      citation: Stefan K, Kunesch E, Cohen LG, Benecke R, Classen J. Induction of plasticity in the human motor cortex by
+        paired associative stimulation. Brain. 2000;123(3):572-584.
+      doi: 10.1093/brain/123.3.572
+      year: 2000
+      verified: false
+    notes: migrated from schema-0.1 file STM-PAS-001 bibliography corrected (OpenAlex, 2026-10-05)
+  reason: 'Sprint 3 bibliographic verification (curator_a, 2026-10-05): corrected; corrected: doi;issue. candidate DOI verified
+    against the OpenAlex record (title, first author, 123:572-584 match; record lists first author only, co-authors kept from
+    the existing citation); DOI added'
+- id: STM-PBM
+  action: modify
+  fields:
+    first_source:
+      citation: Wang X, Dmochowski JP, Zeng L, Kallioniemi E, Husain M, Gonzalez-Lima F, Liu H. Transcranial photobiomodulation
+        with 1064-nm laser modulates brain electroencephalogram rhythms. Neurophotonics. 2019;6(2):025013.
+      doi: 10.1117/1.NPh.6.2.025013
+      year: 2019
+      verified: false
+    notes: migrated from schema-0.1 file STM-PBM-001 bibliography corrected (Crossref, 2026-10-05)
+  reason: 'Sprint 3 bibliographic verification (curator_a, 2026-10-05): corrected; corrected: authors;year. authors and year
+    were missing; added from Crossref (OpenAlex agrees)'
+- id: STM-PHTMS
+  action: modify
+  fields:
+    notes: migrated from schema-0.1 file STM-PHTMS-001 bibliography confirmed (OpenAlex, 2026-10-05)
+  reason: 'Sprint 3 bibliographic verification (curator_a, 2026-10-05): confirmed. OpenAlex publication_year 2017 (online
+    2017-11-24); YAML keeps print year 2018 for 11(2)'
+- id: STM-SEP
+  action: modify
+  fields:
+    first_source:
+      citation: Dawson GD. Cerebral responses to electrical stimulation of peripheral nerve in man. Journal of Neurology,
+        Neurosurgery and Psychiatry. 1947;10(3):134-140.
+      doi: 10.1136/jnnp.10.3.134
+      year: 1947
+      verified: false
+    notes: migrated from schema-0.1 file STM-SEP-001 bibliography corrected (OpenAlex, 2026-10-05)
+  reason: 'Sprint 3 bibliographic verification (curator_a, 2026-10-05): corrected; corrected: pages;doi. candidate DOI verified
+    against the OpenAlex record (exact match); pages and DOI added'
+- id: STM-TACS
+  action: modify
+  fields:
+    first_source:
+      citation: Zaehle T, Rach S, Herrmann CS. Transcranial alternating current stimulation enhances individual alpha activity
+        in human EEG. PLoS ONE. 2010;5(11):e13766.
+      doi: 10.1371/journal.pone.0013766
+      year: 2010
+      verified: false
+    notes: migrated from schema-0.1 file STM-TACS-001 bibliography corrected (OpenAlex, 2026-10-05)
+  reason: 'Sprint 3 bibliographic verification (curator_a, 2026-10-05): corrected; corrected: doi. candidate DOI verified
+    against the OpenAlex record (exact match); DOI added'
+- id: STM-TAVNS
+  action: modify
+  fields:
+    notes: migrated from schema-0.1 file STM-TAVNS-001 bibliography confirmed (OpenAlex, 2026-10-05)
+  reason: 'Sprint 3 bibliographic verification (curator_a, 2026-10-05): confirmed. Crossref 429; OpenAlex agrees'
+- id: STM-TDCS
+  action: modify
+  fields:
+    first_source:
+      citation: Nitsche MA, Paulus W. Excitability changes induced in the human motor cortex by weak transcranial direct current
+        stimulation. The Journal of Physiology. 2000;527(3):633-639.
+      doi: 10.1111/j.1469-7793.2000.t01-1-00633.x
+      pmid: '10990547'
+      year: 2000
+      verified: false
+    notes: migrated from schema-0.1 file STM-TDCS-001 bibliography corrected (OpenAlex, 2026-10-05)
+  reason: 'Sprint 3 bibliographic verification (curator_a, 2026-10-05): corrected; corrected: volume;issue;pages. volume/issue/pages
+    added'
+- id: STM-TEP
+  action: modify
+  fields:
+    first_source:
+      citation: Ilmoniemi RJ, Virtanen J, Ruohonen J, Karhu J, Aronen HJ, Näätänen R, Katila T. Neuronal responses to magnetic
+        stimulation reveal cortical reactivity and connectivity. Neuroreport. 1997;8(16):3537-3540.
+      doi: 10.1097/00001756-199711100-00024
+      year: 1997
+      verified: false
+    notes: migrated from schema-0.1 file STM-TEP-001 bibliography corrected (OpenAlex, 2026-10-05)
+  reason: 'Sprint 3 bibliographic verification (curator_a, 2026-10-05): corrected; corrected: doi;issue;author initials. candidate
+    DOI verified against the OpenAlex record (exact match); DOI and issue added; initials per record (Ilmoniemi RJ, Aronen
+    HJ)'
+- id: STM-TI
+  action: modify
+  fields:
+    first_source:
+      citation: Violante IR, Alania K, Cassarà AM, Neufeld E, Acerbo E, Carron R, Williamson A, Kurtin DL, Rhodes EJ, Hampshire
+        A, Kuster N, Boyden ES, Pascual-Leone A, Grossman N. Non-invasive temporal interference electrical stimulation of
+        the human hippocampus. Nature Neuroscience. 2023;26(11):1994-2004.
+      doi: 10.1038/s41593-023-01456-8
+      year: 2023
+      verified: false
+    notes: migrated from schema-0.1 file STM-TI-001 bibliography corrected (OpenAlex, 2026-10-05)
+  reason: 'Sprint 3 bibliographic verification (curator_a, 2026-10-05): corrected; corrected: authors;year;volume;issue;pages;doi.
+    title+journal-only record (lead N11) completed from the OpenAlex record (exact title match); DOI added'
+- id: STM-TMSFMRI
+  action: modify
+  fields:
+    notes: migrated from schema-0.1 file STM-TMSFMRI-001 bibliography confirmed (OpenAlex, 2026-10-05)
+  reason: 'Sprint 3 bibliographic verification (curator_a, 2026-10-05): confirmed'
+- id: STM-TUS
+  action: modify
+  fields:
+    notes: migrated from schema-0.1 file STM-TUS-001 bibliography confirmed (OpenAlex, 2026-10-05)
+  reason: 'Sprint 3 bibliographic verification (curator_a, 2026-10-05): confirmed'
+- id: STM-VIB
+  action: modify
+  fields:
+    first_source:
+      citation: Naito E, Nakashima T, Kito T, Aramaki Y, Okada T, Sadato N. Human limb-specific and non-limb-specific brain
+        representations during kinesthetic illusory movements of the upper and lower extremities. European Journal of Neuroscience.
+        2007;25(11):3476-3487.
+      doi: 10.1111/j.1460-9568.2007.05587.x
+      year: 2007
+      verified: false
+    notes: migrated from schema-0.1 file STM-VIB-001 bibliography corrected (OpenAlex, 2026-10-05)
+  reason: 'Sprint 3 bibliographic verification (curator_a, 2026-10-05): corrected; corrected: issue. issue added'

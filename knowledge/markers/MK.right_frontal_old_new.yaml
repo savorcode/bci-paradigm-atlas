@@ -1,0 +1,28 @@
+schema_version: "0.2"
+id: MK.right_frontal_old_new
+name:
+  en: Late right frontal old/new effect
+  zh: 晚期右额新旧效应
+aliases:
+- right frontal old/new effect
+- late frontal effect
+type: erp_component
+recording_modality:
+- EEG
+signature:
+  latency_ms: 600-1500 (sustained)
+  polarity: more positive for old than for new items
+  topography: right frontal
+description:
+  en: >-
+    Late, sustained ERP effect over right frontal sites in recognition tests, prominent when source or contextual
+    information must be retrieved and evaluated. It is associated with post-retrieval monitoring and evaluation
+    processes.
+  zh: 再认测试中右额区晚期持续出现的 ERP 效应，在需要提取并评估来源或情境信息时尤为明显，与提取后的监控和评估过程相关。
+notes: >-
+  First-pass skeleton (curator_d, 2026-10-03). Signature values are textbook-level approximations that await source
+  checking; generators and indexes will be added in the second pass.
+status: draft
+contributors:
+- maintainer
+- curator_d

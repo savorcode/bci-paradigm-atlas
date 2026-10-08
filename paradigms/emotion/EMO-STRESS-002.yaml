@@ -1,0 +1,51 @@
+schema_version: '0.2'
+id: EMO-STRESS-002
+class: EMO-STRESS
+name:
+  en: Montreal Imaging Stress Task (MIST)
+  zh: 蒙特利尔影像应激任务（MIST）
+aliases:
+- MIST
+family: emotion
+bci_category:
+- passive
+- none
+recording_modality:
+- fMRI
+- EEG
+stimulus_modality:
+- cognitive_task
+- visual
+markers:
+- MK.HbO_prefrontal
+description:
+  en: 'In the scanner, participants solve mental arithmetic problems in three conditions: rest, a control condition without
+    time limits, and an experimental condition whose difficulty and time limit are adapted to keep accuracy low, with correct/incorrect/timeout
+    feedback and a display comparing their performance with an average. Social evaluation is added by investigator feedback
+    between runs.'
+  zh: 被试在扫描仪内完成心算，分三个条件：休息；无时间限制的控制条件；难度与时限自适应调整、使正确率保持较低的实验条件，并给出“正确／错误／超时”反馈及与平均成绩比较的显示。各轮之间研究者的反馈增加社会评价成分。
+protocol:
+  n_classes: 3
+  classes:
+  - rest
+  - control arithmetic (no time limit, no evaluation)
+  - experimental arithmetic (adaptive time limit, social-evaluative feedback)
+  cue: on-screen arithmetic with a progress bar and a performance indicator
+  paradigm_timing: block
+  feedback: discrete
+  distinguishing: 'Criteria 1, 2 and 4 versus EMO-STRESS-001: computerised in-scanner arithmetic with rest and control conditions
+    instead of a live panel, and per-item performance feedback (Dedovic et al. 2005).'
+first_source:
+  citation: 'Dedovic K, Renwick R, Khalili Mahani N, Engert V, Lupien SJ, Pruessner JC. The Montreal Imaging Stress Task:
+    using functional imaging to investigate the effects of perceiving and processing psychosocial stress in the human brain.
+    Journal of Psychiatry and Neuroscience 30(5):319-325. 2005.'
+  year: 2005
+  verified: false
+notes: 'Source: sprint-2 S2-03 [=R1331] (https://www.jpn.ca/content/30/5/319.full.pdf), which gives the three conditions,
+  the 20-45 % accuracy target and the feedback displays. EEG listed because MIST is used with EEG in later studies (not checked;
+  remove at review if unsupported). Marker MK.HbO_prefrontal kept from the class; MIST-specific markers to be checked. New
+  concrete paradigm (curator_e, sprint 2, 2026-10-03, D-057); all sources unverified. Sprint 3 (curator_d, 2026-10-05): bibliography
+  confirmed (OpenAlex, 2026-10-05).'
+status: draft
+contributors:
+- curator_e

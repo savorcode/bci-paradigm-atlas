@@ -1,0 +1,50 @@
+schema_version: '0.2'
+id: SOC-GAZE-002
+class: SOC-GAZE
+name:
+  en: Gaze-contingent interactive joint attention
+  zh: 注视联动的交互式共同注意
+aliases:
+- interactive joint attention
+- initiating joint attention paradigm
+family: social
+bci_category:
+- none
+recording_modality:
+- fMRI
+stimulus_modality:
+- visual
+markers:
+- MK.BOLD_pSTS
+- MK.BOLD_striatum_reward
+description:
+  en: An eye tracker links the participant's gaze to an on-screen partner, so that the partner's eyes follow the participant
+    to an object (self-initiated joint attention), lead the participant to an object (other-initiated), or look elsewhere
+    (non-joint control). Initiating joint attention recruits ventral striatal reward regions in addition to the pSTS.
+  zh: 眼动仪把被试的注视与屏幕上的虚拟同伴联动：同伴的目光跟随被试看向物体（自我发起的共同注意）、引导被试看向物体（他人发起），或看向别处（非共同注意对照）。发起共同注意除后颞上沟外还激活腹侧纹状体奖赏区。
+protocol:
+  n_classes: 3
+  classes:
+  - self-initiated joint attention
+  - other-initiated joint attention
+  - non-joint-attention control
+  cue: virtual character whose gaze responds in real time to the participant's eye movements
+  paradigm_timing: synchronous
+  feedback: discrete
+  distinguishing: 'Criteria 1 and 4 versus SOC-GAZE-001: initiating versus responding joint-attention conditions, and the
+    partner''s gaze is contingent on the participant''s own gaze (closed loop) instead of a pre-programmed cue (leads R0986,
+    R0966).'
+first_source:
+  citation: 'Schilbach L, Wilms M, Eickhoff SB, Romanzetti S, Tepest R, Bente G, Shah NJ, Fink GR, Vogeley K. Minds made for
+    sharing: initiating joint attention recruits reward-related neurocircuitry. Journal of Cognitive Neuroscience. 2010;22(12):2702-2715.'
+  doi: 10.1162/jocn.2009.21401
+  pmid: '19929761'
+  year: 2010
+  verified: false
+notes: 'Lead refs: R0986 [method] (first_source, authors/year missing in literature.csv), R0966 [method] (gaze-contingent
+  paradigms), R0882 [method]. Condition names to be checked against R0986. New concrete paradigm (curator_e, sprint 2, 2026-10-03,
+  D-057); all sources unverified. Sprint 3 (curator_d, 2026-10-05): bibliography corrected (OpenAlex, 2026-10-05): doi, authors,
+  year, volume, issue, pages added.'
+status: draft
+contributors:
+- curator_e

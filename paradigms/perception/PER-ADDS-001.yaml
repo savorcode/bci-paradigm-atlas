@@ -1,0 +1,52 @@
+schema_version: '0.2'
+id: PER-ADDS-001
+class: PER-ADDS
+name:
+  en: Additional singleton / distractor suppression
+  zh: 附加单例与干扰抑制
+aliases:
+- additional singleton paradigm
+- attentional capture
+- Pd paradigm
+family: perception
+bci_category:
+- none
+recording_modality:
+- EEG
+stimulus_modality:
+- visual
+markers:
+- MK.Pd
+description:
+  en: Participants search for a shape target while a salient colour singleton distractor is sometimes present. Lateralised
+    distractors that are suppressed elicit a distractor positivity (Pd) contralateral to the distractor, whereas captured
+    distractors elicit an N2pc.
+  zh: 被试搜索形状靶刺激，有时会出现显著的颜色单例干扰项。被抑制的偏侧干扰项在其对侧诱发干扰正波（Pd），而捕获注意的干扰项则诱发 N2pc。
+protocol:
+  n_classes: 2
+  classes:
+  - salient distractor present
+  - distractor absent
+  cue: shape-singleton search display with an optional colour-singleton distractor
+  paradigm_timing: synchronous
+  feedback: none
+  distinguishing: 标准配置（最早发表，即 first_source）：形状单例搜索，部分试次出现颜色单例干扰物。本类暂无其他具体范式（no sibling protocol yet）。
+first_source:
+  citation: Theeuwes J. Perceptual selectivity for color and form. Percept Psychophys. 1992;51(6):599-606.
+  doi: 10.3758/BF03211656
+  year: 1992
+  verified: false
+interop:
+  bids_task: additionalsingleton
+notes: 'Leads used: search SA16a. first_source: no origin source identified in this pass (blocker, see curation/work/pkg_A/status.csv).
+  New candidate proposed by package A on 2026-10-03 (curation/work/pkg_A/new_candidates.csv); registered in curation/candidates.csv
+  as C218 (D-053, milestone M1). Requested marker MK.Pd; related to PER-VS-001 but with a different marker and construct (distractor
+  suppression). [curator_a sprint 2, 2026-10-03] D-057: protocol block added for the canonical configuration; no other concrete
+  paradigm identified for this class in sprint 2. [curator_e sprint 3, 2026-10-05] candidate origin found by bibliographic
+  search (OpenAlex, 2026-10-05); content unverified. [maintainer sprint 3, 2026-10-07] bibliography confirmed (OpenAlex, 2026-10-05;
+  origin candidate, content unverified). [maintainer sprint 3, 2026-10-07, D-073] origin candidate recalled, record confirmed
+  via OpenAlex.'
+status: draft
+contributors:
+- curator_a
+- curator_e

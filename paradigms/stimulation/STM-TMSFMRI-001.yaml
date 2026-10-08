@@ -1,0 +1,53 @@
+schema_version: '0.2'
+id: STM-TMSFMRI-001
+class: STM-TMSFMRI
+name:
+  en: Concurrent TMS-fMRI
+  zh: TMS 与功能磁共振同步
+aliases:
+- concurrent TMS-fMRI
+- interleaved TMS-fMRI
+- TMS-BOLD
+family: stimulation
+bci_category:
+- none
+recording_modality:
+- fMRI
+stimulus_modality:
+- magnetic_stimulation
+markers:
+- MK.BOLD_stimulated_region
+description:
+  en: >-
+    TMS pulses or short trains are delivered inside the MRI scanner, interleaved with image acquisition, at different intensities
+    or sites (including sham). BOLD responses are measured at the stimulated cortex and in remote, connected regions, providing
+    a measure of local and network effects of stimulation.
+  zh: 在磁共振扫描仪内与图像采集交错施加 TMS 单脉冲或短串，变化刺激强度或部位（包括伪刺激）。测量受刺激皮层及远隔连接区域的 BOLD 响应，以评估刺激的局部与网络效应。
+protocol:
+  n_classes: 2
+  classes:
+  - TMS interleaved with image acquisition
+  - no-TMS / sham baseline
+  cue: none
+  paradigm_timing: block
+  feedback: none
+  distinguishing: >-
+    Standard configuration (earliest published) / 标准配置（最早发表）: TMS trains interleaved with echo-planar imaging, BOLD at the
+    stimulated and connected regions (Bohning et al. 1998). No sibling protocol yet.
+first_source:
+  citation: >-
+    Bohning DE, Shastri A, Nahas Z, Lorberbaum JP, Andersen SW, Dannels WR, Haxthausen EU, Vincent DJ, George MS. Echoplanar
+    BOLD fMRI of brain activation induced by concurrent transcranial magnetic stimulation. Investigative Radiology 33(6):336-340.
+    1998.
+  doi: 10.1097/00004424-199806000-00004
+  pmid: '9647445'
+  year: 1998
+  verified: false
+interop:
+  bids_task: tmsfmri
+notes: >-
+  Search sources (curation/work/pkg_B/search_log.md): N08 https://experts.umn.edu/en/publications/echoplanar-bold-fmri-of-brain-activation-induced-by-concurrent-tr/.
+  New candidate (pkg B). Recording counterpart of STM-TEP-001 in fMRI. bibliography confirmed (OpenAlex, 2026-10-05)
+status: draft
+contributors:
+- curator_b

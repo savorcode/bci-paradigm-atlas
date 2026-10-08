@@ -1,0 +1,56 @@
+schema_version: '0.2'
+id: MEM-DF-001
+class: MEM-DF
+name:
+  en: Directed forgetting
+  zh: 定向遗忘
+aliases:
+- DF Task
+- Item-Method DF
+- List-Method DF
+family: memory
+bci_category:
+- none
+recording_modality:
+- EEG
+- fMRI
+stimulus_modality:
+- visual
+markers:
+- MK.alpha_posterior
+- MK.BOLD_dlPFC
+description:
+  en: Participants study items one at a time, and after each item an instruction tells them to remember it or to forget it
+    (item method); memory for all items is later tested. Forget-cued items are remembered less well, and the post-item cue
+    period is associated with changes in posterior alpha power and dorsolateral prefrontal activity interpreted as withdrawal
+    of rehearsal or active suppression.
+  zh: 被试逐个学习项目，每个项目后出现记住或遗忘的指示（逐项法），随后测试全部项目的记忆。被指示遗忘的项目记得较差；项目后指示期伴随后部 α 功率与背外侧前额叶活动的变化，被解释为停止复述或主动抑制。
+trial_structure:
+  conditions:
+  - remember-cued item
+  - forget-cued item
+protocol:
+  n_classes: 2
+  classes:
+  - remember cue
+  - forget cue
+  cue: study item followed by an item-specific remember or forget instruction
+  paradigm_timing: synchronous
+  feedback: none
+  distinguishing: 标准配置（最早发表）：逐项给出记住/遗忘指示（item method；类源头 Bjork 1970, R0021，该文的指示方式待核对）。与 -002（list method，整列表后给指示，准则 3）区别。
+first_source:
+  citation: 'Bjork RA. Positive forgetting: The noninterference of Items intentionally forgotten. Journal of Verbal Learning
+    and Verbal Behavior. 1970;9(3):255-268.'
+  doi: 10.1016/s0022-5371(70)80059-7
+  year: 1970
+  verified: false
+interop:
+  bids_task: directedforgetting
+notes: 'HED task page: https://www.hedtags.org/hed-task/tasks/hedtsk_directed_forgetting.html. Leads: R0021, R0579, R0602,
+  R0610, R0803 (R#### = curation/literature.csv; DN## = curation/work/pkg_D/new_leads.csv). Item-method and list-method versions
+  are both covered by this entry (aliases). Sprint 2 (D-057, curator_d, 2026-10-03): protocol block added (-001 = earliest/standard
+  configuration). Narrowed to the item method; the list method moved to MEM-DF-002. Whether Bjork (1970) used item cues has
+  to be checked against the original. Sibling concrete paradigms: MEM-DF-002. bibliography corrected (Crossref, 2026-10-05)'
+status: draft
+contributors:
+- curator_d

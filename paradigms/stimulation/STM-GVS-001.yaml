@@ -1,0 +1,54 @@
+schema_version: '0.2'
+id: STM-GVS-001
+class: STM-GVS
+name:
+  en: Galvanic vestibular stimulation
+  zh: 直流电前庭刺激
+aliases:
+- GVS
+- galvanic vestibular stimulation
+- vestibular electrical stimulation
+family: stimulation
+bci_category:
+- none
+recording_modality:
+- fMRI
+- EEG
+stimulus_modality:
+- electrical_stimulation
+markers:
+- MK.BOLD_vestibular_cortex
+description:
+  en: >-
+    Weak electrical current is applied between electrodes over the mastoid processes, stimulating the vestibular nerve and
+    producing sensations of tilt or self-motion, compared with sham or cutaneous control stimulation. Stimulation activates
+    multisensory vestibular cortex (posterior insula/parieto-insular regions) and is accompanied by signal decreases in visual
+    and somatosensory areas.
+  zh: 在双侧乳突电极之间施加弱电流，刺激前庭神经并产生倾斜或自身运动的感觉，并与伪刺激或皮肤对照刺激比较。刺激激活多感觉前庭皮层（后岛叶/顶-岛区域），并伴随视觉与体感区域的信号下降。
+protocol:
+  n_classes: 2
+  classes:
+  - galvanic vestibular stimulation
+  - sham / cutaneous control
+  cue: none
+  paradigm_timing: block
+  feedback: none
+  distinguishing: >-
+    Standard configuration (earliest published) / 标准配置（最早发表）: binaural mastoid GVS vs control stimulation in fMRI blocks (Bense
+    et al. 2001). No sibling protocol yet.
+first_source:
+  citation: >-
+    Bense S, Stephan T, Yousry TA, Brandt T, Dieterich M. Multisensory cortical signal increases and decreases during vestibular
+    galvanic stimulation (fMRI). Journal of Neurophysiology. 2001;85(2):886-899.
+  doi: 10.1152/jn.2001.85.2.886
+  pmid: '11160520'
+  year: 2001
+  verified: false
+interop:
+  bids_task: gvs
+notes: >-
+  Search sources (curation/work/pkg_B/search_log.md): N17 https://neurosynth.org/studies/11160520. New candidate (pkg B).
+  Requests new marker MK.BOLD_vestibular_cortex. bibliography corrected (OpenAlex, 2026-10-05)
+status: draft
+contributors:
+- curator_b

@@ -1,0 +1,68 @@
+schema_version: '0.2'
+id: MEM-NAV-001
+class: MEM-NAV
+name:
+  en: Virtual spatial navigation
+  zh: 虚拟空间导航记忆
+aliases:
+- Morris Water Maze
+- RAM
+- Radial Arm Maze
+- Spatial navigation memory
+- Virtual Morris water maze
+- Virtual Radial Arm Maze
+- Virtual navigation task
+- Virtual town navigation
+family: memory
+bci_category:
+- none
+recording_modality:
+- sEEG
+- EEG
+- fMRI
+stimulus_modality:
+- visual
+- naturalistic
+markers:
+- MK.hippocampal_theta
+- MK.BOLD_hippocampus
+description:
+  en: Participants learn a virtual town from a first-person view and then navigate to target locations, either finding new
+    routes (wayfinding) or following well-learned routes; spatial-memory performance and navigation accuracy are measured.
+    Navigation and spatial learning are associated with hippocampal theta oscillations in intracranial recordings and with
+    hippocampal BOLD responses that relate to the use of place-based strategies.
+  zh: 被试以第一人称视角学习虚拟城镇，随后导航到目标地点：或寻找新路线（寻路），或沿熟悉路线行进；测量空间记忆与导航准确性。导航与空间学习伴随颅内记录中的海马 θ 振荡，以及与使用基于地点策略相关的海马 BOLD 响应。
+trial_structure:
+  conditions:
+  - wayfinding
+  - route following
+  - control (visually matched movement)
+protocol:
+  n_classes: 2
+  classes:
+  - wayfinding (novel route)
+  - route following (familiar route)
+  cue: first-person virtual town with landmarks and target locations
+  paradigm_timing: synchronous
+  feedback: none
+  distinguishing: 标准配置（最早发表）：虚拟城镇中的寻路/路线导航（Maguire et al. 1998, R0164；Hartley et al. 2003, R0265）。与 -002（虚拟放射臂迷宫，准则 1;2）、-003（虚拟
+    Morris 水迷宫，准则 1;2）区别。
+first_source:
+  citation: 'Maguire EA, Burgess N, Donnett JG, Frackowiak RSJ, Frith CD, O''Keefe J. Knowing Where and Getting There: A Human
+    Navigation Network. Science. 1998;280(5365):921-924.'
+  doi: 10.1126/science.280.5365.921
+  pmid: '9572740'
+  year: 1998
+  verified: false
+interop:
+  bids_task: navigation
+notes: 'HED task page: https://www.hedtags.org/hed-task/tasks/hedtsk_virtual_morris_water_maze.html ; https://www.hedtags.org/hed-task/tasks/hedtsk_virtual_radial_arm_maze.html.
+  Leads: R0037, R0065, R0164, R0265, R0289, R0315, R0366, R0393, R0580, R0654, R0698, R0704, R0722, R0748 (R#### = curation/literature.csv;
+  DN## = curation/work/pkg_D/new_leads.csv). R0164 (Maguire et al. 1998) chosen as the earliest human neuroimaging virtual-navigation
+  study among the leads; R0065 (Morris 1984) and R0037 (Olton & Samuelson 1976) are the rodent maze procedures that the virtual
+  water maze and radial-arm maze adapt. Sprint 2 (D-057, curator_d, 2026-10-03): protocol block added (-001 = earliest/standard
+  configuration). Narrowed to virtual-town navigation; the virtual radial arm maze moved to MEM-NAV-002 and the virtual water
+  maze to MEM-NAV-003. Sibling concrete paradigms: MEM-NAV-002, MEM-NAV-003. bibliography corrected (OpenAlex, 2026-10-05)'
+status: draft
+contributors:
+- curator_d

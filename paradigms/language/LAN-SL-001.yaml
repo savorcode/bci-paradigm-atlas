@@ -1,0 +1,55 @@
+schema_version: '0.2'
+id: LAN-SL-001
+class: LAN-SL
+name:
+  en: Statistical learning of speech streams
+  zh: 统计学习（言语切分）
+aliases:
+- statistical word segmentation
+- triplet stream learning
+- auditory statistical learning
+family: language
+bci_category:
+- none
+recording_modality:
+- EEG
+- MEG
+stimulus_modality:
+- auditory
+markers:
+- MK.linguistic_structure_tracking
+description:
+  en: Participants are exposed to a continuous stream of syllables in which items form recurring 'words' defined only by transitional
+    probabilities, and are then tested on recognising the embedded words. As learning proceeds, neural responses come to track
+    the word rate in addition to the syllable rate, a frequency-tagged index of segmentation.
+  zh: 被试聆听连续的音节流，其中仅由转移概率界定的“词”反复出现，随后测试对嵌入词的识别。随着学习进行，神经反应除音节速率外还开始跟随词速率，这是一个频率标记的切分指标。
+trial_structure:
+  conditions:
+  - structured
+  - random
+protocol:
+  n_classes: 2
+  classes:
+  - structured syllable stream
+  - random syllable stream
+  cue: continuous stream of synthesised syllables forming trisyllabic words by transitional probability
+  stimulus_coding: frequency tagging of syllable and word rates (neural versions)
+  paradigm_timing: continuous
+  feedback: none
+  distinguishing: 标准配置（最早发表）：听觉音节流（Saffran et al. 1996, R1166，婴儿行为学源头）。视觉形状流版本暂记为提议。
+first_source:
+  citation: Saffran JR, Aslin RN, Newport EL. Statistical Learning by 8-Month-Old Infants. Science. 1996;274(5294):1926-1928.
+  doi: 10.1126/science.274.5294.1926
+  pmid: '8943209'
+  year: 1996
+  verified: false
+interop:
+  bids_task: statisticallearning
+notes: 'Leads: DN33, DN34 (R#### = curation/literature.csv; DN## = curation/work/pkg_D/new_leads.csv). New candidate (curator_d).
+  DN33 is the behavioural infant origin (title/PMID only); neural frequency-tagging versions are reviewed in DN34. Related
+  to LAN-AGL-001 (rule learning) and LAN-HIER-001 (same marker); maintainer may consider merging. Leads: DN33, DN34. Sprint
+  2 (D-057, curator_d, 2026-10-03): protocol block added (-001 = earliest/standard configuration). Narrowed to auditory syllable
+  streams; visual statistical learning logged as proposed. bibliography corrected (OpenAlex, 2026-10-05)'
+status: draft
+contributors:
+- curator_d

@@ -1,0 +1,21 @@
+schema_version: "0.2"
+id: MK.BOLD_amygdala
+name:
+  en: Amygdala BOLD response
+  zh: 杏仁核 BOLD 响应
+aliases:
+- amygdala activation
+type: hemodynamic
+recording_modality:
+- fMRI
+signature:
+  topography: bilateral amygdala (medial temporal lobe)
+description:
+  en: Task-evoked BOLD signal change in the amygdala. It increases to emotionally arousing or threat-related stimuli such
+    as fearful faces, aversive pictures and conditioned stimuli paired with shock.
+  zh: 杏仁核的任务诱发 BOLD 信号变化。对情绪唤醒或威胁相关刺激（如恐惧面孔、厌恶图片、与电击配对的条件刺激）的响应增强。
+notes: Signature values are textbook-level characteristics entered in the first pass and await source checking.
+status: draft
+contributors:
+- maintainer
+- curator_e

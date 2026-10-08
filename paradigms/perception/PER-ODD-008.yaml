@@ -1,0 +1,56 @@
+schema_version: '0.2'
+id: PER-ODD-008
+class: PER-ODD
+name:
+  en: Auditory spatial P300 BCI (AMUSE)
+  zh: 听觉空间 P300 脑机接口（AMUSE）
+aliases:
+- AMUSE
+- auditory multi-class spatial ERP paradigm
+- spatial auditory P300 speller
+family: perception
+bci_category:
+- reactive
+recording_modality:
+- EEG
+stimulus_modality:
+- auditory
+markers:
+- MK.P3b
+description:
+  en: Short sounds are played in random order from several loudspeakers placed around the listener (eight in a circle in the
+    public dataset). The user attends to the direction associated with the desired choice; sounds from that direction elicit
+    a P300, which allows multi-class selection and spelling without any visual stimulation.
+  zh: 短促声音以随机顺序从被试周围的多个扬声器播放（公开数据集中为环形排列的 8 个扬声器）。用户注意与目标选项对应的方向，该方向的声音诱发 P300，从而在完全没有视觉刺激的情况下实现多类选择与拼写。
+trial_structure:
+  conditions:
+  - sound from attended direction
+  - sounds from other directions
+protocol:
+  classes:
+  - loudspeaker directions (e.g. 8 positions at 45 degree spacing)
+  cue: short band-pass noise bursts from loudspeakers around the head
+  stimulus_coding: spatial direction of sound source
+  paradigm_timing: synchronous
+  feedback: discrete
+  distinguishing: 准则 2（刺激类型）：听觉空间方向编码取代 -003 的视觉矩阵闪烁。类别为扬声器方向（同质目标），扬声器个数为参数，不构成准则 1（D-058）。
+first_source:
+  citation: Schreuder M, Rost T, Tangermann M. Listen, you are writing! Speeding up online spelling with a dynamic auditory
+    BCI. Front Neurosci. 2011;5:112.
+  doi: 10.3389/fnins.2011.00112
+  year: 2011
+  verified: false
+datasets:
+- name: BNCI2015-009 AMUSE
+  url: https://moabb.neurotechx.com/docs/generated/moabb.datasets.BNCI2015_009.html
+  identifier: BNCI2015_009
+  subjects: 21
+interop:
+  bids_task: p300
+notes: 'Lead: MOABB dataset page BNCI2015_009 (S2A08 [=R1270]): 75 ms band-pass noise, 8 loudspeakers at 45 degree spacing,
+  21 subjects. The 2011 paper is the dataset reference; an earlier AMUSE paper by the same group probably introduced the configuration
+  (not seen; first_source provisional). Earlier auditory P300 BCIs exist (to be checked). New in sprint 2. [curator_e sprint
+  3, 2026-10-05] bibliography confirmed (Crossref, 2026-10-05).'
+status: draft
+contributors:
+- curator_a

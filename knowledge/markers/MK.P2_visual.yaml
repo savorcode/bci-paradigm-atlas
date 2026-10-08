@@ -1,0 +1,24 @@
+schema_version: "0.2"
+id: MK.P2_visual
+name:
+  en: Visual P2
+  zh: 视觉 P2
+aliases:
+- P200 (visual)
+- anterior P2
+type: erp_component
+recording_modality:
+- EEG
+signature:
+  latency_ms: 150-250
+  polarity: positive
+  topography: fronto-central / anterior
+description:
+  en: Positive visual ERP component following the N1 that is modulated by attention to stimulus features. In social paradigms
+    it differs for faces of different social groups and for threat-related targets.
+  zh: 继 N1 之后的视觉正成分，受对刺激特征的注意调制。在社会范式中，它在不同社会群体的面孔之间以及对威胁相关靶刺激存在差异。
+notes: Signature values are textbook-level characteristics entered in the first pass and await source checking.
+status: draft
+contributors:
+- maintainer
+- curator_e

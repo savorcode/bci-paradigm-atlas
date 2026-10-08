@@ -1,0 +1,54 @@
+schema_version: '0.2'
+id: SOC-SELF-001
+class: SOC-SELF
+name:
+  en: Self-face recognition
+  zh: 自我面孔识别
+aliases:
+- self-face recognition
+family: social
+bci_category:
+- none
+recording_modality:
+- EEG
+- fMRI
+stimulus_modality:
+- visual
+markers:
+- MK.N170
+- MK.P3b
+description:
+  en: Participants view or classify their own face, familiar faces and unfamiliar faces, sometimes as morphs between self
+    and other. The own face modulates the N170 and elicits a larger P3b than other faces.
+  zh: 被试观看或分类自己的面孔、熟悉面孔和陌生面孔，有时使用自我与他人之间的形变面孔。自我面孔调制 N170，并比他人面孔诱发更大的 P3b。
+protocol:
+  n_classes: 3
+  classes:
+  - own face
+  - familiar face
+  - unfamiliar face
+  cue: face photographs (optionally self-other morphs)
+  paradigm_timing: synchronous
+  feedback: none
+  distinguishing: 'Standard configuration (earliest published or canonical; D-057 -001): self versus familiar versus unfamiliar
+    face recognition; origin publication TBD (D-031).'
+first_source:
+  citation: Keenan JP, Nelson A, O'Connor M, Pascual-Leone A. Self-recognition and the right hemisphere. Nature 409(6818):305.
+    2001.
+  doi: 10.1038/35053167
+  year: 2001
+  verified: false
+interop:
+  bids_task: selfface
+notes: 'Lead refs (curation/literature.csv): R0900 [review]. Sources found by curator_e (curation/work/pkg_E/search_log.md):
+  S27 = https://ideas.repec.org/a/nat/nature/v409y2001i6818d10.1038_35053167.html. first_source note: Intracarotid amobarbital
+  (Wada) study, i.e. hemispheric inactivation rather than neural recording; ERP/fMRI self-face studies are leads for the second
+  pass. Only lead in literature.csv is a meta-analysis (R0900). S27 is an early neural (Wada) study; an EEG/fMRI origin paper
+  remains to be identified. First-pass skeleton (curator_e, 2026-10-03); all sources unverified. D-031 (maintainer, 2026-10-03):
+  first_source currently holds the earliest neural recording study found, not the paradigm origin; in sprint 2 move it to
+  a "First neural recording:" line and fill first_source with the origin. Sprint 2 (curator_e, 2026-10-03): protocol block
+  added per D-057; see curation/work/pkg_E/sprint2/split_log.csv. Sprint 3 (curator_d, 2026-10-05): bibliography confirmed
+  (OpenAlex, 2026-10-05).'
+status: draft
+contributors:
+- curator_e

@@ -1,0 +1,28 @@
+schema_version: "0.2"
+id: MK.FN400
+name:
+  en: FN400 (mid-frontal old/new effect)
+  zh: FN400（额中部新旧效应）
+aliases:
+- mid-frontal old/new effect
+- early frontal old/new effect
+type: erp_component
+recording_modality:
+- EEG
+signature:
+  latency_ms: 300-500
+  polarity: more positive for old than for new items (reduced negativity)
+  topography: mid-frontal
+description:
+  en: >-
+    Recognition-memory ERP effect in which studied items elicit a less negative frontal deflection than new items.
+    It is commonly associated with familiarity-based recognition, although a relation to conceptual priming has
+    also been proposed.
+  zh: 再认记忆中的 ERP 效应：学过的项目比新项目诱发负性较弱的额部偏转。通常与基于熟悉性的再认相联系，也有观点认为它与概念启动有关。
+notes: >-
+  First-pass skeleton (curator_d, 2026-10-03). Signature values are textbook-level approximations that await source
+  checking; generators and indexes will be added in the second pass.
+status: draft
+contributors:
+- maintainer
+- curator_d

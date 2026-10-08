@@ -1,5 +1,5 @@
 # Cognitive constructs / 认知构念 (seed, draft)
-schema_version: "0.1"
+schema_version: "0.2"
 prefix: CN
 terms:
   - id: CN.context_updating

@@ -1,0 +1,63 @@
+schema_version: '0.2'
+id: SSR-CVEP-002
+class: SSR-CVEP
+name:
+  en: c-VEP speller with modulated Gold codes
+  zh: 调制 Gold 码 c-VEP 拼写器
+aliases:
+- broad-band VEP
+- Gold-code c-VEP
+- reconvolution c-VEP
+family: steady_state
+bci_category:
+- reactive
+recording_modality:
+- EEG
+stimulus_modality:
+- visual
+markers:
+- MK.cVEP
+description:
+  en: Each cell of a 6 x 6 speller matrix flickers with its own modulated Gold code, a pseudorandom sequence that is not a
+    time shift of the others. The response to a code is modelled as the superposition of transient responses to its short
+    and long flashes (reconvolution), so templates for all codes can be predicted from limited training data; the selected
+    cell is shown as feedback.
+  zh: 6×6 拼写矩阵的每个单元以各自的调制 Gold 码闪烁，这些伪随机序列彼此不是时间移位关系。将对某一编码的响应建模为对其长短闪光的瞬态响应的叠加（重卷积），从而用少量训练数据预测所有编码的模板；选中单元显示为反馈。
+trial_structure:
+  phases:
+  - name: cue
+    duration_ms: 1000
+  - name: stimulation
+    duration_ms: 4200
+    note: 4 code cycles
+  - name: feedback
+    duration_ms: 1000
+  conditions:
+  - 36 cells
+protocol:
+  classes:
+  - 36 cells of a 6 x 6 matrix
+  cue: speller matrix, each cell flickering with its own modulated Gold code
+  stimulus_coding: modulated Gold codes
+  paradigm_timing: synchronous
+  feedback: discrete
+  distinguishing: 准则 2（编码方案）：各目标使用不同的调制 Gold 码（非同一序列的循环移位），以重卷积模型生成模板；-001 为 m 序列循环移位。
+first_source:
+  citation: 'Thielen J, Van Den Broek P, Farquhar J, Desain P. Broad-band visually evoked potentials: re(con)volution in brain-computer
+    interfacing. PLoS One. 2015;10(7):e0133797.'
+  doi: 10.1371/journal.pone.0133797
+  year: 2015
+  verified: false
+datasets:
+- name: Thielen 2015 c-VEP speller dataset
+  url: https://moabb.neurotechx.com/docs/generated/moabb.datasets.Thielen2015.html
+  identifier: Thielen2015
+  subjects: 12
+interop:
+  bids_task: cvep
+notes: 'Lead: MOABB dataset page Thielen2015 (S2A27 [=R1279]): modulated Gold codes, 36 classes (6 x 6), 4.2 s trials (4 code
+  cycles), 1 s cue, 1 s feedback, 12 subjects; data DOI 10.34973/1ecz-1232. New in sprint 2. [curator_e sprint 3, 2026-10-05]
+  bibliography confirmed (OpenAlex, 2026-10-05).'
+status: draft
+contributors:
+- curator_a

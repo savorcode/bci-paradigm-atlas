@@ -1,0 +1,57 @@
+schema_version: '0.2'
+id: LAN-NAT-001
+class: LAN-NAT
+name:
+  en: Naturalistic speech listening
+  zh: 自然语音聆听
+aliases:
+- TRF paradigm
+- audiobook listening
+- continuous speech listening
+- speech envelope tracking
+family: language
+bci_category:
+- none
+recording_modality:
+- EEG
+- MEG
+- ECoG
+stimulus_modality:
+- auditory
+- naturalistic
+markers:
+- MK.speech_envelope_tracking
+description:
+  en: Participants listen to continuous natural speech such as audiobooks, stories or podcasts, usually without a task other
+    than comprehension. Neural activity follows the slow amplitude envelope of the speech, and this envelope tracking is estimated
+    with temporal response functions or stimulus reconstruction.
+  zh: 被试聆听有声书、故事或播客等连续自然语音，除理解外通常不执行其他任务。神经活动跟随语音的慢幅度包络，可用时间响应函数或刺激重建来估计这种包络跟踪。
+trial_structure:
+  conditions:
+  - speech (no task other than comprehension)
+protocol:
+  n_classes: 1
+  classes:
+  - continuous speech
+  cue: continuous natural speech (audiobooks, stories, podcasts)
+  paradigm_timing: continuous
+  feedback: none
+  distinguishing: 标准配置（最早发表）：连续自然语音聆听，TRF/刺激重建分析（R1026、R1005）。本类只有这一配置；多说话人选择性注意属 PER-AAD（包 A）。
+first_source:
+  citation: Luo H, Poeppel D. Phase Patterns of Neuronal Responses Reliably Discriminate Speech in Human Auditory Cortex.
+    Neuron. 2007;54(6):1001-1010.
+  doi: 10.1016/j.neuron.2007.06.004
+  pmid: '17582338'
+  year: 2007
+  verified: false
+interop:
+  bids_task: naturalspeech
+notes: 'Leads: R0913, R0973, R1005, R1026, R1033 (R#### = curation/literature.csv; DN## = curation/work/pkg_D/new_leads.csv).
+  Two source candidates: R1026 (Phase patterns of neuronal responses reliably discriminate speech in human auditory cortex)
+  and R1005 (Neural responses to uninterrupted natural speech can be extracted with precise temporal resolution); R1026 chosen
+  provisionally, both lack author/year fields. Overlap with PER-AAD-001 (package A), which covers attention decoding with
+  competing talkers. Sprint 2 (D-057, curator_d, 2026-10-03): protocol block added (-001 = earliest/standard configuration).
+  bibliography corrected (OpenAlex, 2026-10-05)'
+status: draft
+contributors:
+- curator_d

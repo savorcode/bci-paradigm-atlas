@@ -1,0 +1,62 @@
+schema_version: '0.2'
+id: MEM-PA-001
+class: MEM-PA
+name:
+  en: Paired-associate learning
+  zh: 配对联想学习
+aliases:
+- Associative memory task
+- Cued recall of word pairs
+- Paired Associate Learning
+- Paired Associates Learning
+family: memory
+bci_category:
+- none
+recording_modality:
+- EEG
+- fMRI
+- sEEG
+stimulus_modality:
+- visual
+- auditory
+markers:
+- MK.hippocampal_theta
+- MK.BOLD_hippocampus
+description:
+  en: Participants study pairs of words and are later cued with the first word of each pair to recall (or recognise) its associate.
+    Successful associative encoding and retrieval are associated with hippocampal BOLD activity and with hippocampal theta
+    oscillations in intracranial recordings.
+  zh: 被试学习词—词配对，随后以每对的第一个词为线索回忆（或再认）其配对词。成功的联想编码与提取伴随海马 BOLD 活动以及颅内记录中的海马 θ 振荡。
+trial_structure:
+  conditions:
+  - recalled
+  - not recalled
+protocol:
+  n_classes: 2
+  classes:
+  - later recalled pair
+  - later forgotten pair
+  cue: word-word pairs at study; first word as cue at test
+  paradigm_timing: synchronous
+  feedback: none
+  distinguishing: 标准配置（最早发表）：词—词配对学习与线索回忆（源头 TBD）。与 -002（物体—位置视空间配对联想，准则 2）区别。
+first_source:
+  citation: 'TBD: no origin source identified yet (see curation/work/pkg_D/status.csv)'
+  verified: false
+interop:
+  bids_task: pairedassoc
+notes: 'HED task page: https://www.hedtags.org/hed-task/tasks/hedtsk_paired_associates_learning.html. Leads: R0187, R0401,
+  R0491, R0504, R0605, R0733, DN11 (R#### = curation/literature.csv; DN## = curation/work/pkg_D/new_leads.csv). No origin
+  paper among the leads (all leads are 2000 or later). Cognitive Atlas (DN11) attributes the task to Mary Whiton Calkins (1894)
+  without a bibliographic record; origin still to be identified. first_source blocked: see curation/work/pkg_D/status.csv.
+  Sprint 2 (D-057, curator_d, 2026-10-03): protocol block added (-001 = earliest/standard configuration). Narrowed to verbal
+  (word-word) cued recall; the visuospatial object-location version moved to MEM-PA-002. Face-name and associative-recognition
+  versions logged as proposed. Sibling concrete paradigms: MEM-PA-002. first_source still TBD after bibliographic search (2026-10-05;
+  curator_c): queries: (1) Crossref query.author=Calkins bibliographic "Association Psychological Review 1894" -> Calkins
+  1894 Experimental. (Psychol Rev 1(3):327-329), Calkins 1896 Association (II.) (3(1):32-49), Calkins 1895 Recognition and
+  Association; (2) Crossref same + "volume 1 issue 5 476" -> HTTP 429; (3) OpenAlex record of 10.1037/h0065852 -> short note,
+  no abstract. The 1894 "Association" paper (Psychol Rev 1(5)) attributed by Cognitive Atlas was not returned; cannot identify
+  the origin bibliographically'
+status: draft
+contributors:
+- curator_d

@@ -1,0 +1,49 @@
+schema_version: '0.2'
+id: ERR-GAM-003
+class: ERR-GAM
+name:
+  en: Passive slot-machine outcomes
+  zh: 被动老虎机结果
+aliases:
+- Slot-machine task
+- No-choice gambling
+family: error
+bci_category:
+- none
+recording_modality:
+- EEG
+stimulus_modality:
+- visual
+markers:
+- MK.FRN
+description:
+  en: Participants watch a computer-generated slot machine deliver gain or loss outcomes that are not contingent on any choice
+    of their own. Outcome feedback still elicits a feedback-related negativity, allowing outcome evaluation to be separated
+    from action selection.
+  zh: 被试观看计算机生成的老虎机给出收益或损失结果，结果与自身任何选择无关。结果反馈仍诱发反馈相关负波，从而把结果评价与动作选择分开。
+trial_structure:
+  conditions:
+  - gain outcome
+  - loss outcome
+protocol:
+  n_classes: 2
+  classes:
+  - gain outcome
+  - loss outcome
+  cue: computer-generated slot-machine outcomes without a choice by the participant
+  paradigm_timing: synchronous
+  feedback: discrete
+  distinguishing: 准则 3：试次中没有选择/反应阶段，结果与被试行为无关（ERR-GAM-001 先选择再得反馈）。
+first_source:
+  citation: Yeung et al. 2004, as cited in R0714 (Somon et al. 2017); full reference not seen
+  year: 2004
+  verified: false
+interop:
+  bids_task: slotmachine
+notes: 'Leads used: R0714. Year given as cited in R0714; full references (Yeung et al.; Donkers et al. 2005) to be added by
+  the maintainer. Passive no-choice outcome viewing is close to observational FRN paradigms listed in R0714 (Yu & Zhou 2006)
+  - not split further. Sprint 2 (D-057, curator_c, 2026-10-03): new concrete paradigm of class ERR-GAM; numbering criterion
+  3 relative to ERR-GAM-001; all sources unverified. [maintainer, sprint 2] Lead registered as R1321 (literature.csv).'
+status: draft
+contributors:
+- curator_c

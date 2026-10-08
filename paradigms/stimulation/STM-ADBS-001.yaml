@@ -1,0 +1,55 @@
+schema_version: '0.2'
+id: STM-ADBS-001
+class: STM-ADBS
+name:
+  en: Adaptive (closed-loop) deep brain stimulation
+  zh: 自适应（闭环）深部脑刺激
+aliases:
+- adaptive DBS
+- aDBS
+- closed-loop DBS
+- beta-triggered DBS
+family: stimulation
+bci_category:
+- passive
+recording_modality:
+- other
+stimulus_modality:
+- electrical_stimulation
+markers:
+- MK.subthalamic_beta
+description:
+  en: >-
+    In patients with DBS electrodes (typically in the subthalamic nucleus for Parkinson's disease), local field potentials
+    are recorded from the stimulating lead and stimulation is switched on or adjusted when a biomarker, usually beta-band
+    power, exceeds a threshold. The subthalamic beta signal serves both as the control variable and as the outcome measure.
+  zh: 在植入 DBS 电极的患者（通常为帕金森病丘脑底核）中，从刺激电极记录局部场电位，当生物标记物（通常为 β 频段功率）超过阈值时开启或调整刺激。丘脑底核 β 信号既是控制变量，也是结果指标。
+protocol:
+  n_classes: 2
+  classes:
+  - adaptive (beta-triggered) stimulation
+  - comparison stimulation (conventional or none)
+  cue: none
+  stimulus_coding: stimulation switched on when subthalamic beta power exceeds a threshold
+  paradigm_timing: continuous
+  feedback: continuous
+  distinguishing: >-
+    Standard configuration (earliest published) / 标准配置（最早发表）: closed-loop on/off DBS triggered by subthalamic beta power (R1128;
+    origin not established). No sibling protocol yet; continuously amplitude-scaled versions are proposed in split_log only
+    if a lead is found.
+first_source:
+  citation: >-
+    Little S, Pogosyan A, Neal S, Zrinzo L, Hariz M, Foltynie T, Limousin P, Brown P. Controlling Parkinson's disease with
+    adaptive deep brain stimulation. Journal of Visualized Experiments. 2014;(89):51403.
+  doi: 10.3791/51403
+  year: 2014
+  verified: false
+interop:
+  bids_task: adbs
+notes: >-
+  Search sources (curation/work/pkg_B/search_log.md): N10 https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4217393/. New candidate
+  (pkg B). D-027: DBS lead LFP recorded as 'other'. Lead N10 is title+URL only; memory lead Little et al. 2013 Ann Neurol
+  not confirmed. Requests new marker MK.subthalamic_beta. bibliography corrected (OpenAlex, 2026-10-05)
+status: draft
+contributors:
+- curator_b

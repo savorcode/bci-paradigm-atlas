@@ -1,0 +1,28 @@
+schema_version: "0.2"
+id: MK.N2_frontocentral
+name:
+  en: Fronto-central N2 (conflict/inhibition)
+  zh: 额中央 N2（冲突/抑制）
+aliases:
+- N2
+- N200
+- NoGo-N2
+- conflict N2
+- anterior N2
+type: erp_component
+recording_modality:
+- EEG
+signature:
+  latency_ms: 200-350 after stimulus onset
+  polarity: negative
+  topography: fronto-central
+description:
+  en: Stimulus-locked negative component enhanced on trials requiring response conflict resolution or inhibition, such as
+    incongruent flanker or Simon trials and NoGo trials. Distinguished from posterior N2 components related to visual attention.
+  zh: 在需要解决反应冲突或进行抑制的试次（如 Flanker 或 Simon 的不一致试次、NoGo 试次）上增强的刺激锁时负成分。与视觉注意相关的后部 N2 成分相区别。
+notes: 'Signature values are textbook-level approximations and await checking against sources (pass 2). Generators and indexes
+  not yet written. Used by (registry): CTL-FLK-001, CTL-GNG-001, CTL-SIM-001, MEM-TNT-001, EMO-EST-001, SOC-WIT-001.'
+status: draft
+contributors:
+- maintainer
+- curator_c

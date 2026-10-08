@@ -1,0 +1,58 @@
+schema_version: '0.2'
+id: MOT-GRASP-003
+class: MOT-GRASP
+name:
+  en: Self-paced natural reach-and-grasp (EEG)
+  zh: 自定步调的自然伸手抓握（脑电）
+aliases:
+- reach-and-grasp EEG
+- palmar vs lateral grasp
+family: motor
+bci_category:
+- active
+recording_modality:
+- EEG
+stimulus_modality:
+- motor_execution
+- visual
+markers:
+- MK.SMR_ERD
+- MK.low_freq_kinematics
+description:
+  en: >-
+    Seated participants reach, at self-chosen times, for objects on a table and grasp them with a palmar grasp (e.g. an empty
+    jar) or a lateral grasp (e.g. a spoon in a jar), contrasted with rest. EEG is analysed relative to movement onset to decode
+    the grasp type.
+  zh: 坐姿被试在自选时刻伸手抓取桌上的物体，用掌握（如空罐）或侧捏（如罐中的勺子），并与休息对照。以动作起始为参照分析脑电，解码抓握类型。
+protocol:
+  n_classes: 3
+  classes:
+  - palmar grasp
+  - lateral grasp
+  - rest
+  cue: real objects on a table (no timing cue)
+  paradigm_timing: asynchronous
+  feedback: none
+  distinguishing: >-
+    Criteria 1, 2 and 3 vs MOT-GRASP-001: palmar vs lateral grasp plus rest, real-object reach without a timing cue, self-paced
+    trials, scalp EEG.
+first_source:
+  citation: >-
+    Schwarz A, Escolano C, Montesano L, Müller-Putz GR. Analyzing and decoding natural reach-and-grasp actions using gel,
+    water and dry EEG systems. Frontiers in Neuroscience 14:849. 2020.
+  doi: 10.3389/fnins.2020.00849
+  year: 2020
+  verified: false
+datasets:
+- name: BNCI2020_001 (MOABB)
+  url: https://moabb.neurotechx.com/docs/generated/moabb.datasets.BNCI2020_001.html
+  subjects: 45
+interop:
+  bids_task: grasp
+notes: >-
+  Leads: WF-B2-13 [=R1296] (MOABB BNCI2020_001 page: 45 subjects, palmar/lateral grasp/rest, 'Movement was self-paced', 80
+  trials per grasp type) and R0885 (Decoding different reach-and-grasp movements using non-invasive EEG; earlier, not read).
+  R0885 may be the earlier source of this configuration (check). bibliography confirmed (OpenAlex, 2026-10-05)
+status: draft
+contributors:
+- curator_b

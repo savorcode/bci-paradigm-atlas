@@ -1,0 +1,50 @@
+schema_version: '0.2'
+id: SSR-BEAT-001
+class: SSR-BEAT
+name:
+  en: Beat / rhythm entrainment
+  zh: 节律与节拍跟随
+aliases:
+- beat entrainment
+- meter frequency tagging
+- neural entrainment to beat
+- rhythm entrainment
+family: steady_state
+bci_category:
+- none
+recording_modality:
+- EEG
+- MEG
+stimulus_modality:
+- auditory
+markers:
+- MK.SSEP_beat
+description:
+  en: Participants listen to rhythmic sound patterns or music, sometimes while imagining a metre. The EEG shows peaks at the
+    beat and metre frequencies in the frequency spectrum, interpreted as neural entrainment to the perceived beat.
+  zh: 被试聆听节奏性声音模式或音乐，有时同时想象某种节拍结构。脑电频谱在节拍和拍律频率处出现峰值，被解释为神经活动对所知觉节拍的夹带。
+protocol:
+  n_classes: 3
+  classes:
+  - beat (no imagery)
+  - imagined binary meter
+  - imagined ternary meter
+  cue: repeated rhythmic sound pattern, with or without imagined meter
+  paradigm_timing: block
+  feedback: none
+  distinguishing: 标准配置（最早发表，即 first_source）：聆听节律声音，有/无想象节拍（二拍/三拍）。本类暂无其他具体范式（no sibling protocol yet）。
+first_source:
+  citation: Nozaradan S, Peretz I, Missal M, Mouraux A. Tagging the neuronal entrainment to beat and meter. The Journal of
+    Neuroscience. 2011.
+  doi: 10.1523/JNEUROSCI.0411-11.2011
+  year: 2011
+  verified: false
+interop:
+  bids_task: beat
+notes: 'Leads used: R0377, R0548, R0623, R0688. first_source found by search in this sprint (SA30/SA34), not from the lead
+  list. Leads are fMRI and review papers on beat perception; the frequency-tagging origin paper was found in this sprint (SA30/SA34).
+  [curator_a sprint 2, 2026-10-03] D-057: protocol block added for the canonical configuration; no other concrete paradigm
+  identified for this class in sprint 2. [curator_e sprint 3, 2026-10-05] bibliography confirmed (Crossref, 2026-10-05).'
+status: draft
+contributors:
+- curator_a

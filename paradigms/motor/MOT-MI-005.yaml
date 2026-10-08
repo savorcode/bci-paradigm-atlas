@@ -1,0 +1,58 @@
+schema_version: '0.2'
+id: MOT-MI-005
+class: MOT-MI
+name:
+  en: Left/right-hand motor imagery with continuous visual feedback
+  zh: 带连续视觉反馈的左/右手运动想象
+aliases:
+- Graz feedback paradigm
+- smiley feedback
+- BCI Competition IV 2b feedback sessions
+family: motor
+bci_category:
+- active
+recording_modality:
+- EEG
+stimulus_modality:
+- mental_imagery
+- visual
+markers:
+- MK.SMR_ERD
+description:
+  en: As in the two-class cue-based paradigm, an arrow cue instructs left- or right-hand imagery, but during the imagery period
+    the output of an online classifier is fed back continuously as a moving visual object (e.g. a smiley moving left or right).
+    The closed loop lets participants adjust their sensorimotor rhythm modulation within the trial.
+  zh: 与二分类提示范式相同，箭头提示被试想象左手或右手；不同的是在想象期内，在线分类器的输出以移动的视觉对象（如向左或向右移动的笑脸）连续反馈给被试。闭环使被试能在试次内调整其感觉运动节律调制。
+protocol:
+  n_classes: 2
+  classes:
+  - left hand
+  - right hand
+  cue: visual arrow cue
+  paradigm_timing: synchronous
+  feedback: continuous
+  distinguishing: 'Criterion 4 vs MOT-MI-001: same class set and cue, but continuous online visual feedback of the classifier
+    output (closed loop) instead of no feedback.'
+first_source:
+  citation: Neuper C, Schlögl A, Pfurtscheller G. Enhancement of left-right sensorimotor EEG differences during feedback-regulated
+    motor imagery. Journal of Clinical Neurophysiology. 1999;16(4):373-382.
+  doi: 10.1097/00004691-199907000-00010
+  year: 1999
+  verified: false
+datasets:
+- name: BCI Competition IV, dataset 2b (smiley feedback sessions; BNCI2014_004)
+  url: https://moabb.neurotechx.com/docs/generated/moabb.datasets.BNCI2014_004.html
+  subjects: 9
+interop:
+  bids_task: motorimagery
+notes: 'Lead: WF-B2-05 [=R1293] (MOABB BNCI2014_004 page: 2-class left/right hand, arrow cue 1.25 s at t=2 s, imagery until
+  t=6 s, 5 sessions, ''screening sessions (no feedback) and smiley feedback sessions''; dataset paper doi 10.1109/TNSRE.2007.906956).
+  D-057 explicitly names ''two-class + continuous feedback'' as a new number (criterion 4). [curator_a, sprint 3] Former first_source:
+  "TBD: earliest publication of the two-class Graz MI protocol with continuous online feedback not identified; dataset reference
+  for BCI Competition IV 2b is Leeb R, Brunner C, Müller-Putz GR, Schlögl A, Pfurtscheller G, et al., IEEE TNSRE 2007, doi
+  10.1109/TNSRE.2007.906956 (title not displayed)". candidate origin found by bibliographic search; content unverified. bibliography
+  corrected (OpenAlex, 2026-10-05) [maintainer sprint 3, 2026-10-07, D-073] origin candidate recalled, record confirmed via
+  OpenAlex.'
+status: draft
+contributors:
+- curator_b

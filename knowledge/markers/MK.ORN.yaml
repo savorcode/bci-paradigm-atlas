@@ -1,0 +1,25 @@
+schema_version: "0.2"
+id: MK.ORN
+name:
+  en: Object-related negativity
+  zh: 客体相关负波
+aliases:
+- ORN
+- object-related negativity
+type: erp_component
+recording_modality:
+- EEG
+- MEG
+signature:
+  latency_ms: ~150-250
+  polarity: negative
+  topography: fronto-central
+description:
+  en: Negative difference wave elicited when a complex sound is heard as two concurrent auditory objects (for example with
+    a mistuned harmonic), present also when the sounds are ignored.
+  zh: 当一个复合声音被听成两个同时存在的听觉客体（如含失谐谐波）时诱发的负性差异波，在忽略声音时也会出现。
+notes: First-pass skeleton by package A (2026-10-03). No generators/indexes yet. Signature values are textbook-level approximations
+  and await source checking. New marker requested by package A (curation/work/pkg_A/marker_requests.csv); not yet in curation/registry/markers.csv.
+status: draft
+contributors:
+- curator_a

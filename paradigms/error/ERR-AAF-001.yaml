@@ -1,0 +1,54 @@
+schema_version: '0.2'
+id: ERR-AAF-001
+class: ERR-AAF
+name:
+  en: Pitch-shifted auditory feedback during vocalization
+  zh: 音高偏移听觉反馈（言语运动误差）
+aliases:
+- Altered auditory feedback
+- AAF
+- Pitch-shift paradigm
+- Pitch perturbation
+family: error
+bci_category:
+- none
+recording_modality:
+- EEG
+stimulus_modality:
+- auditory
+- motor_execution
+markers:
+- MK.N1_auditory
+- MK.P2_auditory
+description:
+  en: Participants sustain a vowel or speak while hearing their own voice through headphones, and the pitch of the feedback
+    is briefly shifted up or down, producing a sensory prediction error that triggers a compensatory vocal response. Pitch
+    shifts elicit auditory N1 and P2 responses whose amplitudes are reduced when the timing of the shift is predictable.
+  zh: 被试持续发元音或说话，同时通过耳机听到自己的声音，反馈的音高被短暂上调或下调，形成感觉预测误差并引发代偿性发声反应。音高偏移诱发听觉 N1 与 P2，当偏移时间可预测时其波幅降低。
+trial_structure:
+  conditions:
+  - upward pitch shift
+  - downward pitch shift
+protocol:
+  n_classes: 2
+  classes:
+  - upward pitch shift
+  - downward pitch shift
+  cue: brief real-time pitch shift of the participant's own voice heard through headphones during sustained vowel production
+  paradigm_timing: synchronous
+  feedback: continuous
+  distinguishing: 标准配置：持续元音发声时，耳机中实时回放的自身嗓音被短暂上移或下移音高（闭环听觉反馈扰动）。出处未定（TBD，见 first_source）；本包仅此一个配置。
+first_source:
+  citation: 'TBD: no origin source identified yet (see curation/work/pkg_C/status.csv)'
+  verified: false
+interop:
+  bids_task: pitchshift
+notes: 'Leads used: S_BEHROOZMAND2016 (search: https://neuinfo.org/literature/pmid:26835556?rpKey=on). first_source lead:
+  none (TBD). Origin not identified: the only lead (S_BEHROOZMAND2016) is a 2016 study; one search for the behavioural pitch-shift
+  origin (Burnett et al. 1998, memory) did not surface the paper. Possible family overlap with language (LAN-OVS-001) to be
+  discussed. Pass 1 skeleton (curator_c, 2026-10-03); all sources unverified. Sprint 2 (D-057): protocol added; single configuration,
+  no split. D-042 pending: if ERR-AAF is merged into LAN-SIS (package D), this configuration should receive a new serial under
+  LAN-SIS instead of a variant; lead S_BEHROOZMAND2016 (R1259) handed over in worklog.'
+status: draft
+contributors:
+- curator_c

@@ -1,0 +1,51 @@
+schema_version: '0.2'
+id: LAN-N400-002
+class: LAN-N400
+name:
+  en: Graded cloze-probability sentence endings
+  zh: 按完形概率分级的句末词
+aliases:
+- cloze probability N400
+- word expectancy N400
+family: language
+bci_category:
+- none
+recording_modality:
+- EEG
+stimulus_modality:
+- visual
+markers:
+- MK.N400
+description:
+  en: Sentence-final words are all semantically acceptable but differ in cloze probability, that is, in how often they are
+    produced as completions of the sentence frame in a norming study; some designs also vary the semantic relation of unexpected
+    words to the expected word. N400 amplitude decreases graded with increasing cloze probability.
+  zh: 句末词都在语义上可接受，但完形概率不同，即在常模研究中被用作该句框补全的频率不同；有的设计还改变意外词与预期词的语义关联。N400 波幅随完形概率升高而分级降低。
+trial_structure:
+  conditions:
+  - high cloze
+  - medium cloze
+  - 'low cloze (levels: parameter)'
+protocol:
+  n_classes: 3
+  classes:
+  - high cloze
+  - medium cloze
+  - low cloze
+  cue: sentences presented visually word by word
+  paradigm_timing: synchronous
+  feedback: none
+  distinguishing: 准则 1：条件集由一致/语义违例二分（LAN-N400-001）变为同属可接受结尾、按完形概率分级的多个水平。
+first_source:
+  citation: Kutas M, Hillyard SA. Brain potentials during reading reflect word expectancy and semantic association. Nature.
+    1984;307(5947):161-163.
+  doi: 10.1038/307161a0
+  pmid: '6690995'
+  year: 1984
+  verified: false
+notes: 'New configuration (sprint 2). Lead R0863 (Brain potentials during reading reflect word expectancy and semantic association;
+  title and PMID only). Leads: R0863, R1075. (R#### = curation/literature.csv; DN## = curation/work/pkg_D/new_leads.csv.)
+  Numbering criterion (D-057): 1. bibliography corrected (OpenAlex, 2026-10-05)'
+status: draft
+contributors:
+- curator_d

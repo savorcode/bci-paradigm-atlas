@@ -1,0 +1,29 @@
+schema_version: "0.2"
+id: MK.linguistic_structure_tracking
+name:
+  en: Cortical tracking of linguistic structure
+  zh: 语言层级结构的皮层跟踪
+aliases:
+- hierarchical linguistic tracking
+- phrase-rate and sentence-rate responses
+- word-rate entrainment
+type: steady_state
+recording_modality:
+- MEG
+- EEG
+- ECoG
+signature:
+  frequency_hz: at the presentation rates of linguistic units (syllables, words, phrases, sentences)
+description:
+  en: >-
+    Neural responses whose spectral peaks occur at the rates of abstract linguistic units, such as words, phrases
+    or sentences, when these units are presented isochronously without acoustic boundary cues. The peaks emerge
+    only when the listener can parse or has learned the structure, distinguishing them from acoustic envelope tracking.
+  zh: 当词、短语或句子等抽象语言单位以等时方式呈现且无声学边界线索时，神经响应在这些单位的频率处出现谱峰。只有当听者能够解析或已经习得该结构时才出现，以此区别于声学包络跟踪。
+notes: >-
+  First-pass skeleton (curator_d, 2026-10-03). Signature values are textbook-level approximations that await source
+  checking; generators and indexes will be added in the second pass.
+status: draft
+contributors:
+- maintainer
+- curator_d

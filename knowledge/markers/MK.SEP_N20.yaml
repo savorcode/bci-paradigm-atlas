@@ -1,0 +1,11 @@
+schema_version: "0.2"
+id: MK.SEP_N20
+name: {en: Median nerve SEP N20, zh: 正中神经体感诱发电位 N20}
+aliases: [N20, N20m, N20-P25]
+type: erp_component
+recording_modality: [EEG, MEG]
+signature: {latency_ms: ~20, polarity: 'negative (scalp, over contralateral parietal)', topography: 'contralateral centro-parietal (CP3/CP4), primary somatosensory cortex'}
+description: {en: 'Earliest cortical component of the somatosensory evoked potential to electrical median-nerve stimulation at the wrist, a negativity at about 20 ms over the contralateral parietal scalp that reflects activation of primary somatosensory cortex.', zh: 腕部正中神经电刺激所诱发体感诱发电位中最早的皮层成分，约 20 ms 时出现在对侧顶区头皮的负波，反映初级体感皮层的激活。}
+notes: Signature values are textbook-level characteristics and await source checking (first pass, curator_b). Generators and indexes to be added in the second pass.
+status: draft
+contributors: [maintainer, curator_b]

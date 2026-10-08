@@ -1,0 +1,53 @@
+schema_version: '0.2'
+id: PER-OMIT-001
+class: PER-OMIT
+name:
+  en: Stimulus omission paradigm
+  zh: 刺激遗漏范式
+aliases:
+- omission MMN
+- omitted stimulus potential (OSP)
+- self-generated sound omission
+- stimulus omission paradigm
+family: perception
+bci_category:
+- none
+recording_modality:
+- EEG
+- MEG
+stimulus_modality:
+- auditory
+markers:
+- MK.omission_response
+description:
+  en: A regular, externally timed sound sequence occasionally omits a stimulus. Although no input arrives, an omission response
+    is evoked at the expected time of the missing sound, taken as evidence of sensory prediction.
+  zh: 外部定时的规则声音序列中偶尔遗漏一个刺激。尽管没有输入，在被遗漏声音的预期时刻仍诱发遗漏响应，被视为感觉预测的证据。
+protocol:
+  n_classes: 2
+  classes:
+  - sound
+  - omission
+  cue: regular, externally timed sound sequence with occasional omissions
+  stimulus_coding: 自发按键产生声音的遗漏版本拆为 PER-OMIT-002（准则 2;3）。
+  paradigm_timing: synchronous
+  feedback: none
+  distinguishing: 标准配置（最早发表，即 first_source）：外部定时的规则声音序列中偶尔遗漏刺激。同类其他具体范式：PER-OMIT-002（区别见各自 distinguishing；维护者 sprint 2 QA
+    更正）。
+first_source:
+  citation: Sutton S, Tueting P, Zubin J, John ER. Information delivery and the sensory evoked potential. Science. 1967;155(3768):1436-1439.
+  doi: 10.1126/science.155.3768.1436
+  year: 1967
+  verified: false
+interop:
+  bids_task: omission
+notes: 'Leads used: R0571, R0585, R0792. first_source: no origin source identified in this pass (blocker, see curation/work/pkg_A/status.csv).
+  Leads are a 2013 review and later studies; no origin paper. [curator_a sprint 2, 2026-10-03] D-057: the self-initiated (button
+  press) omission version is PER-OMIT-002. [curator_e sprint 3, 2026-10-05] candidate origin found by bibliographic search
+  (OpenAlex, 2026-10-05); content unverified. [maintainer sprint 3, 2026-10-07] bibliography confirmed (OpenAlex, 2026-10-05;
+  origin candidate, content unverified). [maintainer sprint 3, 2026-10-07, D-073] origin candidate recalled, record confirmed
+  via OpenAlex.'
+status: draft
+contributors:
+- curator_a
+- curator_e

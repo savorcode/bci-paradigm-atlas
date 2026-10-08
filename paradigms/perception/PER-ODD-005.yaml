@@ -1,0 +1,54 @@
+schema_version: '0.2'
+id: PER-ODD-005
+class: PER-ODD
+name:
+  en: RSVP speller (gaze-independent)
+  zh: RSVP 拼写器（不依赖注视）
+aliases:
+- RSVP speller
+- RSVP typing
+family: perception
+bci_category:
+- reactive
+recording_modality:
+- EEG
+stimulus_modality:
+- visual
+markers:
+- MK.P3b
+description:
+  en: Letters and symbols are presented one at a time in rapid succession at the centre of the screen. The user attends to
+    the letter to be written; its occurrences elicit a P300, the letter is selected after several repetitions and is shown
+    as feedback. Because all symbols appear at fixation, the speller does not require eye movements.
+  zh: 字母与符号在屏幕中央快速逐个呈现。用户注意要书写的字母，该字母出现时诱发 P300，经若干次重复后选定并显示为反馈。所有符号都出现在注视点，因而无需眼动。
+trial_structure:
+  conditions:
+  - attended letter
+  - other letters
+protocol:
+  classes:
+  - letters and symbols of the alphabet
+  cue: rapid serial presentation of letters at fixation
+  stimulus_coding: rapid serial presentation of symbols at one location
+  paradigm_timing: synchronous
+  feedback: discrete
+  distinguishing: 准则 1;4（相对 -004）：类别集为字母表（选择任务），逐字母离散反馈；准则 2（相对 -003）：中央 RSVP 而非矩阵行/列闪烁。
+first_source:
+  citation: Acqualagna L, Blankertz B. Gaze-independent BCI-spelling using rapid serial visual presentation (RSVP). Clin Neurophysiol.
+    2013;124(5):901-908.
+  doi: 10.1016/j.clinph.2012.12.050
+  year: 2013
+  verified: false
+datasets:
+- name: BNCI2015-010 RSVP speller
+  url: https://moabb.neurotechx.com/docs/generated/moabb.datasets.BNCI2015_010.html
+  identifier: BNCI2015_010
+  subjects: 12
+interop:
+  bids_task: rsvp
+notes: 'Lead: MOABB dataset page BNCI2015_010 (S2A09 [=R1271]), which gives the reference and SOAs of 116 and 83 ms (parameters).
+  Earlier RSVP spellers may exist (RSVP typing was part of the old PER-ODD-001 variant; R0843 review). New in sprint 2. [curator_e
+  sprint 3, 2026-10-05] bibliography confirmed (Crossref, 2026-10-05).'
+status: draft
+contributors:
+- curator_a

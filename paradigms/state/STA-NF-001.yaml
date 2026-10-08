@@ -1,0 +1,62 @@
+schema_version: '0.2'
+id: STA-NF-001
+class: STA-NF
+name:
+  en: EEG band-power neurofeedback
+  zh: 脑电频段功率神经反馈
+aliases:
+- EEG biofeedback
+- neurofeedback
+- real-time fMRI neurofeedback
+- rtfMRI-NF
+family: state
+bci_category:
+- active
+recording_modality:
+- EEG
+- fMRI
+- fNIRS
+stimulus_modality:
+- visual
+- auditory
+- cognitive_task
+markers:
+- MK.SMR_ERD
+- MK.alpha_posterior
+description:
+  en: Power in a target EEG frequency band, such as the sensorimotor rhythm or posterior alpha, is extracted in real time
+    and fed back as a visual or auditory display or a reward signal, and over sessions the participant learns to change it
+    in the target direction.
+  zh: 实时提取目标脑电频段（如感觉运动节律或后部 α）的功率，以视觉、听觉显示或奖励信号的形式反馈；经过多次训练，被试学会使其朝目标方向变化。
+protocol:
+  n_classes: 1
+  classes:
+  - target EEG band-power change (e.g. SMR increase)
+  cue: visual or auditory display or reward signal driven by the online band power
+  paradigm_timing: continuous
+  feedback: continuous
+  distinguishing: 'Standard configuration (earliest published or canonical; D-057 -001): operant training of one EEG frequency
+    band with continuous feedback over sessions (earliest seen: Sterman & Friar 1972, SMR). Differs from STA-NF-002 (haemodynamic
+    regional neurofeedback in regulate/rest blocks).'
+first_source:
+  citation: Sterman MB, Friar L. Suppression of seizures in an epileptic following sensorimotor EEG feedback training. Electroencephalography
+    and Clinical Neurophysiology. 1972;33(1):89-95.
+  doi: 10.1016/0013-4694(72)90028-4
+  year: 1972
+  verified: false
+interop:
+  bids_task: neurofeedback
+notes: 'Lead refs (curation/literature.csv): R0936 [review], R0940 [review], R0977 [review], R1011 [review], R1028 [method].
+  Sources found by curator_e (curation/work/pkg_E/search_log.md): S04 = https://scholarhub.vn/publication/:slug/f95af23a-e8b0-42d2-b17e-973ef65dc03a.
+  Umbrella entry per D-020. Origin not identified: all leads are reviews or later method papers (R0936, R0940, R0977, R1011,
+  R1028); a search for early SMR feedback (Sterman) surfaced only S04 (title, no bibliographic data). First-pass skeleton
+  (curator_e, 2026-10-03); all sources unverified. Sprint 2 (curator_e, 2026-10-03): protocol block added per D-057; see curation/work/pkg_E/sprint2/split_log.csv.
+  Sprint 2: first_source filled from the reference list of Wikipedia ''Neurofeedback'' (sprint-2 F03 [=R1342]); the same page
+  reports alpha feedback by Kamiya in 1962 (cited there only via a 1979 chapter), and Sterman''s first SMR work in 1967, neither
+  seen as a record; so this is the earliest seen, not a confirmed origin. The rtfMRI variant moved to STA-NF-002; the fNIRS
+  variant moved to STA-NF-002 as a parameter-level variant. Sprint 3 (curator_d, 2026-10-05): bibliography corrected (OpenAlex,
+  2026-10-05): doi added, author initials (Sterman MB). [maintainer sprint 3, 2026-10-07, D-073] origin candidate recalled,
+  record confirmed via OpenAlex.'
+status: draft
+contributors:
+- curator_e

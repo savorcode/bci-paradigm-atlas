@@ -1,0 +1,51 @@
+schema_version: '0.2'
+id: MEM-MST-002
+class: MEM-MST
+name:
+  en: Incidental mnemonic similarity (repetition suppression)
+  zh: 偶然编码的记忆相似性（重复抑制设计）
+aliases:
+- pattern separation repetition-suppression design
+family: memory
+bci_category:
+- none
+recording_modality:
+- fMRI
+stimulus_modality:
+- visual
+markers:
+- MK.BOLD_hippocampus
+description:
+  en: Pictures of everyday objects are shown once, repeated, or followed by a similar lure while participants perform an incidental
+    judgement unrelated to memory (for example indoor versus outdoor); no recognition decision is required. Pattern separation
+    is inferred from whether the hippocampal BOLD response to lures shows repetition suppression like repeats or recovers
+    like new items.
+  zh: 呈现日常物体图片：有的只出现一次，有的重复，有的之后出现相似诱饵，被试只做与记忆无关的偶然判断（如室内或室外），不需要再认决策。以海马对诱饵的 BOLD 反应是像重复项那样出现重复抑制、还是像新项目那样恢复，推断模式分离。
+trial_structure:
+  conditions:
+  - first presentation
+  - repeat
+  - similar lure
+protocol:
+  n_classes: 3
+  classes:
+  - first presentation
+  - repeat
+  - similar lure
+  cue: object photographs with an incidental indoor/outdoor judgement
+  paradigm_timing: synchronous
+  feedback: none
+  distinguishing: 准则 1：条件集由显式“旧/相似/新”判断（MEM-MST-001）变为不要求记忆判断的首次/重复/诱饵对比，读出为 BOLD 重复抑制。
+first_source:
+  citation: Bakker, A., Kirwan, C. B., Miller, M., & Stark, C. E. L. Pattern separation in the human hippocampal CA3 and dentate
+    gyrus. Science, 319(5870), 1640–1642. 2008.
+  doi: 10.1126/science.1152882
+  pmid: '18356518'
+  year: 2008
+  verified: false
+notes: 'New configuration (sprint 2). The task description (incidental indoor/outdoor judgement) is the curator''s reading
+  of R0416 (Bakker et al. 2008) and has to be checked against the original. Leads: R0416, R0499. (R#### = curation/literature.csv;
+  DN## = curation/work/pkg_D/new_leads.csv.) Numbering criterion (D-057): 1. bibliography confirmed (Crossref, 2026-10-05)'
+status: draft
+contributors:
+- curator_d

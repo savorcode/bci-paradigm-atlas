@@ -1,0 +1,11 @@
+schema_version: "0.2"
+id: MK.ERNA
+name: {en: Evoked resonant neural activity, zh: 诱发共振神经活动}
+aliases: [ERNA, DBS-evoked resonant activity]
+type: field_potential
+recording_modality: [other]
+signature: {frequency_hz: high-frequency (a few hundred Hz) decaying oscillation}
+description: {en: 'High-frequency, decaying oscillatory local field potential evoked in the subthalamic region by bursts of deep brain stimulation and recorded from non-stimulating contacts of the DBS lead. Its amplitude varies with electrode location and is studied as a marker for targeting.', zh: 深部脑刺激串在丘脑底核区域诱发、由 DBS 电极非刺激触点记录到的高频衰减振荡局部场电位。其幅度随电极位置变化，被研究作为靶点定位的标记。}
+notes: Signature values are textbook-level characteristics and await source checking (first pass, curator_b). Recorded from DBS leads; recording_modality 'other' per D-027 (DBS lead LFP). Generators and indexes to be added in the second pass.
+status: draft
+contributors: [maintainer, curator_b]

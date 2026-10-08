@@ -1,0 +1,54 @@
+schema_version: '0.2'
+id: SOC-GAZE-001
+class: SOC-GAZE
+name:
+  en: Gaze cueing and joint attention
+  zh: 目光线索与共同注意
+aliases:
+- eye-gaze following
+- gaze cueing
+- gaze-cueing task
+- joint attention
+family: social
+bci_category:
+- none
+recording_modality:
+- EEG
+- fMRI
+stimulus_modality:
+- visual
+markers:
+- MK.N170
+- MK.P1_visual
+- MK.BOLD_pSTS
+description:
+  en: A central face shifts its gaze to one side before a peripheral target appears; targets at the gazed-at location are
+    detected faster even when gaze does not predict target location. Gaze cues modulate the face-evoked N170 and target-evoked
+    P1 and engage the pSTS.
+  zh: 中央面孔先将视线转向一侧，随后外周出现靶刺激；即使视线方向不能预测靶位置，被注视位置的靶刺激也被更快检测。视线线索调制面孔诱发的 N170 与靶刺激诱发的 P1，并激活后颞上沟。
+protocol:
+  n_classes: 2
+  classes:
+  - target at gazed-at location
+  - target at non-gazed location
+  cue: central face with a non-predictive gaze shift, then a peripheral target
+  paradigm_timing: synchronous
+  feedback: none
+  distinguishing: 'Standard configuration (earliest published or canonical; D-057 -001): non-predictive gaze cueing (lead
+    R1059). Differs from SOC-GAZE-002 (gaze-contingent interactive joint attention).'
+first_source:
+  citation: Friesen CK, Kingstone A. The eyes have it! Reflexive orienting is triggered by nonpredictive gaze. Psychonomic
+    Bulletin & Review. 1998;5(3):490-495.
+  doi: 10.3758/BF03208827
+  year: 1998
+  verified: false
+interop:
+  bids_task: gazecueing
+notes: 'Lead refs (curation/literature.csv): R0882 [method], R0966 [method], R0986 [method], R1004 [review], R1059 [first_source_candidate].
+  R1059 lacks authors/year/DOI in literature.csv (task sheet: Friesen & Kingstone 1998, unverified). First-pass skeleton (curator_e,
+  2026-10-03); all sources unverified. Sprint 2 (curator_e, 2026-10-03): protocol block added per D-057; see curation/work/pkg_E/sprint2/split_log.csv.
+  Sprint 3 (curator_d, 2026-10-05): bibliography corrected (Crossref, 2026-10-05): doi, authors, year, journal, volume, issue,
+  pages added. [maintainer sprint 3, 2026-10-07, D-073] origin candidate recalled, record confirmed via Crossref.'
+status: draft
+contributors:
+- curator_e

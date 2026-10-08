@@ -1,0 +1,60 @@
+schema_version: '0.2'
+id: MEM-SWM-001
+class: MEM-SWM
+name:
+  en: Spatial working memory
+  zh: 空间工作记忆
+aliases:
+- Block Tapping
+- CANTAB SWM
+- Corsi
+- Corsi Span
+- Corsi block-tapping
+- Spatial delayed response
+- Spatial span
+- Spatial working memory task
+family: memory
+bci_category:
+- none
+recording_modality:
+- EEG
+- fMRI
+stimulus_modality:
+- visual
+markers:
+- MK.BOLD_frontoparietal
+description:
+  en: The experimenter taps (or a computer highlights) a sequence of blocks on a board, and participants reproduce the sequence;
+    span is the longest sequence reproduced correctly (Corsi block tapping). Spatial working-memory maintenance engages frontoparietal
+    hemodynamic activity.
+  zh: 主试依次敲击（或计算机依次点亮）板上的若干方块，被试复现这一序列；广度为能正确复现的最长序列（Corsi 方块敲击）。空间工作记忆保持激活额顶区域的血流动力学活动。
+trial_structure:
+  conditions:
+  - sequence length (parameter)
+protocol:
+  n_classes: 1
+  classes:
+  - sequence reproduction
+  cue: sequence of block locations tapped by the experimenter (or highlighted on screen)
+  paradigm_timing: synchronous
+  feedback: none
+  distinguishing: 标准配置（最早发表）：Corsi 方块敲击（Milner 1971, R0023；Corsi 1972, R0028），序列长度为参数。自定序空间搜索与偏侧化空间延迟反应配置暂记为提议。
+first_source:
+  citation: Milner B. Interhemispheric differences in the localization of psychological processes in man. British Medical
+    Bulletin. 1971;27(3):272-277.
+  doi: 10.1093/oxfordjournals.bmb.a070866
+  pmid: '4937273'
+  year: 1971
+  verified: false
+interop:
+  bids_task: spatialwm
+notes: 'HED task page: https://www.hedtags.org/hed-task/tasks/hedtsk_corsi_block_tapping.html. Leads: R0023, R0028, R0136,
+  R0339, R0631 (R#### = curation/literature.csv; DN## = curation/work/pkg_D/new_leads.csv). R0023 (Milner 1971) chosen as
+  origin of the Corsi block-tapping procedure (R0028 Corsi 1972 is the thesis). The marker MK.CDA applies to lateralized EEG
+  versions of spatial working memory tasks. Sprint 2 (D-057, curator_d, 2026-10-03): protocol block added (-001 = earliest/standard
+  configuration). Narrowed to Corsi block tapping; MK.CDA belongs to lateralised spatial delayed-response versions, which
+  have no lead yet (split_log: 提议), so it is removed from this file but kept at class level. bibliography corrected (Crossref,
+  2026-10-05)'
+status: draft
+contributors:
+- curator_d

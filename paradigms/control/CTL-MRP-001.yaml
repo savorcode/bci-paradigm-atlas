@@ -1,0 +1,51 @@
+schema_version: '0.2'
+id: CTL-MRP-001
+class: CTL-MRP
+name:
+  en: Masked response priming
+  zh: 掩蔽反应启动
+aliases:
+- Masked priming
+- Negative compatibility effect paradigm
+- Subliminal response priming
+family: control
+bci_category:
+- none
+recording_modality:
+- EEG
+stimulus_modality:
+- visual
+markers:
+- MK.LRP
+description:
+  en: A briefly presented, masked prime (e.g., a left- or right-pointing arrow) precedes a visible target that requires a
+    left or right response, with prime and target compatible or incompatible. The lateralised readiness potential shows partial
+    activation of the prime-assigned response followed, at longer prime-target intervals, by a reversal (negative compatibility
+    effect).
+  zh: 短暂呈现并被掩蔽的启动刺激（如向左或向右的箭头）先于需要左/右反应的可见目标出现，启动与目标相容或不相容。偏侧化准备电位显示启动刺激所对应的反应先被部分激活，在较长的启动–目标间隔下随后出现反转（负相容效应）。
+trial_structure:
+  conditions:
+  - compatible
+  - incompatible
+protocol:
+  n_classes: 2
+  classes:
+  - compatible prime
+  - incompatible prime
+  cue: briefly presented masked arrow prime followed by a visible arrow target
+  paradigm_timing: synchronous
+  feedback: none
+  distinguishing: 标准配置（最早发表）：掩蔽箭头启动刺激与可见目标相容/不相容（Eimer & Schlaghecken 1998，R1144）；启动–目标间隔是参数。
+first_source:
+  citation: 'Eimer M, Schlaghecken F. Effects of masked stimuli on motor activation: behavioral and electrophysiological evidence.
+    Journal of Experimental Psychology: Human Perception and Performance 24(6):1737-1747. 1998.'
+  year: 1998
+  verified: false
+interop:
+  bids_task: maskedpriming
+notes: 'Leads used: S_EIMER1998 (search: https://wrap.warwick.ac.uk/66051/). first_source lead: S_EIMER1998. Distinct from
+  LAN-PRIME-001 (semantic priming; N400): here the prime biases motor response selection. LRP marker owned by package B. Pass
+  1 skeleton (curator_c, 2026-10-03); all sources unverified. Sprint 2 (D-057): protocol added; single configuration, no split.'
+status: draft
+contributors:
+- curator_c

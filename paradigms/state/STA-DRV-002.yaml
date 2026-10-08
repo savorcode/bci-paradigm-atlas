@@ -1,0 +1,52 @@
+schema_version: '0.2'
+id: STA-DRV-002
+class: STA-DRV
+name:
+  en: Continuous simulated driving with eye-tracking vigilance labels
+  zh: 连续模拟驾驶（眼动警觉标注）
+aliases:
+- SEED-VIG paradigm
+family: state
+bci_category:
+- passive
+recording_modality:
+- EEG
+stimulus_modality:
+- visual
+- motor_execution
+markers:
+- MK.alpha_posterior
+- MK.theta_drowsiness
+description:
+  en: Participants drive in a virtual driving system for a long monotonous session without discrete lane-departure events,
+    while eye-tracking glasses compute PERCLOS (percentage of eyelid closure) as a continuous vigilance label for the simultaneous
+    EEG. EEG band power, notably theta and alpha, is regressed on the continuous vigilance index.
+  zh: 被试在虚拟驾驶系统中进行长时间单调驾驶，不设离散的车道偏移事件；眼动眼镜计算 PERCLOS（眼睑闭合百分比），作为同步脑电的连续警觉标注。将脑电频段功率（尤其 θ 与 α）对连续警觉指标进行回归。
+protocol:
+  n_classes: 1
+  classes:
+  - continuous vigilance index (PERCLOS)
+  cue: virtual driving scene; no imposed events
+  paradigm_timing: continuous
+  feedback: none
+  distinguishing: 'Criteria 2 and 3 versus STA-DRV-001: no lane-departure events, and vigilance is labelled continuously from
+    eye tracking rather than from response times to discrete events (SEED-VIG dataset).'
+first_source:
+  citation: Zheng WL, Lu BL. A multimodal approach to estimating vigilance using EEG and forehead EOG. Journal of Neural Engineering.
+    2017;14(2):026017.
+  doi: 10.1088/1741-2552/aa5a98
+  year: 2017
+  verified: false
+datasets:
+- name: SEED-VIG
+  url: https://bcmi.sjtu.edu.cn/home/seed/
+notes: 'Source: sprint-2 F02 (https://bcmi.sjtu.edu.cn/home/seed/): SEED-VIG uses a virtual driving system with PERCLOS labels
+  from SMI eye-tracking glasses. New concrete paradigm (curator_e, sprint 2, 2026-10-03, D-057); all sources unverified. Sprint
+  3 (curator_d, 2026-10-05): first_source written from bibliographic search (OpenAlex, 2026-10-05); candidate origin found
+  by bibliographic search; content unverified. This is the paper the SEED homepage asks SEED-VIG users to cite (simulated
+  driving, PERCLOS labels from eye tracking) (OpenAlex lists PMID 28102833; not added). [maintainer sprint 3, 2026-10-07]
+  bibliography confirmed (OpenAlex, 2026-10-05; origin candidate, content unverified). [maintainer sprint 3, 2026-10-07, D-073]
+  origin candidate recalled, record confirmed via OpenAlex.'
+status: draft
+contributors:
+- curator_e

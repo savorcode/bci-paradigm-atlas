@@ -1,0 +1,59 @@
+schema_version: '0.2'
+id: MEM-NBK-003
+class: MEM-NBK
+name:
+  en: Dual n-back
+  zh: 双通道 n-back
+aliases:
+- dual n-back
+- dual-modality n-back
+- audio-visual n-back
+family: memory
+bci_category:
+- none
+recording_modality:
+- fMRI
+stimulus_modality:
+- visual
+- auditory
+markers:
+- MK.BOLD_frontoparietal
+description:
+  en: Two independent stimulus streams are presented simultaneously, typically spatial positions of a square on a screen and
+    spoken letters, and participants monitor both streams for n-back matches, responding separately to visual and auditory
+    targets. Combining two streams raises the load beyond single-stream n-back; fMRI studies compare load-dependent prefrontal
+    activity in single and dual versions.
+  zh: 同时呈现两个独立的刺激流，通常是屏幕上方块的空间位置与口语字母，被试同时监视两个流中的 n-back 匹配，并对视觉与听觉靶分别作出反应。两个流的结合使负荷超过单流 n-back；fMRI 研究比较单任务与双任务版本中随负荷变化的前额叶活动。
+trial_structure:
+  conditions:
+  - visual target
+  - auditory target
+  - both
+  - neither
+  - n (parameter)
+protocol:
+  n_classes: 4
+  classes:
+  - visual match
+  - auditory match
+  - both match
+  - no match
+  cue: simultaneous visual-spatial stream and auditory letter stream
+  stimulus_coding: two concurrent streams with independent n-back targets
+  paradigm_timing: synchronous
+  feedback: none
+  distinguishing: 准则 1;2：刺激由单一流（MEM-NBK-001）变为同时呈现的视觉空间流与听觉字母流，靶类别由一类变为视觉/听觉/双重/无四类。
+first_source:
+  citation: 'Jaeggi SM, Seewer R, Nirkko AC, Eckstein D, Schroth G, Groner R, Gutbrod K. Does excessive memory load attenuate
+    activation in the prefrontal cortex? Load-dependent processing in single and dual tasks: functional magnetic resonance
+    imaging study. NeuroImage. 2003;19(2):210-225.'
+  doi: 10.1016/s1053-8119(03)00098-3
+  year: 2003
+  verified: false
+notes: 'New configuration (sprint 2). Leads: R1323 (Jaeggi et al. 2003, reference copied from the Wikipedia ''N-back'' reference
+  list; journal not shown there and not filled), R1324 (Jaeggi et al. 2008). The stimulus streams described (positions + letters)
+  follow the Wikipedia description and have to be checked against R1323. (R#### = curation/literature.csv; DN## = curation/work/pkg_D/new_leads.csv.)
+  Numbering criterion (D-057): 1;2. bibliography corrected (Crossref, 2026-10-05)'
+status: draft
+contributors:
+- curator_d

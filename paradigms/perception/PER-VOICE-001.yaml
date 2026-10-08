@@ -1,0 +1,53 @@
+schema_version: '0.2'
+id: PER-VOICE-001
+class: PER-VOICE
+name:
+  en: Voice perception (temporal voice areas localizer)
+  zh: 嗓音知觉（颞叶嗓音区定位）
+aliases:
+- voice localizer
+- temporal voice areas
+family: perception
+bci_category:
+- none
+recording_modality:
+- fMRI
+stimulus_modality:
+- auditory
+markers:
+- MK.BOLD_auditory_cortex
+description:
+  en: Blocks of vocal sounds (speech and non-speech vocalisations) are contrasted with blocks of non-vocal environmental sounds.
+    Voices evoke stronger BOLD responses along the superior temporal sulcus and gyrus, defining the temporal voice areas.
+  zh: 将人声（言语和非言语发声）组块与非人声环境声组块对比。人声沿颞上沟和颞上回引起更强的 BOLD 响应，据此界定颞叶嗓音区。
+protocol:
+  n_classes: 2
+  classes:
+  - vocal sounds
+  - non-vocal sounds
+  cue: blocks of vocal sounds vs non-vocal environmental sounds
+  paradigm_timing: block
+  feedback: none
+  distinguishing: 标准配置（最早发表，即 first_source）：嗓音与非嗓音环境声的组块对比（定位器）。本类暂无其他具体范式（no sibling protocol yet）。
+first_source:
+  citation: Belin P, Zatorre RJ, Lafaille P, Ahad P, Pike B. Voice-selective areas in human auditory cortex. Nature. 2000;403(6767):309-312.
+  doi: 10.1038/35002078
+  year: 2000
+  verified: false
+datasets:
+- name: Human Voice Areas (Edinburgh Imaging image databank)
+  url: https://clinical-sciences.ed.ac.uk/edinburgh-imaging/research/analysis-and-processing/image-databanks/human-voice-areas
+interop:
+  bids_task: voicelocalizer
+notes: 'Leads used: search SA20a, search SA20b. first_source: no origin source identified in this pass (blocker, see curation/work/pkg_A/status.csv).
+  New candidate proposed by package A on 2026-10-03 (curation/work/pkg_A/new_candidates.csv); registered in curation/candidates.csv
+  as C222 (D-053, milestone M1). Uses registry marker MK.BOLD_auditory_cortex. Auditory analogue of the face localizer (PER-FACE-001).
+  [curator_a sprint 2, 2026-10-03] D-057: protocol block added for the canonical configuration; no other concrete paradigm
+  identified for this class in sprint 2. [curator_e sprint 3, 2026-10-05] candidate origin found by bibliographic search (OpenAlex,
+  2026-10-05); content unverified. [maintainer sprint 3, 2026-10-07] bibliography confirmed (OpenAlex, 2026-10-05; origin
+  candidate, content unverified). [maintainer sprint 3, 2026-10-07, D-073] origin candidate recalled, record confirmed via
+  OpenAlex.'
+status: draft
+contributors:
+- curator_a
+- curator_e

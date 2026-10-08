@@ -1,0 +1,58 @@
+schema_version: '0.2'
+id: LAN-PHA-001
+class: LAN-PHA
+name:
+  en: Phonological awareness
+  zh: 语音意识
+aliases:
+- Phoneme Deletion
+- Rhyme Judgment
+family: language
+bci_category:
+- none
+recording_modality:
+- EEG
+- fMRI
+stimulus_modality:
+- visual
+markers:
+- MK.MMN
+- MK.BOLD_language_network
+description:
+  en: Participants judge whether two visually presented words (or letters / nonwords) rhyme. Rhyme judgments engage left temporoparietal
+    and inferior frontal language regions, which are less activated in readers with dyslexia, and phonological skills are
+    related to speech-sound mismatch negativity.
+  zh: 被试判断视觉呈现的两个词（或字母、假词）是否押韵。押韵判断激活左侧颞顶与额下语言区，阅读障碍者激活较弱；语音技能与语音失匹配负波相关。
+trial_structure:
+  conditions:
+  - rhyme
+  - non-rhyme
+protocol:
+  n_classes: 2
+  classes:
+  - rhyme
+  - non-rhyme
+  cue: visually presented word or letter pairs
+  paradigm_timing: synchronous
+  feedback: none
+  distinguishing: 标准配置（最早发表）：押韵判断（Shaywitz et al. 1998, R0162，最早神经影像线索，非任务源头）。音位删除等其他语音意识任务暂记为提议。
+first_source:
+  citation: Shaywitz SE, Shaywitz BA, Pugh KR, Fulbright RK, Constable RT, Mencl WE, Shankweiler DP, Liberman AM, Skudlarski
+    P, Fletcher JM, Katz L, Marchione KE, Lacadie C, Gatenby C, Gore JC. Functional disruption in the organization of the
+    brain for reading in dyslexia. Proceedings of the National Academy of Sciences. 1998;95(5):2636-2641.
+  doi: 10.1073/pnas.95.5.2636
+  pmid: '9482939'
+  year: 1998
+  verified: false
+interop:
+  bids_task: phonologicalawareness
+notes: 'HED task page: https://www.hedtags.org/hed-task/tasks/hedtsk_phonological_awareness.html. Leads: R0162, R0210, R0274,
+  R0306, R0552, R0577 (R#### = curation/literature.csv; DN## = curation/work/pkg_D/new_leads.csv). R0162 (Shaywitz et al.
+  1998) is the oldest neuroimaging lead, not the origin of phonological awareness tasks (behavioural origin not identified).
+  The MMN marker comes from passive speech-sound paradigms in readers with and without dyslexia; LAN-PHON-001 itself is merged
+  into PER-MMN-001 (D-017). Sprint 2 (D-057, curator_d, 2026-10-03): protocol block added (-001 = earliest/standard configuration).
+  Narrowed to rhyme judgment; phoneme-deletion and other explicit phonological tasks logged as proposed. bibliography corrected
+  (Crossref, 2026-10-05)'
+status: draft
+contributors:
+- curator_d

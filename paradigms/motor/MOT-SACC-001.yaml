@@ -1,0 +1,56 @@
+schema_version: '0.2'
+id: MOT-SACC-001
+class: MOT-SACC
+name:
+  en: Saccade task
+  zh: 眼跳任务
+aliases:
+- prosaccade
+- visually guided saccade
+- memory-guided saccade
+family: motor
+bci_category:
+- none
+recording_modality:
+- EEG
+- fMRI
+- intracortical
+stimulus_modality:
+- visual
+- motor_execution
+markers:
+- MK.presaccadic_potential
+- MK.BOLD_oculomotor
+description:
+  en: >-
+    Participants fixate centrally and make a rapid eye movement to a peripheral target as soon as it appears. Cortical potentials
+    precede saccade onset, and saccade generation activates the frontal and supplementary eye fields and the intraparietal
+    sulcus.
+  zh: 被试注视中央，周边目标一出现即快速将眼睛移向目标。眼跳起始前出现皮层电位，眼跳产生激活额叶眼区、辅助眼区和顶内沟。
+protocol:
+  n_classes: 1
+  classes:
+  - visually guided saccade to a peripheral target
+  cue: peripheral visual target onset
+  paradigm_timing: synchronous
+  feedback: none
+  distinguishing: >-
+    Standard configuration (earliest published) / 标准配置（最早发表）: immediate visually guided (pro)saccades from central fixation
+    (class placeholder origin R0001, weak_origin, D-031). Sibling: -002 memory-guided saccades to a remembered location after
+    a delay (criteria 2, 3).
+first_source:
+  citation: Javal, É. Essai sur la physiologie de la lecture. Annales d'oculistique. 1878.
+  year: 1878
+  verified: false
+interop:
+  bids_task: saccade
+notes: >-
+  Leads: R0001, R0034, R0062, R0291, R0394, R0560. first_source R0001 (Javal 1878) describes saccades in reading and is not
+  a saccade-task paper; flagged for review. Antisaccades are covered by CTL-AS-001 (package C); 'antisaccade' removed from
+  aliases here. R0062 is a monkey study. Memory lead (unverified): Hallett 1978 Vision Res; Munoz & Everling 2004 review.
+  D-031 (maintainer, 2026-10-03): R0001 (Javal 1878) describes saccadic eye movements in reading but not a saccade task; treated
+  as a placeholder (qa_flag weak_origin). Replace with the earliest saccade-task paper in sprint 2. Sprint 2 (D-057): memory-guided
+  saccades moved to MOT-SACC-002 (Schluppeck et al. 2006).
+status: draft
+contributors:
+- curator_b

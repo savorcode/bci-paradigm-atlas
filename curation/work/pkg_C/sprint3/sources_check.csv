@@ -1,0 +1,128 @@
+﻿entity_type,entity_id,pkg,check_status,source_api,matched_doi,matched_pmid,corrected_fields,note,checker,date
+concrete,CTL-AMBIG-001,C,corrected,Crossref-search,10.1126/science.1115327,,pages added; doi added,,curator_b,2026-10-05
+concrete,CTL-ANAL-001,C,corrected,Crossref-search,10.1093/cercor/bhh126,,pages added; doi added,"Crossref record lists only the first author; citation text kept, DOI added. Crossref issued 2004 (online); print 15(3) 2005. Crossref issued 2004 = online; print vol 15(3) 2005",curator_b,2026-10-05
+concrete,CTL-ANT-001,C,corrected,Crossref,10.1162/089892902317361886,,authors (et al. expanded); pages added,,curator_b,2026-10-05
+concrete,CTL-ANT-002,C,confirmed,Crossref,10.1016/j.bandc.2004.02.012,,,,curator_b,2026-10-05
+concrete,CTL-AS-001,C,corrected,Crossref,10.1016/0042-6989(78)90218-3,,issue 11->10; pages added,,curator_b,2026-10-05
+variant:CTL-AS-001,"Internationally standardised antisaccade protocol (blocked pro- and antisaccade trials, fixed timing)",C,corrected,Crossref,10.1016/j.visres.2013.02.007,,authors (et al. expanded); pages added,,curator_b,2026-10-05
+concrete,CTL-AUT-001,C,corrected,Crossref-search,10.1002/hbm.20538,,authors (et al. expanded); doi added,Crossref issued 2008 = online; print vol 30(3) 2009,curator_b,2026-10-05
+concrete,CTL-BART-001,C,corrected,Crossref,10.1037/1076-898x.8.2.75,,authors (et al. expanded),,curator_b,2026-10-05
+concrete,CTL-CNV-001,C,corrected,Crossref,10.1038/203380a0,,authors (et al. expanded); pages added,,curator_b,2026-10-05
+concrete,CTL-CONF-001,C,confirmed,Crossref,10.1523/JNEUROSCI.0797-14.2015,,,,curator_b,2026-10-05
+concrete,CTL-CPT-001,C,corrected,Crossref,10.1037/h0043220,,authors (et al. expanded); pages added,,curator_b,2026-10-05
+concrete,CTL-CPT-002,C,confirmed,Crossref,10.1001/archpsyc.1996.01830120037008,,,"Crossref record lists only the first author and only the first page (JAMA legacy record); title, first author, year, venue, 53(12):1105 agree; citation text kept.",curator_b,2026-10-05
+concrete,CTL-CPT-003,C,corrected,Crossref,10.1093/cercor/bhs261,,pages added,Crossref issued 2012 (online-first); print 23(11) is 2013 - year kept 2013. Crossref issued 2012 = online-first; print volume 23 is 2013,curator_b,2026-10-05
+concrete,CTL-DD-001,C,corrected,Crossref,10.1901/jeab.1991.55-233,,authors (et al. expanded),,curator_b,2026-10-05
+concrete,CTL-DT-001,C,corrected,Crossref-search,10.1037/h0073262,,title; pages 1-35->1-36; doi added,,curator_b,2026-10-05
+concrete,CTL-EFF-001,C,corrected,Crossref,10.1371/journal.pone.0006598,,pages added,,curator_b,2026-10-05
+concrete,CTL-FLK-001,C,corrected,OpenAlex,10.3758/bf03203267,,issue 2->1; pages added,,curator_b,2026-10-05
+concrete,CTL-FLK-002,C,tbd_open,,,,,"tbd_open: no bibliographic search performed - WebFetch quota exhausted (429) before the TBD rows were reached; planned queries (max 3, D-031 criteria): (1) arrow flanker task origin ERP; (2) Kopp Rist Mattler 1996 N2 flanker arrows; (3) Botvinick Nystrom Fissell Carter Cohen 1999 conflict monitoring flanker",curator_b,2026-10-05
+concrete,CTL-FORAGE-001,C,confirmed,Crossref,10.1126/science.1216930,,,,curator_b,2026-10-05
+concrete,CTL-GNG-001,C,corrected,Crossref,10.1016/0001-6918(69)90065-1,,pages added,"Crossref record is the 1969 Acta Psychologica translation; the ""(orig. 1868)"" remark remains in the entry notes (Donders 1868/1969).",curator_b,2026-10-05
+concrete,CTL-IGT-001,C,corrected,Crossref,10.1016/0010-0277(94)90018-3,,authors (et al. expanded),,curator_b,2026-10-05
+concrete,CTL-MIXG-001,C,corrected,OpenAlex,10.1126/science.1134239,,pages added,,curator_b,2026-10-05
+concrete,CTL-MRP-001,C,not_found,,,,,"not checked: Crossref bibliographic search not performed - WebFetch proxy rate limit (HTTP 429) exhausted after ~85 requests; no YAML change; search deferred (planned query: Eimer Schlaghecken 1998 masked stimuli motor activation (2 queries sent, both 429))",curator_b,2026-10-05
+concrete,CTL-MSIT-001,C,corrected,Crossref,10.1038/sj.mp.4001217,,"authors added (Bush G, Shin LM, Holmes J, Rosen BR, Vogt BA)",,curator_b,2026-10-05
+concrete,CTL-PDM-001,C,corrected,Crossref,10.1523/jneurosci.12-12-04745.1992,,authors (et al. expanded); pages added,,curator_b,2026-10-05
+concrete,CTL-PDM-002,C,corrected,Crossref,10.1523/JNEUROSCI.3355-13.2013,,pages added,,curator_b,2026-10-05
+concrete,CTL-RAT-001,C,corrected,Crossref,10.1037/h0048850,,pages added,,curator_b,2026-10-05
+concrete,CTL-RAVEN-001,C,corrected,Crossref-search,10.1111/j.2044-8341.1936.tb00690.x,,pages added; doi added,,curator_b,2026-10-05
+concrete,CTL-RNG-001,C,corrected,Crossref-search,10.1006/nimg.2000.0647,,doi added,,curator_b,2026-10-05
+concrete,CTL-SART-001,C,corrected,Crossref,10.1016/s0028-3932(97)00015-8,,authors (et al. expanded); pages added,,curator_b,2026-10-05
+concrete,CTL-SIM-001,C,corrected,Crossref,10.1037/h0020586,,pages added,,curator_b,2026-10-05
+concrete,CTL-SIM-002,C,tbd_open,,,,,"tbd_open: no bibliographic search performed - WebFetch quota exhausted (429) before the TBD rows were reached; planned queries (max 3, D-031 criteria): (1) Craft Simon 1970 processing symbolic information from a visual display interference irrelevant directional cue; (2) Simon 1969 reactions toward the source of stimulation; (3) Hedge Marsh 1975 logical recoding",curator_b,2026-10-05
+concrete,CTL-SST-001,C,corrected,Crossref,10.1037/0033-295x.91.3.295,,pages added,,curator_b,2026-10-05
+concrete,CTL-STR-001,C,corrected,Crossref,10.1037/h0054651,,pages added,,curator_b,2026-10-05
+concrete,CTL-STR-002,C,tbd_open,,,,,"tbd_open: no bibliographic search performed - WebFetch quota exhausted (429) before the TBD rows were reached; planned queries (max 3, D-031 criteria): (1) Liotti Woldorff Perez Mayberg 2000 ERP Stroop N450 manual response; (2) West Alain 1999 event-related neural activity Stroop; (3) MacLeod 1991 review as pointer only (not an origin)",curator_b,2026-10-05
+concrete,CTL-SW-001,C,corrected,Crossref,10.1037/0096-3445.124.2.207,,title; pages added,"Crossref/APA title spelling ""predictible"" (as in the record) replaces ""predictable"".",curator_b,2026-10-05
+concrete,CTL-SW-002,C,corrected,Crossref-search,10.1037/0278-7393.22.6.1423,,doi added,,curator_b,2026-10-05
+concrete,CTL-SW-003,C,tbd_open,,,,,"tbd_open: no bibliographic search performed - WebFetch quota exhausted (429) before the TBD rows were reached; planned queries (max 3, D-031 criteria): (1) Arrington Logan 2004 the cost of a voluntary task switch Psychological Science; (2) Arrington Logan 2005 voluntary task switching chasing the elusive homunculus; (3) Mayr Bell 2006 on how to be unpredictable",curator_b,2026-10-05
+concrete,CTL-SYLL-001,C,corrected,Crossref-search,10.1006/nimg.2000.0636,,doi added,,curator_b,2026-10-05
+concrete,CTL-TOL-001,C,corrected,Crossref,10.1098/rstb.1982.0082,,venue (full journal title); pages added,,curator_b,2026-10-05
+concrete,CTL-VBC-001,C,confirmed,Crossref,10.1523/JNEUROSCI.2131-07.2007,,,,curator_b,2026-10-05
+concrete,CTL-WASON-001,C,not_found,,,,,"not checked: Crossref bibliographic search not performed - WebFetch proxy rate limit (HTTP 429) exhausted after ~85 requests; no YAML change; search deferred (planned query: Wason 1966 Reasoning, New Horizons in Psychology (book chapter; unlikely to be in Crossref))",curator_b,2026-10-05
+concrete,CTL-WCST-001,C,corrected,Crossref-search,10.1037/h0059831,,volume ->38; doi added,,curator_b,2026-10-05
+concrete,ERR-AAF-001,C,tbd_open,,,,,"tbd_open: no bibliographic search performed - WebFetch quota exhausted (429) before the TBD rows were reached; planned queries (max 3, D-031 criteria): (1) Burnett Freedland Larson Hain 1998 voice F0 responses to manipulations in pitch feedback JASA; (2) Elman 1981 effects of frequency-shifted feedback on the pitch of vocal productions; (3) Kawahara 1994 interactions of speech production and perception under auditory feedback perturbations",curator_b,2026-10-05
+concrete,ERR-ADAPT-001,C,corrected,Crossref-search,10.1523/jneurosci.20-23-08916.2000,,authors (et al. expanded); pages added; doi added,,curator_b,2026-10-05
+concrete,ERR-ADAPT-002,C,corrected,Crossref,10.1101/262576,,"authors added (Palidis DJ, Cashaback JGA, Gribble PL); year 2018 added; venue bioRxiv (preprint, posted 2018-02-09)",,curator_b,2026-10-05
+concrete,ERR-APC-001,C,corrected,Crossref-search,10.1016/s0896-6273(03)00169-7,,"authors added (O'Doherty JP, Dayan P, Friston K, Critchley H, Dolan RJ); volume/issue/pages added; doi added",,curator_b,2026-10-05
+concrete,ERR-AWARE-001,C,corrected,Crossref,10.1037/0096-1523.26.1.141,,pages 141-51->141-151,,curator_b,2026-10-05
+concrete,ERR-AWARE-002,C,corrected,OpenAlex,10.1111/1469-8986.3850752,11577898,pages 752-60->752-760,,curator_b,2026-10-05
+concrete,ERR-AWARE-003,C,corrected,Crossref-search,10.1016/j.neuroimage.2005.04.035,,doi added,,curator_b,2026-10-05
+concrete,ERR-BANDIT-001,C,corrected,Crossref,10.1038/nature04766,,authors (et al. expanded); pages added,,curator_b,2026-10-05
+concrete,ERR-CAUS-001,C,confirmed,OpenAlex,10.1080/14640748408401502,,,,curator_b,2026-10-05
+concrete,ERR-CHGPT-001,C,corrected,Crossref,10.1523/JNEUROSCI.0822-10.2010,,pages added,,curator_b,2026-10-05
+concrete,ERR-CHGPT-002,C,corrected,Crossref,10.7554/eLife.46975,,pages added,,curator_b,2026-10-05
+concrete,ERR-ERRP-001,C,not_found,,,,,"not checked: Crossref bibliographic search not performed - WebFetch proxy rate limit (HTTP 429) exhausted after ~85 requests; no YAML change; search deferred (planned query: Ferrez Millan 2008 error-related EEG potentials simulated brain-computer interaction (1 query sent, 429))",curator_b,2026-10-05
+concrete,ERR-ERRP-002,C,corrected,Crossref,10.1109/TNSRE.2010.2053387,,title added (Learning From EEG Error-Related Potentials in Noninvasive Brain-Computer Interfaces); volume/issue/pages added,,curator_b,2026-10-05
+concrete,ERR-ERRP-003,C,tbd_open,,,,,"tbd_open: no bibliographic search performed - WebFetch quota exhausted (429) before the TBD rows were reached; planned queries (max 3, D-031 criteria): (1) Dal Seno Matteucci Mainardi 2010 online detection of P300 and error potentials in a BCI speller; (2) Spuler Bensch Kleih Rosenstiel Bogdan Kubler 2012 online use of error-related potentials P300-BCI; (3) Perrin Maby Daligault Bertrand Mattout 2012 objective and subjective evaluation of online error correction P300 spelling",curator_b,2026-10-05
+concrete,ERR-ERRP-004,C,corrected,Crossref,10.3389/fnhum.2015.00155,,pages added,,curator_b,2026-10-05
+concrete,ERR-GAM-001,C,not_found,,,,,not checked: Crossref bibliographic search not performed - WebFetch proxy rate limit (HTTP 429) exhausted after ~85 requests; no YAML change; search deferred (planned query: Gehring Willoughby 2002 medial frontal cortex rapid processing monetary gains losses Science (PMID 11910116 in entry)),curator_b,2026-10-05
+concrete,ERR-GAM-002,C,tbd_open,,,,,"tbd_open: no bibliographic search performed - WebFetch quota exhausted (429) before the TBD rows were reached; planned queries (max 3, D-031 criteria): (1) Dunning Hajcak 2007 error-related negativities elicited by monetary loss and cues that predict loss NeuroReport; (2) Foti Hajcak 2009 depression and reduced sensitivity to non-rewards versus rewards; (3) Hajcak Moser Holroyd Simons 2006 feedback-related negativity binary evaluation",curator_b,2026-10-05
+concrete,ERR-GAM-003,C,not_found,,,,,not checked: Crossref bibliographic search not performed - WebFetch proxy rate limit (HTTP 429) exhausted after ~85 requests; no YAML change; search deferred (planned query: Yeung Holroyd Cohen 2004/2005 ERP correlates of feedback and reward processing in the presence and absence of response choice (memory candidate for the R0714 citation; identity to be confirmed against the R0714 reference list)),curator_b,2026-10-05
+concrete,ERR-INST-001,C,corrected,Crossref,10.1126/science.1094285,,pages added,,curator_b,2026-10-05
+concrete,ERR-OBS-001,C,corrected,Crossref,10.1038/nn1239,,authors (et al. expanded); pages added,,curator_b,2026-10-05
+concrete,ERR-OBS-002,C,not_found,,,,,not checked: Crossref bibliographic search not performed - WebFetch proxy rate limit (HTTP 429) exhausted after ~85 requests; no YAML change; search deferred (planned query: Bates Patel Liddle 2005 external behavior monitoring mirrors internal behavior monitoring ERN observed errors (memory candidate for the R0714 citation)),curator_b,2026-10-05
+concrete,ERR-OBS-003,C,not_found,,,,,not checked: Crossref bibliographic search not performed - WebFetch proxy rate limit (HTTP 429) exhausted after ~85 requests; no YAML change; search deferred (planned query: Pavone Tieri Rizza Tidoni Grisoni Aglioti 2016 embodying others immersive virtual reality avatar errors J Neurosci (memory candidate for the R0714 citation)),curator_b,2026-10-05
+concrete,ERR-OGNG-001,C,not_found,,,,,"not checked: Crossref bibliographic search not performed - WebFetch proxy rate limit (HTTP 429) exhausted after ~85 requests; no YAML change; search deferred (planned query: Guitart-Masip 2012 Go and no-go learning in reward and punishment interactions between affect and effect NeuroImage (author/year from memory, unconfirmed))",curator_b,2026-10-05
+concrete,ERR-PCL-001,C,corrected,Crossref,10.1101/lm.1.2.106,,pages added,,curator_b,2026-10-05
+concrete,ERR-PRL-001,C,corrected,Crossref,10.1523/jneurosci.22-11-04563.2002,,pages added,,curator_b,2026-10-05
+concrete,ERR-PRT-001,C,not_found,,,,,not checked: Crossref bibliographic search not performed - WebFetch proxy rate limit (HTTP 429) exhausted after ~85 requests; no YAML change; search deferred (planned query: Pizzagalli Jahn O'Shea 2005 objective characterization anhedonic phenotype signal-detection Biological Psychiatry),curator_b,2026-10-05
+concrete,ERR-PSEL-001,C,corrected,Crossref,10.1126/science.1102941,,pages added,,curator_b,2026-10-05
+concrete,ERR-TE-001,C,corrected,Crossref,10.1162/jocn.1997.9.6.788,,pages added,,curator_b,2026-10-05
+concrete,ERR-TS-001,C,corrected,Crossref,10.1016/j.neuron.2011.02.027,,authors (et al. expanded); pages added,,curator_b,2026-10-05
+concrete,ERR-TS-002,C,corrected,Crossref,10.1371/journal.pcbi.1005090,,pages added,,curator_b,2026-10-05
+concrete,ERR-VRPE-001,C,corrected,Crossref,10.1145/3290605.3300657,,venue (proceedings title); pages 427-437->1-11 (Crossref; 427 is the paper number); author initials Chen H-T->HT,,curator_b,2026-10-05
+variant:ERR-VRPE-001,EMS force-feedback condition (visual + vibrotactile + electrical muscle stimulation),C,corrected,Crossref,10.3389/fnrgo.2024.1411305,,pages added,,curator_b,2026-10-05
+class,ERR-AAF,C,tbd_open,,,,,"same TBD as ERR-AAF-001: tbd_open: no bibliographic search performed - WebFetch quota exhausted (429) before the TBD rows were reached; planned queries (max 3, D-031 criteria): (1) Burnett Freedland Larson Hain 1998 voice F0 responses to manipulations in pitch feedback JASA; (2) Elman 1981 effects of frequency-shifted feedback on the pitch of vocal productions; (3) Kawahara 1994 interactions of speech production and perception under auditory feedback perturbations",curator_b,2026-10-05
+class,ERR-ADAPT,C,corrected,Crossref-search,10.1523/jneurosci.20-23-08916.2000,,authors (et al. expanded); pages added; doi added,,curator_b,2026-10-05
+class,ERR-APC,C,corrected,Crossref-search,10.1016/s0896-6273(03)00169-7,,"authors added (O'Doherty JP, Dayan P, Friston K, Critchley H, Dolan RJ); volume/issue/pages added; doi added",,curator_b,2026-10-05
+class,ERR-AWARE,C,corrected,Crossref,10.1037/0096-1523.26.1.141,,pages 141-51->141-151,,curator_b,2026-10-05
+class,ERR-BANDIT,C,corrected,Crossref,10.1038/nature04766,,authors (et al. expanded); pages added,,curator_b,2026-10-05
+class,ERR-CAUS,C,confirmed,OpenAlex,10.1080/14640748408401502,,,,curator_b,2026-10-05
+class,ERR-CHGPT,C,corrected,Crossref,10.1523/JNEUROSCI.0822-10.2010,,pages added,,curator_b,2026-10-05
+class,ERR-ERRP,C,not_found,,,,,"same source as ERR-ERRP-001: not checked: Crossref bibliographic search not performed - WebFetch proxy rate limit (HTTP 429) exhausted after ~85 requests; no YAML change; search deferred (planned query: Ferrez Millan 2008 error-related EEG potentials simulated brain-computer interaction (1 query sent, 429))",curator_b,2026-10-05
+class,ERR-GAM,C,not_found,,,,,same source as ERR-GAM-001: not checked: Crossref bibliographic search not performed - WebFetch proxy rate limit (HTTP 429) exhausted after ~85 requests; no YAML change; search deferred (planned query: Gehring Willoughby 2002 medial frontal cortex rapid processing monetary gains losses Science (PMID 11910116 in entry)),curator_b,2026-10-05
+class,ERR-INST,C,corrected,Crossref,10.1126/science.1094285,,pages added,,curator_b,2026-10-05
+class,ERR-OBS,C,corrected,Crossref,10.1038/nn1239,,authors (et al. expanded); pages added,,curator_b,2026-10-05
+class,ERR-OGNG,C,not_found,,,,,"same source as ERR-OGNG-001: not checked: Crossref bibliographic search not performed - WebFetch proxy rate limit (HTTP 429) exhausted after ~85 requests; no YAML change; search deferred (planned query: Guitart-Masip 2012 Go and no-go learning in reward and punishment interactions between affect and effect NeuroImage (author/year from memory, unconfirmed))",curator_b,2026-10-05
+class,ERR-PCL,C,corrected,Crossref,10.1101/lm.1.2.106,,pages added,,curator_b,2026-10-05
+class,ERR-PRL,C,corrected,Crossref,10.1523/jneurosci.22-11-04563.2002,,pages added,,curator_b,2026-10-05
+class,ERR-PRT,C,not_found,,,,,same source as ERR-PRT-001: not checked: Crossref bibliographic search not performed - WebFetch proxy rate limit (HTTP 429) exhausted after ~85 requests; no YAML change; search deferred (planned query: Pizzagalli Jahn O'Shea 2005 objective characterization anhedonic phenotype signal-detection Biological Psychiatry),curator_b,2026-10-05
+class,ERR-PSEL,C,corrected,Crossref,10.1126/science.1102941,,pages added,,curator_b,2026-10-05
+class,ERR-TE,C,corrected,Crossref,10.1162/jocn.1997.9.6.788,,pages added,,curator_b,2026-10-05
+class,ERR-TS,C,corrected,Crossref,10.1016/j.neuron.2011.02.027,,authors (et al. expanded); pages added,,curator_b,2026-10-05
+class,ERR-VRPE,C,corrected,Crossref,10.1145/3290605.3300657,,venue (proceedings title); pages 427-437->1-11 (Crossref; 427 is the paper number); author initials Chen H-T->HT,,curator_b,2026-10-05
+class,CTL-AMBIG,C,corrected,Crossref-search,10.1126/science.1115327,,pages added; doi added,,curator_b,2026-10-05
+class,CTL-ANAL,C,corrected,Crossref-search,10.1093/cercor/bhh126,,pages added; doi added,"Crossref record lists only the first author; citation text kept, DOI added. Crossref issued 2004 (online); print 15(3) 2005. Crossref issued 2004 = online; print vol 15(3) 2005",curator_b,2026-10-05
+class,CTL-ANT,C,corrected,Crossref,10.1162/089892902317361886,,authors (et al. expanded); pages added,,curator_b,2026-10-05
+class,CTL-AS,C,corrected,Crossref,10.1016/0042-6989(78)90218-3,,issue 11->10; pages added,,curator_b,2026-10-05
+class,CTL-AUT,C,corrected,Crossref-search,10.1002/hbm.20538,,authors (et al. expanded); doi added,Crossref issued 2008 = online; print vol 30(3) 2009,curator_b,2026-10-05
+class,CTL-BART,C,corrected,Crossref,10.1037/1076-898x.8.2.75,,authors (et al. expanded),,curator_b,2026-10-05
+class,CTL-CNV,C,corrected,Crossref,10.1038/203380a0,,authors (et al. expanded); pages added,,curator_b,2026-10-05
+class,CTL-CONF,C,confirmed,Crossref,10.1523/JNEUROSCI.0797-14.2015,,,,curator_b,2026-10-05
+class,CTL-CPT,C,corrected,Crossref,10.1037/h0043220,,authors (et al. expanded); pages added,,curator_b,2026-10-05
+class,CTL-DD,C,corrected,Crossref,10.1901/jeab.1991.55-233,,authors (et al. expanded),,curator_b,2026-10-05
+class,CTL-DT,C,corrected,Crossref-search,10.1037/h0073262,,title; pages 1-35->1-36; doi added,,curator_b,2026-10-05
+class,CTL-EFF,C,corrected,Crossref,10.1371/journal.pone.0006598,,pages added,,curator_b,2026-10-05
+class,CTL-FLK,C,corrected,OpenAlex,10.3758/bf03203267,,issue 2->1; pages added,,curator_b,2026-10-05
+class,CTL-FORAGE,C,confirmed,Crossref,10.1126/science.1216930,,,,curator_b,2026-10-05
+class,CTL-GNG,C,corrected,Crossref,10.1016/0001-6918(69)90065-1,,pages added,"Crossref record is the 1969 Acta Psychologica translation; the ""(orig. 1868)"" remark remains in the entry notes (Donders 1868/1969).",curator_b,2026-10-05
+class,CTL-IGT,C,corrected,Crossref,10.1016/0010-0277(94)90018-3,,authors (et al. expanded),,curator_b,2026-10-05
+class,CTL-MIXG,C,corrected,OpenAlex,10.1126/science.1134239,,pages added,,curator_b,2026-10-05
+class,CTL-MRP,C,not_found,,,,,"same source as CTL-MRP-001: not checked: Crossref bibliographic search not performed - WebFetch proxy rate limit (HTTP 429) exhausted after ~85 requests; no YAML change; search deferred (planned query: Eimer Schlaghecken 1998 masked stimuli motor activation (2 queries sent, both 429))",curator_b,2026-10-05
+class,CTL-MSIT,C,corrected,Crossref,10.1038/sj.mp.4001217,,"authors added (Bush G, Shin LM, Holmes J, Rosen BR, Vogt BA)",,curator_b,2026-10-05
+class,CTL-PDM,C,corrected,Crossref,10.1523/jneurosci.12-12-04745.1992,,authors (et al. expanded); pages added,,curator_b,2026-10-05
+class,CTL-RAT,C,corrected,Crossref,10.1037/h0048850,,pages added,,curator_b,2026-10-05
+class,CTL-RAVEN,C,corrected,Crossref-search,10.1111/j.2044-8341.1936.tb00690.x,,pages added; doi added,,curator_b,2026-10-05
+class,CTL-RNG,C,corrected,Crossref-search,10.1006/nimg.2000.0647,,doi added,,curator_b,2026-10-05
+class,CTL-SART,C,corrected,Crossref,10.1016/s0028-3932(97)00015-8,,authors (et al. expanded); pages added,,curator_b,2026-10-05
+class,CTL-SIM,C,corrected,Crossref,10.1037/h0020586,,pages added,,curator_b,2026-10-05
+class,CTL-SST,C,corrected,Crossref,10.1037/0033-295x.91.3.295,,pages added,,curator_b,2026-10-05
+class,CTL-STR,C,corrected,Crossref,10.1037/h0054651,,pages added,,curator_b,2026-10-05
+class,CTL-SW,C,corrected,Crossref,10.1037/0096-3445.124.2.207,,title; pages added,"Crossref/APA title spelling ""predictible"" (as in the record) replaces ""predictable"".",curator_b,2026-10-05
+class,CTL-SYLL,C,corrected,Crossref-search,10.1006/nimg.2000.0636,,doi added,,curator_b,2026-10-05
+class,CTL-TOL,C,corrected,Crossref,10.1098/rstb.1982.0082,,venue (full journal title); pages added,,curator_b,2026-10-05
+class,CTL-VBC,C,confirmed,Crossref,10.1523/JNEUROSCI.2131-07.2007,,,,curator_b,2026-10-05
+class,CTL-WASON,C,not_found,,,,,"same source as CTL-WASON-001: not checked: Crossref bibliographic search not performed - WebFetch proxy rate limit (HTTP 429) exhausted after ~85 requests; no YAML change; search deferred (planned query: Wason 1966 Reasoning, New Horizons in Psychology (book chapter; unlikely to be in Crossref))",curator_b,2026-10-05
+class,CTL-WCST,C,corrected,Crossref-search,10.1037/h0059831,,volume ->38; doi added,,curator_b,2026-10-05

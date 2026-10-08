@@ -1,0 +1,48 @@
+schema_version: '0.2'
+id: SSR-SSMVEP-001
+class: SSR-SSMVEP
+name:
+  en: Steady-state motion VEP (SSMVEP)
+  zh: 稳态运动视觉诱发电位
+aliases:
+- SSMVEP
+- oscillating Newton's rings paradigm
+- steady-state motion VEP
+family: steady_state
+bci_category:
+- reactive
+recording_modality:
+- EEG
+stimulus_modality:
+- visual
+markers:
+- MK.SSMVEP
+description:
+  en: Targets show periodic motion (for example oscillating Newton's rings, expanding-contracting checkerboards or moving
+    gratings) at distinct frequencies with little luminance change. Motion-sensitive visual cortex follows the motion frequency,
+    producing a steady-state motion VEP with less visual fatigue than flicker SSVEP.
+  zh: 目标以不同频率进行周期性运动（如振荡牛顿环、收缩—扩张棋盘格或移动光栅），且亮度变化很小。运动敏感视皮层跟随运动频率，产生稳态运动视觉诱发电位，视觉疲劳低于闪烁 SSVEP。
+protocol:
+  classes:
+  - one target per motion frequency
+  cue: oscillating Newton's rings (periodic motion, little luminance change)
+  stimulus_coding: frequency coding (periodic motion)
+  paradigm_timing: synchronous
+  feedback: none
+  distinguishing: 标准配置（最早发表，即 first_source）：牛顿环周期性收缩–扩张运动，各目标不同运动频率。本类暂无其他具体范式（no sibling protocol yet）。
+first_source:
+  citation: 'Xie J, Xu G, Wang J, Zhang F, Zhang Y. Steady-state motion visual evoked potentials produced by oscillating Newton''s
+    rings: implications for brain-computer interfaces. PLoS One. 2012;7(6):e39707.'
+  doi: 10.1371/journal.pone.0039707
+  year: 2012
+  verified: false
+interop:
+  bids_task: ssmvep
+notes: 'Leads used: R0556, R1089. D-013: kept separate from SSR-SSVEP-001 with its own marker MK.SSMVEP. [curator_a sprint
+  2, 2026-10-03] D-057: protocol block added for the canonical configuration; no other concrete paradigm identified for this
+  class in sprint 2. [curator_e sprint 3, 2026-10-05] bibliography corrected (OpenAlex, 2026-10-05). [maintainer sprint 3,
+  2026-10-07, D-073] origin candidate recalled, record confirmed via OpenAlex.'
+status: draft
+contributors:
+- curator_a
+- curator_e

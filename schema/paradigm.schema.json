@@ -2,12 +2,13 @@
   "$schema": "https://json-schema.org/draft/2020-12/schema",
   "$id": "https://github.com/savorcode/bci-paradigm-atlas/schema/paradigm.schema.json",
   "title": "BCI paradigm",
-  "description": "One experimental paradigm. Schema v0.1 (draft). See docs/methodology.md.",
+  "description": "One concrete paradigm (protocol) of a paradigm class. Schema 0.2 (draft). See docs/methodology.md §1, §6 and curation/decisions.md D-057.",
   "type": "object",
   "additionalProperties": false,
   "required": [
     "schema_version",
     "id",
+    "class",
     "name",
     "family",
     "bci_category",
@@ -20,11 +21,16 @@
   ],
   "properties": {
     "schema_version": {
-      "const": "0.1"
+      "const": "0.2"
     },
     "id": {
       "type": "string",
       "pattern": "^[A-Z]{3}-[A-Z0-9]{2,8}-[0-9]{3}$"
+    },
+    "class": {
+      "type": "string",
+      "pattern": "^[A-Z]{3}-[A-Z0-9]{2,8}$",
+      "description": "Paradigm class id (<FAMILY>-<SHORT>) registered in paradigms/_classes.yaml; must equal id without the -NNN suffix"
     },
     "name": {
       "$ref": "common.schema.json#/$defs/bilingual"
@@ -123,6 +129,59 @@
         }
       }
     },
+    "protocol": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "distinguishing"
+      ],
+      "description": "The task configuration of this concrete paradigm. A change in class/condition set, stimulus or cue type (incl. coding scheme), trial structure or feedback mode gives a new serial number (D-057).",
+      "properties": {
+        "n_classes": {
+          "type": "integer",
+          "minimum": 1,
+          "description": "Number of distinct classes / targets / conditions decoded or contrasted"
+        },
+        "classes": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          },
+          "minItems": 1,
+          "description": "The classes / targets / conditions, e.g. [left hand, right hand]"
+        },
+        "cue": {
+          "type": "string",
+          "description": "Cue or stimulus type, e.g. visual arrow cue, flickering targets"
+        },
+        "stimulus_coding": {
+          "type": "string",
+          "description": "Stimulus coding scheme, e.g. frequency coding, joint frequency-phase coding, row/column flashing, checkerboard"
+        },
+        "paradigm_timing": {
+          "enum": [
+            "synchronous",
+            "asynchronous",
+            "block",
+            "continuous"
+          ],
+          "description": "synchronous = cue-paced trials; asynchronous = self-paced; block = block design; continuous = no trial segmentation"
+        },
+        "feedback": {
+          "enum": [
+            "none",
+            "discrete",
+            "continuous"
+          ],
+          "description": "none = open loop; discrete = per-trial/selection feedback; continuous = closed-loop continuous feedback"
+        },
+        "distinguishing": {
+          "type": "string",
+          "minLength": 1,
+          "description": "What distinguishes this protocol from its siblings in the same class, citing numbering criteria 1-4 (class set, stimulus/cue, trial structure, feedback)"
+        }
+      }
+    },
     "first_source": {
       "$ref": "common.schema.json#/$defs/source"
     },
@@ -146,7 +205,8 @@
             "type": "string"
           }
         }
-      }
+      },
+      "description": "Parameter-level variations only (durations, ISI, trial counts, values within the same coding scheme); configuration changes are separate concrete paradigms (D-057)"
     },
     "datasets": {
       "type": "array",

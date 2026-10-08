@@ -1,0 +1,11 @@
+schema_version: "0.2"
+id: MK.low_freq_kinematics
+name: {en: Low-frequency EEG tracking of movement kinematics, zh: 低频脑电运动学跟踪}
+aliases: [low-frequency kinematic decoding, delta-band kinematics]
+type: oscillatory
+recording_modality: [EEG, ECoG]
+signature: {frequency_hz: below ~2 Hz, topography: sensorimotor and parietal}
+description: {en: 'Low-frequency (below about 2 Hz) EEG/ECoG amplitude fluctuations that covary with continuous limb position and velocity, allowing linear reconstruction of movement trajectories.', zh: 与连续的肢体位置和速度共变的低频（约 2 Hz 以下）EEG/ECoG 幅值波动，可用于线性重建运动轨迹。}
+notes: Signature values are textbook-level characteristics and await source checking (first pass, curator_b). Generators and indexes to be added in the second pass.
+status: draft
+contributors: [maintainer, curator_b]

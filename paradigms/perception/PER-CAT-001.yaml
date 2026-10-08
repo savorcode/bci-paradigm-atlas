@@ -1,0 +1,51 @@
+schema_version: '0.2'
+id: PER-CAT-001
+class: PER-CAT
+name:
+  en: Visual object categorization
+  zh: 视觉物体类别识别
+aliases:
+- THINGS-EEG/MEG paradigm
+- image category RSA
+- object category decoding
+- visual object recognition paradigm
+family: perception
+bci_category:
+- reactive
+- none
+recording_modality:
+- EEG
+- MEG
+- fMRI
+- ECoG
+stimulus_modality:
+- visual
+markers:
+- MK.N170
+- MK.BOLD_category_selective
+description:
+  en: Images of objects from different categories (for example faces, bodies, places, tools, animals) are presented, often
+    in rapid succession. Category information is read out from the occipito-temporal N170/M170 and from category-selective
+    BOLD responses in ventral visual cortex, and is the basis of image-category decoding datasets.
+  zh: 呈现不同类别物体的图像（如面孔、身体、场景、工具、动物），常以快速序列呈现。可从枕颞 N170/M170 和腹侧视觉皮层类别选择性 BOLD 响应中读出类别信息，这也是图像类别解码数据集的基础。
+protocol:
+  classes:
+  - object categories (e.g. faces, bodies, places, tools, animals)
+  cue: images of objects from several categories, often in rapid succession
+  paradigm_timing: synchronous
+  feedback: none
+  distinguishing: 标准配置（最早发表，即 first_source）：多类别物体图像逐一呈现，按类别对比/解码。本类暂无其他具体范式（no sibling protocol yet）。
+first_source:
+  citation: Ungerleider, L.G., Mishkin, M. Two cortical visual systems. Analysis of Visual Behavior (MIT Press). 1982.
+  year: 1982
+  verified: false
+interop:
+  bids_task: objectcategories
+notes: 'Leads used: R0059, R0079, R0132, R0177, R0244. R0059 (two cortical visual systems, 1982) is the only lead marked as
+  origin candidate; it is a theoretical chapter rather than a human recording paradigm, so the attribution needs review. D-031:
+  R0059 (Ungerleider & Mishkin 1982) is a theory chapter, not a task description; placeholder (qa_flag weak_origin). (maintainer,
+  2026-10-03) [curator_a sprint 2, 2026-10-03] D-057: protocol block added for the canonical configuration; no other concrete
+  paradigm identified for this class in sprint 2.'
+status: draft
+contributors:
+- curator_a

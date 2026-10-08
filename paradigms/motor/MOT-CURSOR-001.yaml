@@ -1,0 +1,64 @@
+schema_version: '0.2'
+id: MOT-CURSOR-001
+class: MOT-CURSOR
+name:
+  en: Closed-loop cursor control
+  zh: 闭环光标控制
+aliases:
+- closed-loop BCI control
+- cursor control
+- radial-8 cursor task
+- 1D/2D cursor control
+family: motor
+bci_category:
+- active
+recording_modality:
+- EEG
+- ECoG
+- intracortical
+stimulus_modality:
+- visual
+- mental_imagery
+- motor_execution
+markers:
+- MK.SMR_ERD
+- MK.motor_cortical_spiking
+description:
+  en: >-
+    The participant moves a cursor vertically from the centre of the screen to a target at the top or bottom edge by volitional
+    modulation of the sensorimotor mu rhythm, which an online decoder converts into cursor velocity. Continuous visual feedback
+    of the cursor closes the loop.
+  zh: 被试通过自主调节感觉运动 mu 节律，使光标从屏幕中央垂直移向上缘或下缘的目标，在线解码器将节律幅值转换为光标速度。光标的连续视觉反馈构成闭环。
+protocol:
+  n_classes: 2
+  classes:
+  - top target
+  - bottom target
+  cue: visual target at the top or bottom edge of the screen
+  paradigm_timing: synchronous
+  feedback: continuous
+  distinguishing: >-
+    Standard configuration (earliest published) / 标准配置（最早发表）: one-dimensional (vertical) cursor movement driven by mu-rhythm
+    amplitude, continuous visual cursor feedback (Wolpaw et al. 1991). Siblings: -002 two-dimensional EEG cursor control (criterion
+    1), -003 intracortical point-and-click keyboard typing (criteria 1, 2).
+first_source:
+  citation: >-
+    Wolpaw JR, McFarland DJ, Neat GW, Forneris CA. An EEG-based brain-computer interface for cursor control. Electroencephalography
+    and Clinical Neurophysiology. 1991;78(3):252-259.
+  doi: 10.1016/0013-4694(91)90040-B
+  pmid: '1707798'
+  year: 1991
+  verified: false
+interop:
+  bids_task: cursorcontrol
+notes: >-
+  Leads: R0880, R0945, R0949, R1038. Search sources (curation/work/pkg_B/search_log.md): S01 https://neurotechcenter.org/node/3267.
+  first_source found by search (S01, see search_log.md); other origin candidates noted in the task sheet (Wolpaw & McFarland
+  2004 PNAS, Hochberg 2006 Nature) not searched. ICMS sensory feedback in bidirectional BCIs (excluded STM-ICMS-001, D-009)
+  is background only. Sprint 2 (D-057): narrowed to the one-dimensional configuration of the first source (target positions
+  as described in the file description; check against R1106). Two-dimensional EEG control is MOT-CURSOR-002; intracortical
+  point-and-click typing (R0945, R0949) is MOT-CURSOR-003. ECoG imagery-based online feedback (R0880) stays here as a recording-modality
+  parameter. bibliography corrected (Crossref, 2026-10-05)
+status: draft
+contributors:
+- curator_b

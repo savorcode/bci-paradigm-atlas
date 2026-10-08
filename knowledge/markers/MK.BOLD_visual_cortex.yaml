@@ -1,0 +1,23 @@
+schema_version: "0.2"
+id: MK.BOLD_visual_cortex
+name:
+  en: Visual cortex BOLD response
+  zh: 视皮层 BOLD 响应
+aliases:
+- visual cortex activation
+- V1-V3 BOLD
+- occipital BOLD
+type: hemodynamic
+recording_modality:
+- fMRI
+- PET
+description:
+  en: Stimulus-related BOLD response in early and higher visual cortex, used for retinotopic mapping, encoding of natural
+    images and films, perceptual alternations and visual imagery.
+  zh: 早期及高级视皮层中与刺激相关的 BOLD 响应，用于视网膜拓扑映射、自然图像与影片编码、知觉交替及视觉想象研究。
+notes: 'First-pass skeleton by package A (2026-10-03). No generators/indexes yet. D-050 (maintainer, 2026-10-03): PET regional
+  blood-flow (rCBF) effects in the same region are grouped under this marker, as fNIRS HbO is under D-028 item 5.'
+status: draft
+contributors:
+- curator_a
+- maintainer

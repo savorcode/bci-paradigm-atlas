@@ -1,0 +1,58 @@
+schema_version: '0.2'
+id: LAN-PN-001
+class: LAN-PN
+name:
+  en: Picture naming
+  zh: 图片命名
+aliases:
+- Confrontation Naming
+- Object Naming
+- picture-word interference (variant)
+- visual naming
+family: language
+bci_category:
+- none
+recording_modality:
+- ECoG
+- fMRI
+stimulus_modality:
+- visual
+- motor_execution
+markers:
+- MK.high_gamma
+- MK.BOLD_language_network
+description:
+  en: Participants name pictures of objects or actions aloud as quickly and accurately as possible. Naming engages left-lateralised
+    language and speech-motor regions in fMRI, and ECoG shows sequential high-gamma increases from visual to temporal, frontal
+    and sensorimotor cortex, which is used clinically for language mapping.
+  zh: 被试尽快准确地出声命名物体或动作图片。命名在 fMRI 中激活左偏侧的语言与言语运动区；ECoG 显示高 γ 依次从视觉皮层扩展到颞、额与感觉运动皮层，临床上用于语言定位。
+trial_structure:
+  conditions:
+  - naming
+protocol:
+  n_classes: 1
+  classes:
+  - 'picture naming (items: parameter)'
+  cue: line drawings or photographs of objects or actions
+  paradigm_timing: synchronous
+  feedback: none
+  distinguishing: 标准配置（最早发表）：出声图片命名（源头候选 R0914）。与 -002（图词干扰：叠加干扰词，准则 2）区别。
+first_source:
+  citation: Crone NE, Hao L, Hart J, Boatman DF, Lesser RP, Irizarry RA, Gordon B. Electrocorticographic gamma activity during
+    word production in spoken and sign language. Neurology. 2001;57(11):2045-2053.
+  doi: 10.1212/wnl.57.11.2045
+  pmid: '11739824'
+  year: 2001
+  verified: false
+interop:
+  bids_task: picturenaming
+notes: 'HED task page: https://www.hedtags.org/hed-task/tasks/hedtsk_picture_naming.html. Leads: R0173, R0294, R0370, R0521,
+  R0782, R0819, R0914, R0978, R1000, R1029, R1043 (R#### = curation/literature.csv; DN## = curation/work/pkg_D/new_leads.csv).
+  R0914 (Electrocorticographic gamma activity during word production in spoken and sign language; title and PMID only) chosen
+  as the source candidate for the neural-recording version; picture naming as a behavioural test is older (origin not identified).
+  Sprint 2 (D-057, curator_d, 2026-10-03): protocol block added (-001 = earliest/standard configuration). Narrowed to plain
+  picture naming; picture-word interference moved to LAN-PN-002. Sibling concrete paradigms: LAN-PN-002. bibliography corrected
+  (OpenAlex, 2026-10-05)'
+status: draft
+contributors:
+- curator_d

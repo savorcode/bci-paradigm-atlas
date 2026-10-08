@@ -1,0 +1,29 @@
+schema_version: "0.2"
+id: MK.ErrP
+name:
+  en: Interaction error-related potential
+  zh: 交互式错误电位
+aliases:
+- ErrP
+- interaction ErrP
+- iErrP
+- error-related potential (BCI)
+- feedback ErrP
+type: erp_component
+recording_modality:
+- EEG
+signature:
+  latency_ms: 200-500 after erroneous feedback (multiphasic)
+  polarity: negative-positive-negative sequence
+  topography: fronto-central
+description:
+  en: Event-related potential elicited when an interface or machine produces an outcome that differs from what the user intended
+    or expected, recorded time-locked to the erroneous feedback. It is the error signal most commonly decoded on single trials
+    in BCI research.
+  zh: 当界面或机器产生与用户意图或预期不符的结果时诱发的事件相关电位，以错误反馈为锁时点记录。它是脑机接口研究中最常在单试次上解码的错误信号。
+notes: 'Signature values are textbook-level approximations and await checking against sources (pass 2). Generators and indexes
+  not yet written. Used by (registry): ERR-ERRP-001, ERR-OBS-001, ERR-ADAPT-001.'
+status: draft
+contributors:
+- maintainer
+- curator_c

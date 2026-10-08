@@ -1,0 +1,23 @@
+schema_version: "0.2"
+id: MK.BOLD_auditory_cortex
+name:
+  en: Auditory cortex BOLD response
+  zh: 听皮层 BOLD 响应
+aliases:
+- auditory cortex activation
+- Heschl's gyrus BOLD
+- superior temporal BOLD
+type: hemodynamic
+recording_modality:
+- fMRI
+- PET
+description:
+  en: Task- or stimulus-related BOLD response in primary and non-primary auditory cortex on the superior temporal plane and
+    gyrus, used for tonotopic mapping, voice-selective responses and auditory imagery.
+  zh: 颞上平面及颞上回初级和非初级听皮层中与任务或刺激相关的 BOLD 响应，用于音调拓扑映射、嗓音选择性响应及听觉想象研究。
+notes: 'First-pass skeleton by package A (2026-10-03). No generators/indexes yet. D-050 (maintainer, 2026-10-03): PET regional
+  blood-flow (rCBF) effects in the same region are grouped under this marker, as fNIRS HbO is under D-028 item 5.'
+status: draft
+contributors:
+- curator_a
+- maintainer

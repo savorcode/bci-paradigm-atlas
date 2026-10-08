@@ -1,0 +1,54 @@
+schema_version: '0.2'
+id: MOT-REACH-002
+class: MOT-REACH
+name:
+  en: Four-direction wrist centre-out movement (MEG)
+  zh: 四方向腕部中心外伸运动（脑磁）
+aliases:
+- BCI Competition IV dataset 3 paradigm
+- wrist movement direction decoding
+family: motor
+bci_category:
+- active
+recording_modality:
+- MEG
+stimulus_modality:
+- motor_execution
+- visual
+markers:
+- MK.low_freq_kinematics
+description:
+  en: Participants make actual wrist movements in one of four directions from a centre position, and the movement direction
+    is decoded from directionally modulated low-frequency MEG activity over motor areas.
+  zh: 被试从中心位置向四个方向之一做实际的腕部运动，依据运动区上受方向调制的低频脑磁活动解码运动方向。
+protocol:
+  n_classes: 4
+  classes:
+  - direction 1
+  - direction 2
+  - direction 3
+  - direction 4
+  cue: visual target
+  paradigm_timing: synchronous
+  feedback: none
+  distinguishing: 'Criterion 1 vs MOT-REACH-001: four wrist-movement directions instead of eight arm-reaching targets.'
+first_source:
+  citation: Waldert S, Preissl H, Demandt E, Braun C, Birbaumer N, Aertsen A, Mehring C. Hand movement direction decoded from
+    MEG and EEG. Journal of Neuroscience. 2008;28(4):1000-1008.
+  doi: 10.1523/JNEUROSCI.5171-07.2008
+  year: 2008
+  verified: false
+datasets:
+- name: BCI Competition IV, dataset 3 (MEG, 10 channels)
+  url: https://www.bbci.de/competition/iv/
+interop:
+  bids_task: reach
+notes: 'Lead: WF-B2-09 (BCI Competition IV page: dataset 3, MEG, 4 classes, ''directionally modulated low-frequency activity
+  during actual wrist movements in four directions''). Cue, manipulandum and direction labels to be checked. R1002 (movement
+  direction in the healthy human brain) is a likely related human lead, not read. [curator_a, sprint 3] Former first_source:
+  "TBD: dataset provider''s publication (University of Freiburg / Tübingen) not displayed; BCI Competition IV dataset 3 seen".
+  candidate origin found by bibliographic search; content unverified. bibliography corrected (Crossref, 2026-10-05) [maintainer
+  sprint 3, 2026-10-07, D-073] origin candidate recalled, record confirmed via Crossref.'
+status: draft
+contributors:
+- curator_b

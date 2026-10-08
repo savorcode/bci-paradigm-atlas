@@ -1,0 +1,48 @@
+schema_version: '0.2'
+id: PER-AB-001
+class: PER-AB
+name:
+  en: Attentional blink
+  zh: 注意瞬脱
+aliases:
+- AB
+- attentional blink
+- dual-target RSVP
+family: perception
+bci_category:
+- none
+recording_modality:
+- EEG
+stimulus_modality:
+- visual
+markers:
+- MK.P3b
+description:
+  en: Two targets are embedded in a rapid serial visual presentation stream. When the second target follows the first within
+    roughly 200-500 ms it is often missed, and missed second targets show a reduced or absent P3b compared with reported ones.
+  zh: 在快速序列视觉呈现流中嵌入两个靶刺激。当第二个靶刺激在第一个之后约 200–500 ms 内出现时常被漏报，被漏报的第二靶刺激所诱发的 P3b 较被报告者明显减小或消失。
+protocol:
+  n_classes: 2
+  classes:
+  - T2 reported
+  - T2 missed
+  cue: RSVP stream containing two targets (T1, T2) at varying lags
+  paradigm_timing: synchronous
+  feedback: none
+  distinguishing: 标准配置（最早发表，即 first_source）：RSVP 流中两个靶，T1–T2 间隔（lag）为参数，按 T2 报告与否分类。本类暂无其他具体范式（no sibling protocol yet）。
+first_source:
+  citation: 'Raymond, J. E., Shapiro, K. L., & Arnell, K. M. Temporary suppression of visual processing in an RSVP task: An
+    attentional blink? Journal of Experimental Psychology: Human Perception and Performance. 1992.'
+  doi: 10.1037/0096-1523.18.3.849
+  pmid: '1500880'
+  year: 1992
+  verified: false
+interop:
+  bids_task: attentionalblink
+notes: 'Leads used: R0101, R0904, R1092. D-011: RSVP target detection is a variant of PER-ODD-001; the attentional-blink aliases
+  of the RSVP candidate belong here. [curator_a sprint 2, 2026-10-03] D-057: protocol block added for the canonical configuration;
+  no other concrete paradigm identified for this class in sprint 2. [curator_e sprint 3, 2026-10-05] bibliography confirmed
+  (OpenAlex, 2026-10-05).'
+status: draft
+contributors:
+- curator_a

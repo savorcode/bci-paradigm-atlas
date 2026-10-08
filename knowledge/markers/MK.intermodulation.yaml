@@ -1,0 +1,24 @@
+schema_version: "0.2"
+id: MK.intermodulation
+name:
+  en: Intermodulation frequency response
+  zh: 互调频率响应
+aliases:
+- IM components
+- intermodulation response
+- nonlinear frequency-tagging response
+type: steady_state
+recording_modality:
+- EEG
+- MEG
+signature:
+  frequency_hz: n*f1 ± m*f2
+description:
+  en: Steady-state responses at combinations of two or more tagging frequencies (for example f1+f2), which arise only from
+    nonlinear neural interaction of the tagged inputs and therefore index their integration.
+  zh: 两个或多个标记频率组合处（如 f1+f2）的稳态响应，只能来自被标记输入之间的非线性神经交互，因而反映其整合。
+notes: First-pass skeleton by package A (2026-10-03). No generators/indexes yet. Signature values are textbook-level approximations
+  and await source checking. New marker requested by package A (curation/work/pkg_A/marker_requests.csv); not yet in curation/registry/markers.csv.
+status: draft
+contributors:
+- curator_a

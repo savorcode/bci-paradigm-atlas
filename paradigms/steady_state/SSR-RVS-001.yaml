@@ -1,0 +1,55 @@
+schema_version: '0.2'
+id: SSR-RVS-001
+class: SSR-RVS
+name:
+  en: Rhythmic visual stimulation (alpha entrainment)
+  zh: 节律性视觉刺激（α 夹带）
+aliases:
+- rhythmic entrainment
+- alpha entrainment by flicker
+family: steady_state
+bci_category:
+- none
+recording_modality:
+- EEG
+- MEG
+stimulus_modality:
+- visual
+markers:
+- MK.oscillatory_entrainment
+description:
+  en: A rhythmic visual stream at or near the alpha frequency precedes a near-threshold target presented at different phases
+    relative to the rhythm. Entrained alpha oscillations persist briefly after the stream, and target detection varies with
+    the phase of the entrained rhythm.
+  zh: 在接近阈限的靶刺激之前呈现处于或接近 α 频率的节律性视觉刺激流，靶刺激相对于节律处于不同相位。被夹带的 α 振荡在刺激流结束后短暂持续，靶检测率随夹带节律的相位而变化。
+protocol:
+  n_classes: 2
+  classes:
+  - target in phase with entrainer
+  - target out of phase
+  cue: rhythmic visual stream near alpha frequency followed by a near-threshold target
+  paradigm_timing: synchronous
+  feedback: none
+  distinguishing: 标准配置（最早发表，即 first_source）：近 α 频率的节律视觉流后呈现近阈靶，靶相位为条件。本类暂无其他具体范式（no sibling protocol yet）。
+first_source:
+  citation: 'Mathewson KE, Prudhomme C, Fabiani M, Beck DM, Lleras A, Gratton G. Making waves in the stream of consciousness:
+    entraining oscillations in EEG alpha and fluctuations in visual awareness with rhythmic visual stimulation. J Cogn Neurosci.
+    2012;24(12):2321-2333.'
+  doi: 10.1162/jocn_a_00288
+  year: 2012
+  verified: false
+interop:
+  bids_task: rhythmicentrainment
+notes: 'Leads used: search SA25a. first_source: no origin source identified in this pass (blocker, see curation/work/pkg_A/status.csv).
+  New candidate proposed by package A on 2026-10-03 (curation/work/pkg_A/new_candidates.csv); registered in curation/candidates.csv
+  as C227 (D-053, milestone M1). Uses MK.oscillatory_entrainment (registry, owner pkg B); notify pkg B that the marker is also used
+  by sensory entrainment. Distinct from SSR-SSVEP-001 because the construct is perceptual sampling, not stimulus following.
+  [curator_a sprint 2, 2026-10-03] D-057: protocol block added for the canonical configuration; no other concrete paradigm
+  identified for this class in sprint 2. [curator_e sprint 3, 2026-10-05] candidate origin found by bibliographic search (OpenAlex,
+  2026-10-05); content unverified. [maintainer sprint 3, 2026-10-07] bibliography confirmed (OpenAlex, 2026-10-05; origin
+  candidate, content unverified). [maintainer sprint 3, 2026-10-07, D-073] origin candidate recalled, record confirmed via
+  OpenAlex.'
+status: draft
+contributors:
+- curator_a
+- curator_e

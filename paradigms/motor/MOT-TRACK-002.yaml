@@ -1,0 +1,51 @@
+schema_version: '0.2'
+id: MOT-TRACK-002
+class: MOT-TRACK
+name:
+  en: Online closed-loop pursuit tracking (decoded cursor)
+  zh: 在线闭环追踪（解码光标）
+aliases:
+- online kinematics decoding
+- closed-loop pursuit tracking
+family: motor
+bci_category:
+- active
+recording_modality:
+- EEG
+stimulus_modality:
+- visual
+- motor_execution
+markers:
+- MK.low_freq_kinematics
+description:
+  en: >-
+    Participants track a moving target while a cursor driven by online decoding of low-frequency EEG is displayed, so that
+    the decoded trajectory, rather than the real hand, provides continuous visual feedback.
+  zh: 被试追踪移动的目标，同时屏幕显示由低频脑电在线解码驱动的光标，即由解码轨迹而非真实的手提供连续视觉反馈。
+protocol:
+  n_classes: 1
+  classes:
+  - continuous target pursuit
+  cue: continuously moving visual target
+  paradigm_timing: continuous
+  feedback: continuous
+  distinguishing: >-
+    Criterion 4 vs MOT-TRACK-001: continuous feedback of the online-decoded trajectory (closed loop) instead of offline decoding.
+first_source:
+  citation: >-
+    Martínez-Cagigal V, Kobler RJ, Mondini V, Hornero R, Müller-Putz GR. Non-linear online low-frequency EEG decoding of arm
+    movements during a pursuit tracking task. Annual International Conference of the IEEE Engineering in Medicine and Biology
+    Society. 2020;2020:2981-2985.
+  doi: 10.1109/embc44109.2020.9175723
+  pmid: '33018632'
+  year: 2020
+  verified: false
+interop:
+  bids_task: tracking
+notes: >-
+  Lead: R1016 (title + PMID). Whether the displayed cursor was fully decoded or mixed with real movement must be checked.
+  BNCI2025_002 (MOABB; snakerun/freerun/eyerun, 3 sessions) may contain online sessions (check). bibliography corrected (OpenAlex,
+  2026-10-05)
+status: draft
+contributors:
+- curator_b

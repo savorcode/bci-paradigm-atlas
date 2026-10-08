@@ -1,0 +1,52 @@
+schema_version: '0.2'
+id: PER-BODY-001
+class: PER-BODY
+name:
+  en: Body perception
+  zh: 身体知觉
+aliases:
+- body localizer
+- extrastriate body area localizer
+- EBA localizer
+family: perception
+bci_category:
+- none
+recording_modality:
+- fMRI
+- EEG
+stimulus_modality:
+- visual
+markers:
+- MK.BOLD_category_selective
+- MK.N170
+description:
+  en: Images of human bodies and body parts (without faces) are contrasted with objects, faces or scrambled images. Bodies
+    elicit selective BOLD responses in the extrastriate body area of lateral occipito-temporal cortex and an occipito-temporal
+    negativity in the N170 range.
+  zh: 将人体及身体部位图像（不含面孔）与物体、面孔或打乱图像对比。身体图像在外侧枕颞皮层的纹外身体区引起选择性 BOLD 响应，并在 N170 时程诱发枕颞负波。
+protocol:
+  n_classes: 2
+  classes:
+  - bodies / body parts
+  - control objects
+  cue: static images of headless bodies vs objects (or faces, scrambled)
+  paradigm_timing: block
+  feedback: none
+  distinguishing: 标准配置（最早发表，即 first_source）：组块呈现无头身体图像与物体图像对比（定位器）。本类暂无其他具体范式（no sibling protocol yet）。
+first_source:
+  citation: Downing PE, Jiang Y, Shuman M, Kanwisher N. A cortical area selective for visual processing of the human body.
+    Science. 2001;293(5539):2470-2473.
+  doi: 10.1126/science.1063414
+  year: 2001
+  verified: false
+interop:
+  bids_task: bodies
+notes: 'Leads used: search SA21, search SA21b. first_source found by search in this sprint (SA21), not from the lead list.
+  New candidate proposed by package A on 2026-10-03 (curation/work/pkg_A/new_candidates.csv); registered in curation/candidates.csv
+  as C223 (D-053, milestone M1). Uses registry markers; differs from SOC-BIO-001 (biological motion) by using static body images.
+  [curator_a sprint 2, 2026-10-03] D-057: protocol block added for the canonical configuration; no other concrete paradigm
+  identified for this class in sprint 2. [curator_e sprint 3, 2026-10-05] bibliography corrected (Crossref, 2026-10-05).'
+status: draft
+contributors:
+- curator_a
+- curator_e

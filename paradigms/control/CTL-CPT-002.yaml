@@ -1,0 +1,60 @@
+schema_version: '0.2'
+id: CTL-CPT-002
+class: CTL-CPT
+name:
+  en: AX continuous performance task (AX-CPT)
+  zh: AX 持续操作任务（AX-CPT）
+aliases:
+- AX-CPT
+- AX continuous performance task
+- AX-CPT variant
+family: control
+bci_category:
+- none
+recording_modality:
+- EEG
+- fMRI
+stimulus_modality:
+- visual
+markers:
+- MK.CNV
+- MK.P3b
+description:
+  en: Letters are presented as cue-probe pairs, and participants make a target response only to the probe X when it follows
+    the cue A (AX, most frequent), and a non-target response to AY, BX and BY pairs, so that maintenance of cue context and
+    its use to inhibit a prepotent response can be measured. Cues elicit a contingent negative variation in preparation for
+    the probe, and probes elicit a P3.
+  zh: 字母以线索–探测刺激对呈现：只有当探测刺激 X 跟在线索 A 之后（AX，最常见）才作目标反应，对 AY、BX、BY 作非目标反应，从而测量线索情境的保持及其对优势反应的抑制。线索诱发为探测刺激做准备的关联性负变，探测刺激诱发 P3。
+trial_structure:
+  conditions:
+  - AX
+  - AY
+  - BX
+  - BY
+protocol:
+  n_classes: 4
+  classes:
+  - AX
+  - AY
+  - BX
+  - BY
+  cue: letter cue followed by letter probe after a delay
+  paradigm_timing: synchronous
+  feedback: none
+  distinguishing: 准则 1：条件集由"目标/非目标"变为 AX、AY、BX、BY 四种线索–探测组合，目标定义取决于前一线索（CTL-CPT-001 为单一目标字母）。
+first_source:
+  citation: 'Servan-Schreiber D, Cohen JD, Steingard S. Schizophrenic deficits in the processing of context: a test of a theoretical
+    model. Archives of General Psychiatry 53(12): 1105-1112. 1996.'
+  doi: 10.1001/archpsyc.1996.01830120037008
+  year: 1996
+  verified: false
+interop:
+  bids_task: axcpt
+notes: 'Leads used: R1316 (abstract: ''a new variant of the Continuous Performance Test designed specifically to elicit deficits
+  in the processing of contextual information''); R0158; HED CPT page. Trial-type labels AX/AY/BX/BY from the HED description
+  and common usage; to be checked in the original. Please add R1316 to literature.csv. Sprint 2 (D-057, curator_c, 2026-10-03):
+  new concrete paradigm of class CTL-CPT; numbering criterion 1 relative to CTL-CPT-001; all sources unverified. bibliography
+  confirmed (Crossref, 2026-10-05)'
+status: draft
+contributors:
+- curator_c

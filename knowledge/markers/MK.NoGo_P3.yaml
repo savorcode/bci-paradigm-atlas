@@ -1,0 +1,28 @@
+schema_version: "0.2"
+id: MK.NoGo_P3
+name:
+  en: NoGo/stop P3 (inhibition P3)
+  zh: NoGo/停止 P3（抑制 P3）
+aliases:
+- NoGo-P3
+- stop-P3
+- inhibition P3
+- anterior P3 (NoGo)
+type: erp_component
+recording_modality:
+- EEG
+signature:
+  latency_ms: 300-500 after NoGo / stop-signal onset
+  polarity: positive
+  topography: fronto-central (more anterior than P3b)
+description:
+  en: Positive component elicited by stimuli that require withholding or cancelling a response (NoGo stimuli, stop signals),
+    with a more anterior scalp distribution than the target P3b. Its amplitude and onset are related to successful response
+    inhibition.
+  zh: 由要求抑制或取消反应的刺激（NoGo 刺激、停止信号）诱发的正成分，头皮分布比靶刺激 P3b 更靠前。其波幅和起始时间与反应抑制的成功相关。
+notes: 'Signature values are textbook-level approximations and await checking against sources (pass 2). Generators and indexes
+  not yet written. Used by (registry): CTL-GNG-001, CTL-SART-001, CTL-SST-001.'
+status: draft
+contributors:
+- maintainer
+- curator_c

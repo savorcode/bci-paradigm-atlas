@@ -1,0 +1,25 @@
+schema_version: "0.2"
+id: MK.mVEP
+name:
+  en: Motion-onset visual evoked potential (N2)
+  zh: 运动起始视觉诱发电位（N2）
+aliases:
+- mVEP
+- motion-onset VEP
+- motion N2
+type: erp_component
+recording_modality:
+- EEG
+signature:
+  latency_ms: ~150-250 (N2)
+  polarity: negative
+  topography: occipito-temporal
+description:
+  en: Transient VEP evoked by the onset of visual motion, dominated by a negative peak around 200 ms over occipito-temporal
+    sites, attributed to motion-sensitive extrastriate cortex.
+  zh: 由视觉运动起始诱发的瞬态 VEP，以枕颞区约 200 ms 的负峰为主，归因于运动敏感的纹外皮层。
+notes: First-pass skeleton by package A (2026-10-03). No generators/indexes yet. Signature values are textbook-level approximations
+  and await source checking.
+status: draft
+contributors:
+- curator_a

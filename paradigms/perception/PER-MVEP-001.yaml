@@ -1,0 +1,52 @@
+schema_version: '0.2'
+id: PER-MVEP-001
+class: PER-MVEP
+name:
+  en: Motion-onset VEP (mVEP)
+  zh: 运动起始视觉诱发电位
+aliases:
+- mVEP
+- motion VEP BCI
+- motion-onset VEP
+family: perception
+bci_category:
+- none
+recording_modality:
+- EEG
+stimulus_modality:
+- visual
+markers:
+- MK.mVEP
+description:
+  en: A briefly presented onset of visual motion (for example a moving bar or expanding pattern), with little contrast or
+    luminance change, evokes a transient VEP dominated by a motion-specific occipito-temporal N2. Because it requires no flicker
+    and is robust to stimulus parameters, it is used in clinical testing of the visual motion pathway.
+  zh: 短暂呈现的视觉运动起始（如移动条或扩张图案），对比度与亮度变化很小，诱发以运动特异的枕颞 N2 为主的瞬态 VEP。由于不需要闪烁、对刺激参数稳健，用于视觉运动通路的临床检查。
+protocol:
+  n_classes: 1
+  classes:
+  - motion onset
+  cue: brief onset of visual motion with low contrast / luminance change
+  stimulus_coding: 多目标 mVEP BCI 拆为 PER-MVEP-002（准则 1;4）。
+  paradigm_timing: synchronous
+  feedback: none
+  distinguishing: 标准配置（最早发表，即 first_source）：短暂运动起始刺激，被动观察（临床视觉检查）。同类其他具体范式：PER-MVEP-002（区别见各自 distinguishing；维护者 sprint 2
+    QA 更正）。
+first_source:
+  citation: Kuba M, Kubová Z. Visual evoked potentials specific for motion onset. Doc Ophthalmol. 1992;80(1):83-89.
+  doi: 10.1007/BF00161234
+  year: 1992
+  verified: false
+interop:
+  bids_task: mvep
+notes: 'Leads used: R0230, R0836, R0992. first_source: no origin source identified in this pass (blocker, see curation/work/pkg_A/status.csv).
+  No lead represents the original description of the motion-onset VEP; R0992 (review) and R0230 (2002 methods paper) are later.
+  Guo et al. 2008 (found in search, SA45/SA47) is recorded as the BCI variant source, not as first_source. [curator_a sprint
+  2, 2026-10-03] D-057: the BCI variant (Guo et al. 2008) is now PER-MVEP-002. [curator_e sprint 3, 2026-10-05] candidate
+  origin found by bibliographic search (OpenAlex, 2026-10-05); content unverified. [maintainer sprint 3, 2026-10-07] bibliography
+  confirmed (OpenAlex, 2026-10-05; origin candidate, content unverified). [maintainer sprint 3, 2026-10-07, D-073] origin
+  candidate recalled, record confirmed via OpenAlex.'
+status: draft
+contributors:
+- curator_a
+- curator_e

@@ -1,0 +1,56 @@
+schema_version: '0.2'
+id: LAN-P600-001
+class: LAN-P600
+name:
+  en: Syntactic violation
+  zh: 句法违例
+aliases:
+- agreement violation
+- garden-path sentences
+- syntactic anomaly
+- syntactic positive shift (SPS)
+family: language
+bci_category:
+- none
+recording_modality:
+- EEG
+stimulus_modality:
+- visual
+- auditory
+markers:
+- MK.P600
+- MK.left_anterior_negativity
+description:
+  en: Sentences are presented word by word and contain syntactic violations, such as agreement or phrase-structure errors,
+    compared with well-formed control sentences. Syntactic violations elicit a late centro-parietal positivity (P600, also
+    called syntactic positive shift), and morphosyntactic violations are in some studies preceded by a left anterior negativity.
+  zh: 逐词呈现句子，其中含句法违例（如一致性或短语结构错误），与合法的对照句比较。句法违例诱发中央—顶区晚期正波（P600，又称句法正漂移），部分研究中形态句法违例之前还有左前负波。
+trial_structure:
+  conditions:
+  - well-formed
+  - violation
+protocol:
+  n_classes: 2
+  classes:
+  - syntactically well-formed
+  - syntactic violation
+  cue: sentences presented word by word
+  paradigm_timing: synchronous
+  feedback: none
+  distinguishing: 标准配置（最早发表）：句法违例（一致性或短语结构错误）vs 合法句（R1071，SPS）。与 -002（花园路径暂时歧义句，准则 1）区别。
+first_source:
+  citation: Hagoort P, Brown C, Groothusen J. The syntactic positive shift (SPS) as an ERP measure of syntactic processing.
+    Language and Cognitive Processes. 1993;8(4):439-483.
+  doi: 10.1080/01690969308407585
+  year: 1993
+  verified: false
+interop:
+  bids_task: syntacticviolation
+notes: 'Leads: R0864, R0899, R0905, R0942, R1071 (R#### = curation/literature.csv; DN## = curation/work/pkg_D/new_leads.csv).
+  R1071 (The syntactic positive shift (SPS) as an ERP measure of syntactic processing; MPI web record, no PMID) chosen as
+  origin (source candidate role). Lead fields lack authors/years. Sprint 2 (D-057, curator_d, 2026-10-03): protocol block
+  added (-001 = earliest/standard configuration). Narrowed to violation designs; garden-path sentences moved to LAN-P600-002.
+  Sibling concrete paradigms: LAN-P600-002. bibliography corrected (Crossref, 2026-10-05)'
+status: draft
+contributors:
+- curator_d

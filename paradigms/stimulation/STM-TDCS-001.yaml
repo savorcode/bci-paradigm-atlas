@@ -1,0 +1,61 @@
+schema_version: '0.2'
+id: STM-TDCS-001
+class: STM-TDCS
+name:
+  en: Transcranial direct current stimulation with EEG / fNIRS
+  zh: 经颅直流电刺激同步记录
+aliases:
+- tDCS-EEG
+- tDCS-fNIRS
+- tDCS
+family: stimulation
+bci_category:
+- none
+recording_modality:
+- EEG
+- fNIRS
+- fMRI
+stimulus_modality:
+- electrical_stimulation
+markers:
+- MK.tES_power_aftereffect
+- MK.BOLD_stimulated_region
+description:
+  en: >-
+    A weak constant current (anodal or cathodal) is applied between scalp electrodes for several minutes, with brain activity
+    recorded before, during or after stimulation and compared with sham. Polarity-dependent changes in excitability are assessed
+    through band-power changes in EEG (for example of sensorimotor mu ERD) and haemodynamic responses under the stimulated
+    region.
+  zh: 在头皮电极之间施加数分钟的弱恒定电流（阳极或阴极），在刺激前、刺激中或刺激后记录脑活动，并与伪刺激比较。通过脑电频段功率变化（如感觉运动 mu ERD）以及受刺激区域下方的血流动力学响应评估依极性而定的兴奋性改变。
+protocol:
+  n_classes: 3
+  classes:
+  - anodal
+  - cathodal
+  - sham
+  cue: none
+  stimulus_coding: constant current for several minutes
+  paradigm_timing: block
+  feedback: none
+  distinguishing: >-
+    Standard configuration (earliest published) / 标准配置（最早发表）: polarity-dependent offline tDCS with recordings before/during/after
+    (Nitsche & Paulus 2000, MEP origin, D-031). No sibling protocol yet.
+first_source:
+  citation: >-
+    Nitsche MA, Paulus W. Excitability changes induced in the human motor cortex by weak transcranial direct current stimulation.
+    The Journal of Physiology. 2000;527(3):633-639.
+  doi: 10.1111/j.1469-7793.2000.t01-1-00633.x
+  pmid: '10990547'
+  year: 2000
+  verified: false
+interop:
+  bids_task: tdcs
+notes: >-
+  Leads: R0192, R0422, R0584, R0691, R0702, R0708, R0990, R1080. first_source R0192 established tDCS excitability effects
+  with MEPs, not brain recording; flagged. R0691/R0702 are clinical-efficacy sources and R0708 a safety guideline; R0990 and
+  R1080 are the recording leads. D-031 (maintainer, 2026-10-03): first_source is a behavioural or EMG/MEP-only origin, which
+  is acceptable; add the earliest brain-recording study as a "First neural recording: <citation> (R####)" line in sprint 2.
+  bibliography corrected (OpenAlex, 2026-10-05)
+status: draft
+contributors:
+- curator_b

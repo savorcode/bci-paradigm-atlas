@@ -1,0 +1,149 @@
+# 包 E sprint 2 范式类修改（D-057）。维护者合入 paradigms/_classes.yaml；策展人不要直接改登记表。
+# Class edits for package E; the maintainer applies them to paradigms/_classes.yaml.
+# action: modify | add | deprecate；fields 只写要改的字段（schema/paradigm_class.schema.json）。
+updates:
+- id: STA-NF
+  action: modify
+  fields:
+    description:
+      en: A brain signal is extracted in real time and fed back to the participant as a visual or auditory display, and over
+        sessions or blocks the participant learns to change it in a target direction. Trained signals include EEG band power
+        such as sensorimotor rhythm and posterior alpha, and the haemodynamic signal of a target region in real-time fMRI
+        or fNIRS.
+      zh: 实时提取某种脑信号，并以视觉或听觉形式反馈给被试；经过多次训练或多个组块，被试学会使其朝目标方向变化。被训练的信号包括脑电频段功率（如感觉运动节律、后部 α），以及实时 fMRI 或 fNIRS 中目标脑区的血流动力学信号。
+    markers:
+    - MK.SMR_ERD
+    - MK.alpha_posterior
+    - MK.BOLD_amygdala
+    first_source:
+      citation: Sterman M, Friar L. Suppression of seizures in an epileptic following sensorimotor EEG feedback training.
+        Electroencephalography and Clinical Neurophysiology 33(1):89-95. 1972.
+      year: 1972
+      verified: false
+  reason: 'Class now has EEG (STA-NF-001) and haemodynamic (STA-NF-002) concrete paradigms; marker union adds MK.BOLD_amygdala
+    (example target of STA-NF-002). first_source: earliest record seen (Wikipedia ''Neurofeedback'' reference list, sprint-2
+    F03), replacing TBD; Kamiya''s 1962 alpha feedback is reported there but not seen as a record.'
+- id: STA-SCP
+  action: modify
+  fields:
+    description:
+      en: With visual feedback of their vertex slow cortical potential, participants learn to produce negative or positive
+        shifts lasting several seconds; the learned binary control can be trained on its own or used to select letters in
+        a spelling device. The trained signal is the slow cortical potential itself.
+      zh: 在头顶慢皮层电位的视觉反馈下，被试学会产生持续数秒的负向或正向偏移；习得的二元控制既可单独训练，也可用于拼写装置中的字母选择。被训练的信号就是慢皮层电位本身。
+  reason: 'Generalised to cover STA-SCP-001 (binary training) and STA-SCP-002 (spelling device). Class first_source (Birbaumer
+    et al. 1999) is the speller, which is no longer the earliest configuration; origin of SCP feedback training not surfaced
+    (earliest seen: Birbaumer et al. 1992, doi:10.1016/0168-5597(92)90088-S), maintainer to decide whether to set TBD.'
+- id: SOC-CYB
+  action: modify
+  fields:
+    first_source:
+      citation: 'Williams, K. D., Cheung, C. K. T., & Choi, W. CyberOstracism: Effects of being ignored over the Internet.
+        Journal of Personality and Social Psychology, 79, 748-762. 2000.'
+      year: 2000
+      verified: false
+    notes: 'First neural recording: Eisenberger et al. 2003, Does rejection hurt? An fMRI study of social exclusion (R1171).'
+  reason: 'D-031: behavioural origin (Cyberball publications page, S01b / sprint-2 F06) replaces the first neural study, which
+    moves to notes.'
+- id: EMO-THREAT
+  action: modify
+  fields:
+    first_source:
+      citation: Schmitz, A., & Grillon, C. Assessing fear and anxiety in humans using the threat of predictable and unpredictable
+        aversive events (the NPU-threat test). Nature Protocols 7(3). 2012.
+      year: 2012
+      verified: false
+    notes: 'First neural recording: Alvarez RP et al. 2011, Phasic and sustained fear in humans elicits distinct patterns
+      of brain activity, NeuroImage (R1182). Earlier threat-of-shock startle studies not surfaced; the 2012 protocol paper
+      is the earliest description seen, not a confirmed origin.'
+  reason: D-031 (sprint-2 S2-04, https://cognitiveatlas.org/task/id/trm_502420a682976/).
+- id: EMO-FILM
+  action: modify
+  fields:
+    description:
+      en: Participants watch or listen to validated emotion-eliciting film clips, music or music videos for tens of seconds
+        to minutes, usually followed by self-ratings of discrete emotions or of valence and arousal. Sustained affective states
+        are indexed by frontal alpha asymmetry and by band-power patterns across frequency bands, which are the basis of EEG
+        emotion-recognition datasets.
+      zh: 被试观看或聆听经过验证的情绪诱发影片片段、音乐或音乐视频，时长从数十秒到数分钟，之后通常对离散情绪或效价、唤醒度进行自评。持续的情绪状态以额叶 α 不对称与各频段功率模式为指标，这也是脑电情绪识别数据集的基础。
+    aliases:
+    - film clip emotion induction
+    - DEAP paradigm
+    - SEED paradigm
+  reason: Description now names both rating schemes (discrete vs dimensional) used by EMO-FILM-001 to -004; aliases for the
+    dataset-named concrete paradigms.
+- id: EMO-FACE
+  action: modify
+  fields:
+    description:
+      en: Photographs or schematic drawings of faces showing emotional or neutral expressions are presented, with passive
+        viewing, an orthogonal task, expression labelling or expression matching. Emotional expressions modulate the N170
+        and the early posterior negativity in EEG and increase amygdala BOLD.
+      zh: 呈现带有情绪或中性表情的面孔照片或示意图，任务为被动观看、与表情无关的任务、表情命名或表情匹配。情绪表情调制脑电中的 N170 与早期后部负波，并增强杏仁核 BOLD。
+  reason: Adds the matching task of EMO-FACE-002.
+- id: EMO-REG
+  action: modify
+  fields:
+    description:
+      en: Instruction cues ask participants to respond naturally to emotional stimuli or to apply a regulation strategy such
+        as cognitive reappraisal or expressive suppression, and then to rate their affect. Reappraisal of unpleasant pictures
+        reduces the late positive potential relative to the look condition.
+      zh: 指导语要求被试对情绪刺激自然反应，或运用认知重评、表达抑制等调节策略，然后评定情绪。与注视条件相比，对不愉快图片的重评降低晚期正电位。
+    markers:
+    - MK.LPP
+    - MK.BOLD_amygdala
+  reason: Generalised to EMO-REG-001 and -002; marker union adds MK.BOLD_amygdala (EMO-REG-002).
+- id: EMO-MID
+  action: modify
+  fields:
+    description:
+      en: A cue signals whether a potential reward (monetary or social), loss or no incentive is at stake; after a delay the
+        participant responds quickly to a target, and feedback reports the outcome. Reward anticipation recruits ventral striatal
+        BOLD, and outcome feedback elicits the FRN / reward positivity in EEG.
+      zh: 线索提示本试次是否涉及潜在奖赏（金钱或社会性）、损失或无激励；延迟后被试对靶刺激快速反应，随后反馈结果。奖赏预期激活腹侧纹状体 BOLD，结果反馈在脑电中诱发 FRN／奖赏正波。
+  reason: Covers EMO-MID-002 (social incentive delay, D-025).
+- id: EMO-FC
+  action: modify
+  fields:
+    markers:
+    - MK.BOLD_amygdala
+    - MK.frontal_midline_theta
+  reason: Marker union adds MK.frontal_midline_theta (EMO-FC-003, extinction recall, lead R0933).
+- id: STA-MW
+  action: modify
+  fields:
+    description:
+      en: During a monotonous ongoing task, participants report whether their attention was on the task or elsewhere, either
+        when prompted by thought probes at random times or spontaneously whenever they notice it, and neural activity preceding
+        on- and off-task reports is compared. Off-task periods show reduced P3b to task stimuli, increased posterior alpha
+        and engagement of the default mode network.
+      zh: 在单调的持续任务中，被试报告注意是否在任务上：或在随机时刻由思维探测提示报告，或每当自己察觉时主动报告；比较专注与走神报告之前的神经活动。走神时段对任务刺激的 P3b 减小，后部 α 增强，默认模式网络参与。
+  reason: Covers STA-MW-002 (self-caught reports).
+- id: STA-SLP
+  action: modify
+  fields:
+    description:
+      en: Overnight EEG, together with electro-oculogram and chin electromyogram, is scored in 30-s epochs into wake, NREM
+        stages and REM according to standard rules (Rechtschaffen and Kales, or the AASM manual). NREM stages are defined
+        by sleep spindles, K-complexes and slow waves.
+      zh: 整夜脑电连同眼电、颏肌电，按标准规则（Rechtschaffen 与 Kales 规则或 AASM 手册）以 30 秒一帧判读为清醒、NREM 各期与 REM 期。NREM 各期由睡眠纺锤波、K 复合波与慢波界定。
+  reason: Covers STA-SLP-001 (R&K) and STA-SLP-002 (AASM).
+- id: STA-DRV
+  action: modify
+  fields:
+    description:
+      en: Participants drive in a simulator for a prolonged monotonous session, and drowsiness is labelled either by reaction
+        times to random lane-departure events or continuously from eye-tracking measures such as PERCLOS. Increasing drowsiness
+        is accompanied by higher theta and posterior alpha power, the basis of EEG drowsiness detection.
+      zh: 被试在模拟器中长时间单调驾驶，困倦程度或由对随机车道偏移事件的反应时标注，或由 PERCLOS 等眼动指标连续标注。困倦加深伴随 θ 与后部 α 功率升高，这是脑电困倦检测的基础。
+  reason: Covers STA-DRV-002 (SEED-VIG style continuous labelling).
+- id: SOC-GAZE
+  action: modify
+  fields:
+    markers:
+    - MK.N170
+    - MK.P1_visual
+    - MK.BOLD_pSTS
+    - MK.BOLD_striatum_reward
+  reason: Marker union adds MK.BOLD_striatum_reward (SOC-GAZE-002, initiating joint attention recruits reward-related circuitry,
+    lead R0986).

@@ -1,0 +1,11 @@
+schema_version: "0.2"
+id: MK.BOLD_oculomotor
+name: {en: 'Oculomotor network BOLD (FEF, SEF, IPS)', zh: 眼动网络 BOLD（额眼区、辅助眼区、顶内沟）}
+aliases: [eye-field activation, FEF BOLD]
+type: hemodynamic
+recording_modality: [fMRI]
+signature: {topography: 'frontal eye field, supplementary eye field, intraparietal sulcus'}
+description: {en: 'Haemodynamic response in the frontal and supplementary eye fields and the intraparietal sulcus during the preparation and execution of eye movements, including saccades and smooth pursuit.', zh: 准备与执行眼动（包括眼跳与平滑追踪）时，额眼区、辅助眼区和顶内沟的血流动力学响应。}
+notes: Signature values are textbook-level characteristics and await source checking (first pass, curator_b). Generators and indexes to be added in the second pass.
+status: draft
+contributors: [maintainer, curator_b]

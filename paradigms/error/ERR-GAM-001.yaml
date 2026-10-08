@@ -1,0 +1,57 @@
+schema_version: '0.2'
+id: ERR-GAM-001
+class: ERR-GAM
+name:
+  en: Gambling / reward feedback
+  zh: 赌博与奖赏反馈
+aliases:
+- FRN paradigm
+- RewP paradigm
+- Reward feedback paradigm
+- Simple gambling task
+- Feedback Block
+- Performance Feedback
+- Score Screen
+- Trial Feedback
+family: error
+bci_category:
+- none
+recording_modality:
+- EEG
+stimulus_modality:
+- visual
+markers:
+- MK.FRN
+description:
+  en: Participants make simple choices (e.g., between two doors or cards) and then receive monetary gain or loss feedback
+    that is largely independent of performance. Loss feedback elicits a fronto-central feedback-related negativity relative
+    to gain feedback (equivalently, gains elicit a reward positivity).
+  zh: 被试做出简单选择（如在两扇门或两张牌中选一个），随后获得基本与表现无关的金钱得失反馈。与获益反馈相比，损失反馈诱发额中央的反馈相关负波（等价地说，获益诱发奖赏正波）。
+trial_structure:
+  conditions:
+  - gain
+  - loss
+protocol:
+  n_classes: 2
+  classes:
+  - monetary gain
+  - monetary loss
+  cue: choice between two visual options labelled with monetary amounts, followed by gain/loss feedback
+  paradigm_timing: synchronous
+  feedback: discrete
+  distinguishing: 标准配置（最早发表）：在两个标有金额的选项中选择，随后呈现得/失反馈，得失与表现基本无关（Gehring & Willoughby 2002，R0235）；金额大小是否作为因素与 ERR-GAM-002 相区别，待核对原文。
+first_source:
+  citation: Gehring WJ, Willoughby AR. The medial frontal cortex and the rapid processing of monetary gains and losses. Science.
+    2002.
+  pmid: '11910116'
+  year: 2002
+  verified: false
+interop:
+  bids_task: gambling
+notes: 'HED task page: https://www.hedtags.org/hed-task/tasks/hedtsk_receive_feedback.html. Leads used: R0235; R0840; R1093.
+  first_source lead: R0235. Maintainer note (decisions.md, 候议): possible overlap with ERR-TE-001 (both MK.FRN, outcome evaluation).
+  Reviews/meta-analysis: R0840, R1093. Pass 1 skeleton (curator_c, 2026-10-03); all sources unverified. Sprint 2 (D-057):
+  protocol added; doors guessing task (R1093) added as ERR-GAM-002 and passive slot-machine outcomes (cited in R0714) as ERR-GAM-003.'
+status: draft
+contributors:
+- curator_c

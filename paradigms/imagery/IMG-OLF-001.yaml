@@ -1,0 +1,55 @@
+schema_version: '0.2'
+id: IMG-OLF-001
+class: IMG-OLF
+name:
+  en: Olfactory imagery
+  zh: 嗅觉想象
+aliases:
+- odor imagery
+- odour mental imagery
+- olfactory mental imagery
+family: imagery
+bci_category:
+- none
+recording_modality:
+- fMRI
+stimulus_modality:
+- mental_imagery
+- olfactory
+- visual
+markers:
+- MK.BOLD_olfactory_cortex
+description:
+  en: >-
+    Participants are cued (e.g. by an odour name) to imagine smelling an odour, compared with imagining its visual appearance
+    or with rest. Odour imagery activates primary olfactory (piriform) cortex and related regions in a way that partly mirrors
+    odour perception.
+  zh: 以提示（如气味名称）让被试想象闻到某种气味，并与想象其视觉外观或休息条件比较。气味想象激活初级嗅觉（梨状）皮层及相关区域，部分类似于气味知觉。
+protocol:
+  n_classes: 2
+  classes:
+  - olfactory imagery
+  - visual imagery of the odour source
+  cue: odour name
+  paradigm_timing: block
+  feedback: none
+  distinguishing: >-
+    Standard configuration (earliest published) / 标准配置（最早发表）: cued odour imagery contrasted with visual imagery (Djordjevic
+    et al. 2005, secondary citation). No sibling protocol yet.
+first_source:
+  citation: >-
+    Djordjevic J, Zatorre RJ, Petrides M, Boyle JA, Jones-Gotman M. Functional neuroimaging of odor imagery. NeuroImage. 2005;24(3):791-801.
+  doi: 10.1016/j.neuroimage.2004.09.035
+  year: 2005
+  verified: false
+interop:
+  bids_task: olfactoryimagery
+notes: >-
+  Search sources (curation/work/pkg_B/search_log.md): N06 https://www.frontiersin.org/journals/human-neuroscience/articles/10.3389/fnhum.2013.00087/full;
+  N07 https://www.frontiersin.org/journals/human-neuroscience/articles/10.3389/fnhum.2013.00087/full. New candidate (pkg B),
+  low BCI relevance (classic cognitive-neuroscience paradigm). first_source N06 is known only from the reference list of N07
+  (secondary citation; must be checked against the original). Requests new marker MK.BOLD_olfactory_cortex. bibliography corrected
+  (OpenAlex, 2026-10-05)
+status: draft
+contributors:
+- curator_b

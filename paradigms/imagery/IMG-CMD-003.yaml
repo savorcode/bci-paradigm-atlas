@@ -1,0 +1,53 @@
+schema_version: '0.2'
+id: IMG-CMD-003
+class: IMG-CMD
+name:
+  en: Imagery-based yes/no communication (fMRI)
+  zh: 基于想象的是/否沟通（功能磁共振）
+aliases:
+- fMRI yes/no communication
+- mental imagery communication
+family: imagery
+bci_category:
+- active
+recording_modality:
+- fMRI
+stimulus_modality:
+- auditory
+- mental_imagery
+markers:
+- MK.BOLD_motor_network
+- MK.BOLD_parahippocampal
+description:
+  en: >-
+    After localiser scans, the participant answers spoken autobiographical yes/no questions by performing one imagery task
+    (tennis) for 'yes' and the other (spatial navigation) for 'no' in 30-s imagery periods alternating with rest. The answer
+    is decoded by comparing SMA and parahippocampal activation with the localiser patterns.
+  zh: 在定位扫描之后，被试回答口头提出的自传性是/否问题：用一种想象任务（打网球）表示“是”，用另一种（空间导航）表示“否”，30 秒想象期与休息交替。通过比较辅助运动区和海马旁回的激活与定位扫描的模式解码答案。
+protocol:
+  n_classes: 2
+  classes:
+  - yes (one imagery type)
+  - no (the other imagery type)
+  cue: spoken question; spoken words marking imagery and rest periods
+  paradigm_timing: block
+  feedback: none
+  distinguishing: >-
+    Criterion 1 vs IMG-CMD-001: the classes are answers (yes/no) mapped onto the two imagery types instead of instructed imagery
+    types; the cue includes a question.
+first_source:
+  citation: >-
+    Monti MM, Vanhaudenhuyse A, Coleman MR, Boly M, Pickard JD, Tshibanda L, Owen AM, Laureys S. Willful modulation of brain
+    activity in disorders of consciousness. New England Journal of Medicine. 2010;362(7):579-589.
+  doi: 10.1056/NEJMoa0905370
+  year: 2010
+  verified: false
+interop:
+  bids_task: commandfollowing
+notes: >-
+  Leads: WS-B2-05 [=R1300], WF-B2-20 (author PDF at montilab.psych.ucla.edu: yes/no mapping, '30-second periods of mental
+  imagery with 30-second periods of rest', 54 patients, one tested for communication with six questions). bibliography corrected
+  (OpenAlex, 2026-10-05)
+status: draft
+contributors:
+- curator_b

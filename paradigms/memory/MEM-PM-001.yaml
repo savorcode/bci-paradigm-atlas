@@ -1,0 +1,56 @@
+schema_version: '0.2'
+id: MEM-PM-001
+class: MEM-PM
+name:
+  en: Prospective memory
+  zh: 前瞻记忆
+aliases:
+- Einstein-McDaniel Paradigm
+- Event-Based Prospective Memory
+- PM Task
+- PMTASK
+family: memory
+bci_category:
+- none
+recording_modality:
+- EEG
+- fMRI
+stimulus_modality:
+- visual
+markers:
+- MK.N300_prospective
+- MK.BOLD_frontopolar
+description:
+  en: Participants perform an ongoing task while holding an intention to make a different response when a specific event cue
+    appears among the ongoing-task stimuli (event-based prospective memory). Prospective-memory cues elicit an N300 over occipito-parietal
+    sites relative to ongoing-task stimuli, and maintaining the intention engages anterior prefrontal (frontopolar) cortex.
+  zh: 被试执行进行中任务，同时保持一个意图：当进行中任务的刺激中出现特定事件线索时作出另一反应（事件型前瞻记忆）。前瞻记忆线索比进行中任务刺激在枕顶部诱发 N300，保持意图激活前部前额叶（额极）皮层。
+trial_structure:
+  conditions:
+  - ongoing trial
+  - PM cue trial
+  - ongoing-only baseline block
+protocol:
+  n_classes: 2
+  classes:
+  - prospective-memory cue
+  - ongoing-task stimulus
+  cue: ongoing-task stimuli with embedded event cues (for example a target word)
+  paradigm_timing: synchronous
+  feedback: none
+  distinguishing: 标准配置（最早发表）：事件型前瞻记忆（Einstein & McDaniel 1990, R0092）。与 -002（时间型，以时间而非事件为线索，准则 2）区别。
+first_source:
+  citation: 'Einstein GO, McDaniel MA. Normal aging and prospective memory. Journal of Experimental Psychology: Learning,
+    Memory, and Cognition. 1990;16(4):717-726.'
+  doi: 10.1037/0278-7393.16.4.717
+  year: 1990
+  verified: false
+interop:
+  bids_task: prospectivememory
+notes: 'HED task page: https://www.hedtags.org/hed-task/tasks/hedtsk_prospective_memory.html. Leads: R0092, R0197, R0262,
+  R0587, R0651, R0767 (R#### = curation/literature.csv; DN## = curation/work/pkg_D/new_leads.csv). Sprint 2 (D-057, curator_d,
+  2026-10-03): protocol block added (-001 = earliest/standard configuration). Narrowed to event-based prospective memory;
+  time-based moved to MEM-PM-002. Sibling concrete paradigms: MEM-PM-002. bibliography corrected (Crossref, 2026-10-05)'
+status: draft
+contributors:
+- curator_d

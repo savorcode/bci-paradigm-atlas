@@ -1,0 +1,67 @@
+schema_version: '0.2'
+id: MEM-CIT-001
+class: MEM-CIT
+name:
+  en: Concealed information test (P300-based)
+  zh: 隐匿信息测试（P300）
+aliases:
+- CIT
+- guilty knowledge test
+- P300-based concealed information test
+- memory detection
+- P300-based CIT
+- brain fingerprinting
+- ERP lie detection
+family: memory
+bci_category:
+- none
+recording_modality:
+- EEG
+stimulus_modality:
+- visual
+markers:
+- MK.P3b
+description:
+  en: 'Single items are presented one at a time: a probe related to information known only to knowledgeable participants (for
+    example a detail of a mock crime), several equally plausible irrelevant items, and a target item that all participants
+    must acknowledge with a distinct button press. Because the probe is meaningful only for a knowledgeable participant, it
+    elicits a larger P3b than irrelevant items, and the probe-irrelevant difference is used to detect concealed recognition.'
+  zh: 逐个呈现单个项目：与只有知情者才知道的信息（如模拟犯罪细节）相关的探测项、若干同样合理的无关项，以及所有被试都需以不同按键确认的靶项。探测项只对知情被试有意义，因而比无关项诱发更大的 P3b，以探测项与无关项之差检测被隐瞒的再认。
+trial_structure:
+  conditions:
+  - probe
+  - irrelevant
+  - target
+protocol:
+  n_classes: 3
+  classes:
+  - probe
+  - irrelevant
+  - target
+  cue: serially presented single items (words or pictures) on screen
+  stimulus_coding: 'three-stimulus oddball: rare probe and rare target among frequent irrelevants, one stimulus per trial'
+  paradigm_timing: synchronous
+  feedback: none
+  distinguishing: 标准配置（最早发表）：三刺激（探测/无关/靶）单刺激试次序列（Farwell & Donchin 1991, R1160）。与 -002（复合试次协议 CTP，准则 3）区别。
+first_source:
+  citation: 'Farwell LA, Donchin E. The Truth Will Out: Interrogative Polygraphy ("Lie Detection") With Event-Related Brain
+    Potentials. Psychophysiology. 1991;28(5):531-547.'
+  doi: 10.1111/j.1469-8986.1991.tb01990.x
+  year: 1991
+  verified: false
+interop:
+  bids_task: cit
+notes: 'Leads: DN16, DN17 (R#### = curation/literature.csv; DN## = curation/work/pkg_D/new_leads.csv). New candidate (curator_d).
+  Structurally an oddball design (PER-ODD-001), but the probe is rare only by virtue of the participant''s knowledge, so the
+  construct is recognition of concealed information; the maintainer should decide whether it is an independent paradigm or
+  a variant of PER-ODD-001. Earlier P300 deception work by the Rosenfeld group may predate DN17 (not retrieved). Leads: DN16,
+  DN17. D-034 (maintainer, 2026-10-03): duplicate SOC-CIT-001 (curator_e, pkg E; lead S13 = https://digitalcommons.usf.edu/psy_facpub/311,
+  same Farwell & Donchin 1991 record) merged here; ID SOC-CIT-001 retired. Family kept as memory (construct: recognition of
+  concealed information). Independence from PER-ODD-001 pending (D-038). Sprint 2 (D-057, curator_d, 2026-10-03): protocol
+  block added (-001 = earliest/standard configuration). Sibling concrete paradigms: MEM-CIT-002. bibliography corrected (Crossref,
+  2026-10-05)'
+status: draft
+contributors:
+- curator_d
+- curator_e
+- maintainer

@@ -1,0 +1,245 @@
+# 包 A sprint 2 范式类修改（D-057）。维护者合入 paradigms/_classes.yaml；策展人不要直接改登记表。
+# Class edits for package A; the maintainer applies them to paradigms/_classes.yaml.
+# action: modify | add | deprecate；fields 只写要改的字段（schema/paradigm_class.schema.json）。
+updates:
+- id: PER-BR
+  action: modify
+  fields:
+    aliases:
+    - ambiguous figure (Necker cube) paradigm
+    - binocular rivalry
+    - bistable perception
+    - perceptual rivalry
+    - frequency-tagged rivalry
+    - SSVEP rivalry
+  reason: 'D-057: aliases of the new concrete paradigms added to the class (union); class mechanism, markers and origin unchanged.'
+- id: PER-CUE
+  action: modify
+  fields:
+    aliases:
+    - Posner Task
+    - Posner cueing task
+    - Spatial Cueing Task
+    - endogenous/exogenous cueing
+    - spatial cueing
+    - exogenous cueing
+    - peripheral cueing
+    - inhibition of return paradigm
+  reason: 'D-057: aliases of the new concrete paradigms added to the class (union); class mechanism, markers and origin unchanged.'
+- id: PER-CVA
+  action: modify
+  fields:
+    aliases:
+    - Posner-type alpha paradigm
+    - alpha lateralization
+    - covert visuospatial attention
+    - covert attention BCI
+    - alpha lateralization BCI
+    - gaze-independent covert attention BCI
+  reason: 'D-057: aliases of the new concrete paradigms added to the class (union); class mechanism, markers and origin unchanged.'
+- id: PER-HBD
+  action: modify
+  fields:
+    aliases:
+    - Cardiac Interoceptive Accuracy Task
+    - Heartbeat Counting Task
+    - Heartbeat Perception Task
+    - Heartbeat Tracking Task
+    - Schandry Task
+    - Whitehead Heartbeat Discrimination Task
+    - heartbeat discrimination task
+    - mental tracking task
+  reason: 'D-057: aliases of the new concrete paradigms added to the class (union); class mechanism, markers and origin unchanged.'
+- id: PER-MMN
+  action: modify
+  fields:
+    aliases:
+    - MMN
+    - Mismatch Negativity Paradigm
+    - multi-feature MMN (optimum paradigm)
+    - passive auditory oddball
+    - roving oddball
+    - phonetic MMN
+    - speech-sound oddball
+    - phoneme MMN
+    - speech MMN
+    - multi-feature MMN
+    - Optimum-1
+    - optimal MMN paradigm
+  reason: 'D-057: aliases of the new concrete paradigms added to the class (union); class mechanism, markers and origin unchanged.'
+- id: PER-MSI
+  action: modify
+  fields:
+    aliases:
+    - AV vs A+V additive model
+    - McGurk paradigm
+    - audiovisual integration
+    - multisensory integration
+    - sound-induced flash illusion
+    - AV - (A+V) paradigm
+    - additive model of multisensory integration
+    - redundant target paradigm
+  reason: 'D-057: aliases of the new concrete paradigms added to the class (union); class mechanism, markers and origin unchanged.'
+- id: PER-MVEP
+  action: modify
+  fields:
+    aliases:
+    - mVEP
+    - motion VEP BCI
+    - motion-onset VEP
+    - mVEP BCI
+    - motion-onset VEP speller
+  reason: 'D-057: aliases of the new concrete paradigms added to the class (union); class mechanism, markers and origin unchanged.'
+- id: PER-ODD
+  action: modify
+  fields:
+    aliases:
+    - two-stimulus oddball
+    - three-stimulus oddball
+    - P300 oddball
+    - Auditory Oddball
+    - P300 Task
+    - Visual Oddball
+    - novelty oddball
+    - Rapid serial visual presentation (RSVP)
+    - RSVP
+    - RSVP Stream Task
+    - RSVP Target Detection
+    - RSVP Task
+    - RSVP-BCI
+    - cortically coupled computer vision (C3Vision)
+    - distractor oddball
+    - P300 speller
+    - row/column paradigm (RCP)
+    - Farwell-Donchin speller
+    - P300 matrix speller
+    - RSVP speller
+    - RSVP typing
+    - checkerboard paradigm (CBP)
+    - CBP speller
+    - EPFL P300 paradigm
+    - single-stimulus flashing P300 BCI
+    - AMUSE
+    - auditory multi-class spatial ERP paradigm
+    - spatial auditory P300 speller
+    - tactile P300 BCI
+    - vibrotactile P300
+    description:
+      en: Infrequent target stimuli are embedded among frequent non-target stimuli, and attended targets elicit a P3b; infrequent
+        non-target distractors elicit a P3a. Concrete paradigms differ in the condition set (two- or three-stimulus), the
+        stimulus coding (row/column, checkerboard, single-item or RSVP presentation) and the sensory modality (visual, auditory
+        spatial, tactile), and include the P300-based BCIs.
+      zh: 低频靶刺激嵌入高频非靶刺激中，被注意的靶刺激诱发 P3b；低频非靶干扰刺激诱发 P3a。具体范式在条件集（两刺激或三刺激）、刺激编码（行/列、棋盘格、单项闪烁或 RSVP 呈现）和感觉通道（视觉、听觉空间、触觉）上不同，包括基于
+        P300 的脑机接口。
+  reason: D-057 split into 9 concrete paradigms; class description generalised to the concrete paradigms.
+- id: PER-OMIT
+  action: modify
+  fields:
+    aliases:
+    - omission MMN
+    - omitted stimulus potential (OSP)
+    - self-generated sound omission
+    - stimulus omission paradigm
+    - motor-auditory omission paradigm
+  reason: 'D-057: aliases of the new concrete paradigms added to the class (union); class mechanism, markers and origin unchanged.'
+- id: PER-RET
+  action: modify
+  fields:
+    aliases:
+    - phase-encoded retinotopy
+    - population receptive field (pRF) mapping
+    - retinotopic mapping
+    - wedge-and-ring paradigm
+    - pRF mapping
+    - population receptive field mapping
+    - moving-bar retinotopy
+  reason: 'D-057: aliases of the new concrete paradigms added to the class (union); class mechanism, markers and origin unchanged.'
+- id: SSR-ASSR
+  action: modify
+  fields:
+    aliases:
+    - 40-Hz ASSR
+    - AM-tone ASSR
+    - ASSR
+    - auditory steady-state evoked potential
+    - ASSR BCI
+    - vision-free ASSR BCI
+  reason: 'D-057: aliases of the new concrete paradigms added to the class (union); class mechanism, markers and origin unchanged.'
+- id: SSR-CVEP
+  action: modify
+  fields:
+    aliases:
+    - broadband VEP
+    - c-VEP
+    - code-modulated VEP
+    - m-sequence VEP
+    - broad-band VEP
+    - Gold-code c-VEP
+    - reconvolution c-VEP
+    - burst code-VEP
+    - burst c-VEP
+    description:
+      en: Each target flickers according to a pseudorandom binary code (circularly shifted m-sequences, independent Gold codes
+        or sparse burst codes). The attended target is identified by matching the EEG response to code-specific templates,
+        which allows many targets in a speller.
+      zh: 每个目标按伪随机二值编码闪烁（同一 m 序列的循环移位、彼此独立的 Gold 码或稀疏突发码）。将脑电响应与各编码的模板匹配来识别被注视目标，可在拼写器中容纳大量目标。
+  reason: D-057 split into m-sequence (-001), Gold-code (-002, Thielen et al. 2015) and burst-code (-003, Castillos et al.
+    2023) paradigms; description generalised.
+- id: SSR-FFR
+  action: modify
+  fields:
+    aliases:
+    - FFR
+    - complex ABR (cABR)
+    - envelope following response
+    - speech-ABR
+    - cABR
+    - speech ABR
+    - speech-evoked FFR
+    - /da/ FFR
+  reason: 'D-057: aliases of the new concrete paradigms added to the class (union); class mechanism, markers and origin unchanged.'
+- id: SSR-SSSEP
+  action: modify
+  fields:
+    aliases:
+    - SSSEP
+    - steady-state somatosensory evoked potential
+    - vibrotactile steady-state
+    - SSSEP BCI
+    - tactile SSSEP attention
+  reason: 'D-057: aliases of the new concrete paradigms added to the class (union); class mechanism, markers and origin unchanged.'
+- id: SSR-SSVEP
+  action: modify
+  fields:
+    aliases:
+    - SSVEP
+    - frequency-tagged visual stimulation
+    - JFPM SSVEP speller
+    - SSVEP-BCI
+    - steady-state VEP
+    - intermittent photic stimulation (IPS)
+    - photic driving
+    - photic following
+    - frequency tagging
+    - frequency-tagged attention
+    - multi-target SSVEP attention
+    - flicker-free SSVEP
+    - high-frequency SSVEP
+    - imperceptible flicker SSVEP
+    - SSVEP-based BCI
+    - frequency-coded SSVEP
+    - photic stimulation
+    - Tsinghua 40-target speller
+    - JFPM
+    - 12-class JFPM SSVEP
+    - SSVEP with resting class
+    - self-paced SSVEP BCI
+    - asynchronous SSVEP
+    description:
+      en: A visual stimulus, or several stimuli at once, flickers or reverses at a constant frequency, and occipital activity
+        follows the stimulation frequency and its harmonics. Concrete paradigms range from passive single-stimulus recordings
+        and clinical photic stimulation to frequency tagging of attention and SSVEP BCIs in which the attended target is identified
+        by its frequency (and phase) code.
+      zh: 一个或多个视觉刺激以恒定频率闪烁或翻转，枕区活动跟随刺激频率及其谐波。具体范式包括被动的单刺激记录、临床闪光刺激、注意的频率标记，以及按频率（和相位）编码识别被注视目标的 SSVEP 脑机接口。
+  reason: 'D-057 split into 8 concrete paradigms; class description generalised beyond the BCI use. Note: clinical photic
+    driving (-003) predates Regan 1966; the class origin may need review (D-031).'

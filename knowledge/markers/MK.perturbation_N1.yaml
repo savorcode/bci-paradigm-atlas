@@ -1,0 +1,11 @@
+schema_version: "0.2"
+id: MK.perturbation_N1
+name: {en: Perturbation-evoked N1, zh: 扰动诱发 N1}
+aliases: [perturbation-evoked potential, PEP N1, balance N1]
+type: erp_component
+recording_modality: [EEG]
+signature: {latency_ms: ~100-200 after perturbation onset, polarity: negative, topography: fronto-central (Cz/FCz)}
+description: {en: 'Large fronto-central negativity evoked by sudden perturbations of upright balance, peaking roughly 100-200 ms after perturbation onset; its amplitude varies with perturbation predictability and magnitude.', zh: 由突然的直立平衡扰动诱发的显著额中央负波，约在扰动起始后 100-200 ms 达到峰值，其幅度随扰动可预测性和强度变化。}
+notes: Signature values are textbook-level characteristics and await source checking (first pass, curator_b). New marker requested by package B for MOT-PERT-001 (marker_requests.csv); not yet in curation/registry/markers.csv. Generators and indexes to be added in the second pass.
+status: draft
+contributors: [curator_b]

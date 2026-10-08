@@ -1,0 +1,22 @@
+schema_version: "0.2"
+id: MK.affective_band_power
+name:
+  en: Affect-related band-power pattern
+  zh: 情绪相关频段功率模式
+aliases:
+- emotion-related EEG band power
+- differential entropy features (emotion recognition)
+type: oscillatory
+recording_modality:
+- EEG
+description:
+  en: Pattern of spectral power across delta to gamma bands and electrode sites that differs between emotional states induced
+    by films, music or recall. In EEG emotion recognition it is usually measured as band power or differential entropy per
+    channel and band.
+  zh: 由影片、音乐或回忆诱发的不同情绪状态之间，在 δ 至 γ 各频段及各电极上表现出不同的频谱功率模式。在脑电情绪识别中，通常以各通道、各频段的功率或微分熵度量。
+notes: 'Covers multi-band patterns (registry note: e.g. temporal beta/gamma); kept distinct from MK.frontal_alpha_asymmetry.
+  No signature: the pattern is dataset-specific.'
+status: draft
+contributors:
+- maintainer
+- curator_e

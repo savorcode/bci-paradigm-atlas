@@ -1,0 +1,69 @@
+schema_version: '0.2'
+id: SSR-SSVEP-004
+class: SSR-SSVEP
+name:
+  en: Frequency-tagged attention to concurrent stimuli
+  zh: 并存刺激的频率标记注意
+aliases:
+- frequency tagging
+- frequency-tagged attention
+- multi-target SSVEP attention
+- frequency-tagged visual stimulation
+family: steady_state
+bci_category:
+- none
+recording_modality:
+- EEG
+- MEG
+stimulus_modality:
+- visual
+markers:
+- MK.SSVEP
+description:
+  en: Two or more stimuli are shown at the same time, for example in the left and right visual hemifields, each flickering
+    at its own frequency. Participants are cued to attend covertly to one of them while fixating centrally; the SSVEP at the
+    frequency of the attended stimulus is enhanced, so the tagged frequencies track the allocation of attention.
+  zh: 同时呈现两个或多个刺激（如分别位于左右视野），各以自己的频率闪烁。被试注视中央，按提示隐蔽地注意其中一个；被注意刺激频率上的 SSVEP 增强，因此各标记频率追踪注意的分配。
+trial_structure:
+  conditions:
+  - attend stimulus tagged at f1
+  - attend stimulus tagged at f2
+protocol:
+  n_classes: 2
+  classes:
+  - attend stimulus at f1
+  - attend stimulus at f2
+  cue: concurrent stimuli in separate locations, each flickering at its own frequency; cue to attend one
+  stimulus_coding: frequency tagging of concurrent stimuli
+  paradigm_timing: synchronous
+  feedback: none
+  distinguishing: 准则 1;2：多个并存刺激各带频率标记，条件为注意哪一个（隐蔽注意，注视中央）；与 -002 区别在于开环、无选择反馈且不注视目标（准则 4）。
+first_source:
+  citation: Morgan ST, Hansen JC, Hillyard SA. Selective attention to stimulus location modulates the steady-state visual
+    evoked potential. Proc Natl Acad Sci U S A. 1996;93(10):4770.
+  doi: 10.1073/pnas.93.10.4770
+  pmid: '8643478'
+  year: 1996
+  verified: false
+variants:
+- name: High-frequency / imperceptible-flicker SSVEP
+  source:
+    citation: Ladouce S, Dehais F. Frequency tagging of spatial attention using periliminal flickers. Imaging Neuroscience.
+      2024;2.
+    doi: 10.1162/imag_a_00223
+    year: 2024
+    verified: false
+  note: 'Merged candidate SSR-SSVEPHF-001 (D-004): flicker frequency above the perceptual threshold; parameter-level (frequency
+    value within frequency tagging). Moved here from SSR-SSVEP-001 because the source is a spatial-attention tagging study.
+    [curator_e sprint 3, 2026-10-05] bibliography corrected (OpenAlex, 2026-10-05). [maintainer sprint 3, 2026-10-07, D-073]
+    origin candidate recalled, record confirmed via OpenAlex.'
+interop:
+  bids_task: ssvep
+notes: 'Former variant of SSR-SSVEP-001 (merged candidate SSR-FT-001, D-003), split under D-057. first_source changed from
+  the variant source Davidson 2020 (R0802, now a further reference) to Morgan et al. 1996, which D-003 names as the frequency-tagging
+  attention study; record found via WebSearch S2A36 [=R1283] and read in S2A37 (truncated abstract: cued attention to one
+  of two half-field character sequences). Further leads: R0085, R0206, R0398, R0483, R0667. [curator_e sprint 3, 2026-10-05]
+  bibliography confirmed (OpenAlex, 2026-10-05).'
+status: draft
+contributors:
+- curator_a

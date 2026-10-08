@@ -1,0 +1,79 @@
+schema_version: '0.2'
+id: MOT-MI-003
+class: MOT-MI
+name:
+  en: Upper-limb multi-joint motor imagery (six movements + rest)
+  zh: 单侧上肢多关节运动想象（6 类动作 + 休息）
+aliases:
+- upper limb motor imagery
+- elbow/forearm/hand motor imagery
+family: motor
+bci_category:
+- active
+recording_modality:
+- EEG
+stimulus_modality:
+- mental_imagery
+- visual
+markers:
+- MK.low_freq_kinematics
+- MK.SMR_ERD
+description:
+  en: >-
+    After a beep and fixation cross, a visual cue tells the participant which of six movements of the right arm to imagine
+    (elbow flexion or extension, forearm supination or pronation, hand opening or closing) or to rest. The classes are decoded
+    mainly from low-frequency time-domain EEG; the same session design also records executed movements (MOT-ME-005).
+  zh: 提示音与注视十字之后，视觉提示指示被试想象右上肢 6 种动作之一（肘屈/伸、前臂旋后/旋前、手张开/握拳）或休息。各类主要依据低频时域脑电解码；同一实验设计也记录了实际执行的动作（MOT-ME-005）。
+trial_structure:
+  phases:
+  - name: beep + fixation
+    duration_ms: 2000
+  - name: cue and imagery
+    note: from t = 2 s
+  typical_trials: 60 per class per session
+  conditions:
+  - elbow flexion
+  - elbow extension
+  - forearm supination
+  - forearm pronation
+  - hand open
+  - hand close
+  - rest
+protocol:
+  n_classes: 7
+  classes:
+  - elbow flexion
+  - elbow extension
+  - forearm supination
+  - forearm pronation
+  - hand open
+  - hand close
+  - rest
+  cue: visual cue on screen after beep and fixation cross
+  paradigm_timing: synchronous
+  feedback: none
+  distinguishing: >-
+    Criterion 1 vs MOT-MI-001: class identity and number change from left/right hand to six movements of one upper limb plus
+    rest. Differs from MOT-MI-011 (eleven upper-extremity tasks) by class set.
+first_source:
+  citation: >-
+    Ofner P, Schwarz A, Pereira J, Müller-Putz GR. Upper limb movements can be decoded from the time-domain of low-frequency
+    EEG. PLoS ONE 12(8):e0182578. 2017.
+  doi: 10.1371/journal.pone.0182578
+  year: 2017
+  verified: false
+datasets:
+- name: Ofner2017 (BNCI Horizon 2020 upper-limb movement data; MOABB)
+  url: https://moabb.neurotechx.com/docs/generated/moabb.datasets.Ofner2017.html
+  subjects: 15
+interop:
+  bids_task: motorimagery
+notes: >-
+  Lead: WF-B2-03 [=R1288] (MOABB Ofner2017 page: 15 subjects, seven classes, ME and MI conditions, 3 s trials with cue at
+  2 s, two sessions, 60 trials per class per session). This matches the class list given in the D-057 example for MOT-MI-003
+  (elbow flexion/extension, forearm supination/pronation, hand open/close); the '11 classes' in that example correspond to
+  a different dataset, Jeong et al. 2020, which is filed as MOT-MI-011. Low-frequency marker per the title of the source.
+  bibliography confirmed (OpenAlex, 2026-10-05)
+status: draft
+contributors:
+- curator_b

@@ -1,0 +1,610 @@
+# 包 A sprint 3 范式类修改（出处书目核实，D-072）。维护者合入 paradigms/_classes.yaml；审核人不直接改登记表。
+# Class first_source edits for package A from bibliographic verification (curator_e, 2026-10-05); the maintainer applies them.
+# action: modify；fields 只写要改的字段。verified 一律保持 false（本冲刺只做书目核实）。
+updates:
+- id: PER-AAD
+  action: modify
+  fields:
+    first_source:
+      citation: O'Sullivan JA, Power AJ, Mesgarani N, Rajaram S, Foxe JJ, Shinn-Cunningham BG, Slaney M, Shamma SA, Lalor
+        EC. Attentional selection in a cocktail party environment can be decoded from single-trial EEG. Cereb Cortex. 2015;25(7):1697-1706.
+      doi: 10.1093/cercor/bht355
+      year: 2015
+      verified: false
+    notes: migrated from schema-0.1 file PER-AAD-001 [curator_e sprint 3, 2026-10-05] bibliography corrected (Crossref, 2026-10-05)
+      (class origin taken from PER-AAD-001, D-062).
+  reason: 'sprint 3 bibliographic verification (corrected): class first_source identical to PER-AAD-001 (record reused, no
+    extra fetch); YAML had title+journal only; authors, year (issue 2015; online 2014), volume/issue/pages added from Crossref'
+- id: PER-AB
+  action: modify
+  fields:
+    notes: migrated from schema-0.1 file PER-AB-001 [curator_e sprint 3, 2026-10-05] bibliography confirmed (OpenAlex, 2026-10-05).
+  reason: 'sprint 3 bibliographic verification (confirmed): notes tag only.'
+- id: PER-ABR
+  action: modify
+  fields:
+    first_source:
+      citation: Jewett DL, Williston JS. Auditory-evoked far fields averaged from the scalp of humans. Brain. 1971;94(4):681-696.
+      doi: 10.1093/brain/94.4.681
+      year: 1971
+      verified: false
+    notes: migrated from schema-0.1 file PER-ABR-001 [curator_e sprint 3, 2026-10-05] candidate origin found by bibliographic search
+      (OpenAlex, 2026-10-05); content unverified (class origin taken from PER-ABR-001, D-062).
+  reason: 'sprint 3 bibliographic verification (tbd_resolved): class first_source identical to PER-ABR-001 (record reused,
+    no extra fetch); queries: Sohmer & Feinmesser 1967 (10.1177/000348946707600211) -> 429 not retried; Jewett & Williston
+    1971 -> record matched. Sohmer & Feinmesser 1967 (Ann Otol Rhinol Laryngol 76:427-435) is the earlier surface-electrode
+    report named in R0856 and should be checked for priority'
+- id: PER-ACC
+  action: modify
+  fields:
+    first_source:
+      citation: Ostroff JM, Martin BA, Boothroyd A. Cortical evoked response to acoustic change within a syllable. Ear Hear.
+        1998;19(4):290-297.
+      doi: 10.1097/00003446-199808000-00004
+      year: 1998
+      verified: false
+    notes: migrated from schema-0.1 file PER-ACC-001 [curator_e sprint 3, 2026-10-05] candidate origin found by bibliographic search
+      (OpenAlex, 2026-10-05); content unverified (class origin taken from PER-ACC-001, D-062).
+  reason: 'sprint 3 bibliographic verification (tbd_resolved): class first_source identical to PER-ACC-001 (record reused,
+    no extra fetch); query: Ostroff, Martin & Boothroyd 1998 -> record matched (paper that named the acoustic change complex)'
+- id: PER-ADDS
+  action: modify
+  fields:
+    first_source:
+      citation: Theeuwes J. Perceptual selectivity for color and form. Percept Psychophys. 1992;51(6):599-606.
+      doi: 10.3758/BF03211656
+      year: 1992
+      verified: false
+    notes: migrated from schema-0.1 file PER-ADDS-001 [curator_e sprint 3, 2026-10-05] candidate origin found by bibliographic search
+      (OpenAlex, 2026-10-05); content unverified (class origin taken from PER-ADDS-001, D-062).
+  reason: 'sprint 3 bibliographic verification (tbd_resolved): class first_source identical to PER-ADDS-001 (record reused,
+    no extra fetch); query: Theeuwes 1992 -> record matched (origin of the additional-singleton task). First neural recording
+    of the Pd (Hickey, Di Lollo & McDonald 2009, J Cogn Neurosci) not fetched (budget); for notes per D-031 item 3'
+- id: PER-AEP
+  action: modify
+  fields:
+    first_source:
+      citation: Davis PA. Effects of acoustic stimuli on the waking human brain. J Neurophysiol. 1939;2(6):494-499.
+      doi: 10.1152/jn.1939.2.6.494
+      year: 1939
+      verified: false
+    notes: migrated from schema-0.1 file PER-AEP-001 [curator_e sprint 3, 2026-10-05] candidate origin found by bibliographic search
+      (OpenAlex, 2026-10-05); content unverified (class origin taken from PER-AEP-001, D-062).
+  reason: 'sprint 3 bibliographic verification (tbd_resolved): class first_source identical to PER-AEP-001 (record reused,
+    no extra fetch); query: Davis PA 1939 (the "1939 vertex-potential report" hinted in the file notes) -> record matched'
+- id: PER-AMASK
+  action: modify
+  fields:
+    first_source:
+      citation: Wegel RL, Lane CE. The auditory masking of one pure tone by another and its probable relation to the dynamics
+        of the inner ear. Phys Rev. 1924;23(2):266-285.
+      doi: 10.1103/PhysRev.23.266
+      year: 1924
+      verified: false
+    notes: migrated from schema-0.1 file PER-AMASK-001 [curator_e sprint 3, 2026-10-05] candidate origin found by bibliographic
+      search (OpenAlex, 2026-10-05); content unverified (class origin taken from PER-AMASK-001, D-062).
+  reason: 'sprint 3 bibliographic verification (tbd_resolved): class first_source identical to PER-AMASK-001 (record reused,
+    no extra fetch); query: Wegel & Lane 1924 -> record matched (origin of the tone-on-tone masking procedure; psychophysical,
+    D-031 item 1). First ERP masking study not identified'
+- id: PER-BODY
+  action: modify
+  fields:
+    first_source:
+      citation: Downing PE, Jiang Y, Shuman M, Kanwisher N. A cortical area selective for visual processing of the human body.
+        Science. 2001;293(5539):2470-2473.
+      doi: 10.1126/science.1063414
+      year: 2001
+      verified: false
+    notes: migrated from schema-0.1 file PER-BODY-001 [curator_e sprint 3, 2026-10-05] bibliography corrected (Crossref, 2026-10-05)
+      (class origin taken from PER-BODY-001, D-062).
+  reason: 'sprint 3 bibliographic verification (corrected): class first_source identical to PER-BODY-001 (record reused, no
+    extra fetch); YAML had title only; authors, journal, year 2001, 293(5539):2470-2473 added from Crossref'
+- id: PER-BOI
+  action: modify
+  fields:
+    notes: migrated from schema-0.1 file PER-BOI-001 [curator_e sprint 3, 2026-10-05] bibliography confirmed (OpenAlex, 2026-10-05).
+  reason: 'sprint 3 bibliographic verification (confirmed): notes tag only.'
+- id: PER-BR
+  action: modify
+  fields:
+    first_source:
+      citation: Wheatstone C. Contributions to the physiology of vision. Part the first. On some remarkable, and hitherto
+        unobserved, phenomena of binocular vision. Philos Trans R Soc Lond. 1838;128:371-394.
+      doi: 10.1098/rstl.1838.0019
+      year: 1838
+      verified: false
+    notes: 'migrated from schema-0.1 file PER-BR-001; sprint 2 (D-057): aliases updated from curation/work/pkg_A/sprint2/class_updates.yaml
+      [curator_e sprint 3, 2026-10-05] candidate origin found by bibliographic search (OpenAlex, 2026-10-05); content unverified
+      (class origin taken from PER-BR-001, D-062); PER-BR-002 (Lansing 1964) is later.'
+  reason: 'sprint 3 bibliographic verification (tbd_resolved): class first_source identical to PER-BR-001 (record reused,
+    no extra fetch); query: Wheatstone 1838 (hint in file notes) -> record matched (stereoscope paper describing dichoptic
+    rivalry). Behavioural origin per D-031; first neural recording candidates (Lansing 1964 EEG; Tong et al. 1998 fMRI) for
+    notes. D-062: class origin = earliest configuration; PER-BR-001 (Wheatstone 1838) precedes PER-BR-002 (Lansing 1964)'
+- id: PER-CB
+  action: modify
+  fields:
+    first_source:
+      citation: 'Rensink RA, O''Regan JK, Clark JJ. To see or not to see: the need for attention to perceive changes in scenes.
+        Psychol Sci. 1997;8(5):368-373.'
+      doi: 10.1111/j.1467-9280.1997.tb00427.x
+      year: 1997
+      verified: false
+    notes: migrated from schema-0.1 file PER-CB-001 [curator_e sprint 3, 2026-10-05] candidate origin found by bibliographic search
+      (OpenAlex, 2026-10-05); content unverified (class origin taken from PER-CB-001, D-062).
+  reason: 'sprint 3 bibliographic verification (tbd_resolved): class first_source identical to PER-CB-001 (record reused,
+    no extra fetch); query: Rensink, O''Regan & Clark 1997 -> record matched (flicker change-detection paradigm origin)'
+- id: PER-CTXC
+  action: modify
+  fields:
+    notes: migrated from schema-0.1 file PER-CTXC-001 [curator_e sprint 3, 2026-10-05] bibliography confirmed (Crossref, 2026-10-05).
+  reason: 'sprint 3 bibliographic verification (confirmed): notes tag only.'
+- id: PER-CUE
+  action: modify
+  fields:
+    notes: 'migrated from schema-0.1 file PER-CUE-001; sprint 2 (D-057): aliases updated from curation/work/pkg_A/sprint2/class_updates.yaml
+      [curator_e sprint 3, 2026-10-05] bibliography confirmed (Crossref, 2026-10-05).'
+  reason: 'sprint 3 bibliographic verification (confirmed): notes tag only.'
+- id: PER-CVA
+  action: modify
+  fields:
+    notes: 'migrated from schema-0.1 file PER-CVA-001; sprint 2 (D-057): aliases updated from curation/work/pkg_A/sprint2/class_updates.yaml
+      [curator_e sprint 3, 2026-10-05] bibliography confirmed (Crossref, 2026-10-05).'
+  reason: 'sprint 3 bibliographic verification (confirmed): notes tag only.'
+- id: PER-FACE
+  action: modify
+  fields:
+    first_source:
+      citation: Bentin S, Allison T, Puce A, Perez E, McCarthy G. Electrophysiological studies of face perception in humans.
+        J Cogn Neurosci. 1996;8(6):551-565.
+      doi: 10.1162/jocn.1996.8.6.551
+      year: 1996
+      verified: false
+    notes: migrated from schema-0.1 file PER-FACE-001 [curator_e sprint 3, 2026-10-05] bibliography corrected (OpenAlex, 2026-10-05)
+      (class origin taken from PER-FACE-001, D-062).
+  reason: 'sprint 3 bibliographic verification (corrected): class first_source identical to PER-FACE-001 (record reused, no
+    extra fetch); title-only YAML; search endpoints were throttled (429), so the DOI known to the checker was fetched and
+    the record title matched exactly; full citation + DOI written'
+- id: PER-FVEP
+  action: modify
+  fields:
+    first_source:
+      citation: Cigánek L. The EEG response (evoked potential) to light stimulus in man. Electroencephalogr Clin Neurophysiol.
+        1961;13(2):165-172.
+      doi: 10.1016/0013-4694(61)90132-8
+      year: 1961
+      verified: false
+    notes: migrated from schema-0.1 file PER-FVEP-001 [curator_e sprint 3, 2026-10-05] candidate origin found by bibliographic search
+      (Crossref, 2026-10-05); content unverified (class origin taken from PER-FVEP-001, D-062).
+  reason: 'sprint 3 bibliographic verification (tbd_resolved): class first_source identical to PER-FVEP-001 (record reused,
+    no extra fetch); query: Ciganek 1961 -> Crossref record matched (classic description of the averaged flash VEP waveform).
+    Earlier flicker reports (Adrian & Matthews 1934) belong to steady-state stimulation'
+- id: PER-GATE
+  action: modify
+  fields:
+    first_source:
+      citation: Adler LE, Pachtman E, Franks RD, Pecevich M, Waldo MC, Freedman R. Neurophysiological evidence for a defect
+        in neuronal mechanisms involved in sensory gating in schizophrenia. Biol Psychiatry. 1982;17(6):639-654.
+      year: 1982
+      verified: false
+    notes: migrated from schema-0.1 file PER-GATE-001 [curator_e sprint 3, 2026-10-05] candidate origin found by bibliographic search
+      (OpenAlex, 2026-10-05); content unverified (class origin taken from PER-GATE-001, D-062).
+  reason: 'sprint 3 bibliographic verification (tbd_resolved): class first_source identical to PER-GATE-001 (record reused,
+    no extra fetch); query: PMID 7104417 (the "commonly cited 1982 schizophrenia gating paper" of SA39) -> record matched;
+    no DOI exists for this record'
+- id: PER-GEP
+  action: modify
+  fields:
+    first_source:
+      citation: Kobal G. Gustatory evoked potentials in man. Electroencephalogr Clin Neurophysiol. 1985;62(6):449-454.
+      doi: 10.1016/0168-5597(85)90055-3
+      year: 1985
+      verified: false
+    notes: migrated from schema-0.1 file PER-GEP-001 [curator_e sprint 3, 2026-10-05] candidate origin found by bibliographic search
+      (OpenAlex, 2026-10-05); content unverified (class origin taken from PER-GEP-001, D-062).
+  reason: 'sprint 3 bibliographic verification (tbd_resolved): class first_source identical to PER-GEP-001 (record reused,
+    no extra fetch); query: Kobal 1985 -> record matched'
+- id: PER-HBD
+  action: modify
+  fields:
+    notes: 'migrated from schema-0.1 file PER-HBD-001; sprint 2 (D-057): aliases updated from curation/work/pkg_A/sprint2/class_updates.yaml
+      [curator_e sprint 3, 2026-10-05] bibliography confirmed (Crossref, 2026-10-05).'
+  reason: 'sprint 3 bibliographic verification (confirmed): notes tag only.'
+- id: PER-IB
+  action: modify
+  fields:
+    first_source:
+      citation: 'Mack A, Rock I. Inattentional Blindness. Cambridge, MA: MIT Press. 1998.'
+      doi: 10.7551/mitpress/3707.001.0001
+      year: 1998
+      verified: false
+    notes: migrated from schema-0.1 file PER-IB-001 [curator_e sprint 3, 2026-10-05] candidate origin found by bibliographic search
+      (OpenAlex, 2026-10-05); content unverified (class origin taken from PER-IB-001, D-062).
+  reason: 'sprint 3 bibliographic verification (tbd_resolved): class first_source identical to PER-IB-001 (record reused,
+    no extra fetch); query: Mack & Rock 1998 -> record matched (monograph reporting the original cross-task experiments; book,
+    not a review). The ERP version in the description (aware vs unaware, VAN) is Pitts et al. 2012 J Cogn Neurosci - first
+    neural recording candidate for notes (D-031 item 3)'
+- id: PER-IC
+  action: modify
+  fields:
+    first_source:
+      citation: Kanizsa G. Subjective contours. Sci Am. 1976;234(4):48-52.
+      doi: 10.1038/scientificamerican0476-48
+      year: 1976
+      verified: false
+    notes: migrated from schema-0.1 file PER-IC-001 [curator_e sprint 3, 2026-10-05] candidate origin found by bibliographic search
+      (OpenAlex, 2026-10-05); content unverified (class origin taken from PER-IC-001, D-062).
+  reason: 'sprint 3 bibliographic verification (tbd_resolved): class first_source identical to PER-IC-001 (record reused,
+    no extra fetch); query: Kanizsa 1976 -> record matched. The original description (Kanizsa 1955, Rivista di Psicologia
+    49:7-30) has no DOI/record; 1976 is the earliest bibliographically identifiable one - maintainer may prefer to cite 1955
+    in notes'
+- id: PER-LEP
+  action: modify
+  fields:
+    first_source:
+      citation: Bromm B, Treede RD. Laser-evoked cerebral potentials in the assessment of cutaneous pain sensitivity in normal
+        subjects and patients. Rev Neurol (Paris). 1991;147(10):625-643.
+      pmid: '1763252'
+      year: 1991
+      verified: false
+    notes: migrated from schema-0.1 file PER-LEP-001 [curator_e sprint 3, 2026-10-05] bibliography corrected (OpenAlex, 2026-10-05)
+      (class origin taken from PER-LEP-001, D-062).
+  reason: 'sprint 3 bibliographic verification (corrected): class first_source identical to PER-LEP-001 (record reused, no
+    extra fetch); second author Treede RD was missing; 147(10):625-643 added; no DOI exists for this record'
+- id: PER-LG
+  action: modify
+  fields:
+    first_source:
+      citation: Bekinschtein TA, Dehaene S, Rohaut B, Tadel F, Cohen L, Naccache L. Neural signature of the conscious processing
+        of auditory regularities. Proc Natl Acad Sci U S A. 2009;106(5):1672-1677.
+      doi: 10.1073/pnas.0809667106
+      year: 2009
+      verified: false
+    notes: migrated from schema-0.1 file PER-LG-001 [curator_e sprint 3, 2026-10-05] bibliography corrected (OpenAlex, 2026-10-05)
+      (class origin taken from PER-LG-001, D-062).
+  reason: 'sprint 3 bibliographic verification (corrected): class first_source identical to PER-LG-001 (record reused, no
+    extra fetch); title-only YAML; record title matched exactly; full citation + DOI written'
+- id: PER-MASK
+  action: modify
+  fields:
+    notes: migrated from schema-0.1 file PER-MASK-001 [curator_e sprint 3, 2026-10-05] bibliography confirmed (Crossref, 2026-10-05).
+  reason: 'sprint 3 bibliographic verification (confirmed): notes tag only.'
+- id: PER-MLR
+  action: modify
+  fields:
+    first_source:
+      citation: Geisler CD, Frishkopf LS, Rosenblith WA. Extracranial responses to acoustic clicks in man. Science. 1958;128(3333):1210-1211.
+      doi: 10.1126/science.128.3333.1210
+      year: 1958
+      verified: false
+    notes: migrated from schema-0.1 file PER-MLR-001 [curator_e sprint 3, 2026-10-05] candidate origin found by bibliographic search
+      (OpenAlex, 2026-10-05); content unverified (class origin taken from PER-MLR-001, D-062).
+  reason: 'sprint 3 bibliographic verification (tbd_resolved): class first_source identical to PER-MLR-001 (record reused,
+    no extra fetch); query: Geisler, Frishkopf & Rosenblith 1958 -> record matched (first averaged scalp middle-latency click
+    responses)'
+- id: PER-MMN
+  action: modify
+  fields:
+    notes: 'migrated from schema-0.1 file PER-MMN-001; sprint 2 (D-057): aliases updated from curation/work/pkg_A/sprint2/class_updates.yaml
+      [curator_e sprint 3, 2026-10-05] bibliography confirmed (Crossref, 2026-10-05).'
+  reason: 'sprint 3 bibliographic verification (confirmed): notes tag only.'
+- id: PER-MOT
+  action: modify
+  fields:
+    notes: migrated from schema-0.1 file PER-MOT-001 [curator_e sprint 3, 2026-10-05] bibliography confirmed (Crossref, 2026-10-05).
+  reason: 'sprint 3 bibliographic verification (confirmed): notes tag only.'
+- id: PER-MSI
+  action: modify
+  fields:
+    notes: 'migrated from schema-0.1 file PER-MSI-001; sprint 2 (D-057): aliases updated from curation/work/pkg_A/sprint2/class_updates.yaml
+      [curator_e sprint 3, 2026-10-05] bibliography confirmed (Crossref, 2026-10-05).'
+  reason: 'sprint 3 bibliographic verification (confirmed): notes tag only.'
+- id: PER-MVEP
+  action: modify
+  fields:
+    first_source:
+      citation: Kuba M, Kubová Z. Visual evoked potentials specific for motion onset. Doc Ophthalmol. 1992;80(1):83-89.
+      doi: 10.1007/BF00161234
+      year: 1992
+      verified: false
+    notes: 'migrated from schema-0.1 file PER-MVEP-001; sprint 2 (D-057): aliases updated from curation/work/pkg_A/sprint2/class_updates.yaml
+      [curator_e sprint 3, 2026-10-05] candidate origin found by bibliographic search (OpenAlex, 2026-10-05); content unverified
+      (class origin taken from PER-MVEP-001, D-062).'
+  reason: 'sprint 3 bibliographic verification (tbd_resolved): class first_source identical to PER-MVEP-001 (record reused,
+    no extra fetch); query: Kuba & Kubova 1992 -> record matched. Earlier motion-reversal VEP reports (Clarke 1972, Brain
+    Res) not fetched'
+- id: PER-NAT
+  action: modify
+  fields:
+    first_source:
+      citation: Hasson U, Nir Y, Levy I, Fuhrmann Alpert G, Malach R. Intersubject synchronization of cortical activity during
+        natural vision. Science. 2004;303(5664):1634-1640.
+      doi: 10.1126/science.1089506
+      pmid: '15016991'
+      year: 2004
+      verified: false
+    notes: migrated from schema-0.1 file PER-NAT-001 [curator_e sprint 3, 2026-10-05] bibliography corrected (OpenAlex, 2026-10-05)
+      (class origin taken from PER-NAT-001, D-062).
+  reason: 'sprint 3 bibliographic verification (corrected): class first_source identical to PER-NAT-001 (record reused, no
+    extra fetch); YAML had title+journal+year; authors, 303(5664):1634-1640 and DOI added (via PMID 15016991)'
+- id: PER-NAVON
+  action: modify
+  fields:
+    notes: migrated from schema-0.1 file PER-NAVON-001 [curator_e sprint 3, 2026-10-05] bibliography confirmed (Crossref, 2026-10-05).
+  reason: 'sprint 3 bibliographic verification (confirmed): notes tag only.'
+- id: PER-ODD
+  action: modify
+  fields:
+    notes: 'migrated from schema-0.1 file PER-ODD-001; sprint 2 (D-057): aliases, description updated from curation/work/pkg_A/sprint2/class_updates.yaml
+      [curator_e sprint 3, 2026-10-05] bibliography confirmed (Crossref, 2026-10-05).'
+  reason: 'sprint 3 bibliographic verification (confirmed): notes tag only.'
+- id: PER-OLF
+  action: modify
+  fields:
+    first_source:
+      citation: Kobal G, Hummel C. Cerebral chemosensory evoked potentials elicited by chemical stimulation of the human olfactory
+        and respiratory nasal mucosa. Electroencephalogr Clin Neurophysiol. 1988;71(4):241-250.
+      doi: 10.1016/0168-5597(88)90023-8
+      year: 1988
+      verified: false
+    notes: migrated from schema-0.1 file PER-OLF-001 [curator_e sprint 3, 2026-10-05] candidate origin found by bibliographic search
+      (OpenAlex, 2026-10-05); content unverified (class origin taken from PER-OLF-001, D-062).
+  reason: 'sprint 3 bibliographic verification (tbd_resolved): class first_source identical to PER-OLF-001 (record reused,
+    no extra fetch); query: Kobal & Hummel 1988 -> record matched (olfactometer OERP procedure in English; Kobal & Plattig
+    1978, Z EEG-EMG, is earlier but has no record)'
+- id: PER-OMIT
+  action: modify
+  fields:
+    first_source:
+      citation: Sutton S, Tueting P, Zubin J, John ER. Information delivery and the sensory evoked potential. Science. 1967;155(3768):1436-1439.
+      doi: 10.1126/science.155.3768.1436
+      year: 1967
+      verified: false
+    notes: 'migrated from schema-0.1 file PER-OMIT-001; sprint 2 (D-057): aliases updated from curation/work/pkg_A/sprint2/class_updates.yaml
+      [curator_e sprint 3, 2026-10-05] candidate origin found by bibliographic search (OpenAlex, 2026-10-05); content unverified
+      (class origin taken from PER-OMIT-001, D-062).'
+  reason: 'sprint 3 bibliographic verification (tbd_resolved): class first_source identical to PER-OMIT-001 (record reused,
+    no extra fetch); query: Sutton, Tueting, Zubin & John 1967 -> record matched (potentials to omitted/absent stimuli)'
+- id: PER-ORN
+  action: modify
+  fields:
+    first_source:
+      citation: Alain C, Schuler BM, McDonald KL. Neural activity associated with distinguishing concurrent auditory objects.
+        J Acoust Soc Am. 2002;111(2):990-995.
+      doi: 10.1121/1.1434942
+      year: 2002
+      verified: false
+    notes: migrated from schema-0.1 file PER-ORN-001 [curator_e sprint 3, 2026-10-05] bibliography corrected (OpenAlex, 2026-10-05)
+      (class origin taken from PER-ORN-001, D-062).
+  reason: 'sprint 3 bibliographic verification (corrected): class first_source identical to PER-ORN-001 (record reused, no
+    extra fetch); title-only YAML; first DOI tried (Alain, Arnott, Picton 2001) was a different paper; second record title
+    matched exactly; full citation + DOI written'
+- id: PER-PRVEP
+  action: modify
+  fields:
+    first_source:
+      citation: Halliday AM, McDonald WI, Mushin J. Delayed visual evoked response in optic neuritis. Lancet. 1972;299(7758):982-985.
+      doi: 10.1016/S0140-6736(72)91155-5
+      year: 1972
+      verified: false
+    notes: migrated from schema-0.1 file PER-PRVEP-001 [curator_e sprint 3, 2026-10-05] candidate origin found by bibliographic
+      search (OpenAlex, 2026-10-05); content unverified (class origin taken from PER-PRVEP-001, D-062).
+  reason: 'sprint 3 bibliographic verification (tbd_resolved): class first_source identical to PER-PRVEP-001 (record reused,
+    no extra fetch); query: Halliday, McDonald & Mushin 1972 -> record matched (clinical pattern-reversal VEP origin)'
+- id: PER-RET
+  action: modify
+  fields:
+    notes: 'migrated from schema-0.1 file PER-RET-001; sprint 2 (D-057): aliases updated from curation/work/pkg_A/sprint2/class_updates.yaml
+      [curator_e sprint 3, 2026-10-05] bibliography confirmed (Crossref, 2026-10-05).'
+  reason: 'sprint 3 bibliographic verification (confirmed): notes tag only.'
+- id: PER-RREP
+  action: modify
+  fields:
+    first_source:
+      citation: Davenport PW, Friedman WA, Thompson FJ, Franzén O. Respiratory-related cortical potentials evoked by inspiratory
+        occlusion in humans. J Appl Physiol. 1986;60(6):1843-1848.
+      doi: 10.1152/jappl.1986.60.6.1843
+      year: 1986
+      verified: false
+    notes: migrated from schema-0.1 file PER-RREP-001 [curator_e sprint 3, 2026-10-05] candidate origin found by bibliographic search
+      (OpenAlex, 2026-10-05); content unverified (class origin taken from PER-RREP-001, D-062).
+  reason: 'sprint 3 bibliographic verification (tbd_resolved): class first_source identical to PER-RREP-001 (record reused,
+    no extra fetch); query: Davenport et al. 1986 -> record matched'
+- id: PER-SPN
+  action: modify
+  fields:
+    first_source:
+      citation: Damen EJP, Brunia CHM. Changes in heart rate and slow brain potentials related to motor preparation and stimulus
+        anticipation in a time estimation task. Psychophysiology. 1987;24(6):700-713.
+      doi: 10.1111/j.1469-8986.1987.tb00353.x
+      year: 1987
+      verified: false
+    notes: migrated from schema-0.1 file PER-SPN-001 [curator_e sprint 3, 2026-10-05] candidate origin found by bibliographic search
+      (OpenAlex, 2026-10-05); content unverified (class origin taken from PER-SPN-001, D-062).
+  reason: 'sprint 3 bibliographic verification (tbd_resolved): class first_source identical to PER-SPN-001 (record reused,
+    no extra fetch); query: Damen & Brunia 1987 -> record matched (time-estimation SPN paradigm)'
+- id: PER-STREAM
+  action: modify
+  fields:
+    first_source:
+      citation: Sussman E, Ritter W, Vaughan HG. An investigation of the auditory streaming effect using event-related brain
+        potentials. Psychophysiology. 1999;36(1):22-34.
+      doi: 10.1017/S0048577299971056
+      year: 1999
+      verified: false
+    notes: migrated from schema-0.1 file PER-STREAM-001 [curator_e sprint 3, 2026-10-05] bibliography corrected (OpenAlex, 2026-10-05)
+      (class origin taken from PER-STREAM-001, D-062).
+  reason: 'sprint 3 bibliographic verification (corrected): class first_source identical to PER-STREAM-001 (record reused,
+    no extra fetch); title-only YAML; record title matched exactly; full citation + DOI written'
+- id: PER-TACT
+  action: modify
+  fields:
+    first_source:
+      citation: Desmedt JE, Robertson D. Differential enhancement of early and late components of the cerebral somatosensory
+        evoked potentials during forced-paced cognitive tasks in man. J Physiol. 1977;271(3):761-782.
+      doi: 10.1113/jphysiol.1977.sp012025
+      year: 1977
+      verified: false
+    notes: migrated from schema-0.1 file PER-TACT-001 [curator_e sprint 3, 2026-10-05] candidate origin found by bibliographic search
+      (Crossref, 2026-10-05); content unverified (class origin taken from PER-TACT-001, D-062).
+  reason: 'sprint 3 bibliographic verification (tbd_resolved): class first_source identical to PER-TACT-001 (record reused,
+    no extra fetch); queries: OpenAlex -> 429; Crossref -> record matched (attended vs unattended finger SEPs, N140 enhancement)'
+- id: PER-TON
+  action: modify
+  fields:
+    first_source:
+      citation: Talavage TM, Sereno MI, Melcher JR, Ledden PJ, Rosen BR, Dale AM. Tonotopic organization in human auditory
+        cortex revealed by progressions of frequency sensitivity. J Neurophysiol. 2004;91(3):1282-1296.
+      doi: 10.1152/jn.01125.2002
+      pmid: '14614108'
+      year: 2004
+      verified: false
+    notes: migrated from schema-0.1 file PER-TON-001 [curator_e sprint 3, 2026-10-05] bibliography corrected (OpenAlex, 2026-10-05)
+      (class origin taken from PER-TON-001, D-062).
+  reason: 'sprint 3 bibliographic verification (corrected): class first_source identical to PER-TON-001 (record reused, no
+    extra fetch); "et al." expanded to full author list; 91(3):1282-1296 added (OpenAlex; Crossref 429)'
+- id: PER-VMMN
+  action: modify
+  fields:
+    first_source:
+      citation: Tales A, Newton P, Troscianko T, Butler S. Mismatch negativity in the visual modality. NeuroReport. 1999;10(16):3363-3367.
+      doi: 10.1097/00001756-199911080-00020
+      year: 1999
+      verified: false
+    notes: migrated from schema-0.1 file PER-VMMN-001 [curator_e sprint 3, 2026-10-05] candidate origin found by bibliographic search
+      (OpenAlex, 2026-10-05); content unverified (class origin taken from PER-VMMN-001, D-062).
+  reason: 'sprint 3 bibliographic verification (tbd_resolved): class first_source identical to PER-VMMN-001 (record reused,
+    no extra fetch); query: Tales et al. 1999 -> record matched. Czigler & Csibra 1990 (Psychophysiology 27:669-681) is sometimes
+    cited as earlier; not fetched (budget)'
+- id: PER-VOICE
+  action: modify
+  fields:
+    first_source:
+      citation: Belin P, Zatorre RJ, Lafaille P, Ahad P, Pike B. Voice-selective areas in human auditory cortex. Nature. 2000;403(6767):309-312.
+      doi: 10.1038/35002078
+      year: 2000
+      verified: false
+    notes: migrated from schema-0.1 file PER-VOICE-001 [curator_e sprint 3, 2026-10-05] candidate origin found by bibliographic
+      search (OpenAlex, 2026-10-05); content unverified (class origin taken from PER-VOICE-001, D-062).
+  reason: 'sprint 3 bibliographic verification (tbd_resolved): class first_source identical to PER-VOICE-001 (record reused,
+    no extra fetch); query: Belin et al. 2000 -> record matched (voice localizer origin)'
+- id: PER-VS
+  action: modify
+  fields:
+    notes: migrated from schema-0.1 file PER-VS-001 [curator_e sprint 3, 2026-10-05] bibliography confirmed (Crossref, 2026-10-05).
+  reason: 'sprint 3 bibliographic verification (confirmed): notes tag only.'
+- id: SSR-ASSR
+  action: modify
+  fields:
+    first_source:
+      citation: Galambos R, Makeig S, Talmachoff PJ. A 40-Hz auditory potential recorded from the human scalp. Proc Natl Acad
+        Sci U S A. 1981;78(4):2643-2647.
+      doi: 10.1073/pnas.78.4.2643
+      year: 1981
+      verified: false
+    notes: 'migrated from schema-0.1 file SSR-ASSR-001; sprint 2 (D-057): aliases updated from curation/work/pkg_A/sprint2/class_updates.yaml
+      [curator_e sprint 3, 2026-10-05] bibliography corrected (OpenAlex, 2026-10-05) (class origin taken from SSR-ASSR-001,
+      D-062).'
+  reason: 'sprint 3 bibliographic verification (corrected): class first_source identical to SSR-ASSR-001 (record reused, no
+    extra fetch); YAML had title + "(Alzforum paper record)"; record title matched exactly; full citation + DOI written'
+- id: SSR-BEAT
+  action: modify
+  fields:
+    notes: migrated from schema-0.1 file SSR-BEAT-001 [curator_e sprint 3, 2026-10-05] bibliography confirmed (Crossref, 2026-10-05).
+  reason: 'sprint 3 bibliographic verification (confirmed): notes tag only.'
+- id: SSR-CVEP
+  action: modify
+  fields:
+    first_source:
+      citation: 'Sutter EE. The brain response interface: communication through visually-induced electrical brain responses.
+        J Microcomput Appl. 1992;15(1):31-45.'
+      doi: 10.1016/0745-7138(92)90045-7
+      year: 1992
+      verified: false
+    notes: 'migrated from schema-0.1 file SSR-CVEP-001; sprint 2 (D-057): aliases, description updated from curation/work/pkg_A/sprint2/class_updates.yaml
+      [curator_e sprint 3, 2026-10-05] candidate origin found by bibliographic search (OpenAlex, 2026-10-05); content unverified
+      (class origin taken from SSR-CVEP-001, D-062).'
+  reason: 'sprint 3 bibliographic verification (tbd_resolved): class first_source identical to SSR-CVEP-001 (record reused,
+    no extra fetch); query: Sutter 1992 -> record matched (first full description of the m-sequence/code-VEP speller; Sutter
+    1984 proceedings has no record)'
+- id: SSR-FFR
+  action: modify
+  fields:
+    notes: 'migrated from schema-0.1 file SSR-FFR-001; sprint 2 (D-057): aliases updated from curation/work/pkg_A/sprint2/class_updates.yaml
+      [curator_e sprint 3, 2026-10-05] bibliography confirmed (OpenAlex, 2026-10-05).'
+  reason: 'sprint 3 bibliographic verification (confirmed): notes tag only.'
+- id: SSR-FPVS
+  action: modify
+  fields:
+    first_source:
+      citation: Liu-Shuang J, Norcia AM, Rossion B. An objective index of individual face discrimination in the right occipito-temporal
+        cortex by means of fast periodic oddball stimulation. Neuropsychologia. 2014;52:57-72.
+      doi: 10.1016/j.neuropsychologia.2013.10.022
+      year: 2014
+      verified: false
+    notes: migrated from schema-0.1 file SSR-FPVS-001 [curator_e sprint 3, 2026-10-05] candidate origin found by bibliographic search
+      (OpenAlex, 2026-10-05); content unverified (class origin taken from SSR-FPVS-001, D-062).
+  reason: 'sprint 3 bibliographic verification (tbd_resolved): class first_source identical to SSR-FPVS-001 (record reused,
+    no extra fetch); query: Liu-Shuang, Norcia & Rossion -> record matched (fast periodic oddball design). Year written 2014
+    = print volume 52; OpenAlex lists online 2013. Heinrich, Mell & Bach 2009 (Int J Psychophysiol) may be an earlier frequency-domain
+    oddball - not fetched'
+- id: SSR-IM
+  action: modify
+  fields:
+    notes: migrated from schema-0.1 file SSR-IM-001 [curator_e sprint 3, 2026-10-05] bibliography confirmed (Crossref, 2026-10-05).
+  reason: 'sprint 3 bibliographic verification (confirmed): notes tag only.'
+- id: SSR-NSSEP
+  action: modify
+  fields:
+    notes: migrated from schema-0.1 file SSR-NSSEP-001 [curator_e sprint 3, 2026-10-05] bibliography confirmed (OpenAlex, 2026-10-05).
+  reason: 'sprint 3 bibliographic verification (confirmed): notes tag only.'
+- id: SSR-RVS
+  action: modify
+  fields:
+    first_source:
+      citation: 'Mathewson KE, Prudhomme C, Fabiani M, Beck DM, Lleras A, Gratton G. Making waves in the stream of consciousness:
+        entraining oscillations in EEG alpha and fluctuations in visual awareness with rhythmic visual stimulation. J Cogn
+        Neurosci. 2012;24(12):2321-2333.'
+      doi: 10.1162/jocn_a_00288
+      year: 2012
+      verified: false
+    notes: migrated from schema-0.1 file SSR-RVS-001 [curator_e sprint 3, 2026-10-05] candidate origin found by bibliographic search
+      (OpenAlex, 2026-10-05); content unverified (class origin taken from SSR-RVS-001, D-062).
+  reason: 'sprint 3 bibliographic verification (tbd_resolved): class first_source identical to SSR-RVS-001 (record reused,
+    no extra fetch); query: Mathewson et al. 2012 -> record matched'
+- id: SSR-SSMVEP
+  action: modify
+  fields:
+    first_source:
+      citation: 'Xie J, Xu G, Wang J, Zhang F, Zhang Y. Steady-state motion visual evoked potentials produced by oscillating
+        Newton''s rings: implications for brain-computer interfaces. PLoS One. 2012;7(6):e39707.'
+      doi: 10.1371/journal.pone.0039707
+      year: 2012
+      verified: false
+    notes: migrated from schema-0.1 file SSR-SSMVEP-001 [curator_e sprint 3, 2026-10-05] bibliography corrected (OpenAlex, 2026-10-05)
+      (class origin taken from SSR-SSMVEP-001, D-062).
+  reason: 'sprint 3 bibliographic verification (corrected): class first_source identical to SSR-SSMVEP-001 (record reused,
+    no extra fetch); title-only YAML; record title matched; authors, 7(6):e39707 and DOI written'
+- id: SSR-SSSEP
+  action: modify
+  fields:
+    first_source:
+      citation: 'Snyder AZ. Steady-state vibration evoked potentials: description of technique and characterization of responses.
+        Electroencephalogr Clin Neurophysiol. 1992;84(3):257-268.'
+      doi: 10.1016/0168-5597(92)90007-X
+      year: 1992
+      verified: false
+    notes: 'migrated from schema-0.1 file SSR-SSSEP-001; sprint 2 (D-057): aliases updated from curation/work/pkg_A/sprint2/class_updates.yaml
+      [curator_e sprint 3, 2026-10-05] candidate origin found by bibliographic search (OpenAlex, 2026-10-05); content unverified
+      (class origin taken from SSR-SSSEP-001, D-062).'
+  reason: 'sprint 3 bibliographic verification (tbd_resolved): class first_source identical to SSR-SSSEP-001 (record reused,
+    no extra fetch); query: Snyder 1992 -> record matched (technique paper for vibrotactile SSSEP)'
+- id: SSR-SSVEP
+  action: modify
+  fields:
+    notes: 'migrated from schema-0.1 file SSR-SSVEP-001; sprint 2 (D-057): aliases, description updated from curation/work/pkg_A/sprint2/class_updates.yaml.
+      D-062 (2026-10-05): class origin = Regan 1966 (from SSR-SSVEP-001); the earlier clinical photic driving (SSR-SSVEP-003)
+      has only a guideline as first_source, so it does not replace the original study until an original photic-driving report
+      is found (D-032). D-058 (2026-10-05): SSR-SSVEP-006 deprecated and merged into SSR-SSVEP-005 as a parameter-level variant;
+      8 files, 7 active. [curator_e sprint 3, 2026-10-05] bibliography confirmed (OpenAlex, 2026-10-05); D-062 ruling unchanged
+      (Regan 1966 stays; SSR-SSVEP-003 guideline is not an original study).'
+  reason: 'sprint 3 bibliographic verification (confirmed): notes tag only.'

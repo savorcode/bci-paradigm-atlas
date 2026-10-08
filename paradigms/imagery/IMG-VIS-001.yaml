@@ -1,0 +1,62 @@
+schema_version: '0.2'
+id: IMG-VIS-001
+class: IMG-VIS
+name:
+  en: Visual imagery
+  zh: 视觉想象
+aliases:
+- visual mental imagery
+- visualisation
+- face/place imagery
+- category-specific imagery
+family: imagery
+bci_category:
+- active
+- none
+recording_modality:
+- fMRI
+- PET
+- EEG
+stimulus_modality:
+- mental_imagery
+- visual
+- auditory
+markers:
+- MK.alpha_posterior
+- MK.BOLD_visual_cortex
+- MK.BOLD_category_selective
+description:
+  en: >-
+    Participants visualise simple learned visual patterns with their eyes closed, compared with seeing the same patterns.
+    Imagery activates early visual cortex and modulates posterior alpha power.
+  zh: 被试闭眼想象学过的简单视觉图案，与实际看到同样图案比较。想象激活早期视觉皮层，并调节后部 α 功率。
+protocol:
+  n_classes: 2
+  classes:
+  - visual imagery of a pattern
+  - perception of the pattern
+  cue: instruction to visualise a learned pattern with eyes closed
+  paradigm_timing: block
+  feedback: none
+  distinguishing: >-
+    Standard configuration (earliest published) / 标准配置（最早发表）: imagery of simple learned patterns compared with perception,
+    PET and rTMS of area 17 (Kosslyn et al. 1999). Sibling: -002 category-specific imagery of faces vs places (criterion 1).
+first_source:
+  citation: >-
+    Kosslyn SM, Pascual-Leone A, Felician O, Camposano S, Keenan JP, Thompson WL, Ganis G, Sukel KE, Alpert NM. The role of
+    area 17 in visual imagery: convergent evidence from PET and rTMS. Science. 1999;284(5411):167-170.
+  doi: 10.1126/science.284.5411.167
+  pmid: '10102821'
+  year: 1999
+  verified: false
+interop:
+  bids_task: visualimagery
+notes: >-
+  Leads: R0183, R0209, R0786, R0811, R0818. Search sources (curation/work/pkg_B/search_log.md): S15 https://news.mit.edu/2000/mindseye.
+  first_source R0183 (role 'other', 1999) is the oldest neural-recording lead; memory leads (unverified): Kosslyn et al. 1995
+  Nature; Pearson 2019 review. R0024 (mental rotation) is listed against this paradigm but belongs to IMG-ROT-001. R0818 is
+  mainly behavioural (VVIQ). Sprint 2 (D-057): stimulus set (patterns) taken from the title of R0183 ('area 17'); check against
+  the original. Category-specific face/place imagery (D-007) moved to IMG-VIS-002. bibliography corrected (Crossref, 2026-10-05)
+status: draft
+contributors:
+- curator_b

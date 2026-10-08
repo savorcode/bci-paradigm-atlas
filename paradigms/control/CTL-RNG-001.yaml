@@ -1,0 +1,55 @@
+schema_version: '0.2'
+id: CTL-RNG-001
+class: CTL-RNG
+name:
+  en: Random number generation
+  zh: 随机数生成
+aliases:
+- RNG
+- Random generation task
+- Random letter generation
+family: control
+bci_category:
+- none
+recording_modality:
+- PET
+stimulus_modality:
+- cognitive_task
+- auditory
+markers:
+- MK.BOLD_dlPFC
+description:
+  en: Participants generate a sequence of numbers (or letters) as randomly as possible, typically paced by a tone, which requires
+    suppression of habitual sequences such as counting. Random generation increases dorsolateral prefrontal blood flow, and
+    TMS over this region increases habitual counting.
+  zh: 被试尽可能随机地生成一串数字（或字母），通常由声音提示节拍，这需要抑制如顺序计数之类的习惯性序列。随机生成增加背外侧前额叶血流，对该区域施加 TMS 会增加习惯性计数。
+trial_structure:
+  conditions:
+  - random generation
+  - counting
+protocol:
+  n_classes: 2
+  classes:
+  - random number generation
+  - counting
+  cue: pacing tone; generate numbers as randomly as possible or count
+  paradigm_timing: block
+  feedback: none
+  distinguishing: 标准配置（最早发表线索）：按节拍声随机生成数字，与计数对照，PET 组块设计（Jahanshahi et al. 2000，R1149）；节拍速率是参数。
+first_source:
+  citation: 'Jahanshahi M, Dirnberger G, Fuller R, Frith CD. The Role of the Dorsolateral Prefrontal Cortex in Random Number
+    Generation: A Study with Positron Emission Tomography. NeuroImage. 2000;12(6):713-725.'
+  doi: 10.1006/nimg.2000.0647
+  year: 2000
+  verified: false
+interop:
+  bids_task: rng
+notes: 'Leads used: S_JAHANSHAHI2000 (search: https://www.ucl.ac.uk/ion/departments/sobell/Research/MJahanshahi/Projects/ResponseSelection);
+  S_JAHANSHAHI1998 (search: https://www.ucl.ac.uk/ion/departments/sobell/Research/MJahanshahi/Projects/ResponseSelection).
+  first_source lead: S_JAHANSHAHI2000. Neural lead is PET (regional blood flow) and TMS, not BOLD fMRI; MK.BOLD_dlPFC is registered
+  as fMRI only - marker/modality fit to be decided by the maintainer (blocker). Pass 1 skeleton (curator_c, 2026-10-03); all
+  sources unverified. Sprint 2 (D-057): protocol added; single configuration, no split. bibliography corrected (Crossref,
+  2026-10-05)'
+status: draft
+contributors:
+- curator_c

@@ -1,0 +1,62 @@
+schema_version: '0.2'
+id: MOT-ATT-001
+class: MOT-ATT
+name:
+  en: Attempted movement
+  zh: 尝试运动（瘫痪患者）
+aliases:
+- attempted movement
+- intended movement
+- movement attempt
+family: motor
+bci_category:
+- active
+recording_modality:
+- EEG
+- ECoG
+- intracortical
+stimulus_modality:
+- motor_execution
+- visual
+markers:
+- MK.SMR_ERD
+- MK.motor_cortical_spiking
+description:
+  en: >-
+    Participants with paralysis are visually cued to try to perform a foot movement that they cannot overtly execute, and
+    the attempt is compared with passive movement of the same foot. The attempt produces sensorimotor beta ERD/ERS over the
+    foot area of motor cortex; no feedback is given.
+  zh: 瘫痪被试按视觉提示尝试完成其无法实际执行的足部动作，并与同一足的被动运动比较。尝试运动在运动皮层足区引起感觉运动 β 节律 ERD/ERS；不给反馈。
+protocol:
+  n_classes: 2
+  classes:
+  - attempted foot movement
+  - passive foot movement
+  cue: visual cue
+  paradigm_timing: synchronous
+  feedback: none
+  distinguishing: >-
+    Standard configuration (earliest published) / 标准配置（最早发表）: cued attempted foot movements contrasted with passive foot movements
+    in paraplegic participants, scalp-EEG beta changes analysed offline (R0922). Siblings: -002 attempted movements to spoken
+    command in disorders of consciousness (criterion 2), -003 multi-class upper-limb attempts with online feedback (criteria
+    1, 4).
+first_source:
+  citation: >-
+    Müller-Putz GR, Zimmermann D, Graimann B, Nestinger K, Korisek G, Pfurtscheller G. Event-related beta EEG-changes during
+    passive and attempted foot movements in paraplegic patients. Brain Research. 2007;1137(1):84-91.
+  doi: 10.1016/j.brainres.2006.12.052
+  pmid: '17229403'
+  year: 2007
+  verified: false
+interop:
+  bids_task: attemptedmovement
+notes: >-
+  Leads: R0894, R0895, R0922, R1038. Differs from motor imagery (MOT-MI-001) in that participants attempt rather than imagine
+  the movement. The DoC command-following use (R0894, R0895) overlaps with IMG-CMD-001. Unverified memory lead for the intracortical
+  origin: Hochberg et al. 2006 Nature (not searched). Sprint 2 (D-057): narrowed to the cued attempted-vs-passive foot configuration
+  of the first source (class set taken from the title of R0922; to be checked against the original). Command following in
+  disorders of consciousness moved to MOT-ATT-002; multi-class upper-limb attempts (BNCI2019_001) are MOT-ATT-003. Intracortical
+  attempted-movement cursor control is MOT-CURSOR-003. bibliography corrected (OpenAlex, 2026-10-05)
+status: draft
+contributors:
+- curator_b

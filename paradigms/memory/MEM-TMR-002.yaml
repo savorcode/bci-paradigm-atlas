@@ -1,0 +1,55 @@
+schema_version: '0.2'
+id: MEM-TMR-002
+class: MEM-TMR
+name:
+  en: Odour-cued context reactivation during sleep
+  zh: 睡眠中气味线索的情境再激活
+aliases:
+- odour TMR
+- olfactory memory reactivation
+- odor cueing during slow-wave sleep
+family: memory
+bci_category:
+- none
+recording_modality:
+- EEG
+- fMRI
+stimulus_modality:
+- olfactory
+markers:
+- MK.BOLD_hippocampus
+description:
+  en: An odour is present throughout a learning session, and the same odour (or an odourless control) is presented again during
+    subsequent slow-wave sleep; memory for the whole learned material is tested after waking. Odour re-exposure during slow-wave
+    sleep improves retention of hippocampus-dependent declarative memories and activates the hippocampus.
+  zh: 整个学习过程中都有一种气味，随后在慢波睡眠中再次呈现同一气味（或无味对照）；醒后测试全部学习材料的记忆。慢波睡眠中再次接触气味可提高依赖海马的陈述性记忆的保持，并激活海马。
+trial_structure:
+  conditions:
+  - odour during SWS
+  - vehicle (odourless) during SWS
+  - odour during REM or wake (control)
+protocol:
+  n_classes: 2
+  classes:
+  - odour re-presented
+  - no odour (vehicle)
+  cue: one learning-context odour re-presented during slow-wave sleep
+  stimulus_coding: single context cue for the whole learning session (not item-specific)
+  paradigm_timing: block
+  feedback: none
+  distinguishing: 准则 1;2：线索由项目特异的声音（MEM-TMR-001）变为整段学习情境的单一气味，比较单位由被提示/未被提示项目变为有/无气味的睡眠条件。
+first_source:
+  citation: Rasch B, Büchel C, Gais S, Born J. Odor Cues During Slow-Wave Sleep Prompt Declarative Memory Consolidation. Science.
+    2007;315(5817):1426-1429.
+  doi: 10.1126/science.1138581
+  pmid: '17347444'
+  year: 2007
+  verified: false
+notes: 'New configuration (sprint 2). Lead R1327 (title, journal, year and PMID from the UKE research portal; authors not
+  shown on the fetched page, commonly attributed to Rasch and colleagues - not verified). This configuration was published
+  before MEM-TMR-001 (Rudoy et al. 2009); numbers are permanent, so -001 stays the item-specific auditory protocol and the
+  class origin is proposed for update in class_updates.yaml. Leads: R1327, R0798. (R#### = curation/literature.csv; DN## =
+  curation/work/pkg_D/new_leads.csv.) Numbering criterion (D-057): 1;2. bibliography corrected (OpenAlex, 2026-10-05)'
+status: draft
+contributors:
+- curator_d

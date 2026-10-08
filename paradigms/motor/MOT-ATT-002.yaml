@@ -1,0 +1,52 @@
+schema_version: '0.2'
+id: MOT-ATT-002
+class: MOT-ATT
+name:
+  en: Attempted movement to spoken command (disorders of consciousness)
+  zh: 按口头指令尝试运动（意识障碍）
+aliases:
+- attempted movement command following
+- EEG command following
+family: motor
+bci_category:
+- active
+recording_modality:
+- EEG
+stimulus_modality:
+- motor_execution
+- auditory
+markers:
+- MK.SMR_ERD
+description:
+  en: >-
+    Patients with disorders of consciousness are instructed by spoken commands to try to move a body part, in trials that
+    alternate between movement attempts and rest, while EEG is recorded at the bedside. Reliable command-locked sensorimotor
+    rhythm changes are taken as evidence of covert command following.
+  zh: 意识障碍患者在床旁脑电记录中按口头指令尝试活动某一身体部位，试次在尝试运动与休息之间交替。与指令锁时、可靠的感觉运动节律变化被视为隐蔽指令跟随的证据。
+protocol:
+  classes:
+  - attempted movement to command (body parts to be checked against R0894)
+  - rest
+  cue: spoken (auditory) instruction
+  paradigm_timing: synchronous
+  feedback: none
+  distinguishing: >-
+    Criterion 2 vs MOT-ATT-001: spoken commands instead of a visual cue, used to test command following (population and purpose
+    differ; class set to be confirmed).
+first_source:
+  citation: >-
+    Cruse D, Chennu S, Fernández-Espejo D, Payne WL, Young GB, Owen AM. Detecting awareness in the vegetative state: electroencephalographic
+    evidence for attempted movements to command. PLoS ONE. 2012;7(11):e49933.
+  doi: 10.1371/journal.pone.0049933
+  pmid: '23185489'
+  year: 2012
+  verified: false
+interop:
+  bids_task: attemptedmovement
+notes: >-
+  Leads: R0894 (first_source, title + PMID), R0895 (EEG detection of mental imagery and attempted movements in DoC). Split
+  out of MOT-ATT-001, where the DoC use was mentioned in notes. Overlaps with IMG-CMD-002 (imagery instead of attempt). bibliography
+  corrected (OpenAlex, 2026-10-05)
+status: draft
+contributors:
+- curator_b

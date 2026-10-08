@@ -1,0 +1,57 @@
+schema_version: '0.2'
+id: PER-NAT-001
+class: PER-NAT
+name:
+  en: Naturalistic image / movie viewing
+  zh: 自然图像与影片观看
+aliases:
+- inter-subject correlation (ISC) paradigm
+- movie watching
+- natural scenes paradigm
+- naturalistic viewing
+family: perception
+bci_category:
+- passive
+- none
+recording_modality:
+- fMRI
+- EEG
+- MEG
+- ECoG
+stimulus_modality:
+- naturalistic
+- visual
+markers:
+- MK.ISC
+- MK.BOLD_visual_cortex
+description:
+  en: Participants freely view natural images or continuous films without an explicit task. Stimulus-driven activity is identified
+    as inter-subject correlation of the time courses across viewers and with visual cortex BOLD encoding of image features.
+  zh: 被试在无明确任务的情况下自由观看自然图像或连续影片。以被试间时间进程的相关（ISC）以及视皮层 BOLD 对图像特征的编码来识别刺激驱动的活动。
+protocol:
+  n_classes: 1
+  classes:
+  - continuous film
+  cue: free viewing of a continuous feature film without task
+  stimulus_coding: 静态自然图像观看在 split_log 中提议。
+  paradigm_timing: continuous
+  feedback: none
+  distinguishing: 标准配置（最早发表，即 first_source）：自由观看连续影片，无任务，计算被试间相关。本类暂无其他具体范式（no sibling protocol yet）。
+first_source:
+  citation: Hasson U, Nir Y, Levy I, Fuhrmann Alpert G, Malach R. Intersubject synchronization of cortical activity during
+    natural vision. Science. 2004;303(5664):1634-1640.
+  doi: 10.1126/science.1089506
+  pmid: '15016991'
+  year: 2004
+  verified: false
+interop:
+  bids_task: movie
+notes: 'Leads used: R0323, R0410, R0441, R0511, R0780, R0824. first_source found by search in this sprint (SA46), not from
+  the lead list. No lead is an origin candidate; first_source found in this sprint''s search (SA46, PubMed record 15016991).
+  Brain-image reconstruction datasets are mentioned in the candidate note but no dataset lead was given. [curator_a sprint
+  2, 2026-10-03] D-057: protocol block added for the canonical configuration; no other concrete paradigm identified for this
+  class in sprint 2. [curator_e sprint 3, 2026-10-05] bibliography corrected (OpenAlex, 2026-10-05).'
+status: draft
+contributors:
+- curator_a
+- curator_e

@@ -1,0 +1,61 @@
+schema_version: '0.2'
+id: MOT-TRACK-001
+class: MOT-TRACK
+name:
+  en: Continuous pursuit tracking
+  zh: 连续轨迹追踪
+aliases:
+- pursuit tracking task
+- visuomotor tracking
+- continuous trajectory decoding
+family: motor
+bci_category:
+- active
+recording_modality:
+- EEG
+- ECoG
+stimulus_modality:
+- visual
+- motor_execution
+markers:
+- MK.low_freq_kinematics
+- MK.high_gamma
+description:
+  en: >-
+    Participants continuously follow a moving visual target with the hand or a cursor while EEG or ECoG is recorded, and hand
+    position and velocity are reconstructed offline. Low-frequency EEG amplitudes (below about 2 Hz) and intracranial high-gamma
+    activity track the kinematics.
+  zh: 被试用手或光标连续跟随移动的视觉目标，同时记录脑电或皮层脑电，离线重建手的位置与速度。低频脑电幅值（约 2 Hz 以下）与颅内高 γ 活动跟随运动学参数。
+protocol:
+  n_classes: 1
+  classes:
+  - continuous target pursuit
+  cue: continuously moving visual target
+  paradigm_timing: continuous
+  feedback: none
+  distinguishing: >-
+    Standard configuration (earliest published) / 标准配置（最早发表）: continuous following of a moving target with the hand, kinematics
+    decoded offline (open loop). Sibling: -002 online closed-loop decoding with decoded-cursor feedback (criterion 4).
+first_source:
+  citation: >-
+    Bradberry TJ, Gentili RJ, Contreras-Vidal JL. Decoding three-dimensional hand kinematics from electroencephalographic
+    signals. Annual International Conference of the IEEE Engineering in Medicine and Biology Society. 2009;2009:5010-5013.
+  doi: 10.1109/iembs.2009.5334606
+  pmid: '19965033'
+  year: 2009
+  verified: false
+datasets:
+- name: BNCI2020_002 (MOABB; snakerun/freerun/eyerun visual targets)
+  url: https://moabb.neurotechx.com/docs/dataset_summary.html
+  subjects: 18
+interop:
+  bids_task: tracking
+notes: >-
+  Leads: R0852, R0889, R1016, R1082, R1091. Memory lead: R1091 believed Bradberry, Gentili & Contreras-Vidal 2010 J Neurosci
+  (title truncated); R0889 has PMID only. No review lead yet. Sprint 2 (D-057): R0889 (first_source) may describe three-dimensional
+  centre-out reaching rather than pursuit tracking; if so it belongs to MOT-REACH and the origin of this protocol is R1082
+  or earlier (check). Online decoding (R1016) moved to MOT-TRACK-002. BNCI2020_002 contains pursuit (snakerun), free-movement
+  and oculomotor conditions; only the pursuit condition matches this protocol. bibliography corrected (OpenAlex, 2026-10-05)
+status: draft
+contributors:
+- curator_b

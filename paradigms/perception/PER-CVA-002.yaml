@@ -1,0 +1,58 @@
+schema_version: '0.2'
+id: PER-CVA-002
+class: PER-CVA
+name:
+  en: Covert-attention alpha lateralization BCI
+  zh: 隐蔽注意 α 偏侧化脑机接口
+aliases:
+- covert attention BCI
+- alpha lateralization BCI
+- gaze-independent covert attention BCI
+family: perception
+bci_category:
+- active
+- reactive
+recording_modality:
+- EEG
+- MEG
+stimulus_modality:
+- visual
+markers:
+- MK.alpha_lateralization
+description:
+  en: The user covertly shifts attention to the left or right while fixating, and the lateralization of posterior alpha power
+    is classified in single trials online and fed back, for example as a binary choice. The signal is independent of eye movements
+    and can serve as a gaze-independent BCI.
+  zh: 用户在注视中央时将隐蔽注意转向左侧或右侧，在线逐试次分类后部 α 功率的偏侧化并给出反馈（如二元选择）。该信号不依赖眼动，可作为不依赖注视的 BCI。
+trial_structure:
+  conditions:
+  - attend left
+  - attend right
+protocol:
+  n_classes: 2
+  classes:
+  - attend left
+  - attend right
+  cue: cue or instruction to attend covertly to one hemifield
+  paradigm_timing: synchronous
+  feedback: discrete
+  distinguishing: 准则 4（反馈方式）：单试次在线分类并反馈（闭环）；-001 为开环的线索–靶实验。
+first_source:
+  citation: van Gerven M, Jensen O. Attention modulations of posterior alpha as a control signal for two-dimensional brain-computer
+    interfaces. J Neurosci Methods. 2009;179(1):78-84.
+  doi: 10.1016/j.jneumeth.2009.01.016
+  year: 2009
+  verified: false
+interop:
+  bids_task: covertattention
+notes: 'Lead: R0937 (Jensen & Mazaheri 2010, Front Hum Neurosci 4:186; read in S2A24): "The modulation of the posterior alpha
+  activity with covert attention is so robust even in single trials that it can be used as a control signal for brain-computer
+  interfaces (van Gerven and Jensen, 2009; Bahramisharif et al., 2010)". Both studies to be located (D-032). bci_category:
+  the user generates the attention shift (active) in response to visual stimuli (reactive); for review. New in sprint 2. [curator_e
+  sprint 3, 2026-10-05] candidate origin found by bibliographic search (OpenAlex, 2026-10-05); content unverified. [maintainer
+  sprint 3, 2026-10-07] bibliography confirmed (OpenAlex, 2026-10-05; origin candidate, content unverified). [maintainer sprint
+  3, 2026-10-07, D-073] origin candidate recalled, record confirmed via OpenAlex.'
+status: draft
+contributors:
+- curator_a
+- curator_e

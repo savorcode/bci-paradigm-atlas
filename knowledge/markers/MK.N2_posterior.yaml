@@ -1,0 +1,25 @@
+schema_version: "0.2"
+id: MK.N2_posterior
+name:
+  en: Posterior N2 (N2c, occipitotemporal N2)
+  zh: 后部 N2（N2c、枕颞 N2）
+aliases:
+- posterior N2
+- N2c
+- occipito-temporal N2
+type: erp_component
+recording_modality:
+- EEG
+signature:
+  latency_ms: ~200-300
+  polarity: negative
+  topography: posterior (parieto-occipital / occipito-temporal)
+description:
+  en: Negative component around 200-300 ms over posterior sites associated with visual classification and attention to stimulus
+    features, distinct from the fronto-central N2 linked to conflict and inhibition.
+  zh: 约 200–300 ms 出现于后部电极的负成分，与视觉分类及对刺激特征的注意相关，区别于与冲突和抑制相关的额中央 N2。
+notes: First-pass skeleton by package A (2026-10-03). No generators/indexes yet. Signature values are textbook-level approximations
+  and await source checking.
+status: draft
+contributors:
+- curator_a

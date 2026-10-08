@@ -1,0 +1,58 @@
+schema_version: '0.2'
+id: SOC-TRUST-003
+class: SOC-TRUST
+name:
+  en: Multi-round trust game with a fixed partner
+  zh: 固定搭档多轮信任博弈
+aliases:
+- repeated trust game
+- multi-round investment game
+family: social
+bci_category:
+- none
+recording_modality:
+- fMRI
+stimulus_modality:
+- visual
+markers:
+- MK.BOLD_striatum_reward
+description:
+  en: The same investor and trustee play the investment game for many consecutive rounds, so that each player's decisions
+    build a reputation that shapes the partner's later choices; in hyperscanning versions both players are scanned. Reciprocity
+    signals in the trustee's caudate come to anticipate the investor's decisions over rounds.
+  zh: 同一对投资者与受托人连续进行多轮投资博弈，双方的决策逐渐形成声誉，影响对方之后的选择；超扫描版本同时记录两名玩家。受托人尾状核中的互惠信号随轮次推进而提前出现。
+protocol:
+  n_classes: 2
+  classes:
+  - investor transfer decision
+  - trustee return decision
+  cue: endowment display; partner's previous decision revealed before each new round
+  paradigm_timing: synchronous
+  feedback: discrete
+  distinguishing: 'Criterion 3 versus SOC-TRUST-001: repeated rounds with the same partner, so that trial outcomes depend
+    on the interaction history (King-Casas et al. 2005, R0312). Dual-brain recording is not itself a numbering criterion (D-021).'
+first_source:
+  citation: 'King-Casas B, Tomlin D, Anen C, Camerer CF, Quartz SR, Montague PR. Getting to know you: reputation and trust
+    in a two-person economic exchange. Science. 2005;308(5718):78-83.'
+  doi: 10.1126/science.1108062
+  pmid: '15802598'
+  year: 2005
+  verified: false
+variants:
+- name: 'Hyperscanning: multi-round trust game with both players scanned'
+  source:
+    citation: 'King-Casas B, Tomlin D, Anen C, Camerer CF, Quartz SR, Montague PR. Getting to know you: reputation and trust
+      in a two-person economic exchange. Science. 2005;308(5718):78-83.'
+    doi: 10.1126/science.1108062
+    pmid: '15802598'
+    year: 2005
+    verified: false
+  note: 'Former SOC-TRUST-001 variant (D-021 naming); the recording configuration stays a variant of this protocol. Sprint
+    3 (curator_d, 2026-10-05): bibliography corrected (OpenAlex, 2026-10-05): volume, issue, pages added.'
+notes: 'Former SOC-TRUST-001 variant. Lead refs: R0312 [key_reference], R0901 [method] (dual-fMRI), R0958 [review]. The number
+  of rounds (10 in the original, as recalled) is a parameter and is not stated here until checked. New concrete paradigm (curator_e,
+  sprint 2, 2026-10-03, D-057); all sources unverified. Sprint 3 (curator_d, 2026-10-05): bibliography corrected (OpenAlex,
+  2026-10-05): volume, issue, pages added.'
+status: draft
+contributors:
+- curator_e

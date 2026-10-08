@@ -1,0 +1,51 @@
+schema_version: '0.2'
+id: PER-GEP-001
+class: PER-GEP
+name:
+  en: Gustatory evoked potentials
+  zh: 味觉诱发电位
+aliases:
+- GEP
+- gustatory ERP
+- taste evoked potentials
+family: perception
+bci_category:
+- none
+recording_modality:
+- EEG
+stimulus_modality:
+- gustatory
+markers:
+- MK.GEP
+description:
+  en: Taste solutions (for example sucrose, saccharin or salt) are delivered to the tongue in brief pulses by a gustometer
+    in a constant rinsing flow so that onset is not signalled by touch or temperature. Taste onset evokes gustatory evoked
+    potentials with long latencies over central sites.
+  zh: 由味觉刺激仪在持续冲洗液流中向舌面短脉冲给予味觉溶液（如蔗糖、糖精或盐），使刺激起始不伴随触觉或温度线索。味觉起始在中央区诱发潜伏期较长的味觉诱发电位。
+protocol:
+  n_classes: 1
+  classes:
+  - taste stimulus onset
+  cue: brief taste pulses from a gustometer embedded in a constant rinsing flow
+  paradigm_timing: synchronous
+  feedback: none
+  distinguishing: 标准配置（最早发表，即 first_source）：味觉仪在恒定冲洗流中给短味觉脉冲。本类暂无其他具体范式（no sibling protocol yet）。
+first_source:
+  citation: Kobal G. Gustatory evoked potentials in man. Electroencephalogr Clin Neurophysiol. 1985;62(6):449-454.
+  doi: 10.1016/0168-5597(85)90055-3
+  year: 1985
+  verified: false
+interop:
+  bids_task: gustatory
+notes: 'Leads used: search SA13a, search SA13b, search SA13c. first_source: no origin source identified in this pass (blocker,
+  see curation/work/pkg_A/status.csv). New candidate proposed by package A on 2026-10-03 (curation/work/pkg_A/new_candidates.csv);
+  registered in curation/candidates.csv as C215 (D-053, milestone M1). Requested marker MK.GEP. Analogue of PER-OLF-001 for taste.
+  [curator_a sprint 2, 2026-10-03] D-057: protocol block added for the canonical configuration; no other concrete paradigm
+  identified for this class in sprint 2. [curator_e sprint 3, 2026-10-05] candidate origin found by bibliographic search (OpenAlex,
+  2026-10-05); content unverified. [maintainer sprint 3, 2026-10-07] bibliography confirmed (OpenAlex, 2026-10-05; origin
+  candidate, content unverified). [maintainer sprint 3, 2026-10-07, D-073] origin candidate recalled, record confirmed via
+  OpenAlex.'
+status: draft
+contributors:
+- curator_a
+- curator_e

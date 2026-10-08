@@ -1,0 +1,51 @@
+schema_version: '0.2'
+id: PER-VS-001
+class: PER-VS
+name:
+  en: Visual search
+  zh: 视觉搜索
+aliases:
+- Conjunction Search
+- Feature Search
+- N2pc paradigm
+- singleton search
+- visual search task
+family: perception
+bci_category:
+- none
+recording_modality:
+- EEG
+- MEG
+stimulus_modality:
+- visual
+markers:
+- MK.N2pc
+description:
+  en: Participants search a display for a target defined by a single feature or by a conjunction of features among distractors.
+    Lateralised targets elicit the N2pc, a negativity over posterior sites contralateral to the attended item at about 200-300
+    ms that indexes attentional selection.
+  zh: 被试在干扰项中搜索由单一特征或特征结合定义的靶刺激。偏侧呈现的靶刺激诱发 N2pc，即约 200–300 ms 在被注意项目对侧后部电极出现的负波，反映注意选择。
+protocol:
+  n_classes: 2
+  classes:
+  - feature search
+  - conjunction search
+  cue: display of a target among distractors, defined by one feature or a conjunction
+  paradigm_timing: synchronous
+  feedback: none
+  distinguishing: 标准配置（最早发表，即 first_source）：特征搜索与联合搜索，靶有/无，集合大小为参数。本类暂无其他具体范式（no sibling protocol yet）。
+first_source:
+  citation: Treisman, A., & Gelade, G. A feature-integration theory of attention. Cognitive Psychology. 1980.
+  doi: 10.1016/0010-0285(80)90005-5
+  pmid: '7351125'
+  year: 1980
+  verified: false
+interop:
+  bids_task: visualsearch
+notes: 'HED task page: https://www.hedtags.org/hed-task/tasks/hedtsk_visual_search.html. Leads used: R0047, R0167, R0178,
+  R0285, R0525, R0703, R0806, R0998, R1072. [curator_a sprint 2, 2026-10-03] D-057: protocol block added for the canonical
+  configuration; no other concrete paradigm identified for this class in sprint 2. [curator_e sprint 3, 2026-10-05] bibliography
+  confirmed (Crossref, 2026-10-05).'
+status: draft
+contributors:
+- curator_a

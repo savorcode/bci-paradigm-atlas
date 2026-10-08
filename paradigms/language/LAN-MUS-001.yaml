@@ -1,0 +1,51 @@
+schema_version: '0.2'
+id: LAN-MUS-001
+class: LAN-MUS
+name:
+  en: Music-syntactic violation
+  zh: 音乐句法违例
+family: language
+bci_category:
+- none
+recording_modality:
+- EEG
+- MEG
+stimulus_modality:
+- auditory
+markers:
+- MK.ERAN
+description:
+  en: Participants hear chord sequences or melodies in which some chords are harmonically unexpected, such as an out-of-key
+    chord or a Neapolitan chord at a position where the tonic is expected. Music-syntactically irregular chords elicit an
+    early right anterior negativity (ERAN) and, in some designs, a later positivity, and these responses have been compared
+    with ERP responses to syntactic violations in language.
+  zh: 被试聆听和弦序列或旋律，其中部分和弦在和声上出乎预期，如在应出现主和弦的位置出现离调和弦或那不勒斯和弦。音乐句法不规则的和弦诱发早期右前负波（ERAN），在某些设计中还诱发随后的正波，这些响应常与语言句法违例的 ERP 相比较。
+trial_structure:
+  conditions:
+  - regular
+  - 'irregular (distance: parameter)'
+protocol:
+  n_classes: 2
+  classes:
+  - harmonically regular chord
+  - harmonically irregular chord
+  cue: chord sequences or musical phrases
+  paradigm_timing: synchronous
+  feedback: none
+  distinguishing: 标准配置（最早发表）：和弦序列中的和声规则/违例目标和弦（R1030，仅标题与 PMID）。本类目前只有这一配置。
+first_source:
+  citation: 'Patel AD, Gibson E, Ratner J, Besson M, Holcomb PJ. Processing Syntactic Relations in Language and Music: An
+    Event-Related Potential Study. Journal of Cognitive Neuroscience. 1998;10(6):717-733.'
+  doi: 10.1162/089892998563121
+  pmid: '9831740'
+  year: 1998
+  verified: false
+interop:
+  bids_task: musicsyntax
+notes: 'Leads: R1030 (R#### = curation/literature.csv; DN## = curation/work/pkg_D/new_leads.csv). R1030 (Processing syntactic
+  relations in language and music: an event-related potential study; title and PMID only) is the only lead. It compares music
+  and language P600; the ERAN literature (chord-sequence paradigm) needs additional leads. Sprint 2 (D-057, curator_d, 2026-10-03):
+  protocol block added (-001 = earliest/standard configuration). bibliography corrected (OpenAlex, 2026-10-05)'
+status: draft
+contributors:
+- curator_d

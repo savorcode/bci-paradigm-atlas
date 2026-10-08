@@ -1,0 +1,55 @@
+schema_version: '0.2'
+id: ERR-CHGPT-002
+class: ERR-CHGPT
+name:
+  en: Predictive inference task (oddball condition)
+  zh: 预测推断任务（oddball 条件）
+aliases:
+- Oddball predictive inference
+family: error
+bci_category:
+- none
+recording_modality:
+- EEG
+stimulus_modality:
+- visual
+markers:
+- MK.P3b
+description:
+  en: The predictive inference task is run with an additional generative condition in which the outcome mean drifts slowly
+    and occasional outliers (oddballs) are drawn from a broad distribution and should be ignored, contrasted with the change-point
+    condition in which surprising outcomes signal a shift. The feedback-locked P300 relates positively to updating in the
+    change-point condition and negatively in the oddball condition.
+  zh: 预测推断任务增加一种生成条件：结果均值缓慢漂移，偶尔从宽分布中抽出应被忽略的离群值（oddball），与"出乎意料即意味着变化"的变点条件对比。反馈锁时 P300 在变点条件下与信念更新正相关，在 oddball 条件下负相关。
+trial_structure:
+  conditions:
+  - change-point condition
+  - oddball condition
+protocol:
+  n_classes: 2
+  classes:
+  - change-point condition
+  - oddball condition
+  cue: prediction of next outcome location followed by the observed outcome; blocks of change-point or oddball generative
+    statistics
+  paradigm_timing: synchronous
+  feedback: discrete
+  distinguishing: 准则 1：条件集由单一变点条件扩为变点 + oddball 两种生成统计（ERR-CHGPT-001 只有变点条件）。
+first_source:
+  citation: Nassar MR, Bruckner R, Frank MJ. Statistical context dictates the relationship between feedback-related EEG signals
+    and learning. eLife. 2019;8:e46975.
+  doi: 10.7554/eLife.46975
+  year: 2019
+  verified: false
+datasets:
+- name: Nassar, Bruckner & Frank 2019 behavioural and EEG data (Dryad)
+  url: https://doi.org/10.5061/dryad.570pf8n
+interop:
+  bids_task: predictiveinference
+notes: 'Leads used: R1255 (sprint 1 fetch of https://ski.clps.brown.edu/papers/NassarP3_eLife.pdf). Description of the oddball
+  condition taken from the sprint-1 file text of ERR-CHGPT-001; P300 sign reversal to be checked against the original. Sprint
+  2 (D-057, curator_c, 2026-10-03): new concrete paradigm of class ERR-CHGPT; numbering criterion 1 relative to ERR-CHGPT-001;
+  all sources unverified. bibliography corrected (Crossref, 2026-10-05)'
+status: draft
+contributors:
+- curator_c

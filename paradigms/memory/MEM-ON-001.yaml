@@ -1,0 +1,62 @@
+schema_version: '0.2'
+id: MEM-ON-001
+class: MEM-ON
+name:
+  en: Old/new recognition
+  zh: 新旧再认
+aliases:
+- ERP old/new effect
+- Old/new paradigm
+- Recognition Memory Test
+- Yes/No Recognition
+- Remember/know paradigm
+- R/K Paradigm
+- Remember-Know
+family: memory
+bci_category:
+- none
+recording_modality:
+- EEG
+stimulus_modality:
+- visual
+- auditory
+markers:
+- MK.FN400
+- MK.parietal_old_new
+description:
+  en: 'After a study phase, participants see studied (old) items intermixed with unstudied (new) items and judge whether each
+    item is old or new. Correctly recognised old items elicit more positive ERPs than correctly rejected new items: an earlier
+    mid-frontal effect (FN400) associated with familiarity and a later left parietal effect associated with recollection.'
+  zh: 学习阶段之后，学过的（旧）项目与未学过的（新）项目混合呈现，被试判断每个项目是旧还是新。正确再认的旧项目比正确拒绝的新项目诱发更正的 ERP：较早的额中部效应（FN400）与熟悉性相关，较晚的左顶叶效应与回想相关。
+trial_structure:
+  conditions:
+  - old (hit)
+  - new (correct rejection)
+  - miss
+  - false alarm
+protocol:
+  n_classes: 2
+  classes:
+  - old
+  - new
+  cue: studied and unstudied words or pictures intermixed at test
+  paradigm_timing: synchronous
+  feedback: none
+  distinguishing: 标准配置（最早发表）：学习—测试，二择“旧/新”判断（类源头 Mandler 1980, R0051）。与 -002（记得/知道判断，准则 1，D-024）区别。
+first_source:
+  citation: 'Mandler G. Recognizing: The judgment of previous occurrence. Psychological Review. 1980;87(3):252-271.'
+  doi: 10.1037/0033-295x.87.3.252
+  year: 1980
+  verified: false
+interop:
+  bids_task: oldnew
+notes: 'HED task page: https://www.hedtags.org/hed-task/tasks/hedtsk_old_new_recognition_memory.html. Leads: R0051, R0179,
+  R0361, R0363, R0567, R0595 (R#### = curation/literature.csv; DN## = curation/work/pkg_D/new_leads.csv). MEM-RK-001 (remember/know)
+  merged here as a variant (D-024). R0051 (Mandler 1980) is a theoretical account of recognition; an earlier empirical origin
+  of the yes/no recognition test has not been identified, so the attribution is provisional. Sprint 2 (D-057, curator_d, 2026-10-03):
+  protocol block added (-001 = earliest/standard configuration). Narrowed to binary old/new judgements; remember/know (D-024)
+  moved to MEM-ON-002. Confidence-rating (ROC) recognition is logged in split_log as proposed (no study lead yet). Sibling
+  concrete paradigms: MEM-ON-002. bibliography corrected (Crossref, 2026-10-05)'
+status: draft
+contributors:
+- curator_d

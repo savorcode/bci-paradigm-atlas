@@ -1,0 +1,77 @@
+schema_version: '0.2'
+id: MOT-MI-002
+class: MOT-MI
+name:
+  en: Four-class motor imagery (left hand / right hand / feet / tongue)
+  zh: 四分类运动想象（左手/右手/双脚/舌头）
+aliases:
+- 4-class motor imagery
+- BCI Competition IV 2a paradigm
+- Graz four-class MI
+family: motor
+bci_category:
+- active
+recording_modality:
+- EEG
+stimulus_modality:
+- mental_imagery
+- visual
+markers:
+- MK.SMR_ERD
+description:
+  en: >-
+    A warning tone and fixation cross are followed by an arrow pointing left, right, down or up, which instructs the participant
+    to imagine moving the left hand, right hand, both feet or the tongue until the fixation cross disappears. The four imagery
+    classes produce distinct spatial patterns of sensorimotor mu/beta ERD/ERS; no feedback is given.
+  zh: 警示音与注视十字之后出现指向左、右、下或上的箭头，提示被试想象左手、右手、双脚或舌头的运动，直到注视十字消失。四类想象产生空间分布不同的感觉运动 mu/β ERD/ERS；不给反馈。
+trial_structure:
+  phases:
+  - name: fixation + warning tone
+    duration_ms: 2000
+  - name: cue (arrow)
+    duration_ms: 1250
+  - name: imagery (from cue onset)
+    duration_ms: 4000
+  - name: break
+    note: short, variable
+  typical_trials: 60-72 per class per session
+  conditions:
+  - left hand
+  - right hand
+  - feet
+  - tongue
+protocol:
+  n_classes: 4
+  classes:
+  - left hand
+  - right hand
+  - feet
+  - tongue
+  cue: visual arrow cue (left/right/down/up)
+  paradigm_timing: synchronous
+  feedback: none
+  distinguishing: >-
+    Criterion 1 vs MOT-MI-001: class set changes from two (left/right hand) to four classes (left hand, right hand, feet,
+    tongue); cue, trial structure and (absent) feedback unchanged.
+first_source:
+  citation: >-
+    Pfurtscheller G, Brunner C, Schlögl A, Lopes da Silva FH. Mu rhythm (de)synchronization and EEG single-trial classification
+    of different motor imagery tasks. NeuroImage. 2006;31(1):153-159.
+  doi: 10.1016/j.neuroimage.2005.12.003
+  year: 2006
+  verified: false
+datasets:
+- name: BCI Competition IV, dataset 2a (BNCI2014_001)
+  url: https://moabb.neurotechx.com/docs/generated/moabb.datasets.BNCI2014_001.html
+  subjects: 9
+interop:
+  bids_task: motorimagery
+notes: >-
+  Leads: WS-B2-01 [=R1287] (search result linking doi 10.1016/J.NEUROIMAGE.2005.12.003) and WF-B2-16 (author PDF at pub.ista.ac.at:
+  four classes, arrow at second 3 for 1.25 s, imagery to second 7, no feedback, nine subjects, 60 repetitions per task). Dataset
+  timing from the MOABB BNCI2014_001 page (WF-B2-06: cue t=2-3.25 s, imagery t=2-6 s, 288 trials per session, 2 sessions).
+  Moved here from MOT-MI-001 (D-057 example). Earlier four-class reports by the same group are possible; origin not established.
+  bibliography corrected (OpenAlex, 2026-10-05)
+status: draft
+contributors:
+- curator_b

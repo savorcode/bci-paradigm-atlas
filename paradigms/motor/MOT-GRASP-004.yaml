@@ -1,0 +1,57 @@
+schema_version: '0.2'
+id: MOT-GRASP-004
+class: MOT-GRASP
+name:
+  en: Grasp-and-lift with load and friction changes
+  zh: 抓握–提起（负载与摩擦变化）
+aliases:
+- grasp and lift
+- WAY-EEG-GAL
+family: motor
+bci_category:
+- active
+- none
+recording_modality:
+- EEG
+stimulus_modality:
+- motor_execution
+- visual
+- somatosensory
+markers:
+- MK.SMR_ERD
+description:
+  en: >-
+    Participants reach for an instrumented object, grasp it with a precision grip, lift and hold it, and replace it, while
+    the object's weight and contact-surface friction change unpredictably between trials. EEG, EMG and kinematics are recorded
+    to decode the movement phases and the adaptation of grip forces.
+  zh: 被试伸手以精确握持抓起一个带传感器的物体，提起并保持，再放回原处；物体的重量和接触面摩擦在试次间不可预测地变化。同步记录脑电、肌电和运动学，解码运动阶段与握力的适应。
+protocol:
+  classes:
+  - weight condition changes
+  - friction condition changes
+  paradigm_timing: synchronous
+  feedback: none
+  distinguishing: >-
+    Criteria 1 and 2 vs MOT-GRASP-001: a single grasp-and-lift action with unpredictable load and friction perturbations instead
+    of a choice between grasp types.
+first_source:
+  citation: >-
+    Luciw MD, Jarocka E, Edin BB. Multi-channel EEG recordings during 3,936 grasp and lift trials with varying weight and
+    friction. Scientific Data. 2014;1:140047.
+  doi: 10.1038/sdata.2014.47
+  year: 2014
+  verified: false
+datasets:
+- name: >-
+    WAY-EEG-GAL (grasp-and-lift EEG; Multi-channel EEG recordings during 3,936 grasp and lift trials with varying weight and
+    friction)
+interop:
+  bids_task: grasplift
+notes: >-
+  Moved from MOT-GRASP-001 (dataset WAY-EEG-GAL). Task-sheet remark from sprint 1: DOI inferred from URL sdata201447 (not
+  entered). Conditions taken from the dataset title (varying weight and friction); cue type, trial timing and the description
+  of the lift phases still have to be checked against the dataset descriptor before merge. [maintainer, sprint 2] Lead registered
+  as R1306 (literature.csv). bibliography corrected (OpenAlex, 2026-10-05)
+status: draft
+contributors:
+- curator_b

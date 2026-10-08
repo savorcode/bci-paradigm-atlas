@@ -1,0 +1,25 @@
+schema_version: "0.2"
+id: MK.N1_visual
+name:
+  en: Visual N1
+  zh: 视觉 N1
+aliases:
+- visual N1
+- N1 (visual)
+type: erp_component
+recording_modality:
+- EEG
+- MEG
+signature:
+  latency_ms: ~150-200
+  polarity: negative
+  topography: occipito-parietal / lateral occipital
+description:
+  en: Negative visual ERP component following the P1 over occipito-parietal and occipito-temporal sites; it is enhanced for
+    stimuli at attended locations.
+  zh: 紧随 P1 之后、出现于枕顶及枕颞部的视觉 ERP 负成分；被注意位置的刺激使其增强。
+notes: First-pass skeleton by package A (2026-10-03). No generators/indexes yet. Signature values are textbook-level approximations
+  and await source checking.
+status: draft
+contributors:
+- curator_a

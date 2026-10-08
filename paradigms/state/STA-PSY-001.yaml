@@ -1,0 +1,61 @@
+schema_version: '0.2'
+id: STA-PSY-001
+class: STA-PSY
+name:
+  en: Psychedelic drug state
+  zh: 致幻剂药物状态
+aliases:
+- psychedelic state
+- LSD / psilocybin neuroimaging
+- pharmacological altered state
+family: state
+bci_category:
+- none
+recording_modality:
+- fMRI
+- MEG
+stimulus_modality:
+- pharmacological
+- resting_state
+markers:
+- MK.alpha_posterior
+- MK.DMN_connectivity
+description:
+  en: Brain activity is recorded at rest after administration of a psychedelic such as LSD or psilocybin and compared with
+    placebo in a within-subject design. The psychedelic state is accompanied by decreased posterior alpha power and reduced
+    integrity of the default mode network.
+  zh: 在被试内设计中，给予 LSD 或裸盖菇素等致幻剂后记录静息态脑活动，并与安慰剂比较。致幻状态伴随后部 α 功率降低和默认模式网络整合性下降。
+protocol:
+  n_classes: 2
+  classes:
+  - psychedelic drug
+  - placebo
+  cue: drug administration followed by resting-state recording
+  paradigm_timing: continuous
+  feedback: none
+  distinguishing: 'Standard configuration (earliest published or canonical; D-057 -001): within-subject drug versus placebo
+    resting recording; origin publication TBD (first_source holds a neural study, D-031).'
+first_source:
+  citation: Carhart-Harris RL, Muthukumaraswamy S, Roseman L, Kaelen M, Droog W, Murphy K, Tagliazucchi E, Schenberg EE, Nest
+    T, Orban C, Leech R, Williams LT, Williams TM, Bolstridge M, Sessa B, McGonigle J, Sereno MI, Nichols D, Hellyer PJ, Hobden
+    P, Evans J, Singh KD, Wise RG, Curran HV, Feilding A, Nutt DJ. Neural correlates of the LSD experience revealed by multimodal
+    neuroimaging. Proceedings of the National Academy of Sciences. 2016;113(17):4853-4858.
+  doi: 10.1073/pnas.1518377113
+  year: 2016
+  verified: false
+interop:
+  bids_task: rest
+notes: 'Sources found by curator_e (curation/work/pkg_E/search_log.md): S21 = https://orca.cardiff.ac.uk/id/eprint/95413/.
+  first_source note: Earlier psychedelic PET/EEG studies exist (not surfaced); first_source is provisional. New candidate
+  (curator_e); maintainer to confirm that a drug-induced state counts as a paradigm (cf. STA-ANES-001). S21 used fMRI and
+  MEG. First-pass skeleton (curator_e, 2026-10-03); all sources unverified. D-044 (maintainer, 2026-10-03): added the draft
+  stimulus_modality term pharmacological; resting_state kept for the recording condition. Drug-induced states are accepted
+  as paradigms when a standard administration-plus-recording protocol exists (as for STA-ANES-001). D-031 (maintainer, 2026-10-03):
+  first_source currently holds the earliest neural recording study found, not the paradigm origin; in sprint 2 move it to
+  a "First neural recording:" line and fill first_source with the origin. Sprint 2 (curator_e, 2026-10-03): protocol block
+  added per D-057; see curation/work/pkg_E/sprint2/split_log.csv. Sprint 3 (curator_d, 2026-10-05): bibliography corrected
+  (OpenAlex, 2026-10-05): author list expanded (26 authors).'
+status: draft
+contributors:
+- curator_e
+- maintainer

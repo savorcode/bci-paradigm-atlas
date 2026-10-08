@@ -1,0 +1,58 @@
+schema_version: '0.2'
+id: ERR-AWARE-001
+class: ERR-AWARE
+name:
+  en: Error awareness (choice task with accuracy judgements)
+  zh: 错误觉知（选择任务 + 正确性判断）
+aliases:
+- Aware vs unaware errors
+- Error awareness paradigm
+- Error signaling task
+family: error
+bci_category:
+- none
+recording_modality:
+- EEG
+stimulus_modality:
+- visual
+markers:
+- MK.Pe
+description:
+  en: Participants perform a speeded manual choice task and, after each response, judge whether it was correct, so that errors
+    can be sorted into aware (signalled) and unaware ones. The error positivity (Pe) is larger for aware than for unaware
+    errors, whereas the earlier ERN differs less between them.
+  zh: 被试完成快速手动选择任务，并在每次反应后判断该反应是否正确，从而把错误分为觉察到的（被报告的）与未觉察的两类。错误正波（Pe）在觉察到的错误上大于未觉察的错误，而更早出现的 ERN 在两类错误间差异较小。
+trial_structure:
+  conditions:
+  - correct response
+  - aware error
+  - unaware error
+protocol:
+  n_classes: 3
+  classes:
+  - correct response
+  - aware (signalled) error
+  - unaware error
+  cue: visual speeded choice stimuli (flanker-type arrays) followed by a post-response judgement of response accuracy
+  paradigm_timing: synchronous
+  feedback: none
+  distinguishing: 标准配置（最早发表）：快速手动选择任务后，每次反应都作正确性判断，据此把错误分为觉察/未觉察（Scheffers & Coles 2000，R0195）。
+first_source:
+  citation: 'Scheffers MK, Coles MGH. Performance monitoring in a confusing world: Error-related brain activity, judgments
+    of response accuracy, and types of errors. Journal of Experimental Psychology: Human Perception and Performance. 2000;26(1):141-151.'
+  doi: 10.1037/0096-1523.26.1.141
+  pmid: '10696610'
+  year: 2000
+  verified: false
+interop:
+  bids_task: errorawareness
+notes: 'Leads used: R0195; R0205; R0190; R0094. first_source lead: R0195. D-015: independent entry; flanker/antisaccade awareness
+  reports recorded as variants. R0094 (Gehring et al. 1990, ERN origin) is listed as 源头候选 in the task sheet but describes
+  the ERN rather than an awareness manipulation; R0195 (Scheffers & Coles 2000, judgments of response accuracy) is the earliest
+  lead with an accuracy-judgement design. Tutorial: R0190. Pass 1 skeleton (curator_c, 2026-10-03); all sources unverified.
+  Sprint 2 (D-057): protocol added; the antisaccade error-signalling variant (R0205) moved to ERR-AWARE-002 (criterion 2,
+  D-015 revisited); the Error Awareness Task (Hester et al. 2005) added as ERR-AWARE-003. bibliography corrected (Crossref,
+  2026-10-05)'
+status: draft
+contributors:
+- curator_c

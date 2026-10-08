@@ -1,0 +1,49 @@
+schema_version: '0.2'
+id: MEM-DS-002
+class: MEM-DS
+name:
+  en: Backward digit span
+  zh: 倒背数字广度
+aliases:
+- digit span backward
+- backward span
+family: memory
+bci_category:
+- none
+recording_modality:
+- EEG
+stimulus_modality:
+- auditory
+- visual
+markers:
+- MK.frontal_midline_theta
+description:
+  en: Participants hear or see sequences of digits and reproduce them in reverse order; sequence length increases until recall
+    fails. Reversing the order adds manipulation to maintenance; ERP-compatible computerised versions present digits at a
+    fixed rate with a probe or response period so that encoding- and retention-related activity can be averaged.
+  zh: 被试听到或看到数字序列，并按相反顺序复述；序列长度递增直到复述失败。倒序在保持之外增加了操作成分；与 ERP 兼容的计算机化版本以固定速率呈现数字并设置探测或反应期，以便对编码与保持相关活动做平均。
+trial_structure:
+  conditions:
+  - sequence length (parameter)
+protocol:
+  n_classes: 1
+  classes:
+  - backward serial recall
+  cue: spoken or visually presented digit sequences
+  paradigm_timing: synchronous
+  feedback: none
+  distinguishing: 准则 1：任务规则由按原顺序复述（MEM-DS-001）变为倒序复述。
+first_source:
+  citation: Wechsler D. The measurement of adult intelligence. 1939.
+  doi: 10.1037/10020-000
+  year: 1939
+  verified: false
+notes: 'New configuration (sprint 2). Leads: R1197 (ERP-compatible digit span backward task, title and PMID only), R1196 (delta/theta
+  oscillations during the digit span; direction not visible in the lead). D-043 still open. (R#### = curation/literature.csv;
+  DN## = curation/work/pkg_D/new_leads.csv.) Numbering criterion (D-057): 1. first_source TBD resolved by bibliographic search
+  (Crossref, 2026-10-05; curator_c): candidate origin found by bibliographic search; content unverified. Previous entry: "TBD:
+  origin of the backward digit span not retrieved" [maintainer sprint 3, 2026-10-07] bibliography confirmed (Crossref, 2026-10-05;
+  origin candidate, content unverified).'
+status: draft
+contributors:
+- curator_d

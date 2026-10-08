@@ -1,0 +1,51 @@
+schema_version: '0.2'
+id: PER-OLF-001
+class: PER-OLF
+name:
+  en: Olfactory event-related potentials
+  zh: 嗅觉诱发电位
+aliases:
+- OERP
+- chemosensory evoked potentials (CSERP)
+- olfactory event-related potentials
+family: perception
+bci_category:
+- none
+recording_modality:
+- EEG
+stimulus_modality:
+- olfactory
+markers:
+- MK.OERP
+description:
+  en: Odorants are delivered in brief pulses embedded in a constant warm, humidified air stream (olfactometer) so that no
+    tactile or thermal change accompanies the odour. Odour onset evokes olfactory event-related potentials (N1, P2 and later
+    positivity) with long latencies.
+  zh: 通过嗅觉刺激仪将气味以短脉冲形式嵌入恒温加湿的持续气流中，使气味出现时不伴随触觉或温度变化。气味起始诱发潜伏期较长的嗅觉事件相关电位（N1、P2 及其后的正波）。
+protocol:
+  n_classes: 1
+  classes:
+  - odour pulse
+  cue: odour pulses embedded in a constant warm humidified air stream (olfactometer)
+  paradigm_timing: synchronous
+  feedback: none
+  distinguishing: 标准配置（最早发表，即 first_source）：嗅觉仪在恒定气流中给短气味脉冲。本类暂无其他具体范式（no sibling protocol yet）。
+first_source:
+  citation: Kobal G, Hummel C. Cerebral chemosensory evoked potentials elicited by chemical stimulation of the human olfactory
+    and respiratory nasal mucosa. Electroencephalogr Clin Neurophysiol. 1988;71(4):241-250.
+  doi: 10.1016/0168-5597(88)90023-8
+  year: 1988
+  verified: false
+interop:
+  bids_task: olfactory
+notes: 'Leads used: R0046. first_source: no origin source identified in this pass (blocker, see curation/work/pkg_A/status.csv).
+  R0046 (1978) concerns olfactory bulb/cortex EEG and does not appear to be a human scalp OERP study; not used as first_source.
+  [curator_a sprint 2, 2026-10-03] D-057: protocol block added for the canonical configuration; no other concrete paradigm
+  identified for this class in sprint 2. [curator_e sprint 3, 2026-10-05] candidate origin found by bibliographic search (OpenAlex,
+  2026-10-05); content unverified. [maintainer sprint 3, 2026-10-07] bibliography confirmed (OpenAlex, 2026-10-05; origin
+  candidate, content unverified). [maintainer sprint 3, 2026-10-07, D-073] origin candidate recalled, record confirmed via
+  OpenAlex.'
+status: draft
+contributors:
+- curator_a
+- curator_e

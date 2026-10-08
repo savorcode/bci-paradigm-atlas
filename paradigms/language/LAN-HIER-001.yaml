@@ -1,0 +1,58 @@
+schema_version: '0.2'
+id: LAN-HIER-001
+class: LAN-HIER
+name:
+  en: Hierarchical linguistic structure tracking
+  zh: 语言层级结构频率标记
+aliases:
+- Ding paradigm
+- frequency-tagging of linguistic structure
+- hierarchical linguistic tracking
+family: language
+bci_category:
+- none
+recording_modality:
+- MEG
+- EEG
+- ECoG
+stimulus_modality:
+- auditory
+markers:
+- MK.linguistic_structure_tracking
+description:
+  en: Isochronous sequences of syllables are presented in which syllables combine into phrases and sentences that carry no
+    acoustic cue to their boundaries; control sequences use random syllables or an unknown language. Cortical responses show
+    spectral peaks not only at the syllable rate but also at the phrase and sentence rates, which appear only when listeners
+    can parse the linguistic structure.
+  zh: 呈现等时的音节序列，音节组合成短语和句子，但边界处没有任何声学线索；对照序列使用随机音节或被试不懂的语言。皮层响应不仅在音节频率处出现谱峰，还在短语与句子频率处出现谱峰，且只有当听者能够解析语言结构时才出现。
+trial_structure:
+  conditions:
+  - structured (sentences)
+  - random syllables
+  - unknown language
+protocol:
+  n_classes: 2
+  classes:
+  - structured syllable sequence
+  - random syllable sequence
+  cue: isochronous synthesised syllable sequences
+  stimulus_coding: frequency tagging of syllable, phrase and sentence rates
+  paradigm_timing: continuous
+  feedback: none
+  distinguishing: 标准配置（最早发表）：等时音节序列，频率标记音节/短语/句子速率（Ding et al. 2016, R1161）。本类只有这一配置。
+first_source:
+  citation: Ding N, Melloni L, Zhang H, Tian X, Poeppel D. Cortical tracking of hierarchical linguistic structures in connected
+    speech. Nature Neuroscience. 2016;19(1):158-164.
+  doi: 10.1038/nn.4186
+  year: 2016
+  verified: false
+interop:
+  bids_task: hierlinguistic
+notes: 'Leads: R0216, R0321, R0381, R0419, DN08 (R#### = curation/literature.csv; DN## = curation/work/pkg_D/new_leads.csv).
+  The four leads in curation/paradigm_literature.csv (R0216, R0321, R0381, R0419) are speech-perception/MMN papers from a
+  Wikipedia page and do not describe this paradigm; Ding et al. (2016) located via search. Leads should be reassigned. Sprint
+  2 (D-057, curator_d, 2026-10-03): protocol block added (-001 = earliest/standard configuration). bibliography corrected
+  (Crossref, 2026-10-05)'
+status: draft
+contributors:
+- curator_d

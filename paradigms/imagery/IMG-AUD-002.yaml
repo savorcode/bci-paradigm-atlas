@@ -1,0 +1,55 @@
+schema_version: '0.2'
+id: IMG-AUD-002
+class: IMG-AUD
+name:
+  en: Familiar-tune continuation imagery
+  zh: 熟悉曲调续想
+aliases:
+- musical imagery
+- imagery for familiar melodies
+- tune continuation
+family: imagery
+bci_category:
+- none
+recording_modality:
+- PET
+- fMRI
+- EEG
+stimulus_modality:
+- auditory
+- mental_imagery
+markers:
+- MK.BOLD_auditory_cortex
+description:
+  en: >-
+    Participants hear the first notes of a familiar instrumental tune and then continue the tune in imagery, compared with
+    hearing the notes without continuing them. Imagery of the melody activates right-lateralised secondary auditory cortex
+    together with frontal and supplementary motor areas.
+  zh: 被试听到一首熟悉的器乐曲调的前几个音，随后在想象中继续这段曲调，与只听而不续想的条件比较。对旋律的想象激活偏右侧的次级听皮层以及额叶和辅助运动区。
+protocol:
+  n_classes: 2
+  classes:
+  - tune continuation in imagery
+  - listening control
+  cue: first notes of a familiar tune (auditory)
+  paradigm_timing: block
+  feedback: none
+  distinguishing: >-
+    Criteria 1 and 2 vs IMG-AUD-001: an auditory cue (opening notes) followed by continuation of the melody instead of visually
+    presented lyrics with a pitch judgement.
+first_source:
+  citation: >-
+    Halpern AR, Zatorre RJ. When that tune runs through your head: a PET investigation of auditory imagery for familiar melodies.
+    Cerebral Cortex. 1999;9(7):697-704.
+  doi: 10.1093/cercor/9.7.697
+  year: 1999
+  verified: false
+interop:
+  bids_task: auditoryimagery
+notes: >-
+  Leads: R0186 (first_source), R0316, R0549. Converted from the IMG-AUD-001 variant 'Musical imagery' (D-006, merged candidate
+  IMG-MUS-001, ID stays void). Task description from the existing file text and the title; check the control condition against
+  the original. bibliography corrected (Crossref, 2026-10-05)
+status: draft
+contributors:
+- curator_b

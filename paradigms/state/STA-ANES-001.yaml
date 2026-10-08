@@ -1,0 +1,56 @@
+schema_version: '0.2'
+id: STA-ANES-001
+class: STA-ANES
+name:
+  en: Anesthesia and level of consciousness
+  zh: 麻醉与意识水平
+aliases:
+- depth of anesthesia monitoring
+- loss/return of consciousness
+- propofol induction
+family: state
+bci_category:
+- passive
+recording_modality:
+- EEG
+stimulus_modality:
+- pharmacological
+markers:
+- MK.slow_wave
+- MK.frontal_alpha_anesthesia
+description:
+  en: EEG is recorded while an anaesthetic such as propofol is administered and withdrawn, often with periodic auditory or
+    verbal probes to determine loss and return of responsiveness. Unconsciousness is accompanied by large slow waves and by
+    anteriorization of alpha power toward frontal sites.
+  zh: 在给予与撤除麻醉药（如丙泊酚）的过程中记录脑电，常以周期性的听觉或言语探测确定反应性的丧失与恢复。意识丧失伴随大幅慢波以及 α 功率向额区前移。
+protocol:
+  n_classes: 3
+  classes:
+  - responsive (awake)
+  - loss of responsiveness
+  - return of responsiveness
+  cue: anaesthetic administration with periodic auditory or verbal responsiveness probes
+  paradigm_timing: continuous
+  feedback: none
+  distinguishing: 'Standard configuration (earliest published or canonical; D-057 -001): anaesthetic induction and emergence
+    with responsiveness probes; origin of the experimental protocol TBD (first_source is the bispectral analysis method, R0111).'
+first_source:
+  citation: Sigl JC, Chamoun NG. An introduction to bispectral analysis for the electroencephalogram. Journal of Clinical
+    Monitoring. 1994;10(6):392-404.
+  doi: 10.1007/bf01618421
+  pmid: '7836975'
+  year: 1994
+  verified: false
+interop:
+  bids_task: anesthesia
+notes: 'Lead refs (curation/literature.csv): R0111 [first_source_candidate], R0141 [other], R0395 [other], R0487 [other],
+  R0760 [review], R0812 [other]. R0111 introduced bispectral analysis (BIS monitoring), not the experimental induction protocol;
+  Purdon et al. 2013 is a memory-only lead. Stimulus modality ''cognitive_task'' stands for the responsiveness probes; a drug-administration
+  modality does not exist in the taxonomy (to maintainer). First-pass skeleton (curator_e, 2026-10-03); all sources unverified.
+  D-044 (maintainer, 2026-10-03): stimulus_modality changed from cognitive_task to the draft term pharmacological. Sprint
+  2 (curator_e, 2026-10-03): protocol block added per D-057; see curation/work/pkg_E/sprint2/split_log.csv. Sprint 3 (curator_d,
+  2026-10-05): bibliography corrected (OpenAlex, 2026-10-05): volume, issue, pages added.'
+status: draft
+contributors:
+- curator_e
+- maintainer

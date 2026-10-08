@@ -1,0 +1,88 @@
+schema_version: '0.2'
+id: SSR-SSVEP-005
+class: SSR-SSVEP
+name:
+  en: Joint frequency-phase modulated 40-target SSVEP speller
+  zh: 联合频率–相位调制 40 目标 SSVEP 拼写器
+aliases:
+- JFPM SSVEP speller
+- Tsinghua 40-target speller
+- JFPM
+- 12-class JFPM SSVEP
+family: steady_state
+bci_category:
+- reactive
+recording_modality:
+- EEG
+stimulus_modality:
+- visual
+markers:
+- MK.SSVEP
+description:
+  en: Forty characters of a virtual keyboard flicker simultaneously; each is tagged by a unique combination of frequency (8-15.8
+    Hz in 0.2 Hz steps in the benchmark dataset) and phase. A visual cue precedes a short flicker period, and the attended
+    character is identified with template-based spatial filtering and shown as feedback in online spelling.
+  zh: 虚拟键盘的 40 个字符同时闪烁，每个字符由唯一的频率（基准数据集中为 8–15.8 Hz，间隔 0.2 Hz）与相位组合标记。视觉提示后进入短暂闪烁期，用基于模板的空间滤波识别被注视的字符，在线拼写时显示为反馈。
+trial_structure:
+  phases:
+  - name: cue
+    duration_ms: 500
+  - name: flicker
+    duration_ms: 5000
+    note: benchmark dataset; 0.5 s in the online speller
+  - name: blank
+    duration_ms: 500
+  conditions:
+  - 40 characters (standard configuration; target count is a parameter, D-058)
+protocol:
+  classes:
+  - 40 characters (letters, digits, symbols)
+  cue: virtual keyboard of 40 simultaneously flickering characters
+  stimulus_coding: joint frequency-phase modulation (JFPM)
+  paradigm_timing: synchronous
+  feedback: discrete
+  distinguishing: 准则 2（编码方案）：联合频率–相位编码，取代 -002 的纯频率编码。目标个数（标准配置 40 字符；12 目标布局见 variants）为同质目标的参数，不构成准则 1（D-058）。
+first_source:
+  citation: Chen X, Wang Y, Nakanishi M, Gao X, Jung T-P, Gao S. High-speed spelling with a noninvasive brain-computer interface.
+    Proc Natl Acad Sci U S A. 2015;112(44):E6058-E6067.
+  doi: 10.1073/pnas.1508080112
+  year: 2015
+  verified: false
+datasets:
+- name: Tsinghua SSVEP benchmark dataset (Wang et al. 2016)
+  url: https://moabb.neurotechx.com/docs/generated/moabb.datasets.Wang2016.html
+  identifier: Wang2016
+  subjects: 34
+- name: 'BETA: A Large Benchmark Database Toward SSVEP-BCI Application'
+- name: Tsinghua 40-target SSVEP Benchmark (TorchEEG TSUBenckmarkDataset loader)
+- name: Nakanishi 2015 12-class SSVEP dataset (12-target JFPM variant)
+  url: https://moabb.neurotechx.com/docs/generated/moabb.datasets.Nakanishi2015.html
+  identifier: Nakanishi2015
+  subjects: 9
+variants:
+- name: 12-target JFPM layout (Nakanishi et al. 2015)
+  source:
+    citation: Nakanishi M, Wang Y, Wang Y-T, Jung T-P. A comparison study of canonical correlation analysis based methods
+      for detecting steady-state visual evoked potentials. PLoS One. 2015;10(10):e0140703.
+    doi: 10.1371/journal.pone.0140703
+    year: 2015
+    verified: false
+  note: Twelve targets arranged like a numeric keypad, 9.25-14.75 Hz in 0.5 Hz steps with different phases, 4 s stimulation
+    window, offline recordings (MOABB Nakanishi2015, 9 subjects). Same JFPM coding and synchronous structure; homogeneous
+    target count is a parameter (D-058). Formerly SSR-SSVEP-006 (deprecated 2026-10-05). [curator_e sprint 3, 2026-10-05]
+    bibliography confirmed (OpenAlex, 2026-10-05).
+interop:
+  bids_task: ssvep
+notes: 'Leads: WebSearch S2A14 [=R1274]; news page S2A17 (kurzweilai) quotes the paper: "joint frequency-phase modulation
+  method to tag 40 characters with 0.5-s-long flickering signals", about 60 characters per minute; authors not shown on the
+  page (Chen et al. per search results, unverified); PMC4640776 refused (reCAPTCHA, S2A15, not retried). Dataset Wang2016:
+  MOABB page S2A04 [=R1266] gives 40 targets, 8-15.8 Hz in 0.2 Hz steps, 0.5 s cue, 5 s flicker, 0.5 s blank, 34 subjects;
+  it does not state the phase values (JFPM assignment of the benchmark to be checked against the paper). BETA and TorchEEG
+  entries moved from SSR-SSVEP-001. Lead R0867 (speller review). D-058 (maintainer, 2026-10-05): SSR-SSVEP-006 (12-target
+  JFPM, R1267) merged here as a parameter-level variant with its dataset; target count is not a numbering criterion for homogeneous
+  target sets. [curator_e sprint 3, 2026-10-05] bibliography corrected (OpenAlex, 2026-10-05). [maintainer sprint 3, 2026-10-07,
+  D-073] origin candidate recalled, record confirmed via OpenAlex.'
+status: draft
+contributors:
+- curator_a
+- curator_e

@@ -1,0 +1,52 @@
+schema_version: '0.2'
+id: PER-SPN-001
+class: PER-SPN
+name:
+  en: Visual symmetry perception
+  zh: 视觉对称知觉
+aliases:
+- symmetry perception
+- sustained posterior negativity paradigm
+- SPN
+family: perception
+bci_category:
+- none
+recording_modality:
+- EEG
+stimulus_modality:
+- visual
+markers:
+- MK.SPN
+description:
+  en: Symmetrical and random dot or polygon patterns are presented for about one second or longer. Symmetrical patterns produce
+    a sustained posterior negativity relative to random patterns, starting at roughly 250 ms, whose amplitude scales with
+    the proportion of symmetry.
+  zh: 呈现对称与随机的点阵或多边形图案，持续约 1 秒或更长。相对于随机图案，对称图案在约 250 ms 起产生持续性后部负波（SPN），其波幅随对称程度增加而增大。
+protocol:
+  n_classes: 2
+  classes:
+  - symmetrical pattern
+  - random pattern
+  cue: symmetrical vs random dot or polygon patterns, about 1 s or longer
+  paradigm_timing: synchronous
+  feedback: none
+  distinguishing: 标准配置（最早发表，即 first_source）：对称与随机点阵/多边形图案对比。本类暂无其他具体范式（no sibling protocol yet）。
+first_source:
+  citation: Damen EJP, Brunia CHM. Changes in heart rate and slow brain potentials related to motor preparation and stimulus
+    anticipation in a time estimation task. Psychophysiology. 1987;24(6):700-713.
+  doi: 10.1111/j.1469-8986.1987.tb00353.x
+  year: 1987
+  verified: false
+interop:
+  bids_task: symmetry
+notes: 'Leads used: search SA14a. first_source: no origin source identified in this pass (blocker, see curation/work/pkg_A/status.csv).
+  New candidate proposed by package A on 2026-10-03 (curation/work/pkg_A/new_candidates.csv); registered in curation/candidates.csv
+  as C216 (D-053, milestone M1). Requested marker MK.SPN. [curator_a sprint 2, 2026-10-03] D-057: protocol block added for the canonical
+  configuration; no other concrete paradigm identified for this class in sprint 2. [curator_e sprint 3, 2026-10-05] candidate
+  origin found by bibliographic search (OpenAlex, 2026-10-05); content unverified. [maintainer sprint 3, 2026-10-07] bibliography
+  confirmed (OpenAlex, 2026-10-05; origin candidate, content unverified). [maintainer sprint 3, 2026-10-07, D-073] origin
+  candidate recalled, record confirmed via OpenAlex.'
+status: draft
+contributors:
+- curator_a
+- curator_e

@@ -1,0 +1,27 @@
+schema_version: "0.2"
+id: MK.DMN_connectivity
+name:
+  en: Default mode network connectivity
+  zh: 默认模式网络连接
+aliases:
+- DMN functional connectivity
+- default network
+type: connectivity
+recording_modality:
+- fMRI
+- EEG
+- MEG
+signature:
+  frequency_hz: < 0.1 (BOLD fluctuations)
+  topography: posterior cingulate / precuneus, medial prefrontal cortex, lateral parietal (angular gyrus) and medial temporal
+    regions
+description:
+  en: Correlated spontaneous activity among the regions of the default mode network, measured at rest or during tasks. Connectivity
+    and activity in this network are higher during rest and internally directed thought than during demanding external tasks.
+  zh: 默认模式网络各脑区之间相关的自发活动，可在静息或任务中测量。在静息和内向思维时，该网络的连接与活动高于执行高要求外部任务时。
+notes: Signature values are textbook-level characteristics entered in the first pass and await source checking. EEG/MEG measures
+  are source-space or band-limited envelope connectivity.
+status: draft
+contributors:
+- maintainer
+- curator_e

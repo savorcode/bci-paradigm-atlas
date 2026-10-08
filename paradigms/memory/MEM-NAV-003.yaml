@@ -1,0 +1,57 @@
+schema_version: '0.2'
+id: MEM-NAV-003
+class: MEM-NAV
+name:
+  en: Virtual Morris water maze
+  zh: 虚拟 Morris 水迷宫
+aliases:
+- virtual Morris water task
+- vMWM
+- virtual water maze
+family: memory
+bci_category:
+- none
+recording_modality:
+- fMRI
+- sEEG
+stimulus_modality:
+- visual
+markers:
+- MK.BOLD_hippocampus
+- MK.hippocampal_theta
+description:
+  en: Participants navigate a virtual circular pool surrounded by distal cues to find a hidden platform from varying start
+    positions across trials, followed by a probe trial without the platform in which time spent in the target quadrant measures
+    place memory. Place learning in the virtual water maze is associated with hippocampal activity and theta oscillations.
+  zh: 被试在四周有远端线索的虚拟圆形水池中，从不同起点出发寻找隐藏平台；之后进行无平台的探测试次，以在目标象限停留的时间衡量地点记忆。虚拟水迷宫中的地点学习与海马活动和 θ 振荡相关。
+trial_structure:
+  conditions:
+  - hidden-platform trials
+  - probe trial (no platform)
+  - visible-platform control
+protocol:
+  n_classes: 3
+  classes:
+  - hidden platform
+  - probe (no platform)
+  - visible platform (control)
+  cue: virtual circular arena with distal room cues
+  paradigm_timing: synchronous
+  feedback: discrete
+  distinguishing: 准则 1;2：单一隐藏目标的开放场寻找（MEM-NAV-001 为城镇路线），含探测试次与可见平台控制；到达平台为离散反馈（准则 4）。
+first_source:
+  citation: Astur RS, Ortiz ML, Sutherland RJ. A characterization of performance by men and women in a virtual Morris water
+    task. Behavioural Brain Research. 1998;93(1-2):185-190.
+  doi: 10.1016/s0166-4328(98)00019-9
+  year: 1998
+  verified: false
+notes: 'Split out of the MEM-NAV-001 description. Leads: R0289 (Astur et al. 2004, virtual Morris water task and radial arm
+  maze), R0393, R0065 (animal origin, D-031 §2). Marker assignment follows the class description; task-specific neural leads
+  still to be collected. (R#### = curation/literature.csv; DN## = curation/work/pkg_D/new_leads.csv.) Numbering criterion
+  (D-057): 1;2;4. first_source TBD resolved by bibliographic search (Crossref, 2026-10-05; curator_c): candidate origin found
+  by bibliographic search; content unverified. Previous entry: "TBD: origin of the virtual Morris water task not retrieved
+  (search S2-06 gave no bibliographic record); animal origin Morris 1984 (R0065)" [maintainer sprint 3, 2026-10-07] bibliography
+  confirmed (Crossref, 2026-10-05; origin candidate, content unverified).'
+status: draft
+contributors:
+- curator_d

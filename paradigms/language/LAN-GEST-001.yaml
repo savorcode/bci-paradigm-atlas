@@ -1,0 +1,57 @@
+schema_version: '0.2'
+id: LAN-GEST-001
+class: LAN-GEST
+name:
+  en: Speech-gesture integration
+  zh: 言语—手势整合
+aliases:
+- co-speech gesture
+- iconic gesture comprehension
+- gesture-speech mismatch
+family: language
+bci_category:
+- none
+recording_modality:
+- EEG
+stimulus_modality:
+- visual
+- auditory
+markers:
+- MK.N400
+description:
+  en: Participants watch videos of a speaker producing words or sentences accompanied by iconic hand gestures that either
+    match or mismatch the speech, sometimes with varied timing between gesture and speech. Gestures that are semantically
+    incongruent with the accompanying speech elicit a larger N400 than congruent gestures, indicating integration of gestural
+    and verbal meaning.
+  zh: 被试观看说话者的视频，说话时伴随的形象手势与言语内容一致或不一致，有时还改变手势与言语的时间关系。与一致手势相比，与言语语义不一致的手势诱发更大的 N400，表明手势意义与言语意义发生了整合。
+trial_structure:
+  conditions:
+  - congruent
+  - incongruent
+  - gesture-speech asynchrony (parameter)
+protocol:
+  n_classes: 2
+  classes:
+  - gesture congruent with speech
+  - gesture incongruent with speech
+  cue: videos of a speaker producing speech with iconic hand gestures
+  paradigm_timing: synchronous
+  feedback: none
+  distinguishing: 标准配置（最早发表）：言语—手势一致 vs 不一致视频（源头 TBD）。本类目前只有这一配置；手势—言语时间偏移为参数。
+first_source:
+  citation: Kelly SD, Kravitz C, Hopkins M. Neural correlates of bimodal speech and gesture comprehension. Brain and Language.
+    2003;89(1):253-260.
+  doi: 10.1016/s0093-934x(03)00335-3
+  year: 2003
+  verified: false
+interop:
+  bids_task: gesture
+notes: 'Leads: DN35, DN36 (R#### = curation/literature.csv; DN## = curation/work/pkg_D/new_leads.csv). New candidate (curator_d).
+  Origin not retrieved (first_source TBD). Leads: DN35, DN36. first_source blocked: see curation/work/pkg_D/status.csv. Sprint
+  2 (D-057, curator_d, 2026-10-03): protocol block added (-001 = earliest/standard configuration). first_source TBD resolved
+  by bibliographic search (OpenAlex, 2026-10-05; curator_c): candidate origin found by bibliographic search; content unverified.
+  Previous entry: "TBD: no origin source identified yet (see curation/work/pkg_D/status.csv)" [maintainer sprint 3, 2026-10-07]
+  bibliography confirmed (OpenAlex, 2026-10-05; origin candidate, content unverified).'
+status: draft
+contributors:
+- curator_d

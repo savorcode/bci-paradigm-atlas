@@ -1,0 +1,22 @@
+schema_version: "0.2"
+id: MK.BOLD_pSTS
+name:
+  en: Posterior superior temporal sulcus BOLD
+  zh: 后颞上沟 BOLD
+aliases:
+- pSTS activation
+- STS biological motion response
+type: hemodynamic
+recording_modality:
+- fMRI
+signature:
+  topography: posterior superior temporal sulcus, often right-lateralized
+description:
+  en: Task-evoked BOLD signal change in the posterior superior temporal sulcus. It increases to biological motion, gaze shifts
+    and other socially relevant movements compared with scrambled or non-biological controls.
+  zh: 后颞上沟的任务诱发 BOLD 信号变化。与打乱或非生物运动的对照相比，对生物运动、目光转移及其他具有社会意义的动作响应更强。
+notes: Signature values are textbook-level characteristics entered in the first pass and await source checking.
+status: draft
+contributors:
+- maintainer
+- curator_e

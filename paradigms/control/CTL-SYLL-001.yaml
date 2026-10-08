@@ -1,0 +1,52 @@
+schema_version: '0.2'
+id: CTL-SYLL-001
+class: CTL-SYLL
+name:
+  en: Syllogistic (deductive) reasoning
+  zh: 三段论推理
+aliases:
+- Syllogism task
+- Deductive reasoning task
+- Belief-bias syllogisms
+family: control
+bci_category:
+- none
+recording_modality:
+- fMRI
+stimulus_modality:
+- visual
+markers:
+- MK.BOLD_frontoparietal
+description:
+  en: Participants evaluate whether the conclusion of a syllogism or other deductive argument follows logically from its premises,
+    with content that is concrete, abstract or belief-laden. Deductive inference engages a distributed left-lateralised frontal
+    and parietal network, including rostral prefrontal cortex.
+  zh: 被试判断三段论或其他演绎论证的结论是否在逻辑上由前提推出，论证内容可为具体、抽象或与信念相关。演绎推理激活分布式、偏左侧的额叶与顶叶网络，包括喙部前额叶。
+trial_structure:
+  conditions:
+  - valid
+  - invalid
+protocol:
+  n_classes: 2
+  classes:
+  - valid conclusion
+  - invalid conclusion
+  cue: visually presented syllogisms with concrete, abstract or belief-laden content
+  paradigm_timing: synchronous
+  distinguishing: 标准配置（最早发表线索）：判断三段论结论是否有效，内容具体/抽象/与信念相关（Goel et al. 2000，R1153）；内容类型是条件水平，不另给号。
+first_source:
+  citation: Goel V, Buchel C, Frith C, Dolan RJ. Dissociation of Mechanisms Underlying Syllogistic Reasoning. NeuroImage.
+    2000;12(5):504-514.
+  doi: 10.1006/nimg.2000.0636
+  year: 2000
+  verified: false
+interop:
+  bids_task: syllogism
+notes: 'Leads used: S_GOEL2000 (search: https://montilab.psych.ucla.edu/wp-content/uploads/sites/49/2015/11/Monti_etal_07_Deductive_Inference_NeuroImage_withAppendix.pdf);
+  S_MONTI2007 (search: https://montilab.psych.ucla.edu/wp-content/uploads/sites/49/2015/11/Monti_etal_07_Deductive_Inference_NeuroImage_withAppendix.pdf).
+  first_source lead: S_GOEL2000. First-source lead seen as an entry in the reference list of S_MONTI2007, not on its own page.
+  Pass 1 skeleton (curator_c, 2026-10-03); all sources unverified. Sprint 2 (D-057): protocol added; single configuration,
+  no split. bibliography corrected (Crossref, 2026-10-05)'
+status: draft
+contributors:
+- curator_c

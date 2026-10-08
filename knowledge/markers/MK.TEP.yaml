@@ -1,0 +1,11 @@
+schema_version: "0.2"
+id: MK.TEP
+name: {en: TMS-evoked potential, zh: TMS 诱发电位}
+aliases: [TEP, TMS-evoked EEG response]
+type: erp_component
+recording_modality: [EEG]
+signature: {latency_ms: 'sequence of peaks over ~0-300 (e.g. N15, P30, N45, P60, N100, P180 for motor cortex)', topography: 'maximal near the stimulated site, then spreading'}
+description: {en: 'EEG response time-locked to a single TMS pulse, consisting of a sequence of positive and negative deflections that start near the stimulated site and spread to connected regions. Its amplitude and spread index cortical reactivity and effective connectivity.', zh: 与单个 TMS 脉冲锁时的脑电响应，由一系列正、负波组成，起始于受刺激部位附近并扩散到相连区域。其幅度与扩散反映皮层反应性与有效连接。}
+notes: Signature values are textbook-level characteristics and await source checking (first pass, curator_b). Must be separated from auditory and somatosensory responses to the TMS click and scalp sensation. Generators and indexes to be added in the second pass.
+status: draft
+contributors: [maintainer, curator_b]

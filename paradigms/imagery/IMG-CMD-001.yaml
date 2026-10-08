@@ -1,0 +1,66 @@
+schema_version: '0.2'
+id: IMG-CMD-001
+class: IMG-CMD
+name:
+  en: Command-following imagery
+  zh: 指令跟随想象（意识评估）
+aliases:
+- mental imagery command-following
+- active paradigm for DoC
+- covert consciousness detection
+- cognitive motor dissociation assessment
+- tennis/navigation imagery
+- spatial navigation imagery
+- house navigation imagery
+family: imagery
+bci_category:
+- active
+recording_modality:
+- fMRI
+- EEG
+- fNIRS
+stimulus_modality:
+- auditory
+- mental_imagery
+markers:
+- MK.BOLD_motor_network
+- MK.BOLD_parahippocampal
+- MK.SMR_ERD
+description:
+  en: >-
+    Patients with disorders of consciousness (and healthy controls) are verbally instructed to alternate between rest and
+    imagining playing tennis or walking through the rooms of their home, in fMRI blocks. Reliable task-locked activation of
+    the supplementary motor area (tennis) or of parahippocampal and parietal navigation regions (house) is taken as evidence
+    of covert command following.
+  zh: 意识障碍患者（及健康对照）在功能磁共振扫描中按口头指令，在休息与想象打网球或想象在家中各房间走动之间交替。辅助运动区（网球）或海马旁回与顶叶导航区（房屋）可靠的任务锁时激活，被视为隐蔽指令跟随的证据。
+protocol:
+  n_classes: 3
+  classes:
+  - motor imagery (playing tennis)
+  - spatial imagery (navigating one's home)
+  - rest
+  cue: spoken instruction
+  paradigm_timing: block
+  feedback: none
+  distinguishing: >-
+    Standard configuration (earliest published) / 标准配置（最早发表）: fMRI blocks of tennis imagery and house-navigation imagery alternating
+    with rest, instructed verbally (Owen et al. 2006). Siblings: -002 bedside EEG motor-imagery trials (criteria 1, 2, 3),
+    -003 yes/no communication by imagery type (criterion 1).
+first_source:
+  citation: >-
+    Owen AM, Coleman MR, Boly M, Davis MH, Laureys S, Pickard JD. Detecting awareness in the vegetative state. Science. 2006;313(5792):1402.
+  doi: 10.1126/science.1130197
+  pmid: '16959998'
+  year: 2006
+  verified: false
+interop:
+  bids_task: commandfollowing
+notes: >-
+  Leads: R0858, R0870, R0874, R0893, R0938. Memory leads (unverified): Owen et al. 2006 Science for R0893; Claassen 2019 NEJM;
+  Bodien 2024 NEJM. R0874 PMID looks implausibly high (42538749); check. Sprint 2 (D-057): the spatial-navigation variant
+  (D-008) is part of this configuration's class set and was removed from variants; navigation imagery used alone (fMRI/fNIRS)
+  is proposed in split_log (no checked lead). Bedside EEG (R0858) moved to IMG-CMD-002; yes/no communication (Monti et al.
+  2010) is IMG-CMD-003. Exact block durations of the first source not yet checked. bibliography corrected (OpenAlex, 2026-10-05)
+status: draft
+contributors:
+- curator_b

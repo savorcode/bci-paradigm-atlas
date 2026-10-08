@@ -1,0 +1,54 @@
+schema_version: '0.2'
+id: PER-AEP-001
+class: PER-AEP
+name:
+  en: Auditory evoked potentials (N1-P2)
+  zh: 听觉诱发电位（纯音/短声）
+aliases:
+- N1-P2 complex
+- N1m
+- cortical auditory evoked potential (CAEP)
+- long-latency AEP
+family: perception
+bci_category:
+- none
+recording_modality:
+- EEG
+- MEG
+stimulus_modality:
+- auditory
+markers:
+- MK.N1_auditory
+- MK.P2_auditory
+description:
+  en: Pure tones or clicks are presented passively with inter-stimulus intervals of about one second or longer. Each sound
+    evokes the obligatory long-latency N1-P2 complex over fronto-central sites, whose amplitude depends on stimulus intensity,
+    rise time and inter-stimulus interval.
+  zh: 被动呈现纯音或短声，刺激间隔约 1 秒或更长。每个声音在额中央区诱发必然出现的长潜伏期 N1–P2 复合波，其波幅随刺激强度、上升时间和刺激间隔变化。
+protocol:
+  n_classes: 1
+  classes:
+  - tone or click onset
+  cue: pure tones or clicks presented passively, ISI about 1 s or longer
+  stimulus_coding: ISI、强度、上升时间为参数；D-041 待例会。本类暂无其他具体范式（no sibling protocol yet）。
+  paradigm_timing: synchronous
+  feedback: none
+  distinguishing: 标准配置（最早发表，即 first_source）：被动聆听纯音/短声，ISI ≥ 1 s，测 N1–P2。本类暂无其他具体范式（no sibling protocol yet）。
+first_source:
+  citation: Davis PA. Effects of acoustic stimuli on the waking human brain. J Neurophysiol. 1939;2(6):494-499.
+  doi: 10.1152/jn.1939.2.6.494
+  year: 1939
+  verified: false
+interop:
+  bids_task: aep
+notes: 'Leads used: R1055, R0999. first_source: no origin source identified in this pass (blocker, see curation/work/pkg_A/status.csv).
+  Both leads point to the Naatanen & Picton (1987) N1 review, which is not an origin paper. Task-sheet model-memory hint (unverified):
+  1939 vertex-potential reports. [curator_a sprint 2, 2026-10-03] D-057: protocol block added for the canonical configuration;
+  no other concrete paradigm identified for this class in sprint 2. [curator_e sprint 3, 2026-10-05] candidate origin found
+  by bibliographic search (OpenAlex, 2026-10-05); content unverified. [maintainer sprint 3, 2026-10-07] bibliography confirmed
+  (OpenAlex, 2026-10-05; origin candidate, content unverified). [maintainer sprint 3, 2026-10-07, D-073] origin candidate
+  recalled, record confirmed via OpenAlex.'
+status: draft
+contributors:
+- curator_a
+- curator_e

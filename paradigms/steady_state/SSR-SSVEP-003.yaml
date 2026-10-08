@@ -1,0 +1,50 @@
+schema_version: '0.2'
+id: SSR-SSVEP-003
+class: SSR-SSVEP
+name:
+  en: Photic driving (clinical intermittent photic stimulation)
+  zh: 光驱动（临床间断闪光刺激）
+aliases:
+- intermittent photic stimulation (IPS)
+- photic driving
+- photic stimulation
+family: steady_state
+bci_category:
+- none
+recording_modality:
+- EEG
+stimulus_modality:
+- visual
+markers:
+- MK.SSVEP
+description:
+  en: During a clinical EEG, a stroboscopic lamp in front of the patient delivers trains of flashes at a series of fixed frequencies,
+    with the eyes open and closed. Driving of the occipital rhythm at the flash frequency and its harmonics is noted, and
+    photoparoxysmal responses are screened for.
+  zh: 临床脑电检查中，置于患者前方的频闪灯以一系列固定频率给出闪光串，分别在睁眼和闭眼时进行。记录枕区节律在闪光频率及其谐波上的驱动，并筛查光阵发性反应。
+trial_structure:
+  conditions:
+  - flash train at each frequency of a stepped series
+  - eyes open
+  - eyes closed
+protocol:
+  classes:
+  - stepped series of flash frequencies
+  - eyes open / eyes closed
+  cue: stroboscopic flash trains in a fixed sequence of frequencies
+  stimulus_coding: stepped flash frequency series
+  paradigm_timing: block
+  feedback: none
+  distinguishing: 准则 1;3：按频率阶梯的闪光串组块（睁/闭眼）构成条件集，组块式呈现，用于临床判读；-001 为单一调制光的研究性记录。
+first_source:
+  citation: guidelines for visual sensitive eeg testing. Canadian Journal of Neurological Sciences.
+  verified: false
+interop:
+  bids_task: ssvep
+notes: 'Former variant of SSR-SSVEP-001 (merged candidate SSR-PD-001, D-002), split under D-057. Leads: R1090 (= first_source,
+  guideline on visual-sensitivity EEG testing; authors and year not in the lead), R0954 (BSCN audit of hyperventilation and
+  photic stimulation). Clinical photic driving predates Regan (1966); the class origin should be reviewed (see class_updates
+  notes).'
+status: draft
+contributors:
+- curator_a

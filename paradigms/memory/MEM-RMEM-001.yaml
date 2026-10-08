@@ -1,0 +1,56 @@
+schema_version: '0.2'
+id: MEM-RMEM-001
+class: MEM-RMEM
+name:
+  en: Reward-motivated memory encoding
+  zh: 奖赏驱动的记忆编码
+aliases:
+- reward-motivated memory
+- high/low reward encoding
+- value-directed remembering
+family: memory
+bci_category:
+- none
+recording_modality:
+- fMRI
+stimulus_modality:
+- visual
+markers:
+- MK.BOLD_striatum_reward
+- MK.BOLD_hippocampus
+description:
+  en: Before each item is studied, a cue signals whether successfully remembering it will earn a high or a low reward; memory
+    is tested later, often after a delay. High-reward cues increase activity in the mesolimbic reward system, and anticipatory
+    reward-related activity together with hippocampal activity predicts better subsequent memory.
+  zh: 每个项目学习前，线索提示成功记住该项目将获得高奖赏或低奖赏，之后（常在延迟后）测试记忆。高奖赏线索提高中脑边缘奖赏系统的活动，预期性的奖赏相关活动与海马活动共同预测更好的后续记忆。
+trial_structure:
+  conditions:
+  - high reward
+  - low reward
+protocol:
+  n_classes: 2
+  classes:
+  - high-reward cue
+  - low-reward cue
+  cue: reward-value cue preceding each study item
+  paradigm_timing: synchronous
+  feedback: none
+  distinguishing: 标准配置（最早发表）：每个学习项目前给出高/低奖赏提示，之后测试记忆（源头 TBD）。本类只有这一配置。
+first_source:
+  citation: 'Adcock RA, Thangavel A, Whitfield-Gabrieli S, Knutson B, Gabrieli JDE. Reward-Motivated Learning: Mesolimbic
+    Activation Precedes Memory Formation. Neuron. 2006;50(3):507-517.'
+  doi: 10.1016/j.neuron.2006.03.036
+  year: 2006
+  verified: false
+interop:
+  bids_task: rewardmemory
+notes: 'Leads: DN20, DN21 (R#### = curation/literature.csv; DN## = curation/work/pkg_D/new_leads.csv). New candidate (curator_d).
+  Origin paper not retrieved (commonly attributed to Adcock and colleagues, 2006 - not verified); first_source TBD. Leads:
+  DN20, DN21. first_source blocked: see curation/work/pkg_D/status.csv. Sprint 2 (D-057, curator_d, 2026-10-03): protocol
+  block added (-001 = earliest/standard configuration). first_source TBD resolved by bibliographic search (OpenAlex, 2026-10-05;
+  curator_c): candidate origin found by bibliographic search; content unverified. Previous entry: "TBD: no origin source identified
+  yet (see curation/work/pkg_D/status.csv)" [maintainer sprint 3, 2026-10-07] bibliography confirmed (OpenAlex, 2026-10-05;
+  origin candidate, content unverified).'
+status: draft
+contributors:
+- curator_d

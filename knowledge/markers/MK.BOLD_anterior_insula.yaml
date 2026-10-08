@@ -1,0 +1,22 @@
+schema_version: "0.2"
+id: MK.BOLD_anterior_insula
+name:
+  en: Anterior insula BOLD
+  zh: 前岛叶 BOLD
+aliases:
+- AI activation
+- anterior insular cortex BOLD
+type: hemodynamic
+recording_modality:
+- fMRI
+signature:
+  topography: anterior insular cortex, frequently co-activated with dorsal anterior cingulate
+description:
+  en: Task-evoked BOLD signal change in the anterior insular cortex. It increases when participants observe others in pain,
+    receive unfair offers and anticipate aversive events.
+  zh: 前岛叶皮层的任务诱发 BOLD 信号变化。在观察他人疼痛、收到不公平提议以及预期厌恶事件时增强。
+notes: Signature values are textbook-level characteristics entered in the first pass and await source checking.
+status: draft
+contributors:
+- maintainer
+- curator_e

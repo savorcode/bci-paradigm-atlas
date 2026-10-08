@@ -1,0 +1,54 @@
+schema_version: '0.2'
+id: SOC-IAT-001
+class: SOC-IAT
+name:
+  en: Implicit association test
+  zh: 内隐联想测验
+aliases:
+- IAT
+- Implicit Association
+- Implicit Association Test
+family: social
+bci_category:
+- none
+recording_modality:
+- EEG
+- fMRI
+stimulus_modality:
+- visual
+markers:
+- MK.N400
+- MK.LPP
+description:
+  en: Participants sort words or pictures from two concept categories and two attribute categories using two response keys,
+    in blocks where the key pairings are compatible or incompatible with an assumed association. Incompatible pairings slow
+    responses and modulate the N400 and late positive potential.
+  zh: 被试用两个按键对来自两个概念类别和两个属性类别的词或图片进行归类；在不同组块中，按键配对与假定的联想相容或不相容。不相容配对使反应变慢，并调制 N400 与晚期正电位。
+protocol:
+  n_classes: 2
+  classes:
+  - compatible key pairing blocks
+  - incompatible key pairing blocks
+  cue: words or pictures of two concepts and two attributes sorted with two keys
+  paradigm_timing: block
+  feedback: none
+  distinguishing: 'Standard configuration (earliest published or canonical; D-057 -001): standard IAT block sequence (Greenwald
+    et al. 1998, R0165).'
+first_source:
+  citation: 'Greenwald, A. G., McGhee, D. E., & Schwartz, J. L. K. Measuring individual differences in implicit cognition:
+    The Implicit Association Test. Journal of Personality and Social Psychology, 74(6), 1464–1480. 1998.'
+  doi: 10.1037/0022-3514.74.6.1464
+  pmid: '9654756'
+  year: 1998
+  verified: false
+interop:
+  bids_task: iat
+notes: 'HED task page: https://www.hedtags.org/hed-task/tasks/hedtsk_implicit_association.html. Lead refs (curation/literature.csv):
+  R0165 [key_reference], R0266 [key_reference], R0332 [key_reference], R0659 [further_reference], R0774 [further_reference],
+  R0775 [further_reference], R0778 [review]. No neural lead in literature.csv yet; marker assignment from paradigm_markers.csv,
+  to be checked in pass 2. First-pass skeleton (curator_e, 2026-10-03); all sources unverified. Sprint 2 (curator_e, 2026-10-03):
+  protocol block added per D-057; see curation/work/pkg_E/sprint2/split_log.csv. Sprint 3 (curator_d, 2026-10-05): bibliography
+  confirmed (OpenAlex, 2026-10-05).'
+status: draft
+contributors:
+- curator_e

@@ -1,0 +1,60 @@
+schema_version: '0.2'
+id: STM-TUS-001
+class: STM-TUS
+name:
+  en: Transcranial focused ultrasound stimulation
+  zh: 经颅超声刺激
+aliases:
+- TUS
+- tFUS
+- LIFU
+- transcranial ultrasound stimulation
+family: stimulation
+bci_category:
+- none
+recording_modality:
+- EEG
+- fMRI
+stimulus_modality:
+- ultrasound_stimulation
+- somatosensory
+- electrical_stimulation
+markers:
+- MK.BOLD_stimulated_region
+- MK.SEP_N20
+description:
+  en: >-
+    Low-intensity focused ultrasound is delivered through the skull to a cortical or deep target, either alone or time-locked
+    to a sensory stimulus, and compared with sham or off-target sonication. Effects are measured as changes in somatosensory
+    evoked potentials (e.g. to median-nerve stimulation when targeting S1) or as BOLD responses at and connected to the sonicated
+    region.
+  zh: 经颅骨向皮层或深部靶点施加低强度聚焦超声，可单独施加或与感觉刺激锁时，并与伪刺激或非靶点刺激比较。效应以体感诱发电位的变化（如靶向 S1 时对正中神经刺激的响应）或受刺激区域及其连接区域的 BOLD 响应来测量。
+protocol:
+  n_classes: 2
+  classes:
+  - focused ultrasound time-locked to median-nerve stimulation
+  - sham sonication
+  cue: none
+  stimulus_coding: ultrasound pulse time-locked to a peripheral sensory stimulus
+  paradigm_timing: synchronous
+  feedback: none
+  distinguishing: >-
+    Standard configuration (earliest published) / 标准配置（最早发表）: TUS of S1 delivered with median-nerve stimulation, SEP readout
+    (Legon et al. 2014). Sibling proposed in split_log: TUS alone with fMRI readout (criterion 2; no checked lead).
+first_source:
+  citation: >-
+    Legon W, Sato T, Opitz A, Mueller JK, Barbour A, Williams A, Tyler WJ. Transcranial focused ultrasound modulates the activity
+    of primary somatosensory cortex in humans. Nature Neuroscience 17(2):322-329. 2014.
+  doi: 10.1038/nn.3620
+  pmid: '24413698'
+  year: 2014
+  verified: false
+interop:
+  bids_task: tus
+notes: >-
+  Leads: R0784, R0813, R0816, R0822, R0823, R0828. Search sources (curation/work/pkg_B/search_log.md): S14 https://experts.umn.edu/en/publications/transcranial-focused-ultrasound-modulates-the-activity-of-primary/.
+  first_source found by search (S14). Leads are reviews and consensus/safety guidelines (ITRUSST). R0828 DOI/year (Brain Stimulation
+  2025, brs.2025.10.007) should be checked. bibliography confirmed (OpenAlex, 2026-10-05)
+status: draft
+contributors:
+- curator_b

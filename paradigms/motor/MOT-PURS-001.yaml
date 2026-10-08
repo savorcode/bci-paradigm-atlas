@@ -1,0 +1,55 @@
+schema_version: '0.2'
+id: MOT-PURS-001
+class: MOT-PURS
+name:
+  en: Smooth pursuit eye movements
+  zh: 平滑追踪眼动
+aliases:
+- smooth pursuit
+- pursuit eye movements
+- ocular pursuit
+family: motor
+bci_category:
+- none
+recording_modality:
+- fMRI
+- EEG
+stimulus_modality:
+- visual
+- motor_execution
+markers:
+- MK.BOLD_oculomotor
+description:
+  en: >-
+    Participants follow a smoothly moving visual target (e.g. a dot moving sinusoidally) with their eyes, contrasted with
+    fixation or saccade conditions. Pursuit activates the frontal and supplementary eye fields, parietal cortex and motion-sensitive
+    cortex.
+  zh: 被试用眼睛跟随平滑移动的视觉目标（如做正弦运动的圆点），并与注视或眼跳条件对比。平滑追踪激活额眼区、辅助眼区、顶叶皮层和运动敏感皮层。
+protocol:
+  n_classes: 2
+  classes:
+  - smooth pursuit
+  - fixation
+  cue: smoothly moving visual target
+  paradigm_timing: block
+  feedback: none
+  distinguishing: >-
+    Standard configuration (earliest published) / 标准配置（最早发表）: pursuit of a smoothly moving target vs fixation blocks in fMRI
+    (Petit & Haxby 1999). No sibling protocol yet.
+first_source:
+  citation: >-
+    Petit L, Haxby JV. Functional anatomy of pursuit eye movements in humans as revealed by fMRI. Journal of Neurophysiology.
+    1999;82(1):463-471.
+  doi: 10.1152/jn.1999.82.1.463
+  pmid: '10400972'
+  year: 1999
+  verified: false
+interop:
+  bids_task: pursuit
+notes: >-
+  Search sources (curation/work/pkg_B/search_log.md): N03 https://neurosynth.org/studies/10400972. New candidate (pkg B).
+  Separate oculomotor system from saccades (MOT-SACC-001); maintainer may consider it a variant. bibliography corrected (OpenAlex,
+  2026-10-05)
+status: draft
+contributors:
+- curator_b

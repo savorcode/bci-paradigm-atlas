@@ -1,0 +1,49 @@
+schema_version: '0.2'
+id: SOC-PAIN-002
+class: SOC-PAIN
+name:
+  en: Pain-empathy picture task
+  zh: 疼痛共情图片任务
+aliases:
+- painful situations pictures task
+family: social
+bci_category:
+- none
+recording_modality:
+- EEG
+- fMRI
+stimulus_modality:
+- visual
+markers:
+- MK.LPP
+- MK.BOLD_anterior_insula
+description:
+  en: Participants view photographs of hands or feet in painful or non-painful everyday situations and judge the pain intensity
+    felt by the depicted person or simply observe. Painful pictures increase anterior insula and anterior cingulate BOLD and
+    enhance the late positive potential.
+  zh: 被试观看手或脚处于疼痛或非疼痛日常情境中的照片，评定画中人的疼痛强度或仅观看。疼痛图片增强前岛叶与前扣带 BOLD，并增大晚期正电位。
+protocol:
+  n_classes: 2
+  classes:
+  - painful situation pictures
+  - non-painful situation pictures
+  cue: photographs of hands or feet in everyday situations
+  paradigm_timing: synchronous
+  feedback: none
+  distinguishing: 'Criterion 2 versus SOC-PAIN-001: pictures of body parts in painful situations instead of symbolic cues
+    signalling pain to a present partner (leads S2-10, R0919).'
+first_source:
+  citation: Jackson PL, Meltzoff AN, Decety J. How do we perceive the pain of others? A window into the neural processes involved
+    in empathy. NeuroImage. 2005;24(3):771-779.
+  doi: 10.1016/j.neuroimage.2004.09.006
+  year: 2005
+  verified: false
+notes: 'Source: sprint-2 S2-10 [=R1338] (title seen on https://www.cirris.ulaval.ca/publications/how-do-we-perceive-the-pain-of-others-a-window-into-the-neural-processes-involved-in-empathy;
+  authors, venue and year not shown and are not filled). Lead refs: R0919 [method] (ERP and EEG oscillations, picture-based),
+  R0982 [review]. Whether this is the first picture-based study is not confirmed. New concrete paradigm (curator_e, sprint
+  2, 2026-10-03, D-057); all sources unverified. Sprint 3 (curator_d, 2026-10-05): bibliography corrected (OpenAlex, 2026-10-05):
+  doi, authors, year, journal, volume, issue, pages added. [maintainer sprint 3, 2026-10-07, D-073] origin candidate recalled,
+  record confirmed via OpenAlex.'
+status: draft
+contributors:
+- curator_e

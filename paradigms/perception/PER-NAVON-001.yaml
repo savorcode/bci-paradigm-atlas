@@ -1,0 +1,48 @@
+schema_version: '0.2'
+id: PER-NAVON-001
+class: PER-NAVON
+name:
+  en: Navon global-local task
+  zh: Navon 全局-局部
+aliases:
+- Global-Local Task
+- Navon Letters
+family: perception
+bci_category:
+- none
+recording_modality:
+- EEG
+stimulus_modality:
+- visual
+markers:
+- MK.N2_posterior
+- MK.P3b
+description:
+  en: Hierarchical stimuli (a large letter made of small letters) are presented, and participants identify either the global
+    or the local level. Global precedence and interference effects are accompanied by modulation of the posterior N2 and of
+    the P3b.
+  zh: 呈现层级刺激（由小字母组成的大字母），被试辨认整体或局部层面。整体优先与干扰效应伴随后部 N2 和 P3b 的调制。
+protocol:
+  n_classes: 2
+  classes:
+  - attend global level
+  - attend local level
+  cue: hierarchical letters (large letter made of small letters), congruent or incongruent
+  paradigm_timing: synchronous
+  feedback: none
+  distinguishing: 标准配置（最早发表，即 first_source）：层级字母刺激，分别判断整体或局部层级。本类暂无其他具体范式（no sibling protocol yet）。
+first_source:
+  citation: 'Navon, D. Forest before trees: The precedence of global features in visual perception. Cognitive Psychology,
+    9(3), 353–383. 1977.'
+  doi: 10.1016/0010-0285(77)90012-3
+  year: 1977
+  verified: false
+interop:
+  bids_task: navon
+notes: 'HED task page: https://www.hedtags.org/hed-task/tasks/hedtsk_navon.html. Leads used: R0040, R0100, R0138, R0423, R0464,
+  R0500, R0648, R0743, R0815. [curator_a sprint 2, 2026-10-03] D-057: protocol block added for the canonical configuration;
+  no other concrete paradigm identified for this class in sprint 2. [curator_e sprint 3, 2026-10-05] bibliography confirmed
+  (Crossref, 2026-10-05).'
+status: draft
+contributors:
+- curator_a

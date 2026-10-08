@@ -1,0 +1,53 @@
+schema_version: '0.2'
+id: ERR-ADAPT-002
+class: ERR-ADAPT
+name:
+  en: Reward-based motor learning (binary feedback)
+  zh: 基于奖赏的运动学习（二值反馈）
+aliases:
+- Reward-based reaching task
+family: error
+bci_category:
+- none
+recording_modality:
+- EEG
+stimulus_modality:
+- visual
+- motor_execution
+markers:
+- MK.FRN
+- MK.P3b
+description:
+  en: Participants make reaching movements without seeing their hand position and receive only binary success/failure feedback
+    (the target turns green or red), so that movements are adapted from reward rather than sensory error. Binary reward feedback
+    elicits a feedback-related negativity and a P300.
+  zh: 被试做伸手运动时看不到手的位置，只获得成功/失败的二值反馈（目标变绿或变红），因而依据奖赏而非感觉误差调整运动。二值奖赏反馈诱发反馈相关负波与 P300。
+trial_structure:
+  conditions:
+  - success feedback
+  - failure feedback
+protocol:
+  n_classes: 2
+  classes:
+  - success (reward)
+  - failure (no reward)
+  cue: reach target; binary colour feedback without cursor or hand-position information
+  paradigm_timing: synchronous
+  feedback: discrete
+  distinguishing: 准则 4：反馈为二值奖赏（成功/失败），不显示手或光标位置（ERR-ADAPT-001 为旋转光标的感觉误差反馈）。
+first_source:
+  citation: Palidis DJ, Cashaback JGA, Gribble PL. Neural Signatures of Reward and Sensory Prediction Error in Motor Learning.
+    bioRxiv. 2018.
+  doi: 10.1101/262576
+  year: 2018
+  verified: false
+interop:
+  bids_task: rewardreach
+notes: 'Leads used: R1001 (reward learning task with binary feedback contrasted with a visuomotor rotation task; FRN in reward
+  but not sensory-error feedback, P300 in both); R1009. Origin of reward-based reaching paradigms not identified; R1001 used
+  as first_source because it is the only lead with this configuration (authors/year to be filled by the maintainer). Sprint
+  2 (D-057, curator_c, 2026-10-03): new concrete paradigm of class ERR-ADAPT; numbering criterion 4 relative to ERR-ADAPT-001;
+  all sources unverified. bibliography corrected (Crossref, 2026-10-05)'
+status: draft
+contributors:
+- curator_c

@@ -1,0 +1,26 @@
+schema_version: "0.2"
+id: MK.LPP
+name:
+  en: Late positive potential
+  zh: 晚期正电位
+aliases:
+- LPP
+- late positive complex
+type: erp_component
+recording_modality:
+- EEG
+signature:
+  latency_ms: from ~300 to >1000 (sustained for the stimulus duration)
+  polarity: positive
+  topography: centro-parietal
+description:
+  en: Sustained positive deflection that is larger for emotionally arousing (pleasant or unpleasant) than for neutral stimuli.
+    It is reduced by reappraisal and other regulation strategies and is interpreted as motivated attention to significant
+    stimuli.
+  zh: 持续的正向偏移，情绪唤醒刺激（愉快或不愉快）引起的波幅大于中性刺激。重评等调节策略可使其减小，被解释为对重要刺激的动机性注意。
+notes: Signature values are textbook-level characteristics entered in the first pass and await source checking. Relation to
+  P300 discussed in lead R1040.
+status: draft
+contributors:
+- maintainer
+- curator_e

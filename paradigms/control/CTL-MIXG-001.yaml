@@ -1,0 +1,57 @@
+schema_version: '0.2'
+id: CTL-MIXG-001
+class: CTL-MIXG
+name:
+  en: Mixed gambles (loss aversion) task
+  zh: 混合赌局（损失厌恶）
+aliases:
+- Mixed-gambles task
+- Loss aversion task
+- Accept/reject gamble task
+family: control
+bci_category:
+- none
+recording_modality:
+- fMRI
+stimulus_modality:
+- visual
+markers:
+- MK.BOLD_striatum_reward
+- MK.BOLD_vmPFC_value
+description:
+  en: Participants accept or reject 50/50 gambles that combine a potential gain and a potential loss of independently varied
+    sizes, and losses are typically weighted more heavily than gains. Striatal and ventromedial prefrontal BOLD activity increases
+    with potential gains and decreases with potential losses.
+  zh: 被试接受或拒绝胜负各半的赌局，每个赌局包含大小独立变化的潜在收益与潜在损失，损失通常比收益权重更大。纹状体与腹内侧前额叶 BOLD 活动随潜在收益增加而升高，随潜在损失增加而降低。
+trial_structure:
+  conditions:
+  - accept
+  - reject
+protocol:
+  n_classes: 2
+  classes:
+  - accept gamble
+  - reject gamble
+  cue: 50/50 gambles combining independently varied potential gain and loss
+  paradigm_timing: synchronous
+  distinguishing: 标准配置（最早发表）：接受或拒绝得失独立变化的 50/50 混合赌局（Tom et al. 2007，R1146）。本包仅此一个配置。
+first_source:
+  citation: Tom SM, Fox CR, Trepel C, Poldrack RA. The Neural Basis of Loss Aversion in Decision-Making Under Risk. Science.
+    2007;315(5811):515-518.
+  doi: 10.1126/science.1134239
+  year: 2007
+  verified: false
+datasets:
+- name: Mixed-gambles task (OpenfMRI)
+  url: https://openfmri.org/dataset/ds000005
+  identifier: ds000005
+  subjects: 16
+interop:
+  bids_task: mixedgambles
+notes: 'Leads used: S_TOM2007 (search: https://www.citedrive.com/en/discovery/the-neural-basis-of-loss-aversion-in-decision-making-under-risk/).
+  first_source lead: S_TOM2007. Author order taken from the OpenfMRI ds000005 page (listed there in reverse order); check
+  against the original. Pass 1 skeleton (curator_c, 2026-10-03); all sources unverified. Sprint 2 (D-057): protocol added;
+  single configuration, no split. bibliography corrected (OpenAlex, 2026-10-05)'
+status: draft
+contributors:
+- curator_c

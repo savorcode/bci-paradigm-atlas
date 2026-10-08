@@ -1,0 +1,11 @@
+schema_version: "0.2"
+id: MK.frontal_midline_theta
+name: {en: Frontal midline theta, zh: 额中线 θ}
+aliases: [FMT, frontal midline theta, Fm theta]
+type: oscillatory
+recording_modality: [EEG, MEG]
+signature: {frequency_hz: 4-8, topography: 'frontal midline (Fz), medial frontal cortex'}
+description: {en: 'Increase of 4-8 Hz power over frontal midline sites during sustained mental effort, such as mental arithmetic, working memory load and cognitive control.', zh: 在心算、工作记忆负荷、认知控制等持续心理努力期间，额中线部位 4-8 Hz 功率的升高。}
+notes: Signature values are textbook-level characteristics and await source checking (first pass, curator_b). Distinct from MK.theta_drowsiness (D-028). Generators and indexes to be added in the second pass.
+status: draft
+contributors: [maintainer, curator_b]

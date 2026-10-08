@@ -1,0 +1,51 @@
+schema_version: '0.2'
+id: PER-ODD-006
+class: PER-ODD
+name:
+  en: P300 speller (checkerboard paradigm)
+  zh: P300 拼写器（棋盘格范式）
+aliases:
+- checkerboard paradigm (CBP)
+- CBP speller
+family: perception
+bci_category:
+- reactive
+recording_modality:
+- EEG
+stimulus_modality:
+- visual
+markers:
+- MK.P3b
+description:
+  en: The items of a larger matrix (8 x 9 in the original) are assigned to the white and black cells of a virtual checkerboard,
+    giving two 6 x 6 sub-matrices whose rows and columns are flashed in random order. Adjacent items therefore never flash
+    together, which reduces adjacency errors and double flashes of the row/column speller.
+  zh: 较大矩阵（原始版本为 8×9）的各项被分配到虚拟棋盘格的白格与黑格，形成两个 6×6 子矩阵，按随机顺序闪烁其行与列。相邻项因而不会同时闪烁，减少了行/列拼写器的相邻错误与连续闪烁。
+trial_structure:
+  conditions:
+  - flash group containing the target
+  - flash groups without the target
+protocol:
+  classes:
+  - 72 items of an 8 x 9 matrix
+  cue: character matrix with flash groups drawn from a virtual checkerboard
+  stimulus_coding: checkerboard flashing (rows/columns of two 6 x 6 sub-matrices)
+  paradigm_timing: synchronous
+  feedback: discrete
+  distinguishing: 准则 2（编码方案）：棋盘格分组闪烁，取代 -003 的物理行/列闪烁。矩阵规模（原始版本 8×9 共 72 项）为同质目标的参数，不构成准则 1（D-058）。
+first_source:
+  citation: 'Townsend G, LaPallo BK, Boulay CB, Krusienski DJ, Frye GE, Hauser CK, Schwartz NE, Vaughan TM, Wolpaw JR, Sellers
+    EW. A novel P300-based brain-computer interface stimulus presentation paradigm: moving beyond rows and columns. Clin Neurophysiol.
+    2010;121(7):1109-1120.'
+  doi: 10.1016/j.clinph.2010.01.030
+  pmid: '20347387'
+  year: 2010
+  verified: false
+interop:
+  bids_task: p300speller
+notes: 'Lead: WebSearch S2A12 [=R1273] and PMC2879474 (S2A13; abstract read: 8 x 9 matrix, white/black 6 x 6 sub-matrices,
+  CBP vs RCP online accuracy 92 % vs 77 %). Further CBP studies seen in S2A12 results (ETSU colour CBP; Frye et al. JNE 2011,
+  not read). New in sprint 2. [curator_e sprint 3, 2026-10-05] bibliography confirmed (Crossref, 2026-10-05).'
+status: draft
+contributors:
+- curator_a

@@ -1,0 +1,56 @@
+schema_version: '0.2'
+id: CTL-SIM-001
+class: CTL-SIM
+name:
+  en: Simon task (auditory)
+  zh: Simon 任务（听觉版）
+aliases:
+- Simon Effect Task
+- Simon effect
+- Spatial Compatibility
+- Spatial S-R compatibility task
+family: control
+bci_category:
+- none
+recording_modality:
+- EEG
+stimulus_modality:
+- auditory
+markers:
+- MK.N2_frontocentral
+- MK.LRP
+description:
+  en: Participants respond with a left or right key to a non-spatial feature of an auditory stimulus presented to the left
+    or right ear, while the task-irrelevant stimulus side corresponds or does not correspond to the response side. Non-corresponding
+    trials slow responses and elicit a fronto-central N2 and an initial lateralised readiness potential towards the incorrect
+    hand.
+  zh: 被试对呈现于左耳或右耳的听觉刺激的非空间特征作左/右键反应，与任务无关的刺激侧别与反应侧一致或不一致。不一致试次反应变慢，并诱发额中央 N2 及先偏向错误手的偏侧化准备电位。
+trial_structure:
+  conditions:
+  - corresponding
+  - non-corresponding
+protocol:
+  n_classes: 2
+  classes:
+  - corresponding (stimulus side = response side)
+  - non-corresponding
+  cue: auditory stimuli presented to the left or right ear; response to a non-spatial feature with a left or right key
+  paradigm_timing: synchronous
+  feedback: none
+  distinguishing: 标准配置（最早发表）：听觉刺激呈现于左/右耳，按非空间特征作左/右反应（Simon & Rudell 1967，R0016）。
+first_source:
+  citation: 'Simon JR, Rudell AP. Auditory S-R compatibility: The effect of an irrelevant cue on information processing. Journal
+    of Applied Psychology. 1967;51(3):300-304.'
+  doi: 10.1037/h0020586
+  pmid: '6045637'
+  year: 1967
+  verified: false
+interop:
+  bids_task: simon
+notes: 'HED task page: https://www.hedtags.org/hed-task/tasks/hedtsk_simon.html. Leads used: R0016; R0091; R0516. first_source
+  lead: R0016. Review: R0516. Pass 1 skeleton (curator_c, 2026-10-03); all sources unverified. Sprint 2 (D-057): protocol
+  added; -001 narrowed to the auditory version of the source; the visual Simon task (HED ''standard'' version) split off as
+  CTL-SIM-002 (criterion 2). bibliography corrected (Crossref, 2026-10-05)'
+status: draft
+contributors:
+- curator_c

@@ -1,0 +1,25 @@
+schema_version: "0.2"
+id: MK.P100_PRVEP
+name:
+  en: Pattern-reversal VEP P100
+  zh: 图形翻转 VEP P100
+aliases:
+- P100
+- P100 (PR-VEP)
+- pattern-reversal VEP P100
+type: erp_component
+recording_modality:
+- EEG
+signature:
+  latency_ms: ~100
+  polarity: positive
+  topography: midline occipital (Oz)
+description:
+  en: Large positive midline occipital peak of the pattern-reversal VEP, the most consistent VEP component across individuals
+    and the main clinical measure of visual pathway conduction.
+  zh: 图形翻转 VEP 中位于枕中线的较大正峰，是个体间最稳定的 VEP 成分，也是评估视觉通路传导的主要临床指标。
+notes: First-pass skeleton by package A (2026-10-03). No generators/indexes yet. Signature values are textbook-level approximations
+  and await source checking.
+status: draft
+contributors:
+- curator_a

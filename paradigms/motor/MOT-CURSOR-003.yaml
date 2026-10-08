@@ -1,0 +1,53 @@
+schema_version: '0.2'
+id: MOT-CURSOR-003
+class: MOT-CURSOR
+name:
+  en: Intracortical point-and-click cursor typing
+  zh: 皮层内点击式光标打字
+aliases:
+- point-and-click BCI
+- intracortical keyboard typing
+family: motor
+bci_category:
+- active
+recording_modality:
+- intracortical
+stimulus_modality:
+- visual
+- motor_execution
+markers:
+- MK.motor_cortical_spiking
+description:
+  en: >-
+    A participant with paralysis controls the two-dimensional velocity of a cursor decoded from motor cortical spiking during
+    attempted or imagined arm movements and selects keys of an on-screen keyboard with a decoded click. Continuous cursor
+    feedback and discrete selections are used for copy typing and free typing.
+  zh: 瘫痪被试在尝试或想象手臂运动时，由运动皮层神经元放电解码出光标的二维速度，并以解码出的点击选择屏幕键盘上的按键。光标连续反馈与离散选择用于抄写打字和自由打字。
+protocol:
+  n_classes: 2
+  classes:
+  - continuous 2-D cursor velocity
+  - click (selection)
+  cue: on-screen keyboard with target characters
+  paradigm_timing: continuous
+  feedback: continuous
+  distinguishing: >-
+    Criteria 1 and 2 vs MOT-CURSOR-001: continuous 2-D velocity plus a discrete click on an on-screen keyboard instead of
+    1-D movement to two targets.
+first_source:
+  citation: >-
+    Pandarinath C, Nuyujukian P, Blabe CH, Sorice BL, Saab J, Willett FR, Hochberg LR, Shenoy KV, Henderson JM. High performance
+    communication by people with paralysis using an intracortical brain-computer interface. eLife. 2017;6:e18554.
+  doi: 10.7554/elife.18554
+  pmid: '28220753'
+  year: 2017
+  verified: false
+interop:
+  bids_task: cursor
+notes: >-
+  Leads: R0945 (first_source, title + PMID, earliest lead seen; not the origin of intracortical cursor control - memory lead
+  Hochberg et al. 2006, unverified), R0949 (home use), R1038 (review). Configuration details from the class description; check
+  against R0945. bibliography corrected (OpenAlex, 2026-10-05)
+status: draft
+contributors:
+- curator_b

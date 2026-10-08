@@ -1,0 +1,58 @@
+schema_version: '0.2'
+id: MEM-DMS-001
+class: MEM-DMS
+name:
+  en: Delayed match-to-sample
+  zh: 延迟匹配
+aliases:
+- DMS
+- DMTS
+- Delayed matching task
+- Delayed non-match-to-sample (variant)
+family: memory
+bci_category:
+- none
+recording_modality:
+- EEG
+- MEG
+stimulus_modality:
+- visual
+markers:
+- MK.alpha_posterior
+- MK.gamma_power
+description:
+  en: A sample stimulus is presented, followed by a blank delay and then a probe; participants indicate whether the probe
+    matches the sample. The delay isolates maintenance, and human EEG/MEG studies report delay-period modulation of posterior
+    alpha and increases of scalp gamma power that depend on the memorized content.
+  zh: 先呈现样本刺激，经过空白延迟后呈现探测刺激，被试判断探测是否与样本相同。延迟期分离出保持过程；人类 EEG/MEG 研究报告延迟期后部 α 的调制以及随记忆内容变化的头皮 γ 功率增加。
+trial_structure:
+  conditions:
+  - match probe
+  - non-match probe
+protocol:
+  n_classes: 2
+  classes:
+  - match
+  - non-match
+  cue: visual sample stimulus, blank delay, single probe
+  paradigm_timing: synchronous
+  feedback: none
+  distinguishing: 标准配置（最早发表）：样本—延迟—探测，判断探测是否与样本相同（类源头 Fuster & Alexander 1971, R0025，动物研究，D-031 第 2 款）。延迟非匹配（DNMS）配置无人类线索，暂记为提议。
+first_source:
+  citation: Fuster JM, Alexander GE. Neuron Activity Related to Short-Term Memory. Science. 1971;173(3997):652-654.
+  doi: 10.1126/science.173.3997.652
+  pmid: '4998337'
+  year: 1971
+  verified: false
+interop:
+  bids_task: dms
+notes: 'HED task page: https://www.hedtags.org/hed-task/tasks/hedtsk_delayed_match_to_sample.html. Leads: R0025, R0134, R0228,
+  R0632, R0665, R0745, R0754 (R#### = curation/literature.csv; DN## = curation/work/pkg_D/new_leads.csv). R0025 (Fuster &
+  Alexander 1971) is a single-unit study in macaques; the human EEG/MEG implementation is a later adaptation. A human-recording
+  origin paper has not been identified yet. The non-match-to-sample version is listed as an alias; no separate lead. Sprint
+  2 (D-057, curator_d, 2026-10-03): protocol block added (-001 = earliest/standard configuration). Narrowed to the match-to-sample
+  rule; the delayed non-match-to-sample configuration has no human lead yet (split_log: 提议). bibliography corrected (Crossref,
+  2026-10-05)'
+status: draft
+contributors:
+- curator_d

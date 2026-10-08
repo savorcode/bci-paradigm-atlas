@@ -1,0 +1,65 @@
+schema_version: '0.2'
+id: CTL-AS-001
+class: CTL-AS
+name:
+  en: Antisaccade task
+  zh: 反向眼跳
+aliases:
+- AST
+- Anti-Saccade
+- Antisaccade
+- Pro/antisaccade task
+family: control
+bci_category:
+- none
+recording_modality:
+- EEG
+- fMRI
+stimulus_modality:
+- visual
+markers:
+- MK.presaccadic_potential
+- MK.BOLD_oculomotor
+description:
+  en: When a peripheral target appears, participants must suppress the reflexive saccade towards it and instead look to the
+    mirror location (antisaccade), often intermixed with prosaccade trials. Preparation is accompanied by presaccadic potentials
+    in EEG and by oculomotor (frontal eye field, parietal) BOLD activity.
+  zh: 外周目标出现时，被试须抑制朝向目标的反射性眼跳，转而注视其镜像位置（反向眼跳），常与正向眼跳试次混合呈现。眼跳准备伴随 EEG 中的眼跳前电位和动眼网络（额叶眼区、顶叶）的 BOLD 活动。
+trial_structure:
+  conditions:
+  - prosaccade
+  - antisaccade
+protocol:
+  n_classes: 2
+  classes:
+  - prosaccade
+  - antisaccade
+  cue: peripheral visual target onset; instruction to look towards (pro) or to the mirror location (anti)
+  paradigm_timing: synchronous
+  feedback: none
+  distinguishing: 标准配置（最早发表）：外周目标出现后向镜像位置扫视（Hallett 1978，R0045）；与前向扫视混合或分组只是参数。
+first_source:
+  citation: Hallett PE. Primary and secondary saccades to goals defined by instructions. Vision Research. 1978;18(10):1279-1296.
+  doi: 10.1016/0042-6989(78)90218-3
+  pmid: '726270'
+  year: 1978
+  verified: false
+variants:
+- name: Internationally standardised antisaccade protocol (blocked pro- and antisaccade trials, fixed timing)
+  source:
+    citation: Antoniades C, Ettinger U, Gaymard B, Gilchrist I, Kristjánsson A, Kennard C, Leigh RJ, Noorani I, Pouget P,
+      Smyrnis N, Tarnowski A, Zee DS, Carpenter RHS. An internationally standardised antisaccade protocol. Vision Research.
+      2013;84:1-5.
+    doi: 10.1016/j.visres.2013.02.007
+    year: 2013
+    verified: false
+  note: Parameter-level standardisation (timing, trial numbers, blocking); same configuration. bibliography corrected (Crossref,
+    2026-10-05)
+interop:
+  bids_task: antisaccade
+notes: 'HED task page: https://www.hedtags.org/hed-task/tasks/hedtsk_anti_saccade.html. Leads used: R0045; R0278. first_source
+  lead: R0045. Review: R0278. Pass 1 skeleton (curator_c, 2026-10-03); all sources unverified. Sprint 2 (D-057): protocol
+  added; standardised protocol (R0566) added as a parameter-level variant. bibliography corrected (Crossref, 2026-10-05)'
+status: draft
+contributors:
+- curator_c

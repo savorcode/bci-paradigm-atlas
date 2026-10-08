@@ -1,0 +1,55 @@
+schema_version: '0.2'
+id: MEM-TNT-001
+class: MEM-TNT
+name:
+  en: Think/No-Think
+  zh: 想/不想
+aliases:
+- TNT Task
+- Think No-Think
+family: memory
+bci_category:
+- none
+recording_modality:
+- EEG
+- fMRI
+stimulus_modality:
+- visual
+markers:
+- MK.N2_frontocentral
+- MK.BOLD_hippocampus
+description:
+  en: Participants learn cue-target pairs and then, on each trial, see a cue with an instruction either to retrieve the associated
+    target (think) or to prevent it from coming to mind (no-think); memory for all targets is tested afterwards. No-think
+    trials are associated with reduced hippocampal BOLD activity and with enhanced frontocentral N2-like negativity, and suppressed
+    targets are later remembered less well.
+  zh: 被试先学习线索—目标词对，之后每个试次呈现线索并指示其回忆相应目标（想）或阻止目标进入意识（不想），最后测试全部目标的记忆。“不想”试次伴随海马 BOLD 活动降低和额中央类 N2 负波增强，被抑制的目标随后记忆成绩较差。
+trial_structure:
+  conditions:
+  - think
+  - no-think
+  - baseline
+protocol:
+  n_classes: 3
+  classes:
+  - think
+  - no-think
+  - baseline (not cued)
+  cue: cue word with a think or no-think instruction (colour or frame)
+  paradigm_timing: synchronous
+  feedback: none
+  distinguishing: 标准配置（最早发表）：学习线索—目标对，想/不想阶段，最终测试（Anderson & Green 2001, R0213）。本类只有这一配置。
+first_source:
+  citation: Anderson MC, Green C. Suppressing unwanted memories by executive control. Nature. 2001;410(6826):366-369.
+  doi: 10.1038/35066572
+  pmid: '11268212'
+  year: 2001
+  verified: false
+interop:
+  bids_task: thinknothink
+notes: 'HED task page: https://www.hedtags.org/hed-task/tasks/hedtsk_think_no_think.html. Leads: R0213, R0551, R0555, R0610,
+  R0713, R0721, R0807 (R#### = curation/literature.csv; DN## = curation/work/pkg_D/new_leads.csv). Sprint 2 (D-057, curator_d,
+  2026-10-03): protocol block added (-001 = earliest/standard configuration). bibliography corrected (Crossref, 2026-10-05)'
+status: draft
+contributors:
+- curator_d

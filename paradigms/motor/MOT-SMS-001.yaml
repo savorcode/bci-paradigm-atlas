@@ -1,0 +1,57 @@
+schema_version: '0.2'
+id: MOT-SMS-001
+class: MOT-SMS
+name:
+  en: Sensorimotor synchronization (metronome tapping)
+  zh: 感觉运动同步（节拍器敲击）
+aliases:
+- sensorimotor synchronization
+- synchronization-continuation tapping
+- syncopation/synchronization task
+- SMS
+family: motor
+bci_category:
+- none
+recording_modality:
+- EEG
+- MEG
+- fMRI
+stimulus_modality:
+- auditory
+- motor_execution
+markers:
+- MK.SMR_ERD
+- MK.BOLD_motor_network
+description:
+  en: >-
+    Participants tap a finger in time with an auditory metronome, either on the beat (synchronization) or between beats (syncopation),
+    sometimes continuing after the metronome stops. Timing demands modulate sensorimotor beta activity and engage the motor
+    network, including premotor cortex, SMA and cerebellum.
+  zh: 被试跟随听觉节拍器用手指敲击，或敲在拍上（同步），或敲在拍间（切分），有时在节拍器停止后继续敲击。计时需求调制感觉运动 β 活动，并调用包括前运动皮层、辅助运动区和小脑在内的运动网络。
+protocol:
+  n_classes: 2
+  classes:
+  - synchronization
+  - syncopation
+  cue: auditory metronome
+  paradigm_timing: continuous
+  feedback: none
+  distinguishing: >-
+    Standard configuration (earliest published) / 标准配置（最早发表）: finger tapping on or between metronome beats (R1118). A synchronization-continuation
+    protocol is proposed in split_log (no checked lead).
+first_source:
+  citation: >-
+    Mayville JM. Neural correlates of human sensorimotor coordination: EEG, MEG, and functional MRI. Florida Atlantic University
+    (dissertation). 2000.
+  year: 2000
+  verified: false
+interop:
+  bids_task: sms
+notes: >-
+  Search sources (curation/work/pkg_B/search_log.md): N12 https://fau.isle.flvc.org/node/53556; N13 https://doaj.org/article/afba5d3ff67e4742bd761927dc93b1a2.
+  New candidate (pkg B, 2026-10-03). Distinct from SSR-BEAT-001 (beat perception, package A), SOC-JA-001 (interpersonal tapping,
+  package E) and MOT-BIMAN-001; paced tapping as a motor localizer is a MOT-ME-001 variant. Leads N12 (dissertation) and N13
+  (title only).
+status: draft
+contributors:
+- curator_b

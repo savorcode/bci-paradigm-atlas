@@ -11,6 +11,7 @@ from pathlib import Path
 import yaml
 
 ROOT = Path(__file__).resolve().parents[1]
+CLASSES_FILE = ROOT / "paradigms" / "_classes.yaml"
 
 
 def read_yaml(path: Path):
@@ -28,6 +29,7 @@ def schemas() -> dict[str, dict]:
 @dataclass
 class Atlas:
     paradigms: dict[str, tuple[Path, dict]] = field(default_factory=dict)
+    classes: dict[str, dict] = field(default_factory=dict)
     markers: dict[str, tuple[Path, dict]] = field(default_factory=dict)
     regions: dict[str, dict] = field(default_factory=dict)
     constructs: dict[str, dict] = field(default_factory=dict)
@@ -41,8 +43,15 @@ def marker_files() -> list[Path]:
     return sorted(p for p in (ROOT / "knowledge" / "markers").glob("*.yaml") if not p.name.startswith("_"))
 
 
+def class_id(paradigm_id: str) -> str:
+    """Paradigm class of a concrete paradigm id: MOT-MI-001 -> MOT-MI (D-057)."""
+    return paradigm_id.rsplit("-", 1)[0]
+
+
 def load() -> Atlas:
     atlas = Atlas()
+    if CLASSES_FILE.exists():
+        atlas.classes = {t["id"]: t for t in (read_yaml(CLASSES_FILE) or {}).get("terms", [])}
     for p in paradigm_files():
         d = read_yaml(p)
         atlas.paradigms[d["id"]] = (p, d)

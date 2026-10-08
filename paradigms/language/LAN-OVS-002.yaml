@@ -1,0 +1,51 @@
+schema_version: '0.2'
+id: LAN-OVS-002
+class: LAN-OVS
+name:
+  en: 'Attempted speech: small-vocabulary word decoding with real-time output'
+  zh: 尝试言语：小词表单词实时解码
+aliases:
+- speech neuroprosthesis (word classification)
+- attempted word production
+family: language
+bci_category:
+- active
+recording_modality:
+- ECoG
+stimulus_modality:
+- visual
+- motor_execution
+markers:
+- MK.high_gamma
+description:
+  en: A participant with severe paralysis and anarthria attempts to say words from a fixed small vocabulary, cued on a screen,
+    while ECoG is recorded over speech sensorimotor cortex. Word classifiers, combined with a language model to form sentences,
+    decode the attempted words in real time and display them to the participant.
+  zh: 严重瘫痪、构音不能的被试根据屏幕提示尝试说出固定小词表中的词，同时记录言语感觉运动皮层的 ECoG。单词分类器结合语言模型组成句子，实时解码所尝试的词并显示给被试。
+trial_structure:
+  conditions:
+  - isolated attempted words
+  - attempted sentences from the vocabulary
+protocol:
+  n_classes: 1
+  classes:
+  - 'word from a fixed small vocabulary (size: parameter)'
+  cue: visually cued words and sentences
+  paradigm_timing: synchronous
+  feedback: discrete
+  distinguishing: 准则 1;4：类别集由音节（LAN-OVS-001）变为固定小词表中的词；实时解码并显示结果（离散闭环反馈）。
+first_source:
+  citation: Moses DA, Metzger SL, Liu JR, Anumanchipalli GK, Makin JG, Sun PF, Chartier J, Dougherty ME, Liu PM, Abrams GM,
+    Tu-Chan A, Ganguly K, Chang EF. Neuroprosthesis for Decoding Speech in a Paralyzed Person with Anarthria. New England
+    Journal of Medicine. 2021;385(3):217-227.
+  doi: 10.1056/nejmoa2027540
+  pmid: '34260835'
+  year: 2021
+  verified: false
+notes: 'New configuration (sprint 2). Lead R1013 (Neuroprosthesis for decoding speech in a paralyzed person with anarthria;
+  title and PMID only). The vocabulary size is left as a parameter until checked against the original. Leads: R1013, R0850,
+  R0857. (R#### = curation/literature.csv; DN## = curation/work/pkg_D/new_leads.csv.) Numbering criterion (D-057): 1;4. bibliography
+  corrected (OpenAlex, 2026-10-05)'
+status: draft
+contributors:
+- curator_d

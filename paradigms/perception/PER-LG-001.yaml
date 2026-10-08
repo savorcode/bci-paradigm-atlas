@@ -1,0 +1,55 @@
+schema_version: '0.2'
+id: PER-LG-001
+class: PER-LG
+name:
+  en: Local-global paradigm
+  zh: 局部-全局范式
+aliases:
+- global-local auditory paradigm
+- hierarchical oddball
+- local-global test
+family: perception
+bci_category:
+- passive
+- none
+recording_modality:
+- EEG
+- MEG
+stimulus_modality:
+- auditory
+markers:
+- MK.MMN
+- MK.P3b
+description:
+  en: Sequences of five tones are presented in blocks in which one sequence type is frequent. A deviant final tone violates
+    the local (within-sequence) regularity and elicits an MMN, whereas a rare sequence that violates the global (across-sequence)
+    regularity elicits a P3b that is linked to conscious processing.
+  zh: 以组块呈现五音序列，每组块中某一序列类型高频出现。末音偏离违反局部（序列内）规律时诱发 MMN；而违反全局（序列间）规律的低频序列诱发 P3b，后者与有意识加工相关。
+protocol:
+  n_classes: 4
+  classes:
+  - local standard / global standard
+  - local deviant / global standard
+  - local standard / global deviant
+  - local deviant / global deviant
+  cue: five-tone sequences, one sequence type frequent within each block
+  paradigm_timing: block
+  feedback: none
+  distinguishing: 标准配置（最早发表，即 first_source）：五音序列，组块内某一序列类型高频，局部 × 全局 2×2 条件。本类暂无其他具体范式（no sibling protocol yet）。
+first_source:
+  citation: Bekinschtein TA, Dehaene S, Rohaut B, Tadel F, Cohen L, Naccache L. Neural signature of the conscious processing
+    of auditory regularities. Proc Natl Acad Sci U S A. 2009;106(5):1672-1677.
+  doi: 10.1073/pnas.0809667106
+  year: 2009
+  verified: false
+interop:
+  bids_task: localglobal
+notes: 'Leads used: R1006, R1032, R1024. R1006 gives the title of the origin candidate (a talk page); R1032 lists it among
+  the lab''s 2009 publications. Venue and year to be confirmed. [curator_a sprint 2, 2026-10-03] D-057: protocol block added
+  for the canonical configuration; no other concrete paradigm identified for this class in sprint 2. [curator_e sprint 3,
+  2026-10-05] bibliography corrected (OpenAlex, 2026-10-05). [maintainer sprint 3, 2026-10-07, D-073] origin candidate recalled,
+  record confirmed via OpenAlex.'
+status: draft
+contributors:
+- curator_a
+- curator_e

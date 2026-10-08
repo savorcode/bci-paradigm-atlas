@@ -1,0 +1,22 @@
+schema_version: "0.2"
+id: MK.SSEP_nociceptive
+name:
+  en: Nociceptive steady-state evoked potential
+  zh: 伤害性稳态诱发电位
+aliases:
+- nociceptive SS-EP
+- nociceptive steady-state evoked potential
+type: steady_state
+recording_modality:
+- EEG
+signature:
+  frequency_hz: stimulation frequency
+description:
+  en: Steady-state EEG response at the frequency of rapid periodic nociceptive (for example laser thermal) stimulation, with
+    a topography distinct from non-nociceptive somatosensory steady-state responses.
+  zh: 对快速周期性伤害性刺激（如激光热刺激）在刺激频率处产生的稳态脑电响应，其头皮分布不同于非伤害性体感稳态响应。
+notes: First-pass skeleton by package A (2026-10-03). No generators/indexes yet. Signature values are textbook-level approximations
+  and await source checking. New marker requested by package A (curation/work/pkg_A/marker_requests.csv); not yet in curation/registry/markers.csv.
+status: draft
+contributors:
+- curator_a

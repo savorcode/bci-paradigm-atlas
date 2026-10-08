@@ -1,0 +1,55 @@
+schema_version: '0.2'
+id: LAN-VG-001
+class: LAN-VG
+name:
+  en: Verb generation
+  zh: 动词生成
+aliases:
+- Verb Gen
+- verb generation task
+family: language
+bci_category:
+- none
+recording_modality:
+- fMRI
+- fNIRS
+stimulus_modality:
+- visual
+- auditory
+markers:
+- MK.BOLD_language_network
+description:
+  en: Participants see or hear nouns and generate an associated verb for each (for example 'hammer' - 'pound'), compared with
+    simply repeating or reading the noun. Verb generation activates the left inferior frontal gyrus and other parts of the
+    language network, and the task is widely used for clinical language lateralisation.
+  zh: 被试看到或听到名词后，为每个名词生成一个相关动词（如“锤子”—“敲”），并与单纯复述或朗读名词比较。动词生成激活左侧额下回及语言网络其他部分，常用于临床语言偏侧化评估。
+trial_structure:
+  conditions:
+  - generate verb
+  - repeat noun
+protocol:
+  n_classes: 2
+  classes:
+  - verb generation
+  - noun repetition/reading
+  cue: visually or auditorily presented nouns
+  paradigm_timing: synchronous
+  feedback: none
+  distinguishing: 标准配置（最早发表）：给名词生成相关动词 vs 复述/朗读（Petersen et al. 1988, R0082）。本类只有这一配置（出声/默想为参数，临床组块设计待复核）。
+first_source:
+  citation: Petersen SE, Fox PT, Posner MI, Mintun M, Raichle ME. Positron emission tomographic studies of the cortical anatomy
+    of single-word processing. Nature. 1988;331(6157):585-589.
+  doi: 10.1038/331585a0
+  pmid: '3277066'
+  year: 1988
+  verified: false
+interop:
+  bids_task: verbgeneration
+notes: 'HED task page: https://www.hedtags.org/hed-task/tasks/hedtsk_verb_generation.html. Leads: R0082, R0117, R0150, R0350,
+  R0375, R0469, R0536, R1044 (R#### = curation/literature.csv; DN## = curation/work/pkg_D/new_leads.csv). R0082 (Petersen
+  et al. 1988, PET) chosen as origin. Overlap with IMG-WORD-001 (package B) - see LAN-VF-001. D-035: IMG-WORD-001 merged into
+  LAN-VF-001; the alias "verb generation" now lives only here. Sprint 2 (D-057, curator_d, 2026-10-03): protocol block added
+  (-001 = earliest/standard configuration). bibliography corrected (Crossref, 2026-10-05)'
+status: draft
+contributors:
+- curator_d

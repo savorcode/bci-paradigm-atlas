@@ -1,0 +1,58 @@
+schema_version: '0.2'
+id: PER-MSI-002
+class: PER-MSI
+name:
+  en: Audiovisual interaction with simple stimuli (additive model)
+  zh: 简单刺激的视听交互（加性模型）
+aliases:
+- AV - (A+V) paradigm
+- additive model of multisensory integration
+- redundant target paradigm
+family: perception
+bci_category:
+- none
+recording_modality:
+- EEG
+- MEG
+stimulus_modality:
+- visual
+- auditory
+markers:
+- MK.AV_interaction_ERP
+description:
+  en: Simple auditory stimuli (tones), visual stimuli (flashes or shapes) and their combination are presented in random order,
+    often with a detection or identification task. Multisensory interaction is estimated as the difference between the audiovisual
+    response and the sum of the unisensory responses (AV - [A + V]), which shows deviations within the first 200 ms.
+  zh: 随机呈现简单听觉刺激（纯音）、视觉刺激（闪光或图形）及其组合，常伴随检测或辨认任务。以视听响应与单通道响应之和的差值（AV −［A + V］）估计多感觉交互，在 200 ms 内即出现偏离。
+trial_structure:
+  conditions:
+  - auditory only
+  - visual only
+  - audiovisual
+protocol:
+  n_classes: 3
+  classes:
+  - auditory only
+  - visual only
+  - audiovisual
+  cue: tones, flashes and their combination in random order
+  paradigm_timing: synchronous
+  feedback: none
+  distinguishing: 准则 1;2：条件集为 A、V、AV（加性模型），刺激为非言语简单刺激；-001 为一致/不一致视听语音。
+first_source:
+  citation: 'Giard MH, Peronnet F. Auditory-visual integration during multimodal object recognition in humans: a behavioral
+    and electrophysiological study. J Cogn Neurosci. 1999;11(5):473-490.'
+  doi: 10.1162/089892999563544
+  year: 1999
+  verified: false
+interop:
+  bids_task: audiovisual
+notes: 'Split from PER-MSI-001 under D-057 (its sprint-1 description covered both configurations). Leads: R0293 (Calvert,
+  Spence & Stein 2004 handbook of multisensory processes), no origin paper among the leads; to be located (D-032). [curator_e
+  sprint 3, 2026-10-05] candidate origin found by bibliographic search (OpenAlex, 2026-10-05); content unverified. [maintainer
+  sprint 3, 2026-10-07] bibliography confirmed (OpenAlex, 2026-10-05; origin candidate, content unverified). [maintainer sprint
+  3, 2026-10-07, D-073] origin candidate recalled, record confirmed via OpenAlex.'
+status: draft
+contributors:
+- curator_a
+- curator_e

@@ -1,0 +1,57 @@
+schema_version: '0.2'
+id: SSR-SSVEP-002
+class: SSR-SSVEP
+name:
+  en: Frequency-coded multi-target SSVEP BCI
+  zh: 频率编码多目标 SSVEP 脑机接口
+aliases:
+- SSVEP-BCI
+- SSVEP-based BCI
+- frequency-coded SSVEP
+family: steady_state
+bci_category:
+- reactive
+recording_modality:
+- EEG
+stimulus_modality:
+- visual
+markers:
+- MK.SSVEP
+description:
+  en: Several targets flicker simultaneously, each at its own frequency. The user gazes at the desired target, and the target
+    whose frequency dominates the occipital EEG spectrum is selected and fed back to the user, typically after a cue and a
+    stimulation period of a few seconds.
+  zh: 多个目标同时闪烁，各有自己的频率。用户注视目标，枕区脑电频谱中占优势的频率对应的目标被选中并反馈给用户，通常在提示后经数秒刺激完成一次选择。
+trial_structure:
+  phases:
+  - name: cue
+    duration_ms: 500
+  - name: flicker
+    duration_ms: 1000-5000
+  - name: rest / feedback
+    duration_ms: 500
+  conditions:
+  - one target per stimulation frequency
+protocol:
+  classes:
+  - one target per flicker frequency
+  cue: several targets flickering simultaneously at distinct frequencies
+  stimulus_coding: frequency coding
+  paradigm_timing: synchronous
+  feedback: discrete
+  distinguishing: 准则 1;4：多个同时闪烁的目标（多选一）并逐次离散选择反馈；-001 为单一光源被动观察。准则 2（相对 -005）：仅频率编码，不编码相位。
+first_source:
+  citation: Middendorf M, McMillan G, Calhoun G, Jones KS. Brain-computer interfaces based on the steady-state visual-evoked
+    response. IEEE Trans Rehabil Eng. 2000;8(2):211-214.
+  doi: 10.1109/86.847819
+  year: 2000
+  verified: false
+interop:
+  bids_task: ssvep
+notes: 'Former variant "SSVEP-based BCI" of SSR-SSVEP-001 (seed), split under D-057. Leads: R0398 (Wang et al. 2008 VEP-BCI
+  review), R0867 (SSVEP speller review), R0483. Earlier VEP-based BCIs (to be assessed) may predate Middendorf et al. 2000.
+  [maintainer, sprint 2] Lead registered as R1286 (literature.csv). [curator_e sprint 3, 2026-10-05] bibliography confirmed
+  (OpenAlex, 2026-10-05).'
+status: draft
+contributors:
+- curator_a

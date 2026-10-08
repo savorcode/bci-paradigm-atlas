@@ -1,0 +1,28 @@
+schema_version: "0.2"
+id: MK.parietal_old_new
+name:
+  en: Left parietal old/new effect
+  zh: 左顶叶新旧效应
+aliases:
+- parietal old/new effect
+- late positive component (recognition)
+type: erp_component
+recording_modality:
+- EEG
+signature:
+  latency_ms: 500-800
+  polarity: more positive for old than for new items
+  topography: left parietal maximum
+description:
+  en: >-
+    Recognition-memory ERP effect in which correctly recognised old items elicit a more positive left-parietal deflection
+    than correctly rejected new items. It is larger for responses accompanied by recollection of contextual details
+    and is associated with recollection.
+  zh: 再认记忆中的 ERP 效应：被正确再认的旧项目比被正确拒绝的新项目诱发更正的左顶叶偏转。伴随情境细节回忆的反应效应更大，与回忆过程相关。
+notes: >-
+  First-pass skeleton (curator_d, 2026-10-03). Signature values are textbook-level approximations that await source
+  checking; generators and indexes will be added in the second pass.
+status: draft
+contributors:
+- maintainer
+- curator_d

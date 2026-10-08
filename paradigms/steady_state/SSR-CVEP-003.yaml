@@ -1,0 +1,77 @@
+schema_version: '0.2'
+id: SSR-CVEP-003
+class: SSR-CVEP
+name:
+  en: Burst c-VEP
+  zh: 突发（burst）编码 c-VEP
+aliases:
+- burst code-VEP
+- burst c-VEP
+family: steady_state
+bci_category:
+- reactive
+recording_modality:
+- EEG
+stimulus_modality:
+- visual
+markers:
+- MK.cVEP
+description:
+  en: Targets are coded by sparse sequences of short flash bursts instead of dense m-sequences. The aim is to elicit larger,
+    more distinct transient responses, to reduce the calibration data needed and to make the stimulation less tiring; the
+    public dataset uses four targets with a 2.2 s stimulation period, at full and at 40 % amplitude depth.
+  zh: 目标以由短促闪光突发组成的稀疏序列编码，而不是致密的 m 序列。目的是诱发更大、更易区分的瞬态响应，减少所需校准数据，并减轻刺激带来的疲劳；公开数据集使用 4 个目标、2.2 s 刺激期，并有 100% 与 40% 两种幅度深度。
+trial_structure:
+  phases:
+  - name: cue
+    duration_ms: 500
+  - name: stimulation
+    duration_ms: 2200
+  - name: inter-trial interval
+    duration_ms: 700
+  conditions:
+  - 4 targets
+protocol:
+  n_classes: 4
+  classes:
+  - target 1
+  - target 2
+  - target 3
+  - target 4
+  cue: four targets flickering with burst code sequences
+  stimulus_coding: burst codes
+  paradigm_timing: synchronous
+  feedback: discrete
+  distinguishing: 准则 2（编码方案）：稀疏突发码取代 -001 的 m 序列循环移位与 -002 的 Gold 码。幅度深度（100%/40%）为参数。
+first_source:
+  citation: 'Cabrera Castillos K, Ladouce S, Darmet L, Dehais F. Burst c-VEP based BCI: optimizing stimulus design for enhanced
+    classification with minimal calibration data and improved user experience. NeuroImage. 2023;284:120446.'
+  doi: 10.1016/j.neuroimage.2023.120446
+  year: 2023
+  verified: false
+variants:
+- name: Reduced amplitude depth (40 %)
+  source:
+    citation: 'Cabrera Castillos K, Ladouce S, Darmet L, Dehais F. Burst c-VEP based BCI: optimizing stimulus design for enhanced
+      classification with minimal calibration data and improved user experience. NeuroImage. 2023;284:120446.'
+    doi: 10.1016/j.neuroimage.2023.120446
+    year: 2023
+    verified: false
+  note: 'Parameter-level: stimulus amplitude depth 40 % instead of 100 %. Dataset: CastillosBurstVEP40 (MOABB). [curator_e
+    sprint 3, 2026-10-05] bibliography corrected (Crossref, 2026-10-05): full author list and title written from the Crossref
+    record of the shared DOI.'
+datasets:
+- name: Castillos burst c-VEP dataset, 100 % amplitude
+  url: https://moabb.neurotechx.com/docs/generated/moabb.datasets.CastillosBurstVEP100.html
+  identifier: CastillosBurstVEP100
+  subjects: 12
+- name: Castillos burst c-VEP dataset, 40 % amplitude
+  identifier: CastillosBurstVEP40
+interop:
+  bids_task: cvep
+notes: 'Lead: MOABB dataset page CastillosBurstVEP100 (S2A26 [=R1278]): burst codes vs m-sequences at 100 % and 40 % amplitude
+  depth, 4 targets, 0.5 s cue, 2.2 s stimulation, 0.7 s ITI, 12 subjects. Feedback mode not stated on the page (discrete assumed
+  for a BCI; to be checked). New in sprint 2. [curator_e sprint 3, 2026-10-05] bibliography confirmed (Crossref, 2026-10-05).'
+status: draft
+contributors:
+- curator_a

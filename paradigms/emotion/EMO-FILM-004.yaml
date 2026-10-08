@@ -1,0 +1,59 @@
+schema_version: '0.2'
+id: EMO-FILM-004
+class: EMO-FILM
+name:
+  en: Film-clip four-class emotion elicitation (SEED-IV)
+  zh: 影片片段四分类情绪诱发（SEED-IV）
+aliases:
+- SEED-IV paradigm
+family: emotion
+bci_category:
+- passive
+- none
+recording_modality:
+- EEG
+stimulus_modality:
+- naturalistic
+- visual
+- auditory
+markers:
+- MK.frontal_alpha_asymmetry
+- MK.affective_band_power
+description:
+  en: Participants watch film clips selected to induce happiness, sadness, fear or a neutral state, with EEG and eye movements
+    recorded, and rate their emotion after each clip. EEG band-power and eye-movement features are used to classify the four
+    classes.
+  zh: 被试观看用于诱发快乐、悲伤、恐惧或中性状态的影片片段，同时记录脑电与眼动，每段后评定情绪。利用脑电各频段功率与眼动特征对四类情绪进行分类。
+protocol:
+  n_classes: 4
+  classes:
+  - happy
+  - sad
+  - fear
+  - neutral
+  cue: film clips with self-assessment; eye tracking recorded alongside EEG
+  paradigm_timing: block
+  feedback: none
+  distinguishing: 'Criterion 1 versus EMO-FILM-001 and EMO-FILM-003: four emotion classes (happy, sad, fear, neutral); used
+    by the public SEED-IV dataset.'
+first_source:
+  citation: 'Zheng WL, Liu W, Lu Y, Lu BL, Cichocki A. EmotionMeter: a multimodal framework for recognizing human emotions.
+    IEEE Transactions on Cybernetics. 2019;49(3):1110-1122.'
+  doi: 10.1109/TCYB.2018.2797176
+  year: 2019
+  verified: false
+datasets:
+- name: SEED-IV
+  url: https://bcmi.sjtu.edu.cn/home/seed/
+notes: 'Source: sprint-2 F02 (https://bcmi.sjtu.edu.cn/home/seed/): SEED-IV classes happy, sad, fear, neutral, with EEG and
+  SMI eye-tracking glasses. SEED-V (adds disgust; five classes) and SEED-VII are further class sets on the same page, not
+  filed yet (split_log, 提议). New concrete paradigm (curator_e, sprint 2, 2026-10-03, D-057); all sources unverified. Sprint
+  3 (curator_d, 2026-10-05): first_source written from bibliographic search (OpenAlex, 2026-10-05); candidate origin found
+  by bibliographic search; content unverified. EmotionMeter is the paper the SEED homepage asks SEED-IV users to cite (four
+  classes happy/sad/fear/neutral, EEG + eye tracking); OpenAlex publication year 2018 (online first), print 49(3) is 2019
+  - year written 2019 (OpenAlex lists PMID 29994384; not added). [maintainer sprint 3, 2026-10-07] bibliography confirmed
+  (OpenAlex, 2026-10-05; origin candidate, content unverified). [maintainer sprint 3, 2026-10-07, D-073] origin candidate
+  recalled, record confirmed via OpenAlex.'
+status: draft
+contributors:
+- curator_e

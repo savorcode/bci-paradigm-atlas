@@ -1,0 +1,52 @@
+schema_version: '0.2'
+id: MEM-CD-002
+class: MEM-CD
+name:
+  en: Delayed estimation (continuous report)
+  zh: 延迟估计（连续报告）
+aliases:
+- delayed estimation
+- continuous report
+- colour wheel task
+family: memory
+bci_category:
+- none
+recording_modality:
+- EEG
+stimulus_modality:
+- visual
+markers:
+- MK.CDA
+description:
+  en: A memory array of simple items is followed by a retention interval, after which one location is probed and participants
+    reproduce the remembered feature of that item on a continuous scale (for example by selecting a colour on a colour wheel
+    or adjusting an orientation). The error distribution separates the precision of memory from the probability of having
+    stored the item; delay-period EEG activity such as the CDA is related to memory load and precision.
+  zh: 记忆阵列之后是保持期，随后探测一个位置，被试在连续量尺上复现该项目被记住的特征（如在色轮上选颜色或调整朝向）。误差分布把记忆精度与存储概率分开；保持期 EEG 活动（如 CDA）与记忆负荷和精度相关。
+trial_structure:
+  conditions:
+  - set size (parameter)
+  - probed item (continuous report)
+protocol:
+  n_classes: 1
+  classes:
+  - continuous feature report of the probed item
+  cue: memory array, then a location probe and a continuous response scale (colour wheel or orientation)
+  paradigm_timing: synchronous
+  feedback: none
+  distinguishing: 准则 1：报告空间由“有/无变化”二择（MEM-CD-001）变为对被探测项目特征的连续复现；刺激与时序同 -001。
+first_source:
+  citation: 'Cohen-Dallal H, Markus O, Pertzov Y. Adaptive visual working memory: Expecting a delayed estimation task enhances
+    visual working memory precision. Journal of Experimental Psychology: Human Perception and Performance. 2022;49(1):7-21.'
+  doi: 10.1037/xhp0001066
+  pmid: '36355704'
+  year: 2022
+  verified: false
+notes: 'Former variant of MEM-CD-001 (proposed candidate MEM-DE-001, merged by D-044; ID retired, not revived). first_source
+  is the variant''s source (R1209, title and PMID only), not necessarily the origin: Wilken & Ma 2004 (R0267, listed under
+  MEM-CD-001) should be checked as the earliest delayed-estimation study. Leads: R1209, R1210, R0267, R0402, R0597. (R####
+  = curation/literature.csv; DN## = curation/work/pkg_D/new_leads.csv.) Numbering criterion (D-057): 1. bibliography corrected
+  (OpenAlex, 2026-10-05)'
+status: draft
+contributors:
+- curator_d

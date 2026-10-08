@@ -1,0 +1,52 @@
+schema_version: '0.2'
+id: ERR-PCL-001
+class: ERR-PCL
+name:
+  en: Probabilistic classification learning
+  zh: 概率分类学习（天气预报任务）
+aliases:
+- WPT
+- Weather Prediction
+- Weather Prediction Task
+family: error
+bci_category:
+- none
+recording_modality:
+- fMRI
+stimulus_modality:
+- visual
+markers:
+- MK.BOLD_striatum_reward
+description:
+  en: On each trial participants see a combination of cue cards and predict one of two outcomes (e.g., rain or sunshine),
+    each cue being only probabilistically related to the outcome, and they learn from feedback. Learning of the probabilistic
+    categories is accompanied by striatal BOLD activity.
+  zh: 每个试次中，被试看到若干线索卡片的组合并预测两种结果之一（如下雨或晴天），每张卡片与结果之间只有概率性关联，被试依据反馈学习。概率性类别的学习伴随纹状体 BOLD 活动。
+trial_structure:
+  conditions:
+  - rain
+  - sunshine
+protocol:
+  n_classes: 2
+  classes:
+  - rain
+  - sunshine
+  cue: combinations of cue cards, each probabilistically related to one of two outcomes
+  paradigm_timing: synchronous
+  feedback: discrete
+  distinguishing: 标准配置（最早发表）：天气预报任务，卡片组合概率性地预测两种结果之一，每次预测后给反馈（Knowlton et al. 1994，R0118）。本包仅此一个配置。
+first_source:
+  citation: Knowlton BJ, Squire LR, Gluck MA. Probabilistic classification learning in amnesia. Learning & Memory. 1994;1(2):106-120.
+  doi: 10.1101/lm.1.2.106
+  pmid: '10467589'
+  year: 1994
+  verified: false
+interop:
+  bids_task: weatherprediction
+notes: 'HED task page: https://www.hedtags.org/hed-task/tasks/hedtsk_probabilistic_classification_learning.html. Leads used:
+  R0118; R0182; R0406. first_source lead: R0118. fMRI lead: R0182. Review: R0406. Pass 1 skeleton (curator_c, 2026-10-03);
+  all sources unverified. Sprint 2 (D-057): protocol added; single configuration, no split. bibliography corrected (Crossref,
+  2026-10-05)'
+status: draft
+contributors:
+- curator_c

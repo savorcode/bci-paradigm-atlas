@@ -1,0 +1,22 @@
+schema_version: "0.2"
+id: MK.RREP
+name:
+  en: Respiratory-related evoked potential
+  zh: 呼吸相关诱发电位
+aliases:
+- RREP
+- respiratory-related evoked potential
+type: erp_component
+recording_modality:
+- EEG
+signature:
+  topography: centro-parietal
+description:
+  en: Evoked potential to brief inspiratory occlusions or resistive loads, reflecting cortical processing of respiratory mechanosensory
+    afferents.
+  zh: 对短暂吸气阻断或阻力负荷产生的诱发电位，反映皮层对呼吸机械感觉传入的加工。
+notes: First-pass skeleton by package A (2026-10-03). No generators/indexes yet. Signature values are textbook-level approximations
+  and await source checking. New marker requested by package A (curation/work/pkg_A/marker_requests.csv); not yet in curation/registry/markers.csv.
+status: draft
+contributors:
+- curator_a

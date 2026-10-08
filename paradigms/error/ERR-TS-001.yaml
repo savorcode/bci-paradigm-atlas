@@ -1,0 +1,59 @@
+schema_version: '0.2'
+id: ERR-TS-001
+class: ERR-TS
+name:
+  en: Two-stage decision task
+  zh: 两阶段决策（基于模型/无模型）
+aliases:
+- Daw Task
+- MB/MF Task
+- Two-Step Task
+family: error
+bci_category:
+- none
+recording_modality:
+- fMRI
+- EEG
+stimulus_modality:
+- visual
+markers:
+- MK.BOLD_striatum_reward
+- MK.FRN
+description:
+  en: Participants make a first-stage choice that leads probabilistically (via common or rare transitions) to one of two second-stage
+    states, where a second choice yields reward with slowly drifting probabilities. Stay/switch behaviour after rare transitions
+    separates model-based from model-free control, and striatal BOLD prediction errors reflect both.
+  zh: 被试在第一阶段做出选择，该选择按概率（常见或罕见转移）进入两个第二阶段状态之一，在第二阶段再做选择并以缓慢漂移的概率获得奖赏。罕见转移后的保持/转换行为可区分基于模型与无模型控制，纹状体 BOLD 预测误差同时反映二者。
+trial_structure:
+  conditions:
+  - common transition
+  - rare transition
+protocol:
+  n_classes: 4
+  classes:
+  - common transition, rewarded
+  - common transition, unrewarded
+  - rare transition, rewarded
+  - rare transition, unrewarded
+  cue: first-stage choice between two options leading probabilistically (common/rare) to one of two second-stage states; second-stage
+    choice rewarded with slowly drifting probabilities
+  paradigm_timing: synchronous
+  feedback: discrete
+  distinguishing: 标准配置（公认标准两步任务）：第一阶段选择以常见/罕见转移进入第二阶段，第二阶段奖赏概率缓慢漂移（Daw et al. 2011，R0510）。
+first_source:
+  citation: Daw ND, Gershman SJ, Seymour B, Dayan P, Dolan RJ. Model-Based Influences on Humans' Choices and Striatal Prediction
+    Errors. Neuron. 2011;69(6):1204-1215.
+  doi: 10.1016/j.neuron.2011.02.027
+  pmid: '21435563'
+  year: 2011
+  verified: false
+interop:
+  bids_task: twostep
+notes: 'HED task page: https://www.hedtags.org/hed-task/tasks/hedtsk_two_stage_decision.html. Leads used: R0510; R0482; R0572.
+  first_source lead: R0510. R0482 (Gläscher et al. 2010) is an earlier related two-stage design without reward drift; R0510
+  introduced the standard two-step task. Review: R0572. Pass 1 skeleton (curator_c, 2026-10-03); all sources unverified. Sprint
+  2 (D-057): protocol added; the deterministic-transition two-stage task (Kool et al. 2016, R0692) added as ERR-TS-002. Gläscher
+  et al. 2010 (R0482) logged as a proposal in split_log (configuration not checked). bibliography corrected (Crossref, 2026-10-05)'
+status: draft
+contributors:
+- curator_c
