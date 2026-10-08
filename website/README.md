@@ -35,3 +35,9 @@ Design references: LeRobot on Hugging Face (https://huggingface.co/lerobot) and 
 ## Knowledge-graph hero
 
 The unlabeled automatic canvas animation uses a curated v0.1.0 subset of real paradigm → marker, region → marker and marker → construct relationships embedded in `main.js`. Circles, hubs, squares and diamonds distinguish entity kinds. Curved links carry quiet pulses; the force-derived layout gently drifts in depth. Positions, sizes and motion are artistic, not measurements, evidence strengths or a complete graph. No pointer interaction is required.
+
+## Bilingual pages and quickstart layout
+
+`index.html` is the default English page; `zh.html` is the Chinese page. Both share `main.js`, `style.css`, the hero canvas and the bilingual `catalog.json`. The top-right language link preserves the current section anchor. Update both static pages together; task examples and interface messages are localized in the shared script. Catalog English names and descriptions come from the source YAML, not machine-generated placeholders.
+
+Section 04 uses three equal-width, row-aligned step cards above a shared terminal and export-illustration row. It collapses to a single column on mobile. External actions have explicit outlined buttons and an outward arrow; they open in a new tab with `noopener noreferrer`.
