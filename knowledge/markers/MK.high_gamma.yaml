@@ -23,7 +23,7 @@ generators:
 - region: BR.sensorimotor_cortex
   evidence: B
   sources:
-  - citation: Crone NE, et al. Functional mapping of human sensorimotor cortex with electrocorticographic spectral analysis.
+  - citation: Crone NE, Miglioretti DL, Gordon B, et al. Functional mapping of human sensorimotor cortex with electrocorticographic spectral analysis.
       II. Event-related synchronization in the gamma band. Brain. 1998;121(12):2301-2315.
     doi: 10.1093/brain/121.12.2301
     year: 1998
@@ -52,7 +52,7 @@ indexes:
   relation: power increases focally and somatotopically during movement
   evidence: B
   sources:
-  - citation: Crone NE, et al. Functional mapping of human sensorimotor cortex with electrocorticographic spectral analysis.
+  - citation: Crone NE, Miglioretti DL, Gordon B, et al. Functional mapping of human sensorimotor cortex with electrocorticographic spectral analysis.
       II. Event-related synchronization in the gamma band. Brain. 1998;121(12):2301-2315.
     doi: 10.1093/brain/121.12.2301
     year: 1998

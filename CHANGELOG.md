@@ -7,6 +7,12 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/),
 
 ## [Unreleased]
 
+### Added / 新增
+- Knowledge layer (sprint 4): construct vocabulary 6 → 81 (IDs aligned with the paradigm factory; 53 mapped to Cognitive Atlas); region vocabulary 5 → 43 (MNI152, with Brodmann / AAL3 / HCP-MMP1.0 correspondences); generators and indexes for 50 widely used markers (92 generator links, 142 index links, grades A 74 / B 103 / C 57), every link with at least one Crossref/OpenAlex-checked source; 215 new literature leads (R1344–R1558). Decisions D-075, D-076; report `curation/reports/knowledge_layer_sprint4.md`.
+  知识层（第四冲刺）：构念词表 6 → 81（ID 与范式工厂一致，53 个对齐 Cognitive Atlas）；脑区词表 5 → 43（MNI152，附 Brodmann / AAL3 / HCP-MMP1.0 对应）；为 50 个常用标记物补生成源 92 条、反映构念 142 条（A 74 / B 103 / C 57），每条至少一条经 Crossref/OpenAlex 检索确认的出处；新增文献线索 215 条（R1344–R1558）。决策 D-075、D-076；报告见 `curation/reports/knowledge_layer_sprint4.md`。
+- Schema: optional `atlas_refs`, `coordinate_space`, `sources`, `notes` for vocabulary terms.
+  schema：词表条目新增可选字段 `atlas_refs`、`coordinate_space`、`sources`、`notes`。
+
 ## [0.1.0] - 2026-10-08
 
 First feature release after v0.0.1. The three seed paradigms grow into an atlas covering all 12 paradigm families, with two-level paradigm identifiers (schema 0.2) and a reproducible `protocol` for every concrete paradigm. Counts: 267 paradigm classes, 405 concrete paradigm files (404 active, 1 deprecated; all active ones with `protocol`), 129 markers, 294 candidates, 1,322 literature leads, 1,626 paradigm–literature links. All 682 first sources (404 concrete paradigms, 267 classes, 11 variants) were checked against Crossref/OpenAlex: 168 confirmed, 379 corrected, 88 TBD resolved, 12 TBD open, 35 not found, 0 mismatches; first sources TBD: 9 concrete paradigms, 3 classes. Content verification against the full text has not been done yet, so `verified: true` is 0 and every entry is `draft`. Identifier meanings are frozen from this release (D-063). The work was organised internally in three milestones: M1 first-pass skeletons (2026-10-03), M2 two-level identifiers and protocols (2026-10-05), M3 bibliographic verification (2026-10-07). Release notes: `curation/reports/release_v0.1.0.md`.

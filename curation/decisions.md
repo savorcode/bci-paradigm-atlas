@@ -773,3 +773,20 @@
   - **TBD 仍开放**（12 行，9 个具体范式 + 3 个类）：SSR-SWEEP-001 / SSR-SWEEP、CTL-FLK-002、CTL-SIM-002、CTL-STR-002、CTL-SW-003、ERR-AAF-001 / ERR-AAF、ERR-ERRP-003、ERR-GAM-002、MEM-PA-001 / MEM-PA。
 - **提议**：全部转入第四冲刺，前提是取得机构数据库访问（Web of Science / Scopus / PsycINFO 或图书馆代理），以及 Crossref 的 polite pool（mailto 参数）或 OpenAlex API key 以避开限流。顺序：先做包 C 的 15 行"未检查"（书目检索即可），再做手册 / 指南（改用 WorldCat / 出版社记录，接受无 DOI 的完整书目），最后做 TBD 开放行（D-031 口径，需读原文）。
 - **影响**：`coverage_M3.md` 的 TBD 计数（具体范式 9、范式类 3）即为 TBD 开放行；47 行在 `sources_check.csv` 中保留原 note 不动，第四冲刺在同一文件追加新行（不覆盖）。
+
+## 二十二、知识层（第四冲刺）
+
+### D-075 知识层约定：ID 与工厂对齐、脑区图谱对应、生成源方法（草案，待负责人确认）
+> 状态：草案，待负责人确认
+- **构念**：`knowledge/constructs.yaml` 6 → 81 个，ID 直接沿用范式工厂（工厂 37 个 + `bridge.yaml` constructs_extra 42 个 + 图谱原有 6 个，去重；11 个领域根节点）。非根节点 70 个中 53 个对齐 Cognitive Atlas（`cognitive_atlas: "<trm_id> (<名称>)"`），17 个暂无对应。图谱原有的 `CN.novelty_orienting`、`CN.sustained_visual_attention` 保留，挂在 `CN.orienting`、`CN.sustained_attention` 之下（工厂 `construct_alias` 照旧生效）。
+- **脑区**：`knowledge/regions.yaml` 5 → 43 个（工厂 23 + 图谱原有 5 + 新增 15），坐标空间统一为 MNI152；每个脑区用 `atlas_refs` 给出 Brodmann（34 个有）、AAL3（42 个）、HCP-MMP1.0（35 个）的对应标签，对应关系为近似。`BR.STN` 无 AAL3 标签；`BR.dACC` 用 AAL3 `ACC_sup`，置信度低。
+- **生成源**：`generators[].note` 以 `method: intracranial | lesion | EEG-fMRI | MEG/EEG source | fMRI localization | scalp topography` 开头，证据等级按方法上限：颅内 / 损伤可到 A，EEG-fMRI 与源定位一般 B，仅头皮分布最高 C。
+- **出处**：每条关联至少一条出处，DOI 经 Crossref 或 OpenAlex 检索确认（书目核实），`verified: false`（内容核实未做，D-072 口径）。
+- **理由**：ID 一致，工厂 `attach_atlas` 即可让图谱证据直接覆盖桥接表的 D 级临时值，不需要再加别名。
+- **影响**：schema `vocabulary.schema.json` 新增可选字段 `atlas_refs`、`coordinate_space`、`sources`、`notes`。
+
+### D-076 词表申请与 TPJ 重复 ID（草案，待负责人确认）
+> 状态：草案，待负责人确认
+- **词表申请 11 条**（策展人先映射到最近的已有 ID，见 `curation/work/sprint4/markers_*/vocab_requests.csv`）：脑区 `BR.OFA`（枕叶面孔区，现映射 BR.LOC）、`BR.SEF`（辅助眼区，现映射 BR.SMA / BR.preSMA）；构念 `CN.perceptual_learning`、`CN.perceptual_discrimination`、`CN.auditory_selective_attention`、`CN.emotion_regulation`、`CN.approach_motivation`、`CN.empathy`、`CN.social_decision`、`CN.reward_anticipation`、`CN.voice_perception`。
+- **提议**：11 条全部新增，下一轮同时在工厂 `bridge.yaml` 加同名构念 / 脑区，再把对应关联改挂到新 ID。
+- **TPJ 重复**：`BR.TPJ`（工厂）与 `BR.temporoparietal_junction`（图谱原有）是同一脑区。本轮两者都保留并在 notes 中互注；提议图谱今后只用 `BR.TPJ`，原 ID 标为 deprecated，工厂加 `region_alias`。
