@@ -1,0 +1,860 @@
+{
+ "constructs": {
+  "CN.perception": {
+   "src": "factory",
+   "zh": "感知",
+   "en": "perception",
+   "parent": null,
+   "cogatlas": null,
+   "domain": "感知",
+   "desc": "从感觉输入中构建对外部世界的表征"
+  },
+  "CN.attention": {
+   "src": "factory",
+   "zh": "注意",
+   "en": "attention",
+   "parent": null,
+   "cogatlas": null,
+   "domain": "注意",
+   "desc": "在有限加工资源下选择与放大相关信息"
+  },
+  "CN.memory": {
+   "src": "factory",
+   "zh": "记忆",
+   "en": "memory",
+   "parent": null,
+   "cogatlas": null,
+   "domain": "记忆",
+   "desc": "信息的保持、更新与提取"
+  },
+  "CN.language": {
+   "src": "factory",
+   "zh": "语言",
+   "en": "language",
+   "parent": null,
+   "cogatlas": null,
+   "domain": "语言",
+   "desc": "词汇、句法与语义的理解和产生"
+  },
+  "CN.cognitive_control": {
+   "src": "factory",
+   "zh": "认知控制",
+   "en": "cognitive control",
+   "parent": null,
+   "cogatlas": null,
+   "domain": "执行控制",
+   "desc": "监测冲突与错误、调整行为以实现目标"
+  },
+  "CN.motor": {
+   "src": "factory",
+   "zh": "运动",
+   "en": "motor control",
+   "parent": null,
+   "cogatlas": null,
+   "domain": "运动",
+   "desc": "动作的准备、执行与想象"
+  },
+  "CN.affect": {
+   "src": "factory",
+   "zh": "价值与情绪",
+   "en": "affect and valuation",
+   "parent": null,
+   "cogatlas": null,
+   "domain": "价值与情绪",
+   "desc": "对结果与刺激的评价、动机与情绪反应"
+  },
+  "CN.mental_imagery": {
+   "src": "factory",
+   "zh": "心理意象",
+   "en": "mental imagery",
+   "parent": null,
+   "cogatlas": null,
+   "domain": "意象",
+   "desc": "在没有外部刺激时生成的类知觉表征"
+  },
+  "CN.hmi": {
+   "src": "factory",
+   "zh": "人机交互认知",
+   "en": "human-machine interaction",
+   "parent": null,
+   "cogatlas": null,
+   "domain": "人机交互",
+   "desc": "人对机器行为的感知、评价与意图表达"
+  },
+  "CN.brain_state": {
+   "src": "factory",
+   "zh": "脑状态",
+   "en": "brain state",
+   "parent": null,
+   "cogatlas": null,
+   "domain": "状态",
+   "desc": "唤醒、警觉与大尺度节律状态"
+  },
+  "CN.early_visual": {
+   "src": "factory",
+   "zh": "早期视觉加工",
+   "en": "early visual processing",
+   "parent": "CN.perception",
+   "cogatlas": "visual perception",
+   "domain": "感知",
+   "desc": "初级与次级视皮层对亮度、对比度、空间频率等低级特征的加工，约刺激后 100 ms 内"
+  },
+  "CN.object_recognition": {
+   "src": "factory",
+   "zh": "物体识别",
+   "en": "visual object recognition",
+   "parent": "CN.perception",
+   "cogatlas": "object recognition",
+   "domain": "感知",
+   "desc": "腹侧视觉通路把特征整合为类别与个体表征；可从 100–200 ms 的脑电模式中解码物体类别"
+  },
+  "CN.face_perception": {
+   "src": "factory",
+   "zh": "面孔知觉",
+   "en": "face perception",
+   "parent": "CN.object_recognition",
+   "cogatlas": "face perception",
+   "domain": "感知",
+   "desc": "对面孔结构的专门化加工，相对其他物体类别在枕颞区诱发更大的 N170"
+  },
+  "CN.auditory_change": {
+   "src": "factory",
+   "zh": "听觉变化检测",
+   "en": "auditory change detection",
+   "parent": "CN.perception",
+   "cogatlas": "auditory deviance detection",
+   "domain": "感知",
+   "desc": "听觉皮层基于感觉记忆自动比较当前输入与规律模型，偏离时产生预测误差信号，不依赖注意"
+  },
+  "CN.neural_entrainment": {
+   "src": "factory",
+   "zh": "神经节律跟随",
+   "en": "neural entrainment",
+   "parent": "CN.perception",
+   "cogatlas": null,
+   "domain": "感知",
+   "desc": "感觉皮层活动被周期性刺激锁相驱动，产生与刺激频率一致的稳态响应"
+  },
+  "CN.spatial_attention": {
+   "src": "factory",
+   "zh": "空间选择性注意",
+   "en": "spatial selective attention",
+   "parent": "CN.attention",
+   "cogatlas": "spatial selective attention",
+   "domain": "注意",
+   "desc": "对被注意位置的感觉增益调制，表现为 P1/N1 幅值增大"
+  },
+  "CN.target_selection": {
+   "src": "factory",
+   "zh": "目标选择",
+   "en": "attentional target selection",
+   "parent": "CN.attention",
+   "cogatlas": "visual search",
+   "domain": "注意",
+   "desc": "在干扰物中把注意分配到目标上并抑制周围干扰，对侧枕颞区出现 N2pc"
+  },
+  "CN.orienting": {
+   "src": "factory",
+   "zh": "注意定向（非自主）",
+   "en": "involuntary orienting",
+   "parent": "CN.attention",
+   "cogatlas": "orienting",
+   "domain": "注意",
+   "desc": "新异或突显刺激自动捕获注意，额中央 P3a"
+  },
+  "CN.sustained_attention": {
+   "src": "factory",
+   "zh": "持续注意",
+   "en": "sustained attention",
+   "parent": "CN.attention",
+   "cogatlas": "sustained attention",
+   "domain": "注意",
+   "desc": "长时间维持对任务的警觉，与后部 alpha 与额中线 theta 的缓慢漂移相关"
+  },
+  "CN.context_updating": {
+   "src": "factory+atlas",
+   "zh": "情境更新",
+   "en": "context updating",
+   "parent": "CN.memory",
+   "cogatlas": "context updating",
+   "domain": "记忆",
+   "desc": "当输入与当前情境模型不符且与任务相关时更新工作记忆表征；P3b 的经典解释（Donchin 情境更新理论）"
+  },
+  "CN.working_memory": {
+   "src": "factory",
+   "zh": "工作记忆",
+   "en": "working memory",
+   "parent": "CN.memory",
+   "cogatlas": "working memory",
+   "domain": "记忆",
+   "desc": "在短时间内保持并操作信息；负荷升高时额中线 theta 增强、后部 alpha 变化"
+  },
+  "CN.semantic_integration": {
+   "src": "factory",
+   "zh": "语义整合",
+   "en": "semantic integration",
+   "parent": "CN.language",
+   "cogatlas": "semantic processing",
+   "domain": "语言",
+   "desc": "把当前词与语境的语义表征整合 / 对语义的可预测性敏感；越难整合或越不可预测，N400 越负"
+  },
+  "CN.syntactic_processing": {
+   "src": "factory",
+   "zh": "句法加工",
+   "en": "syntactic processing",
+   "parent": "CN.language",
+   "cogatlas": "syntactic processing",
+   "domain": "语言",
+   "desc": "句法结构的构建与违例后的再分析，常见晚期正波 P600"
+  },
+  "CN.inner_speech": {
+   "src": "factory",
+   "zh": "内部言语",
+   "en": "inner speech",
+   "parent": "CN.language",
+   "cogatlas": "inner speech",
+   "domain": "语言",
+   "desc": "不发声的言语生成（默述），与言语运动计划和听觉预测相关；脑电中易受口周肌电污染"
+  },
+  "CN.conflict_monitoring": {
+   "src": "factory",
+   "zh": "冲突监测",
+   "en": "conflict monitoring",
+   "parent": "CN.cognitive_control",
+   "cogatlas": "conflict detection",
+   "domain": "执行控制",
+   "desc": "多个反应倾向同时激活时由内侧额叶检测冲突，表现为额中央 N2 与 theta 增强"
+  },
+  "CN.error_monitoring": {
+   "src": "factory",
+   "zh": "错误监测",
+   "en": "error monitoring",
+   "parent": "CN.cognitive_control",
+   "cogatlas": "error detection",
+   "domain": "执行控制",
+   "desc": "自己犯错后 0–100 ms 的错误相关负波（ERN）与随后的错误意识相关正波（Pe）"
+  },
+  "CN.response_inhibition": {
+   "src": "factory",
+   "zh": "反应抑制",
+   "en": "response inhibition",
+   "parent": "CN.cognitive_control",
+   "cogatlas": "response inhibition",
+   "domain": "执行控制",
+   "desc": "撤回已准备好的优势反应；Go/NoGo 中 NoGo-N2 与 NoGo-P3"
+  },
+  "CN.anticipation": {
+   "src": "factory",
+   "zh": "预期与准备",
+   "en": "anticipatory preparation",
+   "parent": "CN.cognitive_control",
+   "cogatlas": "anticipation",
+   "domain": "执行控制",
+   "desc": "警告信号与命令信号之间对即将到来事件的准备，慢电位 CNV"
+  },
+  "CN.motor_preparation": {
+   "src": "factory",
+   "zh": "运动准备",
+   "en": "motor preparation",
+   "parent": "CN.motor",
+   "cogatlas": "response selection",
+   "domain": "运动",
+   "desc": "选择并准备特定效应器的动作，偏侧化准备电位 LRP"
+  },
+  "CN.motor_imagery": {
+   "src": "factory+atlas",
+   "zh": "运动想象",
+   "en": "motor imagery",
+   "parent": "CN.motor",
+   "cogatlas": "motor imagery",
+   "domain": "运动",
+   "desc": "在不执行的情况下模拟动作；对侧感觉运动区 mu / beta 节律去同步化（ERD）"
+  },
+  "CN.reward_prediction_error": {
+   "src": "factory",
+   "zh": "奖赏预测误差",
+   "en": "reward prediction error",
+   "parent": "CN.affect",
+   "cogatlas": "reward processing",
+   "domain": "价值与情绪",
+   "desc": "结果好于或差于预期的信号；反馈相关负波 / 奖赏正波（FRN / RewP）"
+  },
+  "CN.emotional_salience": {
+   "src": "factory",
+   "zh": "情绪显著性",
+   "en": "emotional salience",
+   "parent": "CN.affect",
+   "cogatlas": "emotional arousal",
+   "domain": "价值与情绪",
+   "desc": "情绪性刺激获得持续的动机性注意，晚正电位 LPP 增大"
+  },
+  "CN.visual_imagery": {
+   "src": "factory",
+   "zh": "视觉意象",
+   "en": "visual mental imagery",
+   "parent": "CN.mental_imagery",
+   "cogatlas": "visual imagery",
+   "domain": "意象",
+   "desc": "由记忆或语言驱动、在视觉皮层中重建的类知觉表征；与知觉共享部分表征但信噪比低"
+  },
+  "CN.language_to_imagery": {
+   "src": "factory",
+   "zh": "语言驱动的意象生成",
+   "en": "language-guided imagery",
+   "parent": "CN.visual_imagery",
+   "cogatlas": null,
+   "domain": "意象",
+   "desc": "从文本描述构建场景意象，涉及语义记忆检索与视觉表征的组合"
+  },
+  "CN.machine_error_perception": {
+   "src": "factory",
+   "zh": "机器错误感知",
+   "en": "perception of machine errors",
+   "parent": "CN.hmi",
+   "cogatlas": null,
+   "domain": "人机交互",
+   "desc": "观察机器（机械臂、BCI 反馈、自动驾驶）偏离预期时产生的错误相关电位，可作为人给机器的隐式标签"
+  },
+  "CN.intent_selection": {
+   "src": "factory",
+   "zh": "意图选择",
+   "en": "intent selection",
+   "parent": "CN.hmi",
+   "cogatlas": null,
+   "domain": "人机交互",
+   "desc": "在多个选项中通过注意或想象表达选择意图，是字符拼写、目标选择类 BCI 的基础"
+  },
+  "CN.cortical_idling": {
+   "src": "factory",
+   "zh": "皮层静息节律",
+   "en": "cortical idling / alpha state",
+   "parent": "CN.brain_state",
+   "cogatlas": "resting state",
+   "domain": "状态",
+   "desc": "闭眼与内部注意时后部 alpha 增强（Berger 效应），反映对感觉输入的功能性抑制"
+  },
+  "CN.early_auditory": {
+   "src": "bridge",
+   "zh": "早期听觉加工",
+   "en": "Early auditory processing",
+   "parent": "CN.perception",
+   "domain": "感知"
+  },
+  "CN.somatosensation": {
+   "src": "bridge",
+   "zh": "体感与痛觉",
+   "en": "Somatosensation and nociception",
+   "parent": "CN.perception",
+   "domain": "感知"
+  },
+  "CN.chemosensation": {
+   "src": "bridge",
+   "zh": "嗅觉与味觉",
+   "en": "Chemosensation",
+   "parent": "CN.perception",
+   "domain": "感知"
+  },
+  "CN.sensory_gating": {
+   "src": "bridge",
+   "zh": "感觉门控",
+   "en": "Sensory gating",
+   "parent": "CN.perception",
+   "domain": "感知"
+  },
+  "CN.interoception": {
+   "src": "bridge",
+   "zh": "内感受",
+   "en": "Interoception",
+   "parent": "CN.perception",
+   "domain": "感知"
+  },
+  "CN.multisensory_integration": {
+   "src": "bridge",
+   "zh": "多感觉整合",
+   "en": "Multisensory integration",
+   "parent": "CN.perception",
+   "domain": "感知"
+  },
+  "CN.perceptual_awareness": {
+   "src": "bridge",
+   "zh": "知觉觉知",
+   "en": "Perceptual awareness",
+   "parent": "CN.perception",
+   "domain": "感知"
+  },
+  "CN.perceptual_organization": {
+   "src": "bridge",
+   "zh": "知觉组织",
+   "en": "Perceptual organization",
+   "parent": "CN.perception",
+   "domain": "感知"
+  },
+  "CN.prediction_violation": {
+   "src": "bridge",
+   "zh": "感觉预测与预测误差",
+   "en": "Sensory prediction error",
+   "parent": "CN.perception",
+   "domain": "感知"
+  },
+  "CN.attention_allocation": {
+   "src": "bridge+atlas",
+   "zh": "注意资源分配",
+   "en": "Attention allocation",
+   "parent": "CN.attention",
+   "domain": "注意"
+  },
+  "CN.distractor_suppression": {
+   "src": "bridge",
+   "zh": "干扰抑制",
+   "en": "Distractor suppression",
+   "parent": "CN.attention",
+   "domain": "注意"
+  },
+  "CN.episodic_encoding": {
+   "src": "bridge",
+   "zh": "情景记忆编码",
+   "en": "Episodic memory encoding",
+   "parent": "CN.memory",
+   "domain": "记忆"
+  },
+  "CN.recognition_memory": {
+   "src": "bridge",
+   "zh": "再认记忆（熟悉感与回想）",
+   "en": "Recognition memory",
+   "parent": "CN.memory",
+   "domain": "记忆"
+  },
+  "CN.prospective_memory": {
+   "src": "bridge",
+   "zh": "前瞻记忆",
+   "en": "Prospective memory",
+   "parent": "CN.memory",
+   "domain": "记忆"
+  },
+  "CN.spatial_navigation": {
+   "src": "bridge",
+   "zh": "空间导航与关系记忆",
+   "en": "Spatial navigation",
+   "parent": "CN.memory",
+   "domain": "记忆"
+  },
+  "CN.memory_consolidation": {
+   "src": "bridge",
+   "zh": "记忆巩固（睡眠）",
+   "en": "Memory consolidation",
+   "parent": "CN.memory",
+   "domain": "记忆"
+  },
+  "CN.speech_tracking": {
+   "src": "bridge",
+   "zh": "言语与语言结构跟踪",
+   "en": "Speech and linguistic structure tracking",
+   "parent": "CN.language",
+   "domain": "语言"
+  },
+  "CN.phonological_processing": {
+   "src": "bridge",
+   "zh": "语音加工",
+   "en": "Phonological processing",
+   "parent": "CN.language",
+   "domain": "语言"
+  },
+  "CN.prosody": {
+   "src": "bridge",
+   "zh": "韵律加工",
+   "en": "Prosodic processing",
+   "parent": "CN.language",
+   "domain": "语言"
+  },
+  "CN.speech_production": {
+   "src": "bridge",
+   "zh": "言语产生",
+   "en": "Speech production",
+   "parent": "CN.language",
+   "domain": "语言"
+  },
+  "CN.task_switching": {
+   "src": "bridge",
+   "zh": "任务切换",
+   "en": "Task switching",
+   "parent": "CN.cognitive_control",
+   "domain": "执行控制"
+  },
+  "CN.evidence_accumulation": {
+   "src": "bridge",
+   "zh": "证据累积（知觉决策）",
+   "en": "Evidence accumulation",
+   "parent": "CN.cognitive_control",
+   "domain": "执行控制"
+  },
+  "CN.metacognition": {
+   "src": "bridge",
+   "zh": "元认知与决策信心",
+   "en": "Metacognition",
+   "parent": "CN.cognitive_control",
+   "domain": "执行控制"
+  },
+  "CN.motor_execution": {
+   "src": "bridge+atlas",
+   "zh": "运动执行",
+   "en": "Motor execution",
+   "parent": "CN.motor",
+   "domain": "运动"
+  },
+  "CN.movement_kinematics": {
+   "src": "bridge",
+   "zh": "运动学与连续运动控制",
+   "en": "Movement kinematics",
+   "parent": "CN.motor",
+   "domain": "运动"
+  },
+  "CN.sensorimotor_integration": {
+   "src": "bridge",
+   "zh": "感觉运动整合",
+   "en": "Sensorimotor integration",
+   "parent": "CN.motor",
+   "domain": "运动"
+  },
+  "CN.value_decision": {
+   "src": "bridge",
+   "zh": "价值与风险决策",
+   "en": "Value-based decision",
+   "parent": "CN.affect",
+   "domain": "价值与情绪"
+  },
+  "CN.threat_fear": {
+   "src": "bridge",
+   "zh": "威胁与恐惧",
+   "en": "Threat and fear",
+   "parent": "CN.affect",
+   "domain": "价值与情绪"
+  },
+  "CN.emotional_state": {
+   "src": "bridge",
+   "zh": "情绪状态与效价",
+   "en": "Emotional state and valence",
+   "parent": "CN.affect",
+   "domain": "价值与情绪"
+  },
+  "CN.auditory_imagery": {
+   "src": "bridge",
+   "zh": "听觉意象",
+   "en": "Auditory imagery",
+   "parent": "CN.mental_imagery",
+   "domain": "意象"
+  },
+  "CN.mental_arithmetic": {
+   "src": "bridge",
+   "zh": "心算与心理操作",
+   "en": "Mental arithmetic",
+   "parent": "CN.mental_imagery",
+   "domain": "意象"
+  },
+  "CN.social": {
+   "src": "bridge",
+   "zh": "社会认知",
+   "en": "Social cognition",
+   "parent": null,
+   "domain": "社会认知"
+  },
+  "CN.mentalizing": {
+   "src": "bridge",
+   "zh": "心智化（心理理论）",
+   "en": "Mentalizing",
+   "parent": "CN.social",
+   "domain": "社会认知"
+  },
+  "CN.self_processing": {
+   "src": "bridge",
+   "zh": "自我相关加工",
+   "en": "Self-related processing",
+   "parent": "CN.social",
+   "domain": "社会认知"
+  },
+  "CN.social_interaction": {
+   "src": "bridge",
+   "zh": "人际协调与互动",
+   "en": "Social interaction",
+   "parent": "CN.social",
+   "domain": "社会认知"
+  },
+  "CN.social_perception": {
+   "src": "bridge",
+   "zh": "社会知觉（目光、生物运动）",
+   "en": "Social perception",
+   "parent": "CN.social",
+   "domain": "社会认知"
+  },
+  "CN.vigilance": {
+   "src": "bridge",
+   "zh": "警觉度与困倦",
+   "en": "Vigilance",
+   "parent": "CN.brain_state",
+   "domain": "状态"
+  },
+  "CN.sleep": {
+   "src": "bridge",
+   "zh": "睡眠",
+   "en": "Sleep",
+   "parent": "CN.brain_state",
+   "domain": "状态"
+  },
+  "CN.consciousness_level": {
+   "src": "bridge",
+   "zh": "意识水平",
+   "en": "Level of consciousness",
+   "parent": "CN.brain_state",
+   "domain": "状态"
+  },
+  "CN.spontaneous_thought": {
+   "src": "bridge",
+   "zh": "自发思维与默认网络",
+   "en": "Spontaneous thought",
+   "parent": "CN.brain_state",
+   "domain": "状态"
+  },
+  "CN.cortical_excitability": {
+   "src": "bridge",
+   "zh": "皮层兴奋性与刺激响应",
+   "en": "Cortical excitability",
+   "parent": "CN.brain_state",
+   "domain": "状态"
+  },
+  "CN.self_regulation": {
+   "src": "bridge",
+   "zh": "脑活动自我调节（神经反馈）",
+   "en": "Neurofeedback self-regulation",
+   "parent": "CN.brain_state",
+   "domain": "状态"
+  },
+  "CN.novelty_orienting": {
+   "src": "atlas",
+   "zh": "新异性定向",
+   "en": "Novelty orienting",
+   "desc": "Involuntary orienting of attention toward unexpected or novel stimuli."
+  },
+  "CN.sustained_visual_attention": {
+   "src": "atlas",
+   "zh": "持续视觉注意",
+   "en": "Sustained visual attention",
+   "desc": "Maintenance of attention on a visual stimulus or location over time."
+  }
+ },
+ "regions": [
+  [
+   "BR.V1",
+   "primary visual cortex (V1)",
+   "初级视皮层"
+  ],
+  [
+   "BR.extrastriate",
+   "extrastriate visual cortex (V2–V4)",
+   "纹外视皮层"
+  ],
+  [
+   "BR.LOC",
+   "lateral occipital complex",
+   "外侧枕叶复合体"
+  ],
+  [
+   "BR.FFA",
+   "fusiform face area",
+   "梭状回面孔区"
+  ],
+  [
+   "BR.pSTS",
+   "posterior superior temporal sulcus",
+   "颞上沟后部"
+  ],
+  [
+   "BR.A1",
+   "primary auditory cortex / Heschl gyrus",
+   "初级听皮层"
+  ],
+  [
+   "BR.STG",
+   "superior temporal gyrus",
+   "颞上回"
+  ],
+  [
+   "BR.MTG",
+   "left posterior middle temporal gyrus",
+   "左侧颞中回后部"
+  ],
+  [
+   "BR.ATL",
+   "anterior temporal lobe",
+   "前颞叶"
+  ],
+  [
+   "BR.IFG",
+   "inferior frontal gyrus",
+   "额下回"
+  ],
+  [
+   "BR.IPS",
+   "intraparietal sulcus",
+   "顶内沟"
+  ],
+  [
+   "BR.TPJ",
+   "temporo-parietal junction",
+   "颞顶联合区"
+  ],
+  [
+   "BR.dACC",
+   "dorsal anterior cingulate cortex",
+   "背侧前扣带回"
+  ],
+  [
+   "BR.preSMA",
+   "pre-supplementary motor area",
+   "前辅助运动区"
+  ],
+  [
+   "BR.SMA",
+   "supplementary motor area",
+   "辅助运动区"
+  ],
+  [
+   "BR.M1",
+   "primary motor cortex",
+   "初级运动皮层"
+  ],
+  [
+   "BR.S1",
+   "primary somatosensory cortex",
+   "初级体感皮层"
+  ],
+  [
+   "BR.DLPFC",
+   "dorsolateral prefrontal cortex",
+   "背外侧前额叶"
+  ],
+  [
+   "BR.vmPFC",
+   "ventromedial prefrontal / orbitofrontal cortex",
+   "腹内侧前额叶 / 眶额皮层"
+  ],
+  [
+   "BR.striatum",
+   "ventral striatum",
+   "腹侧纹状体"
+  ],
+  [
+   "BR.amygdala",
+   "amygdala",
+   "杏仁核"
+  ],
+  [
+   "BR.thalamus",
+   "thalamus",
+   "丘脑"
+  ],
+  [
+   "BR.hippocampus",
+   "hippocampus",
+   "海马"
+  ],
+  [
+   "BR.frontal_cortex",
+   "Frontal cortex",
+   "额叶皮层"
+  ],
+  [
+   "BR.parietal_cortex",
+   "Parietal cortex",
+   "顶叶皮层"
+  ],
+  [
+   "BR.temporoparietal_junction",
+   "Temporoparietal junction (atlas id; same as factory BR.TPJ)",
+   "颞顶联合区"
+  ],
+  [
+   "BR.sensorimotor_cortex",
+   "Sensorimotor cortex",
+   "感觉运动皮层"
+  ],
+  [
+   "BR.visual_cortex",
+   "Visual cortex",
+   "视觉皮层"
+  ],
+  [
+   "BR.premotor",
+   "Premotor cortex (PMd/PMv)",
+   "运动前区"
+  ],
+  [
+   "BR.FEF",
+   "Frontal eye field",
+   "额眼区"
+  ],
+  [
+   "BR.precuneus",
+   "Precuneus",
+   "楔前叶"
+  ],
+  [
+   "BR.PCC",
+   "Posterior cingulate cortex",
+   "后扣带回"
+  ],
+  [
+   "BR.dmPFC",
+   "Dorsomedial prefrontal cortex",
+   "背内侧前额叶"
+  ],
+  [
+   "BR.frontopolar",
+   "Frontopolar cortex (BA10)",
+   "额极"
+  ],
+  [
+   "BR.anterior_insula",
+   "Anterior insula",
+   "前脑岛"
+  ],
+  [
+   "BR.posterior_insula",
+   "Posterior insula",
+   "后脑岛"
+  ],
+  [
+   "BR.parahippocampal",
+   "Parahippocampal cortex / PPA",
+   "海马旁回"
+  ],
+  [
+   "BR.cerebellum",
+   "Cerebellum",
+   "小脑"
+  ],
+  [
+   "BR.STN",
+   "Subthalamic nucleus",
+   "丘脑底核"
+  ],
+  [
+   "BR.dorsal_striatum",
+   "Dorsal striatum (caudate, putamen)",
+   "背侧纹状体"
+  ],
+  [
+   "BR.MT",
+   "Middle temporal area (hMT+/V5)",
+   "颞中区运动视觉区"
+  ],
+  [
+   "BR.SII",
+   "Secondary somatosensory cortex",
+   "次级体感皮层"
+  ],
+  [
+   "BR.OFC_lateral",
+   "Lateral orbitofrontal cortex",
+   "外侧眶额皮层"
+  ]
+ ]
+}
