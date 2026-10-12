@@ -1,0 +1,111 @@
+marker,link_type,target,evidence,method,doi,record_api,note
+MK.SMR_ERD,generator,BR.sensorimotor_cortex,A,intracranial,10.1093/brain/121.12.2271,openalex+crossref,"method: intracranial; ECoG (Crone 1998), MEG source modelling (Salmelin & Hari 1994) and EEG-fMRI (Ritter 2009) converge on peri-Rolandic cortex; replicated across labs and modalities."
+MK.SMR_ERD,generator,BR.sensorimotor_cortex,A,intracranial,10.1016/0306-4522(94)90263-1,openalex,"method: intracranial; ECoG (Crone 1998), MEG source modelling (Salmelin & Hari 1994) and EEG-fMRI (Ritter 2009) converge on peri-Rolandic cortex; replicated across labs and modalities."
+MK.SMR_ERD,generator,BR.sensorimotor_cortex,A,intracranial,10.1002/hbm.20585,openalex,"method: intracranial; ECoG (Crone 1998), MEG source modelling (Salmelin & Hari 1994) and EEG-fMRI (Ritter 2009) converge on peri-Rolandic cortex; replicated across labs and modalities."
+MK.SMR_ERD,generator,BR.sensorimotor_cortex,A,intracranial,10.1016/S1388-2457(99)00141-8,openalex,"method: intracranial; ECoG (Crone 1998), MEG source modelling (Salmelin & Hari 1994) and EEG-fMRI (Ritter 2009) converge on peri-Rolandic cortex; replicated across labs and modalities."
+MK.SMR_ERD,generator,BR.M1,B,MEG/EEG source,10.1016/0306-4522(94)90263-1,openalex,method: MEG/EEG source; EEG-fMRI; beta (~20 Hz) component localised to precentral motor cortex; beta power inversely related to M1 BOLD.
+MK.SMR_ERD,generator,BR.M1,B,MEG/EEG source,10.1002/hbm.20585,openalex,method: MEG/EEG source; EEG-fMRI; beta (~20 Hz) component localised to precentral motor cortex; beta power inversely related to M1 BOLD.
+MK.SMR_ERD,generator,BR.S1,B,MEG/EEG source,10.1016/0306-4522(94)90263-1,openalex,method: MEG/EEG source; EEG-fMRI; mu (~10 Hz) component localised to postcentral somatosensory cortex; alpha power inversely related to S1 BOLD.
+MK.SMR_ERD,generator,BR.S1,B,MEG/EEG source,10.1002/hbm.20585,openalex,method: MEG/EEG source; EEG-fMRI; mu (~10 Hz) component localised to postcentral somatosensory cortex; alpha power inversely related to S1 BOLD.
+MK.SMR_ERD,index,CN.motor_execution,A,,10.1016/S1388-2457(99)00141-8,openalex,power decreases during movement preparation and execution (beta rebound after movement offset)
+MK.SMR_ERD,index,CN.motor_execution,A,,10.1093/brain/121.12.2271,openalex+crossref,power decreases during movement preparation and execution (beta rebound after movement offset)
+MK.SMR_ERD,index,CN.motor_execution,A,,10.1016/0306-4522(94)90263-1,openalex,power decreases during movement preparation and execution (beta rebound after movement offset)
+MK.SMR_ERD,index,CN.motor_imagery,A,,10.1016/S0304-3940(97)00889-6,openalex,power decreases over the contralateral sensorimotor cortex during imagined movement
+MK.SMR_ERD,index,CN.motor_imagery,A,,10.1016/j.neuroimage.2005.12.003,openalex,power decreases over the contralateral sensorimotor cortex during imagined movement
+MK.SMR_ERD,index,CN.motor_imagery,A,,10.1073/pnas.0913697107,openalex,power decreases over the contralateral sensorimotor cortex during imagined movement
+MK.SMR_ERD,index,CN.social_perception,A,,10.1037/bul0000031,openalex,mu power decreases during observation of others' actions
+MK.SMR_ERD,index,CN.cortical_idling,B,,10.1016/S0167-8760(96)00066-9,openalex,mu/alpha power increases (ERS) when the sensorimotor cortex is disengaged
+MK.SMR_ERD,index,CN.cortical_idling,B,,10.1016/S1388-2457(99)00141-8,openalex,mu/alpha power increases (ERS) when the sensorimotor cortex is disengaged
+MK.high_gamma,generator,BR.sensorimotor_cortex,B,intracranial,10.1093/brain/121.12.2301,openalex+crossref,"method: intracranial; ECoG shows focal, somatotopic high-gamma increases over sensorimotor cortex during movement."
+MK.high_gamma,generator,BR.sensorimotor_cortex,B,intracranial,10.1523/JNEUROSCI.3886-06.2007,openalex,"method: intracranial; ECoG shows focal, somatotopic high-gamma increases over sensorimotor cortex during movement."
+MK.high_gamma,generator,BR.STG,B,intracranial,10.1371/journal.pbio.1001251,openalex,method: intracranial; ECoG high-gamma over superior temporal gyrus tracks speech acoustics and the attended talker.
+MK.high_gamma,generator,BR.STG,B,intracranial,10.1038/nature11020,openalex,method: intracranial; ECoG high-gamma over superior temporal gyrus tracks speech acoustics and the attended talker.
+MK.high_gamma,index,CN.motor_execution,B,,10.1093/brain/121.12.2301,openalex+crossref,power increases focally and somatotopically during movement
+MK.high_gamma,index,CN.motor_execution,B,,10.1523/JNEUROSCI.3886-06.2007,openalex,power increases focally and somatotopically during movement
+MK.high_gamma,index,CN.motor_execution,B,,10.1016/S0079-6123(06)59019-3,openalex,power increases focally and somatotopically during movement
+MK.high_gamma,index,CN.speech_tracking,B,,10.1371/journal.pbio.1001251,openalex,power envelope tracks the spectrotemporal content of heard (and attended) speech
+MK.high_gamma,index,CN.speech_tracking,B,,10.1038/nature11020,openalex,power envelope tracks the spectrotemporal content of heard (and attended) speech
+MK.high_gamma,index,CN.speech_production,C,,10.1038/nature11911,openalex,power over ventral sensorimotor cortex encodes articulator movements during speaking
+MK.low_freq_kinematics,generator,BR.sensorimotor_cortex,C,MEG/EEG source,10.1038/s41598-018-36326-y,openalex,method: MEG/EEG source; source-space tuning to hand position/velocity larger over contralateral primary sensorimotor and premotor areas during visuomotor tracking.
+MK.low_freq_kinematics,generator,BR.parietal_cortex,C,MEG/EEG source,10.1038/s41598-018-36326-y,openalex,method: MEG/EEG source; predictive decoder patterns significant over superior parietal / parieto-occipital areas (Kobler 2018); sLORETA contributions reported by Bradberry 2010.
+MK.low_freq_kinematics,generator,BR.parietal_cortex,C,MEG/EEG source,10.1523/JNEUROSCI.6107-09.2010,openalex,method: MEG/EEG source; predictive decoder patterns significant over superior parietal / parieto-occipital areas (Kobler 2018); sLORETA contributions reported by Bradberry 2010.
+MK.low_freq_kinematics,index,CN.movement_kinematics,B,,10.1523/JNEUROSCI.6107-09.2010,openalex,"low-frequency amplitude covaries linearly with hand position and velocity, allowing trajectory reconstruction"
+MK.low_freq_kinematics,index,CN.movement_kinematics,B,,10.1523/JNEUROSCI.5171-07.2008,openalex,"low-frequency amplitude covaries linearly with hand position and velocity, allowing trajectory reconstruction"
+MK.low_freq_kinematics,index,CN.movement_kinematics,B,,10.1038/s41598-018-36326-y,openalex,"low-frequency amplitude covaries linearly with hand position and velocity, allowing trajectory reconstruction"
+MK.low_freq_kinematics,index,CN.movement_kinematics,B,,10.1088/1741-2560/4/3/012,openalex,"low-frequency amplitude covaries linearly with hand position and velocity, allowing trajectory reconstruction"
+MK.motor_cortical_spiking,generator,BR.M1,A,intracranial,10.1523/JNEUROSCI.02-11-01527.1982,openalex,method: intracranial; microelectrode recordings in monkey and human M1 (directional tuning; human array BCIs) replicated across labs and species.
+MK.motor_cortical_spiking,generator,BR.M1,A,intracranial,10.1038/nature04970,openalex,method: intracranial; microelectrode recordings in monkey and human M1 (directional tuning; human array BCIs) replicated across labs and species.
+MK.motor_cortical_spiking,generator,BR.M1,A,intracranial,10.1016/S0140-6736(12)61816-9,openalex,method: intracranial; microelectrode recordings in monkey and human M1 (directional tuning; human array BCIs) replicated across labs and species.
+MK.motor_cortical_spiking,generator,BR.premotor,B,intracranial,10.1038/nature04968,openalex,method: intracranial; dorsal premotor arrays (monkey) and ventral premotor area 6v arrays (human speech BCI).
+MK.motor_cortical_spiking,generator,BR.premotor,B,intracranial,10.1038/nature11129,openalex,method: intracranial; dorsal premotor arrays (monkey) and ventral premotor area 6v arrays (human speech BCI).
+MK.motor_cortical_spiking,generator,BR.premotor,B,intracranial,10.1038/s41586-023-06377-x,openalex,method: intracranial; dorsal premotor arrays (monkey) and ventral premotor area 6v arrays (human speech BCI).
+MK.motor_cortical_spiking,index,CN.movement_kinematics,A,,10.1523/JNEUROSCI.02-11-01527.1982,openalex,firing rates are tuned to movement direction and velocity; population vectors predict reach direction
+MK.motor_cortical_spiking,index,CN.movement_kinematics,A,,10.1126/science.3749885,openalex,firing rates are tuned to movement direction and velocity; population vectors predict reach direction
+MK.motor_cortical_spiking,index,CN.movement_kinematics,A,,10.1038/nature04970,openalex,firing rates are tuned to movement direction and velocity; population vectors predict reach direction
+MK.motor_cortical_spiking,index,CN.movement_kinematics,A,,10.1016/S0140-6736(12)61816-9,openalex,firing rates are tuned to movement direction and velocity; population vectors predict reach direction
+MK.motor_cortical_spiking,index,CN.motor_preparation,B,,10.1038/nature11129,openalex,delay-period population activity sets a preparatory state that predicts the upcoming movement
+MK.motor_cortical_spiking,index,CN.motor_preparation,B,,10.1038/nature04968,openalex,delay-period population activity sets a preparatory state that predicts the upcoming movement
+MK.motor_cortical_spiking,index,CN.speech_production,B,,10.1038/s41586-023-06377-x,openalex,precentral population activity encodes attempted phonemes/words for speech decoding
+MK.motor_cortical_spiking,index,CN.speech_production,B,,10.1056/NEJMoa2314132,openalex,precentral population activity encodes attempted phonemes/words for speech decoding
+MK.motor_cortical_spiking,index,CN.intent_selection,B,,10.1038/nature04970,openalex,population activity during attempted movements in paralysis is decoded as intended cursor movements or characters
+MK.motor_cortical_spiking,index,CN.intent_selection,B,,10.1038/s41586-021-03506-2,openalex,population activity during attempted movements in paralysis is decoded as intended cursor movements or characters
+MK.LRP,generator,BR.M1,C,MEG/EEG source,10.1016/S0301-0511(02)00032-7,openalex,method: MEG/EEG source; dipole modelling places hand-related lateralized activity in anterior (preparation) and posterior (execution) M1.
+MK.LRP,index,CN.motor_preparation,B,,10.1111/j.1469-8986.1989.tb01916.x,openalex,onset and amplitude index hand-specific response activation before overt response
+MK.LRP,index,CN.motor_preparation,B,,10.1037/0096-1523.14.3.331,openalex,onset and amplitude index hand-specific response activation before overt response
+MK.LRP,index,CN.motor_preparation,B,,10.1016/S0301-0511(02)00032-7,openalex,onset and amplitude index hand-specific response activation before overt response
+MK.LRP,index,CN.conflict_monitoring,C,,10.1037/0096-1523.14.3.331,openalex,incompatible flankers produce transient incorrect-hand LRP activation
+MK.LRP,index,CN.response_inhibition,C,,10.1037/0096-1523.16.1.164,openalex,LRP amplitude at the stop signal distinguishes responses that can still be withheld
+MK.MRCP,generator,BR.SMA,B,intracranial,10.1093/brain/115.4.1017,openalex,method: intracranial; subdural recordings show early BP over SMA; event-related fMRI shows pre-movement SMA/pre-SMA activation.
+MK.MRCP,generator,BR.SMA,B,intracranial,10.1016/S1053-8119(03)00291-X,openalex,method: intracranial; subdural recordings show early BP over SMA; event-related fMRI shows pre-movement SMA/pre-SMA activation.
+MK.MRCP,generator,BR.SMA,B,intracranial,10.1016/j.clinph.2006.04.025,openalex,method: intracranial; subdural recordings show early BP over SMA; event-related fMRI shows pre-movement SMA/pre-SMA activation.
+MK.MRCP,generator,BR.M1,B,intracranial,10.1093/brain/115.4.1017,openalex,"method: intracranial; the late, steeper contralateral component (NS') is recorded from M1."
+MK.MRCP,generator,BR.M1,B,intracranial,10.1016/j.clinph.2006.04.025,openalex,"method: intracranial; the late, steeper contralateral component (NS') is recorded from M1."
+MK.MRCP,index,CN.motor_preparation,B,,10.1007/BF00412364,openalex,negativity builds up over 1-2 s before self-paced movement
+MK.MRCP,index,CN.motor_preparation,B,,10.1016/j.clinph.2006.04.025,openalex,negativity builds up over 1-2 s before self-paced movement
+MK.MRCP,index,CN.motor_preparation,B,,10.1093/brain/115.4.1017,openalex,negativity builds up over 1-2 s before self-paced movement
+MK.MRCP,index,CN.intent_selection,B,,10.1088/1741-2560/8/6/066009,openalex,single-trial MRCP onset precedes movement and allows detection of movement intention
+MK.MRCP,index,CN.intent_selection,B,,10.1093/brain/106.3.623,openalex,single-trial MRCP onset precedes movement and allows detection of movement intention
+MK.MRCP,index,CN.intent_selection,B,,10.1073/pnas.1210467109,openalex,single-trial MRCP onset precedes movement and allows detection of movement intention
+MK.MRCP,index,CN.motor_imagery,C,,10.1088/1741-2560/8/6/066009,openalex,an MRCP-like negativity is also present during imagined movements and is detectable on single trials
+MK.CNV,generator,BR.SMA,B,intracranial,10.1016/j.brainresbull.2006.10.012,openalex,method: intracranial; SEEG CNV generators in SMA/premotor cortex (Bareš 2007); EEG-fMRI CNV-correlated activity in SMA (Nagai 2004).
+MK.CNV,generator,BR.SMA,B,intracranial,10.1016/j.neuroimage.2003.10.036,openalex(pmid),method: intracranial; SEEG CNV generators in SMA/premotor cortex (Bareš 2007); EEG-fMRI CNV-correlated activity in SMA (Nagai 2004).
+MK.CNV,generator,BR.dACC,B,EEG-fMRI,10.1016/j.neuroimage.2003.10.036,openalex(pmid),method: EEG-fMRI; intracranial; CNV amplitude covaries with anterior/mid-cingulate BOLD; SEEG generators in cingulate gyrus.
+MK.CNV,generator,BR.dACC,B,EEG-fMRI,10.1016/j.brainresbull.2006.10.012,openalex,method: EEG-fMRI; intracranial; CNV amplitude covaries with anterior/mid-cingulate BOLD; SEEG generators in cingulate gyrus.
+MK.CNV,generator,BR.thalamus,C,EEG-fMRI,10.1016/j.neuroimage.2003.10.036,openalex(pmid),method: EEG-fMRI; thalamic BOLD covaries with CNV amplitude in a single study.
+MK.CNV,index,CN.anticipation,B,,10.1038/203380a0,openalex,negativity develops during the warning-imperative interval and grows with expectancy of the imperative stimulus
+MK.CNV,index,CN.anticipation,B,,10.1037/h0032177,openalex,negativity develops during the warning-imperative interval and grows with expectancy of the imperative stimulus
+MK.CNV,index,CN.motor_preparation,C,,10.1016/j.brainresbull.2006.10.012,openalex,more intracerebral CNV generators when the imperative stimulus requires a motor response than mental counting
+MK.sleep_spindle,generator,BR.thalamus,A,EEG-fMRI,10.1126/science.8235588,openalex,method: EEG-fMRI; intracranial (animal); thalamic reticular-thalamocortical pacemaking shown in animal intracellular work and thalamic BOLD increases time-locked to human spindles.
+MK.sleep_spindle,generator,BR.thalamus,A,EEG-fMRI,10.1073/pnas.0703084104,openalex,method: EEG-fMRI; intracranial (animal); thalamic reticular-thalamocortical pacemaking shown in animal intracellular work and thalamic BOLD increases time-locked to human spindles.
+MK.sleep_spindle,generator,BR.thalamus,A,EEG-fMRI,10.1152/physrev.00042.2018,openalex,method: EEG-fMRI; intracranial (animal); thalamic reticular-thalamocortical pacemaking shown in animal intracellular work and thalamic BOLD increases time-locked to human spindles.
+MK.sleep_spindle,generator,BR.frontal_cortex,B,intracranial,10.1523/JNEUROSCI.2604-11.2011,openalex,method: intracranial; slow (9-12 Hz) spindles predominate frontally in human depth recordings; superior frontal BOLD with slow spindles.
+MK.sleep_spindle,generator,BR.frontal_cortex,B,intracranial,10.1073/pnas.0703084104,openalex,method: intracranial; slow (9-12 Hz) spindles predominate frontally in human depth recordings; superior frontal BOLD with slow spindles.
+MK.sleep_spindle,generator,BR.parietal_cortex,C,intracranial,10.1523/JNEUROSCI.2604-11.2011,openalex,method: intracranial; fast (13-15 Hz) spindles predominate over centro-parietal cortex.
+MK.sleep_spindle,index,CN.memory_consolidation,A,,10.1016/j.neuropsychologia.2023.108661,openalex,spindle density/activity is positively associated with overnight memory retention
+MK.sleep_spindle,index,CN.memory_consolidation,A,,10.1152/physrev.00042.2018,openalex,spindle density/activity is positively associated with overnight memory retention
+MK.sleep_spindle,index,CN.sleep,B,,10.1152/physrev.00042.2018,openalex,spindles mark NREM stage N2 and become less frequent in deeper NREM sleep
+MK.sleep_spindle,index,CN.sleep,B,,10.1523/JNEUROSCI.2604-11.2011,openalex,spindles mark NREM stage N2 and become less frequent in deeper NREM sleep
+MK.slow_wave,generator,BR.frontal_cortex,B,MEG/EEG source,10.1523/JNEUROSCI.1318-04.2004,openalex,"method: MEG/EEG source; scalp topography; HD-EEG shows slow oscillations originate mostly in prefrontal-orbitofrontal regions; source modelling localises them to medial, middle and inferior frontal gyri."
+MK.slow_wave,generator,BR.frontal_cortex,B,MEG/EEG source,10.1073/pnas.0807933106,openalex,"method: MEG/EEG source; scalp topography; HD-EEG shows slow oscillations originate mostly in prefrontal-orbitofrontal regions; source modelling localises them to medial, middle and inferior frontal gyri."
+MK.slow_wave,generator,BR.PCC,B,EEG-fMRI,10.1073/pnas.0807933106,openalex,method: EEG-fMRI; MEG/EEG source; posterior cingulate/precuneus involvement in source models and slow-wave-related BOLD.
+MK.slow_wave,generator,BR.PCC,B,EEG-fMRI,10.1073/pnas.0801819105,openalex,method: EEG-fMRI; MEG/EEG source; posterior cingulate/precuneus involvement in source models and slow-wave-related BOLD.
+MK.slow_wave,index,CN.sleep,B,,10.1111/jsr.12371,openalex,slow-wave activity increases with sleep depth and prior wake duration (homeostatic sleep pressure)
+MK.slow_wave,index,CN.sleep,B,,10.1523/JNEUROSCI.13-08-03252.1993,openalex,slow-wave activity increases with sleep depth and prior wake duration (homeostatic sleep pressure)
+MK.slow_wave,index,CN.sleep,B,,10.1523/JNEUROSCI.1318-04.2004,openalex,slow-wave activity increases with sleep depth and prior wake duration (homeostatic sleep pressure)
+MK.slow_wave,index,CN.memory_consolidation,B,,10.1038/nature05278,openalex,boosting slow oscillations (tDCS or closed-loop auditory stimulation) enhances declarative memory
+MK.slow_wave,index,CN.memory_consolidation,B,,10.1016/j.neuron.2013.03.006,openalex,boosting slow oscillations (tDCS or closed-loop auditory stimulation) enhances declarative memory
+MK.slow_wave,index,CN.consciousness_level,C,,10.1073/pnas.1221180110,openalex,slow-oscillation power rises with propofol-induced loss of consciousness
+MK.DMN_connectivity,generator,BR.PCC,A,fMRI localization,10.1523/JNEUROSCI.4004-09.2009,openalex,method: fMRI localization; coordinate-based meta-analysis and resting-state connectivity identify PCC as a core DMN hub.
+MK.DMN_connectivity,generator,BR.PCC,A,fMRI localization,10.1073/pnas.0135058100,openalex,method: fMRI localization; coordinate-based meta-analysis and resting-state connectivity identify PCC as a core DMN hub.
+MK.DMN_connectivity,generator,BR.PCC,A,fMRI localization,10.1073/pnas.98.2.676,openalex,method: fMRI localization; coordinate-based meta-analysis and resting-state connectivity identify PCC as a core DMN hub.
+MK.DMN_connectivity,generator,BR.vmPFC,A,fMRI localization,10.1523/JNEUROSCI.4004-09.2009,openalex,method: fMRI localization; ventral medial prefrontal cortex is a core DMN node in meta-analytic and resting-state studies.
+MK.DMN_connectivity,generator,BR.vmPFC,A,fMRI localization,10.1073/pnas.0135058100,openalex,method: fMRI localization; ventral medial prefrontal cortex is a core DMN node in meta-analytic and resting-state studies.
+MK.DMN_connectivity,generator,BR.vmPFC,A,fMRI localization,10.1073/pnas.98.2.676,openalex,method: fMRI localization; ventral medial prefrontal cortex is a core DMN node in meta-analytic and resting-state studies.
+MK.DMN_connectivity,generator,BR.precuneus,A,fMRI localization,10.1523/JNEUROSCI.4004-09.2009,openalex,method: fMRI localization; precuneus deactivates during external tasks and is part of the DMN core in meta-analysis.
+MK.DMN_connectivity,generator,BR.precuneus,A,fMRI localization,10.1073/pnas.98.2.676,openalex,method: fMRI localization; precuneus deactivates during external tasks and is part of the DMN core in meta-analysis.
+MK.DMN_connectivity,index,CN.spontaneous_thought,A,,10.1016/j.neuroimage.2015.02.039,openalex,activity and connectivity increase during mind-wandering and stimulus-independent thought
+MK.DMN_connectivity,index,CN.spontaneous_thought,A,,10.1196/annals.1440.011,openalex,activity and connectivity increase during mind-wandering and stimulus-independent thought
+MK.DMN_connectivity,index,CN.self_processing,A,,10.1016/j.neuroimage.2011.05.028,openalex,cortical midline DMN regions activate during self-referential processing
+MK.DMN_connectivity,index,CN.mentalizing,A,,10.1162/jocn.2008.21029,openalex,DMN regions overlap with theory-of-mind activation
+MK.DMN_connectivity,index,CN.consciousness_level,B,,10.1093/brain/awp313,openalex,"DMN connectivity decreases with reduced level of consciousness (brain injury, propofol)"
+MK.DMN_connectivity,index,CN.consciousness_level,B,,10.1097/ALN.0b013e3181f697f5,crossref,"DMN connectivity decreases with reduced level of consciousness (brain injury, propofol)"

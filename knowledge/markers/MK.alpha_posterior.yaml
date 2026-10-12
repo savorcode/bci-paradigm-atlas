@@ -1,11 +1,92 @@
-schema_version: "0.2"
+schema_version: '0.2'
 id: MK.alpha_posterior
-name: {en: Posterior alpha power, zh: 后部 α 功率}
-aliases: [posterior alpha, parieto-occipital alpha, resting alpha, alpha modulation]
+name:
+  en: Posterior alpha power
+  zh: 后部 α 功率
+aliases:
+- posterior alpha
+- parieto-occipital alpha
+- resting alpha
+- alpha modulation
 type: oscillatory
-recording_modality: [EEG, MEG]
-signature: {frequency_hz: 8-13, topography: parieto-occipital}
-description: {en: 'Power of 8-13 Hz oscillations over parieto-occipital cortex. It is high during eyes-closed rest and decreases with visual input and visual or attentional engagement, while it can increase during internally directed tasks such as imagery or memory retention.', zh: 顶枕区 8-13 Hz 节律的功率。闭眼静息时较高，视觉输入及视觉或注意投入时下降；在想象、记忆保持等内向任务中可升高。}
-notes: Signature values are textbook-level characteristics and await source checking (first pass, curator_b). Distinct from MK.alpha_lateralization, MK.frontal_alpha_asymmetry and MK.frontal_alpha_anesthesia (D-028). Generators and indexes to be added in the second pass.
+recording_modality:
+- EEG
+- MEG
+signature:
+  frequency_hz: 8-13
+  topography: parieto-occipital
+description:
+  en: Power of 8-13 Hz oscillations over parieto-occipital cortex. It is high during eyes-closed rest and decreases with visual
+    input and visual or attentional engagement, while it can increase during internally directed tasks such as imagery or
+    memory retention.
+  zh: 顶枕区 8-13 Hz 节律的功率。闭眼静息时较高，视觉输入及视觉或注意投入时下降；在想象、记忆保持等内向任务中可升高。
+generators:
+- region: BR.visual_cortex
+  evidence: B
+  sources:
+  - citation: Halgren M, Ulbert I, Bastuji H, et al. The generation and propagation of the human alpha rhythm. Proc Natl Acad
+      Sci U S A. 2019;116(47):23772-23782.
+    doi: 10.1073/pnas.1913092116
+    year: 2019
+    verified: false
+  - citation: Goldman RI, Stern JM, Engel J Jr, et al. Simultaneous EEG and fMRI of the alpha rhythm. Neuroreport. 2002;13(18):2487-2492.
+    doi: 10.1097/00001756-200212200-00022
+    year: 2002
+    verified: false
+  note: 'method: intracranial; laminar and ECoG recordings show alpha generated in higher-order visual cortex and propagating
+    toward occipital pole (Halgren 2019); EEG-fMRI shows alpha power inversely related to occipital BOLD (Goldman 2002).'
+- region: BR.thalamus
+  evidence: C
+  sources:
+  - citation: Goldman RI, Stern JM, Engel J Jr, et al. Simultaneous EEG and fMRI of the alpha rhythm. Neuroreport. 2002;13(18):2487-2492.
+    doi: 10.1097/00001756-200212200-00022
+    year: 2002
+    verified: false
+  note: 'method: EEG-fMRI; alpha power correlates positively with thalamic BOLD (Goldman 2002). Single study; thalamic pacemaker
+    role debated (Halgren 2019 favours cortical lead).'
+indexes:
+- construct: CN.cortical_idling
+  evidence: B
+  relation: power increases when visual cortex is not engaged (eyes closed, attention elsewhere)
+  sources:
+  - citation: 'Pfurtscheller G, Stancák A Jr, Neuper C. Event-related synchronization (ERS) in the alpha band — an electrophysiological
+      correlate of cortical idling: a review. Int J Psychophysiol. 1996;24(1-2):39-46.'
+    doi: 10.1016/S0167-8760(96)00066-9
+    year: 1996
+    verified: false
+  - citation: 'Klimesch W, Sauseng P, Hanslmayr S. EEG alpha oscillations: the inhibition-timing hypothesis. Brain Res Rev.
+      2007;53(1):63-88.'
+    doi: 10.1016/j.brainresrev.2006.06.003
+    year: 2007
+    verified: false
+- construct: CN.distractor_suppression
+  evidence: B
+  relation: power increases over regions processing to-be-ignored information (gating by inhibition)
+  sources:
+  - citation: 'Jensen O, Mazaheri A. Shaping functional architecture by oscillatory alpha activity: gating by inhibition.
+      Front Hum Neurosci. 2010;4:186.'
+    doi: 10.3389/fnhum.2010.00186
+    year: 2010
+    verified: false
+  - citation: 'Klimesch W, Sauseng P, Hanslmayr S. EEG alpha oscillations: the inhibition-timing hypothesis. Brain Res Rev.
+      2007;53(1):63-88.'
+    doi: 10.1016/j.brainresrev.2006.06.003
+    year: 2007
+    verified: false
+- construct: CN.working_memory
+  evidence: C
+  relation: power increases with memory load during retention
+  sources:
+  - citation: Jensen O, et al. Oscillations in the alpha band (9-12 Hz) increase with memory load during retention in a short-term
+      memory task. Cereb Cortex. 2002;12(8):877-882.
+    doi: 10.1093/cercor/12.8.877
+    year: 2002
+    verified: false
+notes: 'Signature values are textbook-level characteristics and await source checking (first pass, curator_b). Distinct from
+  MK.alpha_lateralization, MK.frontal_alpha_asymmetry and MK.frontal_alpha_anesthesia (D-028). Sprint 4 (2026-10-12, curator_a):
+  generators and indexes curated; every DOI checked against its Crossref or OpenAlex record (see curation/work/sprint4/markers_A/);
+  verified: false pending full-text check.'
 status: draft
-contributors: [maintainer, curator_b]
+contributors:
+- maintainer
+- curator_b

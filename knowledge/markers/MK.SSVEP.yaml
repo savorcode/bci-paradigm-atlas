@@ -1,4 +1,4 @@
-schema_version: "0.2"
+schema_version: '0.2'
 id: MK.SSVEP
 name:
   en: Steady-state visual evoked potential
@@ -20,24 +20,72 @@ description:
     Amplitude is modulated by selective attention to the stimulus.
   zh: 视觉皮层对闪烁或图形翻转刺激产生的周期性响应，频率与刺激频率及其谐波一致。波幅受对该刺激的选择性注意调制。
 generators:
-- region: BR.visual_cortex
+- region: BR.V1
   evidence: B
+  sources:
+  - citation: 'Norcia AM, Appelbaum LG, Ales JM, et al. The steady-state visual evoked potential in vision research: a review.
+      J Vis. 2015;15(6):4.'
+    doi: 10.1167/15.6.4
+    year: 2015
+    verified: false
+  note: 'method: MEG/EEG source; source-imaging and fMRI-constrained studies reviewed by Norcia 2015 place the main SSVEP
+    generator in V1 with extrastriate contributions. Replaces earlier coarse BR.visual_cortex (Regan 1966 did not localize;
+    moved to indexes).'
+- region: BR.extrastriate
+  evidence: B
+  sources:
+  - citation: 'Norcia AM, Appelbaum LG, Ales JM, et al. The steady-state visual evoked potential in vision research: a review.
+      J Vis. 2015;15(6):4.'
+    doi: 10.1167/15.6.4
+    year: 2015
+    verified: false
+  note: 'method: MEG/EEG source; extrastriate (V2-V4, hMT+) areas contribute depending on stimulus type and frequency (reviewed
+    by Norcia 2015).'
+indexes:
+- construct: CN.sustained_visual_attention
+  evidence: B
+  relation: amplitude increases for the attended stimulus
+  sources:
+  - citation: Morgan ST, Hansen JC, Hillyard SA. Selective attention to stimulus location modulates the steady-state visual
+      evoked potential. Proc Natl Acad Sci U S A. 1996;93(10):4770-4774.
+    doi: 10.1073/pnas.93.10.4770
+    year: 1996
+    verified: false
+  - citation: 'Norcia AM, Appelbaum LG, Ales JM, et al. The steady-state visual evoked potential in vision research: a review.
+      J Vis. 2015;15(6):4.'
+    doi: 10.1167/15.6.4
+    year: 2015
+    verified: false
+- construct: CN.neural_entrainment
+  evidence: B
+  relation: response follows the stimulation frequency and its harmonics, with resonance peaks near ~10, 20 and 40 Hz
   sources:
   - citation: Regan D. Some characteristics of average steady-state and transient responses evoked by modulated light. Electroencephalogr
       Clin Neurophysiol. 1966;20(3):238-248.
     doi: 10.1016/0013-4694(66)90088-5
     year: 1966
     verified: false
-indexes:
-- construct: CN.sustained_visual_attention
-  relation: amplitude increases for the attended stimulus
-  evidence: B
-  sources:
-  - citation: Morgan ST, Hansen JC, Hillyard SA. Selective attention to stimulus location modulates the steady-state visual
-      evoked potential. Proc Natl Acad Sci USA. 1996;93(10):4770-4774.
-    doi: 10.1073/pnas.93.10.4770
-    year: 1996
+  - citation: 'Herrmann CS. Human EEG responses to 1-100 Hz flicker: resonance phenomena in visual cortex and their potential
+      correlation to cognitive phenomena. Exp Brain Res. 2001;137(3-4):346-353.'
+    doi: 10.1007/s002210100682
+    year: 2001
     verified: false
+  - citation: 'Norcia AM, Appelbaum LG, Ales JM, et al. The steady-state visual evoked potential in vision research: a review.
+      J Vis. 2015;15(6):4.'
+    doi: 10.1167/15.6.4
+    year: 2015
+    verified: false
+- construct: CN.intent_selection
+  evidence: C
+  relation: frequency/phase of the gazed-at target can be decoded to select among many targets
+  sources:
+  - citation: Chen X, Wang Y, Nakanishi M, et al. High-speed spelling with a noninvasive brain-computer interface. Proc Natl
+      Acad Sci U S A. 2015;112(44):E6058-E6067.
+    doi: 10.1073/pnas.1508080112
+    year: 2015
+    verified: false
+notes: 'Sprint 4 (2026-10-12, curator_a): generators and indexes curated; every DOI checked against its Crossref or OpenAlex
+  record (see curation/work/sprint4/markers_A/); verified: false pending full-text check.'
 status: draft
 contributors:
 - savorcode01

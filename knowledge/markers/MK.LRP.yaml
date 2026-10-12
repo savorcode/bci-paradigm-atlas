@@ -1,11 +1,74 @@
-schema_version: "0.2"
+schema_version: '0.2'
 id: MK.LRP
-name: {en: Lateralized readiness potential, zh: 偏侧化准备电位}
-aliases: [LRP]
+name:
+  en: Lateralized readiness potential
+  zh: 偏侧化准备电位
+aliases:
+- LRP
 type: erp_component
-recording_modality: [EEG, MEG]
-signature: {polarity: negative (contralateral minus ipsilateral), topography: C3/C4 over motor cortex}
-description: {en: 'Difference wave obtained by subtracting activity over the motor cortex ipsilateral to the responding hand from that over the contralateral motor cortex, averaged across hands. Its onset marks the start of hand-specific response preparation.', zh: 将反应手同侧运动皮层上的活动从对侧运动皮层上的活动中减去（并对双手平均）得到的差异波，其起始标志着特定手的反应准备开始。}
-notes: Signature values are textbook-level characteristics and await source checking (first pass, curator_b). Generators and indexes to be added in the second pass.
+recording_modality:
+- EEG
+- MEG
+signature:
+  polarity: negative (contralateral minus ipsilateral)
+  topography: C3/C4 over motor cortex
+description:
+  en: Difference wave obtained by subtracting activity over the motor cortex ipsilateral to the responding hand from that
+    over the contralateral motor cortex, averaged across hands. Its onset marks the start of hand-specific response preparation.
+  zh: 将反应手同侧运动皮层上的活动从对侧运动皮层上的活动中减去（并对双手平均）得到的差异波，其起始标志着特定手的反应准备开始。
+generators:
+- region: BR.M1
+  evidence: C
+  sources:
+  - citation: 'Leuthold H, Jentzsch I. Distinguishing neural sources of movement preparation and execution: an electrophysiological
+      analysis. Biol Psychol. 2002;60(2-3):173-198.'
+    doi: 10.1016/S0301-0511(02)00032-7
+    year: 2002
+    verified: false
+  note: 'method: MEG/EEG source; dipole modelling places hand-related lateralized activity in anterior (preparation) and posterior
+    (execution) M1.'
+indexes:
+- construct: CN.motor_preparation
+  relation: onset and amplitude index hand-specific response activation before overt response
+  evidence: B
+  sources:
+  - citation: 'Coles MGH. Modern mind-brain reading: psychophysiology, physiology, and cognition. Psychophysiology. 1989;26(3):251-269.'
+    doi: 10.1111/j.1469-8986.1989.tb01916.x
+    year: 1989
+    verified: false
+  - citation: 'Gratton G, Coles MGH, Sirevaag EJ, et al. Pre- and poststimulus activation of response channels: a psychophysiological
+      analysis. J Exp Psychol Hum Percept Perform. 1988;14(3):331-344.'
+    doi: 10.1037/0096-1523.14.3.331
+    year: 1988
+    verified: false
+  - citation: 'Leuthold H, Jentzsch I. Distinguishing neural sources of movement preparation and execution: an electrophysiological
+      analysis. Biol Psychol. 2002;60(2-3):173-198.'
+    doi: 10.1016/S0301-0511(02)00032-7
+    year: 2002
+    verified: false
+- construct: CN.conflict_monitoring
+  relation: incompatible flankers produce transient incorrect-hand LRP activation
+  evidence: C
+  sources:
+  - citation: 'Gratton G, Coles MGH, Sirevaag EJ, et al. Pre- and poststimulus activation of response channels: a psychophysiological
+      analysis. J Exp Psychol Hum Percept Perform. 1988;14(3):331-344.'
+    doi: 10.1037/0096-1523.14.3.331
+    year: 1988
+    verified: false
+- construct: CN.response_inhibition
+  relation: LRP amplitude at the stop signal distinguishes responses that can still be withheld
+  evidence: C
+  sources:
+  - citation: 'De Jong R, Coles MGH, Logan GD, et al. In search of the point of no return: the control of response processes.
+      J Exp Psychol Hum Percept Perform. 1990;16(1):164-182.'
+    doi: 10.1037/0096-1523.16.1.164
+    year: 1990
+    verified: false
+notes: 'Signature values are textbook-level characteristics and await source checking (first pass, curator_b). Generators
+  and indexes to be added in the second pass. Sprint 4 (curator_b, 2026-10-12): generators and indexes curated; every DOI
+  checked against its OpenAlex/Crossref record (citation fields copied from the record); sources verified: false pending full-text
+  check.'
 status: draft
-contributors: [maintainer, curator_b]
+contributors:
+- maintainer
+- curator_b

@@ -1,4 +1,4 @@
-schema_version: "0.2"
+schema_version: '0.2'
 id: MK.slow_wave
 name:
   en: Slow waves / slow oscillation
@@ -15,14 +15,84 @@ signature:
   polarity: high-amplitude biphasic waves
   topography: frontal maximum
 description:
-  en: >-
-    High-amplitude low-frequency EEG waves that dominate deep non-REM sleep and also appear under general anaesthesia,
-    reflecting alternating cortical up- and down-states. Slow-wave activity indexes sleep depth and homeostatic
-    sleep pressure, and slow oscillations group spindles during memory consolidation.
+  en: High-amplitude low-frequency EEG waves that dominate deep non-REM sleep and also appear under general anaesthesia, reflecting
+    alternating cortical up- and down-states. Slow-wave activity indexes sleep depth and homeostatic sleep pressure, and slow
+    oscillations group spindles during memory consolidation.
   zh: 主导深度非快速眼动睡眠、也出现在全身麻醉下的高波幅低频 EEG 波，反映皮层上态与下态的交替。慢波活动反映睡眠深度和稳态睡眠压力，慢振荡在记忆巩固中对纺锤波进行组织。
-notes: >-
-  First-pass skeleton (curator_d, 2026-10-03). Signature values are textbook-level approximations that await source
-  checking; generators and indexes will be added in the second pass.
+generators:
+- region: BR.frontal_cortex
+  evidence: B
+  sources:
+  - citation: Massimini M, Huber R, Ferrarelli F, et al. The sleep slow oscillation as a traveling wave. J Neurosci. 2004;24(31):6862-6870.
+    doi: 10.1523/JNEUROSCI.1318-04.2004
+    year: 2004
+    verified: false
+  - citation: Murphy M, Riedner BA, Huber R, et al. Source modeling sleep slow waves. Proc Natl Acad Sci U S A. 2009;106(5):1608-1613.
+    doi: 10.1073/pnas.0807933106
+    year: 2009
+    verified: false
+  note: 'method: MEG/EEG source; scalp topography; HD-EEG shows slow oscillations originate mostly in prefrontal-orbitofrontal
+    regions; source modelling localises them to medial, middle and inferior frontal gyri.'
+- region: BR.PCC
+  evidence: B
+  sources:
+  - citation: Murphy M, Riedner BA, Huber R, et al. Source modeling sleep slow waves. Proc Natl Acad Sci U S A. 2009;106(5):1608-1613.
+    doi: 10.1073/pnas.0807933106
+    year: 2009
+    verified: false
+  - citation: Dang-Vu TT, Schabus M, Desseilles M, et al. Spontaneous neural activity during human slow wave sleep. Proc Natl
+      Acad Sci U S A. 2008;105(39):15160-15165.
+    doi: 10.1073/pnas.0801819105
+    year: 2008
+    verified: false
+  note: 'method: EEG-fMRI; MEG/EEG source; posterior cingulate/precuneus involvement in source models and slow-wave-related
+    BOLD.'
+indexes:
+- construct: CN.sleep
+  relation: slow-wave activity increases with sleep depth and prior wake duration (homeostatic sleep pressure)
+  evidence: B
+  sources:
+  - citation: 'Borbély AA, Daan S, Wirz-Justice A, et al. The two-process model of sleep regulation: a reappraisal. J Sleep
+      Res. 2016;25(2):131-143.'
+    doi: 10.1111/jsr.12371
+    year: 2016
+    verified: false
+  - citation: 'Steriade M, Nuñez A, Amzica F. A novel slow (< 1 Hz) oscillation of neocortical neurons in vivo: depolarizing
+      and hyperpolarizing components. J Neurosci. 1993;13(8):3252-3265.'
+    doi: 10.1523/JNEUROSCI.13-08-03252.1993
+    year: 1993
+    verified: false
+  - citation: Massimini M, Huber R, Ferrarelli F, et al. The sleep slow oscillation as a traveling wave. J Neurosci. 2004;24(31):6862-6870.
+    doi: 10.1523/JNEUROSCI.1318-04.2004
+    year: 2004
+    verified: false
+- construct: CN.memory_consolidation
+  relation: boosting slow oscillations (tDCS or closed-loop auditory stimulation) enhances declarative memory
+  evidence: B
+  sources:
+  - citation: Marshall L, Helgadóttir H, Mölle M, et al. Boosting slow oscillations during sleep potentiates memory. Nature.
+      2006;444(7119):610-613.
+    doi: 10.1038/nature05278
+    year: 2006
+    verified: false
+  - citation: Ngo HVV, Martinetz T, Born J, et al. Auditory closed-loop stimulation of the sleep slow oscillation enhances
+      memory. Neuron. 2013;78(3):545-553.
+    doi: 10.1016/j.neuron.2013.03.006
+    year: 2013
+    verified: false
+- construct: CN.consciousness_level
+  relation: slow-oscillation power rises with propofol-induced loss of consciousness
+  evidence: C
+  sources:
+  - citation: Purdon PL, Pierce ET, Mukamel EA, et al. Electroencephalogram signatures of loss and recovery of consciousness
+      from propofol. Proc Natl Acad Sci U S A. 2013;110(12):E1142-E1151.
+    doi: 10.1073/pnas.1221180110
+    year: 2013
+    verified: false
+notes: 'First-pass skeleton (curator_d, 2026-10-03). Signature values are textbook-level approximations that await source
+  checking; generators and indexes will be added in the second pass. Sprint 4 (curator_b, 2026-10-12): generators and indexes
+  curated; every DOI checked against its OpenAlex/Crossref record (citation fields copied from the record); sources verified:
+  false pending full-text check.'
 status: draft
 contributors:
 - maintainer

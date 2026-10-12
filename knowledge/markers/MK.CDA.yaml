@@ -1,4 +1,4 @@
-schema_version: "0.2"
+schema_version: '0.2'
 id: MK.CDA
 name:
   en: Contralateral delay activity
@@ -18,8 +18,45 @@ description:
   en: Sustained negativity over posterior sites contralateral to the memorised or tracked hemifield during the retention or
     tracking interval. Its amplitude increases with the number of items held, up to individual capacity.
   zh: 保持或追踪期间在被记忆或被追踪视野对侧后部电极出现的持续负波。其波幅随所保持项目数增加，直至达到个体容量上限。
-notes: First-pass skeleton by package A (2026-10-03). No generators/indexes yet. Signature values are textbook-level approximations
-  and await source checking.
+generators:
+- region: BR.IPS
+  evidence: C
+  sources:
+  - citation: Mitchell DJ, Cusack R. The temporal evolution of electromagnetic markers sensitive to the capacity limits of
+      visual short-term memory. Front Hum Neurosci. 2011;5:18.
+    doi: 10.3389/fnhum.2011.00018
+    year: 2011
+    verified: false
+  note: 'method: MEG/EEG source; MEG analogue of the CDA localized to posterior intraparietal sulcus during the early delay
+    (Mitchell & Cusack 2011). Single study; fMRI capacity effects in IPS are indirect.'
+indexes:
+- construct: CN.working_memory
+  evidence: B
+  relation: amplitude increases with the number of items held, reaching an asymptote at individual capacity
+  sources:
+  - citation: Vogel EK, Machizawa MG. Neural activity predicts individual differences in visual working memory capacity. Nature.
+      2004;428(6984):748-751.
+    doi: 10.1038/nature02447
+    year: 2004
+    verified: false
+  - citation: Luria R, Balaban H, Awh E, et al. The contralateral delay activity as a neural measure of visual working memory.
+      Neurosci Biobehav Rev. 2016;62:100-108.
+    doi: 10.1016/j.neubiorev.2016.01.003
+    year: 2016
+    verified: false
+- construct: CN.distractor_suppression
+  evidence: C
+  relation: low-capacity individuals show larger amplitude when distractors are present, indicating unnecessary storage of
+    irrelevant items
+  sources:
+  - citation: Vogel EK, McCollough AW, Machizawa MG. Neural measures reveal individual differences in controlling access to
+      working memory. Nature. 2005;438(7067):500-503.
+    doi: 10.1038/nature04171
+    year: 2005
+    verified: false
+notes: 'First-pass skeleton by package A (2026-10-03). Signature values are textbook-level approximations and await source
+  checking. Sprint 4 (2026-10-12, curator_a): generators and indexes curated; every DOI checked against its Crossref or OpenAlex
+  record (see curation/work/sprint4/markers_A/); verified: false pending full-text check.'
 status: draft
 contributors:
 - curator_a

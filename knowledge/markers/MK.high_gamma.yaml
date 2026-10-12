@@ -1,11 +1,101 @@
-schema_version: "0.2"
+schema_version: '0.2'
 id: MK.high_gamma
-name: {en: High-gamma activity (70-150 Hz), zh: 高 γ 活动（70–150 Hz）}
-aliases: [high gamma, HGA, broadband high-frequency activity]
+name:
+  en: High-gamma activity (70-150 Hz)
+  zh: 高 γ 活动（70–150 Hz）
+aliases:
+- high gamma
+- HGA
+- broadband high-frequency activity
 type: field_potential
-recording_modality: [ECoG, sEEG, intracortical]
-signature: {frequency_hz: 70-150, topography: 'focal, at task-engaged cortex'}
-description: {en: 'Broadband power increase in roughly the 70-150 Hz range in intracranial recordings, spatially focal and closely time-locked to local cortical engagement in motor, sensory, speech and memory tasks.', zh: 颅内记录中约 70–150 Hz 范围的宽频功率升高，空间上局灶，并与运动、感觉、言语、记忆任务中的局部皮层参与紧密锁时。}
-notes: Signature values are textbook-level characteristics and await source checking (first pass, curator_b). Intracranial; distinct from scalp MK.gamma_power (D-028). Generating regions are to be distinguished in generators (second pass). Generators and indexes to be added in the second pass.
+recording_modality:
+- ECoG
+- sEEG
+- intracortical
+signature:
+  frequency_hz: 70-150
+  topography: focal, at task-engaged cortex
+description:
+  en: Broadband power increase in roughly the 70-150 Hz range in intracranial recordings, spatially focal and closely time-locked
+    to local cortical engagement in motor, sensory, speech and memory tasks.
+  zh: 颅内记录中约 70–150 Hz 范围的宽频功率升高，空间上局灶，并与运动、感觉、言语、记忆任务中的局部皮层参与紧密锁时。
+generators:
+- region: BR.sensorimotor_cortex
+  evidence: B
+  sources:
+  - citation: Crone NE, et al. Functional mapping of human sensorimotor cortex with electrocorticographic spectral analysis.
+      II. Event-related synchronization in the gamma band. Brain. 1998;121(12):2301-2315.
+    doi: 10.1093/brain/121.12.2301
+    year: 1998
+    verified: false
+  - citation: Miller KJ, Leuthardt EC, Schalk G, et al. Spectral changes in cortical surface potentials during motor movement.
+      J Neurosci. 2007;27(9):2424-2432.
+    doi: 10.1523/JNEUROSCI.3886-06.2007
+    year: 2007
+    verified: false
+  note: 'method: intracranial; ECoG shows focal, somatotopic high-gamma increases over sensorimotor cortex during movement.'
+- region: BR.STG
+  evidence: B
+  sources:
+  - citation: Pasley BN, David SV, Mesgarani N, et al. Reconstructing speech from human auditory cortex. PLoS Biol. 2012;10(1):e1001251.
+    doi: 10.1371/journal.pbio.1001251
+    year: 2012
+    verified: false
+  - citation: Mesgarani N, Chang EF. Selective cortical representation of attended speaker in multi-talker speech perception.
+      Nature. 2012;485(7397):233-236.
+    doi: 10.1038/nature11020
+    year: 2012
+    verified: false
+  note: 'method: intracranial; ECoG high-gamma over superior temporal gyrus tracks speech acoustics and the attended talker.'
+indexes:
+- construct: CN.motor_execution
+  relation: power increases focally and somatotopically during movement
+  evidence: B
+  sources:
+  - citation: Crone NE, et al. Functional mapping of human sensorimotor cortex with electrocorticographic spectral analysis.
+      II. Event-related synchronization in the gamma band. Brain. 1998;121(12):2301-2315.
+    doi: 10.1093/brain/121.12.2301
+    year: 1998
+    verified: false
+  - citation: Miller KJ, Leuthardt EC, Schalk G, et al. Spectral changes in cortical surface potentials during motor movement.
+      J Neurosci. 2007;27(9):2424-2432.
+    doi: 10.1523/JNEUROSCI.3886-06.2007
+    year: 2007
+    verified: false
+  - citation: Crone NE, Sinai A, Korzeniewska A. High-frequency gamma oscillations and human brain mapping with electrocorticography.
+      Prog Brain Res. 2006;159:275-295.
+    doi: 10.1016/S0079-6123(06)59019-3
+    year: 2006
+    verified: false
+  note: High-gamma is spatially focal at engaged cortex.
+- construct: CN.speech_tracking
+  relation: power envelope tracks the spectrotemporal content of heard (and attended) speech
+  evidence: B
+  sources:
+  - citation: Pasley BN, David SV, Mesgarani N, et al. Reconstructing speech from human auditory cortex. PLoS Biol. 2012;10(1):e1001251.
+    doi: 10.1371/journal.pbio.1001251
+    year: 2012
+    verified: false
+  - citation: Mesgarani N, Chang EF. Selective cortical representation of attended speaker in multi-talker speech perception.
+      Nature. 2012;485(7397):233-236.
+    doi: 10.1038/nature11020
+    year: 2012
+    verified: false
+- construct: CN.speech_production
+  relation: power over ventral sensorimotor cortex encodes articulator movements during speaking
+  evidence: C
+  sources:
+  - citation: Bouchard KE, Mesgarani N, Johnson K, et al. Functional organization of human sensorimotor cortex for speech
+      articulation. Nature. 2013;495(7441):327-332.
+    doi: 10.1038/nature11911
+    year: 2013
+    verified: false
+notes: 'Signature values are textbook-level characteristics and await source checking (first pass, curator_b). Intracranial;
+  distinct from scalp MK.gamma_power (D-028). Generating regions are to be distinguished in generators (second pass). Generators
+  and indexes to be added in the second pass. Sprint 4 (curator_b, 2026-10-12): generators and indexes curated; every DOI
+  checked against its OpenAlex/Crossref record (citation fields copied from the record); sources verified: false pending full-text
+  check.'
 status: draft
-contributors: [maintainer, curator_b]
+contributors:
+- maintainer
+- curator_b

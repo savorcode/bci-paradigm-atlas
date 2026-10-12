@@ -1,11 +1,79 @@
-schema_version: "0.2"
+schema_version: '0.2'
 id: MK.low_freq_kinematics
-name: {en: Low-frequency EEG tracking of movement kinematics, zh: 低频脑电运动学跟踪}
-aliases: [low-frequency kinematic decoding, delta-band kinematics]
+name:
+  en: Low-frequency EEG tracking of movement kinematics
+  zh: 低频脑电运动学跟踪
+aliases:
+- low-frequency kinematic decoding
+- delta-band kinematics
 type: oscillatory
-recording_modality: [EEG, ECoG]
-signature: {frequency_hz: below ~2 Hz, topography: sensorimotor and parietal}
-description: {en: 'Low-frequency (below about 2 Hz) EEG/ECoG amplitude fluctuations that covary with continuous limb position and velocity, allowing linear reconstruction of movement trajectories.', zh: 与连续的肢体位置和速度共变的低频（约 2 Hz 以下）EEG/ECoG 幅值波动，可用于线性重建运动轨迹。}
-notes: Signature values are textbook-level characteristics and await source checking (first pass, curator_b). Generators and indexes to be added in the second pass.
+recording_modality:
+- EEG
+- ECoG
+signature:
+  frequency_hz: below ~2 Hz
+  topography: sensorimotor and parietal
+description:
+  en: Low-frequency (below about 2 Hz) EEG/ECoG amplitude fluctuations that covary with continuous limb position and velocity,
+    allowing linear reconstruction of movement trajectories.
+  zh: 与连续的肢体位置和速度共变的低频（约 2 Hz 以下）EEG/ECoG 幅值波动，可用于线性重建运动轨迹。
+generators:
+- region: BR.sensorimotor_cortex
+  evidence: C
+  sources:
+  - citation: Kobler RJ, Sburlea AI, Müller-Putz GR. Tuning characteristics of low-frequency EEG to positions and velocities
+      in visuomotor and oculomotor tracking tasks. Sci Rep. 2018;8(1):17713.
+    doi: 10.1038/s41598-018-36326-y
+    year: 2018
+    verified: false
+  note: 'method: MEG/EEG source; source-space tuning to hand position/velocity larger over contralateral primary sensorimotor
+    and premotor areas during visuomotor tracking.'
+- region: BR.parietal_cortex
+  evidence: C
+  sources:
+  - citation: Kobler RJ, Sburlea AI, Müller-Putz GR. Tuning characteristics of low-frequency EEG to positions and velocities
+      in visuomotor and oculomotor tracking tasks. Sci Rep. 2018;8(1):17713.
+    doi: 10.1038/s41598-018-36326-y
+    year: 2018
+    verified: false
+  - citation: Bradberry TJ, Gentili RJ, Contreras-Vidal JL, et al. Reconstructing three-dimensional hand movements from noninvasive
+      electroencephalographic signals. J Neurosci. 2010;30(9):3432-3437.
+    doi: 10.1523/JNEUROSCI.6107-09.2010
+    year: 2010
+    verified: false
+  note: 'method: MEG/EEG source; predictive decoder patterns significant over superior parietal / parieto-occipital areas
+    (Kobler 2018); sLORETA contributions reported by Bradberry 2010.'
+indexes:
+- construct: CN.movement_kinematics
+  relation: low-frequency amplitude covaries linearly with hand position and velocity, allowing trajectory reconstruction
+  evidence: B
+  sources:
+  - citation: Bradberry TJ, Gentili RJ, Contreras-Vidal JL, et al. Reconstructing three-dimensional hand movements from noninvasive
+      electroencephalographic signals. J Neurosci. 2010;30(9):3432-3437.
+    doi: 10.1523/JNEUROSCI.6107-09.2010
+    year: 2010
+    verified: false
+  - citation: Waldert S, Preissl H, Demandt E, et al. Hand movement direction decoded from MEG and EEG. J Neurosci. 2008;28(4):1000-1008.
+    doi: 10.1523/JNEUROSCI.5171-07.2008
+    year: 2008
+    verified: false
+  - citation: Kobler RJ, Sburlea AI, Müller-Putz GR. Tuning characteristics of low-frequency EEG to positions and velocities
+      in visuomotor and oculomotor tracking tasks. Sci Rep. 2018;8(1):17713.
+    doi: 10.1038/s41598-018-36326-y
+    year: 2018
+    verified: false
+  - citation: Schalk G, Kubanek J, Miller KJ, et al. Decoding two-dimensional movement trajectories using electrocorticographic
+      signals in humans. J Neural Eng. 2007;4(3):264-275.
+    doi: 10.1088/1741-2560/4/3/012
+    year: 2007
+    verified: false
+  note: Independent EEG, MEG and ECoG studies; eye-movement and other artefact confounds remain debated (Kobler 2018 controls
+    for oculomotor tracking).
+notes: 'Signature values are textbook-level characteristics and await source checking (first pass, curator_b). Generators
+  and indexes to be added in the second pass. Sprint 4 (curator_b, 2026-10-12): generators and indexes curated; every DOI
+  checked against its OpenAlex/Crossref record (citation fields copied from the record); sources verified: false pending full-text
+  check.'
 status: draft
-contributors: [maintainer, curator_b]
+contributors:
+- maintainer
+- curator_b

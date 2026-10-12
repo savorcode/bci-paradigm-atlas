@@ -1,4 +1,4 @@
-schema_version: "0.2"
+schema_version: '0.2'
 id: MK.DMN_connectivity
 name:
   en: Default mode network connectivity
@@ -19,8 +19,107 @@ description:
   en: Correlated spontaneous activity among the regions of the default mode network, measured at rest or during tasks. Connectivity
     and activity in this network are higher during rest and internally directed thought than during demanding external tasks.
   zh: 默认模式网络各脑区之间相关的自发活动，可在静息或任务中测量。在静息和内向思维时，该网络的连接与活动高于执行高要求外部任务时。
-notes: Signature values are textbook-level characteristics entered in the first pass and await source checking. EEG/MEG measures
-  are source-space or band-limited envelope connectivity.
+generators:
+- region: BR.PCC
+  evidence: A
+  sources:
+  - citation: Laird AR, Eickhoff SB, Li K, et al. Investigating the functional heterogeneity of the default mode network using
+      coordinate-based meta-analytic modeling. J Neurosci. 2009;29(46):14496-14505.
+    doi: 10.1523/JNEUROSCI.4004-09.2009
+    year: 2009
+    verified: false
+  - citation: 'Greicius MD, Krasnow B, Reiss AL, et al. Functional connectivity in the resting brain: a network analysis of
+      the default mode hypothesis. Proc Natl Acad Sci U S A. 2003;100(1):253-258.'
+    doi: 10.1073/pnas.0135058100
+    year: 2003
+    verified: false
+  - citation: Raichle ME, MacLeod AM, Snyder AZ, et al. A default mode of brain function. Proc Natl Acad Sci U S A. 2001;98(2):676-682.
+    doi: 10.1073/pnas.98.2.676
+    year: 2001
+    verified: false
+  note: 'method: fMRI localization; coordinate-based meta-analysis and resting-state connectivity identify PCC as a core DMN
+    hub.'
+- region: BR.vmPFC
+  evidence: A
+  sources:
+  - citation: Laird AR, Eickhoff SB, Li K, et al. Investigating the functional heterogeneity of the default mode network using
+      coordinate-based meta-analytic modeling. J Neurosci. 2009;29(46):14496-14505.
+    doi: 10.1523/JNEUROSCI.4004-09.2009
+    year: 2009
+    verified: false
+  - citation: 'Greicius MD, Krasnow B, Reiss AL, et al. Functional connectivity in the resting brain: a network analysis of
+      the default mode hypothesis. Proc Natl Acad Sci U S A. 2003;100(1):253-258.'
+    doi: 10.1073/pnas.0135058100
+    year: 2003
+    verified: false
+  - citation: Raichle ME, MacLeod AM, Snyder AZ, et al. A default mode of brain function. Proc Natl Acad Sci U S A. 2001;98(2):676-682.
+    doi: 10.1073/pnas.98.2.676
+    year: 2001
+    verified: false
+  note: 'method: fMRI localization; ventral medial prefrontal cortex is a core DMN node in meta-analytic and resting-state
+    studies.'
+- region: BR.precuneus
+  evidence: A
+  sources:
+  - citation: Laird AR, Eickhoff SB, Li K, et al. Investigating the functional heterogeneity of the default mode network using
+      coordinate-based meta-analytic modeling. J Neurosci. 2009;29(46):14496-14505.
+    doi: 10.1523/JNEUROSCI.4004-09.2009
+    year: 2009
+    verified: false
+  - citation: Raichle ME, MacLeod AM, Snyder AZ, et al. A default mode of brain function. Proc Natl Acad Sci U S A. 2001;98(2):676-682.
+    doi: 10.1073/pnas.98.2.676
+    year: 2001
+    verified: false
+  note: 'method: fMRI localization; precuneus deactivates during external tasks and is part of the DMN core in meta-analysis.'
+indexes:
+- construct: CN.spontaneous_thought
+  relation: activity and connectivity increase during mind-wandering and stimulus-independent thought
+  evidence: A
+  sources:
+  - citation: 'Fox KCR, Spreng RN, Ellamil M, et al. The wandering brain: meta-analysis of functional neuroimaging studies
+      of mind-wandering and related spontaneous thought processes. NeuroImage. 2015;111:611-621.'
+    doi: 10.1016/j.neuroimage.2015.02.039
+    year: 2015
+    verified: false
+  - citation: Buckner RL, Andrews-Hanna JR, Schacter DL. The brain's default network. Ann N Y Acad Sci. 2008;1124(1):1-38.
+    doi: 10.1196/annals.1440.011
+    year: 2008
+    verified: false
+- construct: CN.self_processing
+  relation: cortical midline DMN regions activate during self-referential processing
+  evidence: A
+  sources:
+  - citation: Qin P, Northoff G. How is our self related to midline regions and the default-mode network? NeuroImage. 2011;57(3):1221-1233.
+    doi: 10.1016/j.neuroimage.2011.05.028
+    year: 2011
+    verified: false
+- construct: CN.mentalizing
+  relation: DMN regions overlap with theory-of-mind activation
+  evidence: A
+  sources:
+  - citation: 'Spreng RN, Mar RA, Kim ASN. The common neural basis of autobiographical memory, prospection, navigation, theory
+      of mind, and the default mode: a quantitative meta-analysis. J Cogn Neurosci. 2009;21(3):489-510.'
+    doi: 10.1162/jocn.2008.21029
+    year: 2009
+    verified: false
+- construct: CN.consciousness_level
+  relation: DMN connectivity decreases with reduced level of consciousness (brain injury, propofol)
+  evidence: B
+  sources:
+  - citation: Vanhaudenhuyse A, Noirhomme Q, Tshibanda L, et al. Default network connectivity reflects the level of consciousness
+      in non-communicative brain-damaged patients. Brain. 2010;133(1):161-171.
+    doi: 10.1093/brain/awp313
+    year: 2010
+    verified: false
+  - citation: Boveroux P, Vanhaudenhuyse A, Bruno MA, et al. Breakdown of within- and between-network resting state functional
+      magnetic resonance imaging connectivity during propofol-induced loss of consciousness. Anesthesiology. 2010;113(5):1038-1053.
+    doi: 10.1097/ALN.0b013e3181f697f5
+    year: 2010
+    verified: false
+notes: 'Signature values are textbook-level characteristics entered in the first pass and await source checking. EEG/MEG measures
+  are source-space or band-limited envelope connectivity. Sprint 4 (curator_b, 2026-10-12): generators and indexes curated;
+  every DOI checked against its OpenAlex/Crossref record (citation fields copied from the record); sources verified: false
+  pending full-text check.'
 status: draft
 contributors:
 - maintainer

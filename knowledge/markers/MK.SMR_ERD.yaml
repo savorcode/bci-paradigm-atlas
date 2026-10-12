@@ -1,37 +1,148 @@
-schema_version: "0.2"
+schema_version: '0.2'
 id: MK.SMR_ERD
-name: {en: Sensorimotor rhythm ERD/ERS, zh: 感觉运动节律 ERD/ERS}
-aliases: [mu ERD, beta ERD, mu/beta desynchronization, post-movement beta rebound]
+name:
+  en: Sensorimotor rhythm ERD/ERS
+  zh: 感觉运动节律 ERD/ERS
+aliases:
+- mu ERD
+- beta ERD
+- mu/beta desynchronization
+- post-movement beta rebound
 type: oscillatory
-recording_modality: [EEG, MEG, ECoG]
+recording_modality:
+- EEG
+- MEG
+- ECoG
 signature:
-  frequency_hz: "mu 8-13; beta 13-30"
+  frequency_hz: mu 8-13; beta 13-30
   topography: contralateral sensorimotor cortex (C3/C4), somatotopic
 description:
-  en: Event-related desynchronization (power decrease) of mu and beta rhythms over sensorimotor cortex during movement preparation, execution and imagery, followed by beta synchronization (rebound) after movement offset.
+  en: Event-related desynchronization (power decrease) of mu and beta rhythms over sensorimotor cortex during movement preparation,
+    execution and imagery, followed by beta synchronization (rebound) after movement offset.
   zh: 运动准备、执行和想象过程中，感觉运动皮层上 mu 与 beta 节律的事件相关去同步化（功率下降），运动结束后出现 beta 同步化（反弹）。
 generators:
-  - region: BR.sensorimotor_cortex
-    evidence: A
-    sources:
-      - &pfurt1999
-        citation: "Pfurtscheller G, Lopes da Silva FH. Event-related EEG/MEG synchronization and desynchronization: basic principles. Clin Neurophysiol. 1999;110(11):1842-1857."
-        doi: "10.1016/S1388-2457(99)00141-8"
-        year: 1999
-        verified: false
+- region: BR.sensorimotor_cortex
+  evidence: A
+  sources:
+  - citation: Crone NE, et al. Functional mapping of human sensorimotor cortex with electrocorticographic spectral analysis.
+      I. Alpha and beta event-related desynchronization. Brain. 1998;121(12):2271-2299.
+    doi: 10.1093/brain/121.12.2271
+    year: 1998
+    verified: false
+  - citation: Salmelin R, Hari R. Spatiotemporal characteristics of sensorimotor neuromagnetic rhythms related to thumb movement.
+      Neuroscience. 1994;60(2):537-550.
+    doi: 10.1016/0306-4522(94)90263-1
+    year: 1994
+    verified: false
+  - citation: Ritter P, Moosmann M, Villringer A. Rolandic alpha and beta EEG rhythms' strengths are inversely related to
+      fMRI-BOLD signal in primary somatosensory and motor cortex. Hum Brain Mapp. 2009;30(4):1168-1187.
+    doi: 10.1002/hbm.20585
+    year: 2009
+    verified: false
+  - citation: 'Pfurtscheller G, Lopes da Silva FH. Event-related EEG/MEG synchronization and desynchronization: basic principles.
+      Clin Neurophysiol. 1999;110(11):1842-1857.'
+    doi: 10.1016/S1388-2457(99)00141-8
+    year: 1999
+    verified: false
+  note: 'method: intracranial; ECoG (Crone 1998), MEG source modelling (Salmelin & Hari 1994) and EEG-fMRI (Ritter 2009) converge
+    on peri-Rolandic cortex; replicated across labs and modalities.'
+- region: BR.M1
+  evidence: B
+  sources:
+  - citation: Salmelin R, Hari R. Spatiotemporal characteristics of sensorimotor neuromagnetic rhythms related to thumb movement.
+      Neuroscience. 1994;60(2):537-550.
+    doi: 10.1016/0306-4522(94)90263-1
+    year: 1994
+    verified: false
+  - citation: Ritter P, Moosmann M, Villringer A. Rolandic alpha and beta EEG rhythms' strengths are inversely related to
+      fMRI-BOLD signal in primary somatosensory and motor cortex. Hum Brain Mapp. 2009;30(4):1168-1187.
+    doi: 10.1002/hbm.20585
+    year: 2009
+    verified: false
+  note: 'method: MEG/EEG source; EEG-fMRI; beta (~20 Hz) component localised to precentral motor cortex; beta power inversely
+    related to M1 BOLD.'
+- region: BR.S1
+  evidence: B
+  sources:
+  - citation: Salmelin R, Hari R. Spatiotemporal characteristics of sensorimotor neuromagnetic rhythms related to thumb movement.
+      Neuroscience. 1994;60(2):537-550.
+    doi: 10.1016/0306-4522(94)90263-1
+    year: 1994
+    verified: false
+  - citation: Ritter P, Moosmann M, Villringer A. Rolandic alpha and beta EEG rhythms' strengths are inversely related to
+      fMRI-BOLD signal in primary somatosensory and motor cortex. Hum Brain Mapp. 2009;30(4):1168-1187.
+    doi: 10.1002/hbm.20585
+    year: 2009
+    verified: false
+  note: 'method: MEG/EEG source; EEG-fMRI; mu (~10 Hz) component localised to postcentral somatosensory cortex; alpha power
+    inversely related to S1 BOLD.'
 indexes:
-  - construct: CN.motor_execution
-    relation: power decreases during movement preparation and execution
-    evidence: A
-    sources: [*pfurt1999]
-  - construct: CN.motor_imagery
-    relation: power decreases over the contralateral hemisphere during imagined movement
-    evidence: B
-    sources:
-      - *pfurt1999
-      - citation: "Pfurtscheller G, Neuper C. Motor imagery activates primary sensorimotor area in humans. Neurosci Lett. 1997;239(2-3):65-68."
-        doi: "10.1016/S0304-3940(97)00889-6"
-        year: 1997
-        verified: false
+- construct: CN.motor_execution
+  relation: power decreases during movement preparation and execution (beta rebound after movement offset)
+  evidence: A
+  sources:
+  - citation: 'Pfurtscheller G, Lopes da Silva FH. Event-related EEG/MEG synchronization and desynchronization: basic principles.
+      Clin Neurophysiol. 1999;110(11):1842-1857.'
+    doi: 10.1016/S1388-2457(99)00141-8
+    year: 1999
+    verified: false
+  - citation: Crone NE, et al. Functional mapping of human sensorimotor cortex with electrocorticographic spectral analysis.
+      I. Alpha and beta event-related desynchronization. Brain. 1998;121(12):2271-2299.
+    doi: 10.1093/brain/121.12.2271
+    year: 1998
+    verified: false
+  - citation: Salmelin R, Hari R. Spatiotemporal characteristics of sensorimotor neuromagnetic rhythms related to thumb movement.
+      Neuroscience. 1994;60(2):537-550.
+    doi: 10.1016/0306-4522(94)90263-1
+    year: 1994
+    verified: false
+  note: Replicated with scalp EEG, MEG and ECoG across independent labs.
+- construct: CN.motor_imagery
+  relation: power decreases over the contralateral sensorimotor cortex during imagined movement
+  evidence: A
+  sources:
+  - citation: Pfurtscheller G, Neuper C. Motor imagery activates primary sensorimotor area in humans. Neurosci Lett. 1997;239(2-3):65-68.
+    doi: 10.1016/S0304-3940(97)00889-6
+    year: 1997
+    verified: false
+  - citation: Pfurtscheller G, Brunner C, Schlögl A, et al. Mu rhythm (de)synchronization and EEG single-trial classification
+      of different motor imagery tasks. NeuroImage. 2006;31(1):153-159.
+    doi: 10.1016/j.neuroimage.2005.12.003
+    year: 2006
+    verified: false
+  - citation: Miller KJ, Schalk G, Fetz EE, et al. Cortical activity during motor execution, motor imagery, and imagery-based
+      online feedback. Proc Natl Acad Sci U S A. 2010;107(9):4430-4435.
+    doi: 10.1073/pnas.0913697107
+    year: 2010
+    verified: false
+  note: Scalp EEG (Graz) and ECoG (Miller 2010) replication across labs and modalities.
+- construct: CN.social_perception
+  relation: mu power decreases during observation of others' actions
+  evidence: A
+  sources:
+  - citation: 'Fox NA, Bakermans-Kranenburg MJ, Yoo KH, et al. Assessing human mirror activity with EEG mu rhythm: a meta-analysis.
+      Psychol Bull. 2016;142(3):291-313.'
+    doi: 10.1037/bul0000031
+    year: 2016
+    verified: false
+  note: Meta-analysis of mu suppression during action observation; effect sizes modest and reference-dependent.
+- construct: CN.cortical_idling
+  relation: mu/alpha power increases (ERS) when the sensorimotor cortex is disengaged
+  evidence: B
+  sources:
+  - citation: 'Pfurtscheller G, Stančák A, Neuper C. Event-related synchronization (ERS) in the alpha band - an electrophysiological
+      correlate of cortical idling: a review. Int J Psychophysiol. 1996;24(1-2):39-46.'
+    doi: 10.1016/S0167-8760(96)00066-9
+    year: 1996
+    verified: false
+  - citation: 'Pfurtscheller G, Lopes da Silva FH. Event-related EEG/MEG synchronization and desynchronization: basic principles.
+      Clin Neurophysiol. 1999;110(11):1842-1857.'
+    doi: 10.1016/S1388-2457(99)00141-8
+    year: 1999
+    verified: false
+  note: Idling interpretation rests on reviews from one group.
+notes: 'Sprint 4 (curator_b, 2026-10-12): generators and indexes curated; every DOI checked against its OpenAlex/Crossref
+  record (citation fields copied from the record); sources verified: false pending full-text check.'
 status: draft
-contributors: [savorcode01]
+contributors:
+- savorcode01

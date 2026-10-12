@@ -1,11 +1,130 @@
-schema_version: "0.2"
+schema_version: '0.2'
 id: MK.motor_cortical_spiking
-name: {en: Motor / premotor cortical spiking activity, zh: 运动/前运动皮层神经元放电}
-aliases: [motor cortex single-unit activity, multi-unit activity, directional tuning, spike-band power]
+name:
+  en: Motor / premotor cortical spiking activity
+  zh: 运动/前运动皮层神经元放电
+aliases:
+- motor cortex single-unit activity
+- multi-unit activity
+- directional tuning
+- spike-band power
 type: single_unit
-recording_modality: [intracortical]
-signature: {topography: M1 and premotor cortex (hand/arm area)}
-description: {en: 'Single- and multi-unit action potentials recorded with microelectrode arrays in primary motor and premotor cortex. Firing rates are tuned to movement direction, velocity and other kinematic or effector variables, and population activity is decoded in intracortical BCIs.', zh: 以微电极阵列在初级运动皮层和前运动皮层记录的单/多神经元动作电位。放电率对运动方向、速度及其他运动学或效应器变量具有调谐，群体活动在皮层内脑机接口中被解码。}
-notes: Signature values are textbook-level characteristics and await source checking (first pass, curator_b). Includes directional tuning, kinematic coding and speech-motor cortex firing (registry note). Generators and indexes to be added in the second pass.
+recording_modality:
+- intracortical
+signature:
+  topography: M1 and premotor cortex (hand/arm area)
+description:
+  en: Single- and multi-unit action potentials recorded with microelectrode arrays in primary motor and premotor cortex. Firing
+    rates are tuned to movement direction, velocity and other kinematic or effector variables, and population activity is
+    decoded in intracortical BCIs.
+  zh: 以微电极阵列在初级运动皮层和前运动皮层记录的单/多神经元动作电位。放电率对运动方向、速度及其他运动学或效应器变量具有调谐，群体活动在皮层内脑机接口中被解码。
+generators:
+- region: BR.M1
+  evidence: A
+  sources:
+  - citation: Georgopoulos AP, Kalaska JF, Caminiti R, et al. On the relations between the direction of two-dimensional arm
+      movements and cell discharge in primate motor cortex. J Neurosci. 1982;2(11):1527-1537.
+    doi: 10.1523/JNEUROSCI.02-11-01527.1982
+    year: 1982
+    verified: false
+  - citation: Hochberg LR, Serruya MD, Friehs GM, et al. Neuronal ensemble control of prosthetic devices by a human with tetraplegia.
+      Nature. 2006;442(7099):164-171.
+    doi: 10.1038/nature04970
+    year: 2006
+    verified: false
+  - citation: Collinger JL, Wodlinger B, Downey JE, et al. High-performance neuroprosthetic control by an individual with
+      tetraplegia. Lancet. 2013;381(9866):557-564.
+    doi: 10.1016/S0140-6736(12)61816-9
+    year: 2013
+    verified: false
+  note: 'method: intracranial; microelectrode recordings in monkey and human M1 (directional tuning; human array BCIs) replicated
+    across labs and species.'
+- region: BR.premotor
+  evidence: B
+  sources:
+  - citation: Santhanam G, Ryu SI, Yu BM, et al. A high-performance brain-computer interface. Nature. 2006;442(7099):195-198.
+    doi: 10.1038/nature04968
+    year: 2006
+    verified: false
+  - citation: Churchland MM, Cunningham JP, Kaufman MT, et al. Neural population dynamics during reaching. Nature. 2012;487(7405):51-56.
+    doi: 10.1038/nature11129
+    year: 2012
+    verified: false
+  - citation: Willett FR, Kunz EM, Fan C, et al. A high-performance speech neuroprosthesis. Nature. 2023;620(7976):1031-1036.
+    doi: 10.1038/s41586-023-06377-x
+    year: 2023
+    verified: false
+  note: 'method: intracranial; dorsal premotor arrays (monkey) and ventral premotor area 6v arrays (human speech BCI).'
+indexes:
+- construct: CN.movement_kinematics
+  relation: firing rates are tuned to movement direction and velocity; population vectors predict reach direction
+  evidence: A
+  sources:
+  - citation: Georgopoulos AP, Kalaska JF, Caminiti R, et al. On the relations between the direction of two-dimensional arm
+      movements and cell discharge in primate motor cortex. J Neurosci. 1982;2(11):1527-1537.
+    doi: 10.1523/JNEUROSCI.02-11-01527.1982
+    year: 1982
+    verified: false
+  - citation: Georgopoulos AP, Schwartz AB, Kettner RE. Neuronal population coding of movement direction. Science. 1986;233(4771):1416-1419.
+    doi: 10.1126/science.3749885
+    year: 1986
+    verified: false
+  - citation: Hochberg LR, Serruya MD, Friehs GM, et al. Neuronal ensemble control of prosthetic devices by a human with tetraplegia.
+      Nature. 2006;442(7099):164-171.
+    doi: 10.1038/nature04970
+    year: 2006
+    verified: false
+  - citation: Collinger JL, Wodlinger B, Downey JE, et al. High-performance neuroprosthetic control by an individual with
+      tetraplegia. Lancet. 2013;381(9866):557-564.
+    doi: 10.1016/S0140-6736(12)61816-9
+    year: 2013
+    verified: false
+  note: Cross-lab replication from monkey single units to human intracortical BCIs.
+- construct: CN.motor_preparation
+  relation: delay-period population activity sets a preparatory state that predicts the upcoming movement
+  evidence: B
+  sources:
+  - citation: Churchland MM, Cunningham JP, Kaufman MT, et al. Neural population dynamics during reaching. Nature. 2012;487(7405):51-56.
+    doi: 10.1038/nature11129
+    year: 2012
+    verified: false
+  - citation: Santhanam G, Ryu SI, Yu BM, et al. A high-performance brain-computer interface. Nature. 2006;442(7099):195-198.
+    doi: 10.1038/nature04968
+    year: 2006
+    verified: false
+- construct: CN.speech_production
+  relation: precentral population activity encodes attempted phonemes/words for speech decoding
+  evidence: B
+  sources:
+  - citation: Willett FR, Kunz EM, Fan C, et al. A high-performance speech neuroprosthesis. Nature. 2023;620(7976):1031-1036.
+    doi: 10.1038/s41586-023-06377-x
+    year: 2023
+    verified: false
+  - citation: Card NS, Wairagkar M, Iacobacci C, et al. An accurate and rapidly calibrating speech neuroprosthesis. N Engl
+      J Med. 2024;391(7):609-618.
+    doi: 10.1056/NEJMoa2314132
+    year: 2024
+    verified: false
+- construct: CN.intent_selection
+  relation: population activity during attempted movements in paralysis is decoded as intended cursor movements or characters
+  evidence: B
+  sources:
+  - citation: Hochberg LR, Serruya MD, Friehs GM, et al. Neuronal ensemble control of prosthetic devices by a human with tetraplegia.
+      Nature. 2006;442(7099):164-171.
+    doi: 10.1038/nature04970
+    year: 2006
+    verified: false
+  - citation: Willett FR, Avansino DT, Hochberg LR, et al. High-performance brain-to-text communication via handwriting. Nature.
+      2021;593(7858):249-254.
+    doi: 10.1038/s41586-021-03506-2
+    year: 2021
+    verified: false
+  note: Used as the BCI intent signal; construct maps to HMI intent selection.
+notes: 'Signature values are textbook-level characteristics and await source checking (first pass, curator_b). Includes directional
+  tuning, kinematic coding and speech-motor cortex firing (registry note). Generators and indexes to be added in the second
+  pass. Sprint 4 (curator_b, 2026-10-12): generators and indexes curated; every DOI checked against its OpenAlex/Crossref
+  record (citation fields copied from the record); sources verified: false pending full-text check.'
 status: draft
-contributors: [maintainer, curator_b]
+contributors:
+- maintainer
+- curator_b

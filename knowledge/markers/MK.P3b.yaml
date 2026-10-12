@@ -1,33 +1,108 @@
-schema_version: "0.2"
+schema_version: '0.2'
 id: MK.P3b
-name: {en: P3b (P300), zh: P3b（P300）}
-aliases: [P300, P3]
+name:
+  en: P3b (P300)
+  zh: P3b（P300）
+aliases:
+- P300
+- P3
 type: erp_component
-recording_modality: [EEG, MEG]
+recording_modality:
+- EEG
+- MEG
 signature:
-  latency_ms: "300-600"
+  latency_ms: 300-600
   polarity: positive
   topography: centro-parietal maximum
 description:
-  en: Late positive ERP component elicited by rare, task-relevant stimuli. Amplitude increases as target probability decreases; latency is associated with stimulus evaluation time.
+  en: Late positive ERP component elicited by rare, task-relevant stimuli. Amplitude increases as target probability decreases;
+    latency is associated with stimulus evaluation time.
   zh: 由低频、与任务相关的刺激诱发的晚期正成分。靶刺激概率越低，波幅越大；潜伏期与刺激评估时间相关。
 generators:
-  - region: BR.temporoparietal_junction
-    evidence: B
-    sources:
-      - &polich2007
-        citation: "Polich J. Updating P300: an integrative theory of P3a and P3b. Clin Neurophysiol. 2007;118(10):2128-2148."
-        doi: "10.1016/j.clinph.2007.04.019"
-        year: 2007
-        verified: false
+- region: BR.TPJ
+  evidence: B
+  sources:
+  - citation: 'Polich J. Updating P300: an integrative theory of P3a and P3b. Clin Neurophysiol. 2007;118(10):2128-2148.'
+    doi: 10.1016/j.clinph.2007.04.019
+    year: 2007
+    verified: false
+  - citation: 'Linden DEJ. The P300: where in the brain is it produced and what does it tell us? Neuroscientist. 2005;11(6):563-576.'
+    doi: 10.1177/1073858405280524
+    year: 2005
+    verified: false
+  - citation: 'Kim H. Involvement of the dorsal and ventral attention networks in oddball stimulus processing: a meta-analysis.
+      Hum Brain Mapp. 2014;35(5):2265-2284.'
+    doi: 10.1002/hbm.22326
+    year: 2014
+    verified: false
+  note: 'method: lesion; TPJ lesions abolish/reduce P3b (reviewed in Polich 2007, Linden 2005), EEG-fMRI and fMRI oddball
+    localization converge on TPJ (Kim 2014 meta-analysis of oddball fMRI, indirect for the ERP itself). Replaces atlas id
+    BR.temporoparietal_junction (same region) with factory id BR.TPJ.'
+- region: BR.IPS
+  evidence: B
+  sources:
+  - citation: 'Linden DEJ. The P300: where in the brain is it produced and what does it tell us? Neuroscientist. 2005;11(6):563-576.'
+    doi: 10.1177/1073858405280524
+    year: 2005
+    verified: false
+  - citation: 'Kim H. Involvement of the dorsal and ventral attention networks in oddball stimulus processing: a meta-analysis.
+      Hum Brain Mapp. 2014;35(5):2265-2284.'
+    doi: 10.1002/hbm.22326
+    year: 2014
+    verified: false
+  note: 'method: EEG-fMRI; combined ERP-fMRI studies reviewed by Linden 2005 and the oddball fMRI meta-analysis (Kim 2014)
+    implicate the intraparietal sulcus / superior parietal cortex in target-related P3b activity.'
 indexes:
-  - construct: CN.context_updating
-    relation: amplitude increases with the need to update the stimulus context
-    evidence: B
-    sources: [*polich2007]
-  - construct: CN.attention_allocation
-    relation: amplitude decreases when attentional resources are diverted to a concurrent task
-    evidence: B
-    sources: [*polich2007]
+- construct: CN.context_updating
+  evidence: B
+  relation: amplitude increases with the need to update the stimulus context (rare, task-relevant events)
+  sources:
+  - citation: Donchin E, Coles MGH. Is the P300 component a manifestation of context updating? Behav Brain Sci. 1988;11(3):357-374.
+    doi: 10.1017/S0140525X00058027
+    year: 1988
+    verified: false
+  - citation: 'Polich J. Updating P300: an integrative theory of P3a and P3b. Clin Neurophysiol. 2007;118(10):2128-2148.'
+    doi: 10.1016/j.clinph.2007.04.019
+    year: 2007
+    verified: false
+- construct: CN.attention_allocation
+  evidence: B
+  relation: amplitude decreases when attentional resources are diverted to a concurrent task
+  sources:
+  - citation: Kok A. On the utility of P3 amplitude as a measure of processing capacity. Psychophysiology. 2001;38(3):557-577.
+    doi: 10.1017/S0048577201990559
+    year: 2001
+    verified: false
+  - citation: 'Polich J. Updating P300: an integrative theory of P3a and P3b. Clin Neurophysiol. 2007;118(10):2128-2148.'
+    doi: 10.1016/j.clinph.2007.04.019
+    year: 2007
+    verified: false
+- construct: CN.evidence_accumulation
+  evidence: C
+  relation: pre-response build-up rate tracks sensory evidence strength and peaks at decision commitment
+  sources:
+  - citation: O'Connell RG, Dockree PM, Kelly SP. A supramodal accumulation-to-bound signal that determines perceptual decisions
+      in humans. Nat Neurosci. 2012;15(12):1729-1735.
+    doi: 10.1038/nn.3248
+    year: 2012
+    verified: false
+  - citation: Twomey DM, Murphy PR, Kelly SP, et al. The classic P300 encodes a build-to-threshold decision variable. Eur
+      J Neurosci. 2015;42(1):1636-1643.
+    doi: 10.1111/ejn.12936
+    year: 2015
+    verified: false
+  note: Both studies from the same group; graded C pending independent replication.
+- construct: CN.intent_selection
+  evidence: C
+  relation: amplitude is larger for the attended (intended) item in a P300 speller matrix, enabling selection decoding
+  sources:
+  - citation: 'Farwell LA, Donchin E. Talking off the top of your head: toward a mental prosthesis utilizing event-related
+      brain potentials. Electroencephalogr Clin Neurophysiol. 1988;70(6):510-523.'
+    doi: 10.1016/0013-4694(88)90149-6
+    year: 1988
+    verified: false
+notes: 'Sprint 4 (2026-10-12, curator_a): generators and indexes curated; every DOI checked against its Crossref or OpenAlex
+  record (see curation/work/sprint4/markers_A/); verified: false pending full-text check.'
 status: draft
-contributors: [savorcode01]
+contributors:
+- savorcode01

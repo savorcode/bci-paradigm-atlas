@@ -1,4 +1,4 @@
-schema_version: "0.2"
+schema_version: '0.2'
 id: MK.CNV
 name:
   en: Contingent negative variation
@@ -20,8 +20,73 @@ description:
   en: Slow negative potential that develops between a warning stimulus and an imperative stimulus that requires a response.
     It reflects anticipation and preparation for the upcoming stimulus and response.
   zh: 在警示刺激与要求反应的命令刺激之间逐渐形成的慢负电位。它反映对即将出现的刺激和反应的预期与准备。
+generators:
+- region: BR.SMA
+  evidence: B
+  sources:
+  - citation: Bareš M, Nestrašil I, Rektor I. The effect of response type (motor output versus mental counting) on the intracerebral
+      distribution of the slow cortical potentials in an externally cued (CNV) paradigm. Brain Res Bull. 2007;71(4):428-435.
+    doi: 10.1016/j.brainresbull.2006.10.012
+    year: 2007
+    verified: false
+  - citation: 'Nagai Y, Critchley HD, Featherstone E, et al. Brain activity relating to the contingent negative variation:
+      an fMRI investigation. NeuroImage. 2004;21(4):1232-1241.'
+    doi: 10.1016/j.neuroimage.2003.10.036
+    year: 2004
+    verified: false
+  note: 'method: intracranial; SEEG CNV generators in SMA/premotor cortex (Bareš 2007); EEG-fMRI CNV-correlated activity in
+    SMA (Nagai 2004).'
+- region: BR.dACC
+  evidence: B
+  sources:
+  - citation: 'Nagai Y, Critchley HD, Featherstone E, et al. Brain activity relating to the contingent negative variation:
+      an fMRI investigation. NeuroImage. 2004;21(4):1232-1241.'
+    doi: 10.1016/j.neuroimage.2003.10.036
+    year: 2004
+    verified: false
+  - citation: Bareš M, Nestrašil I, Rektor I. The effect of response type (motor output versus mental counting) on the intracerebral
+      distribution of the slow cortical potentials in an externally cued (CNV) paradigm. Brain Res Bull. 2007;71(4):428-435.
+    doi: 10.1016/j.brainresbull.2006.10.012
+    year: 2007
+    verified: false
+  note: 'method: EEG-fMRI; intracranial; CNV amplitude covaries with anterior/mid-cingulate BOLD; SEEG generators in cingulate
+    gyrus.'
+- region: BR.thalamus
+  evidence: C
+  sources:
+  - citation: 'Nagai Y, Critchley HD, Featherstone E, et al. Brain activity relating to the contingent negative variation:
+      an fMRI investigation. NeuroImage. 2004;21(4):1232-1241.'
+    doi: 10.1016/j.neuroimage.2003.10.036
+    year: 2004
+    verified: false
+  note: 'method: EEG-fMRI; thalamic BOLD covaries with CNV amplitude in a single study.'
+indexes:
+- construct: CN.anticipation
+  relation: negativity develops during the warning-imperative interval and grows with expectancy of the imperative stimulus
+  evidence: B
+  sources:
+  - citation: 'Walter WG, Cooper R, Aldridge VJ, et al. Contingent negative variation: an electric sign of sensori-motor association
+      and expectancy in the human brain. Nature. 1964;203(4943):380-384.'
+    doi: 10.1038/203380a0
+    year: 1964
+    verified: false
+  - citation: Tecce JJ. Contingent negative variation (CNV) and psychological processes in man. Psychol Bull. 1972;77(2):73-108.
+    doi: 10.1037/h0032177
+    year: 1972
+    verified: false
+- construct: CN.motor_preparation
+  relation: more intracerebral CNV generators when the imperative stimulus requires a motor response than mental counting
+  evidence: C
+  sources:
+  - citation: Bareš M, Nestrašil I, Rektor I. The effect of response type (motor output versus mental counting) on the intracerebral
+      distribution of the slow cortical potentials in an externally cued (CNV) paradigm. Brain Res Bull. 2007;71(4):428-435.
+    doi: 10.1016/j.brainresbull.2006.10.012
+    year: 2007
+    verified: false
 notes: 'Signature values are textbook-level approximations and await checking against sources (pass 2). Generators and indexes
-  not yet written. Used by (registry): CTL-ANT-001, CTL-CNV-001, CTL-CPT-001.'
+  not yet written. Used by (registry): CTL-ANT-001, CTL-CNV-001, CTL-CPT-001. Sprint 4 (curator_b, 2026-10-12): generators
+  and indexes curated; every DOI checked against its OpenAlex/Crossref record (citation fields copied from the record); sources
+  verified: false pending full-text check.'
 status: draft
 contributors:
 - maintainer
