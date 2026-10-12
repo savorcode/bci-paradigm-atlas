@@ -1,4 +1,4 @@
-schema_version: "0.2"
+schema_version: '0.2'
 id: MK.BOLD_TPJ
 name:
   en: Temporoparietal junction BOLD
@@ -16,9 +16,90 @@ description:
   en: Task-evoked BOLD signal change in the temporoparietal junction. It increases when participants reason about other people's
     beliefs, take another's visual perspective or distinguish self- from other-generated actions.
   zh: 颞顶联合区的任务诱发 BOLD 信号变化。在推理他人信念、采择他人视觉视角或区分自我与他人产生的动作时增强。
+generators:
+- region: BR.TPJ
+  evidence: A
+  sources:
+  - citation: 'Schurz M, Radua J, Aichhorn M, et al. Fractionating theory of mind: a meta-analysis of functional brain imaging
+      studies. Neurosci Biobehav Rev. 2014;42:9-34.'
+    doi: 10.1016/j.neubiorev.2014.01.009
+    year: 2014
+    verified: false
+  - citation: 'Van Overwalle F. Social cognition and the brain: a meta-analysis. Hum Brain Mapp. 2009;30(3):829-858.'
+    doi: 10.1002/hbm.20547
+    year: 2009
+    verified: false
+  - citation: Krall SC, Rottschy C, Oberwelland E, et al. The role of the right temporoparietal junction in attention and
+      social interaction as revealed by ALE meta-analysis. Brain Struct Funct. 2015;220(2):587-604.
+    doi: 10.1007/s00429-014-0803-z
+    year: 2015
+    verified: false
+  note: 'method: fMRI localization; measured region; theory-of-mind and social-cognition meta-analyses localise belief-attribution
+    effects to bilateral TPJ, right-lateralised; Krall 2015 ALE separates anterior (attention) and posterior (social) rTPJ
+    clusters. Factory id BR.TPJ used (same as atlas BR.temporoparietal_junction).'
+indexes:
+- construct: CN.mentalizing
+  evidence: A
+  relation: BOLD increases when reasoning about others' false beliefs compared with physical/false-photograph control stories
+  sources:
+  - citation: 'Schurz M, Radua J, Aichhorn M, et al. Fractionating theory of mind: a meta-analysis of functional brain imaging
+      studies. Neurosci Biobehav Rev. 2014;42:9-34.'
+    doi: 10.1016/j.neubiorev.2014.01.009
+    year: 2014
+    verified: false
+  - citation: 'Saxe R, Kanwisher N. People thinking about thinking people: the role of the temporo-parietal junction in "theory
+      of mind". NeuroImage. 2003;19(4):1835-1842.'
+    doi: 10.1016/S1053-8119(03)00230-1
+    year: 2003
+    verified: false
+  - citation: 'Van Overwalle F. Social cognition and the brain: a meta-analysis. Hum Brain Mapp. 2009;30(3):829-858.'
+    doi: 10.1002/hbm.20547
+    year: 2009
+    verified: false
+- construct: CN.orienting
+  evidence: A
+  relation: BOLD (anterior rTPJ) increases during stimulus-driven reorienting to unexpected targets
+  sources:
+  - citation: Krall SC, Rottschy C, Oberwelland E, et al. The role of the right temporoparietal junction in attention and
+      social interaction as revealed by ALE meta-analysis. Brain Struct Funct. 2015;220(2):587-604.
+    doi: 10.1007/s00429-014-0803-z
+    year: 2015
+    verified: false
+  - citation: 'Decety J, Lamm C. The role of the right temporoparietal junction in social interaction: how low-level computational
+      processes contribute to meta-cognition. Neuroscientist. 2007;13(6):580-593.'
+    doi: 10.1177/1073858407304654
+    year: 2007
+    verified: false
+- construct: CN.self_processing
+  evidence: B
+  relation: BOLD increases when an action is attributed to another agent rather than to oneself (self-other distinction)
+  sources:
+  - citation: 'Farrer C, Frith CD. Experiencing oneself vs another person as being the cause of an action: the neural correlates
+      of the experience of agency. NeuroImage. 2002;15(3):596-603.'
+    doi: 10.1006/nimg.2001.1009
+    year: 2002
+    verified: false
+  - citation: 'Decety J, Lamm C. The role of the right temporoparietal junction in social interaction: how low-level computational
+      processes contribute to meta-cognition. Neuroscientist. 2007;13(6):580-593.'
+    doi: 10.1177/1073858407304654
+    year: 2007
+    verified: false
+  note: One fMRI study plus a narrative review.
+- construct: CN.social_perception
+  evidence: C
+  relation: activity increases when moving geometric shapes are perceived as intentional agents (animacy/ToM animations)
+  sources:
+  - citation: 'Castelli F, Happé F, Frith U, et al. Movement and mind: a functional imaging study of perception and interpretation
+      of complex intentional movement patterns. NeuroImage. 2000;12(3):314-325.'
+    doi: 10.1006/nimg.2000.0612
+    year: 2000
+    verified: false
+  note: PET rCBF study (grouped under this marker per D-050).
 notes: 'Signature values are textbook-level characteristics entered in the first pass and await source checking. Also referenced
   by SOC-ANIM-001 (PET study; hemodynamic markers are BOLD-named in the registry). D-050 (maintainer, 2026-10-03): PET regional
-  blood-flow (rCBF) effects in the same region are grouped under this marker, as fNIRS HbO is under D-028 item 5.'
+  blood-flow (rCBF) effects in the same region are grouped under this marker, as fNIRS HbO is under D-028 item 5. Sprint 4
+  (2026-10-12, curator_d): generators and indexes curated; every DOI checked against its Crossref or OpenAlex record (see
+  curation/work/sprint4/markers_D/); verified: false pending full-text check.'
 status: draft
 contributors:
 - maintainer

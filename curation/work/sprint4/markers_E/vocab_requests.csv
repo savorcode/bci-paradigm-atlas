@@ -1,0 +1,3 @@
+id_proposed,en,zh,parent_or_type,reason,example_marker
+BR.SEF,supplementary eye field,辅助眼区,region,oculomotor BOLD includes SEF (Grosbras 2005; Jamadar 2013); no README id (BR.SMA/BR.preSMA are skeletomotor); SEF left out of generators and kept in description,MK.BOLD_oculomotor
+CN.voice_perception,voice perception,嗓音知觉,CN.perception (or CN.social_perception),voice-selective STS/STG BOLD (Belin 2000); mapped to CN.social_perception as closest id,MK.BOLD_auditory_cortex

@@ -1,4 +1,4 @@
-schema_version: "0.2"
+schema_version: '0.2'
 id: MK.oERN
 name:
   en: Observed error-related negativity
@@ -19,8 +19,46 @@ description:
   en: Negative deflection elicited in an observer when another agent, human or machine, commits an error. It resembles the
     ERN in topography but occurs later relative to the observed response.
   zh: 当另一行为主体（人或机器）犯错时在观察者身上诱发的负向波。其头皮分布与 ERN 相似，但相对于被观察的反应出现得更晚。
+generators:
+- region: BR.dACC
+  evidence: C
+  sources:
+  - citation: van Schie HT, Mars RB, Coles MGH, et al. Modulation of activity in medial frontal and motor cortices during
+      error observation. Nat Neurosci. 2004;7(5):549-554.
+    doi: 10.1038/nn1239
+    year: 2004
+    verified: false
+  note: 'method: MEG/EEG source; Dipole source of the observed-error negativity in medial frontal / anterior cingulate cortex
+    (van Schie 2004); single source-localization study.'
+indexes:
+- construct: CN.error_monitoring
+  evidence: B
+  relation: amplitude larger when an observed agent commits an error than when it responds correctly
+  sources:
+  - citation: van Schie HT, Mars RB, Coles MGH, et al. Modulation of activity in medial frontal and motor cortices during
+      error observation. Nat Neurosci. 2004;7(5):549-554.
+    doi: 10.1038/nn1239
+    year: 2004
+    verified: false
+  - citation: 'Bates AT, Patel TP, Liddle PF. External behavior monitoring mirrors internal behavior monitoring: error-related
+      negativity for observed errors. J Psychophysiol. 2005;19(4):281-288.'
+    doi: 10.1027/0269-8803.19.4.281
+    year: 2005
+    verified: false
+- construct: CN.machine_error_perception
+  evidence: C
+  relation: an analogous fronto-central negativity is elicited when an observed external device or agent errs
+  sources:
+  - citation: 'Chavarriaga R, Sobolewski A, Millán JdR. Errare machinale est: the use of error-related potentials in brain-machine
+      interfaces. Front Neurosci. 2014;8:208.'
+    doi: 10.3389/fnins.2014.00208
+    year: 2014
+    verified: false
+  note: Review of observation/interaction ErrPs in BCI (Chavarriaga 2014); the distinction from MK.ErrP is not clear-cut.
 notes: 'Signature values are textbook-level approximations and await checking against sources (pass 2). Generators and indexes
-  not yet written. Used by (registry): ERR-OBS-001.'
+  not yet written. Used by (registry): ERR-OBS-001. Sprint 4 (2026-10-12, curator_c): generators and indexes curated; every
+  DOI checked against its Crossref or OpenAlex record (see curation/work/sprint4/markers_C/); verified: false pending full-text
+  check.'
 status: draft
 contributors:
 - maintainer

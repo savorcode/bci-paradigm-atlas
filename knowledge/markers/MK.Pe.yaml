@@ -1,4 +1,4 @@
-schema_version: "0.2"
+schema_version: '0.2'
 id: MK.Pe
 name:
   en: Error positivity
@@ -18,8 +18,62 @@ description:
   en: Positive deflection following the ERN after erroneous responses. Its amplitude is larger for errors the participant
     is aware of, and varies with post-decision confidence.
   zh: 错误反应后紧随 ERN 出现的正向波。被试觉察到的错误上其波幅更大，并随决策后信心变化。
+generators:
+- region: BR.dACC
+  evidence: C
+  sources:
+  - citation: van Veen V, Carter CS. The timing of action-monitoring processes in the anterior cingulate cortex. J Cogn Neurosci.
+      2002;14(4):593-602.
+    doi: 10.1162/08989290260045837
+    year: 2002
+    verified: false
+  note: 'method: MEG/EEG source; Source modelling places the Pe in rostral anterior cingulate cortex (van Veen & Carter 2002);
+    single study, and the centro-parietal maximum suggests additional posterior (P3-like) contributions.'
+- region: BR.anterior_insula
+  evidence: C
+  sources:
+  - citation: Ullsperger M, Harsay HA, Wessel JR, et al. Conscious perception of errors and its relation to the anterior insula.
+      Brain Struct Funct. 2010;214(5-6):629-643.
+    doi: 10.1007/s00429-010-0261-1
+    year: 2010
+    verified: false
+  note: 'method: fMRI localization; Anterior insula activity tracks conscious error perception, the same contrast that modulates
+    Pe (Ullsperger 2010); indirect for the ERP itself.'
+indexes:
+- construct: CN.error_monitoring
+  evidence: A
+  relation: amplitude larger for errors the participant is aware of (error awareness)
+  sources:
+  - citation: 'Wessel JR. Error awareness and the error-related negativity: evaluating the first decade of evidence. Front
+      Hum Neurosci. 2012;6:88.'
+    doi: 10.3389/fnhum.2012.00088
+    year: 2012
+    verified: false
+  - citation: 'Nieuwenhuis S, Ridderinkhof KR, Blom J, et al. Error-related brain potentials are differentially related to
+      awareness of response errors: evidence from an antisaccade task. Psychophysiology. 2001;38(5):752-760.'
+    doi: 10.1111/1469-8986.3850752
+    year: 2001
+    verified: false
+  - citation: Murphy PR, Robertson IH, Allen D, et al. An electrophysiological signal that precisely tracks the emergence
+      of error awareness. Front Hum Neurosci. 2012;6:65.
+    doi: 10.3389/fnhum.2012.00065
+    year: 2012
+    verified: false
+  note: Systematic evaluation of the error-awareness literature (Wessel 2012) consistently finds Pe, not ERN, tracks awareness;
+    primary studies Nieuwenhuis 2001, Murphy 2012.
+- construct: CN.evidence_accumulation
+  evidence: C
+  relation: build-up rate tracks accumulation of evidence that an error was committed, peaking at awareness report
+  sources:
+  - citation: Murphy PR, Robertson IH, Allen D, et al. An electrophysiological signal that precisely tracks the emergence
+      of error awareness. Front Hum Neurosci. 2012;6:65.
+    doi: 10.3389/fnhum.2012.00065
+    year: 2012
+    verified: false
 notes: 'Signature values are textbook-level approximations and await checking against sources (pass 2). Generators and indexes
-  not yet written. Used by (registry): ERR-AWARE-001, CTL-FLK-001.'
+  not yet written. Used by (registry): ERR-AWARE-001, CTL-FLK-001. Sprint 4 (2026-10-12, curator_c): generators and indexes
+  curated; every DOI checked against its Crossref or OpenAlex record (see curation/work/sprint4/markers_C/); verified: false
+  pending full-text check.'
 status: draft
 contributors:
 - maintainer

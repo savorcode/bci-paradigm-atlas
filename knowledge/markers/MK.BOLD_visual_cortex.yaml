@@ -1,4 +1,4 @@
-schema_version: "0.2"
+schema_version: '0.2'
 id: MK.BOLD_visual_cortex
 name:
   en: Visual cortex BOLD response
@@ -15,8 +15,94 @@ description:
   en: Stimulus-related BOLD response in early and higher visual cortex, used for retinotopic mapping, encoding of natural
     images and films, perceptual alternations and visual imagery.
   zh: 早期及高级视皮层中与刺激相关的 BOLD 响应，用于视网膜拓扑映射、自然图像与影片编码、知觉交替及视觉想象研究。
+generators:
+- region: BR.V1
+  evidence: A
+  sources:
+  - citation: Sereno MI, Dale AM, Reppas JB, et al. Borders of multiple visual areas in humans revealed by functional magnetic
+      resonance imaging. Science. 1995;268(5212):889-893.
+    doi: 10.1126/science.7754376
+    year: 1995
+    verified: false
+  - citation: Wandell BA, Dumoulin SO, Brewer AA. Visual field maps in human cortex. Neuron. 2007;56(2):366-383.
+    doi: 10.1016/j.neuron.2007.10.012
+    year: 2007
+    verified: false
+  note: 'method: fMRI localization; retinotopic mapping delineates V1 and borders of higher areas; replicated widely (review
+    Wandell 2007).'
+- region: BR.extrastriate
+  evidence: A
+  sources:
+  - citation: Sereno MI, Dale AM, Reppas JB, et al. Borders of multiple visual areas in humans revealed by functional magnetic
+      resonance imaging. Science. 1995;268(5212):889-893.
+    doi: 10.1126/science.7754376
+    year: 1995
+    verified: false
+  - citation: Wandell BA, Dumoulin SO, Brewer AA. Visual field maps in human cortex. Neuron. 2007;56(2):366-383.
+    doi: 10.1016/j.neuron.2007.10.012
+    year: 2007
+    verified: false
+  note: 'method: fMRI localization; V2/V3/hV4 and further field maps identified by retinotopic mapping.'
+indexes:
+- construct: CN.early_visual
+  evidence: A
+  relation: BOLD follows retinotopic position and local image features of visual stimuli
+  sources:
+  - citation: Wandell BA, Dumoulin SO, Brewer AA. Visual field maps in human cortex. Neuron. 2007;56(2):366-383.
+    doi: 10.1016/j.neuron.2007.10.012
+    year: 2007
+    verified: false
+  - citation: Sereno MI, Dale AM, Reppas JB, et al. Borders of multiple visual areas in humans revealed by functional magnetic
+      resonance imaging. Science. 1995;268(5212):889-893.
+    doi: 10.1126/science.7754376
+    year: 1995
+    verified: false
+  - citation: Kay KN, Naselaris T, Prenger RJ, et al. Identifying natural images from human brain activity. Nature. 2008;452(7185):352-355.
+    doi: 10.1038/nature06713
+    year: 2008
+    verified: false
+  note: grade from extensive cross-lab replication of retinotopic mapping.
+- construct: CN.spatial_attention
+  evidence: B
+  relation: BOLD increases at the retinotopic location of the attended region, even without a stimulus
+  sources:
+  - citation: Kastner S, Pinsk MA, De Weerd P, et al. Increased activity in human visual cortex during directed attention
+      in the absence of visual stimulation. Neuron. 1999;22(4):751-761.
+    doi: 10.1016/S0896-6273(00)80734-5
+    year: 1999
+    verified: false
+  - citation: Corbetta M, Shulman GL. Control of goal-directed and stimulus-driven attention in the brain. Nat Rev Neurosci.
+      2002;3(3):201-215.
+    doi: 10.1038/nrn755
+    year: 2002
+    verified: false
+- construct: CN.visual_imagery
+  evidence: B
+  relation: occipital BOLD increases during visual imagery, with early visual involvement depending on task detail
+  sources:
+  - citation: Kosslyn SM, Ganis G, Thompson WL. Neural foundations of imagery. Nat Rev Neurosci. 2001;2(9):635-642.
+    doi: 10.1038/35090055
+    year: 2001
+    verified: false
+  - citation: 'Winlove CIP, Milton F, Ranson J, et al. The neural correlates of visual imagery: a co-ordinate-based meta-analysis.
+      Cortex. 2018;105:4-25.'
+    doi: 10.1016/j.cortex.2017.12.014
+    year: 2018
+    verified: false
+  note: Winlove 2018 meta-analysis found inconsistent early visual cortex activation; graded B rather than A.
+- construct: CN.perceptual_awareness
+  evidence: C
+  relation: extrastriate BOLD tracks perceptual alternations in binocular rivalry
+  sources:
+  - citation: Tong F, Nakayama K, Vaughan JT, et al. Binocular rivalry and visual awareness in human extrastriate cortex.
+      Neuron. 1998;21(4):753-759.
+    doi: 10.1016/S0896-6273(00)80592-9
+    year: 1998
+    verified: false
 notes: 'First-pass skeleton by package A (2026-10-03). No generators/indexes yet. D-050 (maintainer, 2026-10-03): PET regional
-  blood-flow (rCBF) effects in the same region are grouped under this marker, as fNIRS HbO is under D-028 item 5.'
+  blood-flow (rCBF) effects in the same region are grouped under this marker, as fNIRS HbO is under D-028 item 5. Sprint 4
+  (2026-10-12, curator_e): generators and indexes curated; every DOI checked against its Crossref or OpenAlex record (see
+  curation/work/sprint4/markers_E/); verified: false pending full-text check.'
 status: draft
 contributors:
 - curator_a

@@ -1,4 +1,4 @@
-schema_version: "0.2"
+schema_version: '0.2'
 id: MK.BOLD_frontoparietal
 name:
   en: Frontoparietal network BOLD
@@ -15,7 +15,97 @@ description:
   en: BOLD (or fNIRS HbO) increases in lateral prefrontal and posterior parietal cortex, including the intraparietal sulcus,
     that scale with attentional or working-memory load.
   zh: 外侧前额叶与后顶叶（包括顶内沟）的 BOLD（或 fNIRS HbO）升高，其幅度随注意或工作记忆负荷增加。
-notes: First-pass skeleton by package A (2026-10-03). No generators/indexes yet.
+generators:
+- region: BR.DLPFC
+  evidence: A
+  sources:
+  - citation: 'Owen AM, McMillan KM, Laird AR, et al. N-back working memory paradigm: a meta-analysis of normative functional
+      neuroimaging studies. Hum Brain Mapp. 2005;25(1):46-59.'
+    doi: 10.1002/hbm.20131
+    year: 2005
+    verified: false
+  - citation: 'Rottschy C, Langner R, Dogan I, et al. Modelling neural correlates of working memory: a coordinate-based meta-analysis.
+      NeuroImage. 2012;60(1):830-846.'
+    doi: 10.1016/j.neuroimage.2011.11.050
+    year: 2012
+    verified: false
+  note: 'method: fMRI localization; lateral prefrontal (DLPFC/MFG) component; consistent across working-memory ALE meta-analyses.'
+- region: BR.IPS
+  evidence: A
+  sources:
+  - citation: 'Owen AM, McMillan KM, Laird AR, et al. N-back working memory paradigm: a meta-analysis of normative functional
+      neuroimaging studies. Hum Brain Mapp. 2005;25(1):46-59.'
+    doi: 10.1002/hbm.20131
+    year: 2005
+    verified: false
+  - citation: 'Rottschy C, Langner R, Dogan I, et al. Modelling neural correlates of working memory: a coordinate-based meta-analysis.
+      NeuroImage. 2012;60(1):830-846.'
+    doi: 10.1016/j.neuroimage.2011.11.050
+    year: 2012
+    verified: false
+  - citation: Fedorenko E, Duncan J, Kanwisher N. Broad domain generality in focal regions of frontal and parietal cortex.
+      Proc Natl Acad Sci U S A. 2013;110(41):16616-16621.
+    doi: 10.1073/pnas.1315235110
+    year: 2013
+    verified: false
+  note: 'method: fMRI localization; posterior parietal / intraparietal component; ALE meta-analyses plus individual-subject
+    localisation of multiple-demand regions (Fedorenko 2013).'
+indexes:
+- construct: CN.working_memory
+  evidence: A
+  relation: BOLD increases parametrically with working-memory load (e.g. n-back level)
+  sources:
+  - citation: 'Owen AM, McMillan KM, Laird AR, et al. N-back working memory paradigm: a meta-analysis of normative functional
+      neuroimaging studies. Hum Brain Mapp. 2005;25(1):46-59.'
+    doi: 10.1002/hbm.20131
+    year: 2005
+    verified: false
+  - citation: 'Rottschy C, Langner R, Dogan I, et al. Modelling neural correlates of working memory: a coordinate-based meta-analysis.
+      NeuroImage. 2012;60(1):830-846.'
+    doi: 10.1016/j.neuroimage.2011.11.050
+    year: 2012
+    verified: false
+- construct: CN.attention_allocation
+  evidence: B
+  relation: BOLD increases with task difficulty across diverse demands (multiple-demand response)
+  sources:
+  - citation: 'Duncan J. The multiple-demand (MD) system of the primate brain: mental programs for intelligent behaviour.
+      Trends Cogn Sci. 2010;14(4):172-179.'
+    doi: 10.1016/j.tics.2010.01.004
+    year: 2010
+    verified: false
+  - citation: Fedorenko E, Duncan J, Kanwisher N. Broad domain generality in focal regions of frontal and parietal cortex.
+      Proc Natl Acad Sci U S A. 2013;110(41):16616-16621.
+    doi: 10.1073/pnas.1315235110
+    year: 2013
+    verified: false
+- construct: CN.spatial_attention
+  evidence: B
+  relation: dorsal frontoparietal BOLD increases during voluntary (top-down) orienting of spatial attention
+  sources:
+  - citation: Corbetta M, Shulman GL. Control of goal-directed and stimulus-driven attention in the brain. Nat Rev Neurosci.
+      2002;3(3):201-215.
+    doi: 10.1038/nrn755
+    year: 2002
+    verified: false
+  - citation: Corbetta M, Akbudak E, Conturo TE, et al. A common network of functional areas for attention and eye movements.
+      Neuron. 1998;21(4):761-773.
+    doi: 10.1016/S0896-6273(00)80593-0
+    year: 1998
+    verified: false
+  note: dorsal attention network component (IPS/FEF); Corbetta 2002 is a narrative review.
+- construct: CN.sustained_attention
+  evidence: A
+  relation: right-lateralised frontoparietal BOLD is engaged during sustained vigilant attention to simple tasks
+  sources:
+  - citation: 'Langner R, Eickhoff SB. Sustaining attention to simple tasks: a meta-analytic review of the neural mechanisms
+      of vigilant attention. Psychol Bull. 2013;139(4):870-900.'
+    doi: 10.1037/a0030694
+    year: 2013
+    verified: false
+notes: 'First-pass skeleton by package A (2026-10-03). No generators/indexes yet. Sprint 4 (2026-10-12, curator_e): generators
+  and indexes curated; every DOI checked against its Crossref or OpenAlex record (see curation/work/sprint4/markers_E/); verified:
+  false pending full-text check.'
 status: draft
 contributors:
 - curator_a

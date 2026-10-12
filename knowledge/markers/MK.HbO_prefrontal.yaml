@@ -1,11 +1,89 @@
-schema_version: "0.2"
+schema_version: '0.2'
 id: MK.HbO_prefrontal
-name: {en: Prefrontal HbO task response, zh: 前额叶 HbO 任务响应}
-aliases: [prefrontal oxyhemoglobin increase, frontal HbO]
+name:
+  en: Prefrontal HbO task response
+  zh: 前额叶 HbO 任务响应
+aliases:
+- prefrontal oxyhemoglobin increase
+- frontal HbO
 type: hemodynamic
-recording_modality: [fNIRS]
-signature: {topography: prefrontal cortex (lateral and medial)}
-description: {en: 'Task-related increase in oxygenated haemoglobin (with a smaller decrease in deoxygenated haemoglobin) measured by fNIRS over prefrontal cortex, developing over several seconds during cognitive tasks such as mental arithmetic or word generation.', zh: 以 fNIRS 在前额叶测得的任务相关氧合血红蛋白升高（伴随较小的脱氧血红蛋白下降），在心算或词语生成等认知任务中于数秒内逐渐形成。}
-notes: Signature values are textbook-level characteristics and await source checking (first pass, curator_b). Generators and indexes to be added in the second pass.
+recording_modality:
+- fNIRS
+signature:
+  topography: prefrontal cortex (lateral and medial)
+description:
+  en: Task-related increase in oxygenated haemoglobin (with a smaller decrease in deoxygenated haemoglobin) measured by fNIRS
+    over prefrontal cortex, developing over several seconds during cognitive tasks such as mental arithmetic or word generation.
+  zh: 以 fNIRS 在前额叶测得的任务相关氧合血红蛋白升高（伴随较小的脱氧血红蛋白下降），在心算或词语生成等认知任务中于数秒内逐渐形成。
+generators:
+- region: BR.DLPFC
+  evidence: B
+  sources:
+  - citation: Cui X, Bray S, Bryant DM, et al. A quantitative comparison of NIRS and fMRI across multiple cognitive tasks.
+      NeuroImage. 2011;54(4):2808-2821.
+    doi: 10.1016/j.neuroimage.2010.10.069
+    year: 2011
+    verified: false
+  - citation: Okamoto M, Dan H, Sakamoto K, et al. Three-dimensional probabilistic anatomical cranio-cerebral correlation
+      via the international 10-20 system oriented for transcranial functional brain mapping. NeuroImage. 2004;21(1):99-111.
+    doi: 10.1016/j.neuroimage.2003.08.026
+    year: 2004
+    verified: false
+  note: 'method: fMRI localization; concurrent NIRS-fMRI shows prefrontal HbO correlates with BOLD in underlying lateral prefrontal
+    cortex across tasks (Cui et al. 2011); probabilistic 10-20 to cortex projection places F3/F4-area optodes over DLPFC (Okamoto
+    et al. 2004).'
+- region: BR.frontopolar
+  evidence: C
+  sources:
+  - citation: Okamoto M, Dan H, Sakamoto K, et al. Three-dimensional probabilistic anatomical cranio-cerebral correlation
+      via the international 10-20 system oriented for transcranial functional brain mapping. NeuroImage. 2004;21(1):99-111.
+    doi: 10.1016/j.neuroimage.2003.08.026
+    year: 2004
+    verified: false
+  note: 'method: fMRI localization; Fp1/Fp2-area optodes project to frontopolar cortex (BA 10) per probabilistic registration
+    (Okamoto et al. 2004); anatomical registration, no functional co-localization for this marker, so C.'
+indexes:
+- construct: CN.mental_arithmetic
+  evidence: B
+  relation: HbO increases during mental arithmetic relative to rest / no-control state, enabling fNIRS-BCI classification
+  sources:
+  - citation: 'Power SD, Kushki A, Chau T. Towards a system-paced near-infrared spectroscopy brain-computer interface: differentiating
+      prefrontal activity due to mental arithmetic and mental singing from the no-control state. J Neural Eng. 2011;8(6):066004.'
+    doi: 10.1088/1741-2560/8/6/066004
+    year: 2011
+    verified: false
+  - citation: 'Naseer N, Hong KS. fNIRS-based brain-computer interfaces: a review. Front Hum Neurosci. 2015;9:3.'
+    doi: 10.3389/fnhum.2015.00003
+    year: 2015
+    verified: false
+- construct: CN.working_memory
+  evidence: B
+  relation: HbO increases with n-back working-memory load
+  sources:
+  - citation: Herff C, Heger D, Fortmann O, et al. Mental workload during n-back task—quantified in the prefrontal cortex
+      using fNIRS. Front Hum Neurosci. 2014;7:935.
+    doi: 10.3389/fnhum.2013.00935
+    year: 2014
+    verified: false
+  - citation: Fishburn FA, Norr ME, Medvedev AV, et al. Sensitivity of fNIRS to cognitive state and load. Front Hum Neurosci.
+      2014;8:76.
+    doi: 10.3389/fnhum.2014.00076
+    year: 2014
+    verified: false
+- construct: CN.speech_production
+  evidence: C
+  relation: HbO increases over lateral prefrontal cortex during verbal fluency (word generation)
+  sources:
+  - citation: Herrmann MJ, Ehlis AC, Fallgatter AJ. Frontal activation during a verbal-fluency task as measured by near-infrared
+      spectroscopy. Brain Res Bull. 2003;61(1):51-56.
+    doi: 10.1016/S0361-9230(03)00066-2
+    year: 2003
+    verified: false
+  note: Single study cited; verbal fluency is a lexical retrieval / production task, mapped to CN.speech_production.
+notes: 'Signature values are textbook-level characteristics and await source checking (first pass, curator_b). Sprint 4 (2026-10-12,
+  curator_d): generators and indexes curated; every DOI checked against its Crossref or OpenAlex record (see curation/work/sprint4/markers_D/);
+  verified: false pending full-text check.'
 status: draft
-contributors: [maintainer, curator_b]
+contributors:
+- maintainer
+- curator_b

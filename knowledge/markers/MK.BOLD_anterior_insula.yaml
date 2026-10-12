@@ -1,4 +1,4 @@
-schema_version: "0.2"
+schema_version: '0.2'
 id: MK.BOLD_anterior_insula
 name:
   en: Anterior insula BOLD
@@ -15,7 +15,74 @@ description:
   en: Task-evoked BOLD signal change in the anterior insular cortex. It increases when participants observe others in pain,
     receive unfair offers and anticipate aversive events.
   zh: 前岛叶皮层的任务诱发 BOLD 信号变化。在观察他人疼痛、收到不公平提议以及预期厌恶事件时增强。
-notes: Signature values are textbook-level characteristics entered in the first pass and await source checking.
+generators:
+- region: BR.anterior_insula
+  evidence: A
+  sources:
+  - citation: 'Kurth F, Zilles K, Fox PT, et al. A link between the systems: functional differentiation and integration within
+      the human insula revealed by meta-analysis. Brain Struct Funct. 2010;214(5-6):519-534.'
+    doi: 10.1007/s00429-010-0255-z
+    year: 2010
+    verified: false
+  note: 'method: fMRI localization; measured region; ALE meta-analysis of 1768 experiments delineates anterior (dorsal and
+    ventral) insula clusters.'
+indexes:
+- construct: CN.interoception
+  evidence: A
+  relation: BOLD increases during interoceptive and visceral sensation tasks
+  sources:
+  - citation: 'Kurth F, Zilles K, Fox PT, et al. A link between the systems: functional differentiation and integration within
+      the human insula revealed by meta-analysis. Brain Struct Funct. 2010;214(5-6):519-534.'
+    doi: 10.1007/s00429-010-0255-z
+    year: 2010
+    verified: false
+  - citation: Craig AD. How do you feel — now? The anterior insula and human awareness. Nat Rev Neurosci. 2009;10(1):59-70.
+    doi: 10.1038/nrn2555
+    year: 2009
+    verified: false
+  note: Kurth 2010 (meta-analysis) places interoception in mid/anterior insula; Craig 2009 review.
+- construct: CN.emotional_salience
+  evidence: B
+  relation: BOLD increases to salient, behaviourally relevant events and co-activates with dACC
+  sources:
+  - citation: 'Menon V, Uddin LQ. Saliency, switching, attention and control: a network model of insula function. Brain Struct
+      Funct. 2010;214(5-6):655-667.'
+    doi: 10.1007/s00429-010-0262-0
+    year: 2010
+    verified: false
+  - citation: Craig AD. How do you feel — now? The anterior insula and human awareness. Nat Rev Neurosci. 2009;10(1):59-70.
+    doi: 10.1038/nrn2555
+    year: 2009
+    verified: false
+  note: Two narrative/theoretical reviews; B.
+- construct: CN.somatosensation
+  evidence: A
+  relation: BOLD increases for directly experienced pain and when observing others in pain
+  sources:
+  - citation: Lamm C, Decety J, Singer T. Meta-analytic evidence for common and distinct neural networks associated with directly
+      experienced pain and empathy for pain. NeuroImage. 2011;54(3):2492-2502.
+    doi: 10.1016/j.neuroimage.2010.10.014
+    year: 2011
+    verified: false
+  note: Meta-analysis. Empathy for pain has no README construct; mapped here (vocab request CN.empathy).
+- construct: CN.social_interaction
+  evidence: A
+  relation: BOLD increases for unfair compared with fair offers in the Ultimatum Game
+  sources:
+  - citation: 'Feng C, Luo YJ, Krueger F. Neural signatures of fairness-related normative decision making in the ultimatum
+      game: a coordinate-based meta-analysis. Hum Brain Mapp. 2015;36(2):591-602.'
+    doi: 10.1002/hbm.22649
+    year: 2015
+    verified: false
+  - citation: Sanfey AG, Rilling JK, Aronson JA, et al. The neural basis of economic decision-making in the Ultimatum Game.
+      Science. 2003;300(5626):1755-1758.
+    doi: 10.1126/science.1082976
+    year: 2003
+    verified: false
+  note: Fairness-related social decision mapped to CN.social_interaction (vocab request CN.social_decision).
+notes: 'Signature values are textbook-level characteristics entered in the first pass and await source checking. Sprint 4
+  (2026-10-12, curator_d): generators and indexes curated; every DOI checked against its Crossref or OpenAlex record (see
+  curation/work/sprint4/markers_D/); verified: false pending full-text check.'
 status: draft
 contributors:
 - maintainer

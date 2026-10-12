@@ -1,4 +1,4 @@
-schema_version: "0.2"
+schema_version: '0.2'
 id: MK.BOLD_auditory_cortex
 name:
   en: Auditory cortex BOLD response
@@ -15,8 +15,86 @@ description:
   en: Task- or stimulus-related BOLD response in primary and non-primary auditory cortex on the superior temporal plane and
     gyrus, used for tonotopic mapping, voice-selective responses and auditory imagery.
   zh: 颞上平面及颞上回初级和非初级听皮层中与任务或刺激相关的 BOLD 响应，用于音调拓扑映射、嗓音选择性响应及听觉想象研究。
+generators:
+- region: BR.A1
+  evidence: B
+  sources:
+  - citation: Formisano E, Kim DS, Di Salle F, et al. Mirror-symmetric tonotopic maps in human primary auditory cortex. Neuron.
+      2003;40(4):859-869.
+    doi: 10.1016/S0896-6273(03)00669-X
+    year: 2003
+    verified: false
+  - citation: Humphries C, Liebenthal E, Binder JR. Tonotopic organization of human auditory cortex. NeuroImage. 2010;50(3):1202-1211.
+    doi: 10.1016/j.neuroimage.2010.01.046
+    year: 2010
+    verified: false
+  note: 'method: fMRI localization; tonotopic maps on Heschl gyrus (independent 7T and 3T studies).'
+- region: BR.STG
+  evidence: B
+  sources:
+  - citation: Belin P, Zatorre RJ, Lafaille P, et al. Voice-selective areas in human auditory cortex. Nature. 2000;403(6767):309-312.
+    doi: 10.1038/35002078
+    year: 2000
+    verified: false
+  - citation: Humphries C, Liebenthal E, Binder JR. Tonotopic organization of human auditory cortex. NeuroImage. 2010;50(3):1202-1211.
+    doi: 10.1016/j.neuroimage.2010.01.046
+    year: 2010
+    verified: false
+  note: 'method: fMRI localization; non-primary auditory cortex on STG/STS, including voice-selective regions.'
+indexes:
+- construct: CN.early_auditory
+  evidence: B
+  relation: BOLD follows sound frequency in tonotopic gradients across primary auditory cortex
+  sources:
+  - citation: Formisano E, Kim DS, Di Salle F, et al. Mirror-symmetric tonotopic maps in human primary auditory cortex. Neuron.
+      2003;40(4):859-869.
+    doi: 10.1016/S0896-6273(03)00669-X
+    year: 2003
+    verified: false
+  - citation: Humphries C, Liebenthal E, Binder JR. Tonotopic organization of human auditory cortex. NeuroImage. 2010;50(3):1202-1211.
+    doi: 10.1016/j.neuroimage.2010.01.046
+    year: 2010
+    verified: false
+- construct: CN.auditory_imagery
+  evidence: B
+  relation: non-primary auditory cortex BOLD/rCBF increases during imagery of music
+  sources:
+  - citation: 'Halpern AR, Zatorre RJ. When that tune runs through your head: a PET investigation of auditory imagery for
+      familiar melodies. Cereb Cortex. 1999;9(7):697-704.'
+    doi: 10.1093/cercor/9.7.697
+    year: 1999
+    verified: false
+  - citation: Kraemer DJM, Macrae CN, Green AE, et al. Sound of silence activates auditory cortex. Nature. 2005;434(7030):158.
+    doi: 10.1038/434158a
+    year: 2005
+    verified: false
+  - citation: 'Zatorre RJ, Halpern AR. Mental concerts: musical imagery and auditory cortex. Neuron. 2005;47(1):9-12.'
+    doi: 10.1016/j.neuron.2005.06.013
+    year: 2005
+    verified: false
+  note: Halpern 1999 is PET (rCBF), grouped under this marker per D-050.
+- construct: CN.social_perception
+  evidence: C
+  relation: STS/STG BOLD is larger for human voices than for non-vocal sounds
+  sources:
+  - citation: Belin P, Zatorre RJ, Lafaille P, et al. Voice-selective areas in human auditory cortex. Nature. 2000;403(6767):309-312.
+    doi: 10.1038/35002078
+    year: 2000
+    verified: false
+  note: closest README construct for voice perception; vocab request CN.voice_perception filed.
+- construct: CN.auditory_change
+  evidence: C
+  relation: superior temporal BOLD increases to pitch and duration deviants (MMN generator localisation)
+  sources:
+  - citation: 'Molholm S, Martinez A, Ritter W, et al. The neural circuitry of pre-attentive auditory change-detection: an
+      fMRI study of pitch and duration mismatch negativity generators. Cereb Cortex. 2005;15(5):545-551.'
+    doi: 10.1093/cercor/bhh155
+    year: 2005
+    verified: false
 notes: 'First-pass skeleton by package A (2026-10-03). No generators/indexes yet. D-050 (maintainer, 2026-10-03): PET regional
-  blood-flow (rCBF) effects in the same region are grouped under this marker, as fNIRS HbO is under D-028 item 5.'
+  blood-flow (rCBF) effects in the same region are grouped under this marker, as fNIRS HbO is under D-028 item 5. Sprint 4
+  (2026-10-12, curator_e): generators and indexes curated; every DOI checked against its Crossref or OpenAlex record (see
+  curation/work/sprint4/markers_E/); verified: false pending full-text check.'
 status: draft
 contributors:
 - curator_a

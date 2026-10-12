@@ -1,4 +1,4 @@
-schema_version: "0.2"
+schema_version: '0.2'
 id: MK.LPP
 name:
   en: Late positive potential
@@ -18,8 +18,101 @@ description:
     It is reduced by reappraisal and other regulation strategies and is interpreted as motivated attention to significant
     stimuli.
   zh: 持续的正向偏移，情绪唤醒刺激（愉快或不愉快）引起的波幅大于中性刺激。重评等调节策略可使其减小，被解释为对重要刺激的动机性注意。
-notes: Signature values are textbook-level characteristics entered in the first pass and await source checking. Relation to
-  P300 discussed in lead R1040.
+generators:
+- region: BR.visual_cortex
+  evidence: B
+  sources:
+  - citation: 'Sabatinelli D, Lang PJ, Keil A, et al. Emotional perception: correlation of functional MRI and event-related
+      potentials. Cereb Cortex. 2007;17(5):1085-1091.'
+    doi: 10.1093/cercor/bhl017
+    year: 2007
+    verified: false
+  - citation: 'Sabatinelli D, Keil A, Frank DW, et al. Emotional perception: correspondence of early and late event-related
+      potentials with cortical and subcortical functional MRI. Biol Psychol. 2013;92(3):513-519.'
+    doi: 10.1016/j.biopsycho.2012.04.005
+    year: 2013
+    verified: false
+  - citation: 'Hajcak G, Foti D. Significance?... Significance! Empirical, methodological, and theoretical connections between
+      the late positive potential and P300 as neural responses to stimulus significance: an integrative review. Psychophysiology.
+      2020;57(7):e13570.'
+    doi: 10.1111/psyp.13570
+    year: 2020
+    verified: false
+  note: 'method: EEG-fMRI; LPP amplitude covaries with BOLD in lateral occipital, inferotemporal and parietal visual cortex
+    (Sabatinelli 2007, 2013; one group); generator literature reviewed by Hajcak & Foti 2020.'
+- region: BR.parietal_cortex
+  evidence: C
+  sources:
+  - citation: 'Sabatinelli D, Lang PJ, Keil A, et al. Emotional perception: correlation of functional MRI and event-related
+      potentials. Cereb Cortex. 2007;17(5):1085-1091.'
+    doi: 10.1093/cercor/bhl017
+    year: 2007
+    verified: false
+  note: 'method: EEG-fMRI; Parietal visual areas among the BOLD correlates of the LPP (Sabatinelli 2007).'
+indexes:
+- construct: CN.emotional_salience
+  evidence: B
+  relation: amplitude larger for emotionally arousing (pleasant or unpleasant) than neutral pictures
+  sources:
+  - citation: 'Cuthbert BN, Schupp HT, Bradley MM, et al. Brain potentials in affective picture processing: covariation with
+      autonomic arousal and affective report. Biol Psychol. 2000;52(2):95-111.'
+    doi: 10.1016/S0301-0511(99)00044-7
+    year: 2000
+    verified: false
+  - citation: 'Schupp HT, Cuthbert BN, Bradley MM, et al. Affective picture processing: the late positive potential is modulated
+      by motivational relevance. Psychophysiology. 2000;37(2):257-261.'
+    doi: 10.1111/1469-8986.3720257
+    year: 2000
+    verified: false
+  - citation: 'Hajcak G, MacNamara A, Olvet DM. Event-related potentials, emotion, and emotion regulation: an integrative
+      review. Dev Neuropsychol. 2010;35(2):129-155.'
+    doi: 10.1080/87565640903526504
+    year: 2010
+    verified: false
+  - citation: 'Hajcak G, Foti D. Significance?... Significance! Empirical, methodological, and theoretical connections between
+      the late positive potential and P300 as neural responses to stimulus significance: an integrative review. Psychophysiology.
+      2020;57(7):e13570.'
+    doi: 10.1111/psyp.13570
+    year: 2020
+    verified: false
+- construct: CN.attention_allocation
+  evidence: B
+  relation: amplitude scales with motivational relevance / stimulus significance (motivated attention)
+  sources:
+  - citation: 'Schupp HT, Cuthbert BN, Bradley MM, et al. Affective picture processing: the late positive potential is modulated
+      by motivational relevance. Psychophysiology. 2000;37(2):257-261.'
+    doi: 10.1111/1469-8986.3720257
+    year: 2000
+    verified: false
+  - citation: 'Hajcak G, Foti D. Significance?... Significance! Empirical, methodological, and theoretical connections between
+      the late positive potential and P300 as neural responses to stimulus significance: an integrative review. Psychophysiology.
+      2020;57(7):e13570.'
+    doi: 10.1111/psyp.13570
+    year: 2020
+    verified: false
+- construct: CN.emotional_state
+  evidence: B
+  relation: amplitude covaries with rated arousal and decreases when the emotional response is down-regulated by reappraisal
+  sources:
+  - citation: 'Cuthbert BN, Schupp HT, Bradley MM, et al. Brain potentials in affective picture processing: covariation with
+      autonomic arousal and affective report. Biol Psychol. 2000;52(2):95-111.'
+    doi: 10.1016/S0301-0511(99)00044-7
+    year: 2000
+    verified: false
+  - citation: Hajcak G, Nieuwenhuis S. Reappraisal modulates the electrocortical response to unpleasant pictures. Cogn Affect
+      Behav Neurosci. 2006;6(4):291-297.
+    doi: 10.3758/CABN.6.4.291
+    year: 2006
+    verified: false
+  - citation: 'Hajcak G, MacNamara A, Olvet DM. Event-related potentials, emotion, and emotion regulation: an integrative
+      review. Dev Neuropsychol. 2010;35(2):129-155.'
+    doi: 10.1080/87565640903526504
+    year: 2010
+    verified: false
+  note: Closest README id for emotion regulation; CN.emotion_regulation requested (vocab_requests.csv).
+notes: 'Signature values are textbook-level characteristics entered in the first pass and await source checking. Relation
+  to P300 discussed in lead R1040. Sprint 4 (2026-10-12, curator_c): generators and indexes curated; every DOI checked against
+  its Crossref or OpenAlex record (see curation/work/sprint4/markers_C/); verified: false pending full-text check.'
 status: draft
 contributors:
 - maintainer

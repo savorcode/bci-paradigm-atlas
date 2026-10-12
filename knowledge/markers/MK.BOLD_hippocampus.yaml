@@ -1,4 +1,4 @@
-schema_version: "0.2"
+schema_version: '0.2'
 id: MK.BOLD_hippocampus
 name:
   en: Hippocampal BOLD response
@@ -13,7 +13,63 @@ description:
   en: Task-related BOLD response in the hippocampus, including responses related to encoding, retrieval, spatial context and
     pattern separation in subfields.
   zh: 海马中与任务相关的 BOLD 响应，包括与编码、提取、空间情境以及亚区模式分离相关的响应。
-notes: First-pass skeleton by package A (2026-10-03). No generators/indexes yet.
+generators:
+- region: BR.hippocampus
+  evidence: A
+  sources:
+  - citation: 'Kim H. Neural activity that predicts subsequent memory and forgetting: a meta-analysis of 74 fMRI studies.
+      NeuroImage. 2011;54(3):2446-2461.'
+    doi: 10.1016/j.neuroimage.2010.09.045
+    year: 2011
+    verified: false
+  - citation: 'Spaniol J, Davidson PSR, Kim ASN, et al. Event-related fMRI studies of episodic encoding and retrieval: meta-analyses
+      using activation likelihood estimation. Neuropsychologia. 2009;47(8-9):1765-1779.'
+    doi: 10.1016/j.neuropsychologia.2009.02.028
+    year: 2009
+    verified: false
+  note: 'method: fMRI localization; hippocampal BOLD is the measured signal; ALE meta-analyses of subsequent-memory (Kim 2011,
+    74 studies) and encoding/retrieval (Spaniol 2009) studies localise consistent hippocampal/MTL clusters.'
+indexes:
+- construct: CN.episodic_encoding
+  evidence: A
+  relation: BOLD is greater during encoding of items later remembered than later forgotten (subsequent-memory effect)
+  sources:
+  - citation: 'Kim H. Neural activity that predicts subsequent memory and forgetting: a meta-analysis of 74 fMRI studies.
+      NeuroImage. 2011;54(3):2446-2461.'
+    doi: 10.1016/j.neuroimage.2010.09.045
+    year: 2011
+    verified: false
+  - citation: 'Spaniol J, Davidson PSR, Kim ASN, et al. Event-related fMRI studies of episodic encoding and retrieval: meta-analyses
+      using activation likelihood estimation. Neuropsychologia. 2009;47(8-9):1765-1779.'
+    doi: 10.1016/j.neuropsychologia.2009.02.028
+    year: 2009
+    verified: false
+- construct: CN.recognition_memory
+  evidence: A
+  relation: BOLD increases during successful retrieval, preferentially for recollection of item-context associations
+  sources:
+  - citation: 'Spaniol J, Davidson PSR, Kim ASN, et al. Event-related fMRI studies of episodic encoding and retrieval: meta-analyses
+      using activation likelihood estimation. Neuropsychologia. 2009;47(8-9):1765-1779.'
+    doi: 10.1016/j.neuropsychologia.2009.02.028
+    year: 2009
+    verified: false
+  - citation: 'Diana RA, Yonelinas AP, Ranganath C. Imaging recollection and familiarity in the medial temporal lobe: a three-component
+      model. Trends Cogn Sci. 2007;11(9):379-386.'
+    doi: 10.1016/j.tics.2007.08.001
+    year: 2007
+    verified: false
+- construct: CN.spatial_navigation
+  evidence: A
+  relation: BOLD increases during navigation and spatial/relational memory tasks relative to control tasks
+  sources:
+  - citation: 'Boccia M, Nemmi F, Guariglia C. Neuropsychology of environmental navigation in humans: review and meta-analysis
+      of fMRI studies in healthy participants. Neuropsychol Rev. 2014;24(2):236-251.'
+    doi: 10.1007/s11065-014-9247-8
+    year: 2014
+    verified: false
+notes: 'First-pass skeleton by package A (2026-10-03). No generators/indexes yet. Sprint 4 (2026-10-12, curator_e): generators
+  and indexes curated; every DOI checked against its Crossref or OpenAlex record (see curation/work/sprint4/markers_E/); verified:
+  false pending full-text check.'
 status: draft
 contributors:
 - curator_a
