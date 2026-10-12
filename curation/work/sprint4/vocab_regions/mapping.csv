@@ -1,0 +1,44 @@
+id,brodmann,aal3,hcp_mmp1,parent,confidence,note
+BR.V1,BA17,Calcarine_L;Calcarine_R,V1,BR.visual_cortex,high,AAL3 Calcarine also contains some V2 at the sulcal banks
+BR.extrastriate,BA18;BA19,Cuneus_L;Cuneus_R;Lingual_L;Lingual_R;Occipital_Sup_L;Occipital_Sup_R;Occipital_Mid_L;Occipital_Mid_R;Occipital_Inf_L;Occipital_Inf_R,V2;V3;V4,BR.visual_cortex,medium,AAL3 gyral labels only approximate retinotopic V2-V4 boundaries
+BR.LOC,BA19;BA37,Occipital_Mid_L;Occipital_Mid_R;Occipital_Inf_L;Occipital_Inf_R;Temporal_Inf_L;Temporal_Inf_R,LO1;LO2;LO3;PIT,BR.visual_cortex,medium,functionally defined region; atlas labels are approximate; Temporal_Inf only its posterior part
+BR.FFA,BA37,Fusiform_L;Fusiform_R,FFC,BR.visual_cortex,medium,functionally defined; HCP-MMP FFC is the 'fusiform face complex'; right-lateralised
+BR.pSTS,BA21;BA22;BA39,Temporal_Sup_L;Temporal_Sup_R;Temporal_Mid_L;Temporal_Mid_R,STSdp;STSvp;TPOJ1,,medium,AAL3 has no sulcal label; posterior parts of Temporal_Sup/Temporal_Mid
+BR.A1,BA41;BA42,Heschl_L;Heschl_R,A1;LBelt;MBelt;PBelt,,high,A1 core = HCP A1/BA41; belt areas (BA42) included for Heschl gyrus as a whole
+BR.STG,BA22;BA41;BA42,Temporal_Sup_L;Temporal_Sup_R,A4;A5;STGa;TA2;STV,,medium,Heschl gyrus listed separately under BR.A1
+BR.MTG,BA21;BA37,Temporal_Mid_L,PHT;TE1p;TE1m,,medium,left hemisphere only per term definition; posterior portion of AAL3 Temporal_Mid_L
+BR.ATL,BA38;BA20;BA21,Temporal_Pole_Sup_L;Temporal_Pole_Sup_R;Temporal_Pole_Mid_L;Temporal_Pole_Mid_R,TGd;TGv;TE1a;TE2a;STGa;STSda;STSva,,medium,anterior Temporal_Inf / Temporal_Mid also part of ATL in many studies
+BR.IFG,BA44;BA45;BA47,Frontal_Inf_Oper_L;Frontal_Inf_Oper_R;Frontal_Inf_Tri_L;Frontal_Inf_Tri_R;Frontal_Inf_Orb_2_L;Frontal_Inf_Orb_2_R,44;45;47l,BR.frontal_cortex,high,
+BR.IPS,BA7;BA39;BA40,Parietal_Sup_L;Parietal_Sup_R;Parietal_Inf_L;Parietal_Inf_R,IP0;IP1;IP2;IPS1;AIP;MIP;LIPv;LIPd;VIP,BR.parietal_cortex,medium,sulcal region on boundary of two AAL3 gyral labels
+BR.TPJ,BA39;BA40;BA22,SupraMarginal_L;SupraMarginal_R;Angular_L;Angular_R;Temporal_Sup_L;Temporal_Sup_R,PGi;PGs;PFm;TPOJ1;TPOJ2;TPOJ3;STV;PSL,BR.parietal_cortex,medium,same region as the atlas id BR.temporoparietal_junction; Temporal_Sup only its posterior part
+BR.dACC,BA24;BA32,ACC_sup_L;ACC_sup_R,a24pr;p24pr;a32pr;p32pr;33pr,,medium,AAL3 replaces Cingulate_Ant with ACC_sub/ACC_pre/ACC_sup; anterior Cingulate_Mid often included in dACC/aMCC
+BR.preSMA,BA6,Supp_Motor_Area_L;Supp_Motor_Area_R,6ma,BR.frontal_cortex,medium,AAL3 Supp_Motor_Area covers both SMA and pre-SMA (anterior part)
+BR.SMA,BA6,Supp_Motor_Area_L;Supp_Motor_Area_R,6mp,BR.frontal_cortex,high,AAL3 Supp_Motor_Area posterior part
+BR.M1,BA4,Precentral_L;Precentral_R,4,BR.sensorimotor_cortex,medium,AAL3 Precentral also contains lateral premotor cortex (BA6)
+BR.S1,BA3;BA1;BA2,Postcentral_L;Postcentral_R,3a;3b;1;2,BR.sensorimotor_cortex,high,
+BR.DLPFC,BA9;BA46,Frontal_Mid_2_L;Frontal_Mid_2_R;Frontal_Sup_2_L;Frontal_Sup_2_R,46;9-46d;a9-46v;p9-46v,BR.frontal_cortex,medium,functionally broad; AAL3 gyral labels extend beyond DLPFC
+BR.vmPFC,BA10;BA11;BA25;BA32,Frontal_Med_Orb_L;Frontal_Med_Orb_R;Rectus_L;Rectus_R;OFCmed_L;OFCmed_R;ACC_sub_L;ACC_sub_R,10r;10v;25;s32;p32;a24;OFC;pOFC,BR.frontal_cortex,medium,definitions of vmPFC vary; ventral parts of pregenual ACC (ACC_pre) sometimes included
+BR.striatum,,N_Acc_L;N_Acc_R,,,high,subcortical; no Brodmann or HCP-MMP cortical area; ventral caudate/putamen sometimes included
+BR.amygdala,,Amygdala_L;Amygdala_R,,,high,subcortical; no Brodmann or HCP-MMP cortical area
+BR.thalamus,,Thal_AV_L;Thal_AV_R;Thal_LP_L;Thal_LP_R;Thal_VA_L;Thal_VA_R;Thal_VL_L;Thal_VL_R;Thal_VPL_L;Thal_VPL_R;Thal_IL_L;Thal_IL_R;Thal_Re_L;Thal_Re_R;Thal_MDm_L;Thal_MDm_R;Thal_MDl_L;Thal_MDl_R;Thal_LGN_L;Thal_LGN_R;Thal_MGN_L;Thal_MGN_R;Thal_PuI_L;Thal_PuI_R;Thal_PuM_L;Thal_PuM_R;Thal_PuA_L;Thal_PuA_R;Thal_PuL_L;Thal_PuL_R,,,high,AAL3 splits the thalamus into 15 nuclei per hemisphere; Thal_Re spelled Thal_RE in one table of the AAL3 paper (medium on that label)
+BR.hippocampus,,Hippocampus_L;Hippocampus_R,H,,high,HCP-MMP1.0 includes hippocampus as area H; no Brodmann area assigned
+BR.frontal_cortex,BA4;BA6;BA8;BA9;BA10;BA11;BA44;BA45;BA46;BA47,Precentral_L;Precentral_R;Frontal_Sup_2_L;Frontal_Sup_2_R;Frontal_Mid_2_L;Frontal_Mid_2_R;Frontal_Inf_Oper_L;Frontal_Inf_Oper_R;Frontal_Inf_Tri_L;Frontal_Inf_Tri_R;Frontal_Inf_Orb_2_L;Frontal_Inf_Orb_2_R;Supp_Motor_Area_L;Supp_Motor_Area_R;Frontal_Sup_Medial_L;Frontal_Sup_Medial_R;Frontal_Med_Orb_L;Frontal_Med_Orb_R;Rectus_L;Rectus_R;OFCmed_L;OFCmed_R;OFCant_L;OFCant_R;OFCpost_L;OFCpost_R;OFClat_L;OFClat_R,,,medium,macro region; HCP-MMP areas not enumerated (see child terms); cingulate excluded
+BR.parietal_cortex,BA1;BA2;BA3;BA5;BA7;BA39;BA40,Postcentral_L;Postcentral_R;Parietal_Sup_L;Parietal_Sup_R;Parietal_Inf_L;Parietal_Inf_R;SupraMarginal_L;SupraMarginal_R;Angular_L;Angular_R;Precuneus_L;Precuneus_R,,,medium,macro region; HCP-MMP areas not enumerated (see child terms)
+BR.temporoparietal_junction,BA39;BA40;BA22,SupraMarginal_L;SupraMarginal_R;Angular_L;Angular_R;Temporal_Sup_L;Temporal_Sup_R,PGi;PGs;PFm;TPOJ1;TPOJ2;TPOJ3;STV;PSL,BR.parietal_cortex,medium,same region as the factory id BR.TPJ; both ids kept
+BR.sensorimotor_cortex,BA4;BA3;BA1;BA2,Precentral_L;Precentral_R;Postcentral_L;Postcentral_R;Paracentral_Lobule_L;Paracentral_Lobule_R,4;3a;3b;1;2,,high,
+BR.visual_cortex,BA17;BA18;BA19,Calcarine_L;Calcarine_R;Cuneus_L;Cuneus_R;Lingual_L;Lingual_R;Occipital_Sup_L;Occipital_Sup_R;Occipital_Mid_L;Occipital_Mid_R;Occipital_Inf_L;Occipital_Inf_R,V1;V2;V3;V4;V3A;V3B;V3CD;V6;V6A;V7;V8;LO1;LO2;LO3;PIT;FFC;VVC;VMV1;VMV2;VMV3;MT;MST;V4t;FST,,medium,"macro region; HCP-MMP early, dorsal, ventral and MT+ visual areas listed"
+BR.premotor,BA6,Precentral_L;Precentral_R;Frontal_Sup_2_L;Frontal_Sup_2_R;Frontal_Mid_2_L;Frontal_Mid_2_R,6d;6a;6v;6r;55b;PEF,BR.frontal_cortex,medium,AAL3 has no premotor label; anterior Precentral and posterior Frontal_Sup_2/Frontal_Mid_2 (low for AAL3)
+BR.FEF,BA8;BA6,Precentral_L;Precentral_R;Frontal_Mid_2_L;Frontal_Mid_2_R,FEF,BR.frontal_cortex,medium,human FEF lies in BA6 at the precentral sulcus rather than classical BA8; AAL3 labels low confidence
+BR.precuneus,BA7;BA31,Precuneus_L;Precuneus_R,7m;7Pm;7Am;PCV,BR.parietal_cortex,high,
+BR.PCC,BA23;BA31,Cingulate_Post_L;Cingulate_Post_R,d23ab;v23ab;23d;31pd;31pv;31a,,medium,AAL3 Cingulate_Post is smaller than most functional PCC definitions; posterior Cingulate_Mid often included
+BR.dmPFC,BA8;BA9;BA32,Frontal_Sup_Medial_L;Frontal_Sup_Medial_R,8BM;9m;d32,BR.frontal_cortex,medium,
+BR.frontopolar,BA10,Frontal_Sup_2_L;Frontal_Sup_2_R;Frontal_Mid_2_L;Frontal_Mid_2_R;Frontal_Sup_Medial_L;Frontal_Sup_Medial_R,10pp;a10p;p10p;10d,BR.frontal_cortex,medium,AAL3 has no frontopolar label; anterior parts of the listed labels (low for AAL3)
+BR.anterior_insula,,Insula_L;Insula_R,AAIC;AVI,,medium,"AAL3 Insula not split; Brodmann insular areas (13-16) not defined in human Brodmann map, omitted"
+BR.posterior_insula,,Insula_L;Insula_R,PoI1;PoI2;Ig,,medium,AAL3 Insula not split; Brodmann omitted as for anterior insula
+BR.parahippocampal,BA35;BA36,ParaHippocampal_L;ParaHippocampal_R,PHA1;PHA2;PHA3,,medium,"PPA mapped to HCP PHA1-3; perirhinal/entorhinal (PeEc, EC) not included"
+BR.cerebellum,,Cerebellum_Crus1_L;Cerebellum_Crus1_R;Cerebellum_Crus2_L;Cerebellum_Crus2_R;Cerebellum_3_L;Cerebellum_3_R;Cerebellum_4_5_L;Cerebellum_4_5_R;Cerebellum_6_L;Cerebellum_6_R;Cerebellum_7b_L;Cerebellum_7b_R;Cerebellum_8_L;Cerebellum_8_R;Cerebellum_9_L;Cerebellum_9_R;Cerebellum_10_L;Cerebellum_10_R;Vermis_1_2;Vermis_3;Vermis_4_5;Vermis_6;Vermis_7;Vermis_8;Vermis_9;Vermis_10,,,high,no Brodmann or HCP-MMP cortical areas; Vermis labels are midline
+BR.STN,,,,,low,"no AAL3 label (AAL3 adds N_Acc, VTA, SN, Red_N, LC, raphe but not STN); use a dedicated subcortical atlas"
+BR.dorsal_striatum,,Caudate_L;Caudate_R;Putamen_L;Putamen_R,,,high,subcortical; no Brodmann or HCP-MMP cortical area
+BR.MT,BA19;BA37,Occipital_Mid_L;Occipital_Mid_R;Temporal_Mid_L;Temporal_Mid_R;Occipital_Inf_L;Occipital_Inf_R,MT;MST;FST;V4t,BR.visual_cortex,medium,HCP-MMP MT/MST/FST/V4t form the hMT+ complex (high); AAL3 labels approximate (low)
+BR.SII,BA40;BA43,Rolandic_Oper_L;Rolandic_Oper_R;SupraMarginal_L;SupraMarginal_R,OP1;OP4;OP2-3,BR.parietal_cortex,medium,SII mainly OP1/OP4; Rolandic_Oper also contains non-SII cortex
+BR.OFC_lateral,BA47;BA11,OFClat_L;OFClat_R;Frontal_Inf_Orb_2_L;Frontal_Inf_Orb_2_R,47m;11l;13l;47s,BR.frontal_cortex,medium,BA47/12 lateral orbital; Frontal_Inf_Orb_2 also contains part of ventral IFG

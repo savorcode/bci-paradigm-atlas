@@ -1,10 +1,1307 @@
-# Brain regions / 脑区 (seed, draft). Granularity is coarse in this release and will be refined
-# with mappings to standard atlases. 本版粒度较粗，后续将细化并映射到标准脑图谱。
-schema_version: "0.2"
+# Brain regions / 脑区 (knowledge layer, sprint 4). atlas_refs give approximate correspondences to Brodmann,
+# AAL3 (Rolls et al. 2020) and HCP-MMP1.0 (Glasser et al. 2016) labels in MNI152 space.
+# 图谱对应关系为近似，粒度与置信度见 curation/work/sprint4/vocab_regions/mapping.csv。
+schema_version: '0.2'
 prefix: BR
 terms:
-  - {id: BR.frontal_cortex, en: Frontal cortex, zh: 额叶皮层}
-  - {id: BR.parietal_cortex, en: Parietal cortex, zh: 顶叶皮层}
-  - {id: BR.temporoparietal_junction, en: Temporoparietal junction, zh: 颞顶联合区, parent: BR.parietal_cortex}
-  - {id: BR.sensorimotor_cortex, en: Sensorimotor cortex, zh: 感觉运动皮层, includes: [primary motor cortex, primary somatosensory cortex]}
-  - {id: BR.visual_cortex, en: Visual cortex, zh: 视觉皮层, includes: [V1, extrastriate visual areas]}
+- id: BR.V1
+  en: primary visual cortex (V1)
+  zh: 初级视皮层
+  definition: Primary visual cortex in the calcarine sulcus of the occipital lobe, the first cortical stage of visual processing.
+  parent: BR.visual_cortex
+  atlas_refs:
+    brodmann:
+    - BA17
+    aal3:
+    - Calcarine_L
+    - Calcarine_R
+    hcp_mmp1:
+    - V1
+  coordinate_space: MNI152
+  sources:
+  - citation: Rolls ET, Huang CC, Lin CP, Feng J, Joliot M. Automated anatomical labelling atlas 3. NeuroImage. 2020;206:116189.
+    doi: 10.1016/j.neuroimage.2019.116189
+    year: 2020
+    verified: false
+  - citation: Glasser MF, Coalson TS, Robinson EC, et al. A multi-modal parcellation of human cerebral cortex. Nature. 2016;536(7615):171-178.
+    doi: 10.1038/nature18933
+    year: 2016
+    verified: false
+  notes: Atlas correspondence approximate. AAL3 Calcarine also contains some V2 at the sulcal banks.
+- id: BR.extrastriate
+  en: extrastriate visual cortex (V2–V4)
+  zh: 纹外视皮层
+  definition: Occipital visual areas V2 to V4 surrounding V1 that carry early and intermediate visual processing.
+  parent: BR.visual_cortex
+  atlas_refs:
+    brodmann:
+    - BA18
+    - BA19
+    aal3:
+    - Cuneus_L
+    - Cuneus_R
+    - Lingual_L
+    - Lingual_R
+    - Occipital_Sup_L
+    - Occipital_Sup_R
+    - Occipital_Mid_L
+    - Occipital_Mid_R
+    - Occipital_Inf_L
+    - Occipital_Inf_R
+    hcp_mmp1:
+    - V2
+    - V3
+    - V4
+  coordinate_space: MNI152
+  sources:
+  - citation: Rolls ET, Huang CC, Lin CP, Feng J, Joliot M. Automated anatomical labelling atlas 3. NeuroImage. 2020;206:116189.
+    doi: 10.1016/j.neuroimage.2019.116189
+    year: 2020
+    verified: false
+  - citation: Glasser MF, Coalson TS, Robinson EC, et al. A multi-modal parcellation of human cerebral cortex. Nature. 2016;536(7615):171-178.
+    doi: 10.1038/nature18933
+    year: 2016
+    verified: false
+  notes: Atlas correspondence approximate. AAL3 gyral labels only approximate retinotopic V2-V4 boundaries.
+- id: BR.LOC
+  en: lateral occipital complex
+  zh: 外侧枕叶复合体
+  definition: Lateral occipital and posterior ventral occipitotemporal cortex that responds preferentially to object shape.
+  parent: BR.visual_cortex
+  atlas_refs:
+    brodmann:
+    - BA19
+    - BA37
+    aal3:
+    - Occipital_Mid_L
+    - Occipital_Mid_R
+    - Occipital_Inf_L
+    - Occipital_Inf_R
+    - Temporal_Inf_L
+    - Temporal_Inf_R
+    hcp_mmp1:
+    - LO1
+    - LO2
+    - LO3
+    - PIT
+  coordinate_space: MNI152
+  sources:
+  - citation: Rolls ET, Huang CC, Lin CP, Feng J, Joliot M. Automated anatomical labelling atlas 3. NeuroImage. 2020;206:116189.
+    doi: 10.1016/j.neuroimage.2019.116189
+    year: 2020
+    verified: false
+  - citation: Glasser MF, Coalson TS, Robinson EC, et al. A multi-modal parcellation of human cerebral cortex. Nature. 2016;536(7615):171-178.
+    doi: 10.1038/nature18933
+    year: 2016
+    verified: false
+  notes: Atlas correspondence approximate. Functionally defined region; atlas labels are approximate; Temporal_Inf only its
+    posterior part.
+- id: BR.FFA
+  en: fusiform face area
+  zh: 梭状回面孔区
+  definition: Face-selective region of the mid-lateral fusiform gyrus, typically larger in the right hemisphere.
+  parent: BR.visual_cortex
+  atlas_refs:
+    brodmann:
+    - BA37
+    aal3:
+    - Fusiform_L
+    - Fusiform_R
+    hcp_mmp1:
+    - FFC
+  coordinate_space: MNI152
+  sources:
+  - citation: Rolls ET, Huang CC, Lin CP, Feng J, Joliot M. Automated anatomical labelling atlas 3. NeuroImage. 2020;206:116189.
+    doi: 10.1016/j.neuroimage.2019.116189
+    year: 2020
+    verified: false
+  - citation: Glasser MF, Coalson TS, Robinson EC, et al. A multi-modal parcellation of human cerebral cortex. Nature. 2016;536(7615):171-178.
+    doi: 10.1038/nature18933
+    year: 2016
+    verified: false
+  notes: Atlas correspondence approximate. Functionally defined; HCP-MMP FFC is the 'fusiform face complex'; right-lateralised.
+- id: BR.pSTS
+  en: posterior superior temporal sulcus
+  zh: 颞上沟后部
+  definition: Posterior part of the superior temporal sulcus, involved in biological motion, gaze and audiovisual integration.
+  atlas_refs:
+    brodmann:
+    - BA21
+    - BA22
+    - BA39
+    aal3:
+    - Temporal_Sup_L
+    - Temporal_Sup_R
+    - Temporal_Mid_L
+    - Temporal_Mid_R
+    hcp_mmp1:
+    - STSdp
+    - STSvp
+    - TPOJ1
+  coordinate_space: MNI152
+  sources:
+  - citation: Rolls ET, Huang CC, Lin CP, Feng J, Joliot M. Automated anatomical labelling atlas 3. NeuroImage. 2020;206:116189.
+    doi: 10.1016/j.neuroimage.2019.116189
+    year: 2020
+    verified: false
+  - citation: Glasser MF, Coalson TS, Robinson EC, et al. A multi-modal parcellation of human cerebral cortex. Nature. 2016;536(7615):171-178.
+    doi: 10.1038/nature18933
+    year: 2016
+    verified: false
+  notes: Atlas correspondence approximate. AAL3 has no sulcal label; posterior parts of Temporal_Sup/Temporal_Mid.
+- id: BR.A1
+  en: primary auditory cortex / Heschl gyrus
+  zh: 初级听皮层
+  definition: Primary auditory cortex on Heschl's gyrus in the superior temporal plane.
+  atlas_refs:
+    brodmann:
+    - BA41
+    - BA42
+    aal3:
+    - Heschl_L
+    - Heschl_R
+    hcp_mmp1:
+    - A1
+    - LBelt
+    - MBelt
+    - PBelt
+  coordinate_space: MNI152
+  sources:
+  - citation: Rolls ET, Huang CC, Lin CP, Feng J, Joliot M. Automated anatomical labelling atlas 3. NeuroImage. 2020;206:116189.
+    doi: 10.1016/j.neuroimage.2019.116189
+    year: 2020
+    verified: false
+  - citation: Glasser MF, Coalson TS, Robinson EC, et al. A multi-modal parcellation of human cerebral cortex. Nature. 2016;536(7615):171-178.
+    doi: 10.1038/nature18933
+    year: 2016
+    verified: false
+  notes: Atlas correspondence approximate. A1 core = HCP A1/BA41; belt areas (BA42) included for Heschl gyrus as a whole.
+- id: BR.STG
+  en: superior temporal gyrus
+  zh: 颞上回
+  definition: Superior temporal gyrus of the lateral temporal lobe, including auditory association cortex for speech and sound
+    processing.
+  atlas_refs:
+    brodmann:
+    - BA22
+    - BA41
+    - BA42
+    aal3:
+    - Temporal_Sup_L
+    - Temporal_Sup_R
+    hcp_mmp1:
+    - A4
+    - A5
+    - STGa
+    - TA2
+    - STV
+  coordinate_space: MNI152
+  sources:
+  - citation: Rolls ET, Huang CC, Lin CP, Feng J, Joliot M. Automated anatomical labelling atlas 3. NeuroImage. 2020;206:116189.
+    doi: 10.1016/j.neuroimage.2019.116189
+    year: 2020
+    verified: false
+  - citation: Glasser MF, Coalson TS, Robinson EC, et al. A multi-modal parcellation of human cerebral cortex. Nature. 2016;536(7615):171-178.
+    doi: 10.1038/nature18933
+    year: 2016
+    verified: false
+  notes: Atlas correspondence approximate. Heschl gyrus listed separately under BR.A1.
+- id: BR.MTG
+  en: left posterior middle temporal gyrus
+  zh: 左侧颞中回后部
+  definition: Posterior part of the left middle temporal gyrus, implicated in lexical-semantic access.
+  atlas_refs:
+    brodmann:
+    - BA21
+    - BA37
+    aal3:
+    - Temporal_Mid_L
+    hcp_mmp1:
+    - PHT
+    - TE1p
+    - TE1m
+  coordinate_space: MNI152
+  sources:
+  - citation: Rolls ET, Huang CC, Lin CP, Feng J, Joliot M. Automated anatomical labelling atlas 3. NeuroImage. 2020;206:116189.
+    doi: 10.1016/j.neuroimage.2019.116189
+    year: 2020
+    verified: false
+  - citation: Glasser MF, Coalson TS, Robinson EC, et al. A multi-modal parcellation of human cerebral cortex. Nature. 2016;536(7615):171-178.
+    doi: 10.1038/nature18933
+    year: 2016
+    verified: false
+  notes: Atlas correspondence approximate. Left hemisphere only per term definition; posterior portion of AAL3 Temporal_Mid_L.
+- id: BR.ATL
+  en: anterior temporal lobe
+  zh: 前颞叶
+  definition: Anterior temporal lobe including the temporal pole, implicated in semantic memory and social knowledge.
+  atlas_refs:
+    brodmann:
+    - BA38
+    - BA20
+    - BA21
+    aal3:
+    - Temporal_Pole_Sup_L
+    - Temporal_Pole_Sup_R
+    - Temporal_Pole_Mid_L
+    - Temporal_Pole_Mid_R
+    hcp_mmp1:
+    - TGd
+    - TGv
+    - TE1a
+    - TE2a
+    - STGa
+    - STSda
+    - STSva
+  coordinate_space: MNI152
+  sources:
+  - citation: Rolls ET, Huang CC, Lin CP, Feng J, Joliot M. Automated anatomical labelling atlas 3. NeuroImage. 2020;206:116189.
+    doi: 10.1016/j.neuroimage.2019.116189
+    year: 2020
+    verified: false
+  - citation: Glasser MF, Coalson TS, Robinson EC, et al. A multi-modal parcellation of human cerebral cortex. Nature. 2016;536(7615):171-178.
+    doi: 10.1038/nature18933
+    year: 2016
+    verified: false
+  notes: Atlas correspondence approximate. Anterior Temporal_Inf / Temporal_Mid also part of ATL in many studies.
+- id: BR.IFG
+  en: inferior frontal gyrus
+  zh: 额下回
+  definition: Inferior frontal gyrus (pars opercularis, triangularis and orbitalis) of the lateral frontal lobe, involved
+    in language and inhibitory control.
+  parent: BR.frontal_cortex
+  atlas_refs:
+    brodmann:
+    - BA44
+    - BA45
+    - BA47
+    aal3:
+    - Frontal_Inf_Oper_L
+    - Frontal_Inf_Oper_R
+    - Frontal_Inf_Tri_L
+    - Frontal_Inf_Tri_R
+    - Frontal_Inf_Orb_2_L
+    - Frontal_Inf_Orb_2_R
+    hcp_mmp1:
+    - '44'
+    - '45'
+    - 47l
+  coordinate_space: MNI152
+  sources:
+  - citation: Rolls ET, Huang CC, Lin CP, Feng J, Joliot M. Automated anatomical labelling atlas 3. NeuroImage. 2020;206:116189.
+    doi: 10.1016/j.neuroimage.2019.116189
+    year: 2020
+    verified: false
+  - citation: Glasser MF, Coalson TS, Robinson EC, et al. A multi-modal parcellation of human cerebral cortex. Nature. 2016;536(7615):171-178.
+    doi: 10.1038/nature18933
+    year: 2016
+    verified: false
+  notes: Atlas correspondence approximate.
+- id: BR.IPS
+  en: intraparietal sulcus
+  zh: 顶内沟
+  definition: Intraparietal sulcus separating the superior and inferior parietal lobules, involved in spatial attention and
+    numerical processing.
+  parent: BR.parietal_cortex
+  atlas_refs:
+    brodmann:
+    - BA7
+    - BA39
+    - BA40
+    aal3:
+    - Parietal_Sup_L
+    - Parietal_Sup_R
+    - Parietal_Inf_L
+    - Parietal_Inf_R
+    hcp_mmp1:
+    - IP0
+    - IP1
+    - IP2
+    - IPS1
+    - AIP
+    - MIP
+    - LIPv
+    - LIPd
+    - VIP
+  coordinate_space: MNI152
+  sources:
+  - citation: Rolls ET, Huang CC, Lin CP, Feng J, Joliot M. Automated anatomical labelling atlas 3. NeuroImage. 2020;206:116189.
+    doi: 10.1016/j.neuroimage.2019.116189
+    year: 2020
+    verified: false
+  - citation: Glasser MF, Coalson TS, Robinson EC, et al. A multi-modal parcellation of human cerebral cortex. Nature. 2016;536(7615):171-178.
+    doi: 10.1038/nature18933
+    year: 2016
+    verified: false
+  notes: Atlas correspondence approximate. Sulcal region on boundary of two AAL3 gyral labels.
+- id: BR.TPJ
+  en: temporo-parietal junction
+  zh: 颞顶联合区
+  definition: Cortex where the posterior superior temporal and inferior parietal lobes meet, involved in attentional reorienting
+    and mentalizing.
+  parent: BR.parietal_cortex
+  atlas_refs:
+    brodmann:
+    - BA39
+    - BA40
+    - BA22
+    aal3:
+    - SupraMarginal_L
+    - SupraMarginal_R
+    - Angular_L
+    - Angular_R
+    - Temporal_Sup_L
+    - Temporal_Sup_R
+    hcp_mmp1:
+    - PGi
+    - PGs
+    - PFm
+    - TPOJ1
+    - TPOJ2
+    - TPOJ3
+    - STV
+    - PSL
+  coordinate_space: MNI152
+  sources:
+  - citation: Rolls ET, Huang CC, Lin CP, Feng J, Joliot M. Automated anatomical labelling atlas 3. NeuroImage. 2020;206:116189.
+    doi: 10.1016/j.neuroimage.2019.116189
+    year: 2020
+    verified: false
+  - citation: Glasser MF, Coalson TS, Robinson EC, et al. A multi-modal parcellation of human cerebral cortex. Nature. 2016;536(7615):171-178.
+    doi: 10.1038/nature18933
+    year: 2016
+    verified: false
+  notes: Atlas correspondence approximate. Same region as the atlas id BR.temporoparietal_junction; Temporal_Sup only its
+    posterior part.
+- id: BR.dACC
+  en: dorsal anterior cingulate cortex
+  zh: 背侧前扣带回
+  definition: Dorsal (supracallosal) anterior cingulate cortex on the medial frontal wall, involved in performance monitoring.
+  atlas_refs:
+    brodmann:
+    - BA24
+    - BA32
+    aal3:
+    - ACC_sup_L
+    - ACC_sup_R
+    hcp_mmp1:
+    - a24pr
+    - p24pr
+    - a32pr
+    - p32pr
+    - 33pr
+  coordinate_space: MNI152
+  sources:
+  - citation: Rolls ET, Huang CC, Lin CP, Feng J, Joliot M. Automated anatomical labelling atlas 3. NeuroImage. 2020;206:116189.
+    doi: 10.1016/j.neuroimage.2019.116189
+    year: 2020
+    verified: false
+  - citation: Glasser MF, Coalson TS, Robinson EC, et al. A multi-modal parcellation of human cerebral cortex. Nature. 2016;536(7615):171-178.
+    doi: 10.1038/nature18933
+    year: 2016
+    verified: false
+  notes: Atlas correspondence approximate. AAL3 replaces Cingulate_Ant with ACC_sub/ACC_pre/ACC_sup; anterior Cingulate_Mid
+    often included in dACC/aMCC.
+- id: BR.preSMA
+  en: pre-supplementary motor area
+  zh: 前辅助运动区
+  definition: Medial frontal area rostral to the SMA (anterior to the vertical line through the anterior commissure), involved
+    in action selection and inhibition.
+  parent: BR.frontal_cortex
+  atlas_refs:
+    brodmann:
+    - BA6
+    aal3:
+    - Supp_Motor_Area_L
+    - Supp_Motor_Area_R
+    hcp_mmp1:
+    - 6ma
+  coordinate_space: MNI152
+  sources:
+  - citation: Rolls ET, Huang CC, Lin CP, Feng J, Joliot M. Automated anatomical labelling atlas 3. NeuroImage. 2020;206:116189.
+    doi: 10.1016/j.neuroimage.2019.116189
+    year: 2020
+    verified: false
+  - citation: Glasser MF, Coalson TS, Robinson EC, et al. A multi-modal parcellation of human cerebral cortex. Nature. 2016;536(7615):171-178.
+    doi: 10.1038/nature18933
+    year: 2016
+    verified: false
+  notes: Atlas correspondence approximate. AAL3 Supp_Motor_Area covers both SMA and pre-SMA (anterior part).
+- id: BR.SMA
+  en: supplementary motor area
+  zh: 辅助运动区
+  definition: Supplementary motor area on the medial surface of BA6, involved in self-initiated movement and movement sequencing.
+  parent: BR.frontal_cortex
+  atlas_refs:
+    brodmann:
+    - BA6
+    aal3:
+    - Supp_Motor_Area_L
+    - Supp_Motor_Area_R
+    hcp_mmp1:
+    - 6mp
+  coordinate_space: MNI152
+  sources:
+  - citation: Rolls ET, Huang CC, Lin CP, Feng J, Joliot M. Automated anatomical labelling atlas 3. NeuroImage. 2020;206:116189.
+    doi: 10.1016/j.neuroimage.2019.116189
+    year: 2020
+    verified: false
+  - citation: Glasser MF, Coalson TS, Robinson EC, et al. A multi-modal parcellation of human cerebral cortex. Nature. 2016;536(7615):171-178.
+    doi: 10.1038/nature18933
+    year: 2016
+    verified: false
+  notes: Atlas correspondence approximate. AAL3 Supp_Motor_Area posterior part.
+- id: BR.M1
+  en: primary motor cortex
+  zh: 初级运动皮层
+  definition: Primary motor cortex in the precentral gyrus, the main cortical origin of descending motor commands.
+  parent: BR.sensorimotor_cortex
+  atlas_refs:
+    brodmann:
+    - BA4
+    aal3:
+    - Precentral_L
+    - Precentral_R
+    hcp_mmp1:
+    - '4'
+  coordinate_space: MNI152
+  sources:
+  - citation: Rolls ET, Huang CC, Lin CP, Feng J, Joliot M. Automated anatomical labelling atlas 3. NeuroImage. 2020;206:116189.
+    doi: 10.1016/j.neuroimage.2019.116189
+    year: 2020
+    verified: false
+  - citation: Glasser MF, Coalson TS, Robinson EC, et al. A multi-modal parcellation of human cerebral cortex. Nature. 2016;536(7615):171-178.
+    doi: 10.1038/nature18933
+    year: 2016
+    verified: false
+  notes: Atlas correspondence approximate. AAL3 Precentral also contains lateral premotor cortex (BA6).
+- id: BR.S1
+  en: primary somatosensory cortex
+  zh: 初级体感皮层
+  definition: Primary somatosensory cortex in the postcentral gyrus, receiving tactile and proprioceptive input.
+  parent: BR.sensorimotor_cortex
+  atlas_refs:
+    brodmann:
+    - BA3
+    - BA1
+    - BA2
+    aal3:
+    - Postcentral_L
+    - Postcentral_R
+    hcp_mmp1:
+    - 3a
+    - 3b
+    - '1'
+    - '2'
+  coordinate_space: MNI152
+  sources:
+  - citation: Rolls ET, Huang CC, Lin CP, Feng J, Joliot M. Automated anatomical labelling atlas 3. NeuroImage. 2020;206:116189.
+    doi: 10.1016/j.neuroimage.2019.116189
+    year: 2020
+    verified: false
+  - citation: Glasser MF, Coalson TS, Robinson EC, et al. A multi-modal parcellation of human cerebral cortex. Nature. 2016;536(7615):171-178.
+    doi: 10.1038/nature18933
+    year: 2016
+    verified: false
+  notes: Atlas correspondence approximate.
+- id: BR.DLPFC
+  en: dorsolateral prefrontal cortex
+  zh: 背外侧前额叶
+  definition: Dorsolateral prefrontal cortex on the middle and superior frontal gyri, involved in working memory and cognitive
+    control.
+  parent: BR.frontal_cortex
+  atlas_refs:
+    brodmann:
+    - BA9
+    - BA46
+    aal3:
+    - Frontal_Mid_2_L
+    - Frontal_Mid_2_R
+    - Frontal_Sup_2_L
+    - Frontal_Sup_2_R
+    hcp_mmp1:
+    - '46'
+    - 9-46d
+    - a9-46v
+    - p9-46v
+  coordinate_space: MNI152
+  sources:
+  - citation: Rolls ET, Huang CC, Lin CP, Feng J, Joliot M. Automated anatomical labelling atlas 3. NeuroImage. 2020;206:116189.
+    doi: 10.1016/j.neuroimage.2019.116189
+    year: 2020
+    verified: false
+  - citation: Glasser MF, Coalson TS, Robinson EC, et al. A multi-modal parcellation of human cerebral cortex. Nature. 2016;536(7615):171-178.
+    doi: 10.1038/nature18933
+    year: 2016
+    verified: false
+  notes: Atlas correspondence approximate. Functionally broad; AAL3 gyral labels extend beyond DLPFC.
+- id: BR.vmPFC
+  en: ventromedial prefrontal / orbitofrontal cortex
+  zh: 腹内侧前额叶 / 眶额皮层
+  definition: Ventromedial prefrontal and medial orbitofrontal cortex, involved in value representation and emotion regulation.
+  parent: BR.frontal_cortex
+  atlas_refs:
+    brodmann:
+    - BA10
+    - BA11
+    - BA25
+    - BA32
+    aal3:
+    - Frontal_Med_Orb_L
+    - Frontal_Med_Orb_R
+    - Rectus_L
+    - Rectus_R
+    - OFCmed_L
+    - OFCmed_R
+    - ACC_sub_L
+    - ACC_sub_R
+    hcp_mmp1:
+    - 10r
+    - 10v
+    - '25'
+    - s32
+    - p32
+    - a24
+    - OFC
+    - pOFC
+  coordinate_space: MNI152
+  sources:
+  - citation: Rolls ET, Huang CC, Lin CP, Feng J, Joliot M. Automated anatomical labelling atlas 3. NeuroImage. 2020;206:116189.
+    doi: 10.1016/j.neuroimage.2019.116189
+    year: 2020
+    verified: false
+  - citation: Glasser MF, Coalson TS, Robinson EC, et al. A multi-modal parcellation of human cerebral cortex. Nature. 2016;536(7615):171-178.
+    doi: 10.1038/nature18933
+    year: 2016
+    verified: false
+  notes: Atlas correspondence approximate. Definitions of vmPFC vary; ventral parts of pregenual ACC (ACC_pre) sometimes included.
+- id: BR.striatum
+  en: ventral striatum
+  zh: 腹侧纹状体
+  definition: Ventral striatum centred on the nucleus accumbens, involved in reward processing and reward prediction error.
+  atlas_refs:
+    aal3:
+    - N_Acc_L
+    - N_Acc_R
+  coordinate_space: MNI152
+  sources:
+  - citation: Rolls ET, Huang CC, Lin CP, Feng J, Joliot M. Automated anatomical labelling atlas 3. NeuroImage. 2020;206:116189.
+    doi: 10.1016/j.neuroimage.2019.116189
+    year: 2020
+    verified: false
+  notes: Atlas correspondence approximate. Subcortical; no Brodmann or HCP-MMP cortical area; ventral caudate/putamen sometimes
+    included.
+- id: BR.amygdala
+  en: amygdala
+  zh: 杏仁核
+  definition: Medial temporal nuclear complex anterior to the hippocampus, involved in threat detection and emotional salience.
+  atlas_refs:
+    aal3:
+    - Amygdala_L
+    - Amygdala_R
+  coordinate_space: MNI152
+  sources:
+  - citation: Rolls ET, Huang CC, Lin CP, Feng J, Joliot M. Automated anatomical labelling atlas 3. NeuroImage. 2020;206:116189.
+    doi: 10.1016/j.neuroimage.2019.116189
+    year: 2020
+    verified: false
+  notes: Atlas correspondence approximate. Subcortical; no Brodmann or HCP-MMP cortical area.
+- id: BR.thalamus
+  en: thalamus
+  zh: 丘脑
+  definition: Paired diencephalic nuclear complex relaying and gating sensory, motor and cortico-cortical signals.
+  atlas_refs:
+    aal3:
+    - Thal_AV_L
+    - Thal_AV_R
+    - Thal_LP_L
+    - Thal_LP_R
+    - Thal_VA_L
+    - Thal_VA_R
+    - Thal_VL_L
+    - Thal_VL_R
+    - Thal_VPL_L
+    - Thal_VPL_R
+    - Thal_IL_L
+    - Thal_IL_R
+    - Thal_Re_L
+    - Thal_Re_R
+    - Thal_MDm_L
+    - Thal_MDm_R
+    - Thal_MDl_L
+    - Thal_MDl_R
+    - Thal_LGN_L
+    - Thal_LGN_R
+    - Thal_MGN_L
+    - Thal_MGN_R
+    - Thal_PuI_L
+    - Thal_PuI_R
+    - Thal_PuM_L
+    - Thal_PuM_R
+    - Thal_PuA_L
+    - Thal_PuA_R
+    - Thal_PuL_L
+    - Thal_PuL_R
+  coordinate_space: MNI152
+  sources:
+  - citation: Rolls ET, Huang CC, Lin CP, Feng J, Joliot M. Automated anatomical labelling atlas 3. NeuroImage. 2020;206:116189.
+    doi: 10.1016/j.neuroimage.2019.116189
+    year: 2020
+    verified: false
+  notes: Atlas correspondence approximate. AAL3 splits the thalamus into 15 nuclei per hemisphere; Thal_Re spelled Thal_RE
+    in one table of the AAL3 paper (medium on that label).
+- id: BR.hippocampus
+  en: hippocampus
+  zh: 海马
+  definition: Medial temporal lobe structure (hippocampal formation) involved in episodic memory and spatial navigation.
+  atlas_refs:
+    aal3:
+    - Hippocampus_L
+    - Hippocampus_R
+    hcp_mmp1:
+    - H
+  coordinate_space: MNI152
+  sources:
+  - citation: Rolls ET, Huang CC, Lin CP, Feng J, Joliot M. Automated anatomical labelling atlas 3. NeuroImage. 2020;206:116189.
+    doi: 10.1016/j.neuroimage.2019.116189
+    year: 2020
+    verified: false
+  - citation: Glasser MF, Coalson TS, Robinson EC, et al. A multi-modal parcellation of human cerebral cortex. Nature. 2016;536(7615):171-178.
+    doi: 10.1038/nature18933
+    year: 2016
+    verified: false
+  notes: Atlas correspondence approximate. HCP-MMP1.0 includes hippocampus as area H; no Brodmann area assigned.
+- id: BR.frontal_cortex
+  en: Frontal cortex
+  zh: 额叶皮层
+  definition: Frontal lobe cortex anterior to the central sulcus, including motor, premotor and prefrontal areas.
+  atlas_refs:
+    brodmann:
+    - BA4
+    - BA6
+    - BA8
+    - BA9
+    - BA10
+    - BA11
+    - BA44
+    - BA45
+    - BA46
+    - BA47
+    aal3:
+    - Precentral_L
+    - Precentral_R
+    - Frontal_Sup_2_L
+    - Frontal_Sup_2_R
+    - Frontal_Mid_2_L
+    - Frontal_Mid_2_R
+    - Frontal_Inf_Oper_L
+    - Frontal_Inf_Oper_R
+    - Frontal_Inf_Tri_L
+    - Frontal_Inf_Tri_R
+    - Frontal_Inf_Orb_2_L
+    - Frontal_Inf_Orb_2_R
+    - Supp_Motor_Area_L
+    - Supp_Motor_Area_R
+    - Frontal_Sup_Medial_L
+    - Frontal_Sup_Medial_R
+    - Frontal_Med_Orb_L
+    - Frontal_Med_Orb_R
+    - Rectus_L
+    - Rectus_R
+    - OFCmed_L
+    - OFCmed_R
+    - OFCant_L
+    - OFCant_R
+    - OFCpost_L
+    - OFCpost_R
+    - OFClat_L
+    - OFClat_R
+  coordinate_space: MNI152
+  sources:
+  - citation: Rolls ET, Huang CC, Lin CP, Feng J, Joliot M. Automated anatomical labelling atlas 3. NeuroImage. 2020;206:116189.
+    doi: 10.1016/j.neuroimage.2019.116189
+    year: 2020
+    verified: false
+  notes: Atlas correspondence approximate. Macro region; HCP-MMP areas not enumerated (see child terms); cingulate excluded.
+- id: BR.parietal_cortex
+  en: Parietal cortex
+  zh: 顶叶皮层
+  definition: Parietal lobe cortex between the central and parieto-occipital sulci, including somatosensory and posterior
+    parietal areas.
+  atlas_refs:
+    brodmann:
+    - BA1
+    - BA2
+    - BA3
+    - BA5
+    - BA7
+    - BA39
+    - BA40
+    aal3:
+    - Postcentral_L
+    - Postcentral_R
+    - Parietal_Sup_L
+    - Parietal_Sup_R
+    - Parietal_Inf_L
+    - Parietal_Inf_R
+    - SupraMarginal_L
+    - SupraMarginal_R
+    - Angular_L
+    - Angular_R
+    - Precuneus_L
+    - Precuneus_R
+  coordinate_space: MNI152
+  sources:
+  - citation: Rolls ET, Huang CC, Lin CP, Feng J, Joliot M. Automated anatomical labelling atlas 3. NeuroImage. 2020;206:116189.
+    doi: 10.1016/j.neuroimage.2019.116189
+    year: 2020
+    verified: false
+  notes: Atlas correspondence approximate. Macro region; HCP-MMP areas not enumerated (see child terms).
+- id: BR.temporoparietal_junction
+  en: Temporoparietal junction (atlas id; same as factory BR.TPJ)
+  zh: 颞顶联合区
+  definition: Cortex where the posterior superior temporal and inferior parietal lobes meet (supramarginal/angular gyri and
+    posterior STG).
+  parent: BR.parietal_cortex
+  atlas_refs:
+    brodmann:
+    - BA39
+    - BA40
+    - BA22
+    aal3:
+    - SupraMarginal_L
+    - SupraMarginal_R
+    - Angular_L
+    - Angular_R
+    - Temporal_Sup_L
+    - Temporal_Sup_R
+    hcp_mmp1:
+    - PGi
+    - PGs
+    - PFm
+    - TPOJ1
+    - TPOJ2
+    - TPOJ3
+    - STV
+    - PSL
+  coordinate_space: MNI152
+  sources:
+  - citation: Rolls ET, Huang CC, Lin CP, Feng J, Joliot M. Automated anatomical labelling atlas 3. NeuroImage. 2020;206:116189.
+    doi: 10.1016/j.neuroimage.2019.116189
+    year: 2020
+    verified: false
+  - citation: Glasser MF, Coalson TS, Robinson EC, et al. A multi-modal parcellation of human cerebral cortex. Nature. 2016;536(7615):171-178.
+    doi: 10.1038/nature18933
+    year: 2016
+    verified: false
+  notes: Atlas correspondence approximate. Same region as the factory id BR.TPJ; both ids kept.
+- id: BR.sensorimotor_cortex
+  en: Sensorimotor cortex
+  zh: 感觉运动皮层
+  definition: Pericentral cortex comprising primary motor and primary somatosensory cortex, the main generator of mu and beta
+    rhythms.
+  includes:
+  - primary motor cortex
+  - primary somatosensory cortex
+  atlas_refs:
+    brodmann:
+    - BA4
+    - BA3
+    - BA1
+    - BA2
+    aal3:
+    - Precentral_L
+    - Precentral_R
+    - Postcentral_L
+    - Postcentral_R
+    - Paracentral_Lobule_L
+    - Paracentral_Lobule_R
+    hcp_mmp1:
+    - '4'
+    - 3a
+    - 3b
+    - '1'
+    - '2'
+  coordinate_space: MNI152
+  sources:
+  - citation: Rolls ET, Huang CC, Lin CP, Feng J, Joliot M. Automated anatomical labelling atlas 3. NeuroImage. 2020;206:116189.
+    doi: 10.1016/j.neuroimage.2019.116189
+    year: 2020
+    verified: false
+  - citation: Glasser MF, Coalson TS, Robinson EC, et al. A multi-modal parcellation of human cerebral cortex. Nature. 2016;536(7615):171-178.
+    doi: 10.1038/nature18933
+    year: 2016
+    verified: false
+  notes: Atlas correspondence approximate.
+- id: BR.visual_cortex
+  en: Visual cortex
+  zh: 视觉皮层
+  definition: Occipital and adjacent occipitotemporal cortex devoted to visual processing, including V1 and extrastriate areas.
+  includes:
+  - V1
+  - extrastriate visual areas
+  atlas_refs:
+    brodmann:
+    - BA17
+    - BA18
+    - BA19
+    aal3:
+    - Calcarine_L
+    - Calcarine_R
+    - Cuneus_L
+    - Cuneus_R
+    - Lingual_L
+    - Lingual_R
+    - Occipital_Sup_L
+    - Occipital_Sup_R
+    - Occipital_Mid_L
+    - Occipital_Mid_R
+    - Occipital_Inf_L
+    - Occipital_Inf_R
+    hcp_mmp1:
+    - V1
+    - V2
+    - V3
+    - V4
+    - V3A
+    - V3B
+    - V3CD
+    - V6
+    - V6A
+    - V7
+    - V8
+    - LO1
+    - LO2
+    - LO3
+    - PIT
+    - FFC
+    - VVC
+    - VMV1
+    - VMV2
+    - VMV3
+    - MT
+    - MST
+    - V4t
+    - FST
+  coordinate_space: MNI152
+  sources:
+  - citation: Rolls ET, Huang CC, Lin CP, Feng J, Joliot M. Automated anatomical labelling atlas 3. NeuroImage. 2020;206:116189.
+    doi: 10.1016/j.neuroimage.2019.116189
+    year: 2020
+    verified: false
+  - citation: Glasser MF, Coalson TS, Robinson EC, et al. A multi-modal parcellation of human cerebral cortex. Nature. 2016;536(7615):171-178.
+    doi: 10.1038/nature18933
+    year: 2016
+    verified: false
+  notes: Atlas correspondence approximate. Macro region; HCP-MMP early, dorsal, ventral and MT+ visual areas listed.
+- id: BR.premotor
+  en: Premotor cortex (PMd/PMv)
+  zh: 运动前区
+  definition: Lateral premotor cortex (dorsal and ventral) anterior to M1 in BA6, involved in movement planning and sensorimotor
+    transformation.
+  parent: BR.frontal_cortex
+  atlas_refs:
+    brodmann:
+    - BA6
+    aal3:
+    - Precentral_L
+    - Precentral_R
+    - Frontal_Sup_2_L
+    - Frontal_Sup_2_R
+    - Frontal_Mid_2_L
+    - Frontal_Mid_2_R
+    hcp_mmp1:
+    - 6d
+    - 6a
+    - 6v
+    - 6r
+    - 55b
+    - PEF
+  coordinate_space: MNI152
+  sources:
+  - citation: Rolls ET, Huang CC, Lin CP, Feng J, Joliot M. Automated anatomical labelling atlas 3. NeuroImage. 2020;206:116189.
+    doi: 10.1016/j.neuroimage.2019.116189
+    year: 2020
+    verified: false
+  - citation: Glasser MF, Coalson TS, Robinson EC, et al. A multi-modal parcellation of human cerebral cortex. Nature. 2016;536(7615):171-178.
+    doi: 10.1038/nature18933
+    year: 2016
+    verified: false
+  notes: Atlas correspondence approximate. AAL3 has no premotor label; anterior Precentral and posterior Frontal_Sup_2/Frontal_Mid_2
+    (low for AAL3).
+- id: BR.FEF
+  en: Frontal eye field
+  zh: 额眼区
+  definition: Frontal eye field near the junction of the superior frontal and precentral sulci, controlling saccades and spatial
+    attention.
+  parent: BR.frontal_cortex
+  atlas_refs:
+    brodmann:
+    - BA8
+    - BA6
+    aal3:
+    - Precentral_L
+    - Precentral_R
+    - Frontal_Mid_2_L
+    - Frontal_Mid_2_R
+    hcp_mmp1:
+    - FEF
+  coordinate_space: MNI152
+  sources:
+  - citation: Rolls ET, Huang CC, Lin CP, Feng J, Joliot M. Automated anatomical labelling atlas 3. NeuroImage. 2020;206:116189.
+    doi: 10.1016/j.neuroimage.2019.116189
+    year: 2020
+    verified: false
+  - citation: Glasser MF, Coalson TS, Robinson EC, et al. A multi-modal parcellation of human cerebral cortex. Nature. 2016;536(7615):171-178.
+    doi: 10.1038/nature18933
+    year: 2016
+    verified: false
+  notes: Atlas correspondence approximate. Human FEF lies in BA6 at the precentral sulcus rather than classical BA8; AAL3
+    labels low confidence.
+- id: BR.precuneus
+  en: Precuneus
+  zh: 楔前叶
+  definition: Medial posterior parietal cortex, part of the default mode network, involved in self-referential processing
+    and mental imagery.
+  parent: BR.parietal_cortex
+  atlas_refs:
+    brodmann:
+    - BA7
+    - BA31
+    aal3:
+    - Precuneus_L
+    - Precuneus_R
+    hcp_mmp1:
+    - 7m
+    - 7Pm
+    - 7Am
+    - PCV
+  coordinate_space: MNI152
+  sources:
+  - citation: Rolls ET, Huang CC, Lin CP, Feng J, Joliot M. Automated anatomical labelling atlas 3. NeuroImage. 2020;206:116189.
+    doi: 10.1016/j.neuroimage.2019.116189
+    year: 2020
+    verified: false
+  - citation: Glasser MF, Coalson TS, Robinson EC, et al. A multi-modal parcellation of human cerebral cortex. Nature. 2016;536(7615):171-178.
+    doi: 10.1038/nature18933
+    year: 2016
+    verified: false
+  notes: Atlas correspondence approximate.
+- id: BR.PCC
+  en: Posterior cingulate cortex
+  zh: 后扣带回
+  definition: Posterior cingulate cortex on the medial parietal wall, a core default mode network hub.
+  atlas_refs:
+    brodmann:
+    - BA23
+    - BA31
+    aal3:
+    - Cingulate_Post_L
+    - Cingulate_Post_R
+    hcp_mmp1:
+    - d23ab
+    - v23ab
+    - 23d
+    - 31pd
+    - 31pv
+    - 31a
+  coordinate_space: MNI152
+  sources:
+  - citation: Rolls ET, Huang CC, Lin CP, Feng J, Joliot M. Automated anatomical labelling atlas 3. NeuroImage. 2020;206:116189.
+    doi: 10.1016/j.neuroimage.2019.116189
+    year: 2020
+    verified: false
+  - citation: Glasser MF, Coalson TS, Robinson EC, et al. A multi-modal parcellation of human cerebral cortex. Nature. 2016;536(7615):171-178.
+    doi: 10.1038/nature18933
+    year: 2016
+    verified: false
+  notes: Atlas correspondence approximate. AAL3 Cingulate_Post is smaller than most functional PCC definitions; posterior
+    Cingulate_Mid often included.
+- id: BR.dmPFC
+  en: Dorsomedial prefrontal cortex
+  zh: 背内侧前额叶
+  definition: Dorsomedial prefrontal cortex on the medial superior frontal gyrus, involved in mentalizing and self-referential
+    judgment.
+  parent: BR.frontal_cortex
+  atlas_refs:
+    brodmann:
+    - BA8
+    - BA9
+    - BA32
+    aal3:
+    - Frontal_Sup_Medial_L
+    - Frontal_Sup_Medial_R
+    hcp_mmp1:
+    - 8BM
+    - 9m
+    - d32
+  coordinate_space: MNI152
+  sources:
+  - citation: Rolls ET, Huang CC, Lin CP, Feng J, Joliot M. Automated anatomical labelling atlas 3. NeuroImage. 2020;206:116189.
+    doi: 10.1016/j.neuroimage.2019.116189
+    year: 2020
+    verified: false
+  - citation: Glasser MF, Coalson TS, Robinson EC, et al. A multi-modal parcellation of human cerebral cortex. Nature. 2016;536(7615):171-178.
+    doi: 10.1038/nature18933
+    year: 2016
+    verified: false
+  notes: Atlas correspondence approximate.
+- id: BR.frontopolar
+  en: Frontopolar cortex (BA10)
+  zh: 额极
+  definition: Most anterior prefrontal cortex (BA10), involved in prospective memory, metacognition and exploration.
+  parent: BR.frontal_cortex
+  atlas_refs:
+    brodmann:
+    - BA10
+    aal3:
+    - Frontal_Sup_2_L
+    - Frontal_Sup_2_R
+    - Frontal_Mid_2_L
+    - Frontal_Mid_2_R
+    - Frontal_Sup_Medial_L
+    - Frontal_Sup_Medial_R
+    hcp_mmp1:
+    - 10pp
+    - a10p
+    - p10p
+    - 10d
+  coordinate_space: MNI152
+  sources:
+  - citation: Rolls ET, Huang CC, Lin CP, Feng J, Joliot M. Automated anatomical labelling atlas 3. NeuroImage. 2020;206:116189.
+    doi: 10.1016/j.neuroimage.2019.116189
+    year: 2020
+    verified: false
+  - citation: Glasser MF, Coalson TS, Robinson EC, et al. A multi-modal parcellation of human cerebral cortex. Nature. 2016;536(7615):171-178.
+    doi: 10.1038/nature18933
+    year: 2016
+    verified: false
+  notes: Atlas correspondence approximate. AAL3 has no frontopolar label; anterior parts of the listed labels (low for AAL3).
+- id: BR.anterior_insula
+  en: Anterior insula
+  zh: 前脑岛
+  definition: Anterior part of the insular cortex, involved in interoceptive awareness, salience detection and emotion.
+  atlas_refs:
+    aal3:
+    - Insula_L
+    - Insula_R
+    hcp_mmp1:
+    - AAIC
+    - AVI
+  coordinate_space: MNI152
+  sources:
+  - citation: Rolls ET, Huang CC, Lin CP, Feng J, Joliot M. Automated anatomical labelling atlas 3. NeuroImage. 2020;206:116189.
+    doi: 10.1016/j.neuroimage.2019.116189
+    year: 2020
+    verified: false
+  - citation: Glasser MF, Coalson TS, Robinson EC, et al. A multi-modal parcellation of human cerebral cortex. Nature. 2016;536(7615):171-178.
+    doi: 10.1038/nature18933
+    year: 2016
+    verified: false
+  notes: Atlas correspondence approximate. AAL3 Insula not split; Brodmann insular areas (13-16) not defined in human Brodmann
+    map, omitted.
+- id: BR.posterior_insula
+  en: Posterior insula
+  zh: 后脑岛
+  definition: Posterior part of the insular cortex, receiving primary interoceptive, thermal and pain input.
+  atlas_refs:
+    aal3:
+    - Insula_L
+    - Insula_R
+    hcp_mmp1:
+    - PoI1
+    - PoI2
+    - Ig
+  coordinate_space: MNI152
+  sources:
+  - citation: Rolls ET, Huang CC, Lin CP, Feng J, Joliot M. Automated anatomical labelling atlas 3. NeuroImage. 2020;206:116189.
+    doi: 10.1016/j.neuroimage.2019.116189
+    year: 2020
+    verified: false
+  - citation: Glasser MF, Coalson TS, Robinson EC, et al. A multi-modal parcellation of human cerebral cortex. Nature. 2016;536(7615):171-178.
+    doi: 10.1038/nature18933
+    year: 2016
+    verified: false
+  notes: Atlas correspondence approximate. AAL3 Insula not split; Brodmann omitted as for anterior insula.
+- id: BR.parahippocampal
+  en: Parahippocampal cortex / PPA
+  zh: 海马旁回
+  definition: Parahippocampal gyrus of the medial temporal lobe, including the parahippocampal place area responsive to scenes.
+  atlas_refs:
+    brodmann:
+    - BA35
+    - BA36
+    aal3:
+    - ParaHippocampal_L
+    - ParaHippocampal_R
+    hcp_mmp1:
+    - PHA1
+    - PHA2
+    - PHA3
+  coordinate_space: MNI152
+  sources:
+  - citation: Rolls ET, Huang CC, Lin CP, Feng J, Joliot M. Automated anatomical labelling atlas 3. NeuroImage. 2020;206:116189.
+    doi: 10.1016/j.neuroimage.2019.116189
+    year: 2020
+    verified: false
+  - citation: Glasser MF, Coalson TS, Robinson EC, et al. A multi-modal parcellation of human cerebral cortex. Nature. 2016;536(7615):171-178.
+    doi: 10.1038/nature18933
+    year: 2016
+    verified: false
+  notes: Atlas correspondence approximate. PPA mapped to HCP PHA1-3; perirhinal/entorhinal (PeEc, EC) not included.
+- id: BR.cerebellum
+  en: Cerebellum
+  zh: 小脑
+  definition: Hindbrain structure posterior to the brainstem involved in motor coordination, timing and some cognitive functions.
+  atlas_refs:
+    aal3:
+    - Cerebellum_Crus1_L
+    - Cerebellum_Crus1_R
+    - Cerebellum_Crus2_L
+    - Cerebellum_Crus2_R
+    - Cerebellum_3_L
+    - Cerebellum_3_R
+    - Cerebellum_4_5_L
+    - Cerebellum_4_5_R
+    - Cerebellum_6_L
+    - Cerebellum_6_R
+    - Cerebellum_7b_L
+    - Cerebellum_7b_R
+    - Cerebellum_8_L
+    - Cerebellum_8_R
+    - Cerebellum_9_L
+    - Cerebellum_9_R
+    - Cerebellum_10_L
+    - Cerebellum_10_R
+    - Vermis_1_2
+    - Vermis_3
+    - Vermis_4_5
+    - Vermis_6
+    - Vermis_7
+    - Vermis_8
+    - Vermis_9
+    - Vermis_10
+  coordinate_space: MNI152
+  sources:
+  - citation: Rolls ET, Huang CC, Lin CP, Feng J, Joliot M. Automated anatomical labelling atlas 3. NeuroImage. 2020;206:116189.
+    doi: 10.1016/j.neuroimage.2019.116189
+    year: 2020
+    verified: false
+  notes: Atlas correspondence approximate. No Brodmann or HCP-MMP cortical areas; Vermis labels are midline.
+- id: BR.STN
+  en: Subthalamic nucleus
+  zh: 丘脑底核
+  definition: Small lens-shaped nucleus of the basal ganglia below the thalamus, involved in stopping and conflict-related
+    braking.
+  coordinate_space: MNI152
+  notes: Atlas correspondence approximate. No AAL3 label (AAL3 adds N_Acc, VTA, SN, Red_N, LC, raphe but not STN); use a dedicated
+    subcortical atlas.
+- id: BR.dorsal_striatum
+  en: Dorsal striatum (caudate, putamen)
+  zh: 背侧纹状体
+  definition: Dorsal part of the striatum comprising caudate nucleus and putamen, involved in action selection and habit learning.
+  atlas_refs:
+    aal3:
+    - Caudate_L
+    - Caudate_R
+    - Putamen_L
+    - Putamen_R
+  coordinate_space: MNI152
+  sources:
+  - citation: Rolls ET, Huang CC, Lin CP, Feng J, Joliot M. Automated anatomical labelling atlas 3. NeuroImage. 2020;206:116189.
+    doi: 10.1016/j.neuroimage.2019.116189
+    year: 2020
+    verified: false
+  notes: Atlas correspondence approximate. Subcortical; no Brodmann or HCP-MMP cortical area.
+- id: BR.MT
+  en: Middle temporal area (hMT+/V5)
+  zh: 颞中区运动视觉区
+  definition: Motion-sensitive visual area complex (hMT+/V5) at the occipitotemporal junction.
+  parent: BR.visual_cortex
+  atlas_refs:
+    brodmann:
+    - BA19
+    - BA37
+    aal3:
+    - Occipital_Mid_L
+    - Occipital_Mid_R
+    - Temporal_Mid_L
+    - Temporal_Mid_R
+    - Occipital_Inf_L
+    - Occipital_Inf_R
+    hcp_mmp1:
+    - MT
+    - MST
+    - FST
+    - V4t
+  coordinate_space: MNI152
+  sources:
+  - citation: Rolls ET, Huang CC, Lin CP, Feng J, Joliot M. Automated anatomical labelling atlas 3. NeuroImage. 2020;206:116189.
+    doi: 10.1016/j.neuroimage.2019.116189
+    year: 2020
+    verified: false
+  - citation: Glasser MF, Coalson TS, Robinson EC, et al. A multi-modal parcellation of human cerebral cortex. Nature. 2016;536(7615):171-178.
+    doi: 10.1038/nature18933
+    year: 2016
+    verified: false
+  notes: Atlas correspondence approximate. HCP-MMP MT/MST/FST/V4t form the hMT+ complex (high); AAL3 labels approximate (low).
+- id: BR.SII
+  en: Secondary somatosensory cortex
+  zh: 次级体感皮层
+  definition: Secondary somatosensory cortex in the parietal operculum, involved in tactile and pain processing.
+  parent: BR.parietal_cortex
+  atlas_refs:
+    brodmann:
+    - BA40
+    - BA43
+    aal3:
+    - Rolandic_Oper_L
+    - Rolandic_Oper_R
+    - SupraMarginal_L
+    - SupraMarginal_R
+    hcp_mmp1:
+    - OP1
+    - OP4
+    - OP2-3
+  coordinate_space: MNI152
+  sources:
+  - citation: Rolls ET, Huang CC, Lin CP, Feng J, Joliot M. Automated anatomical labelling atlas 3. NeuroImage. 2020;206:116189.
+    doi: 10.1016/j.neuroimage.2019.116189
+    year: 2020
+    verified: false
+  - citation: Glasser MF, Coalson TS, Robinson EC, et al. A multi-modal parcellation of human cerebral cortex. Nature. 2016;536(7615):171-178.
+    doi: 10.1038/nature18933
+    year: 2016
+    verified: false
+  notes: Atlas correspondence approximate. SII mainly OP1/OP4; Rolandic_Oper also contains non-SII cortex.
+- id: BR.OFC_lateral
+  en: Lateral orbitofrontal cortex
+  zh: 外侧眶额皮层
+  definition: Lateral orbitofrontal cortex on the orbital surface of the frontal lobe, involved in reward valuation and reversal
+    learning.
+  parent: BR.frontal_cortex
+  atlas_refs:
+    brodmann:
+    - BA47
+    - BA11
+    aal3:
+    - OFClat_L
+    - OFClat_R
+    - Frontal_Inf_Orb_2_L
+    - Frontal_Inf_Orb_2_R
+    hcp_mmp1:
+    - 47m
+    - 11l
+    - 13l
+    - 47s
+  coordinate_space: MNI152
+  sources:
+  - citation: Rolls ET, Huang CC, Lin CP, Feng J, Joliot M. Automated anatomical labelling atlas 3. NeuroImage. 2020;206:116189.
+    doi: 10.1016/j.neuroimage.2019.116189
+    year: 2020
+    verified: false
+  - citation: Glasser MF, Coalson TS, Robinson EC, et al. A multi-modal parcellation of human cerebral cortex. Nature. 2016;536(7615):171-178.
+    doi: 10.1038/nature18933
+    year: 2016
+    verified: false
+  notes: Atlas correspondence approximate. BA47/12 lateral orbital; Frontal_Inf_Orb_2 also contains part of ventral IFG.
