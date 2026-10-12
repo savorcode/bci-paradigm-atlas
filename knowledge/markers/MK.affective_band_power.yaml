@@ -1,4 +1,4 @@
-schema_version: "0.2"
+schema_version: '0.2'
 id: MK.affective_band_power
 name:
   en: Affect-related band-power pattern
@@ -14,8 +14,54 @@ description:
     by films, music or recall. In EEG emotion recognition it is usually measured as band power or differential entropy per
     channel and band.
   zh: 由影片、音乐或回忆诱发的不同情绪状态之间，在 δ 至 γ 各频段及各电极上表现出不同的频谱功率模式。在脑电情绪识别中，通常以各通道、各频段的功率或微分熵度量。
+generators:
+- region: BR.frontal_cortex
+  evidence: C
+  sources:
+  - citation: Zheng WL, Lu BL. Investigating critical frequency bands and channels for EEG-based emotion recognition with
+      deep neural networks. IEEE Trans Auton Ment Dev. 2015;7(3):162-175.
+    doi: 10.1109/TAMD.2015.2431497
+    year: 2015
+    verified: false
+  - citation: Zheng WL, Zhu JY, Lu BL. Identifying stable patterns over time for emotion recognition from EEG. IEEE Trans
+      Affect Comput. 2019;10(3):417-429.
+    doi: 10.1109/TAFFC.2017.2712143
+    year: 2019
+    verified: false
+  note: 'method: scalp topography; critical channels for emotion classification lie over lateral temporal and prefrontal sites
+    (Zheng & Lu 2015; Zheng et al. 2019); scalp channel weights only, no source localization, so graded C. Lateral temporal
+    sites have no README region (BR.STG would over-specify a scalp pattern).'
+indexes:
+- construct: CN.emotional_state
+  evidence: B
+  relation: multi-band power / differential entropy (notably beta and gamma over lateral temporal sites) discriminates induced
+    positive, neutral and negative states and valence/arousal ratings
+  sources:
+  - citation: 'Koelstra S, Muhl C, Soleymani M, et al. DEAP: a database for emotion analysis using physiological signals.
+      IEEE Trans Affect Comput. 2012;3(1):18-31.'
+    doi: 10.1109/T-AFFC.2011.15
+    year: 2012
+    verified: false
+  - citation: Zheng WL, Lu BL. Investigating critical frequency bands and channels for EEG-based emotion recognition with
+      deep neural networks. IEEE Trans Auton Ment Dev. 2015;7(3):162-175.
+    doi: 10.1109/TAMD.2015.2431497
+    year: 2015
+    verified: false
+  - citation: Zheng WL, Zhu JY, Lu BL. Identifying stable patterns over time for emotion recognition from EEG. IEEE Trans
+      Affect Comput. 2019;10(3):417-429.
+    doi: 10.1109/TAFFC.2017.2712143
+    year: 2019
+    verified: false
+  - citation: 'Alarcão SM, Fonseca MJ. Emotions recognition using EEG signals: a survey. IEEE Trans Affect Comput. 2019;10(3):374-393.'
+    doi: 10.1109/TAFFC.2017.2714671
+    year: 2019
+    verified: false
+  note: Independent datasets (DEAP, SEED) and a narrative survey; no meta-analysis, and features are dataset-specific with
+    modest cross-subject transfer, so B. Zheng 2015 and 2019 come from the same group.
 notes: 'Covers multi-band patterns (registry note: e.g. temporal beta/gamma); kept distinct from MK.frontal_alpha_asymmetry.
-  No signature: the pattern is dataset-specific.'
+  No signature: the pattern is dataset-specific. Sprint 4 (2026-10-12, curator_d): generators and indexes curated; every DOI
+  checked against its Crossref or OpenAlex record (see curation/work/sprint4/markers_D/); verified: false pending full-text
+  check.'
 status: draft
 contributors:
 - maintainer

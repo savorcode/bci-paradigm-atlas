@@ -1,0 +1,5 @@
+id_proposed,en,zh,parent_or_type,reason,example_marker
+BR.OFA,occipital face area / inferior occipital gyrus,枕叶面孔区（枕下回）,region,N170 intracranial source in right IOG (Jacques 2019); mapped to BR.LOC as closest id,MK.N170
+CN.perceptual_learning,perceptual learning,知觉学习,CN.perception,auditory P2 enhancement after discrimination training (Tremblay 2001); mapped to CN.phonological_processing,MK.P2_auditory
+CN.perceptual_discrimination,perceptual discrimination,知觉辨别,CN.perception,visual N1 indexes discrimination vs detection (Vogel & Luck 2000); mapped to CN.early_visual,MK.N1_visual
+CN.auditory_selective_attention,auditory selective attention,听觉选择性注意,CN.attention,auditory N1 attention (Nd) effect is channel/ear selection not visual-spatial; mapped to CN.spatial_attention,MK.N1_auditory

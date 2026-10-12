@@ -1,0 +1,70 @@
+marker,link_type,target,evidence,method,doi,record_api,note
+MK.P3b,generator,BR.TPJ,B,lesion,10.1016/j.clinph.2007.04.019,https://api.crossref.org/works/10.1016/j.clinph.2007.04.019,
+MK.P3b,generator,BR.TPJ,B,lesion,10.1177/1073858405280524,https://api.crossref.org/works/10.1177/1073858405280524,
+MK.P3b,generator,BR.TPJ,B,lesion,10.1002/hbm.22326,https://api.crossref.org/works/10.1002/hbm.22326,
+MK.P3b,generator,BR.IPS,B,EEG-fMRI,10.1177/1073858405280524,https://api.crossref.org/works/10.1177/1073858405280524,
+MK.P3b,generator,BR.IPS,B,EEG-fMRI,10.1002/hbm.22326,https://api.crossref.org/works/10.1002/hbm.22326,
+MK.P3b,index,CN.context_updating,B,,10.1017/S0140525X00058027,https://api.crossref.org/works/10.1017/S0140525X00058027,"amplitude increases with the need to update the stimulus context (rare, task-relevant events)"
+MK.P3b,index,CN.context_updating,B,,10.1016/j.clinph.2007.04.019,https://api.crossref.org/works/10.1016/j.clinph.2007.04.019,"amplitude increases with the need to update the stimulus context (rare, task-relevant events)"
+MK.P3b,index,CN.attention_allocation,B,,10.1017/S0048577201990559,https://api.crossref.org/works/10.1017/S0048577201990559,amplitude decreases when attentional resources are diverted to a concurrent task
+MK.P3b,index,CN.attention_allocation,B,,10.1016/j.clinph.2007.04.019,https://api.crossref.org/works/10.1016/j.clinph.2007.04.019,amplitude decreases when attentional resources are diverted to a concurrent task
+MK.P3b,index,CN.evidence_accumulation,C,,10.1038/nn.3248,https://api.crossref.org/works/10.1038/nn.3248,pre-response build-up rate tracks sensory evidence strength and peaks at decision commitment
+MK.P3b,index,CN.evidence_accumulation,C,,10.1111/ejn.12936,https://api.crossref.org/works/10.1111/ejn.12936,pre-response build-up rate tracks sensory evidence strength and peaks at decision commitment
+MK.P3b,index,CN.intent_selection,C,,10.1016/0013-4694(88)90149-6,https://api.crossref.org/works/10.1016/0013-4694(88)90149-6,"amplitude is larger for the attended (intended) item in a P300 speller matrix, enabling selection decoding"
+MK.N1_auditory,generator,BR.STG,B,intracranial,10.1016/S1388-2457(01)00636-8,https://api.crossref.org/works/10.1016/S1388-2457(01)00636-8,
+MK.N1_auditory,generator,BR.STG,B,intracranial,10.1111/j.1469-8986.1987.tb00311.x,https://api.crossref.org/works/10.1111/j.1469-8986.1987.tb00311.x,
+MK.N1_auditory,generator,BR.A1,C,intracranial,10.1016/S1388-2457(01)00636-8,https://api.crossref.org/works/10.1016/S1388-2457(01)00636-8,
+MK.N1_auditory,index,CN.early_auditory,B,,10.1111/j.1469-8986.1987.tb00311.x,https://api.crossref.org/works/10.1111/j.1469-8986.1987.tb00311.x,amplitude increases with stimulus onset intensity and inter-stimulus interval (obligatory sensory response)
+MK.N1_auditory,index,CN.early_auditory,B,,10.1016/S1388-2457(01)00636-8,https://api.crossref.org/works/10.1016/S1388-2457(01)00636-8,amplitude increases with stimulus onset intensity and inter-stimulus interval (obligatory sensory response)
+MK.N1_auditory,index,CN.spatial_attention,B,,10.1126/science.182.4108.177,https://api.crossref.org/works/10.1126/science.182.4108.177,amplitude increases for sounds in the attended ear/channel
+MK.N1_auditory,index,CN.spatial_attention,B,,10.1111/j.1469-8986.1987.tb00311.x,https://api.crossref.org/works/10.1111/j.1469-8986.1987.tb00311.x,amplitude increases for sounds in the attended ear/channel
+MK.P2_auditory,generator,BR.STG,B,MEG/EEG source,10.1016/j.clinph.2003.11.021,https://api.crossref.org/works/10.1016/j.clinph.2003.11.021,
+MK.P2_auditory,generator,BR.STG,B,MEG/EEG source,10.1097/00003446-200104000-00001,https://api.openalex.org/works/doi:10.1097/00003446-200104000-00001,
+MK.P2_auditory,index,CN.early_auditory,B,,10.1016/j.clinph.2003.11.021,https://api.crossref.org/works/10.1016/j.clinph.2003.11.021,"amplitude varies with stimulus properties, age and arousal state independently of N1"
+MK.P2_auditory,index,CN.phonological_processing,C,,10.1097/00003446-200104000-00001,https://api.openalex.org/works/doi:10.1097/00003446-200104000-00001,amplitude increases after speech-sound discrimination training
+MK.P1_visual,generator,BR.extrastriate,B,MEG/EEG source,10.1002/hbm.10010,https://api.openalex.org/works/doi:10.1002/hbm.10010,
+MK.P1_visual,generator,BR.extrastriate,B,MEG/EEG source,10.1073/pnas.95.3.781,https://api.crossref.org/works/10.1073/pnas.95.3.781,
+MK.P1_visual,index,CN.spatial_attention,B,,10.1073/pnas.95.3.781,https://api.crossref.org/works/10.1073/pnas.95.3.781,amplitude increases for stimuli at attended versus unattended locations
+MK.P1_visual,index,CN.spatial_attention,B,,10.1002/hbm.10010,https://api.openalex.org/works/doi:10.1002/hbm.10010,amplitude increases for stimuli at attended versus unattended locations
+MK.P1_visual,index,CN.early_visual,C,,10.1002/hbm.10010,https://api.openalex.org/works/doi:10.1002/hbm.10010,amplitude and latency depend on stimulus contrast and visual-field position (obligatory sensory response)
+MK.N1_visual,generator,BR.extrastriate,C,MEG/EEG source,10.1002/hbm.10010,https://api.openalex.org/works/doi:10.1002/hbm.10010,
+MK.N1_visual,generator,BR.parietal_cortex,C,MEG/EEG source,10.1002/hbm.10010,https://api.openalex.org/works/doi:10.1002/hbm.10010,
+MK.N1_visual,index,CN.spatial_attention,B,,10.1073/pnas.95.3.781,https://api.crossref.org/works/10.1073/pnas.95.3.781,amplitude increases for stimuli at attended locations
+MK.N1_visual,index,CN.early_visual,C,,10.1111/1469-8986.3720190,https://api.openalex.org/works/doi:10.1111/1469-8986.3720190,amplitude is larger when a discrimination (not mere detection) is required at the attended location
+MK.N170,generator,BR.LOC,B,intracranial,10.1002/hbm.24455,https://api.crossref.org/works/10.1002/hbm.24455,
+MK.N170,generator,BR.LOC,B,intracranial,10.1016/j.neuroimage.2007.10.011,https://api.crossref.org/works/10.1016/j.neuroimage.2007.10.011,
+MK.N170,generator,BR.FFA,B,intracranial,10.1093/cercor/9.5.415,https://api.openalex.org/works/doi:10.1093/cercor/9.5.415,
+MK.N170,generator,BR.FFA,B,intracranial,10.1002/hbm.24455,https://api.crossref.org/works/10.1002/hbm.24455,
+MK.N170,index,CN.face_perception,A,,10.1162/jocn.1996.8.6.551,https://api.crossref.org/works/10.1162/jocn.1996.8.6.551,amplitude is larger for faces than for other object categories
+MK.N170,index,CN.face_perception,A,,10.1016/j.neuroimage.2007.10.011,https://api.crossref.org/works/10.1016/j.neuroimage.2007.10.011,amplitude is larger for faces than for other object categories
+MK.N170,index,CN.face_perception,A,,10.1093/cercor/9.5.415,https://api.openalex.org/works/doi:10.1093/cercor/9.5.415,amplitude is larger for faces than for other object categories
+MK.N170,index,CN.face_perception,A,,10.1002/hbm.24455,https://api.crossref.org/works/10.1002/hbm.24455,amplitude is larger for faces than for other object categories
+MK.N170,index,CN.emotional_salience,A,,10.1016/j.neubiorev.2015.06.002,https://api.openalex.org/works/doi:10.1016/j.neubiorev.2015.06.002,amplitude is larger for emotional than for neutral facial expressions (small-to-moderate effect)
+MK.MMN,generator,BR.STG,B,MEG/EEG source,10.1016/j.clinph.2008.11.029,https://api.crossref.org/works/10.1016/j.clinph.2008.11.029,
+MK.MMN,generator,BR.STG,B,MEG/EEG source,10.1016/j.clinph.2007.04.026,https://api.openalex.org/works/doi:10.1016/j.clinph.2007.04.026,
+MK.MMN,generator,BR.IFG,B,fMRI localization,10.1027/0269-8803.21.34.188,https://api.crossref.org/works/10.1027/0269-8803.21.34.188,
+MK.MMN,generator,BR.IFG,B,fMRI localization,10.1016/j.clinph.2008.11.029,https://api.crossref.org/works/10.1016/j.clinph.2008.11.029,
+MK.MMN,index,CN.auditory_change,B,,10.1016/j.clinph.2007.04.026,https://api.openalex.org/works/doi:10.1016/j.clinph.2007.04.026,amplitude increases and latency decreases with deviance magnitude from the standard
+MK.MMN,index,CN.auditory_change,B,,10.1016/j.clinph.2008.11.029,https://api.crossref.org/works/10.1016/j.clinph.2008.11.029,amplitude increases and latency decreases with deviance magnitude from the standard
+MK.MMN,index,CN.prediction_violation,B,,10.1016/j.clinph.2008.11.029,https://api.crossref.org/works/10.1016/j.clinph.2008.11.029,"amplitude reflects violation of a predicted regularity (prediction error), including abstract and omission rules"
+MK.MMN,index,CN.prediction_violation,B,,10.1073/pnas.1117807108,https://api.openalex.org/works/doi:10.1073/pnas.1117807108,"amplitude reflects violation of a predicted regularity (prediction error), including abstract and omission rules"
+MK.SSVEP,generator,BR.V1,B,MEG/EEG source,10.1167/15.6.4,https://api.openalex.org/works/doi:10.1167/15.6.4,
+MK.SSVEP,generator,BR.extrastriate,B,MEG/EEG source,10.1167/15.6.4,https://api.openalex.org/works/doi:10.1167/15.6.4,
+MK.SSVEP,index,CN.sustained_visual_attention,B,,10.1073/pnas.93.10.4770,https://api.openalex.org/works/doi:10.1073/pnas.93.10.4770,amplitude increases for the attended stimulus
+MK.SSVEP,index,CN.sustained_visual_attention,B,,10.1167/15.6.4,https://api.openalex.org/works/doi:10.1167/15.6.4,amplitude increases for the attended stimulus
+MK.SSVEP,index,CN.neural_entrainment,B,,10.1016/0013-4694(66)90088-5,https://api.openalex.org/works/doi:10.1016/0013-4694(66)90088-5,"response follows the stimulation frequency and its harmonics, with resonance peaks near ~10, 20 and 40 Hz"
+MK.SSVEP,index,CN.neural_entrainment,B,,10.1007/s002210100682,https://api.crossref.org/works/10.1007/s002210100682,"response follows the stimulation frequency and its harmonics, with resonance peaks near ~10, 20 and 40 Hz"
+MK.SSVEP,index,CN.neural_entrainment,B,,10.1167/15.6.4,https://api.openalex.org/works/doi:10.1167/15.6.4,"response follows the stimulation frequency and its harmonics, with resonance peaks near ~10, 20 and 40 Hz"
+MK.SSVEP,index,CN.intent_selection,C,,10.1073/pnas.1508080112,https://api.openalex.org/works/doi:10.1073/pnas.1508080112,frequency/phase of the gazed-at target can be decoded to select among many targets
+MK.CDA,generator,BR.IPS,C,MEG/EEG source,10.3389/fnhum.2011.00018,https://api.crossref.org/works/10.3389/fnhum.2011.00018,
+MK.CDA,index,CN.working_memory,B,,10.1038/nature02447,https://api.crossref.org/works/10.1038/nature02447,"amplitude increases with the number of items held, reaching an asymptote at individual capacity"
+MK.CDA,index,CN.working_memory,B,,10.1016/j.neubiorev.2016.01.003,https://api.openalex.org/works/doi:10.1016/j.neubiorev.2016.01.003,"amplitude increases with the number of items held, reaching an asymptote at individual capacity"
+MK.CDA,index,CN.distractor_suppression,C,,10.1038/nature04171,https://api.crossref.org/works/10.1038/nature04171,"low-capacity individuals show larger amplitude when distractors are present, indicating unnecessary storage of irrelevant items"
+MK.alpha_posterior,generator,BR.visual_cortex,B,intracranial,10.1073/pnas.1913092116,https://api.openalex.org/works/doi:10.1073/pnas.1913092116,
+MK.alpha_posterior,generator,BR.visual_cortex,B,intracranial,10.1097/00001756-200212200-00022,https://api.openalex.org/works/doi:10.1097/00001756-200212200-00022,
+MK.alpha_posterior,generator,BR.thalamus,C,EEG-fMRI,10.1097/00001756-200212200-00022,https://api.openalex.org/works/doi:10.1097/00001756-200212200-00022,
+MK.alpha_posterior,index,CN.cortical_idling,B,,10.1016/S0167-8760(96)00066-9,https://api.crossref.org/works/10.1016/S0167-8760(96)00066-9,"power increases when visual cortex is not engaged (eyes closed, attention elsewhere)"
+MK.alpha_posterior,index,CN.cortical_idling,B,,10.1016/j.brainresrev.2006.06.003,https://api.openalex.org/works/doi:10.1016/j.brainresrev.2006.06.003,"power increases when visual cortex is not engaged (eyes closed, attention elsewhere)"
+MK.alpha_posterior,index,CN.distractor_suppression,B,,10.3389/fnhum.2010.00186,https://api.openalex.org/works/doi:10.3389/fnhum.2010.00186,power increases over regions processing to-be-ignored information (gating by inhibition)
+MK.alpha_posterior,index,CN.distractor_suppression,B,,10.1016/j.brainresrev.2006.06.003,https://api.openalex.org/works/doi:10.1016/j.brainresrev.2006.06.003,power increases over regions processing to-be-ignored information (gating by inhibition)
+MK.alpha_posterior,index,CN.working_memory,C,,10.1093/cercor/12.8.877,https://api.openalex.org/works/doi:10.1093/cercor/12.8.877,power increases with memory load during retention

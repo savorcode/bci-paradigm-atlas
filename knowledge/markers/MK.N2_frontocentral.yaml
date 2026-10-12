@@ -1,4 +1,4 @@
-schema_version: "0.2"
+schema_version: '0.2'
 id: MK.N2_frontocentral
 name:
   en: Fronto-central N2 (conflict/inhibition)
@@ -20,8 +20,81 @@ description:
   en: Stimulus-locked negative component enhanced on trials requiring response conflict resolution or inhibition, such as
     incongruent flanker or Simon trials and NoGo trials. Distinguished from posterior N2 components related to visual attention.
   zh: 在需要解决反应冲突或进行抑制的试次（如 Flanker 或 Simon 的不一致试次、NoGo 试次）上增强的刺激锁时负成分。与视觉注意相关的后部 N2 成分相区别。
+generators:
+- region: BR.dACC
+  evidence: B
+  sources:
+  - citation: van Veen V, Carter CS. The timing of action-monitoring processes in the anterior cingulate cortex. J Cogn Neurosci.
+      2002;14(4):593-602.
+    doi: 10.1162/08989290260045837
+    year: 2002
+    verified: false
+  - citation: 'Nieuwenhuis S, Yeung N, van den Wildenberg W, et al. Electrophysiological correlates of anterior cingulate
+      function in a go/no-go task: effects of response conflict and trial type frequency. Cogn Affect Behav Neurosci. 2003;3(1):17-26.'
+    doi: 10.3758/CABN.3.1.17
+    year: 2003
+    verified: false
+  note: 'method: MEG/EEG source; Source modelling localizes the conflict / NoGo N2 to caudal ACC in independent labs (van
+    Veen & Carter 2002; Nieuwenhuis 2003).'
+- region: BR.OFC_lateral
+  evidence: C
+  sources:
+  - citation: Bokura H, Yamaguchi S, Kobayashi S. Electrophysiological correlates for response inhibition in a Go/NoGo task.
+      Clin Neurophysiol. 2001;112(12):2224-2232.
+    doi: 10.1016/S1388-2457(01)00691-5
+    year: 2001
+    verified: false
+  note: 'method: MEG/EEG source; LORETA source of the NoGo-N2 in right lateral orbitofrontal (and cingulate) cortex (Bokura
+    2001); single study.'
+indexes:
+- construct: CN.conflict_monitoring
+  evidence: B
+  relation: amplitude increases with response conflict (incongruent, low-frequency NoGo trials)
+  sources:
+  - citation: 'Nieuwenhuis S, Yeung N, van den Wildenberg W, et al. Electrophysiological correlates of anterior cingulate
+      function in a go/no-go task: effects of response conflict and trial type frequency. Cogn Affect Behav Neurosci. 2003;3(1):17-26.'
+    doi: 10.3758/CABN.3.1.17
+    year: 2003
+    verified: false
+  - citation: van Veen V, Carter CS. The timing of action-monitoring processes in the anterior cingulate cortex. J Cogn Neurosci.
+      2002;14(4):593-602.
+    doi: 10.1162/08989290260045837
+    year: 2002
+    verified: false
+  - citation: 'Yeung N, Botvinick MM, Cohen JD. The neural basis of error detection: conflict monitoring and the error-related
+      negativity. Psychol Rev. 2004;111(4):931-959.'
+    doi: 10.1037/0033-295X.111.4.931
+    year: 2004
+    verified: false
+  - citation: 'Folstein JR, Van Petten C. Influence of cognitive control and mismatch on the N2 component of the ERP: a review.
+      Psychophysiology. 2008;45(1):152-170.'
+    doi: 10.1111/j.1469-8986.2007.00602.x
+    year: 2008
+    verified: false
+- construct: CN.response_inhibition
+  evidence: B
+  relation: amplitude larger on NoGo than Go trials
+  sources:
+  - citation: Falkenstein M, Hoormann J, Hohnsbein J. ERP components in Go/Nogo tasks and their relation to inhibition. Acta
+      Psychol (Amst). 1999;101(2-3):267-291.
+    doi: 10.1016/S0001-6918(99)00008-6
+    year: 1999
+    verified: false
+  - citation: Bokura H, Yamaguchi S, Kobayashi S. Electrophysiological correlates for response inhibition in a Go/NoGo task.
+      Clin Neurophysiol. 2001;112(12):2224-2232.
+    doi: 10.1016/S1388-2457(01)00691-5
+    year: 2001
+    verified: false
+  - citation: 'Folstein JR, Van Petten C. Influence of cognitive control and mismatch on the N2 component of the ERP: a review.
+      Psychophysiology. 2008;45(1):152-170.'
+    doi: 10.1111/j.1469-8986.2007.00602.x
+    year: 2008
+    verified: false
+  note: Inhibition vs. conflict interpretation is debated (Nieuwenhuis 2003; Folstein & Van Petten 2008).
 notes: 'Signature values are textbook-level approximations and await checking against sources (pass 2). Generators and indexes
-  not yet written. Used by (registry): CTL-FLK-001, CTL-GNG-001, CTL-SIM-001, MEM-TNT-001, EMO-EST-001, SOC-WIT-001.'
+  not yet written. Used by (registry): CTL-FLK-001, CTL-GNG-001, CTL-SIM-001, MEM-TNT-001, EMO-EST-001, SOC-WIT-001. Sprint
+  4 (2026-10-12, curator_c): generators and indexes curated; every DOI checked against its Crossref or OpenAlex record (see
+  curation/work/sprint4/markers_C/); verified: false pending full-text check.'
 status: draft
 contributors:
 - maintainer

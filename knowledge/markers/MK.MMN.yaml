@@ -1,4 +1,4 @@
-schema_version: "0.2"
+schema_version: '0.2'
 id: MK.MMN
 name:
   en: Mismatch negativity
@@ -19,8 +19,68 @@ description:
   en: Fronto-central negativity, maximal in the deviant-minus-standard difference wave, elicited by sounds that violate a
     regularity established by preceding sounds, even without attention.
   zh: 由违反先前声音所建立规律的声音诱发的额中央负波，在偏差减标准差异波中最明显，无需注意也会出现。
-notes: First-pass skeleton by package A (2026-10-03). No generators/indexes yet. Signature values are textbook-level approximations
-  and await source checking.
+generators:
+- region: BR.STG
+  evidence: B
+  sources:
+  - citation: 'Garrido MI, Kilner JM, Stephan KE, et al. The mismatch negativity: a review of underlying mechanisms. Clin
+      Neurophysiol. 2009;120(3):453-463.'
+    doi: 10.1016/j.clinph.2008.11.029
+    year: 2009
+    verified: false
+  - citation: 'Näätänen R, Paavilainen P, Rinne T, et al. The mismatch negativity (MMN) in basic research of central auditory
+      processing: a review. Clin Neurophysiol. 2007;118(12):2544-2590.'
+    doi: 10.1016/j.clinph.2007.04.026
+    year: 2007
+    verified: false
+  note: 'method: MEG/EEG source; bilateral supratemporal (auditory cortex/STG) sources consistently found with MEG/EEG source
+    modelling, intracranial recordings and fMRI (reviewed by Näätänen 2007, Garrido 2009).'
+- region: BR.IFG
+  evidence: B
+  sources:
+  - citation: Deouell LY. The frontal generator of the mismatch negativity revisited. J Psychophysiol. 2007;21(3-4):188-203.
+    doi: 10.1027/0269-8803.21.34.188
+    year: 2007
+    verified: false
+  - citation: 'Garrido MI, Kilner JM, Stephan KE, et al. The mismatch negativity: a review of underlying mechanisms. Clin
+      Neurophysiol. 2009;120(3):453-463.'
+    doi: 10.1016/j.clinph.2008.11.029
+    year: 2009
+    verified: false
+  note: 'method: fMRI localization; a frontal (inferior frontal) MMN generator supported by fMRI, intracranial, lesion and
+    source-modelling studies reviewed by Deouell 2007; included in DCM models (Garrido 2009).'
+indexes:
+- construct: CN.auditory_change
+  evidence: B
+  relation: amplitude increases and latency decreases with deviance magnitude from the standard
+  sources:
+  - citation: 'Näätänen R, Paavilainen P, Rinne T, et al. The mismatch negativity (MMN) in basic research of central auditory
+      processing: a review. Clin Neurophysiol. 2007;118(12):2544-2590.'
+    doi: 10.1016/j.clinph.2007.04.026
+    year: 2007
+    verified: false
+  - citation: 'Garrido MI, Kilner JM, Stephan KE, et al. The mismatch negativity: a review of underlying mechanisms. Clin
+      Neurophysiol. 2009;120(3):453-463.'
+    doi: 10.1016/j.clinph.2008.11.029
+    year: 2009
+    verified: false
+- construct: CN.prediction_violation
+  evidence: B
+  relation: amplitude reflects violation of a predicted regularity (prediction error), including abstract and omission rules
+  sources:
+  - citation: 'Garrido MI, Kilner JM, Stephan KE, et al. The mismatch negativity: a review of underlying mechanisms. Clin
+      Neurophysiol. 2009;120(3):453-463.'
+    doi: 10.1016/j.clinph.2008.11.029
+    year: 2009
+    verified: false
+  - citation: Wacongne C, Labyt E, van Wassenhove V, et al. Evidence for a hierarchy of predictions and prediction errors
+      in human cortex. Proc Natl Acad Sci U S A. 2011;108(51):20754-20759.
+    doi: 10.1073/pnas.1117807108
+    year: 2011
+    verified: false
+notes: 'First-pass skeleton by package A (2026-10-03). Signature values are textbook-level approximations and await source
+  checking. Sprint 4 (2026-10-12, curator_a): generators and indexes curated; every DOI checked against its Crossref or OpenAlex
+  record (see curation/work/sprint4/markers_A/); verified: false pending full-text check.'
 status: draft
 contributors:
 - curator_a

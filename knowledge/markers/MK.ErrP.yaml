@@ -1,4 +1,4 @@
-schema_version: "0.2"
+schema_version: '0.2'
 id: MK.ErrP
 name:
   en: Interaction error-related potential
@@ -21,8 +21,61 @@ description:
     or expected, recorded time-locked to the erroneous feedback. It is the error signal most commonly decoded on single trials
     in BCI research.
   zh: 当界面或机器产生与用户意图或预期不符的结果时诱发的事件相关电位，以错误反馈为锁时点记录。它是脑机接口研究中最常在单试次上解码的错误信号。
+generators:
+- region: BR.dACC
+  evidence: C
+  sources:
+  - citation: Ferrez PW, Millán JdR. Error-related EEG potentials generated during simulated brain-computer interaction. IEEE
+      Trans Biomed Eng. 2008;55(3):923-929.
+    doi: 10.1109/TBME.2007.908083
+    year: 2008
+    verified: false
+  note: 'method: MEG/EEG source; sLORETA source of the interaction ErrP in anterior cingulate cortex (Ferrez & Millán 2008);
+    single study.'
+indexes:
+- construct: CN.machine_error_perception
+  evidence: B
+  relation: elicited when the interface executes an action different from the user's intention; single-trial decodable
+  sources:
+  - citation: Ferrez PW, Millán JdR. Error-related EEG potentials generated during simulated brain-computer interaction. IEEE
+      Trans Biomed Eng. 2008;55(3):923-929.
+    doi: 10.1109/TBME.2007.908083
+    year: 2008
+    verified: false
+  - citation: Chavarriaga R, Millán JdR. Learning from EEG error-related potentials in noninvasive brain-computer interfaces.
+      IEEE Trans Neural Syst Rehabil Eng. 2010;18(4):381-388.
+    doi: 10.1109/TNSRE.2010.2053387
+    year: 2010
+    verified: false
+  - citation: 'Spüler M, Niethammer C. Error-related potentials during continuous feedback: using EEG to detect errors of
+      different type and severity. Front Hum Neurosci. 2015;9:155.'
+    doi: 10.3389/fnhum.2015.00155
+    year: 2015
+    verified: false
+  - citation: 'Chavarriaga R, Sobolewski A, Millán JdR. Errare machinale est: the use of error-related potentials in brain-machine
+      interfaces. Front Neurosci. 2014;8:208.'
+    doi: 10.3389/fnins.2014.00208
+    year: 2014
+    verified: false
+  note: Independent groups (Millán lab; Spüler & Niethammer) and BCI review.
+- construct: CN.error_monitoring
+  evidence: B
+  relation: amplitude and morphology vary with error type and severity of the observed outcome
+  sources:
+  - citation: 'Spüler M, Niethammer C. Error-related potentials during continuous feedback: using EEG to detect errors of
+      different type and severity. Front Hum Neurosci. 2015;9:155.'
+    doi: 10.3389/fnhum.2015.00155
+    year: 2015
+    verified: false
+  - citation: 'Chavarriaga R, Sobolewski A, Millán JdR. Errare machinale est: the use of error-related potentials in brain-machine
+      interfaces. Front Neurosci. 2014;8:208.'
+    doi: 10.3389/fnins.2014.00208
+    year: 2014
+    verified: false
 notes: 'Signature values are textbook-level approximations and await checking against sources (pass 2). Generators and indexes
-  not yet written. Used by (registry): ERR-ERRP-001, ERR-OBS-001, ERR-ADAPT-001.'
+  not yet written. Used by (registry): ERR-ERRP-001, ERR-OBS-001, ERR-ADAPT-001. Sprint 4 (2026-10-12, curator_c): generators
+  and indexes curated; every DOI checked against its Crossref or OpenAlex record (see curation/work/sprint4/markers_C/); verified:
+  false pending full-text check.'
 status: draft
 contributors:
 - maintainer

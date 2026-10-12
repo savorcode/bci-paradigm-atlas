@@ -1,4 +1,4 @@
-schema_version: "0.2"
+schema_version: '0.2'
 id: MK.N1_visual
 name:
   en: Visual N1
@@ -18,8 +18,48 @@ description:
   en: Negative visual ERP component following the P1 over occipito-parietal and occipito-temporal sites; it is enhanced for
     stimuli at attended locations.
   zh: 紧随 P1 之后、出现于枕顶及枕颞部的视觉 ERP 负成分；被注意位置的刺激使其增强。
-notes: First-pass skeleton by package A (2026-10-03). No generators/indexes yet. Signature values are textbook-level approximations
-  and await source checking.
+generators:
+- region: BR.extrastriate
+  evidence: C
+  sources:
+  - citation: Di Russo F, Martínez A, Sereno MI, et al. Cortical sources of the early components of the visual evoked potential.
+      Hum Brain Mapp. 2002;15(2):95-111.
+    doi: 10.1002/hbm.10010
+    year: 2002
+    verified: false
+  note: 'method: MEG/EEG source; posterior N1 (N150) sources in occipito-temporal/extrastriate cortex (Di Russo 2002, dipole
+    + fMRI co-registration).'
+- region: BR.parietal_cortex
+  evidence: C
+  sources:
+  - citation: Di Russo F, Martínez A, Sereno MI, et al. Cortical sources of the early components of the visual evoked potential.
+      Hum Brain Mapp. 2002;15(2):95-111.
+    doi: 10.1002/hbm.10010
+    year: 2002
+    verified: false
+  note: 'method: MEG/EEG source; an additional parietal source contributes to the posterior N1 (Di Russo 2002).'
+indexes:
+- construct: CN.spatial_attention
+  evidence: B
+  relation: amplitude increases for stimuli at attended locations
+  sources:
+  - citation: Hillyard SA, Anllo-Vento L. Event-related brain potentials in the study of visual selective attention. Proc
+      Natl Acad Sci U S A. 1998;95(3):781-787.
+    doi: 10.1073/pnas.95.3.781
+    year: 1998
+    verified: false
+- construct: CN.early_visual
+  evidence: C
+  relation: amplitude is larger when a discrimination (not mere detection) is required at the attended location
+  sources:
+  - citation: Vogel EK, Luck SJ. The visual N1 component as an index of a discrimination process. Psychophysiology. 2000;37(2):190-203.
+    doi: 10.1111/1469-8986.3720190
+    year: 2000
+    verified: false
+  note: Discrimination process; closest vocabulary construct used, CN.perceptual_discrimination requested.
+notes: 'First-pass skeleton by package A (2026-10-03). Signature values are textbook-level approximations and await source
+  checking. Sprint 4 (2026-10-12, curator_a): generators and indexes curated; every DOI checked against its Crossref or OpenAlex
+  record (see curation/work/sprint4/markers_A/); verified: false pending full-text check.'
 status: draft
 contributors:
 - curator_a

@@ -1,4 +1,4 @@
-schema_version: "0.2"
+schema_version: '0.2'
 id: MK.BOLD_category_selective
 name:
   en: Category-selective ventral visual cortex BOLD (FFA, PPA, etc.)
@@ -17,8 +17,111 @@ description:
     for example faces in the fusiform face area, places in the parahippocampal place area and bodies in the extrastriate body
     area.
   zh: 腹侧及外侧枕颞皮层中对某一视觉类别的响应大于其他类别的 BOLD 信号，例如梭状回面孔区对面孔、海马旁回位置区对场景、纹外身体区对身体的响应。
+generators:
+- region: BR.FFA
+  evidence: A
+  sources:
+  - citation: 'Kanwisher N, McDermott J, Chun MM. The fusiform face area: a module in human extrastriate cortex specialized
+      for face perception. J Neurosci. 1997;17(11):4302-4311.'
+    doi: 10.1523/JNEUROSCI.17-11-04302.1997
+    year: 1997
+    verified: false
+  - citation: Grill-Spector K, Weiner KS. The functional architecture of the ventral temporal cortex and its role in categorization.
+      Nat Rev Neurosci. 2014;15(8):536-548.
+    doi: 10.1038/nrn3747
+    year: 2014
+    verified: false
+  - citation: Parvizi J, Jacques C, Foster BL, et al. Electrical stimulation of human fusiform face-selective regions distorts
+      face perception. J Neurosci. 2012;32(43):14915-14920.
+    doi: 10.1523/JNEUROSCI.2609-12.2012
+    year: 2012
+    verified: false
+  note: 'method: fMRI localization; face-selective fusiform response replicated across labs (review Grill-Spector 2014); intracranial
+    electrical stimulation of the same sites distorts face perception (Parvizi 2012), giving cross-modal confirmation.'
+- region: BR.parahippocampal
+  evidence: B
+  sources:
+  - citation: Epstein R, Kanwisher N. A cortical representation of the local visual environment. Nature. 1998;392(6676):598-601.
+    doi: 10.1038/33402
+    year: 1998
+    verified: false
+  - citation: Epstein RA. Parahippocampal and retrosplenial contributions to human spatial navigation. Trends Cogn Sci. 2008;12(10):388-396.
+    doi: 10.1016/j.tics.2008.07.004
+    year: 2008
+    verified: false
+  note: 'method: fMRI localization; parahippocampal place area (PPA): scene-selective response (Epstein 1998), reviewed in
+    Epstein 2008.'
+- region: BR.LOC
+  evidence: B
+  sources:
+  - citation: Grill-Spector K, Kourtzi Z, Kanwisher N. The lateral occipital complex and its role in object recognition. Vision
+      Res. 2001;41(10-11):1409-1422.
+    doi: 10.1016/S0042-6989(01)00073-6
+    year: 2001
+    verified: false
+  - citation: Grill-Spector K, Weiner KS. The functional architecture of the ventral temporal cortex and its role in categorization.
+      Nat Rev Neurosci. 2014;15(8):536-548.
+    doi: 10.1038/nrn3747
+    year: 2014
+    verified: false
+  note: 'method: fMRI localization; lateral occipital complex: objects > scrambled objects; also hosts body-selective EBA
+    (no separate region id).'
+indexes:
+- construct: CN.face_perception
+  evidence: A
+  relation: FFA BOLD is larger for faces than for other object categories
+  sources:
+  - citation: 'Kanwisher N, McDermott J, Chun MM. The fusiform face area: a module in human extrastriate cortex specialized
+      for face perception. J Neurosci. 1997;17(11):4302-4311.'
+    doi: 10.1523/JNEUROSCI.17-11-04302.1997
+    year: 1997
+    verified: false
+  - citation: Grill-Spector K, Weiner KS. The functional architecture of the ventral temporal cortex and its role in categorization.
+      Nat Rev Neurosci. 2014;15(8):536-548.
+    doi: 10.1038/nrn3747
+    year: 2014
+    verified: false
+  - citation: Parvizi J, Jacques C, Foster BL, et al. Electrical stimulation of human fusiform face-selective regions distorts
+      face perception. J Neurosci. 2012;32(43):14915-14920.
+    doi: 10.1523/JNEUROSCI.2609-12.2012
+    year: 2012
+    verified: false
+- construct: CN.object_recognition
+  evidence: B
+  relation: LOC / ventral temporal BOLD is larger for intact objects than scrambled images and carries category information
+  sources:
+  - citation: Grill-Spector K, Kourtzi Z, Kanwisher N. The lateral occipital complex and its role in object recognition. Vision
+      Res. 2001;41(10-11):1409-1422.
+    doi: 10.1016/S0042-6989(01)00073-6
+    year: 2001
+    verified: false
+  - citation: Grill-Spector K, Weiner KS. The functional architecture of the ventral temporal cortex and its role in categorization.
+      Nat Rev Neurosci. 2014;15(8):536-548.
+    doi: 10.1038/nrn3747
+    year: 2014
+    verified: false
+- construct: CN.visual_imagery
+  evidence: C
+  relation: imagining faces or places activates FFA or PPA respectively
+  sources:
+  - citation: O'Craven KM, Kanwisher N. Mental imagery of faces and places activates corresponding stimulus-specific brain
+      regions. J Cogn Neurosci. 2000;12(6):1013-1023.
+    doi: 10.1162/08989290051137549
+    year: 2000
+    verified: false
+- construct: CN.perceptual_awareness
+  evidence: C
+  relation: FFA/PPA BOLD follows the consciously perceived image during binocular rivalry
+  sources:
+  - citation: Tong F, Nakayama K, Vaughan JT, et al. Binocular rivalry and visual awareness in human extrastriate cortex.
+      Neuron. 1998;21(4):753-759.
+    doi: 10.1016/S0896-6273(00)80592-9
+    year: 1998
+    verified: false
 notes: 'First-pass skeleton by package A (2026-10-03). No generators/indexes yet. D-050 (maintainer, 2026-10-03): PET regional
-  blood-flow (rCBF) effects in the same region are grouped under this marker, as fNIRS HbO is under D-028 item 5.'
+  blood-flow (rCBF) effects in the same region are grouped under this marker, as fNIRS HbO is under D-028 item 5. Sprint 4
+  (2026-10-12, curator_e): generators and indexes curated; every DOI checked against its Crossref or OpenAlex record (see
+  curation/work/sprint4/markers_E/); verified: false pending full-text check.'
 status: draft
 contributors:
 - curator_a

@@ -1,4 +1,4 @@
-schema_version: "0.2"
+schema_version: '0.2'
 id: MK.BOLD_mPFC
 name:
   en: Medial prefrontal BOLD (self/mentalizing)
@@ -14,9 +14,86 @@ description:
   en: BOLD activity in medial prefrontal cortex that is greater when people evaluate information in relation to themselves
     or reason about the mental states of others. It is part of the cortical midline and default-mode systems.
   zh: 当个体评价与自身相关的信息或推理他人心理状态时增强的内侧前额叶 BOLD 活动，属于皮层中线系统和默认模式网络的一部分。
-notes: 'First-pass skeleton (curator_d, 2026-10-03). No signature is given for this hemodynamic marker; generators and indexes
-  will be added in the second pass. D-050 (maintainer, 2026-10-03): PET regional blood-flow (rCBF) effects in the same region
-  are grouped under this marker, as fNIRS HbO is under D-028 item 5.'
+generators:
+- region: BR.dmPFC
+  evidence: A
+  sources:
+  - citation: Denny BT, Kober H, Wager TD, et al. A meta-analysis of functional neuroimaging studies of self- and other judgments
+      reveals a spatial gradient for mentalizing in medial prefrontal cortex. J Cogn Neurosci. 2012;24(8):1742-1752.
+    doi: 10.1162/jocn_a_00233
+    year: 2012
+    verified: false
+  - citation: 'Schurz M, Radua J, Aichhorn M, et al. Fractionating theory of mind: a meta-analysis of functional brain imaging
+      studies. Neurosci Biobehav Rev. 2014;42:9-34.'
+    doi: 10.1016/j.neubiorev.2014.01.009
+    year: 2014
+    verified: false
+  note: 'method: fMRI localization; measured region; meta-analyses place other-related mentalizing in dorsomedial PFC.'
+- region: BR.vmPFC
+  evidence: A
+  sources:
+  - citation: Denny BT, Kober H, Wager TD, et al. A meta-analysis of functional neuroimaging studies of self- and other judgments
+      reveals a spatial gradient for mentalizing in medial prefrontal cortex. J Cogn Neurosci. 2012;24(8):1742-1752.
+    doi: 10.1162/jocn_a_00233
+    year: 2012
+    verified: false
+  - citation: Northoff G, Heinzel A, de Greck M, et al. Self-referential processing in our brain—a meta-analysis of imaging
+      studies on the self. NeuroImage. 2006;31(1):440-457.
+    doi: 10.1016/j.neuroimage.2005.12.002
+    year: 2006
+    verified: false
+  note: 'method: fMRI localization; measured region; meta-analyses place self-referential judgments in ventral mPFC (spatial
+    gradient, Denny et al. 2012).'
+indexes:
+- construct: CN.self_processing
+  evidence: A
+  relation: BOLD increases for self-referential compared with other-referential or semantic judgments
+  sources:
+  - citation: Northoff G, Heinzel A, de Greck M, et al. Self-referential processing in our brain—a meta-analysis of imaging
+      studies on the self. NeuroImage. 2006;31(1):440-457.
+    doi: 10.1016/j.neuroimage.2005.12.002
+    year: 2006
+    verified: false
+  - citation: Denny BT, Kober H, Wager TD, et al. A meta-analysis of functional neuroimaging studies of self- and other judgments
+      reveals a spatial gradient for mentalizing in medial prefrontal cortex. J Cogn Neurosci. 2012;24(8):1742-1752.
+    doi: 10.1162/jocn_a_00233
+    year: 2012
+    verified: false
+- construct: CN.mentalizing
+  evidence: A
+  relation: BOLD increases when reasoning about others' mental states (dorsal > ventral)
+  sources:
+  - citation: 'Schurz M, Radua J, Aichhorn M, et al. Fractionating theory of mind: a meta-analysis of functional brain imaging
+      studies. Neurosci Biobehav Rev. 2014;42:9-34.'
+    doi: 10.1016/j.neubiorev.2014.01.009
+    year: 2014
+    verified: false
+  - citation: Denny BT, Kober H, Wager TD, et al. A meta-analysis of functional neuroimaging studies of self- and other judgments
+      reveals a spatial gradient for mentalizing in medial prefrontal cortex. J Cogn Neurosci. 2012;24(8):1742-1752.
+    doi: 10.1162/jocn_a_00233
+    year: 2012
+    verified: false
+  - citation: 'Van Overwalle F. Social cognition and the brain: a meta-analysis. Hum Brain Mapp. 2009;30(3):829-858.'
+    doi: 10.1002/hbm.20547
+    year: 2009
+    verified: false
+- construct: CN.spontaneous_thought
+  evidence: B
+  relation: BOLD is higher at rest than during externally directed tasks (default-mode deactivation)
+  sources:
+  - citation: Raichle ME, MacLeod AM, Snyder AZ, et al. A default mode of brain function. Proc Natl Acad Sci U S A. 2001;98(2):676-682.
+    doi: 10.1073/pnas.98.2.676
+    year: 2001
+    verified: false
+  - citation: 'Buckner RL, Andrews-Hanna JR, Schacter DL. The brain''s default network: anatomy, function, and relevance to
+      disease. Ann N Y Acad Sci. 2008;1124(1):1-38.'
+    doi: 10.1196/annals.1440.011
+    year: 2008
+    verified: false
+notes: 'First-pass skeleton (curator_d, 2026-10-03). No signature is given for this hemodynamic marker. D-050 (maintainer,
+  2026-10-03): PET regional blood-flow (rCBF) effects in the same region are grouped under this marker, as fNIRS HbO is under
+  D-028 item 5. Sprint 4 (2026-10-12, curator_d): generators and indexes curated; every DOI checked against its Crossref or
+  OpenAlex record (see curation/work/sprint4/markers_D/); verified: false pending full-text check.'
 status: draft
 contributors:
 - maintainer

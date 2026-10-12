@@ -1,4 +1,4 @@
-schema_version: "0.2"
+schema_version: '0.2'
 id: MK.P2_auditory
 name:
   en: Auditory P2 (P200)
@@ -20,8 +20,45 @@ description:
   en: Positive component of the long-latency auditory evoked potential following the N1, with a fronto-central distribution;
     it is modulated by training and by emotional prosody.
   zh: 长潜伏期听觉诱发电位中紧随 N1 的正成分，呈额中央分布；受训练和情绪韵律调制。
-notes: First-pass skeleton by package A (2026-10-03). No generators/indexes yet. Signature values are textbook-level approximations
-  and await source checking.
+generators:
+- region: BR.STG
+  evidence: B
+  sources:
+  - citation: 'Crowley KE, Colrain IM. A review of the evidence for P2 being an independent component process: age, sleep
+      and modality. Clin Neurophysiol. 2004;115(4):732-744.'
+    doi: 10.1016/j.clinph.2003.11.021
+    year: 2004
+    verified: false
+  - citation: 'Tremblay KL, Kraus N, McGee T, et al. Central auditory plasticity: changes in the N1-P2 complex after speech-sound
+      training. Ear Hear. 2001;22(2):79-90.'
+    doi: 10.1097/00003446-200104000-00001
+    year: 2001
+    verified: false
+  note: 'method: MEG/EEG source; P2/P2m sources lie in auditory association cortex of the supratemporal plane, anterior to
+    the N1m source (reviewed in Crowley & Colrain 2004); fronto-central scalp maximum (Tremblay 2001).'
+indexes:
+- construct: CN.early_auditory
+  evidence: B
+  relation: amplitude varies with stimulus properties, age and arousal state independently of N1
+  sources:
+  - citation: 'Crowley KE, Colrain IM. A review of the evidence for P2 being an independent component process: age, sleep
+      and modality. Clin Neurophysiol. 2004;115(4):732-744.'
+    doi: 10.1016/j.clinph.2003.11.021
+    year: 2004
+    verified: false
+- construct: CN.phonological_processing
+  evidence: C
+  relation: amplitude increases after speech-sound discrimination training
+  sources:
+  - citation: 'Tremblay KL, Kraus N, McGee T, et al. Central auditory plasticity: changes in the N1-P2 complex after speech-sound
+      training. Ear Hear. 2001;22(2):79-90.'
+    doi: 10.1097/00003446-200104000-00001
+    year: 2001
+    verified: false
+  note: Training-related plasticity; closest vocabulary construct used, CN.perceptual_learning requested.
+notes: 'First-pass skeleton by package A (2026-10-03). Signature values are textbook-level approximations and await source
+  checking. Sprint 4 (2026-10-12, curator_a): generators and indexes curated; every DOI checked against its Crossref or OpenAlex
+  record (see curation/work/sprint4/markers_A/); verified: false pending full-text check.'
 status: draft
 contributors:
 - curator_a

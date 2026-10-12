@@ -1,11 +1,112 @@
-schema_version: "0.2"
+schema_version: '0.2'
 id: MK.MRCP
-name: {en: Movement-related cortical potential (Bereitschaftspotential), zh: 运动相关皮层电位（准备电位）}
-aliases: [MRCP, BP, Bereitschaftspotential, readiness potential, RP]
+name:
+  en: Movement-related cortical potential (Bereitschaftspotential)
+  zh: 运动相关皮层电位（准备电位）
+aliases:
+- MRCP
+- BP
+- Bereitschaftspotential
+- readiness potential
+- RP
 type: erp_component
-recording_modality: [EEG, MEG]
-signature: {latency_ms: onset ~-2000 to -1000 before movement onset, polarity: negative, topography: 'central midline (Cz), becoming contralateral near movement onset'}
-description: {en: 'Slow negative cortical potential that precedes self-paced voluntary movement, beginning over central midline sites one to two seconds before movement and becoming steeper and more lateralised shortly before onset.', zh: 自定步调自主动作之前的缓慢负性皮层电位，在动作前一至两秒开始出现于中央中线区，临近动作起始时变陡并更加偏侧化。}
-notes: Signature values are textbook-level characteristics and await source checking (first pass, curator_b). Generators and indexes to be added in the second pass.
+recording_modality:
+- EEG
+- MEG
+signature:
+  latency_ms: onset ~-2000 to -1000 before movement onset
+  polarity: negative
+  topography: central midline (Cz), becoming contralateral near movement onset
+description:
+  en: Slow negative cortical potential that precedes self-paced voluntary movement, beginning over central midline sites one
+    to two seconds before movement and becoming steeper and more lateralised shortly before onset.
+  zh: 自定步调自主动作之前的缓慢负性皮层电位，在动作前一至两秒开始出现于中央中线区，临近动作起始时变陡并更加偏侧化。
+generators:
+- region: BR.SMA
+  evidence: B
+  sources:
+  - citation: Ikeda A, Lüders HO, Burgess RC, et al. Movement-related potentials recorded from supplementary motor area and
+      primary motor area. Brain. 1992;115(4):1017-1043.
+    doi: 10.1093/brain/115.4.1017
+    year: 1992
+    verified: false
+  - citation: 'Cunnington R, Windischberger C, Deecke L, et al. The preparation and readiness for voluntary movement: a high-field
+      event-related fMRI study of the Bereitschafts-BOLD response. NeuroImage. 2003;20(1):404-412.'
+    doi: 10.1016/S1053-8119(03)00291-X
+    year: 2003
+    verified: false
+  - citation: Shibasaki H, Hallett M. What is the Bereitschaftspotential? Clin Neurophysiol. 2006;117(11):2341-2356.
+    doi: 10.1016/j.clinph.2006.04.025
+    year: 2006
+    verified: false
+  note: 'method: intracranial; subdural recordings show early BP over SMA; event-related fMRI shows pre-movement SMA/pre-SMA
+    activation.'
+- region: BR.M1
+  evidence: B
+  sources:
+  - citation: Ikeda A, Lüders HO, Burgess RC, et al. Movement-related potentials recorded from supplementary motor area and
+      primary motor area. Brain. 1992;115(4):1017-1043.
+    doi: 10.1093/brain/115.4.1017
+    year: 1992
+    verified: false
+  - citation: Shibasaki H, Hallett M. What is the Bereitschaftspotential? Clin Neurophysiol. 2006;117(11):2341-2356.
+    doi: 10.1016/j.clinph.2006.04.025
+    year: 2006
+    verified: false
+  note: 'method: intracranial; the late, steeper contralateral component (NS'') is recorded from M1.'
+indexes:
+- construct: CN.motor_preparation
+  relation: negativity builds up over 1-2 s before self-paced movement
+  evidence: B
+  sources:
+  - citation: 'Kornhuber HH, Deecke L. Hirnpotentialänderungen bei Willkürbewegungen und passiven Bewegungen des Menschen:
+      Bereitschaftspotential und reafferente Potentiale. Pflügers Arch. 1965;284(1):1-17.'
+    doi: 10.1007/BF00412364
+    year: 1965
+    verified: false
+  - citation: Shibasaki H, Hallett M. What is the Bereitschaftspotential? Clin Neurophysiol. 2006;117(11):2341-2356.
+    doi: 10.1016/j.clinph.2006.04.025
+    year: 2006
+    verified: false
+  - citation: Ikeda A, Lüders HO, Burgess RC, et al. Movement-related potentials recorded from supplementary motor area and
+      primary motor area. Brain. 1992;115(4):1017-1043.
+    doi: 10.1093/brain/115.4.1017
+    year: 1992
+    verified: false
+- construct: CN.intent_selection
+  relation: single-trial MRCP onset precedes movement and allows detection of movement intention
+  evidence: B
+  sources:
+  - citation: Niazi IK, Jiang N, Tiberghien O, et al. Detection of movement intention from single-trial movement-related cortical
+      potentials. J Neural Eng. 2011;8(6):066009.
+    doi: 10.1088/1741-2560/8/6/066009
+    year: 2011
+    verified: false
+  - citation: 'Libet B, Gleason CA, Wright EW, et al. Time of conscious intention to act in relation to onset of cerebral
+      activity (readiness-potential): the unconscious initiation of a freely voluntary act. Brain. 1983;106(3):623-642.'
+    doi: 10.1093/brain/106.3.623
+    year: 1983
+    verified: false
+  - citation: Schurger A, Sitt JD, Dehaene S. An accumulator model for spontaneous neural activity prior to self-initiated
+      movement. Proc Natl Acad Sci U S A. 2012;109(42):E2904-E2913.
+    doi: 10.1073/pnas.1210467109
+    year: 2012
+    verified: false
+  note: Relation of the early BP to a conscious decision is contested (Schurger 2012).
+- construct: CN.motor_imagery
+  relation: an MRCP-like negativity is also present during imagined movements and is detectable on single trials
+  evidence: C
+  sources:
+  - citation: Niazi IK, Jiang N, Tiberghien O, et al. Detection of movement intention from single-trial movement-related cortical
+      potentials. J Neural Eng. 2011;8(6):066009.
+    doi: 10.1088/1741-2560/8/6/066009
+    year: 2011
+    verified: false
+notes: 'Signature values are textbook-level characteristics and await source checking (first pass, curator_b). Generators
+  and indexes to be added in the second pass. Sprint 4 (curator_b, 2026-10-12): generators and indexes curated; every DOI
+  checked against its OpenAlex/Crossref record (citation fields copied from the record); sources verified: false pending full-text
+  check.'
 status: draft
-contributors: [maintainer, curator_b]
+contributors:
+- maintainer
+- curator_b

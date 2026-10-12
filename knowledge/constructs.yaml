@@ -1,28 +1,492 @@
-# Cognitive constructs / 认知构念 (seed, draft)
-schema_version: "0.2"
+# Cognitive constructs / 认知构念 (sprint 4: 81 ids aligned with the paradigm factory)
+schema_version: '0.2'
 prefix: CN
 terms:
-  - id: CN.context_updating
-    en: Context updating
-    zh: 情境更新
-    definition: Revision of the internal representation of the environment when task-relevant information changes.
-  - id: CN.attention_allocation
-    en: Attention allocation
-    zh: 注意资源分配
-    definition: Distribution of limited attentional resources across stimuli or tasks.
-  - id: CN.novelty_orienting
-    en: Novelty orienting
-    zh: 新异性定向
-    definition: Involuntary orienting of attention toward unexpected or novel stimuli.
-  - id: CN.motor_imagery
-    en: Motor imagery
-    zh: 运动想象
-    definition: Mental rehearsal of a movement without overt execution.
-  - id: CN.motor_execution
-    en: Motor execution
-    zh: 运动执行
-    definition: Preparation and performance of an overt voluntary movement.
-  - id: CN.sustained_visual_attention
-    en: Sustained visual attention
-    zh: 持续视觉注意
-    definition: Maintenance of attention on a visual stimulus or location over time.
+- id: CN.perception
+  en: Perception
+  zh: 感知
+  definition: Construction of representations of the external world and the body from sensory input.
+  notes: 中文释义（范式工厂）：从感觉输入中构建对外部世界的表征
+- id: CN.attention
+  en: Attention
+  zh: 注意
+  definition: Selection and prioritisation of relevant information under limited processing capacity.
+  notes: 中文释义（范式工厂）：在有限加工资源下选择与放大相关信息
+- id: CN.memory
+  en: Memory
+  zh: 记忆
+  definition: Encoding, maintenance, updating and retrieval of information over time.
+  notes: 中文释义（范式工厂）：信息的保持、更新与提取
+- id: CN.language
+  en: Language
+  zh: 语言
+  definition: Comprehension and production of words, sentences and their meaning.
+  notes: 中文释义（范式工厂）：词汇、句法与语义的理解和产生
+- id: CN.cognitive_control
+  en: Cognitive control
+  zh: 认知控制
+  definition: Processes that monitor ongoing behaviour for conflict and errors and adjust it toward current goals.
+  notes: 中文释义（范式工厂）：监测冲突与错误、调整行为以实现目标
+- id: CN.motor
+  en: Motor control
+  zh: 运动
+  definition: Selection, preparation, execution and simulation of bodily movements.
+  notes: 中文释义（范式工厂）：动作的准备、执行与想象
+- id: CN.affect
+  en: Affect and valuation
+  zh: 价值与情绪
+  definition: Evaluation of outcomes and stimuli in terms of value, motivation and emotion.
+  notes: 中文释义（范式工厂）：对结果与刺激的评价、动机与情绪反应
+- id: CN.mental_imagery
+  en: Mental imagery
+  zh: 心理意象
+  definition: Generation and manipulation of quasi-perceptual or abstract internal representations in the absence of corresponding
+    external input.
+  notes: 中文释义（范式工厂）：在没有外部刺激时生成的类知觉表征
+- id: CN.hmi
+  en: Human-machine interaction
+  zh: 人机交互认知
+  definition: Perception, evaluation and expression of intent by a human interacting with a machine or interface.
+  notes: 中文释义（范式工厂）：人对机器行为的感知、评价与意图表达
+- id: CN.brain_state
+  en: Brain state
+  zh: 脑状态
+  definition: Global states of the brain such as arousal, vigilance, sleep and large-scale rhythmic activity.
+  notes: 中文释义（范式工厂）：唤醒、警觉与大尺度节律状态
+- id: CN.early_visual
+  en: Early visual processing
+  zh: 早期视觉加工
+  definition: Initial cortical processing of low-level visual features such as luminance, contrast, orientation and spatial
+    frequency.
+  parent: CN.perception
+  cognitive_atlas: trm_4a3fd79d0b4b5 (visual perception)
+  notes: 中文释义（范式工厂）：初级与次级视皮层对亮度、对比度、空间频率等低级特征的加工，约刺激后 100 ms 内
+- id: CN.object_recognition
+  en: Visual object recognition
+  zh: 物体识别
+  definition: Integration of visual features into representations that identify the category or identity of an object.
+  parent: CN.perception
+  cognitive_atlas: trm_4a3fd79d0aab0 (object recognition)
+  notes: 中文释义（范式工厂）：腹侧视觉通路把特征整合为类别与个体表征；可从 100–200 ms 的脑电模式中解码物体类别
+- id: CN.face_perception
+  en: Face perception
+  zh: 面孔知觉
+  definition: Specialised visual processing of the structure of faces.
+  parent: CN.object_recognition
+  cognitive_atlas: trm_4a3fd79d0a300 (face perception)
+  notes: 中文释义（范式工厂）：对面孔结构的专门化加工，相对其他物体类别在枕颞区诱发更大的 N170
+- id: CN.auditory_change
+  en: Auditory change detection
+  zh: 听觉变化检测
+  definition: Automatic detection of a deviation between incoming sounds and a regularity extracted from preceding auditory
+    input.
+  parent: CN.perception
+  notes: 中文释义（范式工厂）：听觉皮层基于感觉记忆自动比较当前输入与规律模型，偏离时产生预测误差信号，不依赖注意
+- id: CN.neural_entrainment
+  en: Neural entrainment
+  zh: 神经节律跟随
+  definition: Alignment of the phase of neural activity to the rhythm of periodic sensory stimulation.
+  parent: CN.perception
+  notes: 中文释义（范式工厂）：感觉皮层活动被周期性刺激锁相驱动，产生与刺激频率一致的稳态响应
+- id: CN.spatial_attention
+  en: Spatial selective attention
+  zh: 空间选择性注意
+  definition: Allocation of attention to a location in space, enhancing processing of stimuli at that location.
+  parent: CN.attention
+  cognitive_atlas: trm_557b4abe521af (spatial selective attention)
+  notes: 中文释义（范式工厂）：对被注意位置的感觉增益调制，表现为 P1/N1 幅值增大
+- id: CN.target_selection
+  en: Attentional target selection
+  zh: 目标选择
+  definition: Selection of a target among competing distractors for prioritised processing.
+  parent: CN.attention
+  cognitive_atlas: trm_4a3fd79d0b4cd (visual search)
+  notes: 中文释义（范式工厂）：在干扰物中把注意分配到目标上并抑制周围干扰，对侧枕颞区出现 N2pc
+- id: CN.orienting
+  en: Involuntary orienting
+  zh: 注意定向（非自主）
+  definition: Involuntary shift of attention toward a salient or unexpected stimulus.
+  parent: CN.attention
+  cognitive_atlas: trm_4a3fd79d0b5fb (attention shifting)
+  notes: 中文释义（范式工厂）：新异或突显刺激自动捕获注意，额中央 P3a
+- id: CN.sustained_attention
+  en: Sustained attention
+  zh: 持续注意
+  definition: Maintenance of attentional focus on a task over an extended period.
+  parent: CN.attention
+  cognitive_atlas: trm_4a3fd79d0b311 (sustained attention)
+  notes: 中文释义（范式工厂）：长时间维持对任务的警觉，与后部 alpha 与额中线 theta 的缓慢漂移相关
+- id: CN.context_updating
+  en: Context updating
+  zh: 情境更新
+  definition: Revision of the internal representation of the environment when task-relevant information changes.
+  parent: CN.memory
+  cognitive_atlas: trm_55b6b9a666604 (working memory updating)
+- id: CN.working_memory
+  en: Working memory
+  zh: 工作记忆
+  definition: Short-term maintenance and manipulation of information in the service of ongoing tasks.
+  parent: CN.memory
+  cognitive_atlas: trm_4a3fd79d0b5a7 (working memory)
+  notes: 中文释义（范式工厂）：在短时间内保持并操作信息；负荷升高时额中线 theta 增强、后部 alpha 变化
+- id: CN.semantic_integration
+  en: Semantic integration
+  zh: 语义整合
+  definition: Integration of the meaning of a word or stimulus with the preceding semantic context.
+  parent: CN.language
+  cognitive_atlas: trm_4a3fd79d0b87a (semantic processing)
+  notes: 中文释义（范式工厂）：把当前词与语境的语义表征整合 / 对语义的可预测性敏感；越难整合或越不可预测，N400 越负
+- id: CN.syntactic_processing
+  en: Syntactic processing
+  zh: 句法加工
+  definition: Construction and revision of the grammatical structure of a sentence.
+  parent: CN.language
+  cognitive_atlas: trm_4a3fd79d0b34b (syntactic processing)
+  notes: 中文释义（范式工厂）：句法结构的构建与违例后的再分析，常见晚期正波 P600
+- id: CN.inner_speech
+  en: Inner speech
+  zh: 内部言语
+  definition: Covert generation of speech without overt articulation.
+  parent: CN.language
+  notes: 中文释义（范式工厂）：不发声的言语生成（默述），与言语运动计划和听觉预测相关；脑电中易受口周肌电污染
+- id: CN.conflict_monitoring
+  en: Conflict monitoring
+  zh: 冲突监测
+  definition: Detection of competition between simultaneously active response tendencies.
+  parent: CN.cognitive_control
+  cognitive_atlas: trm_4a3fd79d09e13 (conflict detection)
+  notes: 中文释义（范式工厂）：多个反应倾向同时激活时由内侧额叶检测冲突，表现为额中央 N2 与 theta 增强
+- id: CN.error_monitoring
+  en: Error monitoring
+  zh: 错误监测
+  definition: Detection and evaluation of one's own erroneous actions.
+  parent: CN.cognitive_control
+  cognitive_atlas: trm_4a3fd79d0a20c (error detection)
+  notes: 中文释义（范式工厂）：自己犯错后 0–100 ms 的错误相关负波（ERN）与随后的错误意识相关正波（Pe）
+- id: CN.response_inhibition
+  en: Response inhibition
+  zh: 反应抑制
+  definition: Suppression or cancellation of a prepotent or already initiated response.
+  parent: CN.cognitive_control
+  cognitive_atlas: trm_4a3fd79d0af66 (response inhibition)
+  notes: 中文释义（范式工厂）：撤回已准备好的优势反应；Go/NoGo 中 NoGo-N2 与 NoGo-P3
+- id: CN.anticipation
+  en: Anticipatory preparation
+  zh: 预期与准备
+  definition: Preparation for an expected upcoming event, such as a stimulus following a warning signal.
+  parent: CN.cognitive_control
+  cognitive_atlas: trm_4a3fd79d09849 (anticipation)
+  notes: 中文释义（范式工厂）：警告信号与命令信号之间对即将到来事件的准备，慢电位 CNV
+- id: CN.motor_preparation
+  en: Motor preparation
+  zh: 运动准备
+  definition: Selection and preparation of a specific movement before it is executed.
+  parent: CN.motor
+  cognitive_atlas: trm_4a3fd79d0a9a1 (motor planning)
+  notes: 中文释义（范式工厂）：选择并准备特定效应器的动作，偏侧化准备电位 LRP
+- id: CN.motor_imagery
+  en: Motor imagery
+  zh: 运动想象
+  definition: Mental rehearsal of a movement without overt execution.
+  parent: CN.motor
+- id: CN.reward_prediction_error
+  en: Reward prediction error
+  zh: 奖赏预测误差
+  definition: Signal of the difference between an obtained outcome and the expected outcome.
+  parent: CN.affect
+  cognitive_atlas: trm_4b6525253c63f (reward processing)
+  notes: 中文释义（范式工厂）：结果好于或差于预期的信号；反馈相关负波 / 奖赏正波（FRN / RewP）
+- id: CN.emotional_salience
+  en: Emotional salience
+  zh: 情绪显著性
+  definition: Enhanced motivated attention to emotionally significant stimuli.
+  parent: CN.affect
+  cognitive_atlas: trm_4a3fd79d0b020 (salience)
+  notes: 中文释义（范式工厂）：情绪性刺激获得持续的动机性注意，晚正电位 LPP 增大
+- id: CN.visual_imagery
+  en: Visual mental imagery
+  zh: 视觉意象
+  definition: Generation of a visual representation from memory or description in the absence of the corresponding visual
+    input.
+  parent: CN.mental_imagery
+  cognitive_atlas: trm_4a3fd79d0b487 (visual imagery)
+  notes: 中文释义（范式工厂）：由记忆或语言驱动、在视觉皮层中重建的类知觉表征；与知觉共享部分表征但信噪比低
+- id: CN.language_to_imagery
+  en: Language-guided imagery
+  zh: 语言驱动的意象生成
+  definition: Construction of a mental image of a scene or object from a verbal description.
+  parent: CN.visual_imagery
+  notes: 中文释义（范式工厂）：从文本描述构建场景意象，涉及语义记忆检索与视觉表征的组合
+- id: CN.machine_error_perception
+  en: Perception of machine errors
+  zh: 机器错误感知
+  definition: Recognition by an observer that a machine or interface has acted contrary to the observer's intention or expectation.
+  parent: CN.hmi
+  notes: 中文释义（范式工厂）：观察机器（机械臂、BCI 反馈、自动驾驶）偏离预期时产生的错误相关电位，可作为人给机器的隐式标签
+- id: CN.intent_selection
+  en: Intent selection
+  zh: 意图选择
+  definition: Expression of a choice among several options through attention or mental imagery for use by an interface.
+  parent: CN.hmi
+  cognitive_atlas: trm_4a3fd79d0a67d (intention)
+  notes: 中文释义（范式工厂）：在多个选项中通过注意或想象表达选择意图，是字符拼写、目标选择类 BCI 的基础
+- id: CN.cortical_idling
+  en: Cortical idling / alpha state
+  zh: 皮层静息节律
+  definition: State of cortical rhythmic activity, typically posterior alpha, that predominates when a cortical area is not
+    engaged in processing sensory input.
+  parent: CN.brain_state
+  notes: 中文释义（范式工厂）：闭眼与内部注意时后部 alpha 增强（Berger 效应），反映对感觉输入的功能性抑制
+- id: CN.early_auditory
+  en: Early auditory processing
+  zh: 早期听觉加工
+  definition: Initial cortical processing of acoustic features such as onset, pitch and intensity.
+  parent: CN.perception
+  cognitive_atlas: trm_4a3fd79d09ab2 (auditory perception)
+- id: CN.somatosensation
+  en: Somatosensation and nociception
+  zh: 体感与痛觉
+  definition: Processing of touch, proprioception, temperature and pain from the body.
+  parent: CN.perception
+  cognitive_atlas: trm_4a3fd79d0b160 (somatosensation)
+- id: CN.chemosensation
+  en: Chemosensation
+  zh: 嗅觉与味觉
+  definition: Perception of chemical stimuli through smell and taste.
+  parent: CN.perception
+  cognitive_atlas: trm_4a3fd79d0aabc (olfaction)
+- id: CN.sensory_gating
+  en: Sensory gating
+  zh: 感觉门控
+  definition: Reduction of neural responses to repeated or irrelevant sensory input.
+  parent: CN.perception
+- id: CN.interoception
+  en: Interoception
+  zh: 内感受
+  definition: Sensing and representation of signals about the internal physiological state of the body.
+  parent: CN.perception
+  cognitive_atlas: trm_4fe39e4388409 (interoception)
+- id: CN.multisensory_integration
+  en: Multisensory integration
+  zh: 多感觉整合
+  definition: Combination of information from different sensory modalities into a unified percept.
+  parent: CN.perception
+  cognitive_atlas: trm_4e31ced566649 (multisensory integration)
+- id: CN.perceptual_awareness
+  en: Perceptual awareness
+  zh: 知觉觉知
+  definition: Conscious experience of a stimulus, as distinct from its unconscious processing.
+  parent: CN.perception
+  cognitive_atlas: trm_4ff36d79c26c6 (visual awareness)
+- id: CN.perceptual_organization
+  en: Perceptual organization
+  zh: 知觉组织
+  definition: Grouping and segregation of sensory elements into coherent objects, figures and streams.
+  parent: CN.perception
+- id: CN.prediction_violation
+  en: Sensory prediction error
+  zh: 感觉预测与预测误差
+  definition: Neural signalling of a mismatch between sensory input and an internal prediction.
+  parent: CN.perception
+  cognitive_atlas: trm_4a3fd79d0b306 (surprise)
+- id: CN.attention_allocation
+  en: Attention allocation
+  zh: 注意资源分配
+  definition: Distribution of limited attentional resources across stimuli or tasks.
+  parent: CN.attention
+  cognitive_atlas: trm_4a3fd79d09925 (attentional resources)
+- id: CN.distractor_suppression
+  en: Distractor suppression
+  zh: 干扰抑制
+  definition: Active suppression of task-irrelevant stimuli that compete for attention.
+  parent: CN.attention
+  cognitive_atlas: trm_4c3e04d656f06 (interference resolution)
+- id: CN.episodic_encoding
+  en: Episodic memory encoding
+  zh: 情景记忆编码
+  definition: Formation of a memory trace for a specific event in its spatial and temporal context.
+  parent: CN.memory
+  cognitive_atlas: trm_4a3fd79d0b8e5 (encoding)
+- id: CN.recognition_memory
+  en: Recognition memory
+  zh: 再认记忆（熟悉感与回想）
+  definition: Judgement that a stimulus has been encountered before, based on familiarity or recollection.
+  parent: CN.memory
+  cognitive_atlas: trm_4a3fd79d0b967 (recognition)
+- id: CN.prospective_memory
+  en: Prospective memory
+  zh: 前瞻记忆
+  definition: Remembering to carry out an intended action at a future time or event.
+  parent: CN.memory
+  cognitive_atlas: trm_4a3fd79d0ae70 (prospective memory)
+- id: CN.spatial_navigation
+  en: Spatial navigation
+  zh: 空间导航与关系记忆
+  definition: Representation of spatial relations and their use to find one's way through an environment.
+  parent: CN.memory
+  cognitive_atlas: trm_4a3fd79d0aa00 (navigation)
+- id: CN.memory_consolidation
+  en: Memory consolidation
+  zh: 记忆巩固（睡眠）
+  definition: Stabilisation of newly encoded memories over time, notably during sleep.
+  parent: CN.memory
+  cognitive_atlas: trm_4a3fd79d0b920 (memory consolidation)
+- id: CN.speech_tracking
+  en: Speech and linguistic structure tracking
+  zh: 言语与语言结构跟踪
+  definition: Tracking of the temporal and hierarchical structure of continuous speech, from the acoustic envelope to linguistic
+    units.
+  parent: CN.language
+  cognitive_atlas: trm_4a3fd79d0b1f7 (speech perception)
+- id: CN.phonological_processing
+  en: Phonological processing
+  zh: 语音加工
+  definition: Processing of the sound structure of language, such as phonemes and syllables.
+  parent: CN.language
+  cognitive_atlas: trm_52b5f1ef4f9cc (phonological processing)
+- id: CN.prosody
+  en: Prosodic processing
+  zh: 韵律加工
+  definition: Processing of the rhythm, stress and intonation of speech.
+  parent: CN.language
+  cognitive_atlas: trm_4a3fd79d0ae64 (prosody)
+- id: CN.speech_production
+  en: Speech production
+  zh: 言语产生
+  definition: Planning and articulation of spoken language.
+  parent: CN.language
+  cognitive_atlas: trm_4a3fd79d0b247 (speech production)
+- id: CN.task_switching
+  en: Task switching
+  zh: 任务切换
+  definition: Reconfiguration of task set when shifting between different tasks.
+  parent: CN.cognitive_control
+  cognitive_atlas: trm_4a3fd79d0b613 (task switching)
+- id: CN.evidence_accumulation
+  en: Evidence accumulation
+  zh: 证据累积（知觉决策）
+  definition: Gradual integration of sensory evidence toward a decision threshold.
+  parent: CN.cognitive_control
+- id: CN.metacognition
+  en: Metacognition
+  zh: 元认知与决策信心
+  definition: Monitoring and evaluation of one's own cognitive processes, such as confidence in a decision.
+  parent: CN.cognitive_control
+  cognitive_atlas: trm_4a3fd79d0a920 (metacognition)
+- id: CN.motor_execution
+  en: Motor execution
+  zh: 运动执行
+  definition: Preparation and performance of an overt voluntary movement.
+  parent: CN.motor
+  cognitive_atlas: trm_557b4a7315f1b (response execution)
+- id: CN.movement_kinematics
+  en: Movement kinematics
+  zh: 运动学与连续运动控制
+  definition: Control and representation of the trajectory, velocity and force of continuous movements.
+  parent: CN.motor
+  cognitive_atlas: trm_4a3fd79d0a972 (motor control)
+- id: CN.sensorimotor_integration
+  en: Sensorimotor integration
+  zh: 感觉运动整合
+  definition: Use of sensory feedback to guide and adjust motor output.
+  parent: CN.motor
+- id: CN.value_decision
+  en: Value-based decision
+  zh: 价值与风险决策
+  definition: Choice among options based on their subjective value, risk or uncertainty.
+  parent: CN.affect
+  cognitive_atlas: trm_4a3fd79d0a038 (decision making)
+- id: CN.threat_fear
+  en: Threat and fear
+  zh: 威胁与恐惧
+  definition: Detection of and response to threatening stimuli, including fear learning.
+  parent: CN.affect
+  cognitive_atlas: trm_4a3fd79d0b689 (fear)
+- id: CN.emotional_state
+  en: Emotional state and valence
+  zh: 情绪状态与效价
+  definition: Ongoing affective state characterised by its valence and arousal.
+  parent: CN.affect
+  cognitive_atlas: trm_4a3fd79d0a17f (emotion)
+- id: CN.auditory_imagery
+  en: Auditory imagery
+  zh: 听觉意象
+  definition: Generation of an auditory representation, such as a tune or voice, in the absence of sound.
+  parent: CN.mental_imagery
+  cognitive_atlas: trm_4a3fd79d09a6c (auditory imagery)
+- id: CN.mental_arithmetic
+  en: Mental arithmetic
+  zh: 心算与心理操作
+  definition: Mental calculation and other internal manipulation of symbolic or spatial content.
+  parent: CN.mental_imagery
+  cognitive_atlas: trm_4a3fd79d0a8ed (mental arithmetic)
+- id: CN.social
+  en: Social cognition
+  zh: 社会认知
+  definition: Processing of information about other agents and oneself in a social context.
+- id: CN.mentalizing
+  en: Mentalizing
+  zh: 心智化（心理理论）
+  definition: Attribution of mental states such as beliefs, desires and intentions to others.
+  parent: CN.social
+  cognitive_atlas: trm_4a3fd79d0b392 (theory of mind)
+- id: CN.self_processing
+  en: Self-related processing
+  zh: 自我相关加工
+  definition: Processing of information related to oneself, such as one's own name, face or traits.
+  parent: CN.social
+- id: CN.social_interaction
+  en: Social interaction
+  zh: 人际协调与互动
+  definition: Coordination of behaviour and attention with other people during real-time interaction.
+  parent: CN.social
+- id: CN.social_perception
+  en: Social perception
+  zh: 社会知觉（目光、生物运动）
+  definition: Perception of socially relevant cues such as gaze direction and biological motion.
+  parent: CN.social
+  cognitive_atlas: trm_kYtw4QBOKCbsM (biological motion)
+- id: CN.vigilance
+  en: Vigilance
+  zh: 警觉度与困倦
+  definition: Level of tonic alertness, ranging from full wakefulness to drowsiness.
+  parent: CN.brain_state
+- id: CN.sleep
+  en: Sleep
+  zh: 睡眠
+  definition: Recurring state of reduced responsiveness organised into distinct stages.
+  parent: CN.brain_state
+  cognitive_atlas: trm_5159c70d0e98e (sleep)
+- id: CN.consciousness_level
+  en: Level of consciousness
+  zh: 意识水平
+  definition: Overall level of wakefulness and responsiveness, as altered in anaesthesia or disorders of consciousness.
+  parent: CN.brain_state
+  cognitive_atlas: trm_4a3fd79d09e35 (consciousness)
+- id: CN.spontaneous_thought
+  en: Spontaneous thought
+  zh: 自发思维与默认网络
+  definition: Thought that arises without an external task, such as mind wandering.
+  parent: CN.brain_state
+- id: CN.cortical_excitability
+  en: Cortical excitability
+  zh: 皮层兴奋性与刺激响应
+  definition: Responsiveness of cortical tissue to direct stimulation such as transcranial magnetic stimulation.
+  parent: CN.brain_state
+- id: CN.self_regulation
+  en: Neurofeedback self-regulation
+  zh: 脑活动自我调节（神经反馈）
+  definition: Voluntary modulation of one's own brain activity guided by real-time feedback.
+  parent: CN.brain_state
+- id: CN.novelty_orienting
+  en: Novelty orienting
+  zh: 新异性定向
+  definition: Involuntary orienting of attention toward unexpected or novel stimuli.
+  parent: CN.orienting
+  cognitive_atlas: trm_4a3fd79d0aa47 (novelty detection)
+- id: CN.sustained_visual_attention
+  en: Sustained visual attention
+  zh: 持续视觉注意
+  definition: Maintenance of attention on a visual stimulus or location over time.
+  parent: CN.sustained_attention
+  cognitive_atlas: trm_4a3fd79d0b311 (sustained attention)

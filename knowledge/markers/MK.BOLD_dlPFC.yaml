@@ -1,4 +1,4 @@
-schema_version: "0.2"
+schema_version: '0.2'
 id: MK.BOLD_dlPFC
 name:
   en: Dorsolateral prefrontal BOLD
@@ -14,10 +14,71 @@ description:
   en: BOLD activity in dorsolateral prefrontal cortex during tasks that require planning, rule-based reasoning, maintenance
     of task rules and executive control. Used in this atlas as a grouped regional marker (D-028 §5).
   zh: 在需要计划、基于规则的推理、任务规则保持和执行控制的任务中，背外侧前额叶皮层的 BOLD 活动。本图谱中作为按脑区分组的标记物使用（D-028 第 5 条）。
+generators:
+- region: BR.DLPFC
+  evidence: A
+  sources:
+  - citation: Niendam TA, Laird AR, Ray KL, et al. Meta-analytic evidence for a superordinate cognitive control network subserving
+      diverse executive functions. Cogn Affect Behav Neurosci. 2012;12(2):241-268.
+    doi: 10.3758/s13415-011-0083-5
+    year: 2012
+    verified: false
+  - citation: 'Wager TD, Smith EE. Neuroimaging studies of working memory: a meta-analysis. Cogn Affect Behav Neurosci. 2003;3(4):255-274.'
+    doi: 10.3758/CABN.3.4.255
+    year: 2003
+    verified: false
+  note: 'method: fMRI localization; DLPFC is the measured region; consistently activated across executive-function and working-memory
+    meta-analyses.'
+indexes:
+- construct: CN.cognitive_control
+  evidence: A
+  relation: BOLD increases across diverse executive tasks and with preparatory implementation of control
+  sources:
+  - citation: Niendam TA, Laird AR, Ray KL, et al. Meta-analytic evidence for a superordinate cognitive control network subserving
+      diverse executive functions. Cogn Affect Behav Neurosci. 2012;12(2):241-268.
+    doi: 10.3758/s13415-011-0083-5
+    year: 2012
+    verified: false
+  - citation: MacDonald AW, Cohen JD, Stenger VA, et al. Dissociating the role of the dorsolateral prefrontal and anterior
+      cingulate cortex in cognitive control. Science. 2000;288(5472):1835-1838.
+    doi: 10.1126/science.288.5472.1835
+    year: 2000
+    verified: false
+- construct: CN.working_memory
+  evidence: A
+  relation: BOLD increases with working-memory load and manipulation demands
+  sources:
+  - citation: 'Wager TD, Smith EE. Neuroimaging studies of working memory: a meta-analysis. Cogn Affect Behav Neurosci. 2003;3(4):255-274.'
+    doi: 10.3758/CABN.3.4.255
+    year: 2003
+    verified: false
+  - citation: 'Owen AM, McMillan KM, Laird AR, et al. N-back working memory paradigm: a meta-analysis of normative functional
+      neuroimaging studies. Hum Brain Mapp. 2005;25(1):46-59.'
+    doi: 10.1002/hbm.20131
+    year: 2005
+    verified: false
+- construct: CN.task_switching
+  evidence: A
+  relation: BOLD increases on switch relative to repeat trials / shifts of attentional set
+  sources:
+  - citation: 'Wager TD, Jonides J, Reading S. Neuroimaging studies of shifting attention: a meta-analysis. NeuroImage. 2004;22(4):1679-1693.'
+    doi: 10.1016/j.neuroimage.2004.03.052
+    year: 2004
+    verified: false
+- construct: CN.value_decision
+  evidence: C
+  relation: BOLD increases when self-control modulates value-based choice (e.g. healthy vs tasty food)
+  sources:
+  - citation: Hare TA, Camerer CF, Rangel A. Self-control in decision-making involves modulation of the vmPFC valuation system.
+      Science. 2009;324(5927):646-648.
+    doi: 10.1126/science.1168450
+    year: 2009
+    verified: false
 notes: 'No signature given in pass 1 (hemodynamic marker; region described in the description). Generators and indexes not
   yet written. Used by (registry): ERR-CAUS-001, CTL-TOL-001, CTL-WCST-001, CTL-BART-001, CTL-WASON-001, MEM-DF-001, SOC-TPP-001.
   D-050 (maintainer, 2026-10-03): PET regional blood-flow (rCBF) effects in the same region are grouped under this marker,
-  as fNIRS HbO is under D-028 item 5.'
+  as fNIRS HbO is under D-028 item 5. Sprint 4 (2026-10-12, curator_e): generators and indexes curated; every DOI checked
+  against its Crossref or OpenAlex record (see curation/work/sprint4/markers_E/); verified: false pending full-text check.'
 status: draft
 contributors:
 - maintainer

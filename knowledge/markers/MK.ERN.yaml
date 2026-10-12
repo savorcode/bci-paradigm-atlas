@@ -1,4 +1,4 @@
-schema_version: "0.2"
+schema_version: '0.2'
 id: MK.ERN
 name:
   en: Error-related negativity
@@ -21,8 +21,69 @@ description:
     error than on correct trials (where a smaller correct-response negativity is seen). Commonly elicited in flanker, Simon
     and Go/NoGo tasks.
   zh: 在快速选择任务中错误反应后不久达到峰值的反应锁时负向波，错误试次大于正确试次（正确试次仅见较小的正确反应负波）。常在 Flanker、Simon 和 Go/NoGo 任务中诱发。
+generators:
+- region: BR.dACC
+  evidence: A
+  sources:
+  - citation: Dehaene S, Posner MI, Tucker DM. Localization of a neural system for error detection and compensation. Psychol
+      Sci. 1994;5(5):303-305.
+    doi: 10.1111/j.1467-9280.1994.tb00630.x
+    year: 1994
+    verified: false
+  - citation: 'Miltner WHR, Lemke U, Weiss T, et al. Implementation of error-processing in the human anterior cingulate cortex:
+      a source analysis of the magnetic equivalent of the error-related negativity. Biol Psychol. 2003;64(1-2):157-166.'
+    doi: 10.1016/S0301-0511(03)00107-8
+    year: 2003
+    verified: false
+  - citation: Ridderinkhof KR, Ullsperger M, Crone EA, et al. The role of the medial frontal cortex in cognitive control.
+      Science. 2004;306(5695):443-447.
+    doi: 10.1126/science.1100301
+    year: 2004
+    verified: false
+  note: 'method: MEG/EEG source; EEG dipole modelling (Dehaene 1994) and MEG source analysis (Miltner 2003) place the ERN
+    generator in the caudal/dorsal ACC; the fMRI meta-analysis of Ridderinkhof 2004 converges on the rostral cingulate zone
+    (posterior medial frontal cortex) for error-related activity. Cross-lab and cross-modality replication; no intracranial
+    source retrieved this sprint (J Neurosci/Neuron records could not be fetched).'
+indexes:
+- construct: CN.error_monitoring
+  evidence: A
+  relation: amplitude larger after erroneous than after correct responses
+  sources:
+  - citation: Falkenstein M, Hohnsbein J, Hoormann J, et al. Effects of crossmodal divided attention on late ERP components.
+      II. Error processing in choice reaction tasks. Electroencephalogr Clin Neurophysiol. 1991;78(6):447-455.
+    doi: 10.1016/0013-4694(91)90062-9
+    year: 1991
+    verified: false
+  - citation: Gehring WJ, Goss B, Coles MGH, et al. A neural system for error detection and compensation. Psychol Sci. 1993;4(6):385-390.
+    doi: 10.1111/j.1467-9280.1993.tb00586.x
+    year: 1993
+    verified: false
+  - citation: 'Holroyd CB, Coles MGH. The neural basis of human error processing: reinforcement learning, dopamine, and the
+      error-related negativity. Psychol Rev. 2002;109(4):679-709.'
+    doi: 10.1037/0033-295X.109.4.679
+    year: 2002
+    verified: false
+  - citation: 'Miltner WHR, Lemke U, Weiss T, et al. Implementation of error-processing in the human anterior cingulate cortex:
+      a source analysis of the magnetic equivalent of the error-related negativity. Biol Psychol. 2003;64(1-2):157-166.'
+    doi: 10.1016/S0301-0511(03)00107-8
+    year: 2003
+    verified: false
+  note: Replicated across independent labs (Falkenstein 1991, Gehring 1993) and modalities (MEG, Miltner 2003); reinforcement-learning
+    account in Holroyd & Coles 2002.
+- construct: CN.conflict_monitoring
+  evidence: C
+  relation: amplitude modelled as post-response conflict between the executed error and the still-evolving correct response
+  sources:
+  - citation: 'Yeung N, Botvinick MM, Cohen JD. The neural basis of error detection: conflict monitoring and the error-related
+      negativity. Psychol Rev. 2004;111(4):931-959.'
+    doi: 10.1037/0033-295X.111.4.931
+    year: 2004
+    verified: false
+  note: Computational account (Yeung 2004); competing with the reinforcement-learning account, hence C.
 notes: 'Signature values are textbook-level approximations and await checking against sources (pass 2). Generators and indexes
-  not yet written. Used by (registry): CTL-FLK-001.'
+  not yet written. Used by (registry): CTL-FLK-001. Sprint 4 (2026-10-12, curator_c): generators and indexes curated; every
+  DOI checked against its Crossref or OpenAlex record (see curation/work/sprint4/markers_C/); verified: false pending full-text
+  check.'
 status: draft
 contributors:
 - maintainer

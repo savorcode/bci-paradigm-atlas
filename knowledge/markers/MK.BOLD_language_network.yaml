@@ -1,4 +1,4 @@
-schema_version: "0.2"
+schema_version: '0.2'
 id: MK.BOLD_language_network
 name:
   en: Language network BOLD
@@ -10,14 +10,98 @@ type: hemodynamic
 recording_modality:
 - fMRI
 description:
-  en: >-
-    BOLD activity in the left-lateralised frontotemporal language network, including the inferior frontal gyrus
-    and lateral temporal cortex, that responds more to meaningful language than to control stimuli. Specific subregions
-    are specified in generators and relations rather than as separate markers.
+  en: BOLD activity in the left-lateralised frontotemporal language network, including the inferior frontal gyrus and lateral
+    temporal cortex, that responds more to meaningful language than to control stimuli. Specific subregions are specified
+    in generators and relations rather than as separate markers.
   zh: 左侧化额颞语言网络（包括额下回和外侧颞叶皮层）的 BOLD 活动，对有意义语言的响应强于对照刺激。具体子区在 generators 与 relation 中说明，不单列标记物。
-notes: >-
-  First-pass skeleton (curator_d, 2026-10-03). No signature is given for this hemodynamic marker; generators and
-  indexes will be added in the second pass.
+generators:
+- region: BR.IFG
+  evidence: A
+  sources:
+  - citation: 'Vigneau M, Beaucousin V, Hervé PY, et al. Meta-analyzing left hemisphere language areas: phonology, semantics,
+      and sentence processing. NeuroImage. 2006;30(4):1414-1432.'
+    doi: 10.1016/j.neuroimage.2005.11.002
+    year: 2006
+    verified: false
+  - citation: 'Fedorenko E, Hsieh PJ, Nieto-Castañón A, et al. New method for fMRI investigations of language: defining ROIs
+      functionally in individual subjects. J Neurophysiol. 2010;104(2):1177-1194.'
+    doi: 10.1152/jn.00032.2010
+    year: 2010
+    verified: false
+  note: 'method: fMRI localization; left inferior frontal component; ALE meta-analysis (Vigneau 2006) and individual-subject
+    functional localiser (sentences > nonwords, Fedorenko 2010).'
+- region: BR.MTG
+  evidence: A
+  sources:
+  - citation: Binder JR, Desai RH, Graves WW, et al. Where is the semantic system? A critical review and meta-analysis of
+      120 functional neuroimaging studies. Cereb Cortex. 2009;19(12):2767-2796.
+    doi: 10.1093/cercor/bhp055
+    year: 2009
+    verified: false
+  - citation: 'Fedorenko E, Hsieh PJ, Nieto-Castañón A, et al. New method for fMRI investigations of language: defining ROIs
+      functionally in individual subjects. J Neurophysiol. 2010;104(2):1177-1194.'
+    doi: 10.1152/jn.00032.2010
+    year: 2010
+    verified: false
+  note: 'method: fMRI localization; left posterior middle/lateral temporal component; semantic meta-analysis of 120 studies
+    (Binder 2009).'
+- region: BR.ATL
+  evidence: B
+  sources:
+  - citation: 'Vigneau M, Beaucousin V, Hervé PY, et al. Meta-analyzing left hemisphere language areas: phonology, semantics,
+      and sentence processing. NeuroImage. 2006;30(4):1414-1432.'
+    doi: 10.1016/j.neuroimage.2005.11.002
+    year: 2006
+    verified: false
+  - citation: Binder JR, Desai RH, Graves WW, et al. Where is the semantic system? A critical review and meta-analysis of
+      120 functional neuroimaging studies. Cereb Cortex. 2009;19(12):2767-2796.
+    doi: 10.1093/cercor/bhp055
+    year: 2009
+    verified: false
+  note: 'method: fMRI localization; anterior temporal component; reported in both meta-analyses but less consistently than
+    IFG/MTG (fMRI susceptibility dropout).'
+indexes:
+- construct: CN.semantic_integration
+  evidence: A
+  relation: BOLD is larger for meaningful words/sentences than for matched meaningless controls
+  sources:
+  - citation: Binder JR, Desai RH, Graves WW, et al. Where is the semantic system? A critical review and meta-analysis of
+      120 functional neuroimaging studies. Cereb Cortex. 2009;19(12):2767-2796.
+    doi: 10.1093/cercor/bhp055
+    year: 2009
+    verified: false
+  - citation: 'Vigneau M, Beaucousin V, Hervé PY, et al. Meta-analyzing left hemisphere language areas: phonology, semantics,
+      and sentence processing. NeuroImage. 2006;30(4):1414-1432.'
+    doi: 10.1016/j.neuroimage.2005.11.002
+    year: 2006
+    verified: false
+- construct: CN.syntactic_processing
+  evidence: A
+  relation: left IFG and posterior temporal BOLD increase with syntactic complexity / sentence structure
+  sources:
+  - citation: Hagoort P, Indefrey P. The neurobiology of language beyond single words. Annu Rev Neurosci. 2014;37(1):347-362.
+    doi: 10.1146/annurev-neuro-071013-013847
+    year: 2014
+    verified: false
+  - citation: 'Vigneau M, Beaucousin V, Hervé PY, et al. Meta-analyzing left hemisphere language areas: phonology, semantics,
+      and sentence processing. NeuroImage. 2006;30(4):1414-1432.'
+    doi: 10.1016/j.neuroimage.2005.11.002
+    year: 2006
+    verified: false
+- construct: CN.phonological_processing
+  evidence: B
+  relation: left IFG (dorsal) and superior temporal BOLD increase during phonological tasks
+  sources:
+  - citation: 'Vigneau M, Beaucousin V, Hervé PY, et al. Meta-analyzing left hemisphere language areas: phonology, semantics,
+      and sentence processing. NeuroImage. 2006;30(4):1414-1432.'
+    doi: 10.1016/j.neuroimage.2005.11.002
+    year: 2006
+    verified: false
+  note: single meta-analysis covering phonology; graded B because the phonological clusters partly overlap auditory regions
+    outside the core language network.
+notes: 'First-pass skeleton (curator_d, 2026-10-03). No signature is given for this hemodynamic marker; generators and indexes
+  will be added in the second pass. Sprint 4 (2026-10-12, curator_e): generators and indexes curated; every DOI checked against
+  its Crossref or OpenAlex record (see curation/work/sprint4/markers_E/); verified: false pending full-text check.'
 status: draft
 contributors:
 - maintainer

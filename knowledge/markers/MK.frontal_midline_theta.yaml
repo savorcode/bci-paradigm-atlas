@@ -1,11 +1,127 @@
-schema_version: "0.2"
+schema_version: '0.2'
 id: MK.frontal_midline_theta
-name: {en: Frontal midline theta, zh: 额中线 θ}
-aliases: [FMT, frontal midline theta, Fm theta]
+name:
+  en: Frontal midline theta
+  zh: 额中线 θ
+aliases:
+- FMT
+- frontal midline theta
+- Fm theta
 type: oscillatory
-recording_modality: [EEG, MEG]
-signature: {frequency_hz: 4-8, topography: 'frontal midline (Fz), medial frontal cortex'}
-description: {en: 'Increase of 4-8 Hz power over frontal midline sites during sustained mental effort, such as mental arithmetic, working memory load and cognitive control.', zh: 在心算、工作记忆负荷、认知控制等持续心理努力期间，额中线部位 4-8 Hz 功率的升高。}
-notes: Signature values are textbook-level characteristics and await source checking (first pass, curator_b). Distinct from MK.theta_drowsiness (D-028). Generators and indexes to be added in the second pass.
+recording_modality:
+- EEG
+- MEG
+signature:
+  frequency_hz: 4-8
+  topography: frontal midline (Fz), medial frontal cortex
+description:
+  en: Increase of 4-8 Hz power over frontal midline sites during sustained mental effort, such as mental arithmetic, working
+    memory load and cognitive control.
+  zh: 在心算、工作记忆负荷、认知控制等持续心理努力期间，额中线部位 4-8 Hz 功率的升高。
+generators:
+- region: BR.dACC
+  evidence: B
+  sources:
+  - citation: Ishii R, Shinosaki K, Ukai S, et al. Medial prefrontal cortex generates frontal midline theta rhythm. NeuroReport.
+      1999;10(4):675-679.
+    doi: 10.1097/00001756-199903170-00003
+    year: 1999
+    verified: false
+  - citation: Asada H, Fukuda Y, Tsunoda S, et al. Frontal midline theta rhythms reflect alternative activation of prefrontal
+      cortex and anterior cingulate cortex in humans. Neurosci Lett. 1999;274(1):29-32.
+    doi: 10.1016/S0304-3940(99)00679-5
+    year: 1999
+    verified: false
+  - citation: Onton J, Delorme A, Makeig S. Frontal midline EEG dynamics during working memory. NeuroImage. 2005;27(2):341-356.
+    doi: 10.1016/j.neuroimage.2005.04.014
+    year: 2005
+    verified: false
+  - citation: Cavanagh JF, Frank MJ. Frontal theta as a mechanism for cognitive control. Trends Cogn Sci. 2014;18(8):414-421.
+    doi: 10.1016/j.tics.2014.04.012
+    year: 2014
+    verified: false
+  note: 'method: MEG/EEG source; MEG source estimates (Ishii 1999; Asada 1999, same group) and EEG ICA source modelling (Onton
+    2005) place frontal midline theta in medial frontal / anterior cingulate cortex; reviewed in Cavanagh & Frank 2014.'
+- region: BR.dmPFC
+  evidence: C
+  sources:
+  - citation: Ishii R, Shinosaki K, Ukai S, et al. Medial prefrontal cortex generates frontal midline theta rhythm. NeuroReport.
+      1999;10(4):675-679.
+    doi: 10.1097/00001756-199903170-00003
+    year: 1999
+    verified: false
+  - citation: Asada H, Fukuda Y, Tsunoda S, et al. Frontal midline theta rhythms reflect alternative activation of prefrontal
+      cortex and anterior cingulate cortex in humans. Neurosci Lett. 1999;274(1):29-32.
+    doi: 10.1016/S0304-3940(99)00679-5
+    year: 1999
+    verified: false
+  note: 'method: MEG/EEG source; MEG localization to medial prefrontal cortex (Ishii 1999; Asada 1999 alternating PFC/ACC
+    sources); one group.'
+indexes:
+- construct: CN.working_memory
+  evidence: B
+  relation: power increases with working-memory load
+  sources:
+  - citation: 'Gevins A, Smith ME, McEvoy L, et al. High-resolution EEG mapping of cortical activation related to working
+      memory: effects of task difficulty, type of processing, and practice. Cereb Cortex. 1997;7(4):374-385.'
+    doi: 10.1093/cercor/7.4.374
+    year: 1997
+    verified: false
+  - citation: Jensen O, Tesche CD. Frontal theta activity in humans increases with memory load in a working memory task. Eur
+      J Neurosci. 2002;15(8):1395-1399.
+    doi: 10.1046/j.1460-9568.2002.01975.x
+    year: 2002
+    verified: false
+  - citation: Onton J, Delorme A, Makeig S. Frontal midline EEG dynamics during working memory. NeuroImage. 2005;27(2):341-356.
+    doi: 10.1016/j.neuroimage.2005.04.014
+    year: 2005
+    verified: false
+- construct: CN.conflict_monitoring
+  evidence: B
+  relation: power increases on high-conflict trials
+  sources:
+  - citation: 'Cavanagh JF, Zambrano-Vazquez L, Allen JJB. Theta lingua franca: a common mid-frontal substrate for action
+      monitoring processes. Psychophysiology. 2012;49(2):220-238.'
+    doi: 10.1111/j.1469-8986.2011.01293.x
+    year: 2012
+    verified: false
+  - citation: Cavanagh JF, Frank MJ. Frontal theta as a mechanism for cognitive control. Trends Cogn Sci. 2014;18(8):414-421.
+    doi: 10.1016/j.tics.2014.04.012
+    year: 2014
+    verified: false
+- construct: CN.error_monitoring
+  evidence: B
+  relation: power increases after errors and negative feedback
+  sources:
+  - citation: 'Cavanagh JF, Zambrano-Vazquez L, Allen JJB. Theta lingua franca: a common mid-frontal substrate for action
+      monitoring processes. Psychophysiology. 2012;49(2):220-238.'
+    doi: 10.1111/j.1469-8986.2011.01293.x
+    year: 2012
+    verified: false
+  - citation: Cavanagh JF, Frank MJ. Frontal theta as a mechanism for cognitive control. Trends Cogn Sci. 2014;18(8):414-421.
+    doi: 10.1016/j.tics.2014.04.012
+    year: 2014
+    verified: false
+- construct: CN.mental_arithmetic
+  evidence: C
+  relation: power increases during mental arithmetic
+  sources:
+  - citation: Ishii R, Shinosaki K, Ukai S, et al. Medial prefrontal cortex generates frontal midline theta rhythm. NeuroReport.
+      1999;10(4):675-679.
+    doi: 10.1097/00001756-199903170-00003
+    year: 1999
+    verified: false
+  - citation: Asada H, Fukuda Y, Tsunoda S, et al. Frontal midline theta rhythms reflect alternative activation of prefrontal
+      cortex and anterior cingulate cortex in humans. Neurosci Lett. 1999;274(1):29-32.
+    doi: 10.1016/S0304-3940(99)00679-5
+    year: 1999
+    verified: false
+  note: Both studies from one group.
+notes: 'Signature values are textbook-level characteristics and await source checking (first pass, curator_b). Distinct from
+  MK.theta_drowsiness (D-028). Generators and indexes to be added in the second pass. Sprint 4 (2026-10-12, curator_c): generators
+  and indexes curated; every DOI checked against its Crossref or OpenAlex record (see curation/work/sprint4/markers_C/); verified:
+  false pending full-text check.'
 status: draft
-contributors: [maintainer, curator_b]
+contributors:
+- maintainer
+- curator_b

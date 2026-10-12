@@ -1,4 +1,4 @@
-schema_version: "0.2"
+schema_version: '0.2'
 id: MK.frontal_alpha_asymmetry
 name:
   en: Frontal alpha asymmetry
@@ -17,7 +17,73 @@ description:
     activity, relatively greater left frontal activity has been associated with approach motivation and positive affect, and
     greater right frontal activity with withdrawal.
   zh: 左右额区 α 功率之差。由于 α 功率与皮层活动呈反向关系，左额相对活动更高与趋近动机和正性情绪相关，右额相对活动更高则与回避相关。
-notes: Signature values are textbook-level characteristics entered in the first pass and await source checking.
+generators:
+- region: BR.DLPFC
+  evidence: C
+  sources:
+  - citation: 'Pizzagalli DA, Sherwood RJ, Henriques JB, et al. Frontal brain asymmetry and reward responsiveness: a source-localization
+      study. Psychol Sci. 2005;16(10):805-813.'
+    doi: 10.1111/j.1467-9280.2005.01618.x
+    year: 2005
+    verified: false
+  note: 'method: MEG/EEG source; LORETA source localization of resting alpha asymmetry points to left dorsolateral prefrontal
+    (BA 9/10) sources linked to reward bias (Pizzagalli et al. 2005); single study.'
+- region: BR.frontal_cortex
+  evidence: C
+  sources:
+  - citation: 'Harmon-Jones E, Gable PA, Peterson CK. The role of asymmetric frontal cortical activity in emotion-related
+      phenomena: a review and update. Biol Psychol. 2010;84(3):451-462.'
+    doi: 10.1016/j.biopsycho.2009.08.010
+    year: 2010
+    verified: false
+  note: 'method: scalp topography; index computed from homologous frontal scalp pairs (F4/F3, F8/F7); review of scalp findings
+    (Harmon-Jones et al. 2010). Scalp topography only, max C.'
+indexes:
+- construct: CN.emotional_state
+  evidence: B
+  relation: relatively greater left frontal activity (lower left alpha) associated with approach motivation / positive affect;
+    greater right with withdrawal
+  sources:
+  - citation: 'Harmon-Jones E, Gable PA, Peterson CK. The role of asymmetric frontal cortical activity in emotion-related
+      phenomena: a review and update. Biol Psychol. 2010;84(3):451-462.'
+    doi: 10.1016/j.biopsycho.2009.08.010
+    year: 2010
+    verified: false
+  - citation: 'Thibodeau R, Jorgensen RS, Kim S. Depression, anxiety, and resting frontal EEG asymmetry: a meta-analytic review.
+      J Abnorm Psychol. 2006;115(4):715-729.'
+    doi: 10.1037/0021-843X.115.4.715
+    year: 2006
+    verified: false
+  - citation: 'van der Vinne N, Vollebregt MA, van Putten MJAM, et al. Frontal alpha asymmetry as a diagnostic marker in depression:
+      fact or fiction? A meta-analysis. NeuroImage Clin. 2017;16:79-87.'
+    doi: 10.1016/j.nicl.2017.07.006
+    year: 2017
+    verified: false
+  note: 'Approach-withdrawal motivation has no README construct; mapped to CN.emotional_state (vocab request CN.approach_motivation).
+    Meta-analytic evidence is mixed: Thibodeau 2006 finds moderate effects for depression/anxiety, van der Vinne 2017 finds
+    no reliable diagnostic effect in MDD, hence B not A.'
+- construct: CN.value_decision
+  evidence: C
+  relation: larger left-sided resting asymmetry predicts stronger response bias toward more frequently rewarded stimuli
+  sources:
+  - citation: 'Pizzagalli DA, Sherwood RJ, Henriques JB, et al. Frontal brain asymmetry and reward responsiveness: a source-localization
+      study. Psychol Sci. 2005;16(10):805-813.'
+    doi: 10.1111/j.1467-9280.2005.01618.x
+    year: 2005
+    verified: false
+  note: Reward responsiveness mapped to CN.value_decision; single study.
+- construct: CN.self_regulation
+  evidence: C
+  relation: asymmetry can be shifted by biofeedback, with corresponding change in self-reported emotion and facial EMG
+  sources:
+  - citation: Allen JJB, Harmon-Jones E, Cavender JH. Manipulation of frontal EEG asymmetry through biofeedback alters self-reported
+      emotional responses and facial EMG. Psychophysiology. 2001;38(4):685-693.
+    doi: 10.1111/1469-8986.3840685
+    year: 2001
+    verified: false
+notes: 'Signature values are textbook-level characteristics entered in the first pass and await source checking. Sprint 4
+  (2026-10-12, curator_d): generators and indexes curated; every DOI checked against its Crossref or OpenAlex record (see
+  curation/work/sprint4/markers_D/); verified: false pending full-text check.'
 status: draft
 contributors:
 - maintainer

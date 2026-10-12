@@ -1,0 +1,70 @@
+# Sprint 4 markers_E search log (curator_e)
+
+WebSearch calls used: 1 of 25. Candidates were taken from curator knowledge of the canonical meta-analyses, then every DOI was looked up via WebFetch.
+curl to api.crossref.org / api.openalex.org from Bash -> 403 proxy (CONNECT denied); all record lookups done with WebFetch.
+
+## Record lookups (WebFetch)
+- crossref 10.1016/j.neuroimage.2010.09.045 -> OK Kim 2011 NeuroImage 54(3):2446-2461
+- crossref 10.1016/j.neuropsychologia.2009.02.028 -> OK Spaniol et al. 2009 Neuropsychologia 47(8-9):1765-1779 (6 authors)
+- crossref 10.1016/j.tics.2007.08.001 -> OK Diana, Yonelinas, Ranganath 2007 TICS 11(9):379-386
+- crossref 10.1007/s11065-014-9247-8 -> OK Boccia, Nemmi, Guariglia 2014 Neuropsychol Rev 24(2):236-251
+- crossref 10.1002/hbm.20131 -> OK Owen et al. 2005 HBM 25(1):46-59
+- crossref 10.1016/j.tics.2010.01.004 -> OK Duncan 2010 TICS 14(4):172-179
+- crossref 10.1038/nrn755 -> OK Corbetta & Shulman 2002 NRN 3(3):201-215
+- crossref 10.1037/a0030694 -> OK Langner & Eickhoff 2013 Psychol Bull 139(4):870-900
+- crossref 10.1073/pnas.1315235110 -> OK Fedorenko, Duncan, Kanwisher 2013 PNAS 110(41):16616-16621
+- crossref 10.3758/s13415-011-0083-5 -> OK Niendam et al. 2012 CABN 12(2):241-268 (container-title only in short form)
+- crossref 10.1016/j.neuroimage.2011.11.050 -> OK Rottschy et al. 2012 NeuroImage 60(1):830-846
+- crossref 10.1016/j.neuroimage.2004.03.052 -> OK Wager, Jonides, Reading 2004 NeuroImage 22(4):1679-1693
+- crossref 10.1126/science.288.5472.1835 -> OK MacDonald et al. 2000 Science 288(5472):1835-1838
+- crossref 10.3758/CABN.3.4.255 -> OK Wager & Smith 2003 CABN 3(4):255-274 (record title truncated to "Neuroimaging studies of working memory:"; subtitle "a meta-analysis" completed from the published title)
+- openalex 10.3758/CABN.3.4.255 -> 429 rate limited (not retried)
+- crossref 10.1126/science.1168450 -> OK Hare, Camerer, Rangel 2009 Science 324(5927):646-648
+- crossref 10.1038/nature04766 -> OK Daw et al. 2006 Nature 441(7095):876-879
+- crossref 10.1162/jocn.2006.18.6.932 -> fetch error (CLIENT_ERROR)
+- openalex 10.1162/jocn.2006.18.6.932 -> OK Gilbert et al. 2006 JOCN 18(6):932-948 (7 authors)
+- crossref 10.1016/j.neubiorev.2015.02.007 -> OK Cona et al. 2015 NBR 52:21-37
+- crossref 10.1177/2398212818810591 -> OK Vaccaro & Fleming 2018 Brain Neurosci Adv 2 (article number)
+- crossref 10.1016/j.tics.2007.05.004 -> OK Burgess, Dumontheil, Gilbert 2007 TICS 11(7):290-298
+- crossref 10.1126/science.7754376 -> 429 rate limited; openalex -> 429; pubmed search -> reCAPTCHA; crossref retry -> OK Sereno et al. 1995 Science 268(5212):889-893
+- crossref 10.1016/j.neuron.2007.10.012 -> OK Wandell, Dumoulin, Brewer 2007 Neuron 56(2):366-383
+- crossref 10.1038/nature06713 -> OK Kay et al. 2008 Nature 452(7185):352-355
+- crossref 10.1016/j.cortex.2017.12.014 -> OK Winlove et al. 2018 Cortex 105:4-25
+- crossref 10.1038/35090055 -> OK Kosslyn, Ganis, Thompson 2001 NRN 2(9):635-642
+- crossref 10.1038/7286 -> 429; openalex 10.1038/7286 -> WRONG paper (Lee et al. 1999 winner-take-all) -> DOI guess for Brefczynski & DeYoe rejected, not cited
+- crossref 10.1038/80740 -> 429; openalex -> CLIENT_ERROR; crossref retry -> CLIENT_ERROR -> Polonsky 2000 not cited
+- openalex search (Polonsky title) -> CLIENT_ERROR
+- crossref 10.1016/S0896-6273(00)80592-9 -> OK Tong et al. 1998 Neuron 21(4):753-759
+- openalex 10.1016/S0896-6273(00)80734-5 -> OK Kastner et al. 1999 Neuron 22(4):751-761
+- crossref 10.1523/JNEUROSCI.17-11-04302.1997 -> OK Kanwisher, McDermott, Chun 1997 J Neurosci 17(11):4302-4311
+- crossref 10.1038/33402 -> OK Epstein & Kanwisher 1998 Nature 392(6676):598-601
+- crossref 10.1038/nrn3747 -> OK Grill-Spector & Weiner 2014 NRN 15(8):536-548
+- crossref 10.1523/JNEUROSCI.2609-12.2012 -> OK Parvizi et al. 2012 J Neurosci 32(43):14915-14920
+- openalex 10.1016/j.tics.2008.07.004 -> OK Epstein 2008 TICS 12(10):388-396
+- crossref 10.1016/S0042-6989(01)00073-6 -> OK Grill-Spector, Kourtzi, Kanwisher 2001 Vision Res 41(10-11):1409-1422
+- openalex 10.1162/08989290051137549 -> OK O'Craven & Kanwisher 2000 JOCN 12(6):1013-1023
+- crossref 10.1152/jn.00032.2010 -> OK Fedorenko et al. 2010 J Neurophysiol 104(2):1177-1194
+- openalex 10.1016/j.neuroimage.2005.11.002 -> OK Vigneau et al. 2006 NeuroImage 30(4):1414-1432
+- crossref 10.1093/cercor/bhp055 -> OK Binder et al. 2009 Cereb Cortex 19(12):2767-2796 (container-title empty; journal from DOI prefix/print record)
+- openalex 10.1146/annurev-neuro-071013-013847 -> OK Hagoort & Indefrey 2014 Annu Rev Neurosci 37(1):347-362
+- crossref 10.1016/j.neubiorev.2013.03.017 -> OK Hetu et al. 2013 NBR 37(5):930-949
+- openalex 10.1016/j.neuroimage.2012.11.020 -> OK Hardwick et al. NeuroImage 67:283-297 (publication_year 2012 = online; volume 67 is 2013)
+- crossref 10.1016/j.neuroimage.2008.04.025 -> OK Witt, Laird, Meyerand 2008 NeuroImage 42(1):343-356
+- openalex 10.1016/j.neubiorev.2018.08.003 -> OK Hardwick et al. 2018 NBR 94:31-44
+- crossref 10.1126/science.1130197 -> OK Owen et al. 2006 Science 313(5792):1402
+- openalex 10.1056/NEJMoa0905370 -> OK Monti et al. 2010 NEJM 362(7):579-589
+- crossref 10.1136/jnnp-2015-310958 -> OK Kondziella et al. JNNP 87(5):485-492 (issued 2015 online, print 2016)
+- openalex 10.1002/hbm.20145 -> 429; crossref -> OK Grosbras, Laird, Paus 2005 HBM 25(1):140-154
+- crossref 10.3389/fpsyg.2013.00749 -> OK Jamadar, Fielding, Egan 2013 Front Psychol 4 (article 749 per DOI)
+- crossref 10.1016/S0896-6273(00)80593-0 -> OK Corbetta et al. 1998 Neuron 21(4):761-773
+- crossref 10.1038/nn969 -> 429; openalex -> OK Connolly et al. 2002 Nat Neurosci 5(12):1345-1352
+- crossref 10.1016/S0896-6273(03)00669-X -> OK Formisano et al. 2003 Neuron 40(4):859-869
+- openalex 10.1016/j.neuroimage.2010.01.046 -> OK Humphries, Liebenthal, Binder 2010 NeuroImage 50(3):1202-1211
+- crossref 10.1038/35002078 -> CLIENT_ERROR; openalex -> OK Belin et al. 2000 Nature 403(6767):309-312
+- crossref 10.1016/j.neuron.2005.08.013 -> WRONG paper (Stern & Hasselmo 2005) -> DOI guess rejected
+- openalex + crossref 10.1093/cercor/9.7.697 -> OK Cereb Cortex 9(7):697-704, but both records list only Halpern AR (see worklog)
+- crossref 10.1038/434158a -> OK Kraemer et al. 2005 Nature 434(7030):158
+- openalex 10.1093/cercor/bhh161 -> WRONG paper (Yakovlev et al., multi-item WM) -> DOI guess rejected
+- WebSearch "Molholm Martinez Ritter Javitt Foxe 2005 ... mismatch negativity Cerebral Cortex doi" -> plaudit link gives 10.1093/cercor/bhh155
+- crossref 10.1093/cercor/bhh155 -> OK Molholm et al. Cereb Cortex 15(5):545-551 (issued 2004 online, vol 15 = 2005)
+- openalex 10.1016/j.neuron.2005.06.013 -> OK Zatorre & Halpern 2005 Neuron 47(1):9-12

@@ -1,4 +1,4 @@
-schema_version: "0.2"
+schema_version: '0.2'
 id: MK.N170
 name:
   en: N170 (M170)
@@ -20,8 +20,76 @@ description:
   en: Negative occipito-temporal component peaking about 170 ms after stimulus onset, larger for faces (and to a lesser extent
     bodies) than for other object categories.
   zh: 刺激后约 170 ms 达峰的枕颞负成分，对面孔（其次是身体）的反应大于其他物体类别。
-notes: First-pass skeleton by package A (2026-10-03). No generators/indexes yet. Signature values are textbook-level approximations
-  and await source checking.
+generators:
+- region: BR.LOC
+  evidence: B
+  sources:
+  - citation: 'Jacques C, Jonas J, Maillard L, et al. The inferior occipital gyrus is a major cortical source of the face-evoked
+      N170: evidence from simultaneous scalp and intracerebral human recordings. Hum Brain Mapp. 2019;40(5):1403-1418.'
+    doi: 10.1002/hbm.24455
+    year: 2019
+    verified: false
+  - citation: Rossion B, Jacques C. Does physical interstimulus variance account for early electrophysiological face sensitive
+      responses in the human brain? Ten lessons on the N170. NeuroImage. 2008;39(4):1959-1979.
+    doi: 10.1016/j.neuroimage.2007.10.011
+    year: 2008
+    verified: false
+  note: 'method: intracranial; simultaneous scalp and intracerebral recordings identify the right inferior occipital gyrus
+    (occipital face area) as a major N170 source (Jacques 2019), consistent with lateral occipito-temporal source models reviewed
+    by Rossion & Jacques 2008. IOG/OFA mapped to closest vocabulary id BR.LOC; BR.OFA requested.'
+- region: BR.FFA
+  evidence: B
+  sources:
+  - citation: 'Allison T, et al. Electrophysiological studies of human face perception. I: Potentials generated in occipitotemporal
+      cortex by face and non-face stimuli. Cereb Cortex. 1999;9(5):415-430.'
+    doi: 10.1093/cercor/9.5.415
+    year: 1999
+    verified: false
+  - citation: 'Jacques C, Jonas J, Maillard L, et al. The inferior occipital gyrus is a major cortical source of the face-evoked
+      N170: evidence from simultaneous scalp and intracerebral human recordings. Hum Brain Mapp. 2019;40(5):1403-1418.'
+    doi: 10.1002/hbm.24455
+    year: 2019
+    verified: false
+  note: 'method: intracranial; face-specific N200 recorded on the ventral fusiform gyrus (Allison 1999) and lateral fusiform
+    contributions to the scalp N170 (Jacques 2019).'
+indexes:
+- construct: CN.face_perception
+  evidence: A
+  relation: amplitude is larger for faces than for other object categories
+  sources:
+  - citation: Bentin S, Allison T, Puce A, et al. Electrophysiological studies of face perception in humans. J Cogn Neurosci.
+      1996;8(6):551-565.
+    doi: 10.1162/jocn.1996.8.6.551
+    year: 1996
+    verified: false
+  - citation: Rossion B, Jacques C. Does physical interstimulus variance account for early electrophysiological face sensitive
+      responses in the human brain? Ten lessons on the N170. NeuroImage. 2008;39(4):1959-1979.
+    doi: 10.1016/j.neuroimage.2007.10.011
+    year: 2008
+    verified: false
+  - citation: 'Allison T, et al. Electrophysiological studies of human face perception. I: Potentials generated in occipitotemporal
+      cortex by face and non-face stimuli. Cereb Cortex. 1999;9(5):415-430.'
+    doi: 10.1093/cercor/9.5.415
+    year: 1999
+    verified: false
+  - citation: 'Jacques C, Jonas J, Maillard L, et al. The inferior occipital gyrus is a major cortical source of the face-evoked
+      N170: evidence from simultaneous scalp and intracerebral human recordings. Hum Brain Mapp. 2019;40(5):1403-1418.'
+    doi: 10.1002/hbm.24455
+    year: 2019
+    verified: false
+  note: Graded A by cross-laboratory and cross-modality replication (scalp EEG, MEG M170, intracranial).
+- construct: CN.emotional_salience
+  evidence: A
+  relation: amplitude is larger for emotional than for neutral facial expressions (small-to-moderate effect)
+  sources:
+  - citation: 'Hinojosa JA, Mercado F, Carretié L. N170 sensitivity to facial expression: a meta-analysis. Neurosci Biobehav
+      Rev. 2015;55:498-509.'
+    doi: 10.1016/j.neubiorev.2015.06.002
+    year: 2015
+    verified: false
+notes: 'First-pass skeleton by package A (2026-10-03). Signature values are textbook-level approximations and await source
+  checking. Sprint 4 (2026-10-12, curator_a): generators and indexes curated; every DOI checked against its Crossref or OpenAlex
+  record (see curation/work/sprint4/markers_A/); verified: false pending full-text check.'
 status: draft
 contributors:
 - curator_a

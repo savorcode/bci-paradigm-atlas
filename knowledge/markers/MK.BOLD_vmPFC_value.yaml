@@ -1,4 +1,4 @@
-schema_version: "0.2"
+schema_version: '0.2'
 id: MK.BOLD_vmPFC_value
 name:
   en: Ventromedial prefrontal value BOLD
@@ -14,8 +14,50 @@ description:
   en: BOLD activity in ventromedial prefrontal and medial orbitofrontal cortex that scales with the subjective value of options
     or outcomes during choice.
   zh: 选择过程中腹内侧前额叶与内侧眶额皮层的 BOLD 活动，随选项或结果的主观价值变化。
-notes: 'No signature given in pass 1 (hemodynamic marker; region described in the description). Generators and indexes not
-  yet written. Used by (registry): CTL-DD-001, CTL-IGT-001, SOC-DICT-001.'
+generators:
+- region: BR.vmPFC
+  evidence: A
+  sources:
+  - citation: 'Bartra O, McGuire JT, Kable JW. The valuation system: a coordinate-based meta-analysis of BOLD fMRI experiments
+      examining neural correlates of subjective value. NeuroImage. 2013;76:412-427.'
+    doi: 10.1016/j.neuroimage.2013.02.063
+    year: 2013
+    verified: false
+  - citation: Clithero JA, Rangel A. Informatic parcellation of the network involved in the computation of subjective value.
+      Soc Cogn Affect Neurosci. 2014;9(9):1289-1302.
+    doi: 10.1093/scan/nst106
+    year: 2014
+    verified: false
+  note: 'method: fMRI localization; measured region; coordinate-based meta-analyses show vmPFC/mOFC is the most consistent
+    locus of subjective-value coding.'
+indexes:
+- construct: CN.value_decision
+  evidence: A
+  relation: BOLD increases with the subjective value of options at decision and of received outcomes, for both gains and losses
+  sources:
+  - citation: 'Bartra O, McGuire JT, Kable JW. The valuation system: a coordinate-based meta-analysis of BOLD fMRI experiments
+      examining neural correlates of subjective value. NeuroImage. 2013;76:412-427.'
+    doi: 10.1016/j.neuroimage.2013.02.063
+    year: 2013
+    verified: false
+  - citation: Clithero JA, Rangel A. Informatic parcellation of the network involved in the computation of subjective value.
+      Soc Cogn Affect Neurosci. 2014;9(9):1289-1302.
+    doi: 10.1093/scan/nst106
+    year: 2014
+    verified: false
+- construct: CN.social_interaction
+  evidence: C
+  relation: BOLD tracks the value of charitable (prosocial) choices, modulated by input from social-cognition regions
+  sources:
+  - citation: Hare TA, Camerer CF, Knoepfle DT, et al. Value computations in ventral medial prefrontal cortex during charitable
+      decision making incorporate input from regions involved in social cognition. J Neurosci. 2010;30(2):583-590.
+    doi: 10.1523/JNEUROSCI.4089-09.2010
+    year: 2010
+    verified: false
+  note: Prosocial giving mapped to CN.social_interaction (vocab request CN.social_decision); single study.
+notes: 'No signature given in pass 1 (hemodynamic marker; region described in the description). Used by (registry): CTL-DD-001,
+  CTL-IGT-001, SOC-DICT-001. Sprint 4 (2026-10-12, curator_d): generators and indexes curated; every DOI checked against its
+  Crossref or OpenAlex record (see curation/work/sprint4/markers_D/); verified: false pending full-text check.'
 status: draft
 contributors:
 - maintainer

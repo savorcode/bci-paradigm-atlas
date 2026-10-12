@@ -1,4 +1,4 @@
-schema_version: "0.2"
+schema_version: '0.2'
 id: MK.FRN
 name:
   en: Feedback-related negativity / reward positivity
@@ -24,9 +24,93 @@ description:
     feedback; the difference is equivalently described as a reward positivity for gains. It is sensitive to outcome valence
     and to the unexpectedness of the outcome (reward prediction error).
   zh: 反馈锁时的波形，损失或负性表现反馈后比获益或正性反馈后更负；这一差异也可等价地描述为获益诱发的奖赏正波（RewP）。它对结果效价及结果的意外程度（奖赏预测误差）敏感。
+generators:
+- region: BR.dACC
+  evidence: B
+  sources:
+  - citation: 'Miltner WHR, Braun CH, Coles MGH. Event-related brain potentials following incorrect feedback in a time-estimation
+      task: evidence for a "generic" neural system for error detection. J Cogn Neurosci. 1997;9(6):788-798.'
+    doi: 10.1162/jocn.1997.9.6.788
+    year: 1997
+    verified: false
+  - citation: Gehring WJ, Willoughby AR. The medial frontal cortex and the rapid processing of monetary gains and losses.
+      Science. 2002;295(5563):2279-2282.
+    doi: 10.1126/science.1066893
+    year: 2002
+    verified: false
+  - citation: 'Walsh MM, Anderson JR. Learning from experience: event-related potential correlates of reward processing, neural
+      adaptation, and behavioral choice. Neurosci Biobehav Rev. 2012;36(8):1870-1884.'
+    doi: 10.1016/j.neubiorev.2012.05.008
+    year: 2012
+    verified: false
+  note: 'method: MEG/EEG source; Dipole/source modelling of the feedback negativity places it in medial frontal / anterior
+    cingulate cortex (Miltner 1997; Gehring & Willoughby 2002); reviewed in Walsh & Anderson 2012.'
+- region: BR.striatum
+  evidence: C
+  sources:
+  - citation: 'Carlson JM, Foti D, Mujica-Parodi LR, et al. Ventral striatal and medial prefrontal BOLD activation is correlated
+      with reward-related electrocortical activity: a combined ERP and fMRI study. NeuroImage. 2011;57(4):1608-1616.'
+    doi: 10.1016/j.neuroimage.2011.05.037
+    year: 2011
+    verified: false
+  - citation: 'Foti D, Weinberg A, Dien J, et al. Event-related potential activity in the basal ganglia differentiates rewards
+      from nonrewards: temporospatial principal components analysis and source localization of the feedback negativity. Hum
+      Brain Mapp. 2011;32(12):2207-2216.'
+    doi: 10.1002/hbm.21182
+    year: 2011
+    verified: false
+  note: 'method: EEG-fMRI; ERP-fMRI covariation with ventral striatal BOLD (Carlson 2011) and PCA source
+    localization to the basal ganglia (Foti 2011); same lab, and a deep source is unlikely to be the direct scalp generator,
+    so read as network contribution.'
+indexes:
+- construct: CN.reward_prediction_error
+  evidence: A
+  relation: difference wave (loss minus gain / RewP) scales with signed reward prediction error (outcome valence x unexpectedness)
+  sources:
+  - citation: Sambrook TD, Goslin J. A neural reward prediction error revealed by a meta-analysis of ERPs using great grand
+      averages. Psychol Bull. 2015;141(1):213-235.
+    doi: 10.1037/bul0000006
+    year: 2015
+    verified: false
+  - citation: 'Walsh MM, Anderson JR. Learning from experience: event-related potential correlates of reward processing, neural
+      adaptation, and behavioral choice. Neurosci Biobehav Rev. 2012;36(8):1870-1884.'
+    doi: 10.1016/j.neubiorev.2012.05.008
+    year: 2012
+    verified: false
+  - citation: 'Holroyd CB, Coles MGH. The neural basis of human error processing: reinforcement learning, dopamine, and the
+      error-related negativity. Psychol Rev. 2002;109(4):679-709.'
+    doi: 10.1037/0033-295X.109.4.679
+    year: 2002
+    verified: false
+  note: Meta-analysis of great grand averages (Sambrook & Goslin 2015) plus review (Walsh & Anderson 2012).
+- construct: CN.error_monitoring
+  evidence: B
+  relation: more negative after negative performance feedback than after positive feedback
+  sources:
+  - citation: 'Miltner WHR, Braun CH, Coles MGH. Event-related brain potentials following incorrect feedback in a time-estimation
+      task: evidence for a "generic" neural system for error detection. J Cogn Neurosci. 1997;9(6):788-798.'
+    doi: 10.1162/jocn.1997.9.6.788
+    year: 1997
+    verified: false
+  - citation: 'Holroyd CB, Coles MGH. The neural basis of human error processing: reinforcement learning, dopamine, and the
+      error-related negativity. Psychol Rev. 2002;109(4):679-709.'
+    doi: 10.1037/0033-295X.109.4.679
+    year: 2002
+    verified: false
+- construct: CN.value_decision
+  evidence: C
+  relation: loss-related amplitude predicts riskier subsequent choices in gambling
+  sources:
+  - citation: Gehring WJ, Willoughby AR. The medial frontal cortex and the rapid processing of monetary gains and losses.
+      Science. 2002;295(5563):2279-2282.
+    doi: 10.1126/science.1066893
+    year: 2002
+    verified: false
 notes: 'Signature values are textbook-level approximations and await checking against sources (pass 2). Generators and indexes
   not yet written. Used by (registry): ERR-ADAPT-001, ERR-BANDIT-001, ERR-GAM-001, ERR-PRL-001, ERR-PSEL-001, ERR-TE-001,
-  ERR-INST-001, ERR-TS-001, CTL-IGT-001, CTL-BART-001, EMO-MID-001, SOC-TRUST-001, SOC-UG-001.'
+  ERR-INST-001, ERR-TS-001, CTL-IGT-001, CTL-BART-001, EMO-MID-001, SOC-TRUST-001, SOC-UG-001. Sprint 4 (2026-10-12, curator_c):
+  generators and indexes curated; every DOI checked against its Crossref or OpenAlex record (see curation/work/sprint4/markers_C/);
+  verified: false pending full-text check.'
 status: draft
 contributors:
 - maintainer

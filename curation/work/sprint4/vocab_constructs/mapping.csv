@@ -1,0 +1,82 @@
+id,cognitive_atlas,parent,confidence,note
+CN.perception,,,n/a,domain root; not mapped
+CN.attention,,,n/a,domain root; not mapped
+CN.memory,,,n/a,domain root; not mapped
+CN.language,,,n/a,domain root; not mapped
+CN.cognitive_control,,,n/a,domain root; not mapped
+CN.motor,,,n/a,domain root; not mapped
+CN.affect,,,n/a,domain root; not mapped
+CN.mental_imagery,,,n/a,domain root; not mapped
+CN.hmi,,,n/a,domain root; not mapped
+CN.brain_state,,,n/a,domain root; not mapped
+CN.early_visual,trm_4a3fd79d0b4b5 (visual perception),CN.perception,medium,broader than early (low-level) visual processing
+CN.object_recognition,trm_4a3fd79d0aab0 (object recognition),CN.perception,high,
+CN.face_perception,trm_4a3fd79d0a300 (face perception),CN.object_recognition,high,
+CN.auditory_change,,CN.perception,low,"tried 'auditory deviance detection', 'change detection', 'deviance detection': no concept"
+CN.neural_entrainment,,CN.perception,low,"tried 'entrainment', 'neural entrainment': no concept; 'rhythm' (trm_4a3fd79d0afc3) exists but is not equivalent"
+CN.spatial_attention,trm_557b4abe521af (spatial selective attention),CN.attention,high,
+CN.target_selection,trm_4a3fd79d0b4cd (visual search),CN.attention,medium,as in factory seed; 'selective attention' trm_4a3fd79d0b043 is the broader alternative
+CN.orienting,trm_4a3fd79d0b5fb (attention shifting),CN.attention,medium,"'orienting', 'orienting response', 'attentional orienting', 'attentional capture' not found; attention shifting does not specify involuntary"
+CN.sustained_attention,trm_4a3fd79d0b311 (sustained attention),CN.attention,high,
+CN.context_updating,trm_55b6b9a666604 (working memory updating),CN.memory,medium,'context updating' not found
+CN.working_memory,trm_4a3fd79d0b5a7 (working memory),CN.memory,high,
+CN.semantic_integration,trm_4a3fd79d0b87a (semantic processing),CN.language,medium,broader than integration
+CN.syntactic_processing,trm_4a3fd79d0b34b (syntactic processing),CN.language,high,
+CN.inner_speech,,CN.language,low,"tried 'inner speech', 'subvocal rehearsal': no concept"
+CN.conflict_monitoring,trm_4a3fd79d09e13 (conflict detection),CN.cognitive_control,high,'conflict monitoring' not found; near-synonym
+CN.error_monitoring,trm_4a3fd79d0a20c (error detection),CN.cognitive_control,medium,"covers detection, not post-error evaluation"
+CN.response_inhibition,trm_4a3fd79d0af66 (response inhibition),CN.cognitive_control,high,
+CN.anticipation,trm_4a3fd79d09849 (anticipation),CN.cognitive_control,high,
+CN.motor_preparation,trm_4a3fd79d0a9a1 (motor planning),CN.motor,medium,'motor preparation' not found; 'response selection' trm_4a3fd79d0af71 (factory seed) is an alternative
+CN.motor_imagery,,CN.motor,low,'motor imagery' (queried twice) and 'imagined movement' returned errors; factory seed lists 'motor imagery' but no id could be retrieved - recheck
+CN.reward_prediction_error,trm_4b6525253c63f (reward processing),CN.affect,medium,"'reward prediction error', 'prediction error' not found"
+CN.emotional_salience,trm_4a3fd79d0b020 (salience),CN.affect,medium,'emotional arousal' not found; salience is not emotion-specific
+CN.visual_imagery,trm_4a3fd79d0b487 (visual imagery),CN.mental_imagery,high,
+CN.language_to_imagery,,CN.visual_imagery,low,no specific concept; 'mental imagery' trm_4a3fd79d0a8fc is only a broad parent-level match
+CN.machine_error_perception,,CN.hmi,low,no specific concept; 'performance monitoring' trm_4a3fd79d0ac30 / 'error detection' refer to own errors
+CN.intent_selection,trm_4a3fd79d0a67d (intention),CN.hmi,medium,broad
+CN.cortical_idling,,CN.brain_state,low,"tried 'resting state', 'rest': no concept"
+CN.early_auditory,trm_4a3fd79d09ab2 (auditory perception),CN.perception,medium,broader than early auditory processing
+CN.somatosensation,trm_4a3fd79d0b160 (somatosensation),CN.perception,high,nociception not covered separately
+CN.chemosensation,trm_4a3fd79d0aabc (olfaction),CN.perception,medium,covers smell only; 'taste' not found
+CN.sensory_gating,,CN.perception,low,tried 'sensory gating': no concept
+CN.interoception,trm_4fe39e4388409 (interoception),CN.perception,high,
+CN.multisensory_integration,trm_4e31ced566649 (multisensory integration),CN.perception,high,
+CN.perceptual_awareness,trm_4ff36d79c26c6 (visual awareness),CN.perception,medium,'awareness' not found; visual only
+CN.perceptual_organization,,CN.perception,low,"tried 'perceptual organization', 'perceptual grouping', 'gestalt grouping': no concept"
+CN.prediction_violation,trm_4a3fd79d0b306 (surprise),CN.perception,medium,'prediction error' not found; 'expectancy' trm_4ebfe9a465449 also exists
+CN.attention_allocation,trm_4a3fd79d09925 (attentional resources),CN.attention,medium,'divided attention' trm_4a3fd79d0a116 and 'attention capacity' trm_4a3fd79d0990e also exist
+CN.distractor_suppression,trm_4c3e04d656f06 (interference resolution),CN.attention,medium,not attention-specific
+CN.episodic_encoding,trm_4a3fd79d0b8e5 (encoding),CN.memory,medium,not episodic-specific
+CN.recognition_memory,trm_4a3fd79d0b967 (recognition),CN.memory,medium,'recognition memory' not found; 'familiarity' trm_4a3fd79d0b8fc also exists
+CN.prospective_memory,trm_4a3fd79d0ae70 (prospective memory),CN.memory,high,
+CN.spatial_navigation,trm_4a3fd79d0aa00 (navigation),CN.memory,medium,'spatial memory' trm_4a3fd79d0b1d5 covers the relational-memory part
+CN.memory_consolidation,trm_4a3fd79d0b920 (memory consolidation),CN.memory,high,
+CN.speech_tracking,trm_4a3fd79d0b1f7 (speech perception),CN.language,medium,broader; no tracking-specific concept
+CN.phonological_processing,trm_52b5f1ef4f9cc (phonological processing),CN.language,high,
+CN.prosody,trm_4a3fd79d0ae64 (prosody),CN.language,high,
+CN.speech_production,trm_4a3fd79d0b247 (speech production),CN.language,high,
+CN.task_switching,trm_4a3fd79d0b613 (task switching),CN.cognitive_control,high,
+CN.evidence_accumulation,,CN.cognitive_control,low,"tried 'evidence accumulation', 'perceptual decision making': no concept; 'decision making' too broad"
+CN.metacognition,trm_4a3fd79d0a920 (metacognition),CN.cognitive_control,high,
+CN.motor_execution,trm_557b4a7315f1b (response execution),CN.motor,medium,
+CN.movement_kinematics,trm_4a3fd79d0a972 (motor control),CN.motor,medium,broad
+CN.sensorimotor_integration,,CN.motor,low,"tried 'sensorimotor integration', 'visuomotor coordination': no concept"
+CN.value_decision,trm_4a3fd79d0a038 (decision making),CN.affect,medium,broad; not value-specific
+CN.threat_fear,trm_4a3fd79d0b689 (fear),CN.affect,high,
+CN.emotional_state,trm_4a3fd79d0a17f (emotion),CN.affect,medium,'valence' trm_4a3fd79d0b429 and 'arousal' trm_4a3fd79d09883 also exist
+CN.auditory_imagery,trm_4a3fd79d09a6c (auditory imagery),CN.mental_imagery,high,
+CN.mental_arithmetic,trm_4a3fd79d0a8ed (mental arithmetic),CN.mental_imagery,high,
+CN.social,,,n/a,domain root; not mapped
+CN.mentalizing,trm_4a3fd79d0b392 (theory of mind),CN.social,high,'mentalizing' not found; synonym
+CN.self_processing,,CN.social,low,'self referential processing' not found; 'self knowledge' trm_5154b39a3193d is narrower
+CN.social_interaction,,CN.social,low,'social interaction' not found; 'joint attention' trm_4b75ed06c917d covers only a part
+CN.social_perception,trm_kYtw4QBOKCbsM (biological motion),CN.social,medium,'social perception' not found; covers biological motion only
+CN.vigilance,,CN.brain_state,low,"tried 'vigilance', 'alertness': no concept; 'arousal'/'fatigue' (trm_52583e52d5e7a) are related but not equivalent"
+CN.sleep,trm_5159c70d0e98e (sleep),CN.brain_state,high,
+CN.consciousness_level,trm_4a3fd79d09e35 (consciousness),CN.brain_state,medium,not level-specific
+CN.spontaneous_thought,,CN.brain_state,low,"tried 'mind wandering', 'mind-wandering', 'spontaneous thought', 'daydreaming': no concept"
+CN.cortical_excitability,,CN.brain_state,low,"tried 'cortical excitability': no concept (physiological, outside Cognitive Atlas scope)"
+CN.self_regulation,,CN.brain_state,low,"tried 'self regulation', 'self-regulation', 'neurofeedback': no concept; 'self control' trm_4ee8facd77dfc is not equivalent"
+CN.novelty_orienting,trm_4a3fd79d0aa47 (novelty detection),CN.orienting,medium,detection rather than orienting
+CN.sustained_visual_attention,trm_4a3fd79d0b311 (sustained attention),CN.sustained_attention,medium,not modality-specific

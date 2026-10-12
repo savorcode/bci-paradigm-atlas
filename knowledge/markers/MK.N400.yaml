@@ -1,4 +1,4 @@
-schema_version: "0.2"
+schema_version: '0.2'
 id: MK.N400
 name:
   en: N400
@@ -15,14 +15,101 @@ signature:
   polarity: negative
   topography: centro-parietal maximum
 description:
-  en: >-
-    Negative-going ERP deflection elicited by meaningful or potentially meaningful stimuli such as words, pictures
-    and gestures. Its amplitude is reduced when the stimulus is expected or semantically related to the preceding
-    context and increased for anomalous or unexpected items.
+  en: Negative-going ERP deflection elicited by meaningful or potentially meaningful stimuli such as words, pictures and gestures.
+    Its amplitude is reduced when the stimulus is expected or semantically related to the preceding context and increased
+    for anomalous or unexpected items.
   zh: 由词语、图片、手势等有意义或潜在有意义的刺激诱发的负向 ERP 成分。刺激符合预期或与先前语境语义相关时波幅减小，语义违例或意外项目则使波幅增大。
-notes: >-
-  First-pass skeleton (curator_d, 2026-10-03). Signature values are textbook-level approximations that await source
-  checking; generators and indexes will be added in the second pass.
+generators:
+- region: BR.MTG
+  evidence: B
+  sources:
+  - citation: Halgren E, Dhond RP, Christensen N, et al. N400-like magnetoencephalography responses modulated by semantic
+      context, word frequency, and lexical class in sentences. NeuroImage. 2002;17(3):1101-1116.
+    doi: 10.1006/nimg.2002.1268
+    year: 2002
+    verified: false
+  - citation: 'Lau EF, Phillips C, Poeppel D. A cortical network for semantics: (de)constructing the N400. Nat Rev Neurosci.
+      2008;9(12):920-933.'
+    doi: 10.1038/nrn2532
+    year: 2008
+    verified: false
+  note: 'method: MEG/EEG source; MEG source estimates of the N400m in left temporal cortex (Halgren 2002); left posterior
+    MTG emphasised as lexical-access hub in the review of Lau 2008.'
+- region: BR.ATL
+  evidence: B
+  sources:
+  - citation: Nobre AC, Allison T, McCarthy G. Word recognition in the human inferior temporal lobe. Nature. 1994;372(6503):260-263.
+    doi: 10.1038/372260a0
+    year: 1994
+    verified: false
+  - citation: Halgren E, Dhond RP, Christensen N, et al. N400-like magnetoencephalography responses modulated by semantic
+      context, word frequency, and lexical class in sentences. NeuroImage. 2002;17(3):1101-1116.
+    doi: 10.1006/nimg.2002.1268
+    year: 2002
+    verified: false
+  note: 'method: intracranial; Intracranial recordings show an N400-like potential in anterior/inferior temporal cortex (Nobre
+    1994); MEG anterior temporal sources (Halgren 2002).'
+- region: BR.IFG
+  evidence: C
+  sources:
+  - citation: Halgren E, Dhond RP, Christensen N, et al. N400-like magnetoencephalography responses modulated by semantic
+      context, word frequency, and lexical class in sentences. NeuroImage. 2002;17(3):1101-1116.
+    doi: 10.1006/nimg.2002.1268
+    year: 2002
+    verified: false
+  - citation: 'Lau EF, Phillips C, Poeppel D. A cortical network for semantics: (de)constructing the N400. Nat Rev Neurosci.
+      2008;9(12):920-933.'
+    doi: 10.1038/nrn2532
+    year: 2008
+    verified: false
+  note: 'method: MEG/EEG source; Later IFG contribution in MEG source estimates (Halgren 2002) and the network review of Lau
+    2008.'
+indexes:
+- construct: CN.semantic_integration
+  evidence: A
+  relation: amplitude increases for semantically incongruent or less related words; reduced for contextually congruent words
+  sources:
+  - citation: 'Kutas M, Hillyard SA. Reading senseless sentences: brain potentials reflect semantic incongruity. Science.
+      1980;207(4427):203-205.'
+    doi: 10.1126/science.7350657
+    year: 1980
+    verified: false
+  - citation: 'Kutas M, Federmeier KD. Thirty years and counting: finding meaning in the N400 component of the event-related
+      brain potential (ERP). Annu Rev Psychol. 2011;62(1):621-647.'
+    doi: 10.1146/annurev.psych.093008.131123
+    year: 2011
+    verified: false
+  - citation: 'Šoškić A, Jovanović V, Styles SJ, et al. How to do better N400 studies: reproducibility, consistency and adherence
+      to research standards in the existing literature. Neuropsychol Rev. 2022;32(3):577-600.'
+    doi: 10.1007/s11065-021-09513-4
+    year: 2022
+    verified: false
+  note: Original finding (Kutas & Hillyard 1980), comprehensive review (Kutas & Federmeier 2011) and systematic review of
+    N400 literature (Šoškić 2022).
+- construct: CN.prediction_violation
+  evidence: B
+  relation: amplitude decreases with cloze probability (predictability) of the word
+  sources:
+  - citation: DeLong KA, Urbach TP, Kutas M. Probabilistic word pre-activation during language comprehension inferred from
+      electrical brain activity. Nat Neurosci. 2005;8(8):1117-1121.
+    doi: 10.1038/nn1504
+    year: 2005
+    verified: false
+  - citation: Nieuwland MS, Politzer-Ahles S, Heyselaar E, et al. Large-scale replication study reveals a limit on probabilistic
+      prediction in language comprehension. eLife. 2018;7:e33468.
+    doi: 10.7554/eLife.33468
+    year: 2018
+    verified: false
+  - citation: 'Kutas M, Federmeier KD. Thirty years and counting: finding meaning in the N400 component of the event-related
+      brain potential (ERP). Annu Rev Psychol. 2011;62(1):621-647.'
+    doi: 10.1146/annurev.psych.093008.131123
+    year: 2011
+    verified: false
+  note: Article-based prediction effect of DeLong 2005 did not replicate in Nieuwland 2018, but the noun cloze effect did.
+notes: 'First-pass skeleton (curator_d, 2026-10-03). Signature values are textbook-level approximations that await source
+  checking; generators and indexes will be added in the second pass. Sprint 4 (2026-10-12, curator_c): generators and indexes
+  curated; every DOI checked against its Crossref or OpenAlex record (see curation/work/sprint4/markers_C/); verified: false
+  pending full-text check.'
 status: draft
 contributors:
 - maintainer

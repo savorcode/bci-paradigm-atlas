@@ -1,4 +1,4 @@
-schema_version: "0.2"
+schema_version: '0.2'
 id: MK.N1_auditory
 name:
   en: Auditory N1 (N100)
@@ -21,8 +21,65 @@ description:
   en: Obligatory negative component of the long-latency auditory evoked potential around 100 ms, generated largely in auditory
     cortex; it is enhanced by selective attention and reduced for self-generated sounds.
   zh: 长潜伏期听觉诱发电位中约 100 ms 的必然负成分，主要产生于听皮层；选择性注意使其增强，自身产生的声音使其减弱。
-notes: First-pass skeleton by package A (2026-10-03). No generators/indexes yet. Signature values are textbook-level approximations
-  and await source checking.
+generators:
+- region: BR.STG
+  evidence: B
+  sources:
+  - citation: 'Godey B, Schwartz D, de Graaf JB, et al. Neuromagnetic source localization of auditory evoked fields and intracerebral
+      evoked potentials: a comparison of data in the same patients. Clin Neurophysiol. 2001;112(10):1850-1859.'
+    doi: 10.1016/S1388-2457(01)00636-8
+    year: 2001
+    verified: false
+  - citation: 'Näätänen R, Picton T. The N1 wave of the human electric and magnetic response to sound: a review and an analysis
+      of the component structure. Psychophysiology. 1987;24(4):375-425.'
+    doi: 10.1111/j.1469-8986.1987.tb00311.x
+    year: 1987
+    verified: false
+  note: 'method: intracranial; N1/N1m sources on the supratemporal plane (planum temporale, lateral Heschl gyrus) confirmed
+    by depth recordings in the same patients (Godey 2001); multiple N1 subcomponents reviewed by Näätänen & Picton 1987.'
+- region: BR.A1
+  evidence: C
+  sources:
+  - citation: 'Godey B, Schwartz D, de Graaf JB, et al. Neuromagnetic source localization of auditory evoked fields and intracerebral
+      evoked potentials: a comparison of data in the same patients. Clin Neurophysiol. 2001;112(10):1850-1859.'
+    doi: 10.1016/S1388-2457(01)00636-8
+    year: 2001
+    verified: false
+  note: 'method: intracranial; Heschl gyrus contributes to the N1 complex in depth recordings, but the main N1m source lies
+    posterior-lateral in planum temporale (Godey 2001).'
+indexes:
+- construct: CN.early_auditory
+  evidence: B
+  relation: amplitude increases with stimulus onset intensity and inter-stimulus interval (obligatory sensory response)
+  sources:
+  - citation: 'Näätänen R, Picton T. The N1 wave of the human electric and magnetic response to sound: a review and an analysis
+      of the component structure. Psychophysiology. 1987;24(4):375-425.'
+    doi: 10.1111/j.1469-8986.1987.tb00311.x
+    year: 1987
+    verified: false
+  - citation: 'Godey B, Schwartz D, de Graaf JB, et al. Neuromagnetic source localization of auditory evoked fields and intracerebral
+      evoked potentials: a comparison of data in the same patients. Clin Neurophysiol. 2001;112(10):1850-1859.'
+    doi: 10.1016/S1388-2457(01)00636-8
+    year: 2001
+    verified: false
+- construct: CN.spatial_attention
+  evidence: B
+  relation: amplitude increases for sounds in the attended ear/channel
+  sources:
+  - citation: Hillyard SA, Hink RF, Schwent VL, et al. Electrical signs of selective attention in the human brain. Science.
+      1973;182(4108):177-180.
+    doi: 10.1126/science.182.4108.177
+    year: 1973
+    verified: false
+  - citation: 'Näätänen R, Picton T. The N1 wave of the human electric and magnetic response to sound: a review and an analysis
+      of the component structure. Psychophysiology. 1987;24(4):375-425.'
+    doi: 10.1111/j.1469-8986.1987.tb00311.x
+    year: 1987
+    verified: false
+  note: Auditory channel (ear) selection; no separate auditory selective-attention construct in vocabulary, see vocab_requests.csv.
+notes: 'First-pass skeleton by package A (2026-10-03). Signature values are textbook-level approximations and await source
+  checking. Sprint 4 (2026-10-12, curator_a): generators and indexes curated; every DOI checked against its Crossref or OpenAlex
+  record (see curation/work/sprint4/markers_A/); verified: false pending full-text check.'
 status: draft
 contributors:
 - curator_a

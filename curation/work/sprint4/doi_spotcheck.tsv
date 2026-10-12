@@ -1,0 +1,21 @@
+doi	status	detail
+10.1523/jneurosci.17-11-04302.1997	match	OpenAlex: Kanwisher 1997 J Neurosci
+10.1038/nn1504	match	OpenAlex: DeLong 2005 Nat Neurosci
+10.1093/cercor/bhl017	minor	Crossref (OpenAlex 429): Sabatinelli, title ok; year 2006 (online) vs cited 2007 (print issue)
+10.1016/j.neuron.2013.07.007	match	OpenAlex: Shenhav 2013 Neuron
+10.1111/1469-8986.3840685	match	OpenAlex: Allen 2001 Psychophysiology; citation truncated before year, title+author agree
+10.1002/hbm.21182	match	OpenAlex: Foti 2011 Hum Brain Mapp; citation truncated before year, title+author agree
+10.1109/tbme.2007.908083	match	OpenAlex: Ferrez 2008 IEEE TBME
+10.1523/jneurosci.4004-09.2009	match	OpenAlex: Laird 2009 J Neurosci; citation truncated before year
+10.1038/nrn2555	minor	OpenAlex: Craig, title ok; year 2008 (online) vs cited 2009 (print issue)
+10.1177/1073858407304654	match	OpenAlex: Decety 2007 Neuroscientist; citation truncated before year
+10.1037/h0032177	match	OpenAlex: Tecce 1972 Psychol Bull
+10.1002/hbm.10010	minor	OpenAlex: Di Russo, title ok; year 2001 (online) vs cited 2002 (print issue)
+10.1016/j.neuropsychologia.2009.02.028	match	Crossref (OpenAlex 429): Spaniol 2009 Neuropsychologia
+10.1152/physrev.00042.2018	minor	OpenAlex: Fernandez, title ok; year 2019 (online) vs cited 2020 (print issue)
+10.1109/taffc.2017.2712143	minor	OpenAlex: Zheng, title ok; year 2017 (online) vs cited 2019 (print issue)
+10.1016/s0001-6918(99)00008-6	match	Crossref (OpenAlex 429): Falkenstein 1999 Acta Psychol
+10.1093/brain/awp313	match	OpenAlex: Vanhaudenhuyse 2009 Brain; citation truncated before year
+10.1027/0269-8803.21.34.188	match	OpenAlex: Deouell 2007 J Psychophysiol
+10.1016/j.brainresbull.2006.10.012	match	OpenAlex: Bares 2006 Brain Res Bull; citation truncated before year (year unverified)
+10.1016/s1388-2457(99)00141-8	match	OpenAlex: Pfurtscheller 1999 Clin Neurophysiol

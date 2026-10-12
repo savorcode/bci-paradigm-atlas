@@ -1,4 +1,4 @@
-schema_version: "0.2"
+schema_version: '0.2'
 id: MK.BOLD_dACC
 name:
   en: Dorsal anterior cingulate BOLD
@@ -14,8 +14,67 @@ description:
   en: BOLD activity in dorsal anterior cingulate cortex (and adjacent medial frontal cortex) that increases with response
     conflict and interference, and with the valuation of effort and of alternatives to the current option.
   zh: 背侧前扣带皮层（及邻近内侧额叶）的 BOLD 活动，随反应冲突与干扰增加，并与对努力及当前选项之外的替代选项的价值评估相关。
-notes: 'No signature given in pass 1 (hemodynamic marker; region described in the description). Generators and indexes not
-  yet written. Used by (registry): CTL-EFF-001, SOC-CYB-001.'
+generators:
+- region: BR.dACC
+  evidence: A
+  sources:
+  - citation: 'Nee DE, Wager TD, Jonides J. Interference resolution: insights from a meta-analysis of neuroimaging tasks.
+      Cogn Affect Behav Neurosci. 2007;7(1):1-17.'
+    doi: 10.3758/CABN.7.1.1
+    year: 2007
+    verified: false
+  note: 'method: fMRI localization; measured region; meta-analysis of interference-resolution tasks (Stroop, flanker, go/no-go
+    etc.) shows consistent dACC/medial frontal activation.'
+indexes:
+- construct: CN.conflict_monitoring
+  evidence: A
+  relation: BOLD increases with response conflict / interference
+  sources:
+  - citation: 'Nee DE, Wager TD, Jonides J. Interference resolution: insights from a meta-analysis of neuroimaging tasks.
+      Cogn Affect Behav Neurosci. 2007;7(1):1-17.'
+    doi: 10.3758/CABN.7.1.1
+    year: 2007
+    verified: false
+  - citation: 'Botvinick MM, Cohen JD, Carter CS. Conflict monitoring and anterior cingulate cortex: an update. Trends Cogn
+      Sci. 2004;8(12):539-546.'
+    doi: 10.1016/j.tics.2004.10.003
+    year: 2004
+    verified: false
+- construct: CN.value_decision
+  evidence: B
+  relation: BOLD increases with the value of foraging away from the current option and with the expected value of exerting
+    control/effort
+  sources:
+  - citation: Kolling N, Behrens TEJ, Mars RB, et al. Neural mechanisms of foraging. Science. 2012;336(6077):95-98.
+    doi: 10.1126/science.1216930
+    year: 2012
+    verified: false
+  - citation: 'Shenhav A, Botvinick MM, Cohen JD. The expected value of control: an integrative theory of anterior cingulate
+      cortex function. Neuron. 2013;79(2):217-240.'
+    doi: 10.1016/j.neuron.2013.07.007
+    year: 2013
+    verified: false
+  note: Effort/foraging valuation; Shenhav 2013 is a theoretical review, Kolling 2012 an fMRI study.
+- construct: CN.social_interaction
+  evidence: B
+  relation: BOLD increases during social exclusion (Cyberball)
+  sources:
+  - citation: Eisenberger NI, Lieberman MD, Williams KD. Does rejection hurt? An fMRI study of social exclusion. Science.
+      2003;302(5643):290-292.
+    doi: 10.1126/science.1089134
+    year: 2003
+    verified: false
+  - citation: Rotgé JY, Lemogne C, Hinfray S, et al. A meta-analysis of the anterior cingulate contribution to social pain.
+      Soc Cogn Affect Neurosci. 2015;10(1):19-27.
+    doi: 10.1093/scan/nsu110
+    year: 2015
+    verified: false
+  note: Rotge 2015 meta-analysis finds social-pain effects in ventral (subgenual/pregenual) as well as dorsal ACC, and Cyberball
+    mainly in midcingulate; dACC-specific claim graded B. Mapped to CN.social_interaction (vocab request CN.social_decision
+    / social exclusion).
+notes: 'No signature given in pass 1 (hemodynamic marker; region described in the description). Used by (registry): CTL-EFF-001,
+  SOC-CYB-001. Sprint 4 (2026-10-12, curator_d): generators and indexes curated; every DOI checked against its Crossref or
+  OpenAlex record (see curation/work/sprint4/markers_D/); verified: false pending full-text check.'
 status: draft
 contributors:
 - maintainer

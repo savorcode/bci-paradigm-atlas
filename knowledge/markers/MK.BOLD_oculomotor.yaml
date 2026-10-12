@@ -1,11 +1,89 @@
-schema_version: "0.2"
+schema_version: '0.2'
 id: MK.BOLD_oculomotor
-name: {en: 'Oculomotor network BOLD (FEF, SEF, IPS)', zh: 眼动网络 BOLD（额眼区、辅助眼区、顶内沟）}
-aliases: [eye-field activation, FEF BOLD]
+name:
+  en: Oculomotor network BOLD (FEF, SEF, IPS)
+  zh: 眼动网络 BOLD（额眼区、辅助眼区、顶内沟）
+aliases:
+- eye-field activation
+- FEF BOLD
 type: hemodynamic
-recording_modality: [fMRI]
-signature: {topography: 'frontal eye field, supplementary eye field, intraparietal sulcus'}
-description: {en: 'Haemodynamic response in the frontal and supplementary eye fields and the intraparietal sulcus during the preparation and execution of eye movements, including saccades and smooth pursuit.', zh: 准备与执行眼动（包括眼跳与平滑追踪）时，额眼区、辅助眼区和顶内沟的血流动力学响应。}
-notes: Signature values are textbook-level characteristics and await source checking (first pass, curator_b). Generators and indexes to be added in the second pass.
+recording_modality:
+- fMRI
+signature:
+  topography: frontal eye field, supplementary eye field, intraparietal sulcus
+description:
+  en: Haemodynamic response in the frontal and supplementary eye fields and the intraparietal sulcus during the preparation
+    and execution of eye movements, including saccades and smooth pursuit.
+  zh: 准备与执行眼动（包括眼跳与平滑追踪）时，额眼区、辅助眼区和顶内沟的血流动力学响应。
+generators:
+- region: BR.FEF
+  evidence: A
+  sources:
+  - citation: Grosbras MH, Laird AR, Paus T. Cortical regions involved in eye movements, shifts of attention, and gaze perception.
+      Hum Brain Mapp. 2005;25(1):140-154.
+    doi: 10.1002/hbm.20145
+    year: 2005
+    verified: false
+  - citation: Jamadar SD, Fielding J, Egan GF. Quantitative meta-analysis of fMRI and PET studies reveals consistent activation
+      in fronto-striatal-parietal regions and cerebellum during antisaccades and prosaccades. Front Psychol. 2013;4:749.
+    doi: 10.3389/fpsyg.2013.00749
+    year: 2013
+    verified: false
+  note: 'method: fMRI localization; FEF consistently activated in saccade meta-analyses; SEF has no vocabulary id (vocab request
+    BR.SEF) and is covered here only in the description.'
+- region: BR.IPS
+  evidence: A
+  sources:
+  - citation: Grosbras MH, Laird AR, Paus T. Cortical regions involved in eye movements, shifts of attention, and gaze perception.
+      Hum Brain Mapp. 2005;25(1):140-154.
+    doi: 10.1002/hbm.20145
+    year: 2005
+    verified: false
+  - citation: Jamadar SD, Fielding J, Egan GF. Quantitative meta-analysis of fMRI and PET studies reveals consistent activation
+      in fronto-striatal-parietal regions and cerebellum during antisaccades and prosaccades. Front Psychol. 2013;4:749.
+    doi: 10.3389/fpsyg.2013.00749
+    year: 2013
+    verified: false
+  note: 'method: fMRI localization; parietal eye field along the intraparietal sulcus.'
+indexes:
+- construct: CN.spatial_attention
+  evidence: A
+  relation: FEF/IPS BOLD increases during covert shifts of attention, overlapping saccade-related activity
+  sources:
+  - citation: Grosbras MH, Laird AR, Paus T. Cortical regions involved in eye movements, shifts of attention, and gaze perception.
+      Hum Brain Mapp. 2005;25(1):140-154.
+    doi: 10.1002/hbm.20145
+    year: 2005
+    verified: false
+  - citation: Corbetta M, Akbudak E, Conturo TE, et al. A common network of functional areas for attention and eye movements.
+      Neuron. 1998;21(4):761-773.
+    doi: 10.1016/S0896-6273(00)80593-0
+    year: 1998
+    verified: false
+- construct: CN.response_inhibition
+  evidence: B
+  relation: FEF/SEF and parietal BOLD are larger for antisaccades than prosaccades
+  sources:
+  - citation: Jamadar SD, Fielding J, Egan GF. Quantitative meta-analysis of fMRI and PET studies reveals consistent activation
+      in fronto-striatal-parietal regions and cerebellum during antisaccades and prosaccades. Front Psychol. 2013;4:749.
+    doi: 10.3389/fpsyg.2013.00749
+    year: 2013
+    verified: false
+  note: meta-analysis supports the activation difference; interpretation as inhibition is inferential, hence B.
+- construct: CN.motor_preparation
+  evidence: C
+  relation: FEF BOLD increases during the preparatory period before a saccade
+  sources:
+  - citation: Connolly JD, Goodale MA, Menon RS, et al. Human fMRI evidence for the neural correlates of preparatory set.
+      Nat Neurosci. 2002;5(12):1345-1352.
+    doi: 10.1038/nn969
+    year: 2002
+    verified: false
+notes: 'Signature values are textbook-level characteristics and await source checking (first pass, curator_b). Generators
+  and indexes to be added in the second pass. Sprint 4 (2026-10-12, curator_e): generators and indexes curated; every DOI
+  checked against its Crossref or OpenAlex record (see curation/work/sprint4/markers_E/); verified: false pending full-text
+  check.'
 status: draft
-contributors: [maintainer, curator_b]
+contributors:
+- maintainer
+- curator_b

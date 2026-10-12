@@ -1,4 +1,4 @@
-schema_version: "0.2"
+schema_version: '0.2'
 id: MK.BOLD_striatum_reward
 name:
   en: Striatal reward/prediction-error BOLD
@@ -14,8 +14,80 @@ description:
   en: BOLD activity in the striatum, especially the ventral striatum, that scales with reward anticipation, reward outcomes
     and reward prediction errors during learning and choice.
   zh: 纹状体（尤其是腹侧纹状体）的 BOLD 活动，在学习和选择过程中随奖赏预期、奖赏结果和奖赏预测误差变化。
-notes: 'No signature given in pass 1 (hemodynamic marker; region described in the description). Generators and indexes not
-  yet written. Used by (registry): ERR-PRL-001, ERR-INST-001, ERR-PCL-001, ERR-TS-001, CTL-DD-001, EMO-MID-001, SOC-TRUST-001.'
+generators:
+- region: BR.striatum
+  evidence: A
+  sources:
+  - citation: 'Liu X, Hairston J, Schrier M, et al. Common and distinct networks underlying reward valence and processing
+      stages: a meta-analysis of functional neuroimaging studies. Neurosci Biobehav Rev. 2011;35(5):1219-1236.'
+    doi: 10.1016/j.neubiorev.2010.12.012
+    year: 2011
+    verified: false
+  - citation: 'Bartra O, McGuire JT, Kable JW. The valuation system: a coordinate-based meta-analysis of BOLD fMRI experiments
+      examining neural correlates of subjective value. NeuroImage. 2013;76:412-427.'
+    doi: 10.1016/j.neuroimage.2013.02.063
+    year: 2013
+    verified: false
+  note: 'method: fMRI localization; measured region; reward meta-analyses localise anticipation, outcome and value effects
+    to ventral striatum / nucleus accumbens.'
+- region: BR.dorsal_striatum
+  evidence: B
+  sources:
+  - citation: O'Doherty J, Dayan P, Schultz J, et al. Dissociable roles of ventral and dorsal striatum in instrumental conditioning.
+      Science. 2004;304(5669):452-454.
+    doi: 10.1126/science.1094285
+    year: 2004
+    verified: false
+  - citation: 'Garrison J, Erdeniz B, Done J. Prediction error in reinforcement learning: a meta-analysis of neuroimaging
+      studies. Neurosci Biobehav Rev. 2013;37(7):1297-1310.'
+    doi: 10.1016/j.neubiorev.2013.03.023
+    year: 2013
+    verified: false
+  note: 'method: fMRI localization; prediction-error signals extend to dorsal striatum (caudate/putamen), particularly in
+    instrumental tasks (O''Doherty et al. 2004; Garrison et al. 2013 meta-analysis).'
+indexes:
+- construct: CN.reward_prediction_error
+  evidence: A
+  relation: BOLD scales with signed reward prediction error during reinforcement learning
+  sources:
+  - citation: 'Garrison J, Erdeniz B, Done J. Prediction error in reinforcement learning: a meta-analysis of neuroimaging
+      studies. Neurosci Biobehav Rev. 2013;37(7):1297-1310.'
+    doi: 10.1016/j.neubiorev.2013.03.023
+    year: 2013
+    verified: false
+  - citation: O'Doherty J, Dayan P, Schultz J, et al. Dissociable roles of ventral and dorsal striatum in instrumental conditioning.
+      Science. 2004;304(5669):452-454.
+    doi: 10.1126/science.1094285
+    year: 2004
+    verified: false
+- construct: CN.value_decision
+  evidence: A
+  relation: BOLD increases with subjective value of options and outcomes
+  sources:
+  - citation: 'Bartra O, McGuire JT, Kable JW. The valuation system: a coordinate-based meta-analysis of BOLD fMRI experiments
+      examining neural correlates of subjective value. NeuroImage. 2013;76:412-427.'
+    doi: 10.1016/j.neuroimage.2013.02.063
+    year: 2013
+    verified: false
+- construct: CN.anticipation
+  evidence: A
+  relation: BOLD increases during anticipation of monetary reward, scaling with reward magnitude
+  sources:
+  - citation: 'Oldham S, Murawski C, Fornito A, et al. The anticipation and outcome phases of reward and loss processing:
+      a neuroimaging meta-analysis of the monetary incentive delay task. Hum Brain Mapp. 2018;39(8):3398-3418.'
+    doi: 10.1002/hbm.24184
+    year: 2018
+    verified: false
+  - citation: Knutson B, Adams CM, Fong GW, et al. Anticipation of increasing monetary reward selectively recruits nucleus
+      accumbens. J Neurosci. 2001;21(16):RC159.
+    doi: 10.1523/JNEUROSCI.21-16-j0002.2001
+    year: 2001
+    verified: false
+  note: Reward anticipation mapped to CN.anticipation (vocab request CN.reward_anticipation).
+notes: 'No signature given in pass 1 (hemodynamic marker; region described in the description). Used by (registry): ERR-PRL-001,
+  ERR-INST-001, ERR-PCL-001, ERR-TS-001, CTL-DD-001, EMO-MID-001, SOC-TRUST-001. Sprint 4 (2026-10-12, curator_d): generators
+  and indexes curated; every DOI checked against its Crossref or OpenAlex record (see curation/work/sprint4/markers_D/); verified:
+  false pending full-text check.'
 status: draft
 contributors:
 - maintainer

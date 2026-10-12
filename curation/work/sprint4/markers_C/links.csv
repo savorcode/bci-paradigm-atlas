@@ -1,0 +1,95 @@
+marker,link_type,target,evidence,method,doi,record_api,note
+MK.ERN,generator,BR.dACC,A,MEG/EEG source,10.1111/j.1467-9280.1994.tb00630.x,https://api.crossref.org/works/10.1111/j.1467-9280.1994.tb00630.x,
+MK.ERN,generator,BR.dACC,A,MEG/EEG source,10.1016/S0301-0511(03)00107-8,https://api.openalex.org/works/doi:10.1016/S0301-0511(03)00107-8,
+MK.ERN,generator,BR.dACC,A,MEG/EEG source,10.1126/science.1100301,https://api.crossref.org/works/10.1126/science.1100301,
+MK.ERN,index,CN.error_monitoring,A,,10.1016/0013-4694(91)90062-9,https://api.crossref.org/works/10.1016/0013-4694(91)90062-9,"Replicated across independent labs (Falkenstein 1991, Gehring 1993) and modalities (MEG, Miltner 2003); reinforcement-learning account in Holroyd & Coles 2002."
+MK.ERN,index,CN.error_monitoring,A,,10.1111/j.1467-9280.1993.tb00586.x,https://api.crossref.org/works/10.1111/j.1467-9280.1993.tb00586.x,"Replicated across independent labs (Falkenstein 1991, Gehring 1993) and modalities (MEG, Miltner 2003); reinforcement-learning account in Holroyd & Coles 2002."
+MK.ERN,index,CN.error_monitoring,A,,10.1037/0033-295X.109.4.679,https://api.crossref.org/works/10.1037/0033-295X.109.4.679,"Replicated across independent labs (Falkenstein 1991, Gehring 1993) and modalities (MEG, Miltner 2003); reinforcement-learning account in Holroyd & Coles 2002."
+MK.ERN,index,CN.error_monitoring,A,,10.1016/S0301-0511(03)00107-8,https://api.openalex.org/works/doi:10.1016/S0301-0511(03)00107-8,"Replicated across independent labs (Falkenstein 1991, Gehring 1993) and modalities (MEG, Miltner 2003); reinforcement-learning account in Holroyd & Coles 2002."
+MK.ERN,index,CN.conflict_monitoring,C,,10.1037/0033-295X.111.4.931,https://api.crossref.org/works/10.1037/0033-295X.111.4.931,"Computational account (Yeung 2004); competing with the reinforcement-learning account, hence C."
+MK.FRN,generator,BR.dACC,B,MEG/EEG source,10.1162/jocn.1997.9.6.788,https://api.crossref.org/works/10.1162/jocn.1997.9.6.788,
+MK.FRN,generator,BR.dACC,B,MEG/EEG source,10.1126/science.1066893,https://api.crossref.org/works/10.1126/science.1066893,
+MK.FRN,generator,BR.dACC,B,MEG/EEG source,10.1016/j.neubiorev.2012.05.008,https://api.crossref.org/works/10.1016/j.neubiorev.2012.05.008,
+MK.FRN,generator,BR.striatum,C,EEG-fMRI,10.1016/j.neuroimage.2011.05.037,https://api.openalex.org/works/doi:10.1016/j.neuroimage.2011.05.037,
+MK.FRN,generator,BR.striatum,C,EEG-fMRI,10.1002/hbm.21182,https://api.crossref.org/works/10.1002/hbm.21182,
+MK.FRN,index,CN.reward_prediction_error,A,,10.1037/bul0000006,https://api.crossref.org/works/10.1037/bul0000006,Meta-analysis of great grand averages (Sambrook & Goslin 2015) plus review (Walsh & Anderson 2012).
+MK.FRN,index,CN.reward_prediction_error,A,,10.1016/j.neubiorev.2012.05.008,https://api.crossref.org/works/10.1016/j.neubiorev.2012.05.008,Meta-analysis of great grand averages (Sambrook & Goslin 2015) plus review (Walsh & Anderson 2012).
+MK.FRN,index,CN.reward_prediction_error,A,,10.1037/0033-295X.109.4.679,https://api.crossref.org/works/10.1037/0033-295X.109.4.679,Meta-analysis of great grand averages (Sambrook & Goslin 2015) plus review (Walsh & Anderson 2012).
+MK.FRN,index,CN.error_monitoring,B,,10.1162/jocn.1997.9.6.788,https://api.crossref.org/works/10.1162/jocn.1997.9.6.788,
+MK.FRN,index,CN.error_monitoring,B,,10.1037/0033-295X.109.4.679,https://api.crossref.org/works/10.1037/0033-295X.109.4.679,
+MK.FRN,index,CN.value_decision,C,,10.1126/science.1066893,https://api.crossref.org/works/10.1126/science.1066893,
+MK.oERN,generator,BR.dACC,C,MEG/EEG source,10.1038/nn1239,https://api.crossref.org/works/10.1038/nn1239,
+MK.oERN,index,CN.error_monitoring,B,,10.1038/nn1239,https://api.crossref.org/works/10.1038/nn1239,
+MK.oERN,index,CN.error_monitoring,B,,10.1027/0269-8803.19.4.281,https://api.crossref.org/works/10.1027/0269-8803.19.4.281,
+MK.oERN,index,CN.machine_error_perception,C,,10.3389/fnins.2014.00208,https://api.crossref.org/works/10.3389/fnins.2014.00208,Review of observation/interaction ErrPs in BCI (Chavarriaga 2014); the distinction from MK.ErrP is not clear-cut.
+MK.Pe,generator,BR.dACC,C,MEG/EEG source,10.1162/08989290260045837,https://api.openalex.org/works/doi:10.1162/08989290260045837,
+MK.Pe,generator,BR.anterior_insula,C,fMRI localization,10.1007/s00429-010-0261-1,https://api.crossref.org/works/10.1007/s00429-010-0261-1,
+MK.Pe,index,CN.error_monitoring,A,,10.3389/fnhum.2012.00088,https://api.crossref.org/works/10.3389/fnhum.2012.00088,"Systematic evaluation of the error-awareness literature (Wessel 2012) consistently finds Pe, not ERN, tracks awareness; primary studies Nieuwenhuis 2001, Murphy 2012."
+MK.Pe,index,CN.error_monitoring,A,,10.1111/1469-8986.3850752,https://api.openalex.org/works/doi:10.1111/1469-8986.3850752,"Systematic evaluation of the error-awareness literature (Wessel 2012) consistently finds Pe, not ERN, tracks awareness; primary studies Nieuwenhuis 2001, Murphy 2012."
+MK.Pe,index,CN.error_monitoring,A,,10.3389/fnhum.2012.00065,https://api.openalex.org/works/doi:10.3389/fnhum.2012.00065,"Systematic evaluation of the error-awareness literature (Wessel 2012) consistently finds Pe, not ERN, tracks awareness; primary studies Nieuwenhuis 2001, Murphy 2012."
+MK.Pe,index,CN.evidence_accumulation,C,,10.3389/fnhum.2012.00065,https://api.openalex.org/works/doi:10.3389/fnhum.2012.00065,
+MK.ErrP,generator,BR.dACC,C,MEG/EEG source,10.1109/TBME.2007.908083,https://api.openalex.org/works/doi:10.1109/TBME.2007.908083,
+MK.ErrP,index,CN.machine_error_perception,B,,10.1109/TBME.2007.908083,https://api.openalex.org/works/doi:10.1109/TBME.2007.908083,Independent groups (Millán lab; Spüler & Niethammer) and BCI review.
+MK.ErrP,index,CN.machine_error_perception,B,,10.1109/TNSRE.2010.2053387,https://api.crossref.org/works/10.1109/TNSRE.2010.2053387,Independent groups (Millán lab; Spüler & Niethammer) and BCI review.
+MK.ErrP,index,CN.machine_error_perception,B,,10.3389/fnhum.2015.00155,https://api.crossref.org/works/10.3389/fnhum.2015.00155,Independent groups (Millán lab; Spüler & Niethammer) and BCI review.
+MK.ErrP,index,CN.machine_error_perception,B,,10.3389/fnins.2014.00208,https://api.crossref.org/works/10.3389/fnins.2014.00208,Independent groups (Millán lab; Spüler & Niethammer) and BCI review.
+MK.ErrP,index,CN.error_monitoring,B,,10.3389/fnhum.2015.00155,https://api.crossref.org/works/10.3389/fnhum.2015.00155,
+MK.ErrP,index,CN.error_monitoring,B,,10.3389/fnins.2014.00208,https://api.crossref.org/works/10.3389/fnins.2014.00208,
+MK.N2_frontocentral,generator,BR.dACC,B,MEG/EEG source,10.1162/08989290260045837,https://api.openalex.org/works/doi:10.1162/08989290260045837,
+MK.N2_frontocentral,generator,BR.dACC,B,MEG/EEG source,10.3758/CABN.3.1.17,https://api.openalex.org/works/doi:10.3758/CABN.3.1.17,
+MK.N2_frontocentral,generator,BR.OFC_lateral,C,MEG/EEG source,10.1016/S1388-2457(01)00691-5,https://api.openalex.org/works/doi:10.1016/S1388-2457(01)00691-5,
+MK.N2_frontocentral,index,CN.conflict_monitoring,B,,10.3758/CABN.3.1.17,https://api.openalex.org/works/doi:10.3758/CABN.3.1.17,
+MK.N2_frontocentral,index,CN.conflict_monitoring,B,,10.1162/08989290260045837,https://api.openalex.org/works/doi:10.1162/08989290260045837,
+MK.N2_frontocentral,index,CN.conflict_monitoring,B,,10.1037/0033-295X.111.4.931,https://api.crossref.org/works/10.1037/0033-295X.111.4.931,
+MK.N2_frontocentral,index,CN.conflict_monitoring,B,,10.1111/j.1469-8986.2007.00602.x,https://api.openalex.org/works/doi:10.1111/j.1469-8986.2007.00602.x,
+MK.N2_frontocentral,index,CN.response_inhibition,B,,10.1016/S0001-6918(99)00008-6,https://api.openalex.org/works/doi:10.1016/S0001-6918(99)00008-6,Inhibition vs. conflict interpretation is debated (Nieuwenhuis 2003; Folstein & Van Petten 2008).
+MK.N2_frontocentral,index,CN.response_inhibition,B,,10.1016/S1388-2457(01)00691-5,https://api.openalex.org/works/doi:10.1016/S1388-2457(01)00691-5,Inhibition vs. conflict interpretation is debated (Nieuwenhuis 2003; Folstein & Van Petten 2008).
+MK.N2_frontocentral,index,CN.response_inhibition,B,,10.1111/j.1469-8986.2007.00602.x,https://api.openalex.org/works/doi:10.1111/j.1469-8986.2007.00602.x,Inhibition vs. conflict interpretation is debated (Nieuwenhuis 2003; Folstein & Van Petten 2008).
+MK.frontal_midline_theta,generator,BR.dACC,B,MEG/EEG source,10.1097/00001756-199903170-00003,https://api.openalex.org/works/doi:10.1097/00001756-199903170-00003,
+MK.frontal_midline_theta,generator,BR.dACC,B,MEG/EEG source,10.1016/S0304-3940(99)00679-5,https://api.openalex.org/works/doi:10.1016/S0304-3940(99)00679-5,
+MK.frontal_midline_theta,generator,BR.dACC,B,MEG/EEG source,10.1016/j.neuroimage.2005.04.014,https://api.openalex.org/works/doi:10.1016/j.neuroimage.2005.04.014,
+MK.frontal_midline_theta,generator,BR.dACC,B,MEG/EEG source,10.1016/j.tics.2014.04.012,https://api.openalex.org/works/doi:10.1016/j.tics.2014.04.012,
+MK.frontal_midline_theta,generator,BR.dmPFC,C,MEG/EEG source,10.1097/00001756-199903170-00003,https://api.openalex.org/works/doi:10.1097/00001756-199903170-00003,
+MK.frontal_midline_theta,generator,BR.dmPFC,C,MEG/EEG source,10.1016/S0304-3940(99)00679-5,https://api.openalex.org/works/doi:10.1016/S0304-3940(99)00679-5,
+MK.frontal_midline_theta,index,CN.working_memory,B,,10.1093/cercor/7.4.374,https://api.openalex.org/works/doi:10.1093/cercor/7.4.374,
+MK.frontal_midline_theta,index,CN.working_memory,B,,10.1046/j.1460-9568.2002.01975.x,https://api.openalex.org/works/doi:10.1046/j.1460-9568.2002.01975.x,
+MK.frontal_midline_theta,index,CN.working_memory,B,,10.1016/j.neuroimage.2005.04.014,https://api.openalex.org/works/doi:10.1016/j.neuroimage.2005.04.014,
+MK.frontal_midline_theta,index,CN.conflict_monitoring,B,,10.1111/j.1469-8986.2011.01293.x,https://api.openalex.org/works/doi:10.1111/j.1469-8986.2011.01293.x,
+MK.frontal_midline_theta,index,CN.conflict_monitoring,B,,10.1016/j.tics.2014.04.012,https://api.openalex.org/works/doi:10.1016/j.tics.2014.04.012,
+MK.frontal_midline_theta,index,CN.error_monitoring,B,,10.1111/j.1469-8986.2011.01293.x,https://api.openalex.org/works/doi:10.1111/j.1469-8986.2011.01293.x,
+MK.frontal_midline_theta,index,CN.error_monitoring,B,,10.1016/j.tics.2014.04.012,https://api.openalex.org/works/doi:10.1016/j.tics.2014.04.012,
+MK.frontal_midline_theta,index,CN.mental_arithmetic,C,,10.1097/00001756-199903170-00003,https://api.openalex.org/works/doi:10.1097/00001756-199903170-00003,Both studies from one group.
+MK.frontal_midline_theta,index,CN.mental_arithmetic,C,,10.1016/S0304-3940(99)00679-5,https://api.openalex.org/works/doi:10.1016/S0304-3940(99)00679-5,Both studies from one group.
+MK.N400,generator,BR.MTG,B,MEG/EEG source,10.1006/nimg.2002.1268,https://api.openalex.org/works/doi:10.1006/nimg.2002.1268,
+MK.N400,generator,BR.MTG,B,MEG/EEG source,10.1038/nrn2532,https://api.openalex.org/works/doi:10.1038/nrn2532,
+MK.N400,generator,BR.ATL,B,intracranial,10.1038/372260a0,https://api.openalex.org/works/doi:10.1038/372260a0,
+MK.N400,generator,BR.ATL,B,intracranial,10.1006/nimg.2002.1268,https://api.openalex.org/works/doi:10.1006/nimg.2002.1268,
+MK.N400,generator,BR.IFG,C,MEG/EEG source,10.1006/nimg.2002.1268,https://api.openalex.org/works/doi:10.1006/nimg.2002.1268,
+MK.N400,generator,BR.IFG,C,MEG/EEG source,10.1038/nrn2532,https://api.openalex.org/works/doi:10.1038/nrn2532,
+MK.N400,index,CN.semantic_integration,A,,10.1126/science.7350657,https://api.openalex.org/works/doi:10.1126/science.7350657,"Original finding (Kutas & Hillyard 1980), comprehensive review (Kutas & Federmeier 2011) and systematic review of N400 literature (Šoškić 2022)."
+MK.N400,index,CN.semantic_integration,A,,10.1146/annurev.psych.093008.131123,https://api.openalex.org/works/doi:10.1146/annurev.psych.093008.131123,"Original finding (Kutas & Hillyard 1980), comprehensive review (Kutas & Federmeier 2011) and systematic review of N400 literature (Šoškić 2022)."
+MK.N400,index,CN.semantic_integration,A,,10.1007/s11065-021-09513-4,https://api.crossref.org/works/10.1007/s11065-021-09513-4,"Original finding (Kutas & Hillyard 1980), comprehensive review (Kutas & Federmeier 2011) and systematic review of N400 literature (Šoškić 2022)."
+MK.N400,index,CN.prediction_violation,B,,10.1038/nn1504,https://api.openalex.org/works/doi:10.1038/nn1504,"Article-based prediction effect of DeLong 2005 did not replicate in Nieuwland 2018, but the noun cloze effect did."
+MK.N400,index,CN.prediction_violation,B,,10.7554/eLife.33468,https://api.openalex.org/works/doi:10.7554/eLife.33468,"Article-based prediction effect of DeLong 2005 did not replicate in Nieuwland 2018, but the noun cloze effect did."
+MK.N400,index,CN.prediction_violation,B,,10.1146/annurev.psych.093008.131123,https://api.openalex.org/works/doi:10.1146/annurev.psych.093008.131123,"Article-based prediction effect of DeLong 2005 did not replicate in Nieuwland 2018, but the noun cloze effect did."
+MK.P600,generator,BR.dorsal_striatum,C,lesion,10.1093/brain/122.6.1033,https://api.openalex.org/works/doi:10.1093/brain/122.6.1033,
+MK.P600,index,CN.syntactic_processing,B,,10.1016/0749-596X(92)90039-Z,https://api.openalex.org/works/doi:10.1016/0749-596X(92)90039-Z,
+MK.P600,index,CN.syntactic_processing,B,,10.1080/01690969308407585,https://api.crossref.org/works/10.1080/01690969308407585,
+MK.P600,index,CN.syntactic_processing,B,,10.1093/brain/122.6.1033,https://api.openalex.org/works/doi:10.1093/brain/122.6.1033,
+MK.P600,index,CN.semantic_integration,B,,10.1016/j.jml.2004.10.002,https://api.openalex.org/works/doi:10.1016/j.jml.2004.10.002,
+MK.P600,index,CN.semantic_integration,B,,10.1016/j.brainres.2006.12.063,https://api.openalex.org/works/doi:10.1016/j.brainres.2006.12.063,
+MK.P600,index,CN.semantic_integration,B,,10.1016/j.brainres.2012.01.055,https://api.openalex.org/works/doi:10.1016/j.brainres.2012.01.055,
+MK.P600,index,CN.context_updating,C,,10.1016/j.brainres.2012.01.055,https://api.openalex.org/works/doi:10.1016/j.brainres.2012.01.055,Theoretical account (Brouwer 2012).
+MK.LPP,generator,BR.visual_cortex,B,EEG-fMRI,10.1093/cercor/bhl017,https://api.openalex.org/works/doi:10.1093/cercor/bhl017,
+MK.LPP,generator,BR.visual_cortex,B,EEG-fMRI,10.1016/j.biopsycho.2012.04.005,https://api.openalex.org/works/doi:10.1016/j.biopsycho.2012.04.005,
+MK.LPP,generator,BR.visual_cortex,B,EEG-fMRI,10.1111/psyp.13570,https://api.openalex.org/works/doi:10.1111/psyp.13570,
+MK.LPP,generator,BR.parietal_cortex,C,EEG-fMRI,10.1093/cercor/bhl017,https://api.openalex.org/works/doi:10.1093/cercor/bhl017,
+MK.LPP,index,CN.emotional_salience,B,,10.1016/S0301-0511(99)00044-7,https://api.openalex.org/works/doi:10.1016/S0301-0511(99)00044-7,
+MK.LPP,index,CN.emotional_salience,B,,10.1111/1469-8986.3720257,https://api.openalex.org/works/doi:10.1111/1469-8986.3720257,
+MK.LPP,index,CN.emotional_salience,B,,10.1080/87565640903526504,https://api.openalex.org/works/doi:10.1080/87565640903526504,
+MK.LPP,index,CN.emotional_salience,B,,10.1111/psyp.13570,https://api.openalex.org/works/doi:10.1111/psyp.13570,
+MK.LPP,index,CN.attention_allocation,B,,10.1111/1469-8986.3720257,https://api.openalex.org/works/doi:10.1111/1469-8986.3720257,
+MK.LPP,index,CN.attention_allocation,B,,10.1111/psyp.13570,https://api.openalex.org/works/doi:10.1111/psyp.13570,
+MK.LPP,index,CN.emotional_state,B,,10.1016/S0301-0511(99)00044-7,https://api.openalex.org/works/doi:10.1016/S0301-0511(99)00044-7,Closest README id for emotion regulation; CN.emotion_regulation requested (vocab_requests.csv).
+MK.LPP,index,CN.emotional_state,B,,10.3758/CABN.6.4.291,https://api.openalex.org/works/doi:10.3758/CABN.6.4.291,Closest README id for emotion regulation; CN.emotion_regulation requested (vocab_requests.csv).
+MK.LPP,index,CN.emotional_state,B,,10.1080/87565640903526504,https://api.openalex.org/works/doi:10.1080/87565640903526504,Closest README id for emotion regulation; CN.emotion_regulation requested (vocab_requests.csv).

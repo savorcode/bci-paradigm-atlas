@@ -1,4 +1,4 @@
-schema_version: "0.2"
+schema_version: '0.2'
 id: MK.P600
 name:
   en: P600
@@ -15,14 +15,73 @@ signature:
   polarity: positive
   topography: centro-parietal maximum
 description:
-  en: >-
-    Late positive ERP deflection elicited by syntactic violations, syntactically complex or temporarily ambiguous
-    structures, and some semantic-thematic anomalies. It is commonly interpreted as reflecting reanalysis or integration
-    difficulty during sentence processing.
+  en: Late positive ERP deflection elicited by syntactic violations, syntactically complex or temporarily ambiguous structures,
+    and some semantic-thematic anomalies. It is commonly interpreted as reflecting reanalysis or integration difficulty during
+    sentence processing.
   zh: 由句法违例、句法复杂或暂时歧义的结构以及部分语义—题元异常诱发的晚期正向 ERP 成分，通常被解释为句子加工中的重新分析或整合困难。
-notes: >-
-  First-pass skeleton (curator_d, 2026-10-03). Signature values are textbook-level approximations that await source
-  checking; generators and indexes will be added in the second pass.
+generators:
+- region: BR.dorsal_striatum
+  evidence: C
+  sources:
+  - citation: Friederici AD, von Cramon DY, Kotz SA. Language related brain potentials in patients with cortical and subcortical
+      left hemisphere lesions. Brain. 1999;122(6):1033-1047.
+    doi: 10.1093/brain/122.6.1033
+    year: 1999
+    verified: false
+  note: 'method: lesion; Patients with left basal ganglia lesions show a reduced/absent P600 to syntactic violations (Friederici
+    1999); indicates a necessary contributing structure rather than the cortical generator. No cortical generator source retrieved
+    this sprint.'
+indexes:
+- construct: CN.syntactic_processing
+  evidence: B
+  relation: amplitude increases for syntactic violations and garden-path/complex structures
+  sources:
+  - citation: Osterhout L, Holcomb PJ. Event-related brain potentials elicited by syntactic anomaly. J Mem Lang. 1992;31(6):785-806.
+    doi: 10.1016/0749-596X(92)90039-Z
+    year: 1992
+    verified: false
+  - citation: Hagoort P, Brown C, Groothusen J. The syntactic positive shift (SPS) as an ERP measure of syntactic processing.
+      Lang Cogn Process. 1993;8(4):439-483.
+    doi: 10.1080/01690969308407585
+    year: 1993
+    verified: false
+  - citation: Friederici AD, von Cramon DY, Kotz SA. Language related brain potentials in patients with cortical and subcortical
+      left hemisphere lesions. Brain. 1999;122(6):1033-1047.
+    doi: 10.1093/brain/122.6.1033
+    year: 1999
+    verified: false
+- construct: CN.semantic_integration
+  evidence: B
+  relation: amplitude increases for thematic-role (semantic reversal) anomalies ("semantic P600")
+  sources:
+  - citation: 'Kim A, Osterhout L. The independence of combinatory semantic processing: evidence from event-related potentials.
+      J Mem Lang. 2005;52(2):205-225.'
+    doi: 10.1016/j.jml.2004.10.002
+    year: 2005
+    verified: false
+  - citation: 'Kuperberg GR. Neural mechanisms of language comprehension: challenges to syntax. Brain Res. 2007;1146:23-49.'
+    doi: 10.1016/j.brainres.2006.12.063
+    year: 2007
+    verified: false
+  - citation: 'Brouwer H, Fitz H, Hoeks J. Getting real about semantic illusions: rethinking the functional role of the P600
+      in language comprehension. Brain Res. 2012;1446:127-143.'
+    doi: 10.1016/j.brainres.2012.01.055
+    year: 2012
+    verified: false
+- construct: CN.context_updating
+  evidence: C
+  relation: proposed to index updating of the utterance-meaning representation
+  sources:
+  - citation: 'Brouwer H, Fitz H, Hoeks J. Getting real about semantic illusions: rethinking the functional role of the P600
+      in language comprehension. Brain Res. 2012;1446:127-143.'
+    doi: 10.1016/j.brainres.2012.01.055
+    year: 2012
+    verified: false
+  note: Theoretical account (Brouwer 2012).
+notes: 'First-pass skeleton (curator_d, 2026-10-03). Signature values are textbook-level approximations that await source
+  checking; generators and indexes will be added in the second pass. Sprint 4 (2026-10-12, curator_c): generators and indexes
+  curated; every DOI checked against its Crossref or OpenAlex record (see curation/work/sprint4/markers_C/); verified: false
+  pending full-text check.'
 status: draft
 contributors:
 - maintainer

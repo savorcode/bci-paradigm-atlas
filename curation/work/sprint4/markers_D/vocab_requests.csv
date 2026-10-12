@@ -1,0 +1,5 @@
+id_proposed,en,zh,parent_or_type,reason,example_marker
+CN.approach_motivation,approach-withdrawal motivation,趋近-回避动机,CN.affect,frontal alpha asymmetry indexes approach vs withdrawal motivation rather than valence per se (Harmon-Jones 2010); mapped to CN.emotional_state,MK.frontal_alpha_asymmetry
+CN.empathy,empathy (affective sharing),共情,CN.social,anterior insula responds to others' pain (Lamm 2011 meta-analysis); mapped to CN.somatosensation,MK.BOLD_anterior_insula
+CN.social_decision,"social decision-making (fairness, prosocial choice, social exclusion)",社会决策（公平、亲社会、社会排斥）,CN.social,"Ultimatum-Game unfairness (insula), charitable giving (vmPFC) and Cyberball exclusion (dACC) have no fitting construct; mapped to CN.social_interaction",MK.BOLD_anterior_insula; MK.BOLD_vmPFC_value; MK.BOLD_dACC
+CN.reward_anticipation,reward anticipation,奖赏预期,CN.affect,MID-task anticipation phase in ventral striatum (Oldham 2018 meta-analysis) is motivational rather than control-related preparation; mapped to CN.anticipation,MK.BOLD_striatum_reward

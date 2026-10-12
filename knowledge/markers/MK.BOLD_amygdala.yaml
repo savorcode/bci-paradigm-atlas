@@ -1,4 +1,4 @@
-schema_version: "0.2"
+schema_version: '0.2'
 id: MK.BOLD_amygdala
 name:
   en: Amygdala BOLD response
@@ -14,7 +14,63 @@ description:
   en: Task-evoked BOLD signal change in the amygdala. It increases to emotionally arousing or threat-related stimuli such
     as fearful faces, aversive pictures and conditioned stimuli paired with shock.
   zh: 杏仁核的任务诱发 BOLD 信号变化。对情绪唤醒或威胁相关刺激（如恐惧面孔、厌恶图片、与电击配对的条件刺激）的响应增强。
-notes: Signature values are textbook-level characteristics entered in the first pass and await source checking.
+generators:
+- region: BR.amygdala
+  evidence: A
+  sources:
+  - citation: 'Sergerie K, Chochol C, Armony JL. The role of the amygdala in emotional processing: a quantitative meta-analysis
+      of functional neuroimaging studies. Neurosci Biobehav Rev. 2008;32(4):811-830.'
+    doi: 10.1016/j.neubiorev.2007.12.002
+    year: 2008
+    verified: false
+  - citation: 'Costafreda SG, Brammer MJ, David AS, et al. Predictors of amygdala activation during the processing of emotional
+      stimuli: a meta-analysis of 385 PET and fMRI studies. Brain Res Rev. 2008;58(1):57-70.'
+    doi: 10.1016/j.brainresrev.2007.10.012
+    year: 2008
+    verified: false
+  note: 'method: fMRI localization; measured region; two coordinate-based meta-analyses of PET/fMRI emotion studies localise
+    the effect to bilateral amygdala.'
+indexes:
+- construct: CN.emotional_salience
+  evidence: A
+  relation: BOLD increases to emotionally arousing stimuli of either valence, larger for faces than other stimulus classes
+  sources:
+  - citation: 'Sergerie K, Chochol C, Armony JL. The role of the amygdala in emotional processing: a quantitative meta-analysis
+      of functional neuroimaging studies. Neurosci Biobehav Rev. 2008;32(4):811-830.'
+    doi: 10.1016/j.neubiorev.2007.12.002
+    year: 2008
+    verified: false
+  - citation: 'Costafreda SG, Brammer MJ, David AS, et al. Predictors of amygdala activation during the processing of emotional
+      stimuli: a meta-analysis of 385 PET and fMRI studies. Brain Res Rev. 2008;58(1):57-70.'
+    doi: 10.1016/j.brainresrev.2007.10.012
+    year: 2008
+    verified: false
+  - citation: 'Lindquist KA, Wager TD, Kober H, et al. The brain basis of emotion: a meta-analytic review. Behav Brain Sci.
+      2012;35(3):121-143.'
+    doi: 10.1017/S0140525X11000446
+    year: 2012
+    verified: false
+  note: Lindquist 2012 argues the amygdala response is not specific to a discrete emotion, consistent with a salience/arousal
+    account.
+- construct: CN.threat_fear
+  evidence: B
+  relation: BOLD increases most reliably to fear-related stimuli (fearful faces)
+  sources:
+  - citation: 'Costafreda SG, Brammer MJ, David AS, et al. Predictors of amygdala activation during the processing of emotional
+      stimuli: a meta-analysis of 385 PET and fMRI studies. Brain Res Rev. 2008;58(1):57-70.'
+    doi: 10.1016/j.brainresrev.2007.10.012
+    year: 2008
+    verified: false
+  - citation: 'Fullana MA, Harrison BJ, Soriano-Mas C, et al. Neural signatures of human fear conditioning: an updated and
+      extended meta-analysis of fMRI studies. Mol Psychiatry. 2016;21(4):500-508.'
+    doi: 10.1038/mp.2015.88
+    year: 2016
+    verified: false
+  note: 'Costafreda 2008: fear stimuli are the strongest predictor of amygdala activation. Fullana 2016: amygdala is NOT consistently
+    activated by conditioned threat cues (CS+ > CS-). Graded B because the evidence diverges by paradigm.'
+notes: 'Signature values are textbook-level characteristics entered in the first pass and await source checking. Sprint 4
+  (2026-10-12, curator_d): generators and indexes curated; every DOI checked against its Crossref or OpenAlex record (see
+  curation/work/sprint4/markers_D/); verified: false pending full-text check.'
 status: draft
 contributors:
 - maintainer

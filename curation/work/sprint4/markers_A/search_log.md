@@ -1,0 +1,87 @@
+# Sprint 4 markers_A search log (curator_a)
+
+WebSearch calls used: 9 of 25. WebFetch to api.crossref.org / api.openalex.org; repeated proxy 429 rate limits (see entries).
+
+- curl https://api.crossref.org/works/10.1016/j.clinph.2007.04.019 (Bash) -> 403 proxy (crossref blocked for curl); switched to WebFetch
+- WebFetch crossref 10.1016/j.clinph.2007.04.019 -> OK Polich 2007 Clin Neurophysiol 118(10):2128-2148
+- WebFetch crossref 10.1017/S0140525X00058027 -> OK Donchin & Coles 1988 BBS 11(3):357-374
+- WebFetch crossref 10.1177/1073858405280524 -> OK Linden 2005 Neuroscientist 11(6):563-576
+- WebFetch crossref 10.1523/JNEUROSCI.2246-04.2004 -> fetch error (CLIENT_ERROR)
+- WebFetch crossref 10.1126/science.7444469 -> 429 rate limited
+- WebFetch crossref 10.1002/hbm.22339 -> OK but WRONG paper (Ahdab 2014 TMS landmarks) -> DOI guess rejected, not cited
+- WebFetch crossref 10.1017/S0048577201990559 -> OK Kok 2001 Psychophysiology 38(3):557-577
+- WebFetch crossref 10.1038/nn.3248 -> OK O'Connell, Dockree, Kelly 2012 Nat Neurosci 15(12):1729-1735
+- WebFetch crossref 10.1111/ejn.12936 -> OK Twomey et al. 2015 EJN 42(1):1636-1643
+- WebSearch "Kim 2014 meta-analysis dorsal ventral attention networks oddball ... doi" -> links only, no DOI
+- WebSearch "Halgren 1995 intracerebral potentials rare target distractor ..." -> links only, not used
+- WebSearch "Jacques Rossion 2019 inferior occipital gyrus N170 intracerebral doi" -> HAL hal-01946346 identified
+- WebSearch "Robitaille 2010 lateralized nonlateralized VSTM fMRI MEG EEG" -> neurosynth 20643214 (PMID), not pursued
+- curl api.openalex.org / eutils (Bash) -> 403 proxy
+- WebFetch crossref query "Jacques inferior occipital gyrus ... N170" -> found 10.1002/hbm.24455 Jacques et al. HBM 40(5):1403-1418 (online 2018, issue 2019)
+- WebFetch crossref query "Kim dorsal ventral attention oddball meta-analysis" -> found 10.1002/hbm.22326 Kim H. HBM 35(5):2265-2284 (online 2013, issue 2014)
+- WebFetch crossref query "Bledowski localizing P300 generators" -> irrelevant results
+- WebFetch crossref 10.1523/jneurosci.2246-04.2004 (retry) -> CLIENT_ERROR
+- WebFetch crossref 10.1111/j.1469-8986.1987.tb00311.x -> OK Naatanen & Picton 1987 Psychophysiology 24(4):375-425
+- WebFetch crossref 10.1016/S1388-2457(01)00636-8 -> OK Godey et al. 2001 Clin Neurophysiol 112(10):1850-1859
+- WebFetch crossref 10.1126/science.182.4108.177 -> OK Hillyard et al. 1973 Science 182(4108):177-180
+- WebFetch openalex doi:10.1523/JNEUROSCI.2246-04.2004 -> CLIENT_ERROR; Bledowski 2004 dropped (record never retrieved)
+- WebFetch pubmed search Godey 2001 -> reCAPTCHA, no content
+- WebFetch crossref 10.1016/j.clinph.2003.11.021 -> OK Crowley & Colrain 2004 Clin Neurophysiol 115(4):732-744
+- WebFetch crossref query "Halgren Marinkovic Chauvel generators late cognitive potentials" -> irrelevant results
+- WebFetch crossref query "Bledowski Prvulovic Hoechstetter" -> 429
+- WebFetch crossref query "Ross Tremblay stimulus experience" -> 429
+- WebFetch crossref 10.1126/science.7444469 (retry) -> 429; Halgren 1980 dropped
+- WebFetch crossref 10.1016/j.clinph.2007.04.026 -> CLIENT_ERROR
+- WebFetch openalex doi:10.1016/j.clinph.2007.04.026 -> OK Naatanen et al. 2007 Clin Neurophysiol 118(12):2544-2590
+- WebFetch crossref 10.1016/j.clinph.2008.11.029 -> OK Garrido et al. 2009 Clin Neurophysiol 120(3):453-463
+- WebFetch openalex doi:10.1073/pnas.1117807108 -> OK Wacongne et al. 2011 PNAS 108(51):20754-20759
+- WebFetch openalex doi:10.1016/S1053-8119(03)00360-8 -> CLIENT_ERROR (Doeller 2003 not cited)
+- WebFetch crossref 10.1027/0269-8803.21.34.188 -> OK Deouell 2007 J Psychophysiol 21(3-4):188-203
+- WebFetch crossref 10.1162/jocn.1996.8.6.551 -> OK Bentin et al. 1996 J Cogn Neurosci 8(6):551-565
+- WebFetch openalex doi:10.1016/j.neubiorev.2015.06.002 -> OK Hinojosa et al. 2015 Neurosci Biobehav Rev 55:498-509
+- WebFetch crossref 10.1016/j.neuroimage.2007.10.011 -> OK Rossion & Jacques 2008 NeuroImage 39(4):1959-1979
+- WebFetch openalex doi:10.1002/hbm.20947 -> 429
+- WebFetch crossref 10.1002/hbm.20947 -> OK but WRONG paper (Reverberi 2010); Sadeh 2010 DOI guess rejected, not cited
+- WebFetch crossref 10.1093/cercor/9.5.415 -> 429
+- WebFetch openalex doi:10.1093/cercor/9.5.415 -> OK Allison (record lists 1 author) 1999 Cereb Cortex 9(5):415-430; cited as "Allison T, et al."
+- WebFetch crossref 10.1002/hbm.10010 -> CLIENT_ERROR
+- WebFetch openalex doi:10.1002/hbm.10010 -> OK Di Russo, Martinez, Sereno et al. Hum Brain Mapp 15(2):95-111 (OpenAlex year 2001 = online; vol 15 issue 2 = 2002 print; cited 2002)
+- WebFetch crossref 10.1073/pnas.95.3.781 -> OK Hillyard & Anllo-Vento 1998 PNAS 95(3):781-787
+- WebFetch openalex doi:10.1111/1469-8986.3720190 -> OK Vogel & Luck 2000 Psychophysiology 37(2):190-203
+- WebFetch crossref 10.1038/372543a0 -> 429
+- WebFetch openalex doi:10.1038/372543a0 -> 429 (Heinze 1994 pending)
+- WebFetch crossref 10.1002/hbm.20265 -> 429
+- WebFetch openalex doi:10.1002/hbm.20265 -> OK but WRONG paper (Whittingstall 2007 HBM); Di Russo 2007 DOI guess rejected
+- WebFetch openalex search "Spatiotemporal analysis cortical sources SSVEP" -> CLIENT_ERROR (x2)
+- WebFetch crossref query "Di Russo spatiotemporal ... SSVEP" -> 429
+- WebSearch "Di Russo 2007 Spatiotemporal analysis of the cortical sources of the SSVEP HBM" -> PMC6871301 link only
+- WebFetch pmc PMC6871301 -> reCAPTCHA; Di Russo 2007 dropped
+- WebFetch openalex doi:10.1167/15.6.4 -> OK Norcia et al. 2015 J Vis 15(6):4
+- WebFetch crossref 10.1007/s002210100682 -> OK Herrmann 2001 Exp Brain Res 137(3-4):346-353
+- WebFetch openalex doi:10.1073/pnas.1508080112 -> OK Chen et al. 2015 PNAS 112(44):E6058-E6067
+- WebFetch crossref 10.1016/0013-4694(66)90088-5 -> CLIENT_ERROR
+- WebFetch openalex doi:10.1073/pnas.93.10.4770 -> OK Morgan, Hansen, Hillyard 1996 PNAS 93(10):4770-4774
+- WebFetch openalex doi:10.1016/0013-4694(66)90088-5 -> OK Regan 1966 EEG Clin Neurophysiol 20(3):238-248
+- WebFetch crossref 10.1038/nature02447 -> OK Vogel & Machizawa 2004 Nature 428(6984):748-751
+- WebFetch openalex doi:10.1016/j.neubiorev.2016.01.003 -> OK Luria et al. 2016 Neurosci Biobehav Rev 62:100-108
+- WebFetch crossref 10.1038/nature04171 -> OK Vogel, McCollough, Machizawa 2005 Nature 438(7067):500-503
+- WebSearch "contralateral delay activity meta-analysis set size ..." -> no meta-analysis identified; CDA-WM kept at B
+- WebSearch "contralateral delay activity neural generators source localization IPS MEG fMRI Becke" -> Mitchell & Cusack 2011 Front Hum Neurosci
+- WebFetch frontiersin.org fnhum.2011.00018 -> abstract: CDA sources "localized to the posterior intraparietal sulcus during the early delay"
+- WebFetch crossref 10.3389/fnhum.2011.00018 -> OK Mitchell & Cusack 2011 Front Hum Neurosci 5:18
+- WebFetch crossref query "Robitaille Distinguishing ..." -> irrelevant results
+- WebFetch crossref query "Robitaille Grimault Jolicoeur" -> 429; Robitaille 2010 not cited
+- WebFetch crossref 10.1016/S0167-8760(96)00066-9 -> OK Pfurtscheller, Stancak, Neuper 1996 Int J Psychophysiol 24(1-2):39-46
+- WebFetch openalex doi:10.3389/fnhum.2010.00186 -> OK Jensen & Mazaheri 2010 Front Hum Neurosci 4:186
+- WebFetch crossref 10.1016/j.brainresrev.2006.06.003 -> CLIENT_ERROR
+- WebFetch openalex doi:10.1093/cercor/12.8.877 -> OK Jensen (record lists 1 author) 2002 Cereb Cortex 12(8):877-882; cited "Jensen O, et al."
+- WebFetch openalex doi:10.1016/j.brainresrev.2006.06.003 -> OK Klimesch, Sauseng, Hanslmayr Brain Res Rev 53(1):63-88 (OpenAlex year 2006 = online; vol 53 = 2007 print; cited 2007)
+- WebFetch crossref 10.1097/00001756-200212200-00022 -> 429
+- WebFetch openalex doi:10.1073/pnas.1913092116 -> OK Halgren M, Ulbert I, Bastuji H, et al. 2019 PNAS 116(47):23772-23782
+- WebFetch openalex doi:10.1097/00001756-200212200-00022 -> OK Goldman, Stern, Engel et al. 2002 Neuroreport 13(18):2487-2492
+- WebFetch crossref 10.1016/0013-4694(88)90149-6 -> OK Farwell & Donchin 1988 EEG Clin Neurophysiol 70(6):510-523
+- WebFetch crossref v1 10.1038/372543a0 -> 429
+- WebFetch openalex doi:10.1016/j.heares.2008.12.006 -> WRONG paper (Schmutzhard 2008); Ross & Tremblay 2009 DOI guess rejected
+- WebSearch "Ross Tremblay 2009 Stimulus experience modifies ..." -> PMC links only, no DOI; not cited
+- WebFetch openalex doi:10.1097/00003446-200104000-00001 -> OK Tremblay, Kraus, McGee et al. 2001 Ear Hear 22(2):79-90
+- WebFetch openalex https://doi.org/10.1038/372543a0 -> CLIENT_ERROR; Heinze 1994 dropped
