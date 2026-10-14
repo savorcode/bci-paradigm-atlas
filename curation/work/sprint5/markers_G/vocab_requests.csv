@@ -1,0 +1,3 @@
+id_proposed,en,zh,parent_or_type,reason,example_marker
+BR.MCC,midcingulate cortex (anterior midcingulate / posterior part of dorsal ACC),中扣带回,BR.dACC,"Source studies of the NoGo/stop P3 and other medial frontal ERPs name the midcingulate cortex; currently mapped to the closest id BR.dACC",MK.NoGo_P3
+BR.pMFC,posterior medial frontal cortex,后内侧额叶皮层,BR.frontal_cortex,"EEG-fMRI work on decision signals reports posterior medial frontal cortex spanning pre-SMA and dorsal ACC; currently mapped to BR.preSMA",MK.CPP

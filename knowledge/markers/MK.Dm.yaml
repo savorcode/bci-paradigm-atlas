@@ -1,4 +1,4 @@
-schema_version: "0.2"
+schema_version: '0.2'
 id: MK.Dm
 name:
   en: Subsequent memory effect (Dm)
@@ -16,14 +16,61 @@ signature:
   polarity: more positive for later-remembered items
   topography: centro-parietal or frontal, depending on encoding task
 description:
-  en: >-
-    Difference in encoding-period ERPs between items that are later remembered and items that are later forgotten,
-    with later-remembered items typically eliciting more positive waveforms. It is used to identify neural activity
-    that predicts successful memory formation.
+  en: Difference in encoding-period ERPs between items that are later remembered and items that are later forgotten, with
+    later-remembered items typically eliciting more positive waveforms. It is used to identify neural activity that predicts
+    successful memory formation.
   zh: 编码阶段后来被记住与后来被遗忘项目之间的 ERP 差异，后来被记住的项目通常诱发更正的波形，用于识别能预测成功记忆形成的神经活动。
-notes: >-
-  First-pass skeleton (curator_d, 2026-10-03). Signature values are textbook-level approximations that await source
-  checking; generators and indexes will be added in the second pass.
+generators:
+- region: BR.hippocampus
+  evidence: B
+  sources:
+  - citation: Fernández G, Effern A, Grunwald T, et al. Real-time tracking of memory formation in the human rhinal cortex
+      and hippocampus. Science. 1999;285(5433):1582-1585.
+    doi: 10.1126/science.285.5433.1582
+    year: 1999
+    verified: false
+  - citation: 'Kim H. Neural activity that predicts subsequent memory and forgetting: a meta-analysis of 74 fMRI studies.
+      Neuroimage. 2011;54(3):2446-2461.'
+    doi: 10.1016/j.neuroimage.2010.09.045
+    year: 2011
+    verified: false
+  note: 'method: intracranial; intracranial ERPs show subsequent-memory differences in the anterior medial temporal lobe (rhinal
+    cortex and hippocampus; Fernández 1999); the fMRI meta-analysis of Kim 2011 finds medial temporal subsequent-memory effects
+    (indirect for the ERP). Contribution of these closed-field sources to the scalp Dm is uncertain.'
+- region: BR.IFG
+  evidence: C
+  sources:
+  - citation: 'Kim H. Neural activity that predicts subsequent memory and forgetting: a meta-analysis of 74 fMRI studies.
+      Neuroimage. 2011;54(3):2446-2461.'
+    doi: 10.1016/j.neuroimage.2010.09.045
+    year: 2011
+    verified: false
+  note: 'method: fMRI localization; left inferior frontal cortex is the most consistent subsequent-memory region in the fMRI
+    meta-analysis of Kim 2011; link to the scalp ERP is indirect.'
+indexes:
+- construct: CN.episodic_encoding
+  evidence: B
+  relation: encoding-period ERP is more positive for items later remembered than for items later forgotten
+  sources:
+  - citation: Paller KA, Kutas M, Mayes AR. Neural correlates of encoding in an incidental learning paradigm. Electroencephalogr
+      Clin Neurophysiol. 1987;67(4):360-371.
+    doi: 10.1016/0013-4694(87)90124-6
+    year: 1987
+    verified: false
+  - citation: Fernández G, Effern A, Grunwald T, et al. Real-time tracking of memory formation in the human rhinal cortex
+      and hippocampus. Science. 1999;285(5433):1582-1585.
+    doi: 10.1126/science.285.5433.1582
+    year: 1999
+    verified: false
+  - citation: Paller KA, Wagner AD. Observing the transformation of experience into memory. Trends Cogn Sci. 2002;6(2):93-102.
+    doi: 10.1016/S1364-6613(00)01845-3
+    year: 2002
+    verified: false
+  note: Paller 1987 first described the Dm; intracranial (Fernández 1999) and review evidence (Paller & Wagner 2002).
+notes: 'First-pass skeleton (curator_d, 2026-10-03). Signature values are textbook-level approximations that await source
+  checking; generators and indexes will be added in the second pass. Sprint 5 (2026-10-14, curator G): generators and indexes
+  curated; every DOI checked against its Crossref or OpenAlex record (see curation/work/sprint5/markers_G/); verified: false
+  pending full-text check.'
 status: draft
 contributors:
 - maintainer

@@ -1,4 +1,4 @@
-schema_version: "0.2"
+schema_version: '0.2'
 id: MK.omission_response
 name:
   en: Omission response
@@ -16,7 +16,56 @@ description:
   en: Evoked activity at the time an expected stimulus would have occurred but is omitted, taken as a neural signature of
     sensory prediction because no physical input is present.
   zh: 在预期刺激本应出现却被省略的时刻产生的诱发活动；由于没有物理输入，被视为感觉预测的神经特征。
-notes: First-pass skeleton by package A (2026-10-03). No generators/indexes yet.
+generators:
+- region: BR.STG
+  evidence: B
+  sources:
+  - citation: Hughes HC, Darcey TM, Barkan HI, et al. Responses of human auditory association cortex to the omission of an
+      expected acoustic event. NeuroImage. 2001;13(6):1073-1089.
+    doi: 10.1006/nimg.2001.0766
+    year: 2001
+    verified: false
+  - citation: Raij T, McEvoy L, Mäkelä JP, et al. Human auditory cortex is activated by omissions of auditory stimuli. Brain
+      Res. 1997;745(1-2):134-143.
+    doi: 10.1016/S0006-8993(96)01140-7
+    year: 1997
+    verified: false
+  note: 'method: intracranial; intracranial recordings show omission responses in auditory association cortex of the lateral
+    superior temporal gyrus (Hughes 2001); MEG source modelling places omission responses in supratemporal auditory cortex
+    (Raij 1997).'
+indexes:
+- construct: CN.prediction_violation
+  evidence: B
+  relation: response appears only when the omitted stimulus was predictable (identity and timing), scaling with prediction
+    strength
+  sources:
+  - citation: 'SanMiguel I, Saupe K, Schröger E. I know what is missing here: electrophysiological prediction error signals
+      elicited by omissions of predicted "what" but not "when". Front Hum Neurosci. 2013;7:407.'
+    doi: 10.3389/fnhum.2013.00407
+    year: 2013
+    verified: false
+  - citation: Wacongne C, Labyt E, van Wassenhove V, et al. Evidence for a hierarchy of predictions and prediction errors
+      in human cortex. Proc Natl Acad Sci U S A. 2011;108(51):20754-20759.
+    doi: 10.1073/pnas.1117807108
+    year: 2011
+    verified: false
+  - citation: 'SanMiguel I, Widmann A, Bendixen A, et al. Hearing silences: human auditory processing relies on preactivation
+      of sound-specific brain activity patterns. J Neurosci. 2013;33(20):8633-8639.'
+    doi: 10.1523/JNEUROSCI.5821-12.2013
+    year: 2013
+    verified: false
+- construct: CN.anticipation
+  evidence: C
+  relation: early omission response resembles the response to the expected sound, indicating sound-specific pre-activation
+  sources:
+  - citation: 'SanMiguel I, Widmann A, Bendixen A, et al. Hearing silences: human auditory processing relies on preactivation
+      of sound-specific brain activity patterns. J Neurosci. 2013;33(20):8633-8639.'
+    doi: 10.1523/JNEUROSCI.5821-12.2013
+    year: 2013
+    verified: false
+notes: 'First-pass skeleton by package A (2026-10-03). No generators/indexes yet. Sprint 5 (2026-10-14, curator H): generators
+  and indexes curated; every DOI checked against its Crossref or OpenAlex record (see curation/work/sprint5/markers_H/); verified:
+  false pending full-text check.'
 status: draft
 contributors:
 - curator_a

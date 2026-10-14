@@ -1,4 +1,4 @@
-schema_version: "0.2"
+schema_version: '0.2'
 id: MK.P2_visual
 name:
   en: Visual P2
@@ -17,7 +17,58 @@ description:
   en: Positive visual ERP component following the N1 that is modulated by attention to stimulus features. In social paradigms
     it differs for faces of different social groups and for threat-related targets.
   zh: 继 N1 之后的视觉正成分，受对刺激特征的注意调制。在社会范式中，它在不同社会群体的面孔之间以及对威胁相关靶刺激存在差异。
-notes: Signature values are textbook-level characteristics entered in the first pass and await source checking.
+notes: 'Signature values are textbook-level characteristics entered in the first pass and await source checking. Sprint 5
+  (2026-10-14, curator F): generators and indexes curated; every DOI checked against its Crossref or OpenAlex record (see
+  curation/work/sprint5/markers_F/); verified: false pending full-text check.'
+generators:
+- region: BR.frontal_cortex
+  evidence: C
+  sources:
+  - citation: Luck SJ, Hillyard SA. Electrophysiological correlates of feature analysis during visual search. Psychophysiology.
+      1994;31(3):291-308.
+    doi: 10.1111/j.1469-8986.1994.tb02218.x
+    year: 1994
+    verified: false
+  - citation: 'Crowley KE, Colrain IM. A review of the evidence for P2 being an independent component process: age, sleep
+      and modality. Clin Neurophysiol. 2004;115(4):732-744.'
+    doi: 10.1016/j.clinph.2003.11.021
+    year: 2004
+    verified: false
+  note: 'method: scalp topography; the anterior P2 has a fronto-central maximum (Luck & Hillyard 1994; Crowley & Colrain 2004);
+    no source localization study retrieved, generator uncertain.'
+indexes:
+- construct: CN.target_selection
+  evidence: C
+  relation: anterior P2 is larger for stimuli containing target features in visual search
+  sources:
+  - citation: Luck SJ, Hillyard SA. Electrophysiological correlates of feature analysis during visual search. Psychophysiology.
+      1994;31(3):291-308.
+    doi: 10.1111/j.1469-8986.1994.tb02218.x
+    year: 1994
+    verified: false
+- construct: CN.emotional_salience
+  evidence: B
+  relation: amplitude larger for emotionally salient (especially negative) pictures
+  sources:
+  - citation: Carretié L, Martín-Loeches M, Hinojosa JA, et al. Emotion and attention interaction studied through event-related
+      potentials. J Cogn Neurosci. 2001;13(8):1109-1128.
+    doi: 10.1162/089892901753294400
+    year: 2001
+    verified: false
+  - citation: 'Olofsson JK, Nordin S, Sequeira H, et al. Affective picture processing: an integrative review of ERP findings.
+      Biol Psychol. 2008;77(3):247-265.'
+    doi: 10.1016/j.biopsycho.2007.11.006
+    year: 2008
+    verified: false
+- construct: CN.social_perception
+  evidence: C
+  relation: amplitude differs by the race and gender of faces, reflecting early attention to social category cues
+  sources:
+  - citation: 'Ito TA, Urland GR. Race and gender on the brain: electrocortical measures of attention to the race and gender
+      of multiply categorizable individuals. J Pers Soc Psychol. 2003;85(4):616-626.'
+    doi: 10.1037/0022-3514.85.4.616
+    year: 2003
+    verified: false
 status: draft
 contributors:
 - maintainer

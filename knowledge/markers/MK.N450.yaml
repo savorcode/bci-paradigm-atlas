@@ -1,4 +1,4 @@
-schema_version: "0.2"
+schema_version: '0.2'
 id: MK.N450
 name:
   en: N450 (Stroop interference)
@@ -18,8 +18,48 @@ description:
   en: Negative deflection that is larger for incongruent than for congruent Stroop stimuli, reflecting detection of interference
     between word meaning and ink colour. It is often followed by a sustained conflict-related slow potential.
   zh: 不一致 Stroop 刺激比一致刺激诱发更大的负向波，反映对词义与墨水颜色之间干扰的检测。其后常出现持续的与冲突相关的慢电位。
+generators:
+- region: BR.dACC
+  evidence: B
+  sources:
+  - citation: Liotti M, Woldorff MG, Perez R, et al. An ERP study of the temporal course of the Stroop color-word interference
+      effect. Neuropsychologia. 2000;38(5):701-711.
+    doi: 10.1016/S0028-3932(99)00106-2
+    year: 2000
+    verified: false
+  - citation: Hanslmayr S, Pastötter B, Bäuml KH, et al. The electrophysiological dynamics of interference during the Stroop
+      task. J Cogn Neurosci. 2008;20(2):215-225.
+    doi: 10.1162/jocn.2008.20020
+    year: 2008
+    verified: false
+  note: 'method: MEG/EEG source; dipole modelling (Liotti 2000) and distributed source analysis (Hanslmayr 2008) attribute
+    the interference negativity mainly to anterior cingulate cortex.'
+indexes:
+- construct: CN.conflict_monitoring
+  evidence: B
+  relation: amplitude is larger (more negative) for incongruent than for congruent Stroop stimuli
+  sources:
+  - citation: Liotti M, Woldorff MG, Perez R, et al. An ERP study of the temporal course of the Stroop color-word interference
+      effect. Neuropsychologia. 2000;38(5):701-711.
+    doi: 10.1016/S0028-3932(99)00106-2
+    year: 2000
+    verified: false
+  - citation: Hanslmayr S, Pastötter B, Bäuml KH, et al. The electrophysiological dynamics of interference during the Stroop
+      task. J Cogn Neurosci. 2008;20(2):215-225.
+    doi: 10.1162/jocn.2008.20020
+    year: 2008
+    verified: false
+  - citation: 'Larson MJ, Clayson PE, Clawson A. Making sense of all the conflict: a theoretical review and critique of conflict-related
+      ERPs. Int J Psychophysiol. 2014;93(3):283-297.'
+    doi: 10.1016/j.ijpsycho.2014.06.007
+    year: 2014
+    verified: false
+  note: Liotti 2000, Hanslmayr 2008; Larson 2014 reviews the N450 among conflict-related ERPs and notes open questions about
+    conflict detection versus resolution.
 notes: 'Signature values are textbook-level approximations and await checking against sources (pass 2). Generators and indexes
-  not yet written. Used by (registry): CTL-STR-001.'
+  not yet written. Used by (registry): CTL-STR-001. Sprint 5 (2026-10-14, curator G): generators and indexes curated; every
+  DOI checked against its Crossref or OpenAlex record (see curation/work/sprint5/markers_G/); verified: false pending full-text
+  check.'
 status: draft
 contributors:
 - maintainer

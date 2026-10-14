@@ -1,4 +1,4 @@
-schema_version: "0.2"
+schema_version: '0.2'
 id: MK.NoGo_P3
 name:
   en: NoGo/stop P3 (inhibition P3)
@@ -20,8 +20,63 @@ description:
     with a more anterior scalp distribution than the target P3b. Its amplitude and onset are related to successful response
     inhibition.
   zh: 由要求抑制或取消反应的刺激（NoGo 刺激、停止信号）诱发的正成分，头皮分布比靶刺激 P3b 更靠前。其波幅和起始时间与反应抑制的成功相关。
+generators:
+- region: BR.dACC
+  evidence: B
+  sources:
+  - citation: 'Hong X, Wang Y, Sun J, et al. Segregating top-down selective attention from response inhibition in a spatial
+      cueing Go/NoGo task: an ERP and source localization study. Sci Rep. 2017;7(1):9662.'
+    doi: 10.1038/s41598-017-08807-z
+    year: 2017
+    verified: false
+  - citation: 'Huster RJ, Enriquez-Geppert S, Lavallee CF, et al. Electroencephalography of response inhibition tasks: functional
+      networks and cognitive contributions. Int J Psychophysiol. 2013;87(3):217-233.'
+    doi: 10.1016/j.ijpsycho.2012.08.001
+    year: 2013
+    verified: false
+  note: 'method: MEG/EEG source; distributed source estimates place the main NoGo/stop P3 source in the midcingulate cortex
+    (Hong 2017; reviewed in Huster 2013); the README has no midcingulate id, so the closest id BR.dACC is used (see vocab_requests.csv).'
+- region: BR.IFG
+  evidence: B
+  sources:
+  - citation: Enriquez-Geppert S, Konrad C, Pantev C, et al. Conflict and inhibition differentially affect the N200/P300 complex
+      in a combined go/nogo and stop-signal task. Neuroimage. 2010;51(2):877-887.
+    doi: 10.1016/j.neuroimage.2010.02.043
+    year: 2010
+    verified: false
+  - citation: 'Hong X, Wang Y, Sun J, et al. Segregating top-down selective attention from response inhibition in a spatial
+      cueing Go/NoGo task: an ERP and source localization study. Sci Rep. 2017;7(1):9662.'
+    doi: 10.1038/s41598-017-08807-z
+    year: 2017
+    verified: false
+  note: 'method: MEG/EEG source; current density reconstruction located the condition-specific P3 differences (go/nogo/stop)
+    in inferior frontal cortex (Enriquez-Geppert 2010); IFG also contributes in Hong 2017.'
+indexes:
+- construct: CN.response_inhibition
+  evidence: B
+  relation: amplitude is larger and onset earlier when a response is successfully withheld or cancelled
+  sources:
+  - citation: Falkenstein M, Hoormann J, Hohnsbein J. ERP components in Go/Nogo tasks and their relation to inhibition. Acta
+      Psychol (Amst). 1999;101(2-3):267-291.
+    doi: 10.1016/S0001-6918(99)00008-6
+    year: 1999
+    verified: false
+  - citation: 'Wessel JR, Aron AR. It''s not too late: the onset of the frontocentral P3 indexes successful response inhibition
+      in the stop-signal paradigm. Psychophysiology. 2015;52(4):472-480.'
+    doi: 10.1111/psyp.12374
+    year: 2015
+    verified: false
+  - citation: 'Huster RJ, Enriquez-Geppert S, Lavallee CF, et al. Electroencephalography of response inhibition tasks: functional
+      networks and cognitive contributions. Int J Psychophysiol. 2013;87(3):217-233.'
+    doi: 10.1016/j.ijpsycho.2012.08.001
+    year: 2013
+    verified: false
+  note: Falkenstein 1999 (go/nogo); Wessel & Aron 2015 (stop-signal P3 onset tracks stop-signal reaction time); review in
+    Huster 2013 discusses whether the P3 reflects inhibition itself or its evaluation.
 notes: 'Signature values are textbook-level approximations and await checking against sources (pass 2). Generators and indexes
-  not yet written. Used by (registry): CTL-GNG-001, CTL-SART-001, CTL-SST-001.'
+  not yet written. Used by (registry): CTL-GNG-001, CTL-SART-001, CTL-SST-001. Sprint 5 (2026-10-14, curator G): generators
+  and indexes curated; every DOI checked against its Crossref or OpenAlex record (see curation/work/sprint5/markers_G/); verified:
+  false pending full-text check.'
 status: draft
 contributors:
 - maintainer

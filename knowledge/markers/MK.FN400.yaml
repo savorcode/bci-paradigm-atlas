@@ -1,4 +1,4 @@
-schema_version: "0.2"
+schema_version: '0.2'
 id: MK.FN400
 name:
   en: FN400 (mid-frontal old/new effect)
@@ -14,14 +14,46 @@ signature:
   polarity: more positive for old than for new items (reduced negativity)
   topography: mid-frontal
 description:
-  en: >-
-    Recognition-memory ERP effect in which studied items elicit a less negative frontal deflection than new items.
-    It is commonly associated with familiarity-based recognition, although a relation to conceptual priming has
-    also been proposed.
+  en: Recognition-memory ERP effect in which studied items elicit a less negative frontal deflection than new items. It is
+    commonly associated with familiarity-based recognition, although a relation to conceptual priming has also been proposed.
   zh: 再认记忆中的 ERP 效应：学过的项目比新项目诱发负性较弱的额部偏转。通常与基于熟悉性的再认相联系，也有观点认为它与概念启动有关。
-notes: >-
-  First-pass skeleton (curator_d, 2026-10-03). Signature values are textbook-level approximations that await source
-  checking; generators and indexes will be added in the second pass.
+generators:
+- region: BR.frontal_cortex
+  evidence: C
+  sources:
+  - citation: Curran T. Brain potentials of recollection and familiarity. Mem Cognit. 2000;28(6):923-938.
+    doi: 10.3758/BF03209340
+    year: 2000
+    verified: false
+  - citation: Rugg MD, Curran T. Event-related potentials and recognition memory. Trends Cogn Sci. 2007;11(6):251-257.
+    doi: 10.1016/j.tics.2007.04.004
+    year: 2007
+    verified: false
+  note: 'method: scalp topography; only the mid-frontal scalp maximum is established (Curran 2000; Rugg & Curran 2007); a
+    frontal maximum does not identify a frontal generator, and the generators are unresolved.'
+indexes:
+- construct: CN.recognition_memory
+  evidence: B
+  relation: old/new difference (less negative for old items) tracks familiarity-based recognition
+  sources:
+  - citation: Curran T. Brain potentials of recollection and familiarity. Mem Cognit. 2000;28(6):923-938.
+    doi: 10.3758/BF03209340
+    year: 2000
+    verified: false
+  - citation: Rugg MD, Curran T. Event-related potentials and recognition memory. Trends Cogn Sci. 2007;11(6):251-257.
+    doi: 10.1016/j.tics.2007.04.004
+    year: 2007
+    verified: false
+  - citation: Paller KA, Voss JL, Boehm SG. Validating neural correlates of familiarity. Trends Cogn Sci. 2007;11(6):243-250.
+    doi: 10.1016/j.tics.2007.04.002
+    year: 2007
+    verified: false
+  note: Curran 2000 and the review of Rugg & Curran 2007 support familiarity; Paller 2007 argues the effect may instead reflect
+    conceptual priming, so the familiarity interpretation is contested.
+notes: 'First-pass skeleton (curator_d, 2026-10-03). Signature values are textbook-level approximations that await source
+  checking; generators and indexes will be added in the second pass. Sprint 5 (2026-10-14, curator G): generators and indexes
+  curated; every DOI checked against its Crossref or OpenAlex record (see curation/work/sprint5/markers_G/); verified: false
+  pending full-text check.'
 status: draft
 contributors:
 - maintainer

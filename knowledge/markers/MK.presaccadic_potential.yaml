@@ -1,10 +1,57 @@
-schema_version: "0.2"
+schema_version: '0.2'
 id: MK.presaccadic_potential
-name: {en: Presaccadic potential, zh: 眼跳前电位}
-aliases: [presaccadic negativity, presaccadic positivity, saccade-related potential]
+name:
+  en: Presaccadic potential
+  zh: 眼跳前电位
+aliases:
+- presaccadic negativity
+- presaccadic positivity
+- saccade-related potential
 type: erp_component
-recording_modality: [EEG]
-description: {en: 'Cortical potentials preceding saccade onset, obtained by averaging EEG time-locked to the onset of eye movements; they include slow negativities related to saccade preparation and a positivity shortly before the saccade.', zh: 以眼动起始为锁时点平均脑电得到的眼跳起始前皮层电位，包括与眼跳准备相关的缓慢负电位及眼跳前不久出现的正电位。}
-notes: Must be separated from ocular and extraocular muscle artefacts (e.g. the saccadic spike potential). Signature not filled pending sources. Generators and indexes to be added in the second pass.
+recording_modality:
+- EEG
+description:
+  en: Cortical potentials preceding saccade onset, obtained by averaging EEG time-locked to the onset of eye movements; they
+    include slow negativities related to saccade preparation and a positivity shortly before the saccade.
+  zh: 以眼动起始为锁时点平均脑电得到的眼跳起始前皮层电位，包括与眼跳准备相关的缓慢负电位及眼跳前不久出现的正电位。
+generators:
+- region: BR.FEF
+  evidence: C
+  sources:
+  - citation: Richards JE. Cortical sources of event-related potentials in the prosaccade and antisaccade task. Psychophysiology.
+      2003;40(6):878-894.
+    doi: 10.1111/1469-8986.00106
+    year: 2003
+    verified: false
+  note: 'method: MEG/EEG source; equivalent current dipoles for the presaccadic positivity/negativity were placed in Brodmann
+    areas 8, 10 and 11 (Richards 2003); BA 8 corresponds to the frontal eye field region. Single study.'
+indexes:
+- construct: CN.motor_preparation
+  evidence: B
+  relation: slow negativity builds up before saccade onset, reflecting saccade planning; larger before antisaccades
+  sources:
+  - citation: Kurtzberg D, Vaughan HG Jr. Topographic analysis of human cortical potentials preceding self-initiated and visually
+      triggered saccades. Brain Res. 1982;243(1):1-9.
+    doi: 10.1016/0006-8993(82)91115-5
+    year: 1982
+    verified: false
+  - citation: Everling S, Krappmann P, Flohr H. Cortical potentials preceding pro- and antisaccades in man. Electroencephalogr
+      Clin Neurophysiol. 1997;102(4):356-362.
+    doi: 10.1016/S0013-4694(96)96569-4
+    year: 1997
+    verified: false
+  - citation: Richards JE. Cortical sources of event-related potentials in the prosaccade and antisaccade task. Psychophysiology.
+      2003;40(6):878-894.
+    doi: 10.1111/1469-8986.00106
+    year: 2003
+    verified: false
+  note: Kurtzberg & Vaughan 1982 (self-initiated vs visually triggered saccades), Everling 1997 (pro- vs antisaccades), Richards
+    2003. Ocular artefacts must be removed.
+notes: 'Must be separated from ocular and extraocular muscle artefacts (e.g. the saccadic spike potential). Signature not
+  filled pending sources. Generators and indexes to be added in the second pass. Sprint 5 (2026-10-14, curator G): generators
+  and indexes curated; every DOI checked against its Crossref or OpenAlex record (see curation/work/sprint5/markers_G/); verified:
+  false pending full-text check.'
 status: draft
-contributors: [maintainer, curator_b]
+contributors:
+- maintainer
+- curator_b

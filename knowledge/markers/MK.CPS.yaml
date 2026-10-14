@@ -1,4 +1,4 @@
-schema_version: "0.2"
+schema_version: '0.2'
 id: MK.CPS
 name:
   en: Closure positive shift (CPS)
@@ -13,13 +13,68 @@ signature:
   polarity: positive
   topography: centro-parietal
 description:
-  en: >-
-    Positive ERP shift time-locked to prosodic phrase boundaries in spoken sentences, and reported for comma-marked
-    boundaries in reading. It is interpreted as reflecting the closure of a prosodic phrase.
+  en: Positive ERP shift time-locked to prosodic phrase boundaries in spoken sentences, and reported for comma-marked boundaries
+    in reading. It is interpreted as reflecting the closure of a prosodic phrase.
   zh: 在口语句子中以韵律短语边界为锁时点的正向 ERP 偏移，在阅读中以逗号标示的边界处也有报告，被解释为反映韵律短语的闭合。
-notes: >-
-  First-pass skeleton (curator_d, 2026-10-03). Signature values are textbook-level approximations that await source
+generators:
+- region: BR.PCC
+  evidence: C
+  sources:
+  - citation: Knösche TR, Neuhaus C, Haueisen J, et al. Perception of phrase structure in music. Hum Brain Mapp. 2005;24(4):259-273.
+    doi: 10.1002/hbm.20088
+    year: 2005
+    verified: false
+  note: 'method: MEG/EEG source; MUSIC source analysis of the music CPS (EEG and MEG) yields candidate sources in posterior
+    cingulate / retrosplenial cortex (Knösche 2005). Indirect for the speech CPS; no intracranial or lesion data found.'
+- region: BR.hippocampus
+  evidence: C
+  sources:
+  - citation: Knösche TR, Neuhaus C, Haueisen J, et al. Perception of phrase structure in music. Hum Brain Mapp. 2005;24(4):259-273.
+    doi: 10.1002/hbm.20088
+    year: 2005
+    verified: false
+  note: 'method: MEG/EEG source; same study: posterior hippocampus among candidate sources of the music CPS; deep-source estimates
+    from scalp data are uncertain.'
+indexes:
+- construct: CN.prosody
+  evidence: B
+  relation: positive shift is elicited at each intonational phrase boundary, including in hummed and delexicalised speech
+    and at comma-marked boundaries in reading
+  sources:
+  - citation: Steinhauer K, Alter K, Friederici AD. Brain potentials indicate immediate use of prosodic cues in natural speech
+      processing. Nat Neurosci. 1999;2(2):191-196.
+    doi: 10.1038/5757
+    year: 1999
+    verified: false
+  - citation: 'Steinhauer K, Friederici AD. Prosodic boundaries, comma rules, and brain responses: the closure positive shift
+      in ERPs as a universal marker for prosodic phrasing in listeners and readers. J Psycholinguist Res. 2001;30(3):267-295.'
+    doi: 10.1023/A:1010443001646
+    year: 2001
+    verified: false
+  - citation: 'Pannekamp A, Toepel U, Alter K, et al. Prosody-driven sentence processing: an event-related brain potential
+      study. J Cogn Neurosci. 2005;17(3):407-421.'
+    doi: 10.1162/0898929053279450
+    year: 2005
+    verified: false
+  - citation: Holzgrefe J, Wellmann C, Petrone C, et al. Brain response to prosodic boundary cues depends on boundary position.
+      Front Psychol. 2013;4:421.
+    doi: 10.3389/fpsyg.2013.00421
+    year: 2013
+    verified: false
+  note: Three studies from one laboratory plus an independent replication (Holzgrefe 2013).
+- construct: CN.syntactic_processing
+  evidence: C
+  relation: prosodic boundary immediately guides syntactic closure; a mismatching boundary leads to garden-path effects
+  sources:
+  - citation: Steinhauer K, Alter K, Friederici AD. Brain potentials indicate immediate use of prosodic cues in natural speech
+      processing. Nat Neurosci. 1999;2(2):191-196.
+    doi: 10.1038/5757
+    year: 1999
+    verified: false
+notes: 'First-pass skeleton (curator_d, 2026-10-03). Signature values are textbook-level approximations that await source
   checking; generators and indexes will be added in the second pass. New marker requested by package D (see curation/work/pkg_D/marker_requests.csv).
+  Sprint 5 (2026-10-14, curator H): generators and indexes curated; every DOI checked against its Crossref or OpenAlex record
+  (see curation/work/sprint5/markers_H/); verified: false pending full-text check.'
 status: draft
 contributors:
 - curator_d

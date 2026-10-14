@@ -1,4 +1,4 @@
-schema_version: "0.2"
+schema_version: '0.2'
 id: MK.EPN
 name:
   en: Early posterior negativity
@@ -16,7 +16,63 @@ description:
   en: Relative negativity over posterior sites for emotional compared with neutral stimuli, observed for pictures, faces and
     words. It is interpreted as enhanced early visual encoding of emotionally arousing stimuli.
   zh: 与中性刺激相比，情绪刺激在后部电极引起的相对负向偏移，见于图片、面孔和词语。被解释为对情绪唤醒刺激的早期视觉编码增强。
-notes: Signature values are textbook-level characteristics entered in the first pass and await source checking.
+generators:
+- region: BR.visual_cortex
+  evidence: C
+  sources:
+  - citation: 'Junghöfer M, Bradley MM, Elbert TR, et al. Fleeting images: a new look at early emotion discrimination. Psychophysiology.
+      2001;38(2):175-178.'
+    doi: 10.1111/1469-8986.3820175
+    year: 2001
+    verified: false
+  - citation: Schupp HT, Junghöfer M, Weike AI, et al. Emotional facilitation of sensory processing in the visual cortex.
+      Psychol Sci. 2003;14(1):7-13.
+    doi: 10.1111/1467-9280.01411
+    year: 2003
+    verified: false
+  note: 'method: MEG/EEG source; dense-array EEG with minimum-norm source estimation places the emotion-related posterior
+    negativity in occipito-temporal and occipito-parietal visual cortex (Junghöfer 2001; Schupp 2003). Both studies from the
+    same group and source estimation only; no intracranial or lesion confirmation.'
+indexes:
+- construct: CN.emotional_salience
+  evidence: B
+  relation: amplitude more negative for emotionally arousing (pleasant or unpleasant) than for neutral pictures, faces and
+    words
+  sources:
+  - citation: 'Schupp HT, Junghöfer M, Weike AI, et al. The selective processing of briefly presented affective pictures:
+      an ERP analysis. Psychophysiology. 2004;41(3):441-449.'
+    doi: 10.1111/j.1469-8986.2004.00174.x
+    year: 2004
+    verified: false
+  - citation: 'Junghöfer M, Bradley MM, Elbert TR, et al. Fleeting images: a new look at early emotion discrimination. Psychophysiology.
+      2001;38(2):175-178.'
+    doi: 10.1111/1469-8986.3820175
+    year: 2001
+    verified: false
+  - citation: 'Schindler S, Bublatzky F. Attention and emotion: an integrative review of emotional face processing as a function
+      of attention. Cortex. 2020;130:362-386.'
+    doi: 10.1016/j.cortex.2020.06.010
+    year: 2020
+    verified: false
+- construct: CN.attention_allocation
+  evidence: B
+  relation: emotion effect is further enhanced when emotional stimuli form the attended target category and is reduced under
+    competing task load
+  sources:
+  - citation: Schupp HT, Stockburger J, Codispoti M, et al. Selective visual attention to emotion. J Neurosci. 2007;27(5):1082-1089.
+    doi: 10.1523/JNEUROSCI.3223-06.2007
+    year: 2007
+    verified: false
+  - citation: 'Schindler S, Bublatzky F. Attention and emotion: an integrative review of emotional face processing as a function
+      of attention. Cortex. 2020;130:362-386.'
+    doi: 10.1016/j.cortex.2020.06.010
+    year: 2020
+    verified: false
+  note: Schindler and Bublatzky 2020 is an integrative (narrative) review; sensitivity of the EPN to task load is debated
+    across studies.
+notes: 'Signature values are textbook-level characteristics entered in the first pass and await source checking. Sprint 5
+  (2026-10-14, curator H): generators and indexes curated; every DOI checked against its Crossref or OpenAlex record (see
+  curation/work/sprint5/markers_H/); verified: false pending full-text check.'
 status: draft
 contributors:
 - maintainer

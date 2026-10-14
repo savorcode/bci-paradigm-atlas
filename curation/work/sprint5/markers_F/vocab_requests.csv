@@ -1,0 +1,2 @@
+id_proposed,en,zh,parent_or_type,reason,example_marker
+BR.inferior_colliculus,inferior colliculus (auditory midbrain),下丘（听觉中脑）,region,"Dominant subcortical FFR generator together with cochlear nucleus (Coffey et al. 2016; Bidelman 2018); no brainstem region id exists, so only the cortical (BR.A1) and thalamic (BR.thalamus, MGB) contributions were linked",MK.FFR

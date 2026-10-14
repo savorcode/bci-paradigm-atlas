@@ -1,4 +1,4 @@
-schema_version: "0.2"
+schema_version: '0.2'
 id: MK.hippocampal_theta
 name:
   en: Hippocampal theta
@@ -13,14 +13,77 @@ recording_modality:
 signature:
   frequency_hz: approximately 3-8 (human hippocampal theta often lower than in rodents)
 description:
-  en: >-
-    Theta-band oscillations recorded from the hippocampus with depth electrodes, or estimated from MEG source activity,
-    during spatial navigation and episodic memory tasks. Power and phase dynamics of hippocampal theta are related
-    to movement through virtual environments and to successful encoding and retrieval.
+  en: Theta-band oscillations recorded from the hippocampus with depth electrodes, or estimated from MEG source activity,
+    during spatial navigation and episodic memory tasks. Power and phase dynamics of hippocampal theta are related to movement
+    through virtual environments and to successful encoding and retrieval.
   zh: 在空间导航和情景记忆任务中，用深部电极记录或由 MEG 源活动估计的海马 θ 频段振荡。海马 θ 的功率和相位动态与在虚拟环境中的移动以及成功的编码和提取有关。
-notes: >-
-  First-pass skeleton (curator_d, 2026-10-03). Signature values are textbook-level approximations that await source
-  checking; generators and indexes will be added in the second pass.
+generators:
+- region: BR.hippocampus
+  evidence: A
+  sources:
+  - citation: Ekstrom AD, Caplan JB, Ho E, et al. Human hippocampal theta activity during virtual navigation. Hippocampus.
+      2005;15(7):881-889.
+    doi: 10.1002/hipo.20109
+    year: 2005
+    verified: false
+  - citation: Lega BC, Jacobs J, Kahana M. Human hippocampal theta oscillations and the formation of episodic memories. Hippocampus.
+      2012;22(4):748-761.
+    doi: 10.1002/hipo.20937
+    year: 2012
+    verified: false
+  - citation: Cornwell BR, Johnson LL, Holroyd T, et al. Human hippocampal and parahippocampal theta during goal-directed
+      spatial navigation predicts performance on a virtual Morris water maze. J Neurosci. 2008;28(23):5983-5990.
+    doi: 10.1523/JNEUROSCI.5001-07.2008
+    year: 2008
+    verified: false
+  - citation: Herweg NA, Solomon EA, Kahana MJ. Theta oscillations in human memory. Trends Cogn Sci. 2020;24(3):208-227.
+    doi: 10.1016/j.tics.2019.12.006
+    year: 2020
+    verified: false
+  note: 'method: intracranial; hippocampal depth electrodes in epilepsy patients (Ekstrom 2005; Lega 2012) and MEG source
+    estimates (Cornwell 2008, independent laboratory) converge; reviewed in Herweg 2020. Graded A on cross-laboratory, cross-modality
+    replication.'
+indexes:
+- construct: CN.spatial_navigation
+  evidence: B
+  relation: power increases during virtual movement and goal-directed navigation and relates to navigation performance
+  sources:
+  - citation: Kahana MJ, Sekuler R, Caplan JB, et al. Human theta oscillations exhibit task dependence during virtual maze
+      navigation. Nature. 1999;399(6738):781-784.
+    doi: 10.1038/21645
+    year: 1999
+    verified: false
+  - citation: Ekstrom AD, Caplan JB, Ho E, et al. Human hippocampal theta activity during virtual navigation. Hippocampus.
+      2005;15(7):881-889.
+    doi: 10.1002/hipo.20109
+    year: 2005
+    verified: false
+  - citation: Cornwell BR, Johnson LL, Holroyd T, et al. Human hippocampal and parahippocampal theta during goal-directed
+      spatial navigation predicts performance on a virtual Morris water maze. J Neurosci. 2008;28(23):5983-5990.
+    doi: 10.1523/JNEUROSCI.5001-07.2008
+    year: 2008
+    verified: false
+  note: Kahana 1999 recorded cortical (subdural) theta, so it is supporting rather than hippocampal evidence; hippocampal
+    recordings in Ekstrom 2005 and MEG in Cornwell 2008.
+- construct: CN.episodic_encoding
+  evidence: B
+  relation: low-theta (about 3 Hz) power increases during encoding of later-remembered items
+  sources:
+  - citation: Lega BC, Jacobs J, Kahana M. Human hippocampal theta oscillations and the formation of episodic memories. Hippocampus.
+      2012;22(4):748-761.
+    doi: 10.1002/hipo.20937
+    year: 2012
+    verified: false
+  - citation: Herweg NA, Solomon EA, Kahana MJ. Theta oscillations in human memory. Trends Cogn Sci. 2020;24(3):208-227.
+    doi: 10.1016/j.tics.2019.12.006
+    year: 2020
+    verified: false
+  note: 'Direction depends on frequency: Lega 2012 found slow-theta increases but fast-theta decreases with successful encoding;
+    Herweg 2020 reviews these mixed findings.'
+notes: 'First-pass skeleton (curator_d, 2026-10-03). Signature values are textbook-level approximations that await source
+  checking; generators and indexes will be added in the second pass. Sprint 5 (2026-10-14, curator G): generators and indexes
+  curated; every DOI checked against its Crossref or OpenAlex record (see curation/work/sprint5/markers_G/); verified: false
+  pending full-text check.'
 status: draft
 contributors:
 - maintainer

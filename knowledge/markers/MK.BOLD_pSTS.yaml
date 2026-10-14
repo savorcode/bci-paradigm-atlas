@@ -1,4 +1,4 @@
-schema_version: "0.2"
+schema_version: '0.2'
 id: MK.BOLD_pSTS
 name:
   en: Posterior superior temporal sulcus BOLD
@@ -15,7 +15,55 @@ description:
   en: Task-evoked BOLD signal change in the posterior superior temporal sulcus. It increases to biological motion, gaze shifts
     and other socially relevant movements compared with scrambled or non-biological controls.
   zh: 后颞上沟的任务诱发 BOLD 信号变化。与打乱或非生物运动的对照相比，对生物运动、目光转移及其他具有社会意义的动作响应更强。
-notes: Signature values are textbook-level characteristics entered in the first pass and await source checking.
+generators:
+- region: BR.pSTS
+  evidence: A
+  sources:
+  - citation: 'Grosbras MH, Beaton S, Eickhoff SB. Brain regions involved in human movement perception: a quantitative voxel-based
+      meta-analysis. Hum Brain Mapp. 2012;33(2):431-454.'
+    doi: 10.1002/hbm.21222
+    year: 2012
+    verified: false
+  - citation: Grossman ED, Blake R. Brain areas active during visual perception of biological motion. Neuron. 2002;35(6):1167-1175.
+    doi: 10.1016/s0896-6273(02)00897-8
+    year: 2002
+    verified: false
+  note: 'method: fMRI localization; hemodynamic marker, generator is the measured region; ALE meta-analysis of human movement
+    perception (Grosbras 2012) shows consistent posterior STS activation, first established with point-light biological motion
+    (Grossman and Blake 2002).'
+indexes:
+- construct: CN.social_perception
+  evidence: A
+  relation: BOLD increases for biological motion, gaze shifts and other socially meaningful movements relative to scrambled
+    or non-biological motion
+  sources:
+  - citation: 'Grosbras MH, Beaton S, Eickhoff SB. Brain regions involved in human movement perception: a quantitative voxel-based
+      meta-analysis. Hum Brain Mapp. 2012;33(2):431-454.'
+    doi: 10.1002/hbm.21222
+    year: 2012
+    verified: false
+  - citation: 'Allison T, Puce A, McCarthy G. Social perception from visual cues: role of the STS region. Trends Cogn Sci.
+      2000;4(7):267-278.'
+    doi: 10.1016/S1364-6613(00)01501-1
+    year: 2000
+    verified: false
+  - citation: Grossman ED, Blake R. Brain areas active during visual perception of biological motion. Neuron. 2002;35(6):1167-1175.
+    doi: 10.1016/s0896-6273(02)00897-8
+    year: 2002
+    verified: false
+- construct: CN.multisensory_integration
+  evidence: C
+  relation: BOLD to congruent audiovisual object stimuli exceeds the response to either modality alone
+  sources:
+  - citation: Beauchamp MS, Lee KE, Argall BD, et al. Integration of auditory and visual information about objects in superior
+      temporal sulcus. Neuron. 2004;41(5):809-823.
+    doi: 10.1016/S0896-6273(04)00070-4
+    year: 2004
+    verified: false
+  note: Single key study; audiovisual integration region lies close to but not identical with the biological-motion pSTS cluster.
+notes: 'Signature values are textbook-level characteristics entered in the first pass and await source checking. Sprint 5
+  (2026-10-14, curator H): generators and indexes curated; every DOI checked against its Crossref or OpenAlex record (see
+  curation/work/sprint5/markers_H/); verified: false pending full-text check.'
 status: draft
 contributors:
 - maintainer

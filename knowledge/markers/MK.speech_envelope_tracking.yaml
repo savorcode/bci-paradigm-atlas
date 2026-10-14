@@ -1,4 +1,4 @@
-schema_version: "0.2"
+schema_version: '0.2'
 id: MK.speech_envelope_tracking
 name:
   en: Cortical speech envelope tracking
@@ -20,8 +20,97 @@ description:
   en: Low-frequency cortical activity whose time course follows the amplitude envelope of continuous speech, quantified with
     temporal response functions, stimulus reconstruction or coherence; tracking is stronger for the attended talker.
   zh: 时间进程跟随连续语音幅度包络的低频皮层活动，可用时间响应函数、刺激重建或相干性量化；对被注意说话人的跟踪更强。
-notes: First-pass skeleton by package A (2026-10-03). No generators/indexes yet. Signature values are textbook-level approximations
-  and await source checking.
+generators:
+- region: BR.STG
+  evidence: B
+  sources:
+  - citation: Mesgarani N, Chang EF. Selective cortical representation of attended speaker in multi-talker speech perception.
+      Nature. 2012;485(7397):233-236.
+    doi: 10.1038/nature11020
+    year: 2012
+    verified: false
+  - citation: Zion Golumbic EM, Ding N, Bickel S, et al. Mechanisms underlying selective neuronal tracking of attended speech
+      at a "cocktail party". Neuron. 2013;77(5):980-991.
+    doi: 10.1016/j.neuron.2012.12.037
+    year: 2013
+    verified: false
+  note: 'method: intracranial; ECoG over (posterior) superior temporal gyrus tracks the envelope/spectrogram of the attended
+    talker (Mesgarani and Chang 2012; Zion Golumbic 2013), two independent groups.'
+- region: BR.A1
+  evidence: B
+  sources:
+  - citation: Ding N, Simon JZ. Emergence of neural encoding of auditory objects while listening to competing speakers. Proc
+      Natl Acad Sci U S A. 2012;109(29):11854-11859.
+    doi: 10.1073/pnas.1205381109
+    year: 2012
+    verified: false
+  - citation: Luo H, Poeppel D. Phase patterns of neuronal responses reliably discriminate speech in human auditory cortex.
+      Neuron. 2007;54(6):1001-1010.
+    doi: 10.1016/j.neuron.2007.06.004
+    year: 2007
+    verified: false
+  note: 'method: MEG/EEG source; MEG source and sensor analyses attribute low-frequency speech tracking to auditory cortex
+    in and around Heschl gyrus (Ding and Simon 2012; Luo and Poeppel 2007); intracranial depth recordings in Zion Golumbic
+    2013 support a core-auditory contribution but are not cited separately here.'
+indexes:
+- construct: CN.auditory_selective_attention
+  evidence: A
+  relation: tracking (TRF / reconstruction accuracy) is stronger for the attended than for the ignored talker in a multi-talker
+    mixture
+  sources:
+  - citation: Ding N, Simon JZ. Emergence of neural encoding of auditory objects while listening to competing speakers. Proc
+      Natl Acad Sci U S A. 2012;109(29):11854-11859.
+    doi: 10.1073/pnas.1205381109
+    year: 2012
+    verified: false
+  - citation: Mesgarani N, Chang EF. Selective cortical representation of attended speaker in multi-talker speech perception.
+      Nature. 2012;485(7397):233-236.
+    doi: 10.1038/nature11020
+    year: 2012
+    verified: false
+  - citation: O'Sullivan JA, Power AJ, Mesgarani N, et al. Attentional selection in a cocktail party environment can be decoded
+      from single-trial EEG. Cereb Cortex. 2015;25(7):1697-1706.
+    doi: 10.1093/cercor/bht355
+    year: 2015
+    verified: false
+  - citation: Zion Golumbic EM, Ding N, Bickel S, et al. Mechanisms underlying selective neuronal tracking of attended speech
+      at a "cocktail party". Neuron. 2013;77(5):980-991.
+    doi: 10.1016/j.neuron.2012.12.037
+    year: 2013
+    verified: false
+  note: Graded A on replication across independent laboratories and modalities (MEG, ECoG, EEG), not on a meta-analysis.
+- construct: CN.speech_tracking
+  evidence: B
+  relation: phase-locking to the speech envelope increases with intelligibility and comprehension
+  sources:
+  - citation: Luo H, Poeppel D. Phase patterns of neuronal responses reliably discriminate speech in human auditory cortex.
+      Neuron. 2007;54(6):1001-1010.
+    doi: 10.1016/j.neuron.2007.06.004
+    year: 2007
+    verified: false
+  - citation: Peelle JE, Gross J, Davis MH. Phase-locked responses to speech in human auditory cortex are enhanced during
+      comprehension. Cereb Cortex. 2013;23(6):1378-1387.
+    doi: 10.1093/cercor/bhs118
+    year: 2013
+    verified: false
+- construct: CN.neural_entrainment
+  evidence: B
+  relation: low-frequency (delta-theta) phase aligns to the quasi-rhythmic amplitude envelope
+  sources:
+  - citation: Luo H, Poeppel D. Phase patterns of neuronal responses reliably discriminate speech in human auditory cortex.
+      Neuron. 2007;54(6):1001-1010.
+    doi: 10.1016/j.neuron.2007.06.004
+    year: 2007
+    verified: false
+  - citation: Obleser J, Kayser C. Neural entrainment and attentional selection in the listening brain. Trends Cogn Sci. 2019;23(11):913-926.
+    doi: 10.1016/j.tics.2019.08.004
+    year: 2019
+    verified: false
+  note: Whether envelope tracking reflects true oscillatory entrainment or superimposed evoked responses is debated (Obleser
+    and Kayser 2019).
+notes: 'First-pass skeleton by package A (2026-10-03). No generators/indexes yet. Signature values are textbook-level approximations
+  and await source checking. Sprint 5 (2026-10-14, curator H): generators and indexes curated; every DOI checked against its
+  Crossref or OpenAlex record (see curation/work/sprint5/markers_H/); verified: false pending full-text check.'
 status: draft
 contributors:
 - curator_a
