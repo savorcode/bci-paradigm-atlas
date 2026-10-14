@@ -321,7 +321,7 @@
 - **问题**：合并后 37 个条目 `first_source.citation` 为 TBD（A 27、C 1、D 7、E 2；B 0）。各包写法不一。
 - **决定**：
   1. 统一写法：`citation: 'TBD: <一句原因>'`，不填 `doi`/`year`，`verified: false`；`status.csv` 记为"阻塞"。校验脚本不区分 TBD，QA 报告与覆盖度报告单独统计（`scripts/coverage_report.py`）。
-  2. 第二冲刺开头由维护者在有数据库访问（PubMed/Europe PMC 机构访问或 Zotero 群组库）时集中补源，策展人不再为 TBD 消耗 WebSearch 配额；补源结果经 `literature.csv` 分配 R 编号后再写入条目。
+  2. 第二冲刺开头由维护者在有数据库访问（PubMed/Europe PMC 机构访问或 Zotero 群组库）时集中补源，策展人不再为 TBD 消耗 web search 配额；补源结果经 `literature.csv` 分配 R 编号后再写入条目。
   3. 列表见 `curation/reports/coverage_M1.md`。
 - **理由**：S-002 中 PubMed 检索页、E-utilities、Europe PMC、Crossref 检索接口普遍返回 403/429 或被 robots 禁止（见 `search_protocol.md` S-002），继续在受限渠道上检索效率很低。
 - **影响**：37 个条目；包 A 负担最重（临床诱发电位类范式 ABR、AEP、PRVEP、FVEP、GATE 等）。
@@ -776,8 +776,8 @@
 
 ## 二十二、知识层（第四冲刺）
 
-### D-075 知识层约定：ID 与工厂对齐、脑区图谱对应、生成源方法（草案，待负责人确认）
-> 状态：草案，待负责人确认
+### D-075 知识层约定：ID 与工厂对齐、脑区图谱对应、生成源方法（已确认（专家裁定，负责人授权，2026-10-14））
+> 状态：已确认（专家裁定，负责人授权，2026-10-14）
 - **构念**：`knowledge/constructs.yaml` 6 → 81 个，ID 直接沿用范式工厂（工厂 37 个 + `bridge.yaml` constructs_extra 42 个 + 图谱原有 6 个，去重；11 个领域根节点）。非根节点 70 个中 53 个对齐 Cognitive Atlas（`cognitive_atlas: "<trm_id> (<名称>)"`），17 个暂无对应。图谱原有的 `CN.novelty_orienting`、`CN.sustained_visual_attention` 保留，挂在 `CN.orienting`、`CN.sustained_attention` 之下（工厂 `construct_alias` 照旧生效）。
 - **脑区**：`knowledge/regions.yaml` 5 → 43 个（工厂 23 + 图谱原有 5 + 新增 15），坐标空间统一为 MNI152；每个脑区用 `atlas_refs` 给出 Brodmann（34 个有）、AAL3（42 个）、HCP-MMP1.0（35 个）的对应标签，对应关系为近似。`BR.STN` 无 AAL3 标签；`BR.dACC` 用 AAL3 `ACC_sup`，置信度低。
 - **生成源**：`generators[].note` 以 `method: intracranial | lesion | EEG-fMRI | MEG/EEG source | fMRI localization | scalp topography` 开头，证据等级按方法上限：颅内 / 损伤可到 A，EEG-fMRI 与源定位一般 B，仅头皮分布最高 C。
@@ -785,8 +785,14 @@
 - **理由**：ID 一致，工厂 `attach_atlas` 即可让图谱证据直接覆盖桥接表的 D 级临时值，不需要再加别名。
 - **影响**：schema `vocabulary.schema.json` 新增可选字段 `atlas_refs`、`coordinate_space`、`sources`、`notes`。
 
-### D-076 词表申请与 TPJ 重复 ID（草案，待负责人确认）
-> 状态：草案，待负责人确认
+### D-076 词表申请与 TPJ 重复 ID（已确认（专家裁定，负责人授权，2026-10-14））
+> 状态：已确认（专家裁定，负责人授权，2026-10-14）
 - **词表申请 11 条**（策展人先映射到最近的已有 ID，见 `curation/work/sprint4/markers_*/vocab_requests.csv`）：脑区 `BR.OFA`（枕叶面孔区，现映射 BR.LOC）、`BR.SEF`（辅助眼区，现映射 BR.SMA / BR.preSMA）；构念 `CN.perceptual_learning`、`CN.perceptual_discrimination`、`CN.auditory_selective_attention`、`CN.emotion_regulation`、`CN.approach_motivation`、`CN.empathy`、`CN.social_decision`、`CN.reward_anticipation`、`CN.voice_perception`。
 - **提议**：11 条全部新增，下一轮同时在工厂 `bridge.yaml` 加同名构念 / 脑区，再把对应关联改挂到新 ID。
 - **TPJ 重复**：`BR.TPJ`（工厂）与 `BR.temporoparietal_junction`（图谱原有）是同一脑区。本轮两者都保留并在 notes 中互注；提议图谱今后只用 `BR.TPJ`，原 ID 标为 deprecated，工厂加 `region_alias`。
+- **执行（冲刺 5）**：11 条全部新增，其中 7 个构念对上 Cognitive Atlas（`CN.approach_motivation`、`CN.social_decision` 暂无对应）；`BR.OFA`、`BR.SEF` 补了 Brodmann / AAL3 / HCP-MMP1.0 对应。冲刺 4 暂挂在相近 ID 下的关联改挂到新 ID（13 条，见 `curation/work/sprint5/vocab/remap.csv`）。`BR.temporoparietal_junction` 标为 `status: deprecated`、`replaced_by: BR.TPJ`，ID 保留不再使用（D-063）；词表 schema 新增可选字段 `status`、`replaced_by`，校验脚本对使用已弃用 ID 给出警告。工厂侧建议在 `bridge.yaml` 加 `region_alias`。
+
+### D-077 冲刺 5 的词表申请（草案，待负责人确认）
+> 状态：草案，待负责人确认
+- **内容**：第二批标记物提出 6 条申请（暂挂最近的已有 ID，见 `curation/work/sprint5/markers_*/vocab_requests.csv`）：脑区 `BR.inferior_colliculus`（下丘，FFR 的脑干来源；暂只登记皮层与丘脑来源）、`BR.insula`（岛叶整体，暂挂 BR.posterior_insula）、`BR.MCC`（中扣带皮层，暂挂 BR.dACC）、`BR.pMFC`（后内侧额叶，暂挂 BR.preSMA）；构念 `CN.statistical_learning`（统计学习，暂挂 CN.perceptual_learning）、`CN.music_syntax`（音乐句法，暂挂 CN.syntactic_processing）。
+- **提议**：`BR.inferior_colliculus`、`CN.statistical_learning`、`CN.music_syntax` 新增；`BR.MCC` 与 `BR.pMFC` 与现有 dACC / preSMA 边界重叠，先在 notes 中说明对应关系，暂不新增；`BR.insula` 作为前、后岛叶的上位节点新增。

@@ -1,0 +1,16 @@
+doi	status	detail
+10.1111/j.1469-8986.2004.00174.x	match	Schupp 2004, title matches
+10.1016/j.neuron.2007.06.004	match	Luo 2007, title matches
+10.1162/089892905774597290	match	Koelsch 2005, title matches
+10.1016/S0006-8993(96)01140-7	match	Raij 1997, title matches
+10.1523/JNEUROSCI.0262-16.2016	match	Babo-Rebelo 2016, title matches
+10.1126/science.424760	match	Ritter 1979, title matches
+10.1523/JNEUROSCI.3223-06.2007	match	Schupp 2007, title matches
+10.1111/psyp.13554	match	Tran 2020, title matches
+10.1088/1741-2560/8/2/025015	match	Bin 2011, title matches
+10.1002/hbm.21222	minor	year: OpenAlex 2011 (online first), citation 2012 (print issue 33(2)); title and author match
+10.1038/87502	match	Maess 2001, title matches
+10.1371/journal.pone.0012166	match	Dumas 2010, title matches
+10.1016/j.neuroimage.2019.116011	match	Herding 2019, title matches
+10.1006/nimg.2001.0766	match	Hughes 2001, title matches
+10.3389/fpsyg.2013.00421	minor	first-author surname: OpenAlex Holzgrefe-Lang, citation Holzgrefe (same person, name variant); title and year match
