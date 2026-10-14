@@ -16,8 +16,8 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/),
   按 D-077 更新词表：新增下丘、岛叶（前、后岛叶的上位）、统计学习、音乐句法（构念 92、脑区 47）；4 个标记物的关联改挂新词。
 - `scripts/export_zotero.py`: exports `curation/literature.csv` as Zotero RDF with collections by paradigm family and by marker, for the team Zotero group library.
   `scripts/export_zotero.py`：把文献表导出为 Zotero RDF，按范式族和标记物分好文件夹，供导入团队 Zotero 群组库。
-- Website: new one-page, bilingual project site (`website/index.html`) with mini games, an interactive knowledge network, a dot field of all paradigms and a Paradigm Factory test run; data from `scripts/build_website_story.py` (`website/story-data.json`, checked in CI). The previous page moves to `website/classic/`. The site is served from the company server at atlas.mentiscale.com (`deploy/`); Latin fonts are self-hosted and the Vercel configuration is removed.
-  网站：新的单页双语项目网站，包含小游戏、可交互的知识网络、全部范式点阵和范式工厂试运行；数据由 `scripts/build_website_story.py` 生成（`website/story-data.json`，CI 检查）。原页面移至 `website/classic/`。网站改由公司服务器提供（atlas.mentiscale.com，配置见 `deploy/`），西文字体自托管，移除 Vercel 配置。
+- Website: new one-page, bilingual project site (`website/index.html`) with mini games, an interactive knowledge network, a dot field of all paradigms and a Paradigm Factory test run; data from `scripts/build_website_story.py` (`website/story-data.json`, checked in CI). The previous page moves to `website/classic/`. The site is served from the company server at atlas.mentiscale.com (`deploy/`); Latin fonts are self-hosted and the Vercel configuration is removed. The page opens in the light theme; a header button switches to dark.
+  网站：新的单页双语项目网站，包含小游戏、可交互的知识网络、全部范式点阵和范式工厂试运行；数据由 `scripts/build_website_story.py` 生成（`website/story-data.json`，CI 检查）。原页面移至 `website/classic/`。网站改由公司服务器提供（atlas.mentiscale.com，配置见 `deploy/`），西文字体自托管，移除 Vercel 配置。页面默认浅色，页眉按钮可切换深色。
 - Schema: optional `atlas_refs`, `coordinate_space`, `sources`, `notes` for vocabulary terms.
   schema：词表条目新增可选字段 `atlas_refs`、`coordinate_space`、`sources`、`notes`。
 

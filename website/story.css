@@ -15,10 +15,7 @@
   --f-body:"Nunito","PingFang SC","Hiragino Sans GB","Microsoft YaHei","Noto Sans SC","Source Han Sans SC",system-ui,-apple-system,sans-serif;
   --f-mono:"JetBrains Mono",ui-monospace,Menlo,Consolas,monospace;
 }
-@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){
-  --bg:#10132A; --ink:#EDEFFB; --muted:#A1A7C9; --card:#191D39; --line:#2A2F57; --soft:#1F2448; --deep:#0A0C1E; --on-deep:#EDEFFB;
-  --pink:#FF77A6; --sun:#FFCF5C; --mint:#43DCB0; --sky:#6CAFFF; --grape:#A48DFF;
-  --gA:#43DCB0; --gB:#6CAFFF; --gC:#FFC14D; --on-accent:#10132A; color-scheme:dark}}
+/* Light by default; dark only when the visitor picks it with the theme button. */
 :root[data-theme="dark"]{
   --bg:#10132A; --ink:#EDEFFB; --muted:#A1A7C9; --card:#191D39; --line:#2A2F57; --soft:#1F2448; --deep:#0A0C1E; --on-deep:#EDEFFB;
   --pink:#FF77A6; --sun:#FFCF5C; --mint:#43DCB0; --sky:#6CAFFF; --grape:#A48DFF;

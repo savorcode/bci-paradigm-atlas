@@ -402,6 +402,9 @@ function applyLang(){
   if(!odd.timer) $("oddMsg").textContent=odd.count>=40?t("oddDone"):t("oddReady");
   renderLobeLegend(); drawERP(); drawTopo(); renderFilters(); drawNet(); renderDetail(); renderDots(); renderFactory(); setGoal();
 }
+(()=>{ let th="light"; try{ if(localStorage.getItem("atlas-theme")==="dark") th="dark"; }catch(e){}
+  const set=v=>{ th=v; document.documentElement.dataset.theme=v; $("theme").textContent=v==="dark"?"☀":"☾"; };
+  set(th); $("theme").addEventListener("click",()=>{ set(th==="dark"?"light":"dark"); try{localStorage.setItem("atlas-theme",th);}catch(e){} }); })();
 $("lang").addEventListener("click",()=>{ lang=lang==="zh"?"en":"zh"; try{localStorage.setItem("atlas-lang",lang);}catch(e){} applyLang(); });
 seedOdd(); buildTiles(); applyLang(); drawSpec(0); requestAnimationFrame(ssLoop); requestAnimationFrame(miLoop);
 
