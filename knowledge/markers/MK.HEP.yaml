@@ -20,7 +20,7 @@ description:
     signals; its amplitude is modulated by attention to the heartbeat.
   zh: 与心电 R 波锁时的皮层电位，反映皮层对心脏传入信号的加工；其波幅受对心跳的注意调制。
 generators:
-- region: BR.posterior_insula
+- region: BR.insula
   evidence: B
   sources:
   - citation: 'Park HD, Bernasconi F, Salomon R, et al. Neural sources and underlying mechanisms of neural responses to heartbeats,
@@ -35,7 +35,7 @@ generators:
     verified: false
   note: 'method: intracranial; intracranial EEG shows heartbeat-locked phase concentration mainly in insula and operculum
     (Park 2018); dipole modelling places an HEP source in right insula (Pollatos 2005). Insular subdivision not specified
-    in either source; filed under BR.posterior_insula, see vocab_requests.csv for BR.insula.'
+    in either source.'
 - region: BR.dACC
   evidence: C
   sources:

@@ -23,6 +23,27 @@ notes: 'First-pass skeleton by package A (2026-10-03). No generators/indexes yet
   and await source checking. Sprint 5 (2026-10-14, curator F): generators and indexes curated; every DOI checked against its
   Crossref or OpenAlex record (see curation/work/sprint5/markers_F/); verified: false pending full-text check.'
 generators:
+- region: BR.inferior_colliculus
+  evidence: B
+  sources:
+  - citation: Coffey EBJ, Herholz SC, Chepesiuk AMP, et al. Cortical contributions to the auditory frequency-following response
+      revealed by MEG. Nat Commun. 2016;7(1):11070.
+    doi: 10.1038/ncomms11070
+    year: 2016
+    verified: false
+  - citation: Bidelman GM. Subcortical sources dominate the neuroelectric auditory frequency-following response to speech.
+      Neuroimage. 2018;175:56-69.
+    doi: 10.1016/j.neuroimage.2018.03.060
+    year: 2018
+    verified: false
+  - citation: Coffey EBJ, Nicol T, White-Schwoch T, et al. Evolving perspectives on the sources of the frequency-following
+      response. Nat Commun. 2019;10(1):5036.
+    doi: 10.1038/s41467-019-13003-w
+    year: 2019
+    verified: false
+  note: 'method: MEG/EEG source; MEG source modelling resolves inferior colliculus alongside cochlear nucleus and medial geniculate
+    (Coffey et al. 2016); EEG source modelling indicates that subcortical (brainstem/midbrain) sources dominate the response
+    (Bidelman 2018); reviewed in Coffey et al. 2019. Cochlear nucleus has no region id.'
 - region: BR.A1
   evidence: B
   sources:
@@ -58,8 +79,7 @@ generators:
     year: 2019
     verified: false
   note: 'method: MEG/EEG source; medial geniculate body contributes alongside cochlear nucleus and inferior colliculus (Coffey
-    et al. 2016). Brainstem/midbrain generators (inferior colliculus), the dominant source, have no region id; requested in
-    vocab_requests.csv.'
+    et al. 2016).'
 indexes:
 - construct: CN.early_auditory
   evidence: B

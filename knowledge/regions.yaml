@@ -432,7 +432,8 @@ terms:
     year: 2016
     verified: false
   notes: Atlas correspondence approximate. AAL3 replaces Cingulate_Ant with ACC_sub/ACC_pre/ACC_sup; anterior Cingulate_Mid
-    often included in dACC/aMCC.
+    often included in dACC/aMCC. Studies naming the anterior midcingulate cortex (aMCC) are mapped here; no separate midcingulate
+    id (D-077).
 - id: BR.preSMA
   en: pre-supplementary motor area
   zh: 前辅助运动区
@@ -457,7 +458,9 @@ terms:
     doi: 10.1038/nature18933
     year: 2016
     verified: false
-  notes: Atlas correspondence approximate. AAL3 Supp_Motor_Area covers both SMA and pre-SMA (anterior part).
+  notes: Atlas correspondence approximate. AAL3 Supp_Motor_Area covers both SMA and pre-SMA (anterior part). Reports of a
+    "posterior medial frontal cortex" spanning pre-SMA and dACC are mapped here, or to BR.dACC when the peak is cingulate
+    (D-077).
 - id: BR.SMA
   en: supplementary motor area
   zh: 辅助运动区
@@ -681,6 +684,21 @@ terms:
     verified: false
   notes: Atlas correspondence approximate. AAL3 splits the thalamus into 15 nuclei per hemisphere; Thal_Re spelled Thal_RE
     in one table of the AAL3 paper (medium on that label).
+- id: BR.inferior_colliculus
+  en: inferior colliculus (auditory midbrain)
+  zh: 下丘（听觉中脑）
+  definition: Paired nucleus of the dorsal midbrain (tectum), caudal to the superior colliculus; obligatory relay of the ascending
+    auditory pathway to the medial geniculate body.
+  coordinate_space: MNI152
+  sources:
+  - citation: Sitek KR, Gulban OF, Calabrese E, et al. Mapping the human subcortical auditory system using histology, postmortem
+      MRI and in vivo MRI at 7T. eLife. 2019;8:e48932.
+    doi: 10.7554/eLife.48932
+    year: 2019
+    verified: false
+  notes: Midbrain; no Brodmann, AAL3 or HCP-MMP1.0 label (AAL3 adds several brainstem nuclei but not the inferior colliculus),
+    so atlas_refs omitted. Localise with a dedicated subcortical auditory atlas, e.g. the MNI-space atlas of Sitek et al.
+    2019 built from histology, postmortem MRI and 7T fMRI.
 - id: BR.hippocampus
   en: hippocampus
   zh: 海马
@@ -1142,10 +1160,41 @@ terms:
     year: 2016
     verified: false
   notes: Atlas correspondence approximate. AAL3 has no frontopolar label; anterior parts of the listed labels (low for AAL3).
+- id: BR.insula
+  en: insula (subdivision unspecified)
+  zh: 脑岛（未区分亚区）
+  definition: Insular cortex buried in the lateral sulcus, used when a source does not specify the anterior or posterior subdivision.
+  atlas_refs:
+    brodmann:
+    - BA13
+    aal3:
+    - Insula_L
+    - Insula_R
+    hcp_mmp1:
+    - AAIC
+    - AVI
+    - MI
+    - Ig
+    - PoI1
+    - PoI2
+  coordinate_space: MNI152
+  sources:
+  - citation: Rolls ET, Huang CC, Lin CP, Feng J, Joliot M. Automated anatomical labelling atlas 3. NeuroImage. 2020;206:116189.
+    doi: 10.1016/j.neuroimage.2019.116189
+    year: 2020
+    verified: false
+  - citation: Glasser MF, Coalson TS, Robinson EC, et al. A multi-modal parcellation of human cerebral cortex. Nature. 2016;536(7615):171-178.
+    doi: 10.1038/nature18933
+    year: 2016
+    verified: false
+  notes: Atlas correspondence approximate. Parent of BR.anterior_insula and BR.posterior_insula. BA13 follows the Talairach-atlas
+    convention (Brodmann did not number the human insula); BA14 omitted. HCP-MMP1.0 insular parcels listed; frontal opercular
+    (FOP1-5), para-insular (PI) and piriform parcels not included.
 - id: BR.anterior_insula
   en: Anterior insula
   zh: 前脑岛
   definition: Anterior part of the insular cortex, involved in interoceptive awareness, salience detection and emotion.
+  parent: BR.insula
   atlas_refs:
     aal3:
     - Insula_L
@@ -1169,6 +1218,7 @@ terms:
   en: Posterior insula
   zh: 后脑岛
   definition: Posterior part of the insular cortex, receiving primary interoceptive, thermal and pain input.
+  parent: BR.insula
   atlas_refs:
     aal3:
     - Insula_L

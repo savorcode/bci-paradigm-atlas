@@ -792,7 +792,8 @@
 - **TPJ 重复**：`BR.TPJ`（工厂）与 `BR.temporoparietal_junction`（图谱原有）是同一脑区。本轮两者都保留并在 notes 中互注；提议图谱今后只用 `BR.TPJ`，原 ID 标为 deprecated，工厂加 `region_alias`。
 - **执行（冲刺 5）**：11 条全部新增，其中 7 个构念对上 Cognitive Atlas（`CN.approach_motivation`、`CN.social_decision` 暂无对应）；`BR.OFA`、`BR.SEF` 补了 Brodmann / AAL3 / HCP-MMP1.0 对应。冲刺 4 暂挂在相近 ID 下的关联改挂到新 ID（13 条，见 `curation/work/sprint5/vocab/remap.csv`）。`BR.temporoparietal_junction` 标为 `status: deprecated`、`replaced_by: BR.TPJ`，ID 保留不再使用（D-063）；词表 schema 新增可选字段 `status`、`replaced_by`，校验脚本对使用已弃用 ID 给出警告。工厂侧建议在 `bridge.yaml` 加 `region_alias`。
 
-### D-077 冲刺 5 的词表申请（草案，待负责人确认）
-> 状态：草案，待负责人确认
+### D-077 冲刺 5 的词表申请（已确认（专家裁定，负责人授权，2026-10-14））
+> 状态：已确认（专家裁定，负责人授权，2026-10-14）
 - **内容**：第二批标记物提出 6 条申请（暂挂最近的已有 ID，见 `curation/work/sprint5/markers_*/vocab_requests.csv`）：脑区 `BR.inferior_colliculus`（下丘，FFR 的脑干来源；暂只登记皮层与丘脑来源）、`BR.insula`（岛叶整体，暂挂 BR.posterior_insula）、`BR.MCC`（中扣带皮层，暂挂 BR.dACC）、`BR.pMFC`（后内侧额叶，暂挂 BR.preSMA）；构念 `CN.statistical_learning`（统计学习，暂挂 CN.perceptual_learning）、`CN.music_syntax`（音乐句法，暂挂 CN.syntactic_processing）。
 - **提议**：`BR.inferior_colliculus`、`CN.statistical_learning`、`CN.music_syntax` 新增；`BR.MCC` 与 `BR.pMFC` 与现有 dACC / preSMA 边界重叠，先在 notes 中说明对应关系，暂不新增；`BR.insula` 作为前、后岛叶的上位节点新增。
+- **执行**：新增 `BR.inferior_colliculus`、`BR.insula`（前、后岛叶改挂其下）、`CN.statistical_learning`、`CN.music_syntax`（对上 Cognitive Atlas）；`BR.dACC`、`BR.preSMA` 的 notes 写明中扣带 / 后内侧额叶报告的归属。MK.FFR 增加下丘生成源，MK.linguistic_structure_tracking、MK.ERAN、MK.HEP 改挂新 ID（见 `curation/work/sprint6/vocab/remap.csv`）。

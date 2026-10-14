@@ -65,7 +65,7 @@ indexes:
     doi: 10.1523/JNEUROSCI.0302-20.2020
     year: 2020
     verified: false
-- construct: CN.perceptual_learning
+- construct: CN.statistical_learning
   evidence: C
   relation: word-rate response emerges and grows as listeners learn the embedded words of a continuous statistical-learning
     stream
@@ -74,8 +74,6 @@ indexes:
     doi: 10.1016/j.cortex.2017.02.004
     year: 2017
     verified: false
-  note: Statistical learning is filed under the closest available id (CN.perceptual_learning); see vocab_requests.csv for
-    CN.statistical_learning.
 notes: 'First-pass skeleton (curator_d, 2026-10-03). Signature values are textbook-level approximations that await source
   checking; generators and indexes will be added in the second pass. Sprint 5 (2026-10-14, curator H): generators and indexes
   curated; every DOI checked against its Crossref or OpenAlex record (see curation/work/sprint5/markers_H/); verified: false
