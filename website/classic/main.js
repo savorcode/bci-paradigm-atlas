@@ -115,7 +115,7 @@ catalogClear.addEventListener('click',()=>{catalogQuery.value='';catalogFamily.v
 catalogPrev.addEventListener('click',()=>{catalogPage--;renderCatalog()});catalogNext.addEventListener('click',()=>{catalogPage++;renderCatalog()});
 async function loadCatalog(){
  try{
-  const response=await fetch('./catalog.json');if(!response.ok)throw new Error('Catalog unavailable');
+  const response=await fetch('../catalog.json');if(!response.ok)throw new Error('Catalog unavailable');
   const data=await response.json();
   catalogItems=data.items.map(item=>({...item,search:[item.id,item.name,item.english,...item.aliases,...item.markers,...item.modalities].join(' ').toLowerCase()}));
   for(const family of data.families){const option=document.createElement('option');option.value=family.id;option.textContent=(english?family.english:family.name)+' ('+family.count+')';catalogFamily.append(option)}

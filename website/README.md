@@ -4,6 +4,12 @@ Project presentation website: https://savorcode-website.vercel.app/
 
 This static site reuses the SavorCode visual identity, navy/white palette, responsive layout, and animated knowledge-graph hero. It presents the public atlas, links directly to its source entries and methodology, and distinguishes the open atlas from the planned Paradigm Factory platform.
 
+## Pages
+
+- `index.html` (with `story.css`, `story.js`, `story-data.json`): the one-page project site, bilingual (中文 by default; `#en` or the language button switches). It walks visitors through an interactive brain, three mini games (oddball / P3b averaging, SSVEP gaze typing, motor-imagery mu lateralisation), the knowledge network (regions → signals → mental processes with evidence grades and first sources), all 404 concrete paradigms as a dot field, and a Paradigm Factory test run. The EEG traces and spectra in the games are simulated and labelled as such; every count and link comes from `story-data.json`.
+- `classic/`: the earlier project page with the searchable catalog (`catalog.json`), linked from the footer of the new page. `zh.html` redirects to the Chinese view of the new page.
+- Rebuild the data after atlas changes: `python scripts/build_website_story.py` (CI checks that `story-data.json` and `catalog.json` are current).
+
 ## Preview
 
 From this directory, run `python3 -m http.server 8890 --bind 127.0.0.1` and open http://127.0.0.1:8890/. No build step or dependencies are required. Asset URLs are relative so the site also works under a project subpath.
