@@ -1,6 +1,6 @@
 # BCI Paradigm Atlas project page
 
-Project presentation website: https://savorcode-website.vercel.app/
+Project page: https://atlas.mentiscale.com/ (served from the company server; see `deploy/README.md`).
 
 This static site reuses the SavorCode visual identity, navy/white palette, responsive layout, and animated knowledge-graph hero. It presents the public atlas, links directly to its source entries and methodology, and distinguishes the open atlas from the planned Paradigm Factory platform.
 
@@ -16,9 +16,7 @@ From this directory, run `python3 -m http.server 8890 --bind 127.0.0.1` and open
 
 ## Publish
 
-The existing Vercel project is `savorcode-website`. Deploy this directory only. Do not publish the repository root, research platform, local credentials, or curation workspaces. Local Vercel project settings and environment files are excluded from version control.
-
-The homepage numbers describe the **v0.1.0 / 2026-10-08** release, not live counters. Update the version, counts, evidence-status note, and release link together when a new release is published. All entries remain draft in this version; bibliographic checking does not establish content verification.
+The site is served by Nginx from the company server at atlas.mentiscale.com. Setup, HTTPS and automatic updates are described in `deploy/README.md`. Publish only the `website/` directory.
 
 ## Checks
 

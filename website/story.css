@@ -1,12 +1,18 @@
 /* BCI Paradigm Atlas one-page site. Data: story-data.json (scripts/build_website_story.py). */
+/* Latin fonts are self-hosted (SIL OFL, see assets/fonts); Chinese uses the system font. */
+@font-face{font-family:"Fredoka";font-style:normal;font-display:swap;font-weight:300 700;src:url("./assets/fonts/fredoka-latin-wght-normal.woff2") format("woff2-variations"),url("./assets/fonts/fredoka-latin-wght-normal.woff2") format("woff2");unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD}
+@font-face{font-family:"Fredoka";font-style:normal;font-display:swap;font-weight:300 700;src:url("./assets/fonts/fredoka-latin-ext-wght-normal.woff2") format("woff2-variations"),url("./assets/fonts/fredoka-latin-ext-wght-normal.woff2") format("woff2");unicode-range:U+0100-02BA,U+02BD-02C5,U+02C7-02CC,U+02CE-02D7,U+02DD-02FF,U+0304,U+0308,U+0329,U+1D00-1DBF,U+1E00-1E9F,U+1EF2-1EFF,U+2020,U+20A0-20AB,U+20AD-20C0,U+2113,U+2C60-2C7F,U+A720-A7FF}
+@font-face{font-family:"Nunito";font-style:normal;font-display:swap;font-weight:200 1000;src:url("./assets/fonts/nunito-latin-wght-normal.woff2") format("woff2-variations"),url("./assets/fonts/nunito-latin-wght-normal.woff2") format("woff2");unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD}
+@font-face{font-family:"Nunito";font-style:normal;font-display:swap;font-weight:200 1000;src:url("./assets/fonts/nunito-latin-ext-wght-normal.woff2") format("woff2-variations"),url("./assets/fonts/nunito-latin-ext-wght-normal.woff2") format("woff2");unicode-range:U+0100-02BA,U+02BD-02C5,U+02C7-02CC,U+02CE-02D7,U+02DD-02FF,U+0304,U+0308,U+0329,U+1D00-1DBF,U+1E00-1E9F,U+1EF2-1EFF,U+2020,U+20A0-20AB,U+20AD-20C0,U+2113,U+2C60-2C7F,U+A720-A7FF}
+@font-face{font-family:"JetBrains Mono";font-style:normal;font-display:swap;font-weight:100 800;src:url("./assets/fonts/jetbrains-mono-latin-wght-normal.woff2") format("woff2-variations"),url("./assets/fonts/jetbrains-mono-latin-wght-normal.woff2") format("woff2");unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD}
 /* Layout: a dense, playful "lab notebook" — every band pairs a short story line with a toy you can poke; no empty bands. */
 :root{
   --bg:#F4F5FB; --ink:#1A1F3D; --muted:#646B90; --card:#FFFFFF; --line:#E0E3F1; --soft:#EBEDF8; --deep:#1A1F3D; --on-deep:#F4F5FB;
   --pink:#FF5C92; --sun:#FFC23D; --mint:#28C99C; --sky:#4A9BFF; --grape:#8D70FF;
   --gA:#28C99C; --gB:#4A9BFF; --gC:#FFAE1F;
   --on-accent:#1A1F3D;
-  --f-display:"Fredoka","Noto Sans SC",ui-rounded,system-ui,sans-serif;
-  --f-body:"Nunito","Noto Sans SC",system-ui,-apple-system,"PingFang SC","Microsoft YaHei",sans-serif;
+  --f-display:"Fredoka","PingFang SC","Hiragino Sans GB","Microsoft YaHei","Noto Sans SC","Source Han Sans SC",ui-rounded,system-ui,sans-serif;
+  --f-body:"Nunito","PingFang SC","Hiragino Sans GB","Microsoft YaHei","Noto Sans SC","Source Han Sans SC",system-ui,-apple-system,sans-serif;
   --f-mono:"JetBrains Mono",ui-monospace,Menlo,Consolas,monospace;
 }
 @media (prefers-color-scheme:dark){:root:not([data-theme="light"]){

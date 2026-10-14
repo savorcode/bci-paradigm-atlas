@@ -1,6 +1,6 @@
 # BCI Paradigm Atlas
 
-[Project website](https://savorcode-website.vercel.app/) · [Website source](website/)
+[Project website](https://atlas.mentiscale.com/) · [Website source](website/)
 
 **English** | [简体中文](README.zh-CN.md)
 

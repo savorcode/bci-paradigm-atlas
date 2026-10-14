@@ -1,6 +1,6 @@
 # 脑机接口范式图谱 BCI Paradigm Atlas
 
-[项目展示页](https://savorcode-website.vercel.app/) · [Website source](website/)
+[项目展示页](https://atlas.mentiscale.com/) · [Website source](website/)
 
 [English](README.md) | **简体中文**
 
