@@ -39,10 +39,10 @@ generators:
   note: 'method: scalp topography; index computed from homologous frontal scalp pairs (F4/F3, F8/F7); review of scalp findings
     (Harmon-Jones et al. 2010). Scalp topography only, max C.'
 indexes:
-- construct: CN.emotional_state
+- construct: CN.approach_motivation
   evidence: B
-  relation: relatively greater left frontal activity (lower left alpha) associated with approach motivation / positive affect;
-    greater right with withdrawal
+  relation: relatively greater left frontal activity (lower left alpha) associated with approach motivation; greater right
+    with withdrawal
   sources:
   - citation: 'Harmon-Jones E, Gable PA, Peterson CK. The role of asymmetric frontal cortical activity in emotion-related
       phenomena: a review and update. Biol Psychol. 2010;84(3):451-462.'
@@ -59,9 +59,9 @@ indexes:
     doi: 10.1016/j.nicl.2017.07.006
     year: 2017
     verified: false
-  note: 'Approach-withdrawal motivation has no README construct; mapped to CN.emotional_state (vocab request CN.approach_motivation).
-    Meta-analytic evidence is mixed: Thibodeau 2006 finds moderate effects for depression/anxiety, van der Vinne 2017 finds
-    no reliable diagnostic effect in MDD, hence B not A.'
+  note: 'Re-mapped from CN.emotional_state in sprint 5 (D-076): Harmon-Jones 2010 argues the asymmetry tracks approach vs
+    withdrawal motivation rather than valence. Meta-analytic evidence is mixed: Thibodeau 2006 finds moderate effects for
+    depression/anxiety, van der Vinne 2017 finds no reliable diagnostic effect in MDD, hence B not A.'
 - construct: CN.value_decision
   evidence: C
   relation: larger left-sided resting asymmetry predicts stronger response bias toward more frequently rewarded stimuli

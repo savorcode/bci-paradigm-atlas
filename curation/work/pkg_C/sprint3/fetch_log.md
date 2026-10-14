@@ -1,6 +1,6 @@
 # 包 C sprint 3 取数日志 / fetch log（curator_b，2026-10-05）
 
-工具：WebFetch（Crossref REST、OpenAlex、PubMed 文章页）。每行一次请求；被拒（429/403）的 URL 不重试，改用其他接口或改写查询。
+工具：HTTP request（Crossref REST、OpenAlex、PubMed 文章页）。每行一次请求；被拒（429/403）的 URL 不重试，改用其他接口或改写查询。
 
 共 83 次请求。
 
@@ -41,7 +41,7 @@
 | 33 | `https://api.crossref.org/works/10.1111/1469-8986.3850752` | 429 | rate limited; not retried, PubMed fallback |
 | 34 | `https://api.crossref.org/works/10.1038/nature04766` | ok | record found |
 | 35 | `https://api.crossref.org/works/10.1080/14640748408401502` | 429 | rate limited (proxy); not retried, OpenAlex fallback |
-| 36 | `https://pubmed.ncbi.nlm.nih.gov/11577898/` | empty | page returned no article content (JS shell); PubMed not usable via WebFetch |
+| 36 | `https://pubmed.ncbi.nlm.nih.gov/11577898/` | empty | page returned no article content (JS shell); PubMed not usable via HTTP request |
 | 37 | `https://api.openalex.org/works/doi:10.1080/14640748408401502` | ok | record found (OpenAlex fallback) |
 | 38 | `https://api.crossref.org/works/10.1523/JNEUROSCI.0822-10.2010` | ok | record found |
 | 39 | `https://api.crossref.org/works/10.7554/eLife.46975` | ok | record found |
@@ -77,7 +77,7 @@
 | 69 | `https://api.crossref.org/works?query.bibliographic=Goel+Dolan+syllogistic+reasoning+NeuroImage+2000&rows=3` | 429 | proxy rate limit; not retried |
 | 70 | `https://api.openalex.org/works?search=Goel+Dolan+syllogistic+reasoning+dissociation+mechanisms&per-page=3` | 429 | OpenAlex rate limited; not retried |
 | 71 | `https://api.crossref.org/works?query.bibliographic=Goel+syllogistic+reasoning+dissociation+NeuroImage+2000&rows=3` | 429 | proxy rate limit; not retried |
-| 72 | `https://api.crossref.org/works?query.bibliographic=Goel+Buchel+Frith+Dolan+syllogistic+reasoning+2000&rows=3` | 429 | proxy rate limit (global WebFetch budget); not retried |
+| 72 | `https://api.crossref.org/works?query.bibliographic=Goel+Buchel+Frith+Dolan+syllogistic+reasoning+2000&rows=3` | 429 | proxy rate limit (global HTTP request budget); not retried |
 | 73 | `https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=AUTH:"Goel V" AND TITLE:"syllogistic reasoning" AND PUB_YEAR:2000&format=json` | 429 | proxy rate limit (global); Europe PMC not retried |
 | 74 | `https://api.crossref.org/works?query.bibliographic=Goel+Dolan+Dissociation+of+mechanisms+underlying+syllogistic+reasoning&rows=3` | ok | top hit 10.1006/nimg.2000.0636 matches |
 | 75 | `https://api.crossref.org/works?query.bibliographic=Grant+Berg+behavioral+analysis+degree+of+reinforcement+Weigl-type+card+sorting+1948&rows=3` | 429 | proxy rate limit (global); not retried; re-queried later with different wording |

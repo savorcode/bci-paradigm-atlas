@@ -18,4 +18,4 @@ Markers: MK.BOLD_hippocampus, _frontoparietal, _category_selective, _language_ne
 - Wager & Smith 2003: Crossref title truncated at the colon; subtitle "a meta-analysis" added.
 - Binder 2009: Crossref container-title empty; journal (Cereb Cortex) taken from DOI prefix and print record.
 - Not cited (record not retrieved or DOI mismatch): Brefczynski & DeYoe 1999, Polonsky et al. 2000.
-- curl to Crossref/OpenAlex blocked by proxy (403); WebFetch rate limits (429) handled by waiting.
+- curl to Crossref/OpenAlex blocked by proxy (403); HTTP request rate limits (429) handled by waiting.

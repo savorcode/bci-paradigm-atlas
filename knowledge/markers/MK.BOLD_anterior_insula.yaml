@@ -57,15 +57,26 @@ indexes:
   note: Two narrative/theoretical reviews; B.
 - construct: CN.somatosensation
   evidence: A
-  relation: BOLD increases for directly experienced pain and when observing others in pain
+  relation: BOLD increases for directly experienced pain
   sources:
   - citation: Lamm C, Decety J, Singer T. Meta-analytic evidence for common and distinct neural networks associated with directly
       experienced pain and empathy for pain. NeuroImage. 2011;54(3):2492-2502.
     doi: 10.1016/j.neuroimage.2010.10.014
     year: 2011
     verified: false
-  note: Meta-analysis. Empathy for pain has no README construct; mapped here (vocab request CN.empathy).
-- construct: CN.social_interaction
+  note: Meta-analysis (Lamm 2011) supports the self-pain response independently; the empathy-for-pain effect moved to CN.empathy
+    in sprint 5 (D-076).
+- construct: CN.empathy
+  evidence: A
+  relation: BOLD increases when observing or imagining others in pain, overlapping the self-pain response
+  sources:
+  - citation: Lamm C, Decety J, Singer T. Meta-analytic evidence for common and distinct neural networks associated with directly
+      experienced pain and empathy for pain. NeuroImage. 2011;54(3):2492-2502.
+    doi: 10.1016/j.neuroimage.2010.10.014
+    year: 2011
+    verified: false
+  note: Meta-analysis. Added in sprint 5 (D-076); previously mapped to CN.somatosensation as closest id.
+- construct: CN.social_decision
   evidence: A
   relation: BOLD increases for unfair compared with fair offers in the Ultimatum Game
   sources:
@@ -79,7 +90,7 @@ indexes:
     doi: 10.1126/science.1082976
     year: 2003
     verified: false
-  note: Fairness-related social decision mapped to CN.social_interaction (vocab request CN.social_decision).
+  note: Fairness-related social decision; re-mapped from CN.social_interaction in sprint 5 (D-076).
 notes: 'Signature values are textbook-level characteristics entered in the first pass and await source checking. Sprint 4
   (2026-10-12, curator_d): generators and indexes curated; every DOI checked against its Crossref or OpenAlex record (see
   curation/work/sprint4/markers_D/); verified: false pending full-text check.'

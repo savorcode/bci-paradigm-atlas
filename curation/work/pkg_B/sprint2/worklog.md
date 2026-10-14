@@ -18,7 +18,7 @@
 - **变体复核**（README 表中 8 条）：7 条拆为新具体范式——MOT-ME 单指 → -002（准则 1），行走 → -003（1;3），节律敲击 → -004（2;3）；MOT-MI 下肢/足部 → -004（1）；IMG-AUD 音乐想象 → -002（1;2）；IMG-CMD 床旁脑电 → -002（1;2;3）；IMG-VIS 类别特异 → -002（1）。IMG-CMD“空间导航想象”是 Owen 2006 标准配置类别集的一部分，已从 `variants` 删去并写入 -001 的 `protocol.classes`；“只用导航想象”的配置记为“提议”。本包现无保留的参数级变体（无 `Hybrid:` 变体）。
 - **MOT-MI 与 D-057 示例的差异**：示例中 MOT-MI-003 写“单侧上肢 11 类（肘屈伸、前臂旋前/旋后、手抓握/张开）”，但这组动作是 Ofner et al. 2017（6 动作 + 休息 = 7 类，MOABB Ofner2017），11 类是 Jeong et al. 2020（GigaScience，任务未在所见页面列出）。按所见出处：MOT-MI-003 = Ofner 2017，MOT-MI-011 = Jeong 2020（classes 待补）。请维护者确认。
 - **class_updates**：10 条 modify（MOT-MI、MOT-ME、MOT-ATT、MOT-HW 改名为“书写（尝试或实际执行）”、MOT-MRCP 改名与泛化、MOT-GRASP、MOT-REACH、MOT-SACC、MOT-CURSOR、IMG-CMD）：描述泛化、标记物并集、别名。无新范式类。
-- **核对线索**：沿用 R 编号线索；sprint 2 检索 7 次 WebSearch（上限 12）、23 次 WebFetch（见 `search_log.md`，新线索 S2B-L01…L17 待分配 R 编号）。PMC 页面返回 reCAPTCHA，未重试。
+- **核对线索**：沿用 R 编号线索；sprint 2 检索 7 次 web search（上限 12）、23 次 HTTP request（见 `search_log.md`，新线索 S2B-L01…L17 待分配 R 编号）。PMC 页面返回 reCAPTCHA，未重试。
 - **TBD first_source**（5 个，D-032 写法）：MOT-MI-005（Graz 连续反馈，已知数据集文献 doi 10.1109/TNSRE.2007.906956）、MOT-MI-006（BNCI2003_004）、MOT-MI-009（BCI Competition IV ds1）、MOT-ME-003（行走）、MOT-REACH-002（BCI Competition IV ds3）。另有多个新文件以“所见最早文献”作 first_source、notes 注明“origin not established”。
 - **问题 / 待例会**：
   1. IMG-MA：MOABB 两页对 BNCI2015_004 的类别列表不一致；若 Keirn & Aunon 1990（R0842）原始配置是五任务，-001/-002 的角色需对调（序号不变，改内容）。

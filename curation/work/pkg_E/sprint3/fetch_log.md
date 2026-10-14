@@ -1,6 +1,6 @@
 # 包 E · sprint 3 · 取数日志 / fetch log（curator_d，2026-10-05）
 
-工具：WebFetch（经代理）。WebSearch 配额已尽，未用；PubMed 文章页被代理拒绝（429），未再试；Crossref 书目检索对长查询串返回与查询无关的默认列表（见 #68、#95–#97），改用短查询串后正常。按 DOI 取记录时 Crossref 多次 429，改用 OpenAlex `works/doi:` 与 `works/pmid:`（README 允许的回退源）。共 100 次取数；被拒的 URL 一律不重试。
+工具：HTTP request（经代理）。web search 配额已尽，未用；PubMed 文章页被代理拒绝（429），未再试；Crossref 书目检索对长查询串返回与查询无关的默认列表（见 #68、#95–#97），改用短查询串后正常。按 DOI 取记录时 Crossref 多次 429，改用 OpenAlex `works/doi:` 与 `works/pmid:`（README 允许的回退源）。共 100 次取数；被拒的 URL 一律不重试。
 
 | # | 来源 | URL | 结果 |
 |---|---|---|---|

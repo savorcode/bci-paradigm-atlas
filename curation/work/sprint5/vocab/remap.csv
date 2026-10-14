@@ -1,0 +1,14 @@
+marker,link_type,old_id,new_id,kept_old,note
+MK.N170,generator,BR.LOC,BR.OFA,no,IOG/OFA source (Jacques 2019); no separate support for LOC proper
+MK.P2_auditory,index,CN.phonological_processing,CN.perceptual_learning,no,training effect (Tremblay 2001)
+MK.N1_visual,index,CN.early_visual,CN.perceptual_discrimination,no,discrimination vs detection (Vogel & Luck 2000)
+MK.N1_auditory,index,CN.spatial_attention,CN.auditory_selective_attention,no,ear/channel selection (Hillyard 1973; Naatanen & Picton 1987)
+MK.LPP,index,CN.emotional_state,CN.emotion_regulation,yes,arousal covariation (Cuthbert 2000) supports CN.emotional_state; relation split; new link has same sources
+MK.frontal_alpha_asymmetry,index,CN.emotional_state,CN.approach_motivation,no,Harmon-Jones 2010: motivation rather than valence; relation reworded; grade B kept
+MK.BOLD_anterior_insula,index,CN.somatosensation,CN.empathy,yes,Lamm 2011 meta-analysis covers both self pain and empathy for pain; relation split; both A
+MK.BOLD_anterior_insula,index,CN.social_interaction,CN.social_decision,no,Ultimatum Game unfairness (Feng 2015; Sanfey 2003)
+MK.BOLD_vmPFC_value,index,CN.social_interaction,CN.social_decision,no,charitable giving (Hare 2010)
+MK.BOLD_dACC,index,CN.social_interaction,CN.social_decision,no,Cyberball exclusion (Eisenberger 2003; Rotge 2015)
+MK.BOLD_striatum_reward,index,CN.anticipation,CN.reward_anticipation,no,MID anticipation phase (Oldham 2018; Knutson 2001)
+MK.BOLD_oculomotor,generator,,BR.SEF,,"new generator; SEF named in the abstracts of Grosbras 2005 and Jamadar 2013 (OpenAlex API records); evidence A, same sources as BR.FEF"
+MK.BOLD_auditory_cortex,index,CN.social_perception,CN.voice_perception,no,voice-selective STS/STG (Belin 2000)

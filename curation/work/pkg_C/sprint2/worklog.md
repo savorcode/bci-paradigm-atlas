@@ -25,7 +25,7 @@
 - **保留为变体 / 新增变体**：ERR-VRPE-001 新增 EMS 力反馈条件（R1258，待例会）；CTL-AS-001 新增国际标准化协议（R0566，参数级）。
 - **只记提议、未建文件**（证据不足或缺标记物线索）：ERR-TS Gläscher 2010、CTL-STR 计数 Stroop、CTL-ANT ANT-R、CTL-CPT Conners not-X、CTL-GNG 线索 Go/NoGo。未拆分但讨论过：CTL-BART Rao 2008 主动/被动（仅 1 篇）、CTL-EFF 认知努力折扣、CTL-TOL 计算机化/SoC、CTL-WASON 内容条件、CTL-SST 选择性停止（无线索）。
 - **class_updates**：12 条 modify（ERR-ERRP、ERR-OBS、ERR-AWARE、ERR-GAM、ERR-ADAPT、ERR-CHGPT、ERR-TS、CTL-CPT、CTL-FLK、CTL-SW、CTL-PDM、CTL-STR）：描述泛化到类、标记物并集（ERR-AWARE +MK.ERN +MK.BOLD_frontoparietal；ERR-ADAPT +MK.P3b；CTL-CPT +MK.DMN_connectivity；CTL-FLK +MK.LRP）、别名；CTL-CPT 类名去掉"AX-CPT"，ERR-ADAPT 类名扩为"运动适应与基于奖赏的运动学习"。无新范式类，无新标记物申请。
-- **检索**：WebSearch 7 次（上限 12），WebFetch 26 次，见 `search_log.md`。PubMed 1 次 reCAPTCHA，未重试。
+- **检索**：web search 7 次（上限 12），HTTP request 26 次，见 `search_log.md`。PubMed 1 次 reCAPTCHA，未重试。
 - **请维护者补入 literature.csv 的检索线索**：S_SPULER2015、S_TUEBINGEN_CONTERRP、S_HESTER2005、S_CALLEJAS2004、S_CALLEJAS2005、S_MEIRAN1996、S_SERVANSCHREIBER1996、S_KELLY2013、BNCI 013-2015 的 TNSRE 2010 文献；并更新 R1093 书目（Proudfit 2015, Psychophysiology, 10.1111/psyp.12370）。
 - **TBD first_source（新增 6 个）**：ERR-ERRP-003、ERR-GAM-002、CTL-FLK-002、CTL-SIM-002、CTL-STR-002、CTL-SW-003；另有 4 个只见转引/无作者：ERR-ERRP-002（标题未见）、ERR-OBS-002、ERR-OBS-003、ERR-GAM-003（作者年份转引自 R0714），ERR-ADAPT-002（R1001 无作者/年份）。原有 TBD：ERR-AAF-001。
 - **问题 / 待例会**：

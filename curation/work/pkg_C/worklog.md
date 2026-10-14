@@ -16,8 +16,8 @@
 - 读：methodology、CONTRIBUTING、schema（paradigm/common/marker）、taxonomy、_template、种子条目、decisions.md（D-001–D-030）、本目录 README、任务单、candidates.csv（C 包 37 行）、markers.csv / paradigm_markers.csv、literature.csv / paradigm_literature.csv。
 - 范式骨架：35 个收录候选 + 17 个新增候选 = 52 个文件（`paradigms/error/` 19 个，`paradigms/control/` 33 个）。CTL-DSST-001、CTL-TMT-001 按 D-023 暂缓，不建文件。本包无"并入"候选，故无 D-030 变体；按 D-015 在 ERR-AWARE-001 中写入 1 个变体（反向眼跳错误觉知，R0205）。
 - 标记物：覆盖本包 17 个骨架文件（name/aliases/type/modality 沿用登记表，新写 description；12 个 ERP/节律标记物写了教科书级 signature，均在 notes 中注明待核对；5 个 BOLD 标记物不写 signature）。未新建标记物文件，`marker_requests.csv` 无新增。
-- 新增候选 17 个（见 `new_candidates.csv`）：ERR-CHGPT、ERR-PRT、ERR-OGNG、ERR-APC、ERR-VRPE、ERR-AAF、CTL-MSIT、CTL-MRP、CTL-CONF、CTL-MIXG、CTL-FORAGE、CTL-VBC、CTL-RNG、CTL-ANAL、CTL-AUT、CTL-AMBIG、CTL-SYLL（均 `-001`）。已对照全部 5 个包的名称与别名查重。每个都至少有 1 条本次 WebSearch/WebFetch 实际看到的线索；全部按"收录"处理，待例会确认。
-- 检索：WebSearch 25 次（配额 30），WebFetch 30 次（见 `search_log.md`）。
+- 新增候选 17 个（见 `new_candidates.csv`）：ERR-CHGPT、ERR-PRT、ERR-OGNG、ERR-APC、ERR-VRPE、ERR-AAF、CTL-MSIT、CTL-MRP、CTL-CONF、CTL-MIXG、CTL-FORAGE、CTL-VBC、CTL-RNG、CTL-ANAL、CTL-AUT、CTL-AMBIG、CTL-SYLL（均 `-001`）。已对照全部 5 个包的名称与别名查重。每个都至少有 1 条本次 web search/HTTP request 实际看到的线索；全部按"收录"处理，待例会确认。
+- 检索：web search 25 次（配额 30），HTTP request 30 次（见 `search_log.md`）。
 
 ### 决定与约定
 - first_source：取线索中最能代表最早提出该范式的文献；citation 按 "Authors. Title. Venue. Year." 由 literature.csv 字段拼接，只填线索中已有的 doi/pmid/year；全部 `verified: false`。literature.csv 中 "X et al." 原样保留。

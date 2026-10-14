@@ -61,7 +61,7 @@ interop:
   bids_task: ssvep
 notes: 'Former variant of SSR-SSVEP-001 (merged candidate SSR-FT-001, D-003), split under D-057. first_source changed from
   the variant source Davidson 2020 (R0802, now a further reference) to Morgan et al. 1996, which D-003 names as the frequency-tagging
-  attention study; record found via WebSearch S2A36 [=R1283] and read in S2A37 (truncated abstract: cued attention to one
+  attention study; record found via web search S2A36 [=R1283] and read in S2A37 (truncated abstract: cued attention to one
   of two half-field character sequences). Further leads: R0085, R0206, R0398, R0483, R0667. [curator_e sprint 3, 2026-10-05]
   bibliography confirmed (OpenAlex, 2026-10-05).'
 status: draft

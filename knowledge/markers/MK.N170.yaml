@@ -21,7 +21,7 @@ description:
     bodies) than for other object categories.
   zh: 刺激后约 170 ms 达峰的枕颞负成分，对面孔（其次是身体）的反应大于其他物体类别。
 generators:
-- region: BR.LOC
+- region: BR.OFA
   evidence: B
   sources:
   - citation: 'Jacques C, Jonas J, Maillard L, et al. The inferior occipital gyrus is a major cortical source of the face-evoked
@@ -36,7 +36,7 @@ generators:
     verified: false
   note: 'method: intracranial; simultaneous scalp and intracerebral recordings identify the right inferior occipital gyrus
     (occipital face area) as a major N170 source (Jacques 2019), consistent with lateral occipito-temporal source models reviewed
-    by Rossion & Jacques 2008. IOG/OFA mapped to closest vocabulary id BR.LOC; BR.OFA requested.'
+    by Rossion & Jacques 2008. Re-mapped from BR.LOC to BR.OFA in sprint 5 (D-076).'
 - region: BR.FFA
   evidence: B
   sources:

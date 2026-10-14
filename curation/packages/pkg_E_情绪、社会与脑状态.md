@@ -97,7 +97,7 @@
   - [延伸文献(HED)] Addis et al. 2007. Remembering the past and imagining the future: Common and distinct neural substrates during event construction and elaboration. *Neuropsychologia, 45(7), 1363-1377*. doi:10.1016/j.neuropsychologia.2006.10.016 [R0376](https://doi.org/10.1016/j.neuropsychologia.2006.10.016)
   - [延伸文献(HED)] Rubin & Schulkind 1997. The distribution of autobiographical memories across the lifespan. *Memory & Cognition, 25(6), 859-866*. doi:10.3758/bf03211330 [R0152](https://doi.org/10.3758/bf03211330)
 - **检索线索（模型记忆，未核实）**：Damasio et al. 2000 Nat Neurosci 'Subcortical and cortical brain activity during the feeling of self-generated emotions' (origin candidate). Unverified.
-- **检索备注**：Not searched: session WebSearch budget (200) exhausted and WebFetch rate-limited (429); references limited to items surfaced incidentally in earlier searches.
+- **检索备注**：Not searched: web search budget (200) exhausted and HTTP request rate-limited (429); references limited to items surfaced incidentally in earlier searches.
 
 ### EMO-DOT-001　点探测注意偏向　/ Dot-probe task
 
@@ -114,7 +114,7 @@
   - [延伸文献(HED)] Zvielli et al. 2015. Temporal dynamics of attentional bias. *Clinical Psychological Science, 3(5), 772–788*. doi:10.1177/2167702614551572 [R0660](https://doi.org/10.1177/2167702614551572)
   - [延伸文献(HED)] Schmukle 2005. Unreliability of the dot probe task. *European Journal of Personality, 19(7), 595–605*. doi:10.1002/per.554 [R0333](https://doi.org/10.1002/per.554)
 - **检索线索（模型记忆，未核实）**：MacLeod, Mathews & Tata 1986 J Abnorm Psychol 'Attentional bias in emotional disorders' (origin); Kappenman et al. 2014 Front Psychol on reliability of dot-probe/N2pc; Bar-Haim et al. 2007 Psychol Bull meta-analysis. Unverified.
-- **检索备注**：Not searched: session WebSearch budget (200) exhausted and WebFetch rate-limited (429); references limited to items surfaced incidentally in earlier searches.
+- **检索备注**：Not searched: web search budget (200) exhausted and HTTP request rate-limited (429); references limited to items surfaced incidentally in earlier searches.
 
 ### EMO-EST-001　情绪 Stroop　/ Emotional Stroop
 
@@ -130,7 +130,7 @@
   - [延伸文献(HED)] Cisler & Koster 2010. Mechanisms of attentional biases toward threat in anxiety disorders. *Clinical Psychology Review, 30(2), 203–216*. doi:10.1016/j.cpr.2009.11.003 [R0470](https://doi.org/10.1016/j.cpr.2009.11.003)
   - [延伸文献(HED)] Algom et al. 2004. A rational look at the emotional Stroop phenomenon: A generic slowdown, not a Stroop effect. *Journal of Experimental Psychology: General, 133(3), 323–338*. doi:10.1037/0096-3445.133.3.323 [R0270](https://doi.org/10.1037/0096-3445.133.3.323)
 - **检索线索（模型记忆，未核实）**：Williams, Mathews & MacLeod 1996 Psychol Bull 'The emotional Stroop task and psychopathology' (review); Whalen et al. 1998 Biol Psychiatry emotional counting Stroop fMRI. Unverified.
-- **检索备注**：Not searched: session WebSearch budget (200) exhausted and WebFetch rate-limited (429); references limited to items surfaced incidentally in earlier searches. Consider merge with a generic Stroop paradigm if present in another package.
+- **检索备注**：Not searched: web search budget (200) exhausted and HTTP request rate-limited (429); references limited to items surfaced incidentally in earlier searches. Consider merge with a generic Stroop paradigm if present in another package.
 
 ### EMO-FACE-001　情绪面孔　/ Emotional faces
 
@@ -241,7 +241,7 @@
   - [其他] Sauter et al. 2010. Perceptual cues in nonverbal vocal expressions of emotion. *The Quarterly Journal of Experimental Psychology*. doi:10.1080/17470211003721642 [R0473](https://doi.org/10.1080/17470211003721642)
   - [其他] Leentjens et al. 1998. Disturbances of affective prosody in patients with schizophrenia; a cross sectional study. *Journal of Neurology, Neurosurgery, and Psychiatry*. doi:10.1136/jnnp.64.3.375 [R0161](https://doi.org/10.1136/jnnp.64.3.375)
 - **检索线索（模型记忆，未核实）**：Schirmer & Kotz 2006 Trends Cogn Sci 'Beyond the right hemisphere: brain mechanisms mediating vocal emotional processing' (review); Paulmann & Kotz 2008 P200 prosody; Bradley & Lang IADS. Unverified.
-- **检索备注**：Not searched: session WebSearch budget (200) exhausted and WebFetch rate-limited (429); references limited to items surfaced incidentally in earlier searches.
+- **检索备注**：Not searched: web search budget (200) exhausted and HTTP request rate-limited (429); references limited to items surfaced incidentally in earlier searches.
 
 ### EMO-STRESS-001　社会应激任务　/ Social stress task (e.g. TSST / MIST)
 
@@ -253,7 +253,7 @@
   - [综述] Narvaez Linares et al. 2020. A systematic review of the Trier Social Stress Test methodology: Issues in promoting study comparison and replicable research. *Neurobiology of Stress, 13, 100235*. doi:10.1016/j.ynstr.2020.100235 [R0785](https://doi.org/10.1016/j.ynstr.2020.100235)
   - [其他] Foley & Kirschbaum 2010. Human hypothalamus—pituitary—adrenal axis responses to acute psychosocial stress in laboratory settings.  [R0468]
 - **检索线索（模型记忆，未核实）**：Kirschbaum, Pirke & Hellhammer 1993 Neuropsychobiology (TSST origin); Dedovic et al. 2005 J Psychiatry Neurosci (MIST origin); Allen et al. 2014 Neurosci Biobehav Rev TSST review. Unverified.
-- **检索备注**：Not searched: session WebSearch budget (200) exhausted and WebFetch rate-limited (429); references limited to items surfaced incidentally in earlier searches.
+- **检索备注**：Not searched: web search budget (200) exhausted and HTTP request rate-limited (429); references limited to items surfaced incidentally in earlier searches.
 
 ### EMO-APRIME-001　情感启动　/ Affective priming
 
@@ -290,7 +290,7 @@
   - [延伸文献(HED)] van Boxtel & Lu 2013. A biological motion toolbox for reading, displaying, and manipulating motion capture data in research settings. *Journal of Vision, 13(12), 7*. doi:10.1167/13.12.7 [R0563](https://doi.org/10.1167/13.12.7)
   - [延伸文献(HED)] Miller & Saygin 2013. Individual differences in the perception of biological motion: Links to social cognition and motor imagery. *Cognition, 128(2), 140–148*. doi:10.1016/j.cognition.2013.03.013 [R0576](https://doi.org/10.1016/j.cognition.2013.03.013)
 - **检索线索（模型记忆，未核实）**：Johansson 1973 Percept Psychophys (point-light origin); Grossman et al. 2000 J Cogn Neurosci (STS fMRI); Blake & Shiffrar 2007 Annu Rev Psychol review. Unverified.
-- **检索备注**：Not searched: session WebSearch budget (200) exhausted and WebFetch rate-limited (429); references limited to items surfaced incidentally in earlier searches.
+- **检索备注**：Not searched: web search budget (200) exhausted and HTTP request rate-limited (429); references limited to items surfaced incidentally in earlier searches.
 
 ### SOC-CYB-001　社会排斥（Cyberball）　/ Cyberball social exclusion
 
@@ -299,7 +299,7 @@
 - **别名**：Cyberball; ostracism paradigm; social exclusion
 - **文献线索**：暂无，需补检索
 - **检索线索（模型记忆，未核实）**：Williams, Cheung & Choi 2000 J Pers Soc Psychol (Cyberball origin); Eisenberger, Lieberman & Williams 2003 Science 'Does rejection hurt?' (fMRI); Hartgerink et al. 2015 PLoS One meta-analysis. Unverified.
-- **检索备注**：Not searched: session WebSearch budget (200) exhausted and WebFetch rate-limited (429); references limited to items surfaced incidentally in earlier searches.
+- **检索备注**：Not searched: web search budget (200) exhausted and HTTP request rate-limited (429); references limited to items surfaced incidentally in earlier searches.
 
 ### SOC-GAZE-001　目光跟随与共同注意　/ Gaze following / joint attention
 
@@ -338,7 +338,7 @@
   - [方法/基准] Inter-Brain Neural Couplings During Table Tennis Doubles. PMID 42014179 [R0963](https://pubmed.ncbi.nlm.nih.gov/42014179/)
   - [方法/基准] The influence of task and interpersonal interdependence on cooperative behavior and its neural mechanisms. PMID 39988591 [R1061](https://pubmed.ncbi.nlm.nih.gov/39988591/)
 - **检索线索（模型记忆，未核实）**：Sebanz, Bekkering & Knoblich 2006 Trends Cogn Sci 'Joint action: bodies and minds moving together' (review); Tognoli et al. 2007 PNAS phi complex in social coordination (EEG); Lindenberger et al. 2009 BMC Neurosci guitar duets. Unverified.
-- **检索备注**：Not searched: session WebSearch budget (200) exhausted and WebFetch rate-limited (429); references limited to items surfaced incidentally in earlier searches. Overlaps with SOC-HYP-001.
+- **检索备注**：Not searched: web search budget (200) exhausted and HTTP request rate-limited (429); references limited to items surfaced incidentally in earlier searches. Overlaps with SOC-HYP-001.
 
 ### SOC-PAIN-001　疼痛共情　/ Empathy for pain
 
@@ -394,7 +394,7 @@
   - [延伸文献(HED)] Engel & Zhurakhovska 2016. When is the risk of cooperation worth taking? The prisoner's dilemma as a game of multiple motives. *Applied Economics Letters*. doi:10.1080/13504851.2016.1139672 [R0693](https://doi.org/10.1080/13504851.2016.1139672)
   - ……另有 4 条见 literature.csv
 - **检索线索（模型记忆，未核实）**：Berg, Dickhaut & McCabe 1995 (trust game origin); King-Casas et al. 2005 Science 'Getting to know you' (hyperscanning trust, caudate); Rilling et al. 2002 Neuron PD fMRI. Unverified.
-- **检索备注**：Not searched: session WebSearch budget (200) exhausted and WebFetch rate-limited (429); references limited to items surfaced incidentally in earlier searches.
+- **检索备注**：Not searched: web search budget (200) exhausted and HTTP request rate-limited (429); references limited to items surfaced incidentally in earlier searches.
 
 ### SOC-UG-001　最后通牒博弈　/ Ultimatum game
 
@@ -542,7 +542,7 @@
 - **备注**：现有族中无对应，建议新增 hybrid 族（需判例）
 - **文献线索**：暂无，需补检索
 - **检索线索（模型记忆，未核实）**：Pfurtscheller et al. 2010 Front Neurosci 'The hybrid BCI' (origin/definition); Amiri et al. 2013 review; Shin et al. 2017 IEEE TNSRE open EEG+fNIRS hybrid dataset (TU Berlin). Unverified.
-- **检索备注**：Not searched: session WebSearch budget (200) exhausted and WebFetch rate-limited (429); references limited to items surfaced incidentally in earlier searches. Recommend new 'hybrid' family or a tag applied to existing paradigms.
+- **检索备注**：Not searched: web search budget (200) exhausted and HTTP request rate-limited (429); references limited to items surfaced incidentally in earlier searches. Recommend new 'hybrid' family or a tag applied to existing paradigms.
 
 ### STA-MATB-001　多任务认知负荷（MATB）　/ Multi-attribute task battery (MATB)
 
@@ -588,7 +588,7 @@
   - [其他] Libet & B 1985. Unconscious cerebral initiative and the role of conscious will in voluntary action. *Behav Brain Sci*. doi:10.1017/s0140525x00044903 [R0071](https://doi.org/10.1017/s0140525x00044903)
   - [其他] Brunia CHM et al. 2012. Negative Slow Waves as Indices of Anticipation: The Bereitschaftspotential, the Contingent Negative Variation, and the Stimulus-Preceding Negativity.  [R0546]
 - **检索线索（模型记忆，未核实）**：Birbaumer et al. 1999 Nature 'A spelling device for the paralysed' (origin); Elbert et al. 1980 SCP biofeedback; BCI Competition II dataset Ia/Ib (SCP self-regulation, Tübingen) on BBCI site. Unverified.
-- **检索备注**：Not searched: session WebSearch budget (200) exhausted and WebFetch rate-limited (429); references limited to items surfaced incidentally in earlier searches. Could be modelled as a child of STA-NF-001.
+- **检索备注**：Not searched: web search budget (200) exhausted and HTTP request rate-limited (429); references limited to items surfaced incidentally in earlier searches. Could be modelled as a child of STA-NF-001.
 
 ### STA-ANES-001　麻醉与意识水平　/ Anesthesia / level of consciousness
 
@@ -603,7 +603,7 @@
   - [其他] Leslie K et al. 2010. The effect of bispectral index monitoring on long-term survival in the B-aware trial. *Anesthesia and Analgesia*. doi:10.1213/ane.0b013e3181c3bfb2 [R0487](https://doi.org/10.1213/ane.0b013e3181c3bfb2)
   - [其他] Avidan MS & x 2008. Anesthesia awareness and the bispectral index. *The New England Journal of Medicine*. doi:10.1056/nejmoa0707361 [R0395](https://doi.org/10.1056/nejmoa0707361)
 - **检索线索（模型记忆，未核实）**：Purdon et al. 2013 PNAS 'Electroencephalogram signatures of loss and recovery of consciousness from propofol'; Brown, Lydic & Schiff 2010 NEJM 'General anesthesia, sleep, and coma' review; Lewis et al. 2012 PNAS slow oscillation; Chennu/University of Cambridge propofol sedation EEG dataset. All from memory, unverified.
-- **检索备注**：Not searched: session WebSearch budget (200) exhausted and WebFetch rate-limited (429); references limited to items surfaced incidentally in earlier searches.
+- **检索备注**：Not searched: web search budget (200) exhausted and HTTP request rate-limited (429); references limited to items surfaced incidentally in earlier searches.
 
 ### STA-ENG-001　投入度与视频学习　/ Engagement during video / learning
 
@@ -612,7 +612,7 @@
 - **别名**：classroom EEG; inter-subject correlation (ISC); learning engagement; video engagement
 - **文献线索**：暂无，需补检索
 - **检索线索（模型记忆，未核实）**：Dmochowski et al. 2012 Front Hum Neurosci (EEG ISC engagement); Hasson et al. 2004 Science (fMRI ISC naturalistic film); Cohen & Parra 2016/Madsen et al. 2021 PNAS. Unverified.
-- **检索备注**：Not searched: session WebSearch budget (200) exhausted and WebFetch rate-limited (429); references limited to items surfaced incidentally in earlier searches.
+- **检索备注**：Not searched: web search budget (200) exhausted and HTTP request rate-limited (429); references limited to items surfaced incidentally in earlier searches.
 
 ### STA-MED-001　冥想　/ Meditation
 
@@ -623,7 +623,7 @@
   - [其他] Lutz & x 2007. Meditation and the Neuroscience of Consciousness: An Introduction. *Cambridge Handbook of Consciousness*. doi:10.1017/cbo9780511816789.020 [R0368](https://doi.org/10.1017/cbo9780511816789.020)
   - [其他] Ospina & x 2007. Meditation practices for health: state of the research. PMID 17764203 [R0369]
 - **检索线索（模型记忆，未核实）**：Cahn & Polich 2006 Psychol Bull 'Meditation states and traits: EEG, ERP, and neuroimaging studies' review; Lutz et al. 2004 PNAS gamma synchrony in long-term practitioners; Lomas et al. 2015 systematic review; OpenNeuro meditation EEG dataset (Delorme/Brandmeyer, ds001787). All from memory, unverified.
-- **检索备注**：Not searched: session WebSearch budget (200) exhausted and WebFetch rate-limited (429); references limited to items surfaced incidentally in earlier searches.
+- **检索备注**：Not searched: web search budget (200) exhausted and HTTP request rate-limited (429); references limited to items surfaced incidentally in earlier searches.
 
 ### STA-MW-001　走神（思维漫游）　/ Mind wandering / experience sampling
 
@@ -638,7 +638,7 @@
   - [其他] McVay & Kane 2009. Conducting the train of thought: Working memory capacity, goal neglect, and mind wandering in an executive-control task. *Journal of Experimental Psychology: Learning, Memory, and Cognition*. doi:10.1037/a0014104 [R0429](https://doi.org/10.1037/a0014104)
   - [其他] Mason et al. 2007. Wandering minds: the default network and stimulus-independent thought. *Science 315 (5810): 393–395*. doi:10.1126/science.1131295 [R0390](https://doi.org/10.1126/science.1131295)
 - **检索线索（模型记忆，未核实）**：Smallwood, Beach, Schooler & Handy 2008 J Cogn Neurosci (P3 attenuation during mind wandering); Christoff et al. 2009 PNAS (fMRI experience sampling); Smallwood & Schooler 2015 Annu Rev Psychol review. Unverified.
-- **检索备注**：Not searched: session WebSearch budget (200) exhausted and WebFetch rate-limited (429); references limited to items surfaced incidentally in earlier searches.
+- **检索备注**：Not searched: web search budget (200) exhausted and HTTP request rate-limited (429); references limited to items surfaced incidentally in earlier searches.
 
 ### STA-NF-001　神经反馈训练　/ Neurofeedback training
 

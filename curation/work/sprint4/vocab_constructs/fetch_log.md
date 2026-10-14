@@ -1,8 +1,8 @@
 # Fetch log - vocab_constructs (sprint 4)
 
-Base URL: `https://www.cognitiveatlas.org/api/v-alpha/concept?name=<name>` (WebFetch, 2026-10-12).
-curl from the sandbox was blocked by the proxy (403), so all lookups went through WebFetch.
-"ERROR" = WebFetch CLIENT_ERROR (the API returns an error / no record for names with no exact concept match).
+Base URL: `https://www.cognitiveatlas.org/api/v-alpha/concept?name=<name>` (HTTP request, 2026-10-12).
+curl from the sandbox was blocked by the proxy (403), so all lookups went through HTTP request.
+"ERROR" = HTTP request CLIENT_ERROR (the API returns an error / no record for names with no exact concept match).
 
 | # | query name | outcome |
 |---|---|---|
@@ -128,9 +128,9 @@ curl from the sandbox was blocked by the proxy (403), so all lookups went throug
 | 120 | social cognition | trm_4a3fd79d0b13d (social cognition) - root CN.social, not applied (roots not mapped) |
 
 ## Other fetches / searches
-- WebFetch `https://www.cognitiveatlas.org/task/id/trm_4da6304c9aa23/` (Attention Network Test): lists attention shifting trm_4a3fd79d0b5fb, cognitive control trm_4aae62e4ad209, selective attention trm_4a3fd79d0b043. Used only as a lead; ids confirmed via API (#109, #114).
-- WebSearch (site cognitiveatlas.org) "motor imagery": no motor-imagery concept page in results.
-- WebSearch "mind wandering": no matching concept page.
-- WebSearch "vigilance": only task pages (PEBL Perceptual Vigilance Task etc.), no concept.
-- WebSearch "orienting": visual search concept page and ANT/Posner task pages.
-- WebSearch "sensory gating" OR "inner speech" OR "resting state": no relevant concept.
+- HTTP request `https://www.cognitiveatlas.org/task/id/trm_4da6304c9aa23/` (Attention Network Test): lists attention shifting trm_4a3fd79d0b5fb, cognitive control trm_4aae62e4ad209, selective attention trm_4a3fd79d0b043. Used only as a lead; ids confirmed via API (#109, #114).
+- web search (site cognitiveatlas.org) "motor imagery": no motor-imagery concept page in results.
+- web search "mind wandering": no matching concept page.
+- web search "vigilance": only task pages (PEBL Perceptual Vigilance Task etc.), no concept.
+- web search "orienting": visual search concept page and ANT/Posner task pages.
+- web search "sensory gating" OR "inner speech" OR "resting state": no relevant concept.

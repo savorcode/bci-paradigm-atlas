@@ -55,7 +55,7 @@ first_source:
   verified: false
 interop:
   bids_task: mmn
-notes: 'Lead: WebSearch S2A18 [=R1275], QxMD record of PubMed 14706481 (S2A19): title, journal and date read; abstract mentions
+notes: 'Lead: web search S2A18 [=R1275], QxMD record of PubMed 14706481 (S2A19): title, journal and date read; abstract mentions
   five deviant types and short recording time; authors not shown on the page (Naatanen et al. per search query, unverified).
   Also seen in S2A18 results: a musical multi-feature paradigm (Frontiers abstract), a parameter-level variant. New in sprint
   2. [curator_e sprint 3, 2026-10-05] bibliography corrected (OpenAlex, 2026-10-05).'

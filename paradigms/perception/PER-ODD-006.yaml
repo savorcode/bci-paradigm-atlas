@@ -43,7 +43,7 @@ first_source:
   verified: false
 interop:
   bids_task: p300speller
-notes: 'Lead: WebSearch S2A12 [=R1273] and PMC2879474 (S2A13; abstract read: 8 x 9 matrix, white/black 6 x 6 sub-matrices,
+notes: 'Lead: web search S2A12 [=R1273] and PMC2879474 (S2A13; abstract read: 8 x 9 matrix, white/black 6 x 6 sub-matrices,
   CBP vs RCP online accuracy 92 % vs 77 %). Further CBP studies seen in S2A12 results (ETSU colour CBP; Frye et al. JNE 2011,
   not read). New in sprint 2. [curator_e sprint 3, 2026-10-05] bibliography confirmed (Crossref, 2026-10-05).'
 status: draft

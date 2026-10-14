@@ -64,7 +64,7 @@
 ### 4. QA 与报告
 - `curation/reports/qa_sprint1.md`：每包随机 8 个、共 40 个。形式检查全部通过；源头存疑 11 个、TBD 6 个；修了 18 处过时 notes、1 处引文标点。
 - `scripts/coverage_report.py`（通用，经 `scripts/atlas.py` 读取）→ `curation/reports/coverage_M1.md`。
-- `search_protocol.md` 写入 S-002（WebSearch 143、WebFetch 140、被拒 21、新候选 85）与 S-003 计划；`CHANGELOG.md` 增加 M1 条目（已并入 [0.1.0]）；`curation/reports/sprint1_report.md` 给负责人。
+- `search_protocol.md` 写入 S-002（web search 143、HTTP request 140、被拒 21、新候选 85）与 S-003 计划；`CHANGELOG.md` 增加 M1 条目（已并入 [0.1.0]）；`curation/reports/sprint1_report.md` 给负责人。
 - `validate.py`：267 paradigms, 129 markers; 0 problem(s)。`build_graph.py`：407 nodes, 427 edges。
 
 ### 待办 / 待例会
@@ -107,7 +107,7 @@
 
 ## 2026-10-03 · 第 2 周 · maintainer（sprint 2 合并、登记与 QA，里程碑 M2 候选）
 
-**目标**：合并 5 个包的 sprint 2（具体范式拆分），合入范式类修改，登记新线索与具体范式，起草决议，QA，出里程碑 M2 的候选状态。本次没有做外部检索（未使用 WebSearch）。
+**目标**：合并 5 个包的 sprint 2（具体范式拆分），合入范式类修改，登记新线索与具体范式，起草决议，QA，出里程碑 M2 的候选状态。本次没有做外部检索（未使用 web search）。
 
 ### 1. 合并（`integration`）
 - 依次 `git merge --no-ff sprint2/pkg-A … pkg-E`（"Merge pkg X sprint 2 (split into concrete paradigms)"），**无冲突**：各包只改本包族的文件与 `curation/work/pkg_<X>/`（D 另改了 `new_leads.csv`）。具体范式 267 → 405（新建 138）。
@@ -131,7 +131,7 @@
 ### 5. 结果
 - `validate.py`：405 paradigms, 267 classes, 129 markers; **0 problem(s), 0 warning(s)**。
 - `build_graph.py`：812 nodes（paradigm 405、paradigm_class 267、marker 129、construct 6、region 5），1437 edges（elicits 1022、instance_of 405、indexes 6、generates 4）。
-- `search_protocol.md` S-003（WebSearch 44、WebFetch 92、被拒 16、新线索 78）与 S-004 计划；`CHANGELOG.md` M2 条目（2026-10-03，已并入 [0.1.0]）；`curation/reports/sprint2_report.md`。
+- `search_protocol.md` S-003（web search 44、HTTP request 92、被拒 16、新线索 78）与 S-004 计划；`CHANGELOG.md` M2 条目（2026-10-03，已并入 [0.1.0]）；`curation/reports/sprint2_report.md`。
 
 ### 待办 / 待例会
 - [ ] 负责人确认 D-058、D-061 – D-063（v0.1.0 发布前），执行 SSR-SSVEP-006 降级、标记物固定短语、MEM-TMR / STA-SCP 的类 notes 与 distinguishing。
@@ -193,7 +193,7 @@
 ### 4. 脚本与报告
 - 新脚本 `scripts/verification_report.py`：按包 × 状态、按包 × 实体类型 × 状态计数，图谱中剩余 TBD，`verified: true` 清单，短语一致性（缺 / 多 / 找不到实体）。结果：682 行；TBD 具体范式 9、类 3；verified:true 0；短语缺 0、多 0。
 - `validate.py`：405 paradigms, 267 classes, 129 markers; **0 problem(s), 0 warning(s)**。`check_siblings.py`：0 duplicate、35 to review（不变）。`build_graph.py`：811 节点 / 1,435 边（不变）。`coverage_report.py` → `coverage_M3.md`（TBD 9 / 3）。
-- `curation/reports/verification_sprint3.md`（第 1–6 节脚本生成，第 7–10 节：16 条前→后示例、47 行未核实清单分类、工具限制、下一步）；`sprint3_report.md`（负责人可读）；`search_protocol.md` S-004（504 次请求、被拒 106、无 WebSearch）与 S-005 计划；`CHANGELOG.md` M3 条目（2026-10-07，已并入 [0.1.0]）。
+- `curation/reports/verification_sprint3.md`（第 1–6 节脚本生成，第 7–10 节：16 条前→后示例、47 行未核实清单分类、工具限制、下一步）；`sprint3_report.md`（负责人可读）；`search_protocol.md` S-004（504 次请求、被拒 106、无 web search）与 S-005 计划；`CHANGELOG.md` M3 条目（2026-10-07，已并入 [0.1.0]）。
 
 ### 5. 版本
 - 合并：`main` ← `git merge --no-ff integration`（M3：出处书目核实，内容核实待做），`main` 校验通过；回到 `integration`。未推送。已完全合并的 `sprint3/prep` 删除；`sprint3/pkg-A … E` 因工作树（`wt3_A … E`）仍检出而保留。

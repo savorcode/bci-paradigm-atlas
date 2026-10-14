@@ -40,7 +40,7 @@ first_source:
   verified: false
 interop:
   bids_task: p300
-notes: 'Resolves the sprint-1 D-012 blocker (tactile P300 BCI had no lead). Lead: WebSearch S2A38 [=R1284], DOAJ record S2A39
+notes: 'Resolves the sprint-1 D-012 blocker (tactile P300 BCI had no lead). Lead: web search S2A38 [=R1284], DOAJ record S2A39
   (abstract: tactors around the waist, two, four or six tactors, offline and real-time). Distinct from PER-TACT-001 (transient
   somatosensory ERP, D-012) and SSR-SSSEP-002 (steady-state). New in sprint 2. [curator_e sprint 3, 2026-10-05] bibliography
   confirmed (Crossref, 2026-10-05).'

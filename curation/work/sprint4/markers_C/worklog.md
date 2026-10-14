@@ -5,8 +5,8 @@ Edits: added `generators` and `indexes`, appended one Sprint 4 sentence to `note
 `python3 scripts/validate.py` -> 0 problems, 0 warnings.
 
 ## Retrieval constraints
-- curl to Crossref/OpenAlex/EuropePMC is refused by the egress proxy (403); all records fetched with WebFetch.
-- The shared WebFetch proxy gave HTTP 429 roughly every 2-3 requests; Crossref was the most throttled, so most records come from OpenAlex single-record lookups (accepted fallback). record_api column in links.csv says which.
+- curl to Crossref/OpenAlex/EuropePMC is refused by the egress proxy (403); all records fetched with HTTP request.
+- The shared HTTP request proxy gave HTTP 429 roughly every 2-3 requests; Crossref was the most throttled, so most records come from OpenAlex single-record lookups (accepted fallback). record_api column in links.csv says which.
 - Every J Neurosci DOI (and one Neuron DOI) returned CLIENT_ERROR in both APIs, so no J Neurosci paper is cited. Dropped for that reason: Debener 2005 (ERN EEG-fMRI), Fu 2019 Neuron (single-unit ERN), Becker 2014 (FRN EEG-fMRI; DOI 10.1523/JNEUROSCI.3684-13.2014 found on publisher page but no API record), Steinhauser & Yeung 2010 / Boldt & Yeung 2015 (Pe and confidence), Liu 2012 (LPP generators), McCarthy 1995 (N400 intracranial).
 - Rejected wrong remembered DOIs (record showed a different paper): Herrmann 2004 LORETA ERN/Pe, Gehring & Knight 2000. Bonini 2014 (Science) and Stemmer 2004 never retrieved -> not cited.
 - OpenAlex lists only the first author for Gevins 1997 and Friederici 1999; remaining authors added from the article byline (flag for the full-text check).

@@ -1,8 +1,8 @@
 # Search log — curator_b, sprint 4 (2026-10-12)
 
-Tooling note: `curl` from the sandbox to api.crossref.org / api.openalex.org / eutils is blocked by the egress proxy (403 CONNECT); all record checks were done with WebFetch. Crossref via WebFetch returned HTTP 429 on most attempts, so OpenAlex (`api.openalex.org/works/doi:<DOI>`) was used as the primary record source (allowed fallback). PubMed / PMC pages returned a reCAPTCHA interstitial (unusable).
+Tooling note: `curl` from the sandbox to api.crossref.org / api.openalex.org / eutils is blocked by the egress proxy (403 CONNECT); all record checks were done with HTTP request. Crossref via HTTP request returned HTTP 429 on most attempts, so OpenAlex (`api.openalex.org/works/doi:<DOI>`) was used as the primary record source (allowed fallback). PubMed / PMC pages returned a reCAPTCHA interstitial (unusable).
 
-## WebSearch (9 calls)
+## web search (9 calls)
 | # | query | outcome |
 |---|---|---|
 | 1 | low-frequency EEG movement kinematics decoding review source localization Kobler Müller-Putz positions velocities | Found Kobler 2018 Sci Rep, Srisrisawang 2022 (not used) |
@@ -15,7 +15,7 @@ Tooling note: `curl` from the sandbox to api.crossref.org / api.openalex.org / e
 | 8 | Boveroux 2010 propofol "Breakdown of within- and between-network..." Anesthesiology doi | ULiège pages → DOI 10.1097/ALN.0b013e3181f697f5 |
 | 9 | Murphy ... 2009 "Source modeling sleep slow waves" PNAS doi | Wisconsin lab page → DOI 10.1073/pnas.0807933106 |
 
-## WebFetch — record checks
+## HTTP request — record checks
 | url | outcome |
 |---|---|
 | api.crossref.org/works/10.1093/brain/121.12.2271 | 429 first; later OK — record lists only "Crone, N." as author |

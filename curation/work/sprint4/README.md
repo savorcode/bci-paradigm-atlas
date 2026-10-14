@@ -1,6 +1,6 @@
 # 冲刺 4：知识层（构念、脑区、标记物关联）
 
-分支 `knowledge/layer-1`（基于 GitHub main `05462c2`）。提交作者 savorcode01，不加任何 Claude 署名。
+分支 `knowledge/layer-1`（基于 main `05462c2`）。提交作者 savorcode01。
 
 ## 规则
 

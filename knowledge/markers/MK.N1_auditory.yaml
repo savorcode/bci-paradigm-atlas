@@ -62,7 +62,7 @@ indexes:
     doi: 10.1016/S1388-2457(01)00636-8
     year: 2001
     verified: false
-- construct: CN.spatial_attention
+- construct: CN.auditory_selective_attention
   evidence: B
   relation: amplitude increases for sounds in the attended ear/channel
   sources:
@@ -76,7 +76,7 @@ indexes:
     doi: 10.1111/j.1469-8986.1987.tb00311.x
     year: 1987
     verified: false
-  note: Auditory channel (ear) selection; no separate auditory selective-attention construct in vocabulary, see vocab_requests.csv.
+  note: Auditory channel (ear) selection, the Nd attention effect; re-mapped from CN.spatial_attention in sprint 5 (D-076).
 notes: 'First-pass skeleton by package A (2026-10-03). Signature values are textbook-level approximations and await source
   checking. Sprint 4 (2026-10-12, curator_a): generators and indexes curated; every DOI checked against its Crossref or OpenAlex
   record (see curation/work/sprint4/markers_A/); verified: false pending full-text check.'

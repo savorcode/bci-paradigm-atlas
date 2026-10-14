@@ -15,7 +15,7 @@
 **时间线**
 - 09:00 读取 methodology、CONTRIBUTING、schema、taxonomy、模板与种子条目、decisions.md（D-001–D-030）、本目录 README、任务单、candidates.csv、registry、literature.csv / paradigm_literature.csv。
 - 09:30 整理本包 41 个候选的线索（166 条，R 编号）；确定需要检索源头的范式：MOT-CURSOR、MOT-BIMAN、MOT-RT、IMG-SPI、IMG-SAO、STM-CCEP、STM-DBSEP、STM-PAS、STM-SEP、STM-TACS、STM-TEP、STM-TUS，以及并入变体 IMG-FACE（无线索）。
-- 10:00–12:30 检索（WebSearch 30 次，见 search_log.md）。PubMed 检索页与 Crossref 检索接口返回 429，eutils 被 robots 禁止，PMC 页面为验证码页；均未重试，改用机构库/DOAJ/neurosynth 等页面核对书目。
+- 10:00–12:30 检索（web search 30 次，见 search_log.md）。PubMed 检索页与 Crossref 检索接口返回 429，eutils 被 robots 禁止，PMC 页面为验证码页；均未重试，改用机构库/DOAJ/neurosynth 等页面核对书目。
 - 13:00 编写 49 个骨架条目（33 个收录候选 + 16 个新候选）的数据，补充种子 MOT-MI-001；改写 22 个本包标记物骨架，新建 5 个申请标记物。
 - 15:00 `python3 scripts/validate.py` → 0 problem(s)；生成 status.csv、pr/*.md（50 份）、new_candidates.csv（17 行）、marker_requests.csv（5 行）。
 

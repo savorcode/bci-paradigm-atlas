@@ -45,7 +45,7 @@ indexes:
     doi: 10.1093/scan/nst106
     year: 2014
     verified: false
-- construct: CN.social_interaction
+- construct: CN.social_decision
   evidence: C
   relation: BOLD tracks the value of charitable (prosocial) choices, modulated by input from social-cognition regions
   sources:
@@ -54,7 +54,7 @@ indexes:
     doi: 10.1523/JNEUROSCI.4089-09.2010
     year: 2010
     verified: false
-  note: Prosocial giving mapped to CN.social_interaction (vocab request CN.social_decision); single study.
+  note: Prosocial (charitable) choice; re-mapped from CN.social_interaction in sprint 5 (D-076); single study.
 notes: 'No signature given in pass 1 (hemodynamic marker; region described in the description). Used by (registry): CTL-DD-001,
   CTL-IGT-001, SOC-DICT-001. Sprint 4 (2026-10-12, curator_d): generators and indexes curated; every DOI checked against its
   Crossref or OpenAlex record (see curation/work/sprint4/markers_D/); verified: false pending full-text check.'

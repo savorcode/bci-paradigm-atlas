@@ -48,7 +48,7 @@ indexes:
     doi: 10.1073/pnas.95.3.781
     year: 1998
     verified: false
-- construct: CN.early_visual
+- construct: CN.perceptual_discrimination
   evidence: C
   relation: amplitude is larger when a discrimination (not mere detection) is required at the attended location
   sources:
@@ -56,7 +56,7 @@ indexes:
     doi: 10.1111/1469-8986.3720190
     year: 2000
     verified: false
-  note: Discrimination process; closest vocabulary construct used, CN.perceptual_discrimination requested.
+  note: Discrimination vs detection contrast (Vogel & Luck 2000); re-mapped from CN.early_visual in sprint 5 (D-076).
 notes: 'First-pass skeleton by package A (2026-10-03). Signature values are textbook-level approximations and await source
   checking. Sprint 4 (2026-10-12, curator_a): generators and indexes curated; every DOI checked against its Crossref or OpenAlex
   record (see curation/work/sprint4/markers_A/); verified: false pending full-text check.'

@@ -1,6 +1,6 @@
 # 包 D sprint 3 书目核实 — 取数日志 / fetch log (curator_c, 2026-10-05)
 
-工具：WebFetch（Crossref REST、OpenAlex；PubMed 文章页返回 reCAPTCHA，弃用；Google Scholar / E-utilities 未用）。每行一次请求；被拒（429/403）的 URL 一律不重试。合计请求数见末尾。
+工具：HTTP request（Crossref REST、OpenAlex；PubMed 文章页返回 reCAPTCHA，弃用；Google Scholar / E-utilities 未用）。每行一次请求；被拒（429/403）的 URL 一律不重试。合计请求数见末尾。
 
 | # | API | URL | 结果 / outcome |
 |---|---|---|---|
@@ -123,5 +123,5 @@
 
 - Crossref `works/<DOI>` 稳定可用；`works?query.bibliographic=` 检索接口在本会话中频繁 429（约每 2–4 分钟才能成功一次），`+` 分隔的查询返回无关结果，`%20` 分隔正常。
 - OpenAlex `works/doi:` 与 `works/pmid:` 可用（偶发 429）；`works?search=` / `filter=title.search` 4 次全部 429，弃用。
-- PubMed 文章页经 WebFetch 返回 reCAPTCHA，PMID 行改用 OpenAlex `works/pmid:<PMID>` 取记录（source_api=OpenAlex）；按规则未新增任何 PMID。
+- PubMed 文章页经 HTTP request 返回 reCAPTCHA，PMID 行改用 OpenAlex `works/pmid:<PMID>` 取记录（source_api=OpenAlex）；按规则未新增任何 PMID。
 - 检索接口受限后，对 TBD 与无 DOI 行改用"候选 DOI 探针"：以候选 DOI 直接取 Crossref/OpenAlex 记录，只有记录的作者、题名、年份与条目/线索一致时才采用（见 sources_check.csv 的 note）。

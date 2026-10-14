@@ -69,7 +69,7 @@ indexes:
     doi: 10.1016/j.neuroimage.2013.02.063
     year: 2013
     verified: false
-- construct: CN.anticipation
+- construct: CN.reward_anticipation
   evidence: A
   relation: BOLD increases during anticipation of monetary reward, scaling with reward magnitude
   sources:
@@ -83,7 +83,8 @@ indexes:
     doi: 10.1523/JNEUROSCI.21-16-j0002.2001
     year: 2001
     verified: false
-  note: Reward anticipation mapped to CN.anticipation (vocab request CN.reward_anticipation).
+  note: MID-task anticipation phase (Oldham 2018 meta-analysis; Knutson 2001); re-mapped from CN.anticipation in sprint 5
+    (D-076).
 notes: 'No signature given in pass 1 (hemodynamic marker; region described in the description). Used by (registry): ERR-PRL-001,
   ERR-INST-001, ERR-PCL-001, ERR-TS-001, CTL-DD-001, EMO-MID-001, SOC-TRUST-001. Sprint 4 (2026-10-12, curator_d): generators
   and indexes curated; every DOI checked against its Crossref or OpenAlex record (see curation/work/sprint4/markers_D/); verified:

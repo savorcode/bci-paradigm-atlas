@@ -36,7 +36,7 @@
   3. **新标记物**：MK.BOLD_left_IFG 可能与 MK.BOLD_language_network（含左 IFG）构成同义，需维护者决定是否并入；MK.CPS 无同义项。MEM-RPRIM-001 暂用 MK.BOLD_category_selective + MK.N400，可考虑专设 MK.repetition_suppression。
   4. 新候选的独立性待判：MEM-CIT-001（是否为 PER-ODD-001 变体）、LAN-PCAT-001（与 PER-MMN-001 音位 MMN 变体的边界，D-017）、LAN-SL-001（与 LAN-AGL-001/LAN-HIER-001）、LAN-SWITCH-001（与 CTL-SW-001）。
   5. 新候选使用的标记物不在 `paradigm_markers.csv` 中，合并时需维护者补登。
-  6. PubMed/PMC 页面对 WebFetch 返回 reCAPTCHA，书目信息只能从检索结果标题或第三方页面获得。
+  6. PubMed/PMC 页面对 HTTP request 返回 reCAPTCHA，书目信息只能从检索结果标题或第三方页面获得。
 - 交接给其他包：
   - 包 A（D-017，LAN-PHON-001 → PER-MMN-001 变体“Speech-sound / phoneme-contrast MMN”）：线索 R0968（Language-specific phoneme representations revealed by electric and magnetic brain responses，源头候选）、R0988（Mismatch negativity in a phonetic discrimination task，源头候选）、R1068 / R0216（Näätänen 2001 综述，同一文献的两条记录）、R0975（SLI 中 MMN 综述）。
   - 包 A：LAN-VWFA-001 使用 MK.N170 与 MK.BOLD_category_selective（owner A），如需在这两个标记物中补充“字词”相关描述，请包 A 处理。

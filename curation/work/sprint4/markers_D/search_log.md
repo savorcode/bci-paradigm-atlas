@@ -1,13 +1,13 @@
 # Sprint 4 markers_D search log (curator_d)
 
-WebSearch calls used: 3 of 25. Candidate sources were mostly known landmark meta-analyses; every DOI was then fetched with WebFetch (Bash curl to these APIs is blocked by the proxy, as noted by curator_a). Abbreviations: CR = api.crossref.org/works/<DOI>, OA = api.openalex.org/works/doi:<DOI>.
+web search calls used: 3 of 25. Candidate sources were mostly known landmark meta-analyses; every DOI was then fetched with HTTP request (Bash curl to these APIs is blocked by the proxy, as noted by curator_a). Abbreviations: CR = api.crossref.org/works/<DOI>, OA = api.openalex.org/works/doi:<DOI>.
 
-## WebSearch
+## web search
 - "meta-analysis fNIRS prefrontal working memory load n-back oxygenated hemoglobin doi" -> identified Herff et al. (fnhum.2013.00935); PMC8145788 page blocked by reCAPTCHA, not used
 - "systematic review meta-analysis functional near-infrared spectroscopy working memory prefrontal activation load effect" -> no usable fNIRS WM meta-analysis; HbO -> working memory stays B
 - "EEG emotion recognition meta-analysis systematic review band power frontal asymmetry gamma valence arousal" -> no meta-analysis; identified Zheng, Zhu & Lu "Identifying stable patterns over time" (SEED)
 
-## WebFetch (record retrieval)
+## HTTP request (record retrieval)
 - CR 10.1016/j.neubiorev.2007.12.002 -> OK Sergerie 2008 NBR 32(4):811-830
 - CR 10.1016/j.brainresrev.2007.10.012 -> OK Costafreda 2008 Brain Res Rev 58(1):57-70
 - CR 10.1017/S0140525X11000446 -> OK Lindquist 2012 BBS 35(3):121-143

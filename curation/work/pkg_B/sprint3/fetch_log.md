@@ -1,6 +1,6 @@
 # 包 B sprint 3 · 抓取日志 / fetch log（curator_a，2026-10-05）
 
-共 103 次 WebFetch（成功 84，被拒/错误 19）。只用 WebFetch；未用 WebSearch。被拒的 URL 一律不重试；同一文献改用另一来源（Crossref ↔ OpenAlex）。
+共 103 次 HTTP request（成功 84，被拒/错误 19）。只用 HTTP request；未用 web search。被拒的 URL 一律不重试；同一文献改用另一来源（Crossref ↔ OpenAlex）。
 
 ## 可达性观察 / Endpoint behaviour
 

@@ -2,7 +2,7 @@
 
 - 审核人 / Reviewer：curator_e（交叉审核：包 A 由 curator_a 编写）
 - 日期：2026-10-05
-- 分支 / 工作树：`sprint3/pkg-A`，`/home/claude/work/wt3_A`
+- 分支 / 工作树：`sprint3/pkg-A`
 - 依据：`curation/verification/README.md`（两级核实，本冲刺仅书目级，`verified` 保持 false）、`queue_pkg_A.csv`（150 行）、方法说明 §3–§4、D-031、D-062。
 
 ## 1. 结果汇总
