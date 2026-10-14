@@ -5,3 +5,6 @@ __pycache__/
 # Local website deployment settings
 .vercel/
 .env*
+
+# Zotero export (regenerate with scripts/export_zotero.py)
+curation/zotero/*.rdf

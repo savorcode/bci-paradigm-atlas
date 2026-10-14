@@ -1,0 +1,17 @@
+id,field,value,api_url,note
+CN.statistical_learning,cognitive_atlas,,https://www.cognitiveatlas.org/api/v-alpha/concept?name=statistical learning,"not found; also tried ""statistical-learning"" and ""probabilistic learning"" (not found). ""sequence learning"" (trm_4a3fd79d0b0a6, learning items in their exact order) and ""implicit learning"" (trm_4a3fd79d0a527, no definition) exist but do not fit; field left out"
+CN.music_syntax,cognitive_atlas,trm_hsrxov4azQ6nM (music syntax),https://www.cognitiveatlas.org/api/v-alpha/concept?name=music syntax,"exact name match; Cognitive Atlas definition is broader (low-level descriptors plus rhythm, harmony, melody, genre), noted in the term; ""musical syntax"" not found"
+BR.inferior_colliculus,parent,(none),,regions.yaml has no brainstem or midbrain macro region; existing macro parents are cortical
+BR.inferior_colliculus,atlas_refs,(omitted),,"no Brodmann or HCP-MMP1.0 area (subcortical); AAL3 has no inferior colliculus label"
+BR.inferior_colliculus,sources,10.7554/eLife.48932,https://api.crossref.org/works/10.7554/eLife.48932,"Sitek et al. 2019, MNI-space subcortical auditory atlas (histology, postmortem MRI, 7T fMRI); record retrieved from Crossref, abstract from OpenAlex"
+BR.insula,parent,(none),,BR.anterior_insula and BR.posterior_insula had no parent
+BR.insula,atlas_refs.brodmann,BA13,,"Talairach-atlas convention; Brodmann did not number the human insula. BA14 not used"
+BR.insula,atlas_refs.aal3,Insula_L; Insula_R,,AAL3 does not split the insula (Rolls 2020 source object reused)
+BR.insula,atlas_refs.hcp_mmp1,AAIC; AVI; MI; Ig; PoI1; PoI2,,"insular parcels of Glasser 2016 (source object reused); frontal opercular FOP1-5, para-insular PI and piriform Pir left out"
+BR.anterior_insula,parent,BR.insula,,other fields unchanged
+BR.posterior_insula,parent,BR.insula,,other fields unchanged
+BR.dACC,notes,appended,,anterior midcingulate cortex (aMCC) reports mapped here; BR.MCC not added (D-077)
+BR.preSMA,notes,appended,,"""posterior medial frontal cortex"" reports mapped here, or to BR.dACC when the peak is cingulate; BR.pMFC not added (D-077)"
+MK.FFR,generator source,10.1038/ncomms11070,https://api.openalex.org/works/doi:10.1038/ncomms11070,"abstract names cochlear nucleus, inferior colliculus and medial geniculate as FFR sources"
+MK.FFR,generator source,10.1016/j.neuroimage.2018.03.060,https://api.openalex.org/works/doi:10.1016/j.neuroimage.2018.03.060,"no abstract in the record; title states subcortical sources dominate; indexed keyword ""inferior colliculus"""
+MK.FFR,generator source,10.1038/s41467-019-13003-w,https://api.openalex.org/works/doi:10.1038/s41467-019-13003-w,review of cortical and subcortical FFR sources

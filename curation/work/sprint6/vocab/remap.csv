@@ -1,0 +1,5 @@
+marker,link_type,old_id,new_id,kept_old,note
+MK.FFR,generator,(none),BR.inferior_colliculus,n/a,"new generator, evidence B (MEG/EEG source; Coffey 2016, Bidelman 2018, Coffey 2019); BR.A1 and BR.thalamus kept, thalamus note no longer says the midbrain source lacks an id"
+MK.linguistic_structure_tracking,index,CN.perceptual_learning,CN.statistical_learning,no,"word-rate response grows with learning of a statistical-learning stream (Batterink & Paller 2017); evidence C kept, placeholder note removed"
+MK.ERAN,index,CN.syntactic_processing,CN.music_syntax,no,"harmonic irregularity (Koelsch 2000, 2005, 2009); evidence B and relation kept, placeholder sentence removed from note"
+MK.HEP,generator,BR.posterior_insula,BR.insula,no,"insular subdivision not given in Park 2018 or Pollatos 2005; evidence B kept, placeholder sentence removed from note"

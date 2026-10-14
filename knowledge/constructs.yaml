@@ -143,6 +143,14 @@ terms:
   parent: CN.language
   cognitive_atlas: trm_4a3fd79d0b34b (syntactic processing)
   notes: 中文释义（范式工厂）：句法结构的构建与违例后的再分析，常见晚期正波 P600
+- id: CN.music_syntax
+  en: Music-syntactic processing
+  zh: 音乐句法加工
+  definition: Processing of the structural regularities, such as harmonic relations between chords, that govern how musical
+    events combine into sequences, including detection of their violation.
+  parent: CN.perception
+  cognitive_atlas: trm_hsrxov4azQ6nM (music syntax)
+  notes: Cognitive Atlas definition is broader (low- to high-level musical features); mapped as the closest concept.
 - id: CN.inner_speech
   en: Inner speech
   zh: 内部言语
@@ -496,6 +504,12 @@ terms:
   definition: Long-term improvement in perceptual discrimination or detection produced by practice.
   parent: CN.perception
   cognitive_atlas: trm_4a3fd79d0abb6 (perceptual learning)
+- id: CN.statistical_learning
+  en: Statistical learning
+  zh: 统计学习
+  definition: Extraction of regularities, such as transitional probabilities between successive elements, from exposure to
+    structured input, typically without instruction or awareness.
+  parent: CN.memory
 - id: CN.perceptual_discrimination
   en: Perceptual discrimination
   zh: 知觉辨别

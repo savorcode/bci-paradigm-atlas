@@ -50,7 +50,7 @@ generators:
   note: 'method: intracranial; subdural recordings show responses to music-syntactic irregularities over superior temporal
     gyrus (Sammler 2013); fMRI (Koelsch 2002) also shows superior temporal activation. Single intracranial study.'
 indexes:
-- construct: CN.syntactic_processing
+- construct: CN.music_syntax
   evidence: B
   relation: amplitude increases with the harmonic (music-syntactic) irregularity of a chord and interacts with concurrent
     linguistic syntactic violations
@@ -70,8 +70,7 @@ indexes:
     doi: 10.1111/j.1469-8986.2008.00752.x
     year: 2009
     verified: false
-  note: Music syntax is filed under the closest available id (CN.syntactic_processing); see vocab_requests.csv for CN.music_syntax.
-    Studies mostly from one research group.
+  note: Studies mostly from one research group.
 - construct: CN.prediction_violation
   evidence: B
   relation: amplitude increases when an event violates expectations derived from learned structural regularities rather than
