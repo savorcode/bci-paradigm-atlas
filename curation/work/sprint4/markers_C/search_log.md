@@ -1,8 +1,8 @@
 # Sprint 4 markers_C search log (curator_c)
 
-Record retrieval via WebFetch only (curl to api.crossref.org / api.openalex.org / ebi.ac.uk is refused by the egress proxy with 403). The shared WebFetch proxy returns frequent HTTP 429; requests were paced with 40-60 s pauses.
+Record retrieval via HTTP request only (curl to api.crossref.org / api.openalex.org / ebi.ac.uk is refused by the egress proxy with 403). The shared HTTP request proxy returns frequent HTTP 429; requests were paced with 40-60 s pauses.
 
-## WebFetch
+## HTTP request
 - crossref 10.1126/science.1100301 -> OK Ridderinkhof, Ullsperger, Crone, Nieuwenhuis 2004 Science 306(5695):443-447
 - crossref 10.1523/JNEUROSCI.2924-05.2005 -> 429
 - crossref 10.1016/j.neuron.2018.11.016 -> CLIENT_ERROR
@@ -50,7 +50,7 @@ Record retrieval via WebFetch only (curl to api.crossref.org / api.openalex.org 
 - crossref 10.1111/1469-8986.3850752 -> CLIENT_ERROR
 - openalex doi:10.1111/1469-8986.3850752 -> OK Nieuwenhuis, Ridderinkhof, Blom, Band, Kok 2001 Psychophysiology 38(5):752-760
 - openalex doi:10.1523/JNEUROSCI.4015-10.2010 (Steinhauser & Yeung 2010) -> CLIENT_ERROR; all J Neurosci DOIs fail in both APIs, not cited
-- openalex works?search=... -> CLIENT_ERROR (search/filter endpoints fail through WebFetch)
+- openalex works?search=... -> CLIENT_ERROR (search/filter endpoints fail through HTTP request)
 - crossref 10.3389/fnhum.2012.00065 -> 429
 - openalex doi:10.3389/fnhum.2012.00065 -> OK Murphy, Robertson, Allen, Hester, O'Connell 2012 Front Hum Neurosci 6:65
 - crossref 10.7554/eLife.67556 (Desender 2021) -> 429; dropped
@@ -98,7 +98,7 @@ Record retrieval via WebFetch only (curl to api.crossref.org / api.openalex.org 
 - openalex doi:10.1016/S0028-3932(03)00165-5 (remembered DOI for Stemmer 2004 ACC-lesion ERN) -> CLIENT_ERROR; not cited
 - openalex doi:10.1038/74999 (remembered DOI for Gehring & Knight 2000) -> WRONG paper (Honore 2000 Nat Med); rejected, not cited
 
-## WebSearch (7 of 25 used)
+## web search (7 of 25 used)
 1. "Herrmann Römmler Ehlis Heidrich Fallgatter 2004 Source localization (LORETA) of the error-related-negativity doi" -> no DOI found; Herrmann 2004 dropped
 2. "Murphy Robertson Allen Hester O'Connell 2015 electrophysiological signal ... error awareness doi" -> identified as 2012, 10.3389/fnhum.2012.00065 (frontiersin link)
 3. "meta-analysis late positive potential emotion regulation reappraisal doi" -> no usable meta-analysis identified; not pursued

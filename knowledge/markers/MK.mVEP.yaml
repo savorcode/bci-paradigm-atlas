@@ -1,4 +1,4 @@
-schema_version: "0.2"
+schema_version: '0.2'
 id: MK.mVEP
 name:
   en: Motion-onset visual evoked potential (N2)
@@ -18,8 +18,54 @@ description:
   en: Transient VEP evoked by the onset of visual motion, dominated by a negative peak around 200 ms over occipito-temporal
     sites, attributed to motion-sensitive extrastriate cortex.
   zh: 由视觉运动起始诱发的瞬态 VEP，以枕颞区约 200 ms 的负峰为主，归因于运动敏感的纹外皮层。
-notes: First-pass skeleton by package A (2026-10-03). No generators/indexes yet. Signature values are textbook-level approximations
-  and await source checking.
+notes: 'First-pass skeleton by package A (2026-10-03). No generators/indexes yet. Signature values are textbook-level approximations
+  and await source checking. Sprint 5 (2026-10-14, curator F): generators and indexes curated; every DOI checked against its
+  Crossref or OpenAlex record (see curation/work/sprint5/markers_F/); verified: false pending full-text check.'
+generators:
+- region: BR.MT
+  evidence: B
+  sources:
+  - citation: Probst T, Plendl H, Paulus W, et al. Identification of the visual motion area (area V5) in the human brain by
+      dipole source analysis. Exp Brain Res. 1993;93(2):345-351.
+    doi: 10.1007/BF00228404
+    year: 1993
+    verified: false
+  - citation: 'Kuba M, Kubová Z, Kremláček J, et al. Motion-onset VEPs: characteristics, methods, and diagnostic use. Vision
+      Res. 2007;47(2):189-202.'
+    doi: 10.1016/j.visres.2006.09.020
+    year: 2007
+    verified: false
+  note: 'method: MEG/EEG source; dipole source analysis localises the motion-onset N2 to the temporo-occipital motion area
+    V5/hMT+ (Probst et al. 1993), in agreement with later source and clinical work reviewed by Kuba et al. 2007.'
+indexes:
+- construct: CN.early_visual
+  evidence: B
+  relation: N2 amplitude and latency index motion processing in the magnocellular-dorsal stream
+  sources:
+  - citation: 'Kuba M, Kubová Z, Kremláček J, et al. Motion-onset VEPs: characteristics, methods, and diagnostic use. Vision
+      Res. 2007;47(2):189-202.'
+    doi: 10.1016/j.visres.2006.09.020
+    year: 2007
+    verified: false
+  - citation: Probst T, Plendl H, Paulus W, et al. Identification of the visual motion area (area V5) in the human brain by
+      dipole source analysis. Exp Brain Res. 1993;93(2):345-351.
+    doi: 10.1007/BF00228404
+    year: 1993
+    verified: false
+- construct: CN.intent_selection
+  evidence: C
+  relation: N2 is larger for the attended moving target, allowing BCI selection
+  sources:
+  - citation: Guo F, Hong B, Gao X, et al. A brain-computer interface using motion-onset visual evoked potential. J Neural
+      Eng. 2008;5(4):477-485.
+    doi: 10.1088/1741-2560/5/4/011
+    year: 2008
+    verified: false
+  - citation: Hong B, Guo F, Liu T, et al. N200-speller using motion-onset visual response. Clin Neurophysiol. 2009;120(9):1658-1666.
+    doi: 10.1016/j.clinph.2009.06.026
+    year: 2009
+    verified: false
+  note: Both studies from the same group; graded C pending independent replication.
 status: draft
 contributors:
 - curator_a

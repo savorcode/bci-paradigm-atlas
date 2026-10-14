@@ -449,7 +449,7 @@
   - [其他] Dehaene-Lambertz & x 2005. Neural correlates of switching from auditory to speech perception. *NeuroImage 24(1): 21–33*. doi:10.1016/j.neuroimage.2004.09.039 [R0321](https://doi.org/10.1016/j.neuroimage.2004.09.039)
   - [其他] Näätänen 2001. The perception of speech sounds by the human brain as reflected by the mismatch negativity (MMN). *Psychophysiology 38(1): 1–21*. doi:10.1111/1469-8986.3810001 [R0216](https://doi.org/10.1111/1469-8986.3810001)
 - **检索线索（模型记忆，未核实）**：Ding N, Melloni L, Zhang H, Tian X, Poeppel D (2016) Nat Neurosci 'Cortical tracking of hierarchical linguistic structures in connected speech' (origin). Unverified.
-- **检索备注**：Not searched: session WebSearch budget (200) exhausted and WebFetch rate-limited (429); references limited to items surfaced incidentally in earlier searches.
+- **检索备注**：Not searched: web search budget (200) exhausted and HTTP request rate-limited (429); references limited to items surfaced incidentally in earlier searches.
 
 ### LAN-LDT-001　词汇判断　/ Lexical decision
 
@@ -480,7 +480,7 @@
 - **别名**：Fedorenko localizer; language localizer; sentences vs nonwords
 - **文献线索**：暂无，需补检索
 - **检索线索（模型记忆，未核实）**：Fedorenko E, Hsieh PJ, Nieto-Castañón A, Whitfield-Gabrieli S, Kanwisher N (2010) J Neurophysiol 'New method for fMRI investigations of language: defining ROIs functionally in individual subjects' (origin); Lipkin et al. 2022 Sci Data probabilistic atlas of language network (dataset). Unverified.
-- **检索备注**：Not searched: session WebSearch budget (200) exhausted and WebFetch rate-limited (429); references limited to items surfaced incidentally in earlier searches.
+- **检索备注**：Not searched: web search budget (200) exhausted and HTTP request rate-limited (429); references limited to items surfaced incidentally in earlier searches.
 
 ### LAN-MUS-001　音乐句法违例　/ Musical syntax violation
 
@@ -594,7 +594,7 @@
   - [其他] Just & Carpenter 1980. A theory of reading: from eye fixations to comprehension.  [R0048]
   - [其他] Rayner et al. 2005. Eye movements during reading.  [R0311]
 - **检索线索（模型记忆，未核实）**：Dimigen O, Sommer W, Hohlfeld A, Jacobs AM, Kliegl R (2011) JEP:General 'Coregistration of eye movements and EEG in natural reading' (method/origin); ZuCo dataset (Hollenstein et al. 2018 Sci Data) public. Unverified.
-- **检索备注**：Not searched: session WebSearch budget (200) exhausted and WebFetch rate-limited (429); references limited to items surfaced incidentally in earlier searches.
+- **检索备注**：Not searched: web search budget (200) exhausted and HTTP request rate-limited (429); references limited to items surfaced incidentally in earlier searches.
 
 ### LAN-SC-001　句子理解　/ Sentence comprehension
 

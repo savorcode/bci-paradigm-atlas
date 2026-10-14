@@ -40,7 +40,7 @@ first_source:
   doi: 10.1080/17588928.2016.1201466
   year: 2017
   verified: false
-notes: 'New configuration (sprint 2). Lead R1328 (EvLab functional localization page, WebFetch S2-F08; the citation is given
+notes: 'New configuration (sprint 2). Lead R1328 (EvLab functional localization page, HTTP request S2-F08; the citation is given
   only as ''Scott et al., 2017''). The first author''s initials in first_source are the curator''s and must be checked (marked
   in PR). Leads: R1328, R1162. (R#### = curation/literature.csv; DN## = curation/work/pkg_D/new_leads.csv.) Numbering criterion
   (D-057): 2. bibliography corrected (Crossref, 2026-10-05)'

@@ -46,7 +46,7 @@ indexes:
     doi: 10.1016/j.clinph.2003.11.021
     year: 2004
     verified: false
-- construct: CN.phonological_processing
+- construct: CN.perceptual_learning
   evidence: C
   relation: amplitude increases after speech-sound discrimination training
   sources:
@@ -55,7 +55,8 @@ indexes:
     doi: 10.1097/00003446-200104000-00001
     year: 2001
     verified: false
-  note: Training-related plasticity; closest vocabulary construct used, CN.perceptual_learning requested.
+  note: Training-related plasticity after speech-sound discrimination training; re-mapped from CN.phonological_processing
+    in sprint 5 (D-076).
 notes: 'First-pass skeleton by package A (2026-10-03). Signature values are textbook-level approximations and await source
   checking. Sprint 4 (2026-10-12, curator_a): generators and indexes curated; every DOI checked against its Crossref or OpenAlex
   record (see curation/work/sprint4/markers_A/); verified: false pending full-text check.'

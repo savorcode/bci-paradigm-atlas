@@ -85,29 +85,29 @@
 | B | class | MOT-SACC | not_found | Crossref bibliographic search returned no record for Javal 1878 (hits: 2010 CUP reprint of Javal's book, unrelated 1878/ |
 | B | class | MOT-SMS | not_found | Crossref bibliographic search returned no record for the FAU dissertation (Mayville 2000); dissertations are not indexed |
 | B | class | IMG-MA | not_found | title-only citation "A new mode of EEG based communication" (R0842, Monash URL) could not be resolved: Crossref search 4 |
-| C | concrete | CTL-FLK-002 | tbd_open | tbd_open: no bibliographic search performed - WebFetch quota exhausted (429) before the TBD rows were reached; planned q |
-| C | concrete | CTL-MRP-001 | not_found | not checked: Crossref bibliographic search not performed - WebFetch proxy rate limit (HTTP 429) exhausted after ~85 requ |
-| C | concrete | CTL-SIM-002 | tbd_open | tbd_open: no bibliographic search performed - WebFetch quota exhausted (429) before the TBD rows were reached; planned q |
-| C | concrete | CTL-STR-002 | tbd_open | tbd_open: no bibliographic search performed - WebFetch quota exhausted (429) before the TBD rows were reached; planned q |
-| C | concrete | CTL-SW-003 | tbd_open | tbd_open: no bibliographic search performed - WebFetch quota exhausted (429) before the TBD rows were reached; planned q |
-| C | concrete | CTL-WASON-001 | not_found | not checked: Crossref bibliographic search not performed - WebFetch proxy rate limit (HTTP 429) exhausted after ~85 requ |
-| C | concrete | ERR-AAF-001 | tbd_open | tbd_open: no bibliographic search performed - WebFetch quota exhausted (429) before the TBD rows were reached; planned q |
-| C | concrete | ERR-ERRP-001 | not_found | not checked: Crossref bibliographic search not performed - WebFetch proxy rate limit (HTTP 429) exhausted after ~85 requ |
-| C | concrete | ERR-ERRP-003 | tbd_open | tbd_open: no bibliographic search performed - WebFetch quota exhausted (429) before the TBD rows were reached; planned q |
-| C | concrete | ERR-GAM-001 | not_found | not checked: Crossref bibliographic search not performed - WebFetch proxy rate limit (HTTP 429) exhausted after ~85 requ |
-| C | concrete | ERR-GAM-002 | tbd_open | tbd_open: no bibliographic search performed - WebFetch quota exhausted (429) before the TBD rows were reached; planned q |
-| C | concrete | ERR-GAM-003 | not_found | not checked: Crossref bibliographic search not performed - WebFetch proxy rate limit (HTTP 429) exhausted after ~85 requ |
-| C | concrete | ERR-OBS-002 | not_found | not checked: Crossref bibliographic search not performed - WebFetch proxy rate limit (HTTP 429) exhausted after ~85 requ |
-| C | concrete | ERR-OBS-003 | not_found | not checked: Crossref bibliographic search not performed - WebFetch proxy rate limit (HTTP 429) exhausted after ~85 requ |
-| C | concrete | ERR-OGNG-001 | not_found | not checked: Crossref bibliographic search not performed - WebFetch proxy rate limit (HTTP 429) exhausted after ~85 requ |
-| C | concrete | ERR-PRT-001 | not_found | not checked: Crossref bibliographic search not performed - WebFetch proxy rate limit (HTTP 429) exhausted after ~85 requ |
-| C | class | ERR-AAF | tbd_open | same TBD as ERR-AAF-001: tbd_open: no bibliographic search performed - WebFetch quota exhausted (429) before the TBD row |
-| C | class | ERR-ERRP | not_found | same source as ERR-ERRP-001: not checked: Crossref bibliographic search not performed - WebFetch proxy rate limit (HTTP  |
-| C | class | ERR-GAM | not_found | same source as ERR-GAM-001: not checked: Crossref bibliographic search not performed - WebFetch proxy rate limit (HTTP 4 |
-| C | class | ERR-OGNG | not_found | same source as ERR-OGNG-001: not checked: Crossref bibliographic search not performed - WebFetch proxy rate limit (HTTP  |
-| C | class | ERR-PRT | not_found | same source as ERR-PRT-001: not checked: Crossref bibliographic search not performed - WebFetch proxy rate limit (HTTP 4 |
-| C | class | CTL-MRP | not_found | same source as CTL-MRP-001: not checked: Crossref bibliographic search not performed - WebFetch proxy rate limit (HTTP 4 |
-| C | class | CTL-WASON | not_found | same source as CTL-WASON-001: not checked: Crossref bibliographic search not performed - WebFetch proxy rate limit (HTTP |
+| C | concrete | CTL-FLK-002 | tbd_open | tbd_open: no bibliographic search performed - HTTP request quota exhausted (429) before the TBD rows were reached; planned q |
+| C | concrete | CTL-MRP-001 | not_found | not checked: Crossref bibliographic search not performed - HTTP request proxy rate limit (HTTP 429) exhausted after ~85 requ |
+| C | concrete | CTL-SIM-002 | tbd_open | tbd_open: no bibliographic search performed - HTTP request quota exhausted (429) before the TBD rows were reached; planned q |
+| C | concrete | CTL-STR-002 | tbd_open | tbd_open: no bibliographic search performed - HTTP request quota exhausted (429) before the TBD rows were reached; planned q |
+| C | concrete | CTL-SW-003 | tbd_open | tbd_open: no bibliographic search performed - HTTP request quota exhausted (429) before the TBD rows were reached; planned q |
+| C | concrete | CTL-WASON-001 | not_found | not checked: Crossref bibliographic search not performed - HTTP request proxy rate limit (HTTP 429) exhausted after ~85 requ |
+| C | concrete | ERR-AAF-001 | tbd_open | tbd_open: no bibliographic search performed - HTTP request quota exhausted (429) before the TBD rows were reached; planned q |
+| C | concrete | ERR-ERRP-001 | not_found | not checked: Crossref bibliographic search not performed - HTTP request proxy rate limit (HTTP 429) exhausted after ~85 requ |
+| C | concrete | ERR-ERRP-003 | tbd_open | tbd_open: no bibliographic search performed - HTTP request quota exhausted (429) before the TBD rows were reached; planned q |
+| C | concrete | ERR-GAM-001 | not_found | not checked: Crossref bibliographic search not performed - HTTP request proxy rate limit (HTTP 429) exhausted after ~85 requ |
+| C | concrete | ERR-GAM-002 | tbd_open | tbd_open: no bibliographic search performed - HTTP request quota exhausted (429) before the TBD rows were reached; planned q |
+| C | concrete | ERR-GAM-003 | not_found | not checked: Crossref bibliographic search not performed - HTTP request proxy rate limit (HTTP 429) exhausted after ~85 requ |
+| C | concrete | ERR-OBS-002 | not_found | not checked: Crossref bibliographic search not performed - HTTP request proxy rate limit (HTTP 429) exhausted after ~85 requ |
+| C | concrete | ERR-OBS-003 | not_found | not checked: Crossref bibliographic search not performed - HTTP request proxy rate limit (HTTP 429) exhausted after ~85 requ |
+| C | concrete | ERR-OGNG-001 | not_found | not checked: Crossref bibliographic search not performed - HTTP request proxy rate limit (HTTP 429) exhausted after ~85 requ |
+| C | concrete | ERR-PRT-001 | not_found | not checked: Crossref bibliographic search not performed - HTTP request proxy rate limit (HTTP 429) exhausted after ~85 requ |
+| C | class | ERR-AAF | tbd_open | same TBD as ERR-AAF-001: tbd_open: no bibliographic search performed - HTTP request quota exhausted (429) before the TBD row |
+| C | class | ERR-ERRP | not_found | same source as ERR-ERRP-001: not checked: Crossref bibliographic search not performed - HTTP request proxy rate limit (HTTP  |
+| C | class | ERR-GAM | not_found | same source as ERR-GAM-001: not checked: Crossref bibliographic search not performed - HTTP request proxy rate limit (HTTP 4 |
+| C | class | ERR-OGNG | not_found | same source as ERR-OGNG-001: not checked: Crossref bibliographic search not performed - HTTP request proxy rate limit (HTTP  |
+| C | class | ERR-PRT | not_found | same source as ERR-PRT-001: not checked: Crossref bibliographic search not performed - HTTP request proxy rate limit (HTTP 4 |
+| C | class | CTL-MRP | not_found | same source as CTL-MRP-001: not checked: Crossref bibliographic search not performed - HTTP request proxy rate limit (HTTP 4 |
+| C | class | CTL-WASON | not_found | same source as CTL-WASON-001: not checked: Crossref bibliographic search not performed - HTTP request proxy rate limit (HTTP |
 | D | concrete | LAN-VF-001 | not_found | test manual (Benton, Hamsher & Sivan, Multilingual Aphasia Examination, AJA Associates) has no Crossref record; search r |
 | D | concrete | MEM-FR-002 | not_found | handbook (Lezak et al. 2012, Neuropsychological Assessment, OUP); two Crossref bibliographic searches were refused (HTTP |
 | D | concrete | MEM-PA-001 | tbd_open | queries: (1) Crossref query.author=Calkins bibliographic "Association Psychological Review 1894" -> Calkins 1894 Experim |

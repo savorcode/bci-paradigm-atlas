@@ -1,4 +1,4 @@
-schema_version: "0.2"
+schema_version: '0.2'
 id: MK.CPP
 name:
   en: Centro-parietal positivity
@@ -19,8 +19,70 @@ description:
     evidence and peaks around the time of the response, independent of stimulus modality and response hand. It is interpreted
     as a signature of evidence accumulation.
   zh: 知觉决策过程中逐渐上升的正电位，上升速率与感觉证据强度成正比，在反应时刻前后达到峰值，且与刺激模态和反应手无关。它被解释为证据累积的特征信号。
+generators:
+- region: BR.parietal_cortex
+  evidence: C
+  sources:
+  - citation: O'Connell RG, Dockree PM, Kelly SP. A supramodal accumulation-to-bound signal that determines perceptual decisions
+      in humans. Nat Neurosci. 2012;15(12):1729-1735.
+    doi: 10.1038/nn.3248
+    year: 2012
+    verified: false
+  note: 'method: scalp topography; centro-parietal (Pz) maximum across modalities and response effectors (O''Connell 2012);
+    no intracranial or source localisation located.'
+- region: BR.preSMA
+  evidence: C
+  sources:
+  - citation: Pisauro MA, Fouragnan E, Retzler C, et al. Neural correlates of evidence accumulation during value-based decisions
+      revealed via simultaneous EEG-fMRI. Nat Commun. 2017;8(1):15808.
+    doi: 10.1038/ncomms15808
+    year: 2017
+    verified: false
+  note: 'method: EEG-fMRI; single-trial variability of an EEG accumulation signal predicted BOLD in posterior medial frontal
+    cortex during value-based choices (Pisauro 2017); posterior medial frontal cortex mapped to the closest README id BR.preSMA.
+    Single study, value-based rather than perceptual task.'
+indexes:
+- construct: CN.evidence_accumulation
+  evidence: B
+  relation: build-up rate scales with sensory evidence strength and amplitude peaks at decision commitment, independent of
+    modality and response effector
+  sources:
+  - citation: O'Connell RG, Dockree PM, Kelly SP. A supramodal accumulation-to-bound signal that determines perceptual decisions
+      in humans. Nat Neurosci. 2012;15(12):1729-1735.
+    doi: 10.1038/nn.3248
+    year: 2012
+    verified: false
+  - citation: Kelly SP, O'Connell RG. Internal and external influences on the rate of sensory evidence accumulation in the
+      human brain. J Neurosci. 2013;33(50):19434-19441.
+    doi: 10.1523/JNEUROSCI.3355-13.2013
+    year: 2013
+    verified: false
+  - citation: Pisauro MA, Fouragnan E, Retzler C, et al. Neural correlates of evidence accumulation during value-based decisions
+      revealed via simultaneous EEG-fMRI. Nat Commun. 2017;8(1):15808.
+    doi: 10.1038/ncomms15808
+    year: 2017
+    verified: false
+  - citation: O'Connell RG, Shadlen MN, Wong-Lin K, et al. Bridging neural and computational viewpoints on perceptual decision-making.
+      Trends Neurosci. 2018;41(11):838-852.
+    doi: 10.1016/j.tins.2018.06.005
+    year: 2018
+    verified: false
+  note: O'Connell 2012 and Kelly & O'Connell 2013 (same group); replication in a different laboratory and modality (Pisauro
+    2017, EEG-fMRI); review O'Connell 2018.
+- construct: CN.metacognition
+  evidence: C
+  relation: late CPP amplitude tracks absolute evidence strength with the properties of statistical decision confidence
+  sources:
+  - citation: Herding J, Ludwig S, von Lautz A, et al. Centro-parietal EEG potentials index subjective evidence and confidence
+      during perceptual decision making. Neuroimage. 2019;201:116011.
+    doi: 10.1016/j.neuroimage.2019.116011
+    year: 2019
+    verified: false
+  note: single study (Herding 2019).
 notes: 'Signature values are textbook-level approximations and await checking against sources (pass 2). Generators and indexes
-  not yet written. Used by (registry): CTL-PDM-001.'
+  not yet written. Used by (registry): CTL-PDM-001. Sprint 5 (2026-10-14, curator G): generators and indexes curated; every
+  DOI checked against its Crossref or OpenAlex record (see curation/work/sprint5/markers_G/); verified: false pending full-text
+  check.'
 status: draft
 contributors:
 - maintainer

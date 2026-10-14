@@ -1,4 +1,4 @@
-schema_version: "0.2"
+schema_version: '0.2'
 id: MK.N2_posterior
 name:
   en: Posterior N2 (N2c, occipitotemporal N2)
@@ -18,8 +18,58 @@ description:
   en: Negative component around 200-300 ms over posterior sites associated with visual classification and attention to stimulus
     features, distinct from the fronto-central N2 linked to conflict and inhibition.
   zh: 约 200–300 ms 出现于后部电极的负成分，与视觉分类及对刺激特征的注意相关，区别于与冲突和抑制相关的额中央 N2。
-notes: First-pass skeleton by package A (2026-10-03). No generators/indexes yet. Signature values are textbook-level approximations
-  and await source checking.
+notes: 'First-pass skeleton by package A (2026-10-03). No generators/indexes yet. Signature values are textbook-level approximations
+  and await source checking. Sprint 5 (2026-10-14, curator F): generators and indexes curated; every DOI checked against its
+  Crossref or OpenAlex record (see curation/work/sprint5/markers_F/); verified: false pending full-text check.'
+generators:
+- region: BR.extrastriate
+  evidence: C
+  sources:
+  - citation: 'Folstein JR, Van Petten C. Influence of cognitive control and mismatch on the N2 component of the ERP: a review.
+      Psychophysiology. 2008;45(1):152-170.'
+    doi: 10.1111/j.1469-8986.2007.00602.x
+    year: 2008
+    verified: false
+  - citation: Loughnane GM, Newman DP, Bellgrove MA, et al. Target selection signals influence perceptual decisions by modulating
+      the onset and rate of evidence accumulation. Curr Biol. 2016;26(4):496-502.
+    doi: 10.1016/j.cub.2015.12.049
+    year: 2016
+    verified: false
+  note: 'method: scalp topography; posterior N2 / N2c is maximal over occipito-temporal sites contralateral to the stimulus
+    (Folstein & Van Petten 2008; Loughnane et al. 2016).'
+indexes:
+- construct: CN.perceptual_discrimination
+  evidence: B
+  relation: latency and amplitude track the time needed to classify a visual stimulus
+  sources:
+  - citation: Ritter W, Simson R, Vaughan HG, et al. A brain event related to the making of a sensory discrimination. Science.
+      1979;203(4387):1358-1361.
+    doi: 10.1126/science.424760
+    year: 1979
+    verified: false
+  - citation: 'Folstein JR, Van Petten C. Influence of cognitive control and mismatch on the N2 component of the ERP: a review.
+      Psychophysiology. 2008;45(1):152-170.'
+    doi: 10.1111/j.1469-8986.2007.00602.x
+    year: 2008
+    verified: false
+- construct: CN.target_selection
+  evidence: C
+  relation: contralateral N2c amplitude and latency index target selection and predict onset of evidence accumulation
+  sources:
+  - citation: Loughnane GM, Newman DP, Bellgrove MA, et al. Target selection signals influence perceptual decisions by modulating
+      the onset and rate of evidence accumulation. Curr Biol. 2016;26(4):496-502.
+    doi: 10.1016/j.cub.2015.12.049
+    year: 2016
+    verified: false
+- construct: CN.evidence_accumulation
+  evidence: C
+  relation: earlier/larger N2c is followed by earlier and steeper evidence accumulation (CPP) and faster RT
+  sources:
+  - citation: Loughnane GM, Newman DP, Bellgrove MA, et al. Target selection signals influence perceptual decisions by modulating
+      the onset and rate of evidence accumulation. Curr Biol. 2016;26(4):496-502.
+    doi: 10.1016/j.cub.2015.12.049
+    year: 2016
+    verified: false
 status: draft
 contributors:
 - curator_a

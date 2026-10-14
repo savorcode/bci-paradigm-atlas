@@ -73,7 +73,7 @@ indexes:
     year: 2005
     verified: false
   note: Halpern 1999 is PET (rCBF), grouped under this marker per D-050.
-- construct: CN.social_perception
+- construct: CN.voice_perception
   evidence: C
   relation: STS/STG BOLD is larger for human voices than for non-vocal sounds
   sources:
@@ -81,7 +81,7 @@ indexes:
     doi: 10.1038/35002078
     year: 2000
     verified: false
-  note: closest README construct for voice perception; vocab request CN.voice_perception filed.
+  note: Voice-selective STS/STG response; re-mapped from CN.social_perception in sprint 5 (D-076).
 - construct: CN.auditory_change
   evidence: C
   relation: superior temporal BOLD increases to pitch and duration deviants (MMN generator localisation)

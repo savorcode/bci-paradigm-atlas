@@ -120,6 +120,37 @@ terms:
     year: 2016
     verified: false
   notes: Atlas correspondence approximate. Functionally defined; HCP-MMP FFC is the 'fusiform face complex'; right-lateralised.
+- id: BR.OFA
+  en: occipital face area
+  zh: 枕叶面孔区（枕下回）
+  definition: Face-selective region in the lateral inferior occipital gyrus, posterior to the fusiform face area.
+  parent: BR.visual_cortex
+  atlas_refs:
+    brodmann:
+    - BA19
+    aal3:
+    - Occipital_Inf_L
+    - Occipital_Inf_R
+    hcp_mmp1:
+    - PIT
+  coordinate_space: MNI152
+  sources:
+  - citation: Rolls ET, Huang CC, Lin CP, Feng J, Joliot M. Automated anatomical labelling atlas 3. NeuroImage. 2020;206:116189.
+    doi: 10.1016/j.neuroimage.2019.116189
+    year: 2020
+    verified: false
+  - citation: Glasser MF, Coalson TS, Robinson EC, et al. A multi-modal parcellation of human cerebral cortex. Nature. 2016;536(7615):171-178.
+    doi: 10.1038/nature18933
+    year: 2016
+    verified: false
+  - citation: Pitcher D, Walsh V, Duchaine B. The role of the occipital face area in the cortical face perception network.
+      Exp Brain Res. 2011;209(4):481-493.
+    doi: 10.1007/s00221-011-2579-1
+    year: 2011
+    verified: false
+  notes: Atlas correspondence approximate. Functionally defined (faces > objects) in the lateral inferior occipital gyrus,
+    right-lateralised; overlaps the posterior part of BR.LOC. HCP-MMP PIT is a low-confidence match; localisation reviewed
+    by Pitcher et al. 2011.
 - id: BR.pSTS
   en: posterior superior temporal sulcus
   zh: 颞上沟后部
@@ -371,8 +402,8 @@ terms:
     doi: 10.1038/nature18933
     year: 2016
     verified: false
-  notes: Atlas correspondence approximate. Same region as the atlas id BR.temporoparietal_junction; Temporal_Sup only its
-    posterior part.
+  notes: Atlas correspondence approximate. Replaces the deprecated id BR.temporoparietal_junction; Temporal_Sup only its posterior
+    part.
 - id: BR.dACC
   en: dorsal anterior cingulate cortex
   zh: 背侧前扣带回
@@ -758,7 +789,7 @@ terms:
     verified: false
   notes: Atlas correspondence approximate. Macro region; HCP-MMP areas not enumerated (see child terms).
 - id: BR.temporoparietal_junction
-  en: Temporoparietal junction (atlas id; same as factory BR.TPJ)
+  en: Temporoparietal junction (deprecated; use BR.TPJ)
   zh: 颞顶联合区
   definition: Cortex where the posterior superior temporal and inferior parietal lobes meet (supramarginal/angular gyri and
     posterior STG).
@@ -794,7 +825,9 @@ terms:
     doi: 10.1038/nature18933
     year: 2016
     verified: false
-  notes: Atlas correspondence approximate. Same region as the factory id BR.TPJ; both ids kept.
+  notes: Atlas correspondence approximate. Same region as BR.TPJ; deprecated in favour of BR.TPJ (D-076).
+  status: deprecated
+  replaced_by: BR.TPJ
 - id: BR.sensorimotor_cortex
   en: Sensorimotor cortex
   zh: 感觉运动皮层
@@ -958,6 +991,38 @@ terms:
     verified: false
   notes: Atlas correspondence approximate. Human FEF lies in BA6 at the precentral sulcus rather than classical BA8; AAL3
     labels low confidence.
+- id: BR.SEF
+  en: supplementary eye field
+  zh: 辅助眼区
+  definition: Dorsomedial frontal oculomotor region anterior to the supplementary motor area, involved in planning and controlling
+    saccades.
+  parent: BR.frontal_cortex
+  atlas_refs:
+    brodmann:
+    - BA6
+    aal3:
+    - Supp_Motor_Area_L
+    - Supp_Motor_Area_R
+    hcp_mmp1:
+    - SCEF
+  coordinate_space: MNI152
+  sources:
+  - citation: Rolls ET, Huang CC, Lin CP, Feng J, Joliot M. Automated anatomical labelling atlas 3. NeuroImage. 2020;206:116189.
+    doi: 10.1016/j.neuroimage.2019.116189
+    year: 2020
+    verified: false
+  - citation: Glasser MF, Coalson TS, Robinson EC, et al. A multi-modal parcellation of human cerebral cortex. Nature. 2016;536(7615):171-178.
+    doi: 10.1038/nature18933
+    year: 2016
+    verified: false
+  - citation: Amiez C, Petrides M. Anatomical organization of the eye fields in the human and non-human primate frontal cortex.
+      Prog Neurobiol. 2009;89(2):220-230.
+    doi: 10.1016/j.pneurobio.2009.07.010
+    year: 2009
+    verified: false
+  notes: Atlas correspondence approximate. Lies in the paracentral sulcus region of dorsomedial BA6, anterior to the SMA leg/arm
+    representation (Amiez & Petrides 2009); AAL3 has no separate label, so the SMA label is used (low confidence). HCP-MMP
+    SCEF (supplementary and cingulate eye field) is the closest area.
 - id: BR.precuneus
   en: Precuneus
   zh: 楔前叶

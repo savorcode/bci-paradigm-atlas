@@ -1,4 +1,4 @@
-schema_version: "0.2"
+schema_version: '0.2'
 id: MK.linguistic_structure_tracking
 name:
   en: Cortical tracking of linguistic structure
@@ -15,14 +15,71 @@ recording_modality:
 signature:
   frequency_hz: at the presentation rates of linguistic units (syllables, words, phrases, sentences)
 description:
-  en: >-
-    Neural responses whose spectral peaks occur at the rates of abstract linguistic units, such as words, phrases
-    or sentences, when these units are presented isochronously without acoustic boundary cues. The peaks emerge
-    only when the listener can parse or has learned the structure, distinguishing them from acoustic envelope tracking.
+  en: Neural responses whose spectral peaks occur at the rates of abstract linguistic units, such as words, phrases or sentences,
+    when these units are presented isochronously without acoustic boundary cues. The peaks emerge only when the listener can
+    parse or has learned the structure, distinguishing them from acoustic envelope tracking.
   zh: 当词、短语或句子等抽象语言单位以等时方式呈现且无声学边界线索时，神经响应在这些单位的频率处出现谱峰。只有当听者能够解析或已经习得该结构时才出现，以此区别于声学包络跟踪。
-notes: >-
-  First-pass skeleton (curator_d, 2026-10-03). Signature values are textbook-level approximations that await source
-  checking; generators and indexes will be added in the second pass.
+generators:
+- region: BR.STG
+  evidence: C
+  sources:
+  - citation: Ding N, Melloni L, Zhang H, et al. Cortical tracking of hierarchical linguistic structures in connected speech.
+      Nat Neurosci. 2016;19(1):158-164.
+    doi: 10.1038/nn.4186
+    year: 2016
+    verified: false
+  note: 'method: intracranial; ECoG in Ding 2016 shows phrase- and sentence-rate responses over superior temporal gyrus (with
+    additional frontal sites); single intracranial study.'
+indexes:
+- construct: CN.syntactic_processing
+  evidence: B
+  relation: spectral peaks at phrase and sentence rates appear only when the listener can parse the grammar (absent for an
+    unknown language or random word lists)
+  sources:
+  - citation: Ding N, Melloni L, Zhang H, et al. Cortical tracking of hierarchical linguistic structures in connected speech.
+      Nat Neurosci. 2016;19(1):158-164.
+    doi: 10.1038/nn.4186
+    year: 2016
+    verified: false
+  - citation: Ding N, Melloni L, Yang A, et al. Characterizing neural entrainment to hierarchical linguistic units using electroencephalography
+      (EEG). Front Hum Neurosci. 2017;11:481.
+    doi: 10.3389/fnhum.2017.00481
+    year: 2017
+    verified: false
+  - citation: Kaufeld G, Bosker HR, ten Oever S, et al. Linguistic structure and meaning organize neural oscillations into
+      a content-specific hierarchy. J Neurosci. 2020;40(49):9467-9475.
+    doi: 10.1523/JNEUROSCI.0302-20.2020
+    year: 2020
+    verified: false
+- construct: CN.speech_tracking
+  evidence: B
+  relation: low-frequency activity tracks abstract linguistic units in connected speech beyond the acoustic envelope
+  sources:
+  - citation: Ding N, Melloni L, Zhang H, et al. Cortical tracking of hierarchical linguistic structures in connected speech.
+      Nat Neurosci. 2016;19(1):158-164.
+    doi: 10.1038/nn.4186
+    year: 2016
+    verified: false
+  - citation: Kaufeld G, Bosker HR, ten Oever S, et al. Linguistic structure and meaning organize neural oscillations into
+      a content-specific hierarchy. J Neurosci. 2020;40(49):9467-9475.
+    doi: 10.1523/JNEUROSCI.0302-20.2020
+    year: 2020
+    verified: false
+- construct: CN.perceptual_learning
+  evidence: C
+  relation: word-rate response emerges and grows as listeners learn the embedded words of a continuous statistical-learning
+    stream
+  sources:
+  - citation: Batterink LJ, Paller KA. Online neural monitoring of statistical learning. Cortex. 2017;90:31-45.
+    doi: 10.1016/j.cortex.2017.02.004
+    year: 2017
+    verified: false
+  note: Statistical learning is filed under the closest available id (CN.perceptual_learning); see vocab_requests.csv for
+    CN.statistical_learning.
+notes: 'First-pass skeleton (curator_d, 2026-10-03). Signature values are textbook-level approximations that await source
+  checking; generators and indexes will be added in the second pass. Sprint 5 (2026-10-14, curator H): generators and indexes
+  curated; every DOI checked against its Crossref or OpenAlex record (see curation/work/sprint5/markers_H/); verified: false
+  pending full-text check.'
 status: draft
 contributors:
 - maintainer

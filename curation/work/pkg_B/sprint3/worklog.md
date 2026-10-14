@@ -5,7 +5,7 @@
 ## 2026-10-05 · curator_a
 
 - **队列**：`curation/verification/queue_pkg_B.csv` 133 行（具体范式 84、范式类 49；TBD 5）。去重后 82 篇不同文献（范式类的 first_source 与对应 -001 大多相同）。
-- **抓取**：103 次 WebFetch（成功 84），见 `fetch_log.md`。未用 WebSearch；被拒 URL 不重试。
+- **抓取**：103 次 HTTP request（成功 84），见 `fetch_log.md`。未用 web search；被拒 URL 不重试。
   - Crossref 按 DOI 与书目检索均频繁被代理以 429 拒绝；OpenAlex 的 `works/doi:` 与 `works/pmid:` 可用并成为主要来源；OpenAlex 列表检索（`?search=`）6 次全部 429；PubMed 文章页返回 reCAPTCHA。
   - 因检索接口不可用，无 DOI 的条目改为"按候选 DOI 取单条记录并逐项与引文比对"（题名、第一作者、年份、卷页一致才写入 DOI）；`sources_check.csv` 的 note 对每条都注明了这一点。
 - **结果**（`sources_check.csv`，133 行）：

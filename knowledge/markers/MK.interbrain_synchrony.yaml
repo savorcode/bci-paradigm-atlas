@@ -1,4 +1,4 @@
-schema_version: "0.2"
+schema_version: '0.2'
 id: MK.interbrain_synchrony
 name:
   en: Inter-brain synchrony
@@ -16,7 +16,64 @@ description:
     or more interacting people. It increases during cooperative or coordinated interaction compared with independent or non-interactive
     conditions.
   zh: 在两名或多名互动个体上同时记录的信号之间的统计耦合，如相位同步或小波相干。与独立或无互动条件相比，在合作或协调互动中增强。
-notes: 'Hyperscanning measure (D-021). No signature: frequency and topography depend on task and modality.'
+generators:
+- region: BR.frontal_cortex
+  evidence: A
+  sources:
+  - citation: 'Czeszumski A, Liang SHY, Dikker S, et al. Cooperative behavior evokes interbrain synchrony in the prefrontal
+      and temporoparietal cortex: a systematic review and meta-analysis of fNIRS hyperscanning studies. eNeuro. 2022;9(2):ENEURO.0268-21.2022.'
+    doi: 10.1523/ENEURO.0268-21.2022
+    year: 2022
+    verified: false
+  - citation: Cui X, Bryant DM, Reiss AL. NIRS-based hyperscanning reveals increased interpersonal coherence in superior frontal
+      cortex during cooperation. NeuroImage. 2012;59(3):2430-2437.
+    doi: 10.1016/j.neuroimage.2011.09.003
+    year: 2012
+    verified: false
+  note: 'method: fMRI localization; hemodynamic (fNIRS) synchrony localised at the measured channels; meta-analysis of 13
+    fNIRS hyperscanning studies finds cooperation-related synchrony in prefrontal cortex in all included studies (Czeszumski
+    2022); superior frontal coherence in Cui 2012. EEG inter-brain measures are not localised here.'
+- region: BR.TPJ
+  evidence: B
+  sources:
+  - citation: 'Czeszumski A, Liang SHY, Dikker S, et al. Cooperative behavior evokes interbrain synchrony in the prefrontal
+      and temporoparietal cortex: a systematic review and meta-analysis of fNIRS hyperscanning studies. eNeuro. 2022;9(2):ENEURO.0268-21.2022.'
+    doi: 10.1523/ENEURO.0268-21.2022
+    year: 2022
+    verified: false
+  note: 'method: fMRI localization; same meta-analysis reports temporoparietal synchrony during cooperation but based on fewer
+    studies with temporoparietal coverage.'
+- region: BR.IFG
+  evidence: C
+  sources:
+  - citation: Jiang J, Dai B, Peng D, et al. Neural synchronization during face-to-face communication. J Neurosci. 2012;32(45):16064-16069.
+    doi: 10.1523/JNEUROSCI.2926-12.2012
+    year: 2012
+    verified: false
+  note: 'method: fMRI localization; fNIRS hyperscanning: left IFG synchrony increases during face-to-face dialogue (Jiang
+    2012); single study.'
+indexes:
+- construct: CN.social_interaction
+  evidence: A
+  relation: synchrony increases during cooperative or coordinated interaction relative to independent or non-interactive conditions
+  sources:
+  - citation: 'Czeszumski A, Liang SHY, Dikker S, et al. Cooperative behavior evokes interbrain synchrony in the prefrontal
+      and temporoparietal cortex: a systematic review and meta-analysis of fNIRS hyperscanning studies. eNeuro. 2022;9(2):ENEURO.0268-21.2022.'
+    doi: 10.1523/ENEURO.0268-21.2022
+    year: 2022
+    verified: false
+  - citation: Cui X, Bryant DM, Reiss AL. NIRS-based hyperscanning reveals increased interpersonal coherence in superior frontal
+      cortex during cooperation. NeuroImage. 2012;59(3):2430-2437.
+    doi: 10.1016/j.neuroimage.2011.09.003
+    year: 2012
+    verified: false
+  - citation: Dumas G, Nadel J, Soussignan R, et al. Inter-brain synchronization during social interaction. PLoS One. 2010;5(8):e12166.
+    doi: 10.1371/journal.pone.0012166
+    year: 2010
+    verified: false
+notes: 'Hyperscanning measure (D-021). No signature: frequency and topography depend on task and modality. Sprint 5 (2026-10-14,
+  curator H): generators and indexes curated; every DOI checked against its Crossref or OpenAlex record (see curation/work/sprint5/markers_H/);
+  verified: false pending full-text check.'
 status: draft
 contributors:
 - maintainer

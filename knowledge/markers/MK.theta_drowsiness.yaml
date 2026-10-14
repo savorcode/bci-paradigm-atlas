@@ -1,4 +1,4 @@
-schema_version: "0.2"
+schema_version: '0.2'
 id: MK.theta_drowsiness
 name:
   en: Theta power increase with drowsiness
@@ -16,7 +16,71 @@ description:
   en: Increase in theta-band power as alertness declines during prolonged monotonous tasks or sleep deprivation, often together
     with changes in alpha power. It is distinct from task-related frontal midline theta.
   zh: 在长时间单调任务或睡眠剥夺中，随警觉下降出现的 θ 频段功率升高，常伴随 α 功率变化。与任务相关的额中线 θ 不同。
-notes: Signature values are textbook-level characteristics entered in the first pass and await source checking.
+generators:
+- region: BR.frontal_cortex
+  evidence: C
+  sources:
+  - citation: Strijkstra AM, Beersma DGM, Drayer B, et al. Subjective sleepiness correlates negatively with global alpha (8-12
+      Hz) and positively with central frontal theta (4-8 Hz) frequencies in the human resting awake electroencephalogram.
+      Neurosci Lett. 2003;340(1):17-20.
+    doi: 10.1016/S0304-3940(03)00033-8
+    year: 2003
+    verified: false
+  - citation: 'Finelli LA, Baumann H, Borbély AA, et al. Dual electroencephalogram markers of human sleep homeostasis: correlation
+      between theta activity in waking and slow-wave activity in sleep. Neuroscience. 2000;101(3):523-529.'
+    doi: 10.1016/S0306-4522(00)00409-7
+    year: 2000
+    verified: false
+  - citation: 'Tran Y, Craig A, Craig R, et al. The influence of mental fatigue on brain activity: evidence from a systematic
+      review with meta-analyses. Psychophysiology. 2020;57(5):e13554.'
+    doi: 10.1111/psyp.13554
+    year: 2020
+    verified: false
+  note: 'method: scalp topography; sleepiness- and sleep-pressure-related waking theta is most pronounced over frontal/fronto-central
+    sites (Strijkstra 2003; Finelli 2000); the meta-analysis of Tran 2020 reports large theta increases at frontal, central
+    and posterior sites, so the effect is widespread; no intracranial or source-imaging localisation located, so the generator
+    remains unresolved.'
+indexes:
+- construct: CN.vigilance
+  evidence: A
+  relation: theta power increases as alertness declines with mental fatigue, time on task and drowsiness
+  sources:
+  - citation: 'Tran Y, Craig A, Craig R, et al. The influence of mental fatigue on brain activity: evidence from a systematic
+      review with meta-analyses. Psychophysiology. 2020;57(5):e13554.'
+    doi: 10.1111/psyp.13554
+    year: 2020
+    verified: false
+  - citation: Lal SKL, Craig A. A critical review of the psychophysiology of driver fatigue. Biol Psychol. 2001;55(3):173-194.
+    doi: 10.1016/S0301-0511(00)00085-5
+    year: 2001
+    verified: false
+  - citation: Strijkstra AM, Beersma DGM, Drayer B, et al. Subjective sleepiness correlates negatively with global alpha (8-12
+      Hz) and positively with central frontal theta (4-8 Hz) frequencies in the human resting awake electroencephalogram.
+      Neurosci Lett. 2003;340(1):17-20.
+    doi: 10.1016/S0304-3940(03)00033-8
+    year: 2003
+    verified: false
+  note: 'Tran 2020 systematic review with meta-analyses: large pooled theta increase with mental fatigue (g about 1.0); consistent
+    with the earlier critical review of driver-fatigue EEG (Lal & Craig 2001) and with sleepiness ratings (Strijkstra 2003).'
+- construct: CN.sleep
+  evidence: B
+  relation: waking theta power increases with time awake and predicts subsequent sleep slow-wave activity (homeostatic sleep
+    pressure)
+  sources:
+  - citation: Cajochen C, Brunner DP, Kräuchi K, et al. Power density in theta/alpha frequencies of the waking EEG progressively
+      increases during sustained wakefulness. Sleep. 1995;18(10):890-894.
+    doi: 10.1093/sleep/18.10.890
+    year: 1995
+    verified: false
+  - citation: 'Finelli LA, Baumann H, Borbély AA, et al. Dual electroencephalogram markers of human sleep homeostasis: correlation
+      between theta activity in waking and slow-wave activity in sleep. Neuroscience. 2000;101(3):523-529.'
+    doi: 10.1016/S0306-4522(00)00409-7
+    year: 2000
+    verified: false
+  note: Independent sleep-deprivation studies from separate laboratories (Cajochen 1995, Finelli 2000).
+notes: 'Signature values are textbook-level characteristics entered in the first pass and await source checking. Sprint 5
+  (2026-10-14, curator G): generators and indexes curated; every DOI checked against its Crossref or OpenAlex record (see
+  curation/work/sprint5/markers_G/); verified: false pending full-text check.'
 status: draft
 contributors:
 - maintainer

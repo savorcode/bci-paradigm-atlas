@@ -44,7 +44,7 @@ first_source:
   year: 1995
   verified: false
 notes: 'New configuration (sprint 2). Leads: R1326 (Oksanen, Waldum, McDaniel & Braver 2014, PLoS ONE, fMRI of time-based
-  prospective memory; WebSearch S2-07), R0651 (Cona et al. 2015 meta-analysis covering event- and time-based tasks), R0092.
+  prospective memory; web search S2-07), R0651 (Cona et al. 2015 meta-analysis covering event- and time-based tasks), R0092.
   (R#### = curation/literature.csv; DN## = curation/work/pkg_D/new_leads.csv.) Numbering criterion (D-057): 2. first_source
   TBD resolved by bibliographic search (OpenAlex, 2026-10-05; curator_c): candidate origin found by bibliographic search;
   content unverified. Previous entry: "TBD: origin of the time-based prospective memory procedure not retrieved" [maintainer

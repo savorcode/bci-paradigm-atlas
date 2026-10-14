@@ -15,7 +15,7 @@
 ### 时间线
 - 09:00 读入 methodology、CONTRIBUTING、schema、taxonomy、种子条目、decisions.md（D-001–D-030）、本目录 README、任务单、candidates.csv、登记表与文献线索表。
 - 09:40 规划：41 个收录候选（含 2 个种子 PER-ODD-001、SSR-SSVEP-001）＋ 5 个并入变体（D-002/003/004/011/017）＋ D-012 两个变体；本包 40 个标记物（37 个骨架 + P3a/P3b/SSVEP 种子）。
-- 10:00–11:30 检索（WebSearch 28 次，WebFetch 20 次，见 search_log.md SA01–SA48）：先为新候选找线索，再为缺源头的核心范式补检。PubMed 检索页、E-utilities、Europe PMC 不可用（403/robots/429），之后改用机构库与 Wikipedia 页面补全题录。
+- 10:00–11:30 检索（web search 28 次，HTTP request 20 次，见 search_log.md SA01–SA48）：先为新候选找线索，再为缺源头的核心范式补检。PubMed 检索页、E-utilities、Europe PMC 不可用（403/robots/429），之后改用机构库与 Wikipedia 页面补全题录。
 - 11:30–13:00 编写 57 个新范式文件（39 个原有候选 + 18 个新候选）的描述（中英文均为本人撰写），用脚本生成 YAML（yaml.safe_dump，allow_unicode）。
 - 13:00 补充两个种子条目（只增不删）；覆盖 37 个标记物骨架；新建 10 个申请的标记物文件；MK.SSVEP 种子只补别名（登记表 notes 中的同义项）。
 - 13:30 生成 status.csv、new_candidates.csv、marker_requests.csv、pr/*.md（59 份）；`python3 scripts/validate.py` → 0 problem(s)。
@@ -43,7 +43,7 @@ PER-VMMN-001、PER-MLR-001、PER-ACC-001、PER-ORN-001、PER-STREAM-001、PER-GE
 已核对与全部 209 个候选的名称/别名不重复。其中 10 个申请新标记物（marker_requests.csv），其余复用登记表标记物。
 
 ### 问题 / 待例会
-1. 27 个条目 first_source = TBD（含 ABR、AEP、PRVEP、FVEP、GATE、c-VEP、SSSEP、FPVS、SWEEP、TACT 等核心/临床范式）。WebSearch 只返回标题+URL，PubMed/Europe PMC 无法抓取，建议维护者在有数据库访问时集中补源头。
+1. 27 个条目 first_source = TBD（含 ABR、AEP、PRVEP、FVEP、GATE、c-VEP、SSSEP、FPVS、SWEEP、TACT 等核心/临床范式）。web search 只返回标题+URL，PubMed/Europe PMC 无法抓取，建议维护者在有数据库访问时集中补源头。
 2. 需维护者写入登记表：10 个新标记物（MK.vMMN、MK.MLR、MK.ORN、MK.GEP、MK.SPN、MK.Pd、MK.RREP、MK.intermodulation、MK.SSEP_nociceptive、MK.FPAS_oddball）；以及 paradigm_markers.csv 中 18 个新候选的标记物行、markers.csv 的 used_by 更新（MK.MMN + PER-STREAM-001；MK.N1_auditory/MK.P2_auditory + PER-ACC-001；MK.N1_visual + PER-IC-001；MK.VAN + PER-IB-001/PER-CB-001；MK.P3b + PER-IB-001；MK.BOLD_auditory_cortex + PER-VOICE-001；MK.BOLD_category_selective/MK.N170 + PER-BODY-001；MK.oscillatory_entrainment + SSR-RVS-001）。
 3. 独立性待议：SSR-FPAS-001（是否作为 SSR-FPVS-001 的听觉变体，届时 MK.FPAS_oddball 并入 MK.FPVS_oddball）；PER-ACC-001（是否为 PER-AEP-001 变体）；SSR-SWEEP-001（维护者候议）。
 4. 新候选 PER-RREP-001 的刺激模态暂记 `somatosensory`（呼吸机械感受），词表无"内感受"项；PER-HBD-001 记 `cognitive_task`。是否在下一版词表中增加 `interoceptive`？

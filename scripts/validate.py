@@ -67,6 +67,7 @@ def main() -> int:
     families, marker_types = terms("families"), terms("marker_types")
 
     vocab: dict[str, set[str]] = {}
+    deprecated: dict[str, str] = {}
     for name in ("regions", "constructs"):
         path = ROOT / "knowledge" / f"{name}.yaml"
         data = load_file(path, rep)
@@ -82,6 +83,10 @@ def main() -> int:
         for t in data["terms"]:
             if "parent" in t and t["parent"] not in ids:
                 rep.add(path, f"'{t['id']}' has unknown parent '{t['parent']}'")
+            if t.get("status") == "deprecated":
+                deprecated[t["id"]] = t.get("replaced_by", "")
+                if t.get("replaced_by") not in ids:
+                    rep.add(path, f"deprecated '{t['id']}' needs replaced_by pointing to an existing id")
         vocab[name] = set(ids)
 
     def check_modalities(path: Path, d: dict) -> None:
@@ -108,9 +113,13 @@ def main() -> int:
         for g in d.get("generators", []):
             if g["region"] not in vocab["regions"]:
                 rep.add(path, f"unknown region '{g['region']}'")
+            elif g["region"] in deprecated:
+                rep.warn(path, f"region '{g['region']}' is deprecated; use '{deprecated[g['region']]}'")
         for x in d.get("indexes", []):
             if x["construct"] not in vocab["constructs"]:
                 rep.add(path, f"unknown construct '{x['construct']}'")
+            elif x["construct"] in deprecated:
+                rep.warn(path, f"construct '{x['construct']}' is deprecated; use '{deprecated[x['construct']]}'")
 
     # Paradigm classes (D-057): paradigms/_classes.yaml
     classes: dict[str, dict] = {}

@@ -1,0 +1,18 @@
+id,field,value,api_url,note
+CN.perceptual_learning,cognitive_atlas,trm_4a3fd79d0abb6 (perceptual learning),https://www.cognitiveatlas.org/api/v-alpha/concept?name=perceptual learning,exact name match
+CN.perceptual_discrimination,cognitive_atlas,trm_5519b7525d7a2 (discrimination),https://www.cognitiveatlas.org/api/v-alpha/concept?name=discrimination,"""perceptual discrimination"" not found; broader concept ""discrimination"" (responding differently to stimuli that differ in some aspect) fits"
+CN.auditory_selective_attention,cognitive_atlas,trm_4a3fd79d09a10 (auditory attention),https://www.cognitiveatlas.org/api/v-alpha/concept?name=auditory attention,"""auditory selective attention"" not found; ""auditory attention"" is defined as selective concentration on one auditory stream"
+CN.emotion_regulation,cognitive_atlas,trm_51a690a7492eb (emotion regulation),https://www.cognitiveatlas.org/api/v-alpha/concept?name=emotion regulation,exact name match
+CN.approach_motivation,cognitive_atlas,,https://www.cognitiveatlas.org/api/v-alpha/concept?name=approach motivation,"no concept found; also tried approach, approach behavior, behavioral approach, approach-avoidance, avoidance, motivation; field left out"
+CN.reward_anticipation,cognitive_atlas,trm_557b4a81a4a17 (reward anticipation),https://www.cognitiveatlas.org/api/v-alpha/concept?name=reward anticipation,exact name match
+CN.empathy,cognitive_atlas,trm_4a3fd79d0b67d (empathy),https://www.cognitiveatlas.org/api/v-alpha/concept?name=empathy,exact name match
+CN.social_decision,cognitive_atlas,,https://www.cognitiveatlas.org/api/v-alpha/concept?name=social decision making,"no concept found; also tried social decision-making, social decision, fairness, social exclusion; ""altruism"" too narrow; field left out"
+CN.voice_perception,cognitive_atlas,trm_586fda1743344 (voice perception),https://www.cognitiveatlas.org/api/v-alpha/concept?name=voice perception,exact name match; parent in Cognitive Atlas is sound perception
+BR.OFA,atlas_refs.brodmann,BA19,,lateral inferior occipital gyrus
+BR.OFA,atlas_refs.aal3,Occipital_Inf_L;Occipital_Inf_R,,AAL3 inferior occipital gyrus; right-lateralised region
+BR.OFA,atlas_refs.hcp_mmp1,PIT,,low confidence; PIT is also listed for BR.LOC
+BR.OFA,sources,10.1007/s00221-011-2579-1,https://api.openalex.org/works/doi:10.1007/s00221-011-2579-1,"Pitcher, Walsh, Duchaine 2011 Exp Brain Res 209(4):481-493; record retrieved from OpenAlex API (Crossref API rate-limited at the time)"
+BR.SEF,atlas_refs.brodmann,BA6,,dorsomedial BA6 at the paracentral sulcus
+BR.SEF,atlas_refs.aal3,Supp_Motor_Area_L;Supp_Motor_Area_R,,no separate AAL3 label; low confidence
+BR.SEF,atlas_refs.hcp_mmp1,SCEF,,supplementary and cingulate eye field
+BR.SEF,sources,10.1016/j.pneurobio.2009.07.010,https://api.crossref.org/works/10.1016/j.pneurobio.2009.07.010,Amiez & Petrides 2009 Prog Neurobiol 89(2):220-230; record retrieved from Crossref API

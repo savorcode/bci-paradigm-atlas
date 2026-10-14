@@ -1,11 +1,76 @@
-schema_version: "0.2"
+schema_version: '0.2'
 id: MK.SEP_N20
-name: {en: Median nerve SEP N20, zh: 正中神经体感诱发电位 N20}
-aliases: [N20, N20m, N20-P25]
+name:
+  en: Median nerve SEP N20
+  zh: 正中神经体感诱发电位 N20
+aliases:
+- N20
+- N20m
+- N20-P25
 type: erp_component
-recording_modality: [EEG, MEG]
-signature: {latency_ms: ~20, polarity: 'negative (scalp, over contralateral parietal)', topography: 'contralateral centro-parietal (CP3/CP4), primary somatosensory cortex'}
-description: {en: 'Earliest cortical component of the somatosensory evoked potential to electrical median-nerve stimulation at the wrist, a negativity at about 20 ms over the contralateral parietal scalp that reflects activation of primary somatosensory cortex.', zh: 腕部正中神经电刺激所诱发体感诱发电位中最早的皮层成分，约 20 ms 时出现在对侧顶区头皮的负波，反映初级体感皮层的激活。}
-notes: Signature values are textbook-level characteristics and await source checking (first pass, curator_b). Generators and indexes to be added in the second pass.
+recording_modality:
+- EEG
+- MEG
+signature:
+  latency_ms: ~20
+  polarity: negative (scalp, over contralateral parietal)
+  topography: contralateral centro-parietal (CP3/CP4), primary somatosensory cortex
+description:
+  en: Earliest cortical component of the somatosensory evoked potential to electrical median-nerve stimulation at the wrist,
+    a negativity at about 20 ms over the contralateral parietal scalp that reflects activation of primary somatosensory cortex.
+  zh: 腕部正中神经电刺激所诱发体感诱发电位中最早的皮层成分，约 20 ms 时出现在对侧顶区头皮的负波，反映初级体感皮层的激活。
+notes: 'Signature values are textbook-level characteristics and await source checking (first pass, curator_b). Generators
+  and indexes to be added in the second pass. Sprint 5 (2026-10-14, curator F): generators and indexes curated; every DOI
+  checked against its Crossref or OpenAlex record (see curation/work/sprint5/markers_F/); verified: false pending full-text
+  check.'
+generators:
+- region: BR.S1
+  evidence: A
+  sources:
+  - citation: Allison T, McCarthy G, Wood CC, et al. Human cortical potentials evoked by stimulation of the median nerve.
+      II. Cytoarchitectonic areas generating short-latency activity. J Neurophysiol. 1989;62(3):694-710.
+    doi: 10.1152/jn.1989.62.3.694
+    year: 1989
+    verified: false
+  - citation: 'Wood CC, Cohen D, Cuffin BN, et al. Electrical sources in human somatosensory cortex: identification by combined
+      magnetic and potential recordings. Science. 1985;227(4690):1051-1053.'
+    doi: 10.1126/science.3975600
+    year: 1985
+    verified: false
+  - citation: Cruccu G, Aminoff MJ, Curio G, et al. Recommendations for the clinical use of somatosensory-evoked potentials.
+      Clin Neurophysiol. 2008;119(8):1705-1719.
+    doi: 10.1016/j.clinph.2008.03.016
+    year: 2008
+    verified: false
+  note: 'method: intracranial; subdural recordings localise N20/P20 to area 3b of the posterior bank of the central sulcus
+    (Allison et al. 1989), consistent with combined MEG/EEG source modelling from an independent team (Wood et al. 1985);
+    clinical standards concur (Cruccu et al. 2008).'
+indexes:
+- construct: CN.somatosensation
+  evidence: B
+  relation: presence and latency index the arrival of the somatosensory afferent volley at primary somatosensory cortex
+  sources:
+  - citation: Cruccu G, Aminoff MJ, Curio G, et al. Recommendations for the clinical use of somatosensory-evoked potentials.
+      Clin Neurophysiol. 2008;119(8):1705-1719.
+    doi: 10.1016/j.clinph.2008.03.016
+    year: 2008
+    verified: false
+  - citation: Allison T, McCarthy G, Wood CC, et al. Human cortical potentials evoked by stimulation of the median nerve.
+      II. Cytoarchitectonic areas generating short-latency activity. J Neurophysiol. 1989;62(3):694-710.
+    doi: 10.1152/jn.1989.62.3.694
+    year: 1989
+    verified: false
+- construct: CN.consciousness_level
+  evidence: A
+  relation: bilateral absence after cardiac arrest predicts poor neurological outcome in comatose patients
+  sources:
+  - citation: 'Sandroni C, D''Arrigo S, Cacciola S, et al. Prediction of poor neurological outcome in comatose survivors of
+      cardiac arrest: a systematic review. Intensive Care Med. 2020;46(10):1803-1851.'
+    doi: 10.1007/s00134-020-06198-w
+    year: 2020
+    verified: false
+  note: Prognostic marker of cortical damage rather than a graded index of conscious level.
 status: draft
-contributors: [maintainer, curator_b]
+contributors:
+- maintainer
+- curator_b

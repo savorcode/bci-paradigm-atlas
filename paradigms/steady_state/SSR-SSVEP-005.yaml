@@ -73,7 +73,7 @@ variants:
     bibliography confirmed (OpenAlex, 2026-10-05).
 interop:
   bids_task: ssvep
-notes: 'Leads: WebSearch S2A14 [=R1274]; news page S2A17 (kurzweilai) quotes the paper: "joint frequency-phase modulation
+notes: 'Leads: web search S2A14 [=R1274]; news page S2A17 (kurzweilai) quotes the paper: "joint frequency-phase modulation
   method to tag 40 characters with 0.5-s-long flickering signals", about 60 characters per minute; authors not shown on the
   page (Chen et al. per search results, unverified); PMC4640776 refused (reCAPTCHA, S2A15, not retried). Dataset Wang2016:
   MOABB page S2A04 [=R1266] gives 40 targets, 8-15.8 Hz in 0.2 Hz steps, 0.5 s cue, 5 s flicker, 0.5 s blank, 34 subjects;

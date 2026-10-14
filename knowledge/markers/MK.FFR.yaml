@@ -1,4 +1,4 @@
-schema_version: "0.2"
+schema_version: '0.2'
 id: MK.FFR
 name:
   en: Frequency-following response
@@ -19,8 +19,89 @@ description:
   en: Sustained phase-locked response that follows the periodicity and fine structure of a sound, recorded mainly from subcortical
     (and partly cortical) auditory generators; its spectrum reproduces the fundamental frequency and harmonics of the stimulus.
   zh: 跟随声音周期性与精细结构的持续锁相响应，主要来自皮层下（部分来自皮层）听觉发生源；其频谱重现刺激的基频和谐波。
-notes: First-pass skeleton by package A (2026-10-03). No generators/indexes yet. Signature values are textbook-level approximations
-  and await source checking.
+notes: 'First-pass skeleton by package A (2026-10-03). No generators/indexes yet. Signature values are textbook-level approximations
+  and await source checking. Sprint 5 (2026-10-14, curator F): generators and indexes curated; every DOI checked against its
+  Crossref or OpenAlex record (see curation/work/sprint5/markers_F/); verified: false pending full-text check.'
+generators:
+- region: BR.A1
+  evidence: B
+  sources:
+  - citation: Coffey EBJ, Herholz SC, Chepesiuk AMP, et al. Cortical contributions to the auditory frequency-following response
+      revealed by MEG. Nat Commun. 2016;7(1):11070.
+    doi: 10.1038/ncomms11070
+    year: 2016
+    verified: false
+  - citation: Bidelman GM. Subcortical sources dominate the neuroelectric auditory frequency-following response to speech.
+      Neuroimage. 2018;175:56-69.
+    doi: 10.1016/j.neuroimage.2018.03.060
+    year: 2018
+    verified: false
+  - citation: Coffey EBJ, Nicol T, White-Schwoch T, et al. Evolving perspectives on the sources of the frequency-following
+      response. Nat Commun. 2019;10(1):5036.
+    doi: 10.1038/s41467-019-13003-w
+    year: 2019
+    verified: false
+  note: 'method: MEG/EEG source; MEG shows a right-lateralised auditory cortex contribution at the fundamental frequency (Coffey
+    et al. 2016); EEG source modelling indicates the cortical share is small and confined to low F0 (Bidelman 2018); reviewed
+    in Coffey et al. 2019.'
+- region: BR.thalamus
+  evidence: C
+  sources:
+  - citation: Coffey EBJ, Herholz SC, Chepesiuk AMP, et al. Cortical contributions to the auditory frequency-following response
+      revealed by MEG. Nat Commun. 2016;7(1):11070.
+    doi: 10.1038/ncomms11070
+    year: 2016
+    verified: false
+  - citation: Coffey EBJ, Nicol T, White-Schwoch T, et al. Evolving perspectives on the sources of the frequency-following
+      response. Nat Commun. 2019;10(1):5036.
+    doi: 10.1038/s41467-019-13003-w
+    year: 2019
+    verified: false
+  note: 'method: MEG/EEG source; medial geniculate body contributes alongside cochlear nucleus and inferior colliculus (Coffey
+    et al. 2016). Brainstem/midbrain generators (inferior colliculus), the dominant source, have no region id; requested in
+    vocab_requests.csv.'
+indexes:
+- construct: CN.early_auditory
+  evidence: B
+  relation: spectral amplitude and phase locking at F0 and harmonics index fidelity of subcortical encoding of periodicity
+  sources:
+  - citation: 'Skoe E, Kraus N. Auditory brain stem response to complex sounds: a tutorial. Ear Hear. 2010;31(3):302-324.'
+    doi: 10.1097/AUD.0b013e3181cdb272
+    year: 2010
+    verified: false
+  - citation: Coffey EBJ, Nicol T, White-Schwoch T, et al. Evolving perspectives on the sources of the frequency-following
+      response. Nat Commun. 2019;10(1):5036.
+    doi: 10.1038/s41467-019-13003-w
+    year: 2019
+    verified: false
+- construct: CN.perceptual_learning
+  evidence: B
+  relation: pitch-tracking accuracy improves after short-term training and is enhanced with musical or tone-language experience
+  sources:
+  - citation: Song JH, Skoe E, Wong PCM, et al. Plasticity in the adult human auditory brainstem following short-term linguistic
+      training. J Cogn Neurosci. 2008;20(10):1892-1902.
+    doi: 10.1162/jocn.2008.20131
+    year: 2008
+    verified: false
+  - citation: Musacchia G, Sams M, Skoe E, et al. Musicians have enhanced subcortical auditory and audiovisual processing
+      of speech and music. Proc Natl Acad Sci U S A. 2007;104(40):15894-15898.
+    doi: 10.1073/pnas.0701498104
+    year: 2007
+    verified: false
+  - citation: Krishnan A, Xu Y, Gandour J, et al. Encoding of pitch in the human brainstem is sensitive to language experience.
+      Cogn Brain Res. 2005;25(1):161-168.
+    doi: 10.1016/j.cogbrainres.2005.05.004
+    year: 2005
+    verified: false
+- construct: CN.phonological_processing
+  evidence: C
+  relation: pitch tracking of lexical tones is more accurate in tone-language speakers
+  sources:
+  - citation: Krishnan A, Xu Y, Gandour J, et al. Encoding of pitch in the human brainstem is sensitive to language experience.
+      Cogn Brain Res. 2005;25(1):161-168.
+    doi: 10.1016/j.cogbrainres.2005.05.004
+    year: 2005
+    verified: false
 status: draft
 contributors:
 - curator_a

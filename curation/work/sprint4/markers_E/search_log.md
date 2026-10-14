@@ -1,9 +1,9 @@
 # Sprint 4 markers_E search log (curator_e)
 
-WebSearch calls used: 1 of 25. Candidates were taken from curator knowledge of the canonical meta-analyses, then every DOI was looked up via WebFetch.
-curl to api.crossref.org / api.openalex.org from Bash -> 403 proxy (CONNECT denied); all record lookups done with WebFetch.
+web search calls used: 1 of 25. Candidates were taken from curator knowledge of the canonical meta-analyses, then every DOI was looked up via HTTP request.
+curl to api.crossref.org / api.openalex.org from Bash -> 403 proxy (CONNECT denied); all record lookups done with HTTP request.
 
-## Record lookups (WebFetch)
+## Record lookups (HTTP request)
 - crossref 10.1016/j.neuroimage.2010.09.045 -> OK Kim 2011 NeuroImage 54(3):2446-2461
 - crossref 10.1016/j.neuropsychologia.2009.02.028 -> OK Spaniol et al. 2009 Neuropsychologia 47(8-9):1765-1779 (6 authors)
 - crossref 10.1016/j.tics.2007.08.001 -> OK Diana, Yonelinas, Ranganath 2007 TICS 11(9):379-386
@@ -65,6 +65,6 @@ curl to api.crossref.org / api.openalex.org from Bash -> 403 proxy (CONNECT deni
 - openalex + crossref 10.1093/cercor/9.7.697 -> OK Cereb Cortex 9(7):697-704, but both records list only Halpern AR (see worklog)
 - crossref 10.1038/434158a -> OK Kraemer et al. 2005 Nature 434(7030):158
 - openalex 10.1093/cercor/bhh161 -> WRONG paper (Yakovlev et al., multi-item WM) -> DOI guess rejected
-- WebSearch "Molholm Martinez Ritter Javitt Foxe 2005 ... mismatch negativity Cerebral Cortex doi" -> plaudit link gives 10.1093/cercor/bhh155
+- web search "Molholm Martinez Ritter Javitt Foxe 2005 ... mismatch negativity Cerebral Cortex doi" -> plaudit link gives 10.1093/cercor/bhh155
 - crossref 10.1093/cercor/bhh155 -> OK Molholm et al. Cereb Cortex 15(5):545-551 (issued 2004 online, vol 15 = 2005)
 - openalex 10.1016/j.neuron.2005.06.013 -> OK Zatorre & Halpern 2005 Neuron 47(1):9-12

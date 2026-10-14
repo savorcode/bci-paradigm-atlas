@@ -1,4 +1,4 @@
-schema_version: "0.2"
+schema_version: '0.2'
 id: MK.HEP
 name:
   en: Heartbeat-evoked potential
@@ -19,8 +19,71 @@ description:
   en: Cortical potential time-locked to the R-peak of the electrocardiogram, reflecting cortical processing of cardiac afferent
     signals; its amplitude is modulated by attention to the heartbeat.
   zh: 与心电 R 波锁时的皮层电位，反映皮层对心脏传入信号的加工；其波幅受对心跳的注意调制。
-notes: First-pass skeleton by package A (2026-10-03). No generators/indexes yet. Signature values are textbook-level approximations
-  and await source checking.
+generators:
+- region: BR.posterior_insula
+  evidence: B
+  sources:
+  - citation: 'Park HD, Bernasconi F, Salomon R, et al. Neural sources and underlying mechanisms of neural responses to heartbeats,
+      and their role in bodily self-consciousness: an intracranial EEG study. Cereb Cortex. 2018;28(7):2351-2364.'
+    doi: 10.1093/cercor/bhx136
+    year: 2018
+    verified: false
+  - citation: 'Pollatos O, Kirsch W, Schandry R. Brain structures involved in interoceptive awareness and cardioafferent signal
+      processing: a dipole source localization study. Hum Brain Mapp. 2005;26(1):54-64.'
+    doi: 10.1002/hbm.20121
+    year: 2005
+    verified: false
+  note: 'method: intracranial; intracranial EEG shows heartbeat-locked phase concentration mainly in insula and operculum
+    (Park 2018); dipole modelling places an HEP source in right insula (Pollatos 2005). Insular subdivision not specified
+    in either source; filed under BR.posterior_insula, see vocab_requests.csv for BR.insula.'
+- region: BR.dACC
+  evidence: C
+  sources:
+  - citation: 'Pollatos O, Kirsch W, Schandry R. Brain structures involved in interoceptive awareness and cardioafferent signal
+      processing: a dipole source localization study. Hum Brain Mapp. 2005;26(1):54-64.'
+    doi: 10.1002/hbm.20121
+    year: 2005
+    verified: false
+  note: 'method: MEG/EEG source; dipole source localization implicates anterior cingulate cortex (Pollatos 2005); single study.'
+indexes:
+- construct: CN.interoception
+  evidence: A
+  relation: amplitude increases with attention to the heartbeat and is moderately associated with interoceptive accuracy
+  sources:
+  - citation: Coll MP, Hobson H, Bird G, et al. Systematic review and meta-analysis of the relationship between the heartbeat-evoked
+      potential and interoception. Neurosci Biobehav Rev. 2021;122:190-200.
+    doi: 10.1016/j.neubiorev.2020.12.012
+    year: 2021
+    verified: false
+  note: Meta-analysis notes heterogeneous methods and uncertain reliability of effects.
+- construct: CN.perceptual_awareness
+  evidence: C
+  relation: pre-stimulus heartbeat-evoked response amplitude predicts detection of near-threshold visual stimuli
+  sources:
+  - citation: Park HD, Correia S, Ducorps A, et al. Spontaneous fluctuations in neural responses to heartbeats predict visual
+      detection. Nat Neurosci. 2014;17(4):612-618.
+    doi: 10.1038/nn.3671
+    year: 2014
+    verified: false
+- construct: CN.self_processing
+  evidence: C
+  relation: heartbeat-evoked responses in default-network regions differ for self-related versus other-related spontaneous
+    thoughts and track self-identification
+  sources:
+  - citation: Babo-Rebelo M, Richter CG, Tallon-Baudry C. Neural responses to heartbeats in the default network encode the
+      self in spontaneous thoughts. J Neurosci. 2016;36(30):7829-7840.
+    doi: 10.1523/JNEUROSCI.0262-16.2016
+    year: 2016
+    verified: false
+  - citation: 'Park HD, Bernasconi F, Salomon R, et al. Neural sources and underlying mechanisms of neural responses to heartbeats,
+      and their role in bodily self-consciousness: an intracranial EEG study. Cereb Cortex. 2018;28(7):2351-2364.'
+    doi: 10.1093/cercor/bhx136
+    year: 2018
+    verified: false
+  note: Both studies involve the same senior author.
+notes: 'First-pass skeleton by package A (2026-10-03). No generators/indexes yet. Signature values are textbook-level approximations
+  and await source checking. Sprint 5 (2026-10-14, curator H): generators and indexes curated; every DOI checked against its
+  Crossref or OpenAlex record (see curation/work/sprint5/markers_H/); verified: false pending full-text check.'
 status: draft
 contributors:
 - curator_a

@@ -1,6 +1,6 @@
 # 包 A sprint 3 出处核实：抓取日志 / Fetch log (curator_e, 2026-10-05)
 
-Tool: WebFetch only (Bash has no egress). Crossref and OpenAlex single-record endpoints worked; both bibliographic **search** endpoints and the PubMed article page were refused (429 / reCAPTCHA) for the whole session, so title-only and TBD rows were resolved by fetching a DOI/PMID record known to the checker and accepting it only when the record title matched (noted per row in sources_check.csv). Refused URLs were never retried.
+Tool: HTTP request only (Bash has no egress). Crossref and OpenAlex single-record endpoints worked; both bibliographic **search** endpoints and the PubMed article page were refused (429 / reCAPTCHA) for the whole session, so title-only and TBD rows were resolved by fetching a DOI/PMID record known to the checker and accepting it only when the record title matched (noted per row in sources_check.csv). Refused URLs were never retried.
 
 | # | URL | outcome |
 |---|---|---|

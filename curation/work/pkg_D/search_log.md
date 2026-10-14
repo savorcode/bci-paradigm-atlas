@@ -1,42 +1,42 @@
 # 检索记录 · 包 D 记忆与语言
 
 > 每次检索追加一行，维护者每周汇总进 `curation/search_protocol.md`（S-002 起）。不使用的检索也要记（命中 0 也记）。
-> 2026-10-03 · curator_d：共 30 次 WebSearch（达到共享配额中本包上限 30）及若干 WebFetch。PubMed/PMC 页面 WebFetch 均返回 reCAPTCHA，未重试。新线索编号 DN01–DN46 见 `new_leads.csv`。
+> 2026-10-03 · curator_d：共 30 次 web search（达到共享配额中本包上限 30）及若干 HTTP request。PubMed/PMC 页面 HTTP request 均返回 reCAPTCHA，未重试。新线索编号 DN01–DN46 见 `new_leads.csv`。
 
 | 日期 | 数据库 | 检索式 | 命中数 | 新增文献数 | 相关范式 | 执行人 |
 |---|---|---|---|---|---|---|
-| 2026-10-03 | WebSearch #1 | retrieval-induced forgetting EEG fMRI neural correlates Wimber 2015 cortical pattern suppression | 10 | 2（DN12, DN13） | MEM-RIF-001（新） | curator_d |
-| 2026-10-03 | WebSearch #2 | recent probes task proactive interference left inferior frontal gyrus fMRI Jonides 1998 | 9 | 1（DN15） | MEM-RPT-001（新） | curator_d |
-| 2026-10-03 | WebSearch #3 | concealed information test P300 guilty knowledge Rosenfeld Farwell ERP | 10 | 1（DN16） | MEM-CIT-001（新） | curator_d |
-| 2026-10-03 | WebSearch #4 | episodic future thinking fMRI Addis Wong Schacter 2007 remembering the past imagining the future | 10 | 2（DN18, DN19） | MEM-EFT-001（新） | curator_d |
-| 2026-10-03 | WebSearch #5 | reward motivation memory encoding fMRI mesolimbic hippocampus Adcock 2006（限 pubmed 等） | 10 | 2（DN20, DN21） | MEM-RMEM-001（新） | curator_d |
-| 2026-10-03 | WebSearch #6 | repetition priming repetition suppression fMRI ERP word repetition effect implicit memory（限 pubmed） | 10 | 3（DN22–DN24） | MEM-RPRIM-001（新） | curator_d |
-| 2026-10-03 | WebSearch #7 | bilingual language switching ERP N2 fMRI cued picture naming switch cost（限 pubmed） | 10 | 2（DN27, DN28） | LAN-SWITCH-001（新） | curator_d |
-| 2026-10-03 | WebSearch #8 | closure positive shift prosodic boundary ERP Steinhauer 1999（限 pubmed、nature.com） | 10 | 2（DN29, DN30） | LAN-CPS-001（新） | curator_d |
-| 2026-10-03 | WebSearch #9 | visual word form area localizer words versus consonant strings N170 print tuning（限 pubmed） | 10 | 2（DN31, DN32） | LAN-VWFA-001（新） | curator_d |
-| 2026-10-03 | WebSearch #10 | statistical learning syllable stream neural entrainment word rate frequency tagging EEG Batterink Paller（限 pubmed） | 10 | 1（DN34） | LAN-SL-001（新） | curator_d |
-| 2026-10-03 | WebSearch #11 | co-speech gesture speech integration N400 ERP Ozyurek（限 pubmed） | 10 | 2（DN35, DN36） | LAN-GEST-001（新） | curator_d |
-| 2026-10-03 | WebSearch #12 | novel word learning N400 meaning acquisition from context ERP Mestres-Missé（限 pubmed） | 10 | 2（DN37, DN38） | LAN-NWL-001（新） | curator_d |
-| 2026-10-03 | WebSearch #13 | speaking-induced suppression auditory cortex altered auditory feedback MEG ECoG speech production（限 pubmed） | 10 | 2（DN39, DN40） | LAN-SIS-001（新） | curator_d |
-| 2026-10-03 | WebSearch #14 | semantic decision task versus tone decision fMRI language mapping Binder（限 pubmed） | 10 | 2（DN41, DN42） | LAN-SEMD-001（新） | curator_d |
-| 2026-10-03 | WebSearch #15 | categorical speech perception phoneme categorization superior temporal gyrus electrocorticography Chang 2010（限 pubmed） | 10 | 2（DN43, DN44） | LAN-PCAT-001（新） | curator_d |
-| 2026-10-03 | WebSearch #16 | delayed estimation continuous report visual working memory precision EEG decoding contralateral delay activity（限 pubmed） | 10 | 2（DN25, DN26） | MEM-DE-001（新，建议并入 MEM-CD-001） | curator_d |
-| 2026-10-03 | WebSearch #17 | Griffin Nobre 2003 orienting attention to locations in internal representations retro-cue | 9 | 1（DN03） | MEM-RC-001 源头 | curator_d |
-| 2026-10-03 | WebSearch #18 | Ding Melloni Poeppel 2016 cortical tracking of hierarchical linguistic structures in connected speech | 9 | 1（DN08） | LAN-HIER-001 源头 | curator_d |
-| 2026-10-03 | WebSearch #19 | Fedorenko 2010 new method for fMRI investigations of language defining ROIs functionally in individual subjects | 10 | 1（DN09） | LAN-LOC-001 源头 | curator_d |
-| 2026-10-03 | WebSearch #20 | fixation-related potentials natural reading co-registration EEG eye movements Dimigen 2011 Baccino | 9 | 1（DN10） | LAN-READ-001 源头 | curator_d |
-| 2026-10-03 | WebSearch #21 | Paller Kutas Mayes 1987 neural correlates of encoding in an incidental learning paradigm Dm | 10 | 1（DN04） | MEM-SME-001 源头 | curator_d |
-| 2026-10-03 | WebSearch #22 | sign language comprehension fMRI deaf signers left hemisphere language network Neville 1998（限 pubmed、pnas） | 10 | 2（DN45, DN46） | LAN-SIGN-001（新，建议并入 LAN-SC-001） | curator_d |
-| 2026-10-03 | WebSearch #23 | Kirchner 1958 age differences in short-term retention of rapidly changing information n-back | 10 | 1（DN01，经 Wikipedia 参考文献） | MEM-NBK-001 源头 | curator_d |
-| 2026-10-03 | WebSearch #24 | Farwell Donchin 1991 truth will out interrogative polygraphy P300 event-related brain potentials | 10 | 1（DN17） | MEM-CIT-001 源头 | curator_d |
-| 2026-10-03 | WebSearch #25 | Jacobs 1887 "Experiments on prehension" digit span origin Mind | 10 | 1（DN05，经 Gorilla 页面） | MEM-DS-001 源头 | curator_d |
-| 2026-10-03 | WebSearch #26 | Calkins 1894 association paired associate learning method origin history | 10 | 1（DN11，Cognitive Atlas，无书目信息） | MEM-PA-001 源头（未解决） | curator_d |
-| 2026-10-03 | WebSearch #27 | free recall serial position effect origin Murdock 1962 serial position effect of free recall | 10 | 1（DN02，经 Wikipedia 参考文献） | MEM-FR-001 源头 | curator_d |
-| 2026-10-03 | WebSearch #28 | digit span task EEG frontal midline theta working memory load forward backward（限 pubmed） | 10 | 2（DN06, DN07） | MEM-DS-001（D-023 口径） | curator_d |
-| 2026-10-03 | WebSearch #29 | Anderson Bjork Bjork 1994 remembering can cause forgetting retrieval dynamics in long-term memory | 10 | 1（DN14） | MEM-RIF-001 源头 | curator_d |
-| 2026-10-03 | WebSearch #30 | Saffran Aslin Newport 1996 statistical learning by 8-month-old infants Science | 10 | 1（DN33） | LAN-SL-001 源头 | curator_d |
+| 2026-10-03 | web search #1 | retrieval-induced forgetting EEG fMRI neural correlates Wimber 2015 cortical pattern suppression | 10 | 2（DN12, DN13） | MEM-RIF-001（新） | curator_d |
+| 2026-10-03 | web search #2 | recent probes task proactive interference left inferior frontal gyrus fMRI Jonides 1998 | 9 | 1（DN15） | MEM-RPT-001（新） | curator_d |
+| 2026-10-03 | web search #3 | concealed information test P300 guilty knowledge Rosenfeld Farwell ERP | 10 | 1（DN16） | MEM-CIT-001（新） | curator_d |
+| 2026-10-03 | web search #4 | episodic future thinking fMRI Addis Wong Schacter 2007 remembering the past imagining the future | 10 | 2（DN18, DN19） | MEM-EFT-001（新） | curator_d |
+| 2026-10-03 | web search #5 | reward motivation memory encoding fMRI mesolimbic hippocampus Adcock 2006（限 pubmed 等） | 10 | 2（DN20, DN21） | MEM-RMEM-001（新） | curator_d |
+| 2026-10-03 | web search #6 | repetition priming repetition suppression fMRI ERP word repetition effect implicit memory（限 pubmed） | 10 | 3（DN22–DN24） | MEM-RPRIM-001（新） | curator_d |
+| 2026-10-03 | web search #7 | bilingual language switching ERP N2 fMRI cued picture naming switch cost（限 pubmed） | 10 | 2（DN27, DN28） | LAN-SWITCH-001（新） | curator_d |
+| 2026-10-03 | web search #8 | closure positive shift prosodic boundary ERP Steinhauer 1999（限 pubmed、nature.com） | 10 | 2（DN29, DN30） | LAN-CPS-001（新） | curator_d |
+| 2026-10-03 | web search #9 | visual word form area localizer words versus consonant strings N170 print tuning（限 pubmed） | 10 | 2（DN31, DN32） | LAN-VWFA-001（新） | curator_d |
+| 2026-10-03 | web search #10 | statistical learning syllable stream neural entrainment word rate frequency tagging EEG Batterink Paller（限 pubmed） | 10 | 1（DN34） | LAN-SL-001（新） | curator_d |
+| 2026-10-03 | web search #11 | co-speech gesture speech integration N400 ERP Ozyurek（限 pubmed） | 10 | 2（DN35, DN36） | LAN-GEST-001（新） | curator_d |
+| 2026-10-03 | web search #12 | novel word learning N400 meaning acquisition from context ERP Mestres-Missé（限 pubmed） | 10 | 2（DN37, DN38） | LAN-NWL-001（新） | curator_d |
+| 2026-10-03 | web search #13 | speaking-induced suppression auditory cortex altered auditory feedback MEG ECoG speech production（限 pubmed） | 10 | 2（DN39, DN40） | LAN-SIS-001（新） | curator_d |
+| 2026-10-03 | web search #14 | semantic decision task versus tone decision fMRI language mapping Binder（限 pubmed） | 10 | 2（DN41, DN42） | LAN-SEMD-001（新） | curator_d |
+| 2026-10-03 | web search #15 | categorical speech perception phoneme categorization superior temporal gyrus electrocorticography Chang 2010（限 pubmed） | 10 | 2（DN43, DN44） | LAN-PCAT-001（新） | curator_d |
+| 2026-10-03 | web search #16 | delayed estimation continuous report visual working memory precision EEG decoding contralateral delay activity（限 pubmed） | 10 | 2（DN25, DN26） | MEM-DE-001（新，建议并入 MEM-CD-001） | curator_d |
+| 2026-10-03 | web search #17 | Griffin Nobre 2003 orienting attention to locations in internal representations retro-cue | 9 | 1（DN03） | MEM-RC-001 源头 | curator_d |
+| 2026-10-03 | web search #18 | Ding Melloni Poeppel 2016 cortical tracking of hierarchical linguistic structures in connected speech | 9 | 1（DN08） | LAN-HIER-001 源头 | curator_d |
+| 2026-10-03 | web search #19 | Fedorenko 2010 new method for fMRI investigations of language defining ROIs functionally in individual subjects | 10 | 1（DN09） | LAN-LOC-001 源头 | curator_d |
+| 2026-10-03 | web search #20 | fixation-related potentials natural reading co-registration EEG eye movements Dimigen 2011 Baccino | 9 | 1（DN10） | LAN-READ-001 源头 | curator_d |
+| 2026-10-03 | web search #21 | Paller Kutas Mayes 1987 neural correlates of encoding in an incidental learning paradigm Dm | 10 | 1（DN04） | MEM-SME-001 源头 | curator_d |
+| 2026-10-03 | web search #22 | sign language comprehension fMRI deaf signers left hemisphere language network Neville 1998（限 pubmed、pnas） | 10 | 2（DN45, DN46） | LAN-SIGN-001（新，建议并入 LAN-SC-001） | curator_d |
+| 2026-10-03 | web search #23 | Kirchner 1958 age differences in short-term retention of rapidly changing information n-back | 10 | 1（DN01，经 Wikipedia 参考文献） | MEM-NBK-001 源头 | curator_d |
+| 2026-10-03 | web search #24 | Farwell Donchin 1991 truth will out interrogative polygraphy P300 event-related brain potentials | 10 | 1（DN17） | MEM-CIT-001 源头 | curator_d |
+| 2026-10-03 | web search #25 | Jacobs 1887 "Experiments on prehension" digit span origin Mind | 10 | 1（DN05，经 Gorilla 页面） | MEM-DS-001 源头 | curator_d |
+| 2026-10-03 | web search #26 | Calkins 1894 association paired associate learning method origin history | 10 | 1（DN11，Cognitive Atlas，无书目信息） | MEM-PA-001 源头（未解决） | curator_d |
+| 2026-10-03 | web search #27 | free recall serial position effect origin Murdock 1962 serial position effect of free recall | 10 | 1（DN02，经 Wikipedia 参考文献） | MEM-FR-001 源头 | curator_d |
+| 2026-10-03 | web search #28 | digit span task EEG frontal midline theta working memory load forward backward（限 pubmed） | 10 | 2（DN06, DN07） | MEM-DS-001（D-023 口径） | curator_d |
+| 2026-10-03 | web search #29 | Anderson Bjork Bjork 1994 remembering can cause forgetting retrieval dynamics in long-term memory | 10 | 1（DN14） | MEM-RIF-001 源头 | curator_d |
+| 2026-10-03 | web search #30 | Saffran Aslin Newport 1996 statistical learning by 8-month-old infants Science | 10 | 1（DN33） | LAN-SL-001 源头 | curator_d |
 
-## WebFetch 记录（2026-10-03）
+## HTTP request 记录（2026-10-03）
 
 | URL | 用途 | 结果 |
 |---|---|---|

@@ -21,7 +21,7 @@
   - 新增（文献/公开数据集）：PER-ODD-002 三刺激、-005 RSVP 拼写（BNCI2015_010）、-006 棋盘格（Townsend 2010）、-007 单项闪烁（EPFLP300）、-008 AMUSE（BNCI2015_009）、-009 触觉 P300（Brouwer & van Erp 2010，解决 sprint 1 的 D-012 阻塞项）；PER-MMN-003 多特征；SSR-SSVEP-005 JFPM 40 目标、-006 JFPM 12 目标、-007 含静息类、-008 异步；SSR-CVEP-002 Gold 码、-003 burst 码；SSR-ASSR-002 ASSR BCI；SSR-FFR-002 语音 FFR；PER-CVA-002、PER-OMIT-002、PER-RET-002、PER-HBD-002、PER-CUE-002、PER-MSI-002、PER-BR-002。
   - 只记提议、未建文件（split_log 状态"提议/待例会"）：PER-MVEP 视网膜位置编码 mVEP（R0836）、PER-BR 歧义图形、PER-MASK 元对比、PER-NAT 静态自然图像、SSR-FPVS 面孔身份 vs 类别、SSR-SWEEP 对比度扫描、PER-AEP（D-041）。
 - class_updates：15 个范式类（别名并集；PER-ODD、SSR-SSVEP、SSR-CVEP 改写为类级描述）。无新范式类、无新标记物。
-- 核对线索：见各文件 notes 与 `search_log.md`（S2A01–S2A39；WebSearch 11 次）。
+- 核对线索：见各文件 notes 与 `search_log.md`（S2A01–S2A39；web search 11 次）。
 - TBD first_source（新文件）：SSR-SSVEP-008、SSR-FFR-002、PER-CVA-002、PER-MSI-002、PER-BR-002；另有 sprint 1 遗留 TBD 的 `-001` 未改。
 - 问题 / 待例会：
   1. SSR-SSVEP 的类源头：临床光驱动（-003）早于 Regan 1966，`-001`/类源头是否改由光驱动承担（D-031）。

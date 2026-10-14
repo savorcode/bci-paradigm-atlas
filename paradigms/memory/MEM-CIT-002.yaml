@@ -46,7 +46,7 @@ first_source:
   year: 2008
   verified: false
 notes: 'New configuration (sprint 2). Leads: R1322 (Rosenfeld et al. 2008, bibliographic data from the HKBU scholars page,
-  WebSearch S2-03), further CTP papers seen in the same search (Labkovsky & Rosenfeld 2012; Hu et al. 2012, not yet registered).
+  web search S2-03), further CTP papers seen in the same search (Labkovsky & Rosenfeld 2012; Hu et al. 2012, not yet registered).
   (R#### = curation/literature.csv; DN## = curation/work/pkg_D/new_leads.csv.) Numbering criterion (D-057): 3;1. bibliography
   confirmed (Crossref, 2026-10-05)'
 status: draft

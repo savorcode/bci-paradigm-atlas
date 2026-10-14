@@ -1,4 +1,4 @@
-schema_version: "0.2"
+schema_version: '0.2'
 id: MK.parietal_old_new
 name:
   en: Left parietal old/new effect
@@ -14,14 +14,52 @@ signature:
   polarity: more positive for old than for new items
   topography: left parietal maximum
 description:
-  en: >-
-    Recognition-memory ERP effect in which correctly recognised old items elicit a more positive left-parietal deflection
-    than correctly rejected new items. It is larger for responses accompanied by recollection of contextual details
-    and is associated with recollection.
+  en: Recognition-memory ERP effect in which correctly recognised old items elicit a more positive left-parietal deflection
+    than correctly rejected new items. It is larger for responses accompanied by recollection of contextual details and is
+    associated with recollection.
   zh: 再认记忆中的 ERP 效应：被正确再认的旧项目比被正确拒绝的新项目诱发更正的左顶叶偏转。伴随情境细节回忆的反应效应更大，与回忆过程相关。
-notes: >-
-  First-pass skeleton (curator_d, 2026-10-03). Signature values are textbook-level approximations that await source
-  checking; generators and indexes will be added in the second pass.
+generators:
+- region: BR.parietal_cortex
+  evidence: C
+  sources:
+  - citation: 'Vilberg KL, Rugg MD. Memory retrieval and the parietal cortex: a review of evidence from a dual-process perspective.
+      Neuropsychologia. 2008;46(7):1787-1799.'
+    doi: 10.1016/j.neuropsychologia.2008.01.004
+    year: 2008
+    verified: false
+  - citation: Rugg MD, Curran T. Event-related potentials and recognition memory. Trends Cogn Sci. 2007;11(6):251-257.
+    doi: 10.1016/j.tics.2007.04.004
+    year: 2007
+    verified: false
+  note: 'method: fMRI localization; left lateral (inferior) parietal cortex shows recollection-sensitive retrieval activity
+    in fMRI and is the region proposed to correspond to the left-parietal ERP effect (Vilberg & Rugg 2008; Rugg & Curran 2007);
+    the link between the BOLD effect and the ERP is inferential and no intracranial confirmation located; scalp maximum is
+    left parietal.'
+indexes:
+- construct: CN.recognition_memory
+  evidence: B
+  relation: amplitude is larger for old items recognised with recollection of contextual (source) detail than for items recognised
+    without it
+  sources:
+  - citation: Wilding EL, Rugg MD. An event-related potential study of recognition memory with and without retrieval of source.
+      Brain. 1996;119(3):889-905.
+    doi: 10.1093/brain/119.3.889
+    year: 1996
+    verified: false
+  - citation: Curran T. Brain potentials of recollection and familiarity. Mem Cognit. 2000;28(6):923-938.
+    doi: 10.3758/BF03209340
+    year: 2000
+    verified: false
+  - citation: Rugg MD, Curran T. Event-related potentials and recognition memory. Trends Cogn Sci. 2007;11(6):251-257.
+    doi: 10.1016/j.tics.2007.04.004
+    year: 2007
+    verified: false
+  note: Recollection component of dual-process recognition; replicated across laboratories (Wilding & Rugg 1996; Curran 2000)
+    and reviewed in Rugg & Curran 2007.
+notes: 'First-pass skeleton (curator_d, 2026-10-03). Signature values are textbook-level approximations that await source
+  checking; generators and indexes will be added in the second pass. Sprint 5 (2026-10-14, curator G): generators and indexes
+  curated; every DOI checked against its Crossref or OpenAlex record (see curation/work/sprint5/markers_G/); verified: false
+  pending full-text check.'
 status: draft
 contributors:
 - maintainer

@@ -1,4 +1,4 @@
-schema_version: "0.2"
+schema_version: '0.2'
 id: MK.N2pc
 name:
   en: N2pc
@@ -18,8 +18,75 @@ description:
   en: Negativity over posterior sites contralateral to an attended item in a bilateral display, reflecting the allocation
     of spatial attention to that item.
   zh: 在双侧呈现的画面中，被注意项目对侧后部电极出现的负波，反映空间注意对该项目的分配。
-notes: First-pass skeleton by package A (2026-10-03). No generators/indexes yet. Signature values are textbook-level approximations
-  and await source checking.
+notes: 'First-pass skeleton by package A (2026-10-03). No generators/indexes yet. Signature values are textbook-level approximations
+  and await source checking. Sprint 5 (2026-10-14, curator F): generators and indexes curated; every DOI checked against its
+  Crossref or OpenAlex record (see curation/work/sprint5/markers_F/); verified: false pending full-text check.'
+generators:
+- region: BR.LOC
+  evidence: C
+  sources:
+  - citation: Hopf JM, Luck SJ, Girelli M, et al. Neural sources of focused attention in visual search. Cereb Cortex. 2000;10(12):1233-1241.
+    doi: 10.1093/cercor/10.12.1233
+    year: 2000
+    verified: false
+  - citation: 'Hopf JM, Boelmans K, Schoenfeld MA, et al. Attention to features precedes attention to locations in visual
+      search: evidence from electromagnetic brain responses in humans. J Neurosci. 2004;24(8):1822-1832.'
+    doi: 10.1523/JNEUROSCI.3564-03.2004
+    year: 2004
+    verified: false
+  note: 'method: MEG/EEG source; MEG/EEG source modelling places the later N2pc (~220-300 ms) in lateral occipito-temporal
+    (ventral extrastriate) cortex (Hopf et al. 2000, 2004); same group, hence C.'
+- region: BR.parietal_cortex
+  evidence: C
+  sources:
+  - citation: Hopf JM, Luck SJ, Girelli M, et al. Neural sources of focused attention in visual search. Cereb Cortex. 2000;10(12):1233-1241.
+    doi: 10.1093/cercor/10.12.1233
+    year: 2000
+    verified: false
+  note: 'method: MEG/EEG source; an earlier N2pc subcomponent (~180-200 ms) localised to posterior parietal cortex (Hopf et
+    al. 2000).'
+indexes:
+- construct: CN.target_selection
+  evidence: B
+  relation: contralateral negativity emerges when attention selects a target among distractors in a bilateral display
+  sources:
+  - citation: 'Luck SJ, Hillyard SA. Spatial filtering during visual search: evidence from human electrophysiology. J Exp
+      Psychol Hum Percept Perform. 1994;20(5):1000-1014.'
+    doi: 10.1037/0096-1523.20.5.1000
+    year: 1994
+    verified: false
+  - citation: Eimer M. The N2pc component as an indicator of attentional selectivity. Electroencephalogr Clin Neurophysiol.
+      1996;99(3):225-234.
+    doi: 10.1016/0013-4694(96)95711-9
+    year: 1996
+    verified: false
+  - citation: Eimer M. The neural basis of attentional control in visual search. Trends Cogn Sci. 2014;18(10):526-535.
+    doi: 10.1016/j.tics.2014.05.005
+    year: 2014
+    verified: false
+- construct: CN.spatial_attention
+  evidence: B
+  relation: lateralization follows the hemifield of the attended item
+  sources:
+  - citation: 'Luck SJ, Hillyard SA. Spatial filtering during visual search: evidence from human electrophysiology. J Exp
+      Psychol Hum Percept Perform. 1994;20(5):1000-1014.'
+    doi: 10.1037/0096-1523.20.5.1000
+    year: 1994
+    verified: false
+  - citation: Eimer M. The N2pc component as an indicator of attentional selectivity. Electroencephalogr Clin Neurophysiol.
+      1996;99(3):225-234.
+    doi: 10.1016/0013-4694(96)95711-9
+    year: 1996
+    verified: false
+- construct: CN.distractor_suppression
+  evidence: C
+  relation: amplitude larger when distractors are present near the target, interpreted as spatial filtering of distractors
+  sources:
+  - citation: 'Luck SJ, Hillyard SA. Spatial filtering during visual search: evidence from human electrophysiology. J Exp
+      Psychol Hum Percept Perform. 1994;20(5):1000-1014.'
+    doi: 10.1037/0096-1523.20.5.1000
+    year: 1994
+    verified: false
 status: draft
 contributors:
 - curator_a

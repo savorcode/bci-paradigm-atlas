@@ -1,4 +1,4 @@
-schema_version: "0.2"
+schema_version: '0.2'
 id: MK.ERAN
 name:
   en: Early right anterior negativity (ERAN)
@@ -14,14 +14,83 @@ signature:
   polarity: negative
   topography: frontal, often right-lateralised
 description:
-  en: >-
-    Early negative ERP deflection elicited by music-syntactically irregular events, such as harmonically unexpected
-    chords in a chord sequence, and also reported for violations of learned artificial grammars. It is interpreted
-    as reflecting the detection of violations of structural regularities.
+  en: Early negative ERP deflection elicited by music-syntactically irregular events, such as harmonically unexpected chords
+    in a chord sequence, and also reported for violations of learned artificial grammars. It is interpreted as reflecting
+    the detection of violations of structural regularities.
   zh: 由音乐句法不规则事件（如和弦序列中和声上出乎预期的和弦）诱发的早期负向 ERP 成分，在习得的人工语法违例中也有报告，被解释为对结构规则违例的检测。
-notes: >-
-  First-pass skeleton (curator_d, 2026-10-03). Signature values are textbook-level approximations that await source
-  checking; generators and indexes will be added in the second pass.
+generators:
+- region: BR.IFG
+  evidence: B
+  sources:
+  - citation: 'Maess B, Koelsch S, Gunter TC, et al. Musical syntax is processed in Broca''s area: an MEG study. Nat Neurosci.
+      2001;4(5):540-545.'
+    doi: 10.1038/87502
+    year: 2001
+    verified: false
+  - citation: 'Koelsch S, Gunter TC, v Cramon DY, et al. Bach speaks: a cortical "language-network" serves the processing
+      of music. NeuroImage. 2002;17(2):956-966.'
+    doi: 10.1006/nimg.2002.1154
+    year: 2002
+    verified: false
+  note: 'method: MEG/EEG source; MEG dipole modelling places the magnetic ERAN in inferior frontal gyrus (BA 44) bilaterally
+    (Maess 2001); fMRI of the same chord paradigm activates IFG (Koelsch 2002, fMRI localization, indirect for the ERP).'
+- region: BR.STG
+  evidence: C
+  sources:
+  - citation: Sammler D, Koelsch S, Ball T, et al. Co-localizing linguistic and musical syntax with intracranial EEG. NeuroImage.
+      2013;64:134-146.
+    doi: 10.1016/j.neuroimage.2012.09.035
+    year: 2013
+    verified: false
+  - citation: 'Koelsch S, Gunter TC, v Cramon DY, et al. Bach speaks: a cortical "language-network" serves the processing
+      of music. NeuroImage. 2002;17(2):956-966.'
+    doi: 10.1006/nimg.2002.1154
+    year: 2002
+    verified: false
+  note: 'method: intracranial; subdural recordings show responses to music-syntactic irregularities over superior temporal
+    gyrus (Sammler 2013); fMRI (Koelsch 2002) also shows superior temporal activation. Single intracranial study.'
+indexes:
+- construct: CN.syntactic_processing
+  evidence: B
+  relation: amplitude increases with the harmonic (music-syntactic) irregularity of a chord and interacts with concurrent
+    linguistic syntactic violations
+  sources:
+  - citation: 'Koelsch S, Gunter T, Friederici AD, et al. Brain indices of music processing: "nonmusicians" are musical. J
+      Cogn Neurosci. 2000;12(3):520-541.'
+    doi: 10.1162/089892900562183
+    year: 2000
+    verified: false
+  - citation: 'Koelsch S, Gunter TC, Wittfoth M, et al. Interaction between syntax processing in language and in music: an
+      ERP study. J Cogn Neurosci. 2005;17(10):1565-1577.'
+    doi: 10.1162/089892905774597290
+    year: 2005
+    verified: false
+  - citation: 'Koelsch S. Music-syntactic processing and auditory memory: similarities and differences between ERAN and MMN.
+      Psychophysiology. 2009;46(1):179-190.'
+    doi: 10.1111/j.1469-8986.2008.00752.x
+    year: 2009
+    verified: false
+  note: Music syntax is filed under the closest available id (CN.syntactic_processing); see vocab_requests.csv for CN.music_syntax.
+    Studies mostly from one research group.
+- construct: CN.prediction_violation
+  evidence: B
+  relation: amplitude increases when an event violates expectations derived from learned structural regularities rather than
+    from the immediately preceding sound
+  sources:
+  - citation: 'Koelsch S. Music-syntactic processing and auditory memory: similarities and differences between ERAN and MMN.
+      Psychophysiology. 2009;46(1):179-190.'
+    doi: 10.1111/j.1469-8986.2008.00752.x
+    year: 2009
+    verified: false
+  - citation: 'Koelsch S, Gunter T, Friederici AD, et al. Brain indices of music processing: "nonmusicians" are musical. J
+      Cogn Neurosci. 2000;12(3):520-541.'
+    doi: 10.1162/089892900562183
+    year: 2000
+    verified: false
+notes: 'First-pass skeleton (curator_d, 2026-10-03). Signature values are textbook-level approximations that await source
+  checking; generators and indexes will be added in the second pass. Sprint 5 (2026-10-14, curator H): generators and indexes
+  curated; every DOI checked against its Crossref or OpenAlex record (see curation/work/sprint5/markers_H/); verified: false
+  pending full-text check.'
 status: draft
 contributors:
 - maintainer

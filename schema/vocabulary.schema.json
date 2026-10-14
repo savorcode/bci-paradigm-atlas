@@ -56,6 +56,17 @@
           "parent": {
             "type": "string"
           },
+          "status": {
+            "enum": [
+              "active",
+              "deprecated"
+            ],
+            "description": "Omitted means active. Deprecated ids stay in the file (identifiers are never reused, D-063)."
+          },
+          "replaced_by": {
+            "type": "string",
+            "description": "For deprecated terms: the id to use instead."
+          },
           "atlas_refs": {
             "type": "object",
             "additionalProperties": false,

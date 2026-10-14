@@ -4,7 +4,7 @@
 
 ## 方法
 
-- 有 DOI 的行：Crossref `works/<DOI>`；Crossref 429 时改用 OpenAlex `works/doi:<DOI>`（Eriksen 1974、Tom 2007、Dickinson 1984、Nieuwenhuis 2001 四条）。PubMed 文章页经 WebFetch 只返回空壳（JS 页面），不可用；PMID 一律沿用原条目，未新增。
+- 有 DOI 的行：Crossref `works/<DOI>`；Crossref 429 时改用 OpenAlex `works/doi:<DOI>`（Eriksen 1974、Tom 2007、Dickinson 1984、Nieuwenhuis 2001 四条）。PubMed 文章页经 HTTP request 只返回空壳（JS 页面），不可用；PMID 一律沿用原条目，未新增。
 - 无 DOI 的行：Crossref `query.bibliographic`（作者 + 题名关键词 + 年份），取前 3 条；仅当首条命中题名、第一作者、年份均吻合才写入 DOI 并改写 citation。
 - citation 统一改写为 house style `Author AB, Author CD. Title. Journal. Year;Vol(Issue):Pages.`，字段**只取** Crossref/OpenAlex 记录；题名大小写按记录原样。记录只列第一作者的（Servan-Schreiber 1996、Bunge 2005，JAMA/OUP 旧记录），**保留原 citation 文本**，只补 DOI。
 - 范式类条目不直接改 `paradigms/_classes.yaml`，写入 `class_updates.yaml`（fields.first_source 为整体替换；fields.notes.append 为追加句）。
@@ -44,12 +44,12 @@
   - ERR-VRPE-001 原引"pp. 427-437"实为 CHI 论文号 427；Crossref 页码 1-11。
   - ERR-ERRP-002、ERR-APC-001、ERR-ADAPT-002、CTL-MSIT-001 原缺题名或作者，已从记录补全（ERR-ADAPT-002 为 bioRxiv 预印本，Palidis, Cashaback & Gribble 2018）。
   - 无 mismatch：所有已核 DOI 均指向引文所述论文。
-- **未能核实**（not_found，9 条具体范式 + 对应类）：CTL-MRP-001, CTL-WASON-001, ERR-ERRP-001, ERR-GAM-001, ERR-GAM-003, ERR-OBS-002, ERR-OBS-003, ERR-OGNG-001, ERR-PRT-001。原因：WebFetch 代理在约 85 次请求后持续返回 429（全局限流，等待 10 分钟以上仍被拒），书目检索未能执行；**不是** Crossref 无记录。YAML 未改，notes 未加句。计划的检索词见 CSV note，交维护者或下一轮执行。其中 ERR-GAM-003 / ERR-OBS-002 / ERR-OBS-003 只有"作者 年份，转引自 R0714"，须先对照 R0714 的参考文献表确定篇目。
+- **未能核实**（not_found，9 条具体范式 + 对应类）：CTL-MRP-001, CTL-WASON-001, ERR-ERRP-001, ERR-GAM-001, ERR-GAM-003, ERR-OBS-002, ERR-OBS-003, ERR-OGNG-001, ERR-PRT-001。原因：HTTP request 代理在约 85 次请求后持续返回 429（全局限流，等待 10 分钟以上仍被拒），书目检索未能执行；**不是** Crossref 无记录。YAML 未改，notes 未加句。计划的检索词见 CSV note，交维护者或下一轮执行。其中 ERR-GAM-003 / ERR-OBS-002 / ERR-OBS-003 只有"作者 年份，转引自 R0714"，须先对照 R0714 的参考文献表确定篇目。
 - **TBD**（tbd_open，7 条 + 类 ERR-AAF）：CTL-FLK-002, CTL-SIM-002, CTL-STR-002, CTL-SW-003, ERR-AAF-001, ERR-ERRP-003, ERR-GAM-002。同样因限流未检索；每条在 CSV note 中列出 3 条候选检索（按 D-031 口径：任务程序最早描述，不取综述/指南）。无 tbd_resolved。
 
 ## 取数统计
 
-见 `fetch_log.md`：共 83 次请求（Crossref DOI 43 次成功 / 4 次 429；Crossref 书目检索 12 次成功 / 11 次 429 / 2 次 403（URL 过长）/ 3 次查询被截断返回无关结果；OpenAlex 4 次成功 / 2 次 429；PubMed 页面 1 次空页；Europe PMC 1 次 429）。限流经验：Crossref 并发 >6 即 429；代理对 WebFetch 总量另有限额，约 75 次后每次请求需间隔 ≥8 分钟；`query.bibliographic` 查询串超过约 90 字符会被截断而返回无关结果（见日志中 3 次"irrelevant hits"）。
+见 `fetch_log.md`：共 83 次请求（Crossref DOI 43 次成功 / 4 次 429；Crossref 书目检索 12 次成功 / 11 次 429 / 2 次 403（URL 过长）/ 3 次查询被截断返回无关结果；OpenAlex 4 次成功 / 2 次 429；PubMed 页面 1 次空页；Europe PMC 1 次 429）。限流经验：Crossref 并发 >6 即 429；代理对 HTTP request 总量另有限额，约 75 次后每次请求需间隔 ≥8 分钟；`query.bibliographic` 查询串超过约 90 字符会被截断而返回无关结果（见日志中 3 次"irrelevant hits"）。
 
 ## 过程文件
 

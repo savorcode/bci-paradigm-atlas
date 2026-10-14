@@ -29,8 +29,23 @@ generators:
     doi: 10.3389/fpsyg.2013.00749
     year: 2013
     verified: false
-  note: 'method: fMRI localization; FEF consistently activated in saccade meta-analyses; SEF has no vocabulary id (vocab request
-    BR.SEF) and is covered here only in the description.'
+  note: 'method: fMRI localization; FEF consistently activated in saccade meta-analyses.'
+- region: BR.SEF
+  evidence: A
+  sources:
+  - citation: Grosbras MH, Laird AR, Paus T. Cortical regions involved in eye movements, shifts of attention, and gaze perception.
+      Hum Brain Mapp. 2005;25(1):140-154.
+    doi: 10.1002/hbm.20145
+    year: 2005
+    verified: false
+  - citation: Jamadar SD, Fielding J, Egan GF. Quantitative meta-analysis of fMRI and PET studies reveals consistent activation
+      in fronto-striatal-parietal regions and cerebellum during antisaccades and prosaccades. Front Psychol. 2013;4:749.
+    doi: 10.3389/fpsyg.2013.00749
+    year: 2013
+    verified: false
+  note: 'method: fMRI localization; the ALE meta-analysis of Grosbras 2005 confirms the expected location of the supplementary
+    eye fields, and Jamadar 2013 reports consistent SEF activation for pro- and antisaccades (both stated in the abstracts
+    of the retrieved records). Added in sprint 5 (D-076).'
 - region: BR.IPS
   evidence: A
   sources:

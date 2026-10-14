@@ -4,7 +4,7 @@
 
 ## S-001 · 2026-10-02 · 初始收集（管理者批量收集）
 
-**执行方式**：由 Claude 作为管理者统一收集，分 4 路并行检索；之后用 HED 任务目录和 Wikipedia 参考文献补充；最后汇总去重。
+**执行方式**：由管理者统一收集，分 4 路并行检索；之后用 HED 任务目录和 Wikipedia 参考文献补充；最后汇总去重。
 
 **计划使用但不可访问的来源**（本次环境的网络策略拦截或限流）：
 - Google Scholar（拦截）
@@ -42,12 +42,12 @@
 
 - **执行人**：curator_a – curator_e（各自在本包分支上检索），维护者汇总（2026-10-03，合并后）。
 - **原始记录**：`curation/work/pkg_<X>/search_log.md`（逐次检索/抓取）、`curation/work/pkg_D/new_leads.csv`（DN01–DN46）、包 E worklog 中的 S01–S28 书目表。
-- **工具**：会话内 WebSearch（每包配额 30 次，结果只含标题与 URL）与 WebFetch（打开结果页核对书目）。没有使用 Google Scholar、IEEE Xplore、Scopus 等需要登录或交互的数据库。
+- **工具**：会话内 web search（每包配额 30 次，结果只含标题与 URL）与 HTTP request（打开结果页核对书目）。没有使用 Google Scholar、IEEE Xplore、Scopus 等需要登录或交互的数据库。
 - **目的**：(1) 为缺源头的已收录候选补 first_source；(2) 为读综述时发现的遗漏范式找线索（新候选）；(3) 为并入候选的变体找出处。
 
 **按包统计**
 
-| 包 | WebSearch | WebFetch | 被拒绝/不可用的抓取 | 被拒绝的来源 | 新候选 | 由检索补得的 first_source |
+| 包 | web search | HTTP request | 被拒绝/不可用的抓取 | 被拒绝的来源 | 新候选 | 由检索补得的 first_source |
 |---|---|---|---|---|---|---|
 | A 感知与稳态 | 28 | 20 | 4 | PubMed 检索页（403）、NCBI E-utilities（robots.txt）、Europe PMC REST（429）；PubMed 组合检索页无结果 | 18 | 11 |
 | B 运动、想象与刺激 | 30 | 42 | 7 | PubMed（429）、E-utilities（robots）、Crossref 检索接口（429）、journals.physiology.org（403）、PMC（验证码） | 17 | 27 |
@@ -65,7 +65,7 @@
 - 仍为 TBD 的 first_source：37 个（A 27、C 1、D 7、E 2）。
 
 **已知局限**
-1. WebSearch 只返回标题与 URL，作者、年份常常只能从 URL 片段、机构库或第三方页面得到；约 43% 的新增线索没有作者字段，部分只有题名。题名中的截断（"…"）原样保留。
+1. web search 只返回标题与 URL，作者、年份常常只能从 URL 片段、机构库或第三方页面得到；约 43% 的新增线索没有作者字段，部分只有题名。题名中的截断（"…"）原样保留。
 2. 二手来源（Wikipedia 参考文献表、他文参考文献、任务网站）得到的书目已在 `qa_flag` 中标为 `secondhand`（CTL-DT-001、CTL-RAVEN-001、IMG-OLF-001 的源头等），必须核原文。
 3. PubMed / PMC / Europe PMC 普遍不可用，是 TBD 无法消除的主要原因（D-032）。
 4. 由于配额按包均分，A 包（59 个条目、27 个 TBD）的检索强度明显不足。
@@ -74,12 +74,12 @@
 
 - **执行人**：curator_a – curator_e（各自在 `sprint2/pkg-<X>` 分支上检索），维护者汇总（2026-10-03，合并后）。
 - **原始记录**：`curation/work/pkg_<X>/sprint2/search_log.md`（逐次检索/抓取；B 另附线索表 S2B-L01 – L17）、`curation/work/pkg_D/new_leads.csv`（DN47 – DN53）、各文件 `notes`。
-- **工具**：会话内 WebSearch（每包上限 12 次）与 WebFetch；A、E 各有 1 次 `curl` 尝试（代理 403，未重试）。没有使用需要登录的数据库。
+- **工具**：会话内 web search（每包上限 12 次）与 HTTP request；A、E 各有 1 次 `curl` 尝试（代理 403，未重试）。没有使用需要登录的数据库。
 - **目的**：与 S-002 不同，本轮主要不是补源头，而是**为拆分出的具体范式找协议出处**：公开数据集页面（MOABB、BNCI Horizon 2020、BCI Competition、OpenNeuro/OpenfMRI、SEED、DEAP、ERP CORE）、HED 任务目录的变体表、任务网站（Millisecond、PsyToolkit、Cognitive Atlas），以及给新具体范式找 first_source。TBD 源头按 D-032 不在本轮集中处理。
 
 **按包统计**
 
-| 包 | WebSearch | WebFetch | 其他 | 被拒绝/不可用 | 主要来源 | 新登记文献 |
+| 包 | web search | HTTP request | 其他 | 被拒绝/不可用 | 主要来源 | 新登记文献 |
 |---|---|---|---|---|---|---|
 | A 感知与稳态 | 11 | 27 | curl 1 | 4（代理 403、PMC reCAPTCHA、跨站 302、robots） | MOABB 数据集页（SSVEP、c-VEP、P300）、Wikipedia P3a | 21 |
 | B 运动、想象与刺激 | 7 | 23 | — | 2（PMC 302 → reCAPTCHA） | MOABB / BNCI（MI、ME、抓握、书写）、BCI Competition IV、作者 PDF | 21 |
@@ -105,7 +105,7 @@
 
 - **执行人**：交叉审核——A ← curator_e、B ← curator_a、C ← curator_b、D ← curator_c、E ← curator_d（各自在 `sprint3/pkg-<X>` 分支上）；维护者汇总（2026-10-07）。
 - **原始记录**：`curation/work/pkg_<X>/sprint3/fetch_log.md`（逐次请求：接口、URL、结果）、`sources_check.csv`（逐条结果）；汇总 `curation/verification/sources_check.csv`（682 行）与 `curation/reports/verification_sprint3.md`。
-- **工具**：只用 WebFetch 直接访问接口；**没有使用 WebSearch**。没有使用需要登录的数据库。
+- **工具**：只用 HTTP request 直接访问接口；**没有使用 web search**。没有使用需要登录的数据库。
 - **目的**：与 S-002 / S-003 不同，本轮不找新线索，而是把 `queue_pkg_<X>.csv` 中全部 first_source / 变体源（具体范式 404、变体 11、范式类 267）与权威记录逐条比对（D-072 书目核实），并为 TBD 行找书目可识别的源头候选。
 - **端点**：Crossref REST `works/<DOI>`（主）、`works?query.bibliographic=`（检索，大部分 429）；OpenAlex `works/doi:<DOI>`、`works/pmid:<PMID>`（Crossref 429 时的回退，实际为主要来源之一）、`works?search=` / `filter=title.search`（全部 429）；PubMed 文章页（reCAPTCHA / 空页，弃用）；Europe PMC 1 次（429）。
 

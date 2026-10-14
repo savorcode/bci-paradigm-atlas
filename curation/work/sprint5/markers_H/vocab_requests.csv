@@ -1,0 +1,4 @@
+id_proposed,en,zh,parent_or_type,reason,example_marker
+CN.statistical_learning,Statistical learning,统计学习,CN.memory,"Word-rate tracking emerging during exposure to a statistical-learning stream reflects implicit learning of transitional probabilities, not perceptual learning; filed under CN.perceptual_learning for now",MK.linguistic_structure_tracking
+CN.music_syntax,Music-syntactic processing,音乐句法加工,CN.perception,"ERAN indexes processing of harmonic (music-syntactic) regularities; filed under CN.syntactic_processing (a language construct) for now",MK.ERAN
+BR.insula,Insula (subdivision unspecified),脑岛（未区分亚区）,region,"Intracranial and dipole HEP sources are reported for the insula without anterior/posterior subdivision; filed under BR.posterior_insula for now",MK.HEP

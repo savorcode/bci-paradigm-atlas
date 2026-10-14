@@ -1,4 +1,4 @@
-schema_version: "0.2"
+schema_version: '0.2'
 id: MK.VAN
 name:
   en: Visual awareness negativity
@@ -18,8 +18,47 @@ description:
   en: Posterior negativity in the difference between consciously perceived and unperceived visual stimuli, proposed as an
     early electrophysiological correlate of visual awareness.
   zh: 有意识知觉与未被知觉的视觉刺激之间差异波中的后部负波，被认为是视觉觉知的早期电生理相关物。
-notes: First-pass skeleton by package A (2026-10-03). No generators/indexes yet. Signature values are textbook-level approximations
-  and await source checking.
+notes: 'First-pass skeleton by package A (2026-10-03). No generators/indexes yet. Signature values are textbook-level approximations
+  and await source checking. Sprint 5 (2026-10-14, curator F): generators and indexes curated; every DOI checked against its
+  Crossref or OpenAlex record (see curation/work/sprint5/markers_F/); verified: false pending full-text check.'
+generators:
+- region: BR.LOC
+  evidence: C
+  sources:
+  - citation: Liu Y, Paradis AL, Yahia-Cherif L, et al. Activity in the lateral occipital cortex between 200 and 300 ms distinguishes
+      between physically identical seen and unseen stimuli. Front Hum Neurosci. 2012;6:211.
+    doi: 10.3389/fnhum.2012.00211
+    year: 2012
+    verified: false
+  - citation: 'Förster J, Koivisto M, Revonsuo A. ERP and MEG correlates of visual consciousness: the second decade. Conscious
+      Cogn. 2020;80:102917.'
+    doi: 10.1016/j.concog.2020.102917
+    year: 2020
+    verified: false
+  note: 'method: MEG/EEG source; MEG sources of the 190-350 ms seen-vs-unseen difference in bilateral lateral occipital complex
+    and right posterior inferotemporal cortex (Liu et al. 2012); source localization of the VAN is also summarised in Förster
+    et al. 2020.'
+indexes:
+- construct: CN.perceptual_awareness
+  evidence: B
+  relation: amplitude more negative for consciously perceived than for unperceived, physically identical stimuli
+  sources:
+  - citation: Koivisto M, Revonsuo A. Event-related brain potential correlates of visual awareness. Neurosci Biobehav Rev.
+      2010;34(6):922-934.
+    doi: 10.1016/j.neubiorev.2009.12.002
+    year: 2010
+    verified: false
+  - citation: 'Förster J, Koivisto M, Revonsuo A. ERP and MEG correlates of visual consciousness: the second decade. Conscious
+      Cogn. 2020;80:102917.'
+    doi: 10.1016/j.concog.2020.102917
+    year: 2020
+    verified: false
+  - citation: 'Dembski C, Koch C, Pitts M. Perceptual awareness negativity: a physiological correlate of sensory consciousness.
+      Trends Cogn Sci. 2021;25(8):660-670.'
+    doi: 10.1016/j.tics.2021.05.009
+    year: 2021
+    verified: false
+  note: Three narrative reviews summarising many independent studies; graded B because no meta-analysis.
 status: draft
 contributors:
 - curator_a

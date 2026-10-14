@@ -55,7 +55,7 @@ indexes:
     year: 2013
     verified: false
   note: Effort/foraging valuation; Shenhav 2013 is a theoretical review, Kolling 2012 an fMRI study.
-- construct: CN.social_interaction
+- construct: CN.social_decision
   evidence: B
   relation: BOLD increases during social exclusion (Cyberball)
   sources:
@@ -70,8 +70,8 @@ indexes:
     year: 2015
     verified: false
   note: Rotge 2015 meta-analysis finds social-pain effects in ventral (subgenual/pregenual) as well as dorsal ACC, and Cyberball
-    mainly in midcingulate; dACC-specific claim graded B. Mapped to CN.social_interaction (vocab request CN.social_decision
-    / social exclusion).
+    mainly in midcingulate; dACC-specific claim graded B. Social exclusion re-mapped from CN.social_interaction to CN.social_decision
+    in sprint 5 (D-076).
 notes: 'No signature given in pass 1 (hemodynamic marker; region described in the description). Used by (registry): CTL-EFF-001,
   SOC-CYB-001. Sprint 4 (2026-10-12, curator_d): generators and indexes curated; every DOI checked against its Crossref or
   OpenAlex record (see curation/work/sprint4/markers_D/); verified: false pending full-text check.'

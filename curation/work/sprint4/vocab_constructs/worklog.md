@@ -2,7 +2,7 @@
 
 2026-10-12
 - Read sprint4 README, vocab_ids.json (81 constructs, 11 roots), schema/vocabulary.schema.json, existing knowledge/constructs.yaml (6 atlas terms).
-- curl to cognitiveatlas.org blocked by proxy (403); used WebFetch on the v-alpha concept API (120 queries, see fetch_log.md) plus 5 WebSearches and 1 task-page fetch.
+- curl to cognitiveatlas.org blocked by proxy (403); used HTTP request on the v-alpha concept API (120 queries, see fetch_log.md) plus 5 web searches and 1 task-page fetch.
 - Wrote `build_constructs.py` (this folder) which generates knowledge/constructs.yaml (yaml.safe_dump, allow_unicode, sort_keys=False, width=120) and mapping.csv.
   - Seed en/zh/parent from vocab_ids.json; en capitalised to sentence case.
   - 6 existing atlas terms keep en + definition verbatim.

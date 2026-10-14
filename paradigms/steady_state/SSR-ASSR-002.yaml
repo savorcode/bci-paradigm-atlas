@@ -43,7 +43,7 @@ first_source:
   verified: false
 interop:
   bids_task: assr
-notes: 'Lead: WebSearch S2A22 [=R1277]; Korea University record read in S2A23 (abstract: 37 and 43 Hz tone-burst trains from
+notes: 'Lead: web search S2A22 [=R1277]; Korea University record read in S2A23 (abstract: 37 and 43 Hz tone-burst trains from
   left and right speakers; "first online ASSR-based BCI system"). Several further ASSR-BCI records from the same group appeared
   in S2A22 results (SNU, Korea University). New in sprint 2. [curator_e sprint 3, 2026-10-05] bibliography confirmed (OpenAlex,
   2026-10-05).'

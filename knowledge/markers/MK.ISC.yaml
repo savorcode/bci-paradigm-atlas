@@ -1,4 +1,4 @@
-schema_version: "0.2"
+schema_version: '0.2'
 id: MK.ISC
 name:
   en: Inter-subject correlation
@@ -17,7 +17,84 @@ description:
   en: Correlation of neural time courses (BOLD, EEG or MEG components) across individuals exposed to the same naturalistic
     stimulus, isolating stimulus-driven activity shared between viewers or listeners.
   zh: 接受相同自然刺激的个体之间神经时间进程（BOLD、EEG 或 MEG 成分）的相关，用于分离被试间共享的刺激驱动活动。
-notes: First-pass skeleton by package A (2026-10-03). No generators/indexes yet.
+generators:
+- region: BR.visual_cortex
+  evidence: C
+  sources:
+  - citation: Hasson U, Nir Y, Levy I, et al. Intersubject synchronization of cortical activity during natural vision. Science.
+      2004;303(5664):1634-1640.
+    doi: 10.1126/science.1089506
+    year: 2004
+    verified: false
+  note: 'method: fMRI localization; BOLD ISC during free movie viewing is highest in visual (and auditory) sensory cortex
+    (Hasson 2004).'
+- region: BR.STG
+  evidence: B
+  sources:
+  - citation: Lerner Y, Honey CJ, Silbert LJ, et al. Topographic mapping of a hierarchy of temporal receptive windows using
+      a narrated story. J Neurosci. 2011;31(8):2906-2915.
+    doi: 10.1523/JNEUROSCI.3684-10.2011
+    year: 2011
+    verified: false
+  - citation: Hasson U, Nir Y, Levy I, et al. Intersubject synchronization of cortical activity during natural vision. Science.
+      2004;303(5664):1634-1640.
+    doi: 10.1126/science.1089506
+    year: 2004
+    verified: false
+  note: 'method: fMRI localization; auditory cortex / STG shows reliable ISC to narrated speech regardless of temporal scrambling
+    (Lerner 2011) and during movies (Hasson 2004).'
+- region: BR.precuneus
+  evidence: C
+  sources:
+  - citation: Lerner Y, Honey CJ, Silbert LJ, et al. Topographic mapping of a hierarchy of temporal receptive windows using
+      a narrated story. J Neurosci. 2011;31(8):2906-2915.
+    doi: 10.1523/JNEUROSCI.3684-10.2011
+    year: 2011
+    verified: false
+  note: 'method: fMRI localization; precuneus and other high-order regions show ISC only when the narrative is intact at paragraph
+    scale (Lerner 2011).'
+indexes:
+- construct: CN.attention_allocation
+  evidence: B
+  relation: ISC decreases when attention is diverted from the naturalistic stimulus
+  sources:
+  - citation: Ki JJ, Kelly SP, Parra LC. Attention strongly modulates reliability of neural responses to naturalistic narrative
+      stimuli. J Neurosci. 2016;36(10):3092-3101.
+    doi: 10.1523/JNEUROSCI.2942-15.2016
+    year: 2016
+    verified: false
+  - citation: Dmochowski JP, Sajda P, Dias J, et al. Correlated components of ongoing EEG point to emotionally laden attention
+      - a possible marker of engagement? Front Hum Neurosci. 2012;6:112.
+    doi: 10.3389/fnhum.2012.00112
+    year: 2012
+    verified: false
+  note: Both from overlapping EEG groups; consistent with methodological review (Nastase 2019).
+- construct: CN.episodic_encoding
+  evidence: C
+  relation: ISC is higher for movie segments that are later remembered
+  sources:
+  - citation: Hasson U, Furman O, Clark D, et al. Enhanced intersubject correlations during movie viewing correlate with successful
+      episodic encoding. Neuron. 2008;57(3):452-462.
+    doi: 10.1016/j.neuron.2007.12.009
+    year: 2008
+    verified: false
+- construct: CN.speech_tracking
+  evidence: C
+  relation: ISC in higher-order regions depends on intact linguistic structure over longer timescales (word, sentence, paragraph)
+  sources:
+  - citation: Lerner Y, Honey CJ, Silbert LJ, et al. Topographic mapping of a hierarchy of temporal receptive windows using
+      a narrated story. J Neurosci. 2011;31(8):2906-2915.
+    doi: 10.1523/JNEUROSCI.3684-10.2011
+    year: 2011
+    verified: false
+  - citation: Nastase SA, Gazzola V, Hasson U, et al. Measuring shared responses across subjects using intersubject correlation.
+      Soc Cogn Affect Neurosci. 2019;14(6):667-685.
+    doi: 10.1093/scan/nsz037
+    year: 2019
+    verified: false
+notes: 'First-pass skeleton by package A (2026-10-03). No generators/indexes yet. Sprint 5 (2026-10-14, curator H): generators
+  and indexes curated; every DOI checked against its Crossref or OpenAlex record (see curation/work/sprint5/markers_H/); verified:
+  false pending full-text check.'
 status: draft
 contributors:
 - curator_a

@@ -42,7 +42,7 @@ first_source:
   verified: false
 interop:
   bids_task: ssvep
-notes: 'Leads: WebSearch S2A28 [=R1280]; Zhang Z, Deng Z. A two-stage state recognition method for asynchronous SSVEP-based
+notes: 'Leads: web search S2A28 [=R1280]; Zhang Z, Deng Z. A two-stage state recognition method for asynchronous SSVEP-based
   BCI system. Robot. 2013;35(1):45-51 (record read in S2A29: idle-state detection and control-state discrimination modules);
   DTU record "An asynchronous P300 BCI with SSVEP-based control state detection" (S2A28 result, not read; hybrid, D-022).
   Origin to be located by the maintainer (D-032). New in sprint 2. [curator_e sprint 3, 2026-10-05] candidate origin found

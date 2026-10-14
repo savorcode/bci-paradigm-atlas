@@ -1,4 +1,4 @@
-schema_version: "0.2"
+schema_version: '0.2'
 id: MK.switch_positivity
 name:
   en: Switch-related positivity
@@ -19,8 +19,49 @@ description:
   en: Positive deflection that is larger after cues signalling a task switch than after cues signalling a task repetition.
     It is associated with advance reconfiguration of the task set.
   zh: 提示任务切换的线索之后比提示任务重复的线索之后更大的正向波。它与任务定势的提前重构相关。
+generators:
+- region: BR.parietal_cortex
+  evidence: C
+  sources:
+  - citation: Jamadar S, Hughes M, Fulham WR, et al. The spatial and temporal dynamics of anticipatory preparation and response
+      inhibition in task-switching. Neuroimage. 2010;51(1):432-449.
+    doi: 10.1016/j.neuroimage.2010.01.090
+    year: 2010
+    verified: false
+  - citation: 'Karayanidis F, Jamadar S, Ruge H, et al. Advance preparation in task-switching: converging evidence from behavioral,
+      brain activation, and model-based approaches. Front Psychol. 2010;1:25.'
+    doi: 10.3389/fpsyg.2010.00025
+    year: 2010
+    verified: false
+  note: 'method: EEG-fMRI; in a combined ERP-fMRI study, switch-related activity in superior posterior parietal cortex correlated
+    with the late cue-locked switch positivity (Jamadar 2010); single study, and the correlation does not establish the source
+    (Karayanidis 2010).'
+indexes:
+- construct: CN.task_switching
+  evidence: B
+  relation: amplitude is larger after cues signalling a task switch than after cues signalling a repetition, reflecting advance
+    task-set reconfiguration
+  sources:
+  - citation: Nicholson R, Karayanidis F, Poboka D, et al. Electrophysiological correlates of anticipatory task-switching
+      processes. Psychophysiology. 2005;42(5):540-554.
+    doi: 10.1111/j.1469-8986.2005.00350.x
+    year: 2005
+    verified: false
+  - citation: Jamadar S, Hughes M, Fulham WR, et al. The spatial and temporal dynamics of anticipatory preparation and response
+      inhibition in task-switching. Neuroimage. 2010;51(1):432-449.
+    doi: 10.1016/j.neuroimage.2010.01.090
+    year: 2010
+    verified: false
+  - citation: 'Karayanidis F, Jamadar S, Ruge H, et al. Advance preparation in task-switching: converging evidence from behavioral,
+      brain activation, and model-based approaches. Front Psychol. 2010;1:25.'
+    doi: 10.3389/fpsyg.2010.00025
+    year: 2010
+    verified: false
+  note: Nicholson 2005, Jamadar 2010; Karayanidis 2010 reviews consistent reports from several laboratories.
 notes: 'Signature values are textbook-level approximations and await checking against sources (pass 2). Generators and indexes
-  not yet written. Used by (registry): CTL-SW-001.'
+  not yet written. Used by (registry): CTL-SW-001. Sprint 5 (2026-10-14, curator G): generators and indexes curated; every
+  DOI checked against its Crossref or OpenAlex record (see curation/work/sprint5/markers_G/); verified: false pending full-text
+  check.'
 status: draft
 contributors:
 - maintainer

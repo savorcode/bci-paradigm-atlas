@@ -194,7 +194,7 @@
   - [综述] Blake R 2002. Visual competition. *Nat Rev Neurosci*. PMID 11823801 [R0239](https://pubmed.ncbi.nlm.nih.gov/11823801/)
   - [综述] Tong F 2006. Neural bases of binocular rivalry. *Trends Cogn Sci*. PMID 16997612 [R0346](https://pubmed.ncbi.nlm.nih.gov/16997612/)
 - **检索线索（模型记忆，未核实）**：Origin: Wheatstone 1838 (binocular rivalry described). Frequency-tagged rivalry MEG: Tononi G, Srinivasan R et al. 1998 PNAS; Brown & Norcia 1997 Vision Res. Not confirmed.
-- **检索备注**：References taken from a fetched PubMed search results page (https://pubmed.ncbi.nlm.nih.gov/?term=binocular+rivalry+review&sort=relevance); per-article URLs constructed from shown PMIDs. WebSearch budget exhausted from this row on.
+- **检索备注**：References taken from a fetched PubMed search results page (https://pubmed.ncbi.nlm.nih.gov/?term=binocular+rivalry+review&sort=relevance); per-article URLs constructed from shown PMIDs. web search budget exhausted from this row on.
 
 ### PER-CAT-001　视觉物体类别识别　/ Visual object categorization
 
@@ -343,7 +343,7 @@
   - [其他] Sekiyama & K 1997. Cultural and linguistic factors in audiovisual speech processing: The McGurk effect in Chinese subjects. *Perception and Psychophysics 59 (1): 73–80*. doi:10.3758/bf03206849 [R0143](https://doi.org/10.3758/bf03206849)
   - [其他] Nath & Beauchamp 2012. A neural basis for interindividual differences in the McGurk effect, a multisensory speech illusion. *NeuroImage 59 (1): 781–787*. doi:10.1016/j.neuroimage.2011.07.024 [R0527](https://doi.org/10.1016/j.neuroimage.2011.07.024)
   - [其他] Windmann & S 2004. Effects of sentence context and expectation on the McGurk illusion. *Journal of Memory and Language 50 (1): 212–230*. doi:10.1016/j.jml.2003.10.001 [R0275](https://doi.org/10.1016/j.jml.2003.10.001)
-- **检索线索（模型记忆，未核实）**：Giard MH & Peronnet F 1999 J Cogn Neurosci 'Auditory-visual integration during multimodal object recognition in humans: a behavioral and electrophysiological study'; Molholm S et al. 2002 Cogn Brain Res; McGurk & MacDonald 1976 Nature; Shams, Kamitani & Shimojo 2000 Nature (flash illusion). Not verified: WebSearch budget exhausted and PubMed fetch rate-limited (HTTP 429).
+- **检索线索（模型记忆，未核实）**：Giard MH & Peronnet F 1999 J Cogn Neurosci 'Auditory-visual integration during multimodal object recognition in humans: a behavioral and electrophysiological study'; Molholm S et al. 2002 Cogn Brain Res; McGurk & MacDonald 1976 Nature; Shams, Kamitani & Shimojo 2000 Nature (flash illusion). Not verified: web search budget exhausted and PubMed fetch rate-limited (HTTP 429).
 - **检索备注**：No references recorded - verification needed.
 
 ### PER-NAT-001　自然图像与影片观看　/ Naturalistic image / movie viewing

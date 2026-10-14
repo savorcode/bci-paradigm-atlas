@@ -490,3 +490,56 @@ terms:
   definition: Maintenance of attention on a visual stimulus or location over time.
   parent: CN.sustained_attention
   cognitive_atlas: trm_4a3fd79d0b311 (sustained attention)
+- id: CN.perceptual_learning
+  en: Perceptual learning
+  zh: 知觉学习
+  definition: Long-term improvement in perceptual discrimination or detection produced by practice.
+  parent: CN.perception
+  cognitive_atlas: trm_4a3fd79d0abb6 (perceptual learning)
+- id: CN.perceptual_discrimination
+  en: Perceptual discrimination
+  zh: 知觉辨别
+  definition: Judging whether two or more stimuli differ along a sensory dimension, as opposed to detecting their presence.
+  parent: CN.perception
+  cognitive_atlas: trm_5519b7525d7a2 (discrimination)
+- id: CN.auditory_selective_attention
+  en: Auditory selective attention
+  zh: 听觉选择性注意
+  definition: Selecting one auditory channel, ear or stream for processing while ignoring others.
+  parent: CN.attention
+  cognitive_atlas: trm_4a3fd79d09a10 (auditory attention)
+- id: CN.emotion_regulation
+  en: Emotion regulation
+  zh: 情绪调节
+  definition: Processes that change the intensity, duration or kind of an emotional response, such as reappraisal or suppression.
+  parent: CN.affect
+  cognitive_atlas: trm_51a690a7492eb (emotion regulation)
+- id: CN.approach_motivation
+  en: Approach-withdrawal motivation
+  zh: 趋近-回避动机
+  definition: Motivational tendency to move toward or away from a stimulus, distinct from emotional valence.
+  parent: CN.affect
+- id: CN.reward_anticipation
+  en: Reward anticipation
+  zh: 奖赏预期
+  definition: Motivational state while expecting a possible reward, before the outcome is known.
+  parent: CN.affect
+  cognitive_atlas: trm_557b4a81a4a17 (reward anticipation)
+- id: CN.empathy
+  en: Empathy
+  zh: 共情
+  definition: Sharing and representing another person's affective state, such as their pain.
+  parent: CN.social
+  cognitive_atlas: trm_4a3fd79d0b67d (empathy)
+- id: CN.social_decision
+  en: Social decision-making
+  zh: 社会决策（公平、亲社会、社会排斥）
+  definition: Choices whose value depends on other people, such as fairness judgements, prosocial giving and responses to
+    social exclusion.
+  parent: CN.social
+- id: CN.voice_perception
+  en: Voice perception
+  zh: 嗓音知觉
+  definition: Processing of the human voice as a social signal, including speaker identity and vocal affect.
+  parent: CN.social_perception
+  cognitive_atlas: trm_586fda1743344 (voice perception)
