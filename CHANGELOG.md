@@ -12,6 +12,10 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/),
   知识层（第四冲刺）：构念词表 6 → 81（ID 与范式工厂一致，53 个对齐 Cognitive Atlas）；脑区词表 5 → 43（MNI152，附 Brodmann / AAL3 / HCP-MMP1.0 对应）；为 50 个常用标记物补生成源 92 条、反映构念 142 条（A 74 / B 103 / C 57），每条至少一条经 Crossref/OpenAlex 检索确认的出处；新增文献线索 215 条（R1344–R1558）。决策 D-075、D-076；报告见 `curation/reports/knowledge_layer_sprint4.md`。
 - Knowledge layer, second round (sprint 5): 9 constructs and 2 regions added per D-076 (90 constructs, 45 regions; `BR.temporoparietal_junction` deprecated in favour of `BR.TPJ`); 13 sprint-4 links moved to the new terms; generators and indexes for 30 more markers (81 markers with links in total: 137 generator links, 207 index links, grades A 88 / B 154 / C 102); 117 new literature leads (R1559–R1675). Vocabulary schema: optional `status` and `replaced_by`; `validate.py` warns when a deprecated term is used. Decisions D-075, D-076 confirmed, D-077 drafted; report `curation/reports/knowledge_layer_sprint5.md`.
   知识层第二轮（第五冲刺）：按 D-076 新增构念 9 个、脑区 2 个（构念 90、脑区 45；`BR.temporoparietal_junction` 弃用，改用 `BR.TPJ`）；冲刺 4 的 13 条关联改挂新词；再为 30 个标记物补生成源与反映构念（有关联的标记物共 81 个：生成源 137 条、反映构念 207 条，A 88 / B 154 / C 102）；新增文献线索 117 条（R1559–R1675）。词表 schema 新增可选字段 `status`、`replaced_by`，校验脚本对已弃用 ID 给出警告。D-075、D-076 确认，D-077 草案；报告见 `curation/reports/knowledge_layer_sprint5.md`。
+- Vocabulary per D-077: `BR.inferior_colliculus`, `BR.insula` (parent of the insula subregions), `CN.statistical_learning`, `CN.music_syntax` (92 constructs, 47 regions); four marker links moved to the new terms.
+  按 D-077 更新词表：新增下丘、岛叶（前、后岛叶的上位）、统计学习、音乐句法（构念 92、脑区 47）；4 个标记物的关联改挂新词。
+- `scripts/export_zotero.py`: exports `curation/literature.csv` as Zotero RDF with collections by paradigm family and by marker, for the team Zotero group library.
+  `scripts/export_zotero.py`：把文献表导出为 Zotero RDF，按范式族和标记物分好文件夹，供导入团队 Zotero 群组库。
 - Schema: optional `atlas_refs`, `coordinate_space`, `sources`, `notes` for vocabulary terms.
   schema：词表条目新增可选字段 `atlas_refs`、`coordinate_space`、`sources`、`notes`。
 
