@@ -1,18 +1,21 @@
 /* BCI Paradigm Atlas one-page site. Data: story-data.json (scripts/build_website_story.py). */
+/* Latin fonts are self-hosted (SIL OFL, see assets/fonts); Chinese uses the system font. */
+@font-face{font-family:"Fredoka";font-style:normal;font-display:swap;font-weight:300 700;src:url("./assets/fonts/fredoka-latin-wght-normal.woff2") format("woff2-variations"),url("./assets/fonts/fredoka-latin-wght-normal.woff2") format("woff2");unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD}
+@font-face{font-family:"Fredoka";font-style:normal;font-display:swap;font-weight:300 700;src:url("./assets/fonts/fredoka-latin-ext-wght-normal.woff2") format("woff2-variations"),url("./assets/fonts/fredoka-latin-ext-wght-normal.woff2") format("woff2");unicode-range:U+0100-02BA,U+02BD-02C5,U+02C7-02CC,U+02CE-02D7,U+02DD-02FF,U+0304,U+0308,U+0329,U+1D00-1DBF,U+1E00-1E9F,U+1EF2-1EFF,U+2020,U+20A0-20AB,U+20AD-20C0,U+2113,U+2C60-2C7F,U+A720-A7FF}
+@font-face{font-family:"Nunito";font-style:normal;font-display:swap;font-weight:200 1000;src:url("./assets/fonts/nunito-latin-wght-normal.woff2") format("woff2-variations"),url("./assets/fonts/nunito-latin-wght-normal.woff2") format("woff2");unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD}
+@font-face{font-family:"Nunito";font-style:normal;font-display:swap;font-weight:200 1000;src:url("./assets/fonts/nunito-latin-ext-wght-normal.woff2") format("woff2-variations"),url("./assets/fonts/nunito-latin-ext-wght-normal.woff2") format("woff2");unicode-range:U+0100-02BA,U+02BD-02C5,U+02C7-02CC,U+02CE-02D7,U+02DD-02FF,U+0304,U+0308,U+0329,U+1D00-1DBF,U+1E00-1E9F,U+1EF2-1EFF,U+2020,U+20A0-20AB,U+20AD-20C0,U+2113,U+2C60-2C7F,U+A720-A7FF}
+@font-face{font-family:"JetBrains Mono";font-style:normal;font-display:swap;font-weight:100 800;src:url("./assets/fonts/jetbrains-mono-latin-wght-normal.woff2") format("woff2-variations"),url("./assets/fonts/jetbrains-mono-latin-wght-normal.woff2") format("woff2");unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD}
 /* Layout: a dense, playful "lab notebook" — every band pairs a short story line with a toy you can poke; no empty bands. */
 :root{
   --bg:#F4F5FB; --ink:#1A1F3D; --muted:#646B90; --card:#FFFFFF; --line:#E0E3F1; --soft:#EBEDF8; --deep:#1A1F3D; --on-deep:#F4F5FB;
   --pink:#FF5C92; --sun:#FFC23D; --mint:#28C99C; --sky:#4A9BFF; --grape:#8D70FF;
   --gA:#28C99C; --gB:#4A9BFF; --gC:#FFAE1F;
   --on-accent:#1A1F3D;
-  --f-display:"Fredoka","Noto Sans SC",ui-rounded,system-ui,sans-serif;
-  --f-body:"Nunito","Noto Sans SC",system-ui,-apple-system,"PingFang SC","Microsoft YaHei",sans-serif;
+  --f-display:"Fredoka","PingFang SC","Hiragino Sans GB","Microsoft YaHei","Noto Sans SC","Source Han Sans SC",ui-rounded,system-ui,sans-serif;
+  --f-body:"Nunito","PingFang SC","Hiragino Sans GB","Microsoft YaHei","Noto Sans SC","Source Han Sans SC",system-ui,-apple-system,sans-serif;
   --f-mono:"JetBrains Mono",ui-monospace,Menlo,Consolas,monospace;
 }
-@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){
-  --bg:#10132A; --ink:#EDEFFB; --muted:#A1A7C9; --card:#191D39; --line:#2A2F57; --soft:#1F2448; --deep:#0A0C1E; --on-deep:#EDEFFB;
-  --pink:#FF77A6; --sun:#FFCF5C; --mint:#43DCB0; --sky:#6CAFFF; --grape:#A48DFF;
-  --gA:#43DCB0; --gB:#6CAFFF; --gC:#FFC14D; --on-accent:#10132A; color-scheme:dark}}
+/* Light by default; dark only when the visitor picks it with the theme button. */
 :root[data-theme="dark"]{
   --bg:#10132A; --ink:#EDEFFB; --muted:#A1A7C9; --card:#191D39; --line:#2A2F57; --soft:#1F2448; --deep:#0A0C1E; --on-deep:#EDEFFB;
   --pink:#FF77A6; --sun:#FFCF5C; --mint:#43DCB0; --sky:#6CAFFF; --grape:#A48DFF;
@@ -250,3 +253,66 @@ select.sel{border:2px solid var(--line);background:var(--card);border-radius:999
 #gfil{display:flex;flex-wrap:wrap;gap:8px}
 .fpick .chipset{min-width:0}
 select.sel{width:auto}
+
+/* ---------- lively layer: mascot, doodles, stickers, confetti ---------- */
+.doodles{position:fixed;inset:0;z-index:0;pointer-events:none;overflow:hidden}
+.doodles svg{position:absolute;opacity:.42;animation:drift var(--d,14s) ease-in-out infinite alternate}
+:root[data-theme="dark"] .doodles svg{opacity:.3}
+@keyframes drift{from{transform:translate(0,0) rotate(0)}to{transform:translate(var(--x,18px),var(--y,-26px)) rotate(var(--r,20deg))}}
+main,header,footer{position:relative;z-index:1}
+.lvl b{transform:rotate(-8deg);box-shadow:0 3px 0 color-mix(in srgb,#000 22%,transparent);transition:transform .2s}
+.bh:hover .lvl b{transform:rotate(8deg) scale(1.12)}
+.band h2::after{content:"";display:block;width:84px;height:10px;margin-top:8px;background:var(--sun);
+  -webkit-mask:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 84 10'%3E%3Cpath d='M2 6 Q9 1 16 6 T30 6 T44 6 T58 6 T72 6 T86 6' fill='none' stroke='black' stroke-width='3.2' stroke-linecap='round'/%3E%3C/svg%3E") no-repeat;
+  mask:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 84 10'%3E%3Cpath d='M2 6 Q9 1 16 6 T30 6 T44 6 T58 6 T72 6 T86 6' fill='none' stroke='black' stroke-width='3.2' stroke-linecap='round'/%3E%3C/svg%3E") no-repeat}
+#net h2::after{background:var(--pink)} #dots h2::after{background:var(--mint)} #factory h2::after{background:var(--grape)}
+.btn:hover,.pill:hover,.chip:hover,.fchip:hover{animation:wiggle .45s ease-in-out}
+@keyframes wiggle{0%,100%{transform:rotate(0)}25%{transform:rotate(-3deg) scale(1.03)}75%{transform:rotate(3deg) scale(1.03)}}
+.card{transition:transform .25s,box-shadow .25s}
+.card:hover{box-shadow:0 10px 0 -2px color-mix(in srgb,var(--line) 90%,transparent)}
+.stn,.pcard,.lk,.score div{transition:transform .2s}
+.stn:hover,.pcard:hover{transform:translateY(-3px) rotate(-.4deg)}
+.mini span{transition:transform .2s}.mini span:hover{transform:translateY(-3px) rotate(-2deg)}
+.dot:hover{animation:boing .5s}
+@keyframes boing{0%{transform:scale(1)}40%{transform:scale(1.7)}70%{transform:scale(1.3)}100%{transform:scale(1.45)}}
+
+.neuri{display:block;overflow:visible}
+.neuri .body{animation:bob 2.6s ease-in-out infinite;transform-origin:60px 96px}
+@keyframes bob{50%{transform:translateY(-4px) scaleY(1.02)}}
+.neuri .lids{transform-origin:60px 52px;animation:blink 4.6s infinite}
+@keyframes blink{0%,94%,100%{transform:scaleY(0)}96%{transform:scaleY(1)}}
+.neuri .bulb{animation:glow 1.8s ease-in-out infinite}
+@keyframes glow{50%{opacity:.45}}
+.neuri .arm{transform-box:fill-box;transform-origin:100% 50%}
+.neuri .arm.r{transform-origin:0 50%}
+.neuri.wave .arm.r{animation:waveArm .5s ease-in-out 3}
+@keyframes waveArm{50%{transform:rotate(-40deg)}}
+.neuri.happy .body{animation:jump .55s cubic-bezier(.3,1.6,.5,1) 2}
+@keyframes jump{40%{transform:translateY(-16px) scale(1.06,.96)}70%{transform:translateY(0) scale(.96,1.05)}}
+.neuri.oops .body{animation:shake .4s 2}
+@keyframes shake{25%{transform:translateX(-4px) rotate(-4deg)}75%{transform:translateX(4px) rotate(4deg)}}
+.neuri .m{display:none}.neuri[data-m="smile"] .m.smile,.neuri[data-m="open"] .m.open,.neuri[data-m="grin"] .m.grin,.neuri[data-m="wow"] .m.wow{display:inline}
+
+.hero-pet{position:absolute;left:-26px;bottom:-34px;width:clamp(96px,11vw,138px);z-index:3;cursor:pointer;filter:drop-shadow(0 6px 0 color-mix(in srgb,#000 18%,transparent))}
+.stage{overflow:visible}
+.stage canvas{border-radius:30px}
+.hero-bub{position:absolute;left:clamp(70px,9vw,110px);bottom:clamp(70px,9vw,100px);z-index:3}
+.bub{background:var(--card);color:var(--ink);border:2.5px solid var(--ink);border-radius:18px;padding:8px 13px;font-weight:800;font-size:14px;line-height:1.35;max-width:230px;position:relative;
+  box-shadow:0 4px 0 var(--ink);animation:pop .35s cubic-bezier(.3,1.6,.5,1)}
+.bub::after{content:"";position:absolute;left:18px;bottom:-11px;width:16px;height:16px;background:var(--card);border-right:2.5px solid var(--ink);border-bottom:2.5px solid var(--ink);transform:rotate(45deg) skew(8deg,8deg)}
+@keyframes pop{from{transform:scale(.6) translateY(8px);opacity:.2}to{transform:none;opacity:1}}
+
+.guide{position:fixed;right:max(14px,env(safe-area-inset-right,0px));bottom:calc(14px + env(safe-area-inset-bottom,0px));z-index:40;display:flex;align-items:flex-end;gap:6px;transition:transform .45s cubic-bezier(.3,1.4,.5,1),opacity .3s}
+.guide.away{transform:translateY(140%);opacity:0;pointer-events:none}
+.guide .pet{width:78px;cursor:pointer;filter:drop-shadow(0 5px 0 color-mix(in srgb,#000 22%,transparent))}
+.guide .bub{margin-bottom:58px;max-width:240px}
+.guide .bub::after{left:auto;right:-9px;bottom:16px;transform:rotate(-45deg) skew(8deg,8deg)}
+.guide .x{position:absolute;top:-8px;right:-6px;width:24px;height:24px;border-radius:50%;border:2px solid var(--ink);background:var(--card);font-weight:900;font-size:13px;line-height:1;cursor:pointer;display:grid;place-items:center;color:var(--ink)}
+.peek{position:fixed;right:max(14px,env(safe-area-inset-right,0px));bottom:calc(14px + env(safe-area-inset-bottom,0px));z-index:39;border:2.5px solid var(--ink);background:var(--sun);color:var(--on-accent);border-radius:999px;padding:6px 12px;font-weight:900;cursor:pointer;box-shadow:0 3px 0 var(--ink)}
+#confetti{position:fixed;inset:0;width:100%;height:100%;pointer-events:none;z-index:60}
+@media (max-width:620px){
+  .guide .pet{width:58px}.guide .bub{font-size:13px;max-width:190px;margin-bottom:44px}
+  .hero-pet{left:-6px;bottom:-26px}.hero-bub{left:76px;bottom:70px}.hero-bub .bub{font-size:12.5px;max-width:180px}
+}
+@media (prefers-reduced-motion:reduce){.doodles svg,.neuri *{animation:none!important}}
+.stage .hint{left:auto;right:16px;text-align:right}

@@ -1,5 +1,115 @@
 // BCI Paradigm Atlas one-page site. The brain-signal traces in the mini games are simulated; all atlas numbers and links come from story-data.json.
 "use strict";
+/* ---------- Neuri, the little brain who guides visitors ---------- */
+const Neuri=(()=>{
+  const reduce=matchMedia("(prefers-reduced-motion: reduce)").matches;
+  let lang="zh";
+  const S={
+    zh:{hello:"嗨！我是小脑瓜 Neuri，在我背后的大脑上划一划试试～",top:"往下滑，我们一起玩三个脑机小游戏！",
+      play:"看到粉色就戳屏幕，我帮你把脑电平均出来！",net:"点任意一个小圆点，看看信号从哪个脑区来～",
+      dots:"404 颗豆豆，每颗都是一个实验，抽一颗试试？",factory:"告诉我想测什么，工厂马上开工！",
+      hit:["抓到啦！","好快！","漂亮～","P3b 又长高了一点！"],oops:["哎呀，那是蓝色的～","别急别急～"],
+      done:"完成！看右边，平均后的 P3b 冒出来了 🎉",typed:"你用眼神打出了「{c}」！",bci:"B-C-I！你用目光拼出了脑机接口 🎉",
+      goal:"进门啦！你的想象力满分 🎉",factoryGo:"叮！「{c}」的实验方案出炉～",pick:"这是「{c}」，看看它连着谁～",
+      bye:"我先躲起来啦，点右下角可以叫我回来",back:"我回来啦！",
+      facts:["小知识：人脑大约有 860 亿个神经元。","小知识：第一台 P300 拼写器 1988 年就出现了。","小知识：想象左手时，右侧运动皮层的 μ 节律会变弱，这叫 ERD。","小知识：图谱里每条连线都附了文献，点一下就能看到原文。","小知识：SSVEP 拼写器靠的是视觉皮层会跟着闪烁频率“共振”。"]},
+    en:{hello:"Hi! I'm Neuri. Swipe across the brain behind me!",top:"Scroll down and let's play three BCI mini games!",
+      play:"Tap the screen on pink and I'll average your EEG!",net:"Click any dot to see which region a signal comes from.",
+      dots:"404 beans, each one an experiment. Draw one?",factory:"Tell me what to measure and the factory starts!",
+      hit:["Got it!","So fast!","Nice!","The P3b grew a bit!"],oops:["Oops, that one was blue.","Easy, easy."],
+      done:"Done! The averaged P3b popped up on the right 🎉",typed:"You typed “{c}” with your eyes!",bci:"B-C-I! You spelled it with your gaze 🎉",
+      goal:"In the gate! Full marks for imagination 🎉",factoryGo:"Ding! A plan for “{c}” is ready.",pick:"This is “{c}”. See what it connects to.",
+      bye:"I'll hide for now. Tap the corner to call me back.",back:"I'm back!",
+      facts:["Fun fact: the human brain has about 86 billion neurons.","Fun fact: the first P300 speller appeared in 1988.","Fun fact: imagining your left hand weakens the mu rhythm over the right motor cortex (ERD).","Fun fact: every link in the atlas cites a paper; click to open it.","Fun fact: SSVEP spellers work because the visual cortex locks onto the flicker frequency."]}
+  };
+  const tx=(k,v)=>{ let s=S[lang][k]; if(Array.isArray(s)) s=s[Math.floor(Math.random()*s.length)]; if(v) for(const[a,b] of Object.entries(v)) s=s.replace("{"+a+"}",b); return s; };
+  const svg=()=>`<svg class="neuri" viewBox="0 -4 120 112" aria-hidden="true" data-m="smile"><g class="body">
+    <path class="arm l" d="M18 62 C8 60 4 52 6 46" fill="none" stroke="#1A1F3D" stroke-width="4" stroke-linecap="round"/>
+    <path class="arm r" d="M102 62 C112 60 116 52 114 46" fill="none" stroke="#1A1F3D" stroke-width="4" stroke-linecap="round"/>
+    <ellipse cx="48" cy="98" rx="8" ry="5" fill="#1A1F3D"/><ellipse cx="72" cy="98" rx="8" ry="5" fill="#1A1F3D"/>
+    <path d="M62 16 C63 7 69 2 76 3" fill="none" stroke="#1A1F3D" stroke-width="3" stroke-linecap="round"/><circle class="bulb" cx="78" cy="3" r="5" fill="#FFC23D" stroke="#1A1F3D" stroke-width="2.5"/>
+    <path d="M20 62 C6 58 6 36 22 32 C20 16 40 8 52 16 C60 4 82 6 86 20 C102 18 114 34 104 48 C116 58 108 80 92 80 C88 94 66 98 58 88 C46 98 24 94 24 80 C12 78 10 64 20 62 Z" fill="#FF7FA8" stroke="#1A1F3D" stroke-width="3.2" stroke-linejoin="round"/>
+    <g fill="none" stroke="#E0517F" stroke-width="2.4" stroke-linecap="round" opacity=".75"><path d="M30 30 C36 34 36 40 32 44"/><path d="M58 14 C56 22 62 26 60 32"/><path d="M90 30 C84 34 86 40 92 42"/><path d="M28 80 C34 76 40 80 44 76"/><path d="M78 80 C84 84 90 80 94 82"/></g>
+    <g class="eyes"><ellipse cx="46" cy="52" rx="10" ry="11" fill="#fff" stroke="#1A1F3D" stroke-width="2.5"/><ellipse cx="74" cy="52" rx="10" ry="11" fill="#fff" stroke="#1A1F3D" stroke-width="2.5"/>
+      <g class="pupils"><circle cx="46" cy="53" r="5" fill="#1A1F3D"/><circle cx="74" cy="53" r="5" fill="#1A1F3D"/><circle cx="47.8" cy="50.8" r="1.7" fill="#fff"/><circle cx="75.8" cy="50.8" r="1.7" fill="#fff"/></g>
+      <g class="lids" fill="#FF7FA8" stroke="#1A1F3D" stroke-width="2.5"><ellipse cx="46" cy="52" rx="10.5" ry="11.5"/><ellipse cx="74" cy="52" rx="10.5" ry="11.5"/></g></g>
+    <ellipse cx="34" cy="68" rx="6" ry="3.6" fill="#FF4F86" opacity=".5"/><ellipse cx="86" cy="68" rx="6" ry="3.6" fill="#FF4F86" opacity=".5"/>
+    <path class="m smile" d="M53 69 Q60 76 67 69" fill="none" stroke="#1A1F3D" stroke-width="3" stroke-linecap="round"/>
+    <ellipse class="m open" cx="60" cy="72" rx="5" ry="6" fill="#1A1F3D"/>
+    <path class="m grin" d="M51 67 Q60 82 69 67 Z" fill="#1A1F3D" stroke="#1A1F3D" stroke-width="2" stroke-linejoin="round"/>
+    <path class="m wow" d="M54 72 Q60 66 66 72" fill="none" stroke="#1A1F3D" stroke-width="3" stroke-linecap="round"/>
+  </g></svg>`;
+  /* doodles */
+  const doodle=(k,c)=>({star:`<svg width="26" height="26" viewBox="0 0 26 26"><path d="M13 1 L15.5 10.5 L25 13 L15.5 15.5 L13 25 L10.5 15.5 L1 13 L10.5 10.5 Z" fill="var(${c})"/></svg>`,
+    ring:`<svg width="30" height="30" viewBox="0 0 30 30"><circle cx="15" cy="15" r="10" fill="none" stroke="var(${c})" stroke-width="4"/></svg>`,
+    plus:`<svg width="22" height="22" viewBox="0 0 22 22"><path d="M11 2v18M2 11h18" stroke="var(${c})" stroke-width="4.5" stroke-linecap="round"/></svg>`,
+    squig:`<svg width="54" height="16" viewBox="0 0 54 16"><path d="M2 8 Q8 1 14 8 T26 8 T38 8 T52 8" fill="none" stroke="var(${c})" stroke-width="4" stroke-linecap="round"/></svg>`,
+    neuron:`<svg width="40" height="40" viewBox="0 0 40 40"><g stroke="var(${c})" stroke-width="3" stroke-linecap="round" fill="none"><path d="M20 20 L6 8M20 20 L34 10M20 20 L8 32M20 20 L36 30M34 10 l4 -4M6 8 l-3 3"/></g><circle cx="20" cy="20" r="6" fill="var(${c})"/></svg>`,
+    spike:`<svg width="46" height="22" viewBox="0 0 46 22"><path d="M2 14 H14 L18 4 L23 20 L27 10 L30 14 H44" fill="none" stroke="var(${c})" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"/></svg>`})[k];
+  function addDoodles(){
+    const box=document.createElement("div"); box.className="doodles"; box.setAttribute("aria-hidden","true");
+    const kinds=["star","ring","plus","squig","neuron","spike"], cols=["--pink","--sun","--mint","--sky","--grape"];
+    let h=""; for(let i=0;i<18;i++){ const k=kinds[i%kinds.length], c=cols[(i*3)%cols.length];
+      const x=(i*37+11)%96, y=(i*53+7)%94, d=10+(i%5)*3, dx=((i%3)-1)*22, dy=-14-(i%4)*8, r=(i%2?1:-1)*(10+i%4*8);
+      h+=`<span style="position:absolute;left:${x}%;top:${y}%">${doodle(k,c).replace("<svg",`<svg style="--d:${d}s;--x:${dx}px;--y:${dy}px;--r:${r}deg"`)}</span>`; }
+    box.innerHTML=h; document.body.prepend(box);
+  }
+  /* confetti */
+  let cv,ctx,parts=[],running=false;
+  function cheer(){
+    if(reduce) return;
+    if(!cv){ cv=document.createElement("canvas"); cv.id="confetti"; document.body.appendChild(cv); ctx=cv.getContext("2d"); }
+    const dpr=Math.min(devicePixelRatio||1,2); cv.width=innerWidth*dpr; cv.height=innerHeight*dpr; ctx.setTransform(dpr,0,0,dpr,0,0);
+    const cs=getComputedStyle(document.documentElement), cols=["--pink","--sun","--mint","--sky","--grape"].map(v=>cs.getPropertyValue(v).trim());
+    for(let i=0;i<120;i++) parts.push({x:innerWidth*(.2+Math.random()*.6),y:innerHeight*.35,vx:(Math.random()-.5)*12,vy:-6-Math.random()*9,r:4+Math.random()*5,c:cols[i%5],a:Math.random()*6,va:(Math.random()-.5)*.4,s:Math.random()<.5,life:0});
+    if(!running){ running=true; requestAnimationFrame(step); }
+  }
+  function step(){
+    ctx.clearRect(0,0,innerWidth,innerHeight);
+    parts.forEach(p=>{ p.vy+=.32; p.vx*=.99; p.x+=p.vx; p.y+=p.vy; p.a+=p.va; p.life++; ctx.save(); ctx.translate(p.x,p.y); ctx.rotate(p.a); ctx.fillStyle=p.c;
+      if(p.s) ctx.fillRect(-p.r,-p.r/2,p.r*2,p.r); else { ctx.beginPath(); ctx.arc(0,0,p.r*.7,0,7); ctx.fill(); } ctx.restore(); });
+    parts=parts.filter(p=>p.y<innerHeight+40&&p.life<240);
+    if(parts.length) requestAnimationFrame(step); else { running=false; ctx.clearRect(0,0,innerWidth,innerHeight); }
+  }
+  /* pets */
+  let guide,gBub,gPet,peek,heroBub,heroPet,timer,hidden=false,heroVisible=true,section="top";
+  try{ hidden=sessionStorage.getItem("neuri-hidden")==="1"; }catch(e){}
+  function mood(el,m,face){ if(!el) return; const s=el.querySelector(".neuri"); s.classList.remove("happy","oops","wave"); void s.getBoundingClientRect(); s.classList.add(m); s.dataset.m=face||"smile"; setTimeout(()=>{ s.classList.remove(m); s.dataset.m="smile"; },1300); }
+  function bubble(el,text){ el.innerHTML=`<div class="bub">${text}</div>`; }
+  function say(text,m="happy",face="grin",ms=4200){
+    if(heroVisible&&heroBub){ bubble(heroBub,text); mood(heroPet,m,face); }
+    else if(!hidden&&guide){ bubble(gBub,text); mood(gPet,m,face); clearTimeout(timer); timer=setTimeout(()=>bubble(gBub,tx(section)),ms); }
+  }
+  function track(e){
+    document.querySelectorAll(".neuri").forEach(s=>{ const r=s.getBoundingClientRect(); if(!r.width) return;
+      const dx=e.clientX-(r.left+r.width/2), dy=e.clientY-(r.top+r.height*.45), d=Math.hypot(dx,dy)||1, k=Math.min(3.2,d/60);
+      s.querySelector(".pupils").setAttribute("transform",`translate(${(dx/d*k).toFixed(2)},${(dy/d*k).toFixed(2)})`); });
+  }
+  function setHidden(v){ hidden=v; try{sessionStorage.setItem("neuri-hidden",v?"1":"0");}catch(e){} update(); }
+  function update(){ if(!guide) return; guide.classList.toggle("away",heroVisible||hidden); peek.hidden=!hidden||heroVisible; }
+  function init(){
+    addDoodles();
+    const stage=document.getElementById("stage");
+    heroPet=document.createElement("div"); heroPet.className="hero-pet"; heroPet.innerHTML=svg(); heroPet.title="Neuri";
+    heroBub=document.createElement("div"); heroBub.className="hero-bub"; stage.append(heroPet,heroBub); bubble(heroBub,tx("hello"));
+    heroPet.addEventListener("click",()=>{ bubble(heroBub,tx("facts")); mood(heroPet,"wave","open"); });
+    guide=document.createElement("div"); guide.className="guide away";
+    guide.innerHTML=`<div class="gb"></div><div class="pet" role="button" tabindex="0" aria-label="Neuri">${svg()}</div><button class="x" type="button" aria-label="hide">×</button>`;
+    document.body.appendChild(guide); gBub=guide.querySelector(".gb"); gPet=guide.querySelector(".pet");
+    gPet.addEventListener("click",()=>say(tx("facts"),"wave","open",6000));
+    guide.querySelector(".x").addEventListener("click",()=>{ bubble(gBub,tx("bye")); setTimeout(()=>setHidden(true),1200); });
+    peek=document.createElement("button"); peek.type="button"; peek.className="peek"; peek.textContent="🧠 Neuri"; peek.hidden=true; document.body.appendChild(peek);
+    peek.addEventListener("click",()=>{ setHidden(false); say(tx("back")); });
+    addEventListener("pointermove",track,{passive:true});
+    const io=new IntersectionObserver(es=>es.forEach(e=>{
+      if(e.target.classList.contains("hero")){ heroVisible=e.isIntersecting; update(); if(!heroVisible) bubble(gBub,tx(section)); return; }
+      if(e.isIntersecting){ section=e.target.id; bubble(gBub,tx(section)); mood(gPet,"wave","smile"); }
+    }),{threshold:.35});
+    document.querySelectorAll(".hero,.band").forEach(s=>io.observe(s));
+    update();
+  }
+  return {init,say,cheer,tx,setLang(l){ lang=l; if(heroBub) bubble(heroBub,tx("hello")); if(gBub) bubble(gBub,tx(section==="top"?"top":section)); }};
+})();
 fetch("./story-data.json").then(r=>{ if(!r.ok) throw new Error(r.status); return r.json(); }).then(boot).catch(err=>{ console.error(err); const m=document.getElementById("loadErr"); if(m) m.hidden=false; });
 function boot(DATA){
 
@@ -157,10 +267,10 @@ function oddStep(){
   blob.classList.toggle("t",tg); blob.classList.remove("hit"); blob.classList.add("pop"); setTimeout(()=>blob.classList.remove("pop"),120);
   addTrial(tg); drawERP(); oddUI();
 }
-function oddStop(done){ clearInterval(odd.timer); odd.timer=null; $("oddGo").textContent=t("again"); $("oddMsg").textContent=done?t("oddDone"):t("oddReady"); }
+function oddStop(done){ clearInterval(odd.timer); odd.timer=null; if(done){ Neuri.cheer(); Neuri.say(Neuri.tx("done"),"happy","grin",6000); } $("oddGo").textContent=t("again"); $("oddMsg").textContent=done?t("oddDone"):t("oddReady"); }
 function oddRespond(){
   if(!odd.timer||odd.responded) return; odd.responded=true;
-  if(odd.cur){ odd.hits++; odd.rts.push(performance.now()-odd.shownAt); blob.classList.add("hit"); } else { odd.fa++; }
+  if(odd.cur){ odd.hits++; odd.rts.push(performance.now()-odd.shownAt); blob.classList.add("hit"); if(odd.hits%2) Neuri.say(Neuri.tx("hit"),"happy","grin",2200); } else { odd.fa++; Neuri.say(Neuri.tx("oops"),"oops","wow",2200); }
   oddUI();
 }
 $("oddGo").addEventListener("click",()=>{ if(odd.timer){ oddStop(false); return; }
@@ -186,7 +296,7 @@ function buildTiles(){
     b.addEventListener("pointerup",e=>{ if(e.pointerType!=="mouse") ss.look=-1; });
     b.addEventListener("click",e=>{ if(e.detail===0) type(i); }); });
 }
-function type(i){ const s=$("typed"); s.textContent=(s.textContent+LETTERS[i]).slice(-14); }
+function type(i){ const s=$("typed"); s.textContent=(s.textContent+LETTERS[i]).slice(-14); if(s.textContent.endsWith("BCI")){ Neuri.cheer(); Neuri.say(Neuri.tx("bci"),"happy","grin",6000); } else Neuri.say(Neuri.tx("typed",{c:LETTERS[i]}),"happy","smile",2400); }
 $("ssClear").addEventListener("click",()=>{$("typed").textContent="";});
 function drawSpec(tm){
   if(ss.look>=0) ss.last=ss.look; const f0=FREQ[ss.last], X=f=>36+(f-4)/30*390, Y=v=>166-v*140;
@@ -230,7 +340,7 @@ function miLoop(tm){
     if(!mi.start) mi.start=tm;
     mi.pos=Math.max(-1,Math.min(1,mi.pos+mi.dir*.012+(Math.random()-.5)*.006));
     ball.style.left=`calc(${50+mi.pos*41}% - 20px)`;
-    if(mi.pos*mi.goal>=.98){ const s=((tm-mi.start)/1000).toFixed(1); $("miTime").textContent=t("miWin",{s}); mi.best=mi.best?Math.min(mi.best,+s):+s; $("miBest").textContent=t("miBest",{s:mi.best});
+    if(mi.pos*mi.goal>=.98){ const s=((tm-mi.start)/1000).toFixed(1); $("miTime").textContent=t("miWin",{s}); Neuri.cheer(); Neuri.say(Neuri.tx("goal"),"happy","grin",4000); mi.best=mi.best?Math.min(mi.best,+s):+s; $("miBest").textContent=t("miBest",{s:mi.best});
       mi.goal*=-1; mi.pos=0; mi.start=tm+600; setGoal(); }
     drawTopo();
   }
@@ -274,7 +384,7 @@ function drawNet(){
   const capA=k=>{ const ids=NET[k]; const mid=NET.pos[(k==="regs"?"r:":k==="mks"?"m:":"c:")+ids[Math.floor(ids.length/2)]].a; return P(mid); };
   const caps=[["regs",0],["mks",1],["cons",2]].map(([k,i])=>{ const [x,y]=capA(k); const dx=(x-CX)*.62+CX, dy=(y-CY)*.62+CY; return `<text class="cap" x="${dx}" y="${dy}" text-anchor="middle">${L().caps[i]}</text>`; }).join("");
   $("netsvg").innerHTML=s+caps;
-  $("netsvg").querySelectorAll(".n").forEach(g=>{ const go=()=>{ const [k,id]=g.dataset.k.split(":"); selNode={k,id}; highlight(); renderDetail(); };
+  $("netsvg").querySelectorAll(".n").forEach(g=>{ const go=()=>{ const [k,id]=g.dataset.k.split(":"); selNode={k,id}; highlight(); renderDetail(); const nmx=k==="m"?nm([MK[id].zh,MK[id].en]):nm(k==="r"?DATA.R[id]:DATA.C[id]); Neuri.say(Neuri.tx("pick",{c:short(nmx)}),"wave","smile",3500); };
     g.addEventListener("click",go); g.addEventListener("keydown",e=>{ if(e.key==="Enter"||e.key===" "){e.preventDefault();go();} });
     g.addEventListener("pointerenter",()=>highlight(g.dataset.k)); g.addEventListener("pointerleave",()=>highlight()); });
   highlight();
@@ -377,6 +487,7 @@ function renderFactory(lit){
     <div class="tlnote">${t("tlNote",{t:L().types[typ]})}</div>`;
   $("st2").querySelectorAll("[data-m]").forEach(b=>b.addEventListener("click",()=>selectMarker(b.dataset.m,true)));
   tlRun={seq,i:-1,t0:performance.now()};
+  if(lit) Neuri.say(Neuri.tx("factoryGo",{c:short(nm(DATA.C[curC]))}),"happy","grin",3500);
   if(lit) ["st1","st2","st3","st4"].forEach((id,i)=>{ const el=$(id); el.classList.remove("lit"); void el.offsetWidth; el.style.animationDelay=(i*.22)+"s"; el.classList.add("lit"); });
 }
 function tlLoop(tm){
@@ -394,6 +505,7 @@ $("csel").addEventListener("change",e=>{curC=e.target.value; renderFactory(true)
 
 /* ================= i18n + boot ================= */
 function applyLang(){
+  Neuri.setLang(lang);
   document.documentElement.lang=lang==="zh"?"zh-CN":"en";
   document.querySelectorAll("[data-i]").forEach(el=>{ const v=L()[el.dataset.i]; if(typeof v==="string"){ el.hasAttribute("data-html")?el.innerHTML=v:el.textContent=v; } });
   $("lang").textContent=lang==="zh"?"EN":"中文";
@@ -402,7 +514,10 @@ function applyLang(){
   if(!odd.timer) $("oddMsg").textContent=odd.count>=40?t("oddDone"):t("oddReady");
   renderLobeLegend(); drawERP(); drawTopo(); renderFilters(); drawNet(); renderDetail(); renderDots(); renderFactory(); setGoal();
 }
+(()=>{ let th="dark"; try{ if(localStorage.getItem("atlas-theme")==="light") th="light"; }catch(e){}
+  const set=v=>{ th=v; document.documentElement.dataset.theme=v; $("theme").textContent=v==="dark"?"☀":"☾"; };
+  set(th); $("theme").addEventListener("click",()=>{ set(th==="dark"?"light":"dark"); try{localStorage.setItem("atlas-theme",th);}catch(e){} }); })();
 $("lang").addEventListener("click",()=>{ lang=lang==="zh"?"en":"zh"; try{localStorage.setItem("atlas-lang",lang);}catch(e){} applyLang(); });
-seedOdd(); buildTiles(); applyLang(); drawSpec(0); requestAnimationFrame(ssLoop); requestAnimationFrame(miLoop);
+Neuri.init(); seedOdd(); buildTiles(); applyLang(); drawSpec(0); requestAnimationFrame(ssLoop); requestAnimationFrame(miLoop);
 
 }
