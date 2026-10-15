@@ -8,7 +8,7 @@ This static site reuses the SavorCode visual identity, navy/white palette, respo
 
 - `index.html` (with `story.css`, `story.js`, `story-data.json`): the one-page project site, bilingual (中文 by default; `#en` or the language button switches). It walks visitors through an interactive brain, three mini games (oddball / P3b averaging, SSVEP gaze typing, motor-imagery mu lateralisation), the knowledge network (regions → signals → mental processes with evidence grades and first sources), all 404 concrete paradigms as a dot field, and a Paradigm Factory test run. The EEG traces and spectra in the games are simulated and labelled as such; every count and link comes from `story-data.json`.
 - `classic/`: the earlier project page with the searchable catalog (`catalog.json`), linked from the footer of the new page. `zh.html` redirects to the Chinese view of the new page.
-- Rebuild the data after atlas changes: `python scripts/build_website_story.py` (CI checks that `story-data.json` and `catalog.json` are current).
+- Rebuild the data after atlas changes: `python scripts/build_website_story.py` (CI checks that `story-data.json` and `catalog.json` are current). The script also stamps a content hash on the `story.css`, `story.js` and `story-data.json` references (`?v=…`), so visitors get the new files right after an update; run it after editing any of them.
 
 ## Preview
 

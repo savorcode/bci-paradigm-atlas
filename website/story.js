@@ -110,7 +110,7 @@ const Neuri=(()=>{
   }
   return {init,say,cheer,tx,setLang(l){ lang=l; if(heroBub) bubble(heroBub,tx("hello")); if(gBub) bubble(gBub,tx(section==="top"?"top":section)); }};
 })();
-fetch("./story-data.json").then(r=>{ if(!r.ok) throw new Error(r.status); return r.json(); }).then(boot).catch(err=>{ console.error(err); const m=document.getElementById("loadErr"); if(m) m.hidden=false; });
+fetch("./story-data.json?v=d93b8d59").then(r=>{ if(!r.ok) throw new Error(r.status); return r.json(); }).then(boot).catch(err=>{ console.error(err); const m=document.getElementById("loadErr"); if(m) m.hidden=false; });
 function boot(DATA){
 
 const T = {
