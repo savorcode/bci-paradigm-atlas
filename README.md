@@ -1,6 +1,6 @@
 # BCI Paradigm Atlas
 
-[Project website](https://atlas.mentiscale.com/) · [Website source](website/)
+**[Project website: atlas.mentiscale.com](https://atlas.mentiscale.com/)**: play three BCI mini games, explore the knowledge network and every paradigm in the atlas, and try a Paradigm Factory test run. · [Website source](website/)
 
 **English** | [简体中文](README.zh-CN.md)
 
@@ -78,6 +78,8 @@ python scripts/build_graph.py     # exports dist/graph.json and prints coverage 
 ## Status
 
 Release v0.1.0 (8 Oct 2026) contains 267 paradigm classes, 405 concrete paradigms (404 active, each with a protocol) and 129 neural markers across all 12 paradigm families. The first sources of all 682 entries have been checked bibliographically against Crossref/OpenAlex; checking them against the full text is the next step, so every entry is still marked `draft`. Identifier meanings are frozen from this release. Schema 0.2 (two-level paradigm identifiers: class and concrete protocol) and the vocabularies are drafts and may change before v1.0. Release notes (Chinese): [curation/reports/release_v0.1.0.md](curation/reports/release_v0.1.0.md).
+
+Since v0.1.0 the main branch has added the neural knowledge layer: 92 cognitive constructs (aligned with the Paradigm Factory and, where possible, Cognitive Atlas), 46 brain regions with Brodmann / AAL3 / HCP-MMP1.0 correspondences, and generators and indexes for 81 of the 129 markers, giving 345 links, each with an evidence grade (A 88, B 155, C 102) and at least one bibliographically checked source. The literature table now holds 1,655 leads. Reports (Chinese): [knowledge layer, sprint 4](curation/reports/knowledge_layer_sprint4.md), [sprint 5](curation/reports/knowledge_layer_sprint5.md).
 
 
 ## Relation to the Paradigm Factory

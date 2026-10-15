@@ -1,6 +1,6 @@
 # 脑机接口范式图谱 BCI Paradigm Atlas
 
-[项目展示页](https://atlas.mentiscale.com/) · [Website source](website/)
+**[项目网站：atlas.mentiscale.com](https://atlas.mentiscale.com/)**：玩三个脑机小游戏，浏览知识网络和图谱里的全部范式，试运行范式工厂。· [网站源码](website/)
 
 [English](README.md) | **简体中文**
 
@@ -78,6 +78,8 @@ python scripts/build_graph.py     # 导出 dist/graph.json 并输出覆盖统计
 ## 当前状态
 
 v0.1.0（2026 年 10 月 8 日）收录 12 个范式族的 267 个范式类、405 个具体范式（404 个有效，均有协议）与 129 个神经标记物。全部 682 条源头已与 Crossref / OpenAlex 完成书目核实，对照原文的内容核实是下一步，因此所有条目仍为 `draft`。自本版起标识符含义冻结。schema 0.2（范式采用范式类与具体范式两级标识符）与词表均为草案，v1.0 之前可能调整。发布说明见 [curation/reports/release_v0.1.0.md](curation/reports/release_v0.1.0.md)。
+
+v0.1.0 之后，主分支补充了神经知识层：92 个认知构念（与范式工厂一致，并尽量对齐 Cognitive Atlas）、46 个脑区（附 Brodmann / AAL3 / HCP-MMP1.0 对应），以及 129 个标记物中 81 个的来源脑区与反映构念，共 345 条关联，每条都有证据等级（A 88、B 155、C 102）和至少一条经书目核实的出处。文献线索增至 1,655 条。报告见[知识层第四冲刺](curation/reports/knowledge_layer_sprint4.md)、[第五冲刺](curation/reports/knowledge_layer_sprint5.md)。
 
 ## 与范式工厂的关系
 
