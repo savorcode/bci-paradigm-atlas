@@ -797,3 +797,27 @@
 - **内容**：第二批标记物提出 6 条申请（暂挂最近的已有 ID，见 `curation/work/sprint5/markers_*/vocab_requests.csv`）：脑区 `BR.inferior_colliculus`（下丘，FFR 的脑干来源；暂只登记皮层与丘脑来源）、`BR.insula`（岛叶整体，暂挂 BR.posterior_insula）、`BR.MCC`（中扣带皮层，暂挂 BR.dACC）、`BR.pMFC`（后内侧额叶，暂挂 BR.preSMA）；构念 `CN.statistical_learning`（统计学习，暂挂 CN.perceptual_learning）、`CN.music_syntax`（音乐句法，暂挂 CN.syntactic_processing）。
 - **提议**：`BR.inferior_colliculus`、`CN.statistical_learning`、`CN.music_syntax` 新增；`BR.MCC` 与 `BR.pMFC` 与现有 dACC / preSMA 边界重叠，先在 notes 中说明对应关系，暂不新增；`BR.insula` 作为前、后岛叶的上位节点新增。
 - **执行**：新增 `BR.inferior_colliculus`、`BR.insula`（前、后岛叶改挂其下）、`CN.statistical_learning`、`CN.music_syntax`（对上 Cognitive Atlas）；`BR.dACC`、`BR.preSMA` 的 notes 写明中扣带 / 后内侧额叶报告的归属。MK.FFR 增加下丘生成源，MK.linguistic_structure_tracking、MK.ERAN、MK.HEP 改挂新 ID（见 `curation/work/sprint6/vocab/remap.csv`）。
+
+## 二十三、范式扩充与第三批标记物（第六冲刺）
+
+### D-078 第六冲刺新增 17 个范式类（已确认（专家裁定，负责人授权，2026-10-16））
+> 状态：已确认（专家裁定，负责人授权，2026-10-16）
+- **内容**：按覆盖缺口新增 17 个范式类、23 个具体范式：感知 PER-TIME（时间顺序 / 同时性判断）、PER-CROWD（视觉拥挤）、PER-AUDLOC（声源定位）；记忆 MEM-PR（部分报告）、MEM-AI（联想推理）、MEM-CSPAN（复杂广度：阅读广度、运算广度）；认知控制 CTL-TMT（连线测验）、CTL-NUM（数量比较与 SNARC）；情绪 EMO-STARTLE（情绪调制惊跳反射）、EMO-AAT（趋近–回避）；社会 SOC-DIAL（对话轮替）、SOC-PGG（公共物品博弈）；语言 LAN-RA（朗读与词命名）；脑状态 STA-FAT（心理疲劳）、STA-SD（睡眠剥夺）；刺激 STM-RTMS（重复 TMS / theta 爆发）、STM-TRNS（经颅随机噪声刺激）。范式类登记表 267 → 284，具体范式 405 → 428（有效 404 → 427）。
+- **未新建**（依既有决策）：
+  - STM-ICMS（皮层内微刺激人工触觉）、STM-ESM（皮层电刺激功能定位）分别受 D-009、D-010 约束：读出为知觉报告或行为，不满足纳入标准 3；STM-PHOS（视觉皮层刺激光幻视）同理。三者的草稿保留在 `curation/work/sprint6/paradigms_P1/held/`，待 schema 引入"写入 / 刺激型范式"时一并讨论（见 D-079）。
+  - 混合 BCI 按 D-022 记为组成范式的 `Hybrid:` 变体，不新建类；脑–脊髓接口、BCI 驱动功能性电刺激提议为 MOT-ATT / MOT-MI 的新具体范式（`proposals.csv`）。
+  - 手语理解与 LAN-SC-002 重复，未新建。
+- **理由**：补齐经典认知范式与可读出神经信号的刺激范式；写入型范式待统一规则后再收录，避免与已确认决策冲突。
+
+### D-079 第六冲刺的词表、标记物申请与具体范式提议（草案，待负责人确认）
+> 状态：草案，待负责人确认
+- **词表申请 12 条**（暂挂最近 ID，见 `curation/work/sprint6/markers_*/vocab_requests.csv`）：脑区 BR.retrosplenial、BR.piriform_cortex、BR.PIVC、BR.auditory_brainstem、BR.MCC、BR.frontal_operculum；构念 CN.scene_perception、CN.interference_resolution、CN.olfactory_imagery、CN.vestibular_perception、CN.effective_connectivity、CN.basal_ganglia_stimulation_response。
+- **标记物申请 6 条**（`paradigms_P*/marker_requests.csv`）：MK.startle_blink（需新增外周反射类标记物类型）、MK.prestimulus_alpha_phase、MK.auditory_spatial_ERP、MK.P2p_numerical_distance、MK.cortical_stimulation_evoked_response、MK.afterdischarge。
+- **具体范式提议**（`paradigms_P*/proposals.csv`）：MOT-ATT-004 脑–脊髓接口行走、MOT-MI-012 足部想象脑开关驱动 FES、卒中 BCI-FES 康复、两个 `Hybrid:` 变体、MEM-CSPAN-003、PER-CROWD-002、CTL-NUM-003；PER-ODD-008 的源头可前移到 2010 年的 AMUSE 论文。
+- **提议**：
+  - 新增 BR.retrosplenial、BR.piriform_cortex、BR.PIVC、BR.auditory_brainstem、CN.scene_perception、CN.olfactory_imagery、CN.vestibular_perception。
+  - BR.MCC 维持 D-077 的处理（并入 BR.dACC 备注）。
+  - 其余构念申请与现有构念重叠较多，先不新增。
+  - 标记物申请与具体范式提议在下一轮逐条处理。
+  - 写入型范式（ICMS、光幻视、电刺激定位）在 schema 0.3 中讨论。
+
