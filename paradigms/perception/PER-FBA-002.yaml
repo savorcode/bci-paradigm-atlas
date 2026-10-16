@@ -1,0 +1,68 @@
+schema_version: "0.2"
+id: PER-FBA-002
+class: PER-FBA
+name:
+  en: Online BCI with non-spatial attention to one of two superimposed rotating dot surfaces
+  zh: 基于对两个叠加旋转点面之一的非空间注意的在线 BCI
+aliases:
+- non-spatial visual attention BCI
+- independent BCI with superimposed surfaces
+- feature-based attention BCI
+family: perception
+bci_category:
+- reactive
+recording_modality:
+- EEG
+stimulus_modality:
+- visual
+markers:
+- MK.SSVEP
+description:
+  en: >-
+    Two sets of dots in different colours form two superimposed transparent surfaces that rotate in opposite directions
+    and flicker at different frequencies. Without moving the eyes the user attends to one surface; the SSVEP gain at the
+    attended surface's frequency is classified online, giving a two-class gaze-independent BCI. Users trained over
+    several days.
+  zh: 两组不同颜色的点构成两个相互叠加、反向旋转的透明点面，并以不同频率闪烁。用户不移动眼睛，注意其中一个点面；在线分类被注意点面频率上的 SSVEP 增益，构成不依赖注视的二分类 BCI。用户经多日训练。
+trial_structure:
+  phases:
+  - name: cue
+    note: durations not read in the source
+  - name: attention period
+    note: both surfaces rotate and flicker concurrently
+  - name: result
+    note: online classification result; display modality not stated in the abstract
+  typical_trials: online training over 3 days
+  conditions:
+  - attend surface 1
+  - attend surface 2
+protocol:
+  n_classes: 2
+  classes:
+  - attend surface 1 (colour 1, one rotation direction)
+  - attend surface 2 (colour 2, opposite rotation direction)
+  cue: instruction which surface to attend
+  stimulus_coding: frequency tagging of two superimposed surfaces that differ in colour and rotation direction
+  paradigm_timing: synchronous
+  feedback: discrete
+  distinguishing: >-
+    准则 4：由离线无反馈（PER-FBA-001）变为在线分类、逐试次给出结果的 BCI；另含准则 2：两个点面同时以颜色与旋转方向区分（Zhang et al. 2010）。
+first_source:
+  citation: >-
+    Zhang D, Maye A, Gao X, Hong B, Engel AK, Gao S. An independent brain–computer interface using covert non-spatial visual
+    selective attention. Journal of Neural Engineering. 2010;7(1):016010.
+  doi: 10.1088/1741-2560/7/1/016010
+  year: 2010
+  verified: false
+interop:
+  bids_task: featureattention
+notes: >-
+  [curator_a sprint 7, 2026-10-17] Configuration from the abstract (Hamburg-Eppendorf research portal): two superimposed
+  illusory surfaces of differently coloured dots rotating in opposite directions and flickering at different frequencies;
+  online system with a 3-day training programme; 18 participants at two sites; mean online accuracy on the last day
+  72.6 ± 16.1%, with training gains in 8 of 18. Feedback is recorded as discrete because the system classified online;
+  the feedback display is not described in the abstract and should be checked in the full text. bibliography confirmed
+  (Crossref, 2026-10-17).
+status: draft
+contributors:
+- curator_a

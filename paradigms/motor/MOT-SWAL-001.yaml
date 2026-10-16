@@ -1,0 +1,83 @@
+schema_version: '0.2'
+id: MOT-SWAL-001
+class: MOT-SWAL
+name:
+  en: Cued volitional water swallowing
+  zh: 提示性自主吞水
+aliases:
+- volitional swallowing
+- swallowing task
+- deglutition task
+- swallow paradigm
+family: motor
+bci_category:
+- none
+recording_modality:
+- PET
+- fMRI
+- EEG
+stimulus_modality:
+- motor_execution
+- visual
+- somatosensory
+markers:
+- MK.BOLD_motor_network
+- MK.BOLD_anterior_insula
+- MK.SMR_ERD
+description:
+  en: Small water boluses are delivered into the mouth and participants swallow them on a visual cue at a fixed rate, alternating
+    with rest scans; swallowing is confirmed with submental EMG. Activity during swallowing is compared with rest and shows
+    bilateral, often asymmetric, caudolateral sensorimotor cortex together with insula, premotor and cerebellar activation.
+  zh: 向口腔内注入少量水，被试按视觉提示以固定频率吞咽，与静息扫描交替进行；以颏下肌电确认吞咽。将吞咽期与静息期活动比较，可见双侧（常不对称）中央沟下外侧感觉运动皮层以及岛叶、运动前区和小脑激活。
+trial_structure:
+  phases:
+  - name: rest scan
+  - name: swallow scan
+    note: visually cued swallows of 5 ml water at 0.1, 0.2 or 0.3 Hz
+  typical_trials: 12 scans per participant (rest and three swallow rates, randomised)
+  conditions:
+  - rest
+  - swallowing at 0.1 Hz
+  - swallowing at 0.2 Hz
+  - swallowing at 0.3 Hz
+protocol:
+  n_classes: 2
+  classes:
+  - volitional swallowing
+  - rest
+  cue: visual cue to swallow; bolus delivered by continuous infusion
+  stimulus_coding: swallow-rate blocks versus rest
+  paradigm_timing: block
+  feedback: none
+  distinguishing: 标准配置（最早发表，即 first_source）：视觉提示下以固定频率实际吞咽 5 ml 水，与静息扫描对比（Hamdy et al. 1999，H2 15O PET）。同类 MOT-SWAL-002 为吞咽运动想象，类别集与任务改变（准则 1、2）。
+first_source:
+  citation: Hamdy S, Rothwell JC, Brooks DJ, Bailey D, Aziz Q, Thompson DG. Identification of the cerebral loci processing
+    human swallowing with H2 15O PET activation. Journal of Neurophysiology. 1999;81(4):1917-1926.
+  doi: 10.1152/jn.1999.81.4.1917
+  year: 1999
+  verified: false
+variants:
+- name: EEG recording of self-paced volitional swallows (ERD and corticomuscular coherence)
+  source:
+    citation: Koganemaru S, Mizuno F, Takahashi T, Takemura Y, Irisawa H, Matsuhashi M, Mima T, Mizushima T, Kansaku K. Event-related
+      desynchronization and corticomuscular coherence observed during volitional swallow by electroencephalography recordings
+      in humans. Frontiers in Human Neuroscience. 2021;15:643454.
+    doi: 10.3389/fnhum.2021.643454
+    year: 2021
+    verified: false
+  note: Same executed-swallow task recorded with EEG; title reports ERD and corticomuscular coherence during volitional swallow.
+    Full text not read; trial structure (cued or self-paced) to be checked, it may justify a separate number (criterion 3).
+interop:
+  bids_task: swallow
+notes: '[curator_b sprint 7, 2026-10-17] New class from the sprint 7 gap list (rank 8; Cognitive Atlas "swallowing"). first_source:
+  Hamdy et al. 1999, details from the Crossref record abstract: 8 healthy right-handed men, randomised 12-scan design of
+  rest and water swallows at 0.1-0.3 Hz, visually cued, submental EMG, 5 ml boluses; increased rCBF in bilateral caudolateral
+  sensorimotor cortex (asymmetric in 6 of 8), right anterior insula, left mesial premotor cortex, cerebellum and brainstem;
+  TMS mapping of pharyngeal motor cortex in 5 participants matched the asymmetry. An abstract of the same study appeared
+  in Gastroenterology 1998 (doi 10.1016/s0016-5085(98)83110-7) and is not used as the origin. Earlier PET work by other
+  groups (for example Zald & Pardo 1999) was not compared; priority within 1999 is open. Markers: MK.BOLD_motor_network
+  (PET rCBF mapped to the haemodynamic motor-network marker), MK.BOLD_anterior_insula, MK.SMR_ERD (Koganemaru et al. 2021,
+  title). stimulus_modality somatosensory stands for the oral water bolus. bibliography confirmed (Crossref, 2026-10-17)'
+status: draft
+contributors:
+- curator_b

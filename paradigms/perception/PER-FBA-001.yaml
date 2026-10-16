@@ -1,0 +1,73 @@
+schema_version: "0.2"
+id: PER-FBA-001
+class: PER-FBA
+name:
+  en: Feature-selective attention to one of two overlapping frequency-tagged dot fields
+  zh: 对两个重叠频率标记点阵之一的特征选择性注意
+aliases:
+- feature-based attention
+- feature-selective attention
+- colour-selective attention
+- overlapping dot fields SSVEP
+family: perception
+bci_category:
+- none
+recording_modality:
+- EEG
+stimulus_modality:
+- visual
+markers:
+- MK.SSVEP
+description:
+  en: >-
+    Two populations of dots in different colours (red and blue) are spatially intermingled in the same region and move to
+    random new positions, and each population flickers at its own frequency. While fixating, the participant attends to
+    the dots of one colour, for example to detect brief target events in that population. Attention to a colour increases
+    the SSVEP at the frequency of that population, so attention is selected by a feature rather than by a location.
+  zh: >-
+    两种颜色（红、蓝）的点在同一区域内相互交织，并不断随机移到新位置，每组点以各自的频率闪烁。被试注视中央，注意其中一种颜色的点（例如检测该组点中的短暂目标事件）。注意某种颜色使该组点频率上的
+    SSVEP 增大，即注意是按特征而不是按位置选择的。
+trial_structure:
+  phases:
+  - name: cue
+    note: instruction which colour to attend; durations not read in the source
+  - name: flicker and attention period
+    note: both dot populations flicker concurrently at different frequencies; frequency values not read in the source
+  conditions:
+  - attend red dots
+  - attend blue dots
+protocol:
+  n_classes: 2
+  classes:
+  - attend colour 1 (red dots)
+  - attend colour 2 (blue dots)
+  cue: instruction naming the colour to attend
+  stimulus_coding: frequency tagging of two spatially overlapping feature-defined populations
+  paradigm_timing: synchronous
+  feedback: none
+  distinguishing: >-
+    标准配置（最早发表，即 first_source）：两组空间交织的红/蓝点各以不同频率闪烁，被试注意一种颜色，比较两组频率上的 SSVEP（Müller et al. 2006），离线、无反馈。同类其他具体范式：PER-FBA-002
+    （在线 BCI，反向旋转的两组彩色点面，准则 4，另含准则 2）。
+first_source:
+  citation: >-
+    Müller MM, Andersen S, Trujillo NJ, Valdés-Sosa P, Malinowski P, Hillyard SA. Feature-selective attention enhances color
+    signals in early visual areas of the human brain. Proceedings of the National Academy of Sciences. 2006;103(38):14250-14254.
+  doi: 10.1073/pnas.0606668103
+  year: 2006
+  verified: false
+interop:
+  bids_task: featureattention
+notes: >-
+  [curator_a sprint 7, 2026-10-17] New class from the sprint 7 gap list (Cognitive Atlas trm_55295382db2c5). Closest
+  existing classes PER-CVA and PER-CUE are spatial (attention to a location); PER-VS is search. Stimulus and result taken
+  from the abstract (Aberdeen research portal): intermingled red and blue dots moving to random positions, each colour
+  flickering at its own frequency; source modelling places the gain in early visual cortex; a control experiment showed
+  selection by colour rather than by flicker frequency. Exact frequencies, trial durations and the detection task were not
+  read. Earlier human work on feature-based attention with a different configuration: Saenz, Buracas & Boynton 2002
+  (fMRI; two overlapping dot fields moving in opposite directions, global effect in the other hemifield; doi:10.1038/nn876).
+  Animal origin (feature-based attention in macaque MT) not retrieved. The class origin should be reviewed: Saenz et al.
+  2002 is earlier than the first_source. ERP selection negativity to attended features is not indexed in the registry.
+  bibliography confirmed (Crossref, 2026-10-17).
+status: draft
+contributors:
+- curator_a

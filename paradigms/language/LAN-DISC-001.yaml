@@ -1,0 +1,75 @@
+schema_version: '0.2'
+id: LAN-DISC-001
+class: LAN-DISC
+name:
+  en: Discourse-dependent semantic anomaly in short stories
+  zh: 短篇语篇中的语篇依赖性语义异常
+aliases:
+- discourse coherence
+- discourse congruence N400
+- discourse-level semantic integration
+- story context anomaly
+family: language
+bci_category:
+- none
+recording_modality:
+- EEG
+stimulus_modality:
+- visual
+markers:
+- MK.N400
+description:
+  en: Participants read short multi-sentence stories presented word by word. In the final sentence a critical word is either
+    coherent with the story or anomalous given the story while still acceptable within its own sentence. Discourse-anomalous
+    words elicit a large N400 effect starting about 200-250 ms after word onset, with the same time course and scalp distribution
+    as sentence-level anomalies; the same sentences without the story context give a much smaller effect.
+  zh: 被试逐词阅读由几句话组成的短篇故事。最后一句中的关键词或与故事一致，或在故事背景下异常、但在本句之内仍可接受。语篇异常词在词出现后约 200–250 ms 起诱发较大的 N400 效应，其时程与头皮分布与句内异常相同；去掉故事背景后，同样的句子效应明显减小。
+trial_structure:
+  phases:
+  - name: context sentences
+    note: story context presented word by word
+  - name: target sentence
+    note: word-by-word presentation; critical word coherent or anomalous with the discourse
+  - name: inter-trial interval
+  conditions:
+  - discourse-coherent word
+  - discourse-anomalous word
+protocol:
+  n_classes: 2
+  classes:
+  - discourse-coherent critical word
+  - discourse-anomalous critical word (locally acceptable)
+  cue: written short stories, word-by-word presentation
+  stimulus_coding: critical-word manipulation dependent on the preceding discourse
+  paradigm_timing: synchronous
+  feedback: none
+  distinguishing: '标准配置（最早发表，即 first_source）：书面短篇故事逐词呈现，关键词与语篇一致或在语篇层面异常（句内可接受），无反馈（van Berkum et al. 1999，实验 1）。'
+first_source:
+  citation: 'van Berkum JJA, Hagoort P, Brown CM. Semantic integration in sentences and discourse: evidence from the N400.
+    J Cogn Neurosci. 1999;11(6):657-671.'
+  doi: 10.1162/089892999563724
+  year: 1999
+  verified: false
+variants:
+- name: Discourse coherence effects on beta oscillations
+  source:
+    citation: Lewis AG, Schoffelen J-M, Hoffmann C, Bastiaansen MCM, Schriefers HJ. Discourse-level semantic coherence influences
+      beta oscillatory dynamics and the N400 during sentence comprehension. Lang Cogn Neurosci. 2016;32(5):601-617.
+    doi: 10.1080/23273798.2016.1211300
+    year: 2016
+    verified: false
+  note: Same coherent versus incoherent discourse contrast analysed for beta-band power as well as the N400; parameter-level
+    variation of the analysis, not of the task configuration.
+interop:
+  bids_task: discourse
+notes: 'van Berkum et al. 1999 (Crossref record with abstract) is the standard reference and the earliest ERP study of discourse-dependent
+  anomalies with locally acceptable words found in this round; an earlier ERP study of global (title-dependent) coherence
+  of ambiguous paragraphs (St George, Mannes & Hoffman, J Cogn Neurosci 1994) was not retrieved and should be checked as
+  a possible earlier sibling configuration (D-062). Word durations and SOA were not read in the full text, so phase durations
+  are left empty. Lewis et al. (OpenAlex search record: 2016, volume 32 issue 5; the per-DOI Crossref
+  request was rate-limited) supports the oscillatory readout.
+  Differs from LAN-N400 and LAN-SC, which manipulate words within single sentences. An auditory (spoken story) version would
+  be a separate concrete paradigm under D-060. [curator_d sprint 7, 2026-10-17] bibliography confirmed (Crossref, 2026-10-17).'
+status: draft
+contributors:
+- curator_d

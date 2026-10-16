@@ -1,0 +1,80 @@
+schema_version: "0.2"
+id: PER-TONIC-001
+class: PER-TONIC
+name:
+  en: Cold pressor test (tonic cold pain)
+  zh: 冷加压试验（持续性冷痛）
+aliases:
+- cold pressor test
+- CPT
+- ice-water immersion
+- tonic cold pain
+family: perception
+bci_category:
+- passive
+- none
+recording_modality:
+- EEG
+- fMRI
+stimulus_modality:
+- somatosensory
+markers:
+- MK.gamma_power
+- MK.BOLD_anterior_insula
+description:
+  en: >-
+    The participant immerses one hand up to the wrist in ice-cold water for a fixed period (typically one to a few minutes)
+    or until the pain becomes intolerable, preceded by a baseline period and often compared with a warm-water control.
+    The ongoing pain lasts for minutes rather than milliseconds, so brain activity is analysed as a sustained state
+    (band power, connectivity or BOLD over the whole period) instead of as stimulus-locked evoked responses.
+  zh: >-
+    被试将一只手浸入冰水至腕部，持续固定时长（通常 1 至数分钟）或直至无法忍受，之前有基线期，常以温水浸泡为对照。疼痛持续数分钟而非毫秒级，因此脑活动作为持续状态分析（整段的频段功率、连接或
+    BOLD），而不是刺激锁时的诱发响应。
+trial_structure:
+  phases:
+  - name: baseline
+    duration_ms: 60000-180000
+    note: typical range in later EEG and fMRI protocols
+  - name: ice-water immersion
+    duration_ms: 60000
+    note: one minute in the first source (blood-pressure readout); later protocols use 1-3 min or immersion until tolerance
+  - name: recovery
+    duration_ms: 60000-300000
+  typical_trials: 1-3 immersions per session
+  conditions:
+  - cold-water immersion
+  - baseline or warm-water control
+protocol:
+  n_classes: 2
+  classes:
+  - tonic cold pain (ice water)
+  - baseline / warm-water control
+  cue: experimenter instruction to immerse the hand
+  stimulus_coding: sustained thermal (cold) stimulation by immersion
+  paradigm_timing: block
+  feedback: none
+  distinguishing: >-
+    标准配置（最早发表，即 first_source）：手浸入冰水约 1 min 的冷加压试验，以基线或温水为对照（Hines & Brown 1936）。同类其他具体范式：PER-TONIC-002（持续热痛并连续评分，准则 2）。
+first_source:
+  citation: >-
+    Hines EA, Brown GE. The cold pressor test for measuring the reactibility of the blood pressure: data concerning 571
+    normal and hypertensive subjects. American Heart Journal. 1936;11(1):1-9.
+  doi: 10.1016/S0002-8703(36)90370-8
+  year: 1936
+  verified: false
+interop:
+  bids_task: coldpressor
+notes: >-
+  [curator_a sprint 7, 2026-10-17] New class from the sprint 7 gap list (Cognitive Atlas trm_4e6112759926e). Closest
+  existing classes PER-LEP (phasic laser heat pulses, evoked potentials) and SSR-NSSEP (periodic nociceptive stimulation);
+  EMO-STRESS (TSST, MIST) is psychosocial stress without a pain stimulus. Origin (D-031): the cold pressor test was
+  introduced as a cardiovascular test (Hines & Brown, Mayo Clinic; a 1932 report without DOI precedes the 1936 paper,
+  not retrieved). The immersion time in the phase list is the classic one minute and should be checked in the full text.
+  First neural recording not established; an EEG lead (Chen, Dworkin et al. 1989, Pain, topographic brain measures of
+  pain) could not be retrieved from Crossref in this sprint and is not cited. MK.gamma_power (prefrontal gamma, see
+  PER-TONIC-002) and MK.BOLD_anterior_insula are the closest registry markers; alpha suppression during tonic pain is
+  not separately indexed. Capsaicin-induced tonic pain (chemical stimulation) would be a further configuration (criterion
+  2); no source was searched in this sprint (proposals.csv). bibliography confirmed (OpenAlex, 2026-10-17).
+status: draft
+contributors:
+- curator_a

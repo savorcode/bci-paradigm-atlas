@@ -1,0 +1,73 @@
+schema_version: '0.2'
+id: EMO-CREAC-002
+class: EMO-CREAC
+name:
+  en: Craving neurofeedback during drug cue exposure
+  zh: 成瘾物质线索暴露中的渴求神经反馈
+aliases:
+- craving neurofeedback
+- real-time fMRI neurofeedback of cue craving
+- rtfMRI craving regulation
+family: emotion
+bci_category:
+- active
+- passive
+recording_modality:
+- fMRI
+stimulus_modality:
+- visual
+markers:
+- MK.BOLD_dACC
+description:
+  en: Smokers view blocks of smoking-related and neutral pictures in the scanner. A craving-related region of interest in
+    the anterior cingulate and medial prefrontal cortex is defined from an initial cue run; in later runs the participant
+    tries to reduce craving and, after each block, sees a thermometer showing the current activity of that region (smoking
+    minus rest). Feedback-guided reduction of the cue response is accompanied by lower reported craving.
+  zh: 吸烟者在扫描仪中观看吸烟相关图片与中性图片组块。先由一个线索序列确定前扣带回与内侧前额叶的渴求相关感兴趣区；在之后的序列中，被试尝试降低渴求，每个组块之后看到显示该区域当前活动（吸烟线索减静息）的温度计。在反馈引导下线索反应降低，自评渴求也随之下降。
+trial_structure:
+  phases:
+  - name: rest baseline
+    duration_ms: 132000
+  - name: cue block
+    duration_ms: 22000
+    note: five smoking or neutral pictures, 4400 ms each
+  - name: craving rating
+    duration_ms: 4000
+  - name: feedback thermometer
+    duration_ms: 4000
+    note: intermittent feedback, ROI signal averaged over 6 volumes (TR 2.2 s)
+  - name: rest block
+    duration_ms: 22000
+  typical_trials: four 10-min runs per visit (one localiser run without feedback, three feedback runs)
+  conditions:
+  - smoking cue
+  - neutral cue
+  - rest
+protocol:
+  n_classes: 2
+  classes:
+  - smoking cue (reduce craving)
+  - neutral cue
+  cue: smoking-related versus neutral pictures
+  stimulus_coding: picture blocks; feedback value = percent signal change smoke minus rest in an individual ACC/mPFC ROI
+  paradigm_timing: block
+  feedback: discrete
+  distinguishing: '与 EMO-CREAC-001（标准配置：开环线索暴露）相比，每个线索组块后给出个体渴求相关脑区（前扣带回/内侧前额叶）活动的温度计反馈，被试据此主动降低渴求（准则 4：无反馈 → 离散反馈）。'
+first_source:
+  citation: 'Li X, Hartwell KJ, Borckardt J, Prisciandaro JJ, Saladin ME, Morgan PS, Johnson KA, LeMatty T, Brady KT, George
+    MS. Volitional reduction of anterior cingulate cortex activity produces decreased cue craving in smoking cessation: a
+    preliminary real-time fMRI study. Addict Biol. 2013;18(4):739-748.'
+  doi: 10.1111/j.1369-1600.2012.00449.x
+  year: 2013
+  verified: false
+interop:
+  bids_task: cuereactivitynf
+notes: 'earliest seen; origin not established. Li et al. (Crossref record: online 2012, print 2013) is the earliest craving
+  neurofeedback study found in this round; trial timing taken from the methods of that paper (author copy). The same group
+  extended the design to an individualised ROI and a randomised no-feedback control (Hartwell et al., J Psychiatry Neurosci
+  41(1):48, accepted 2015; journal page read, Crossref record not retrieved, so not cited as a source). bci_category lists
+  active (volitional regulation of the fed-back signal) and passive (craving state readout). MK.BOLD_dACC is the closest
+  registry marker for the ACC/mPFC craving ROI. [curator_e sprint 7, 2026-10-17] bibliography confirmed (Crossref, 2026-10-17).'
+status: draft
+contributors:
+- curator_e

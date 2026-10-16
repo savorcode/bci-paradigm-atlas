@@ -1,0 +1,62 @@
+schema_version: '0.2'
+id: EMO-FRUST-001
+class: EMO-FRUST
+name:
+  en: Frustration by omission of expected reward
+  zh: 预期奖励缺失诱发挫折
+aliases:
+- frustration induction
+- reward omission frustration
+- frustrative nonreward
+family: emotion
+bci_category:
+- passive
+recording_modality:
+- fMRI
+stimulus_modality:
+- visual
+markers:
+- MK.BOLD_anterior_insula
+description:
+  en: In a monetary incentive task, participants are led to expect a reward for a correct response, and on some trials the
+    expected reward is withheld. Trials in which the anticipated reward is omitted (frustration) are compared with trials
+    in which it is delivered. Reward omission increases activity in the right anterior insula and right ventral prefrontal
+    cortex.
+  zh: 在金钱奖励任务中，被试预期正确反应会获得奖励，但部分试次中预期的奖励被扣下。比较预期奖励缺失（挫折）与奖励兑现的试次。奖励缺失使右侧前脑岛和右侧腹侧前额叶活动增强。
+trial_structure:
+  phases:
+  - name: reward cue
+    note: signals that a correct response will be rewarded
+  - name: response
+  - name: outcome
+    note: reward delivered or omitted
+  conditions:
+  - expected reward delivered
+  - expected reward omitted
+protocol:
+  n_classes: 2
+  classes:
+  - reward omitted (frustration)
+  - reward received
+  cue: visual reward cue and outcome display
+  stimulus_coding: event-related outcome contrast within a monetary incentive task
+  paradigm_timing: synchronous
+  feedback: discrete
+  distinguishing: '标准配置（最早发表，即 first_source）：金钱奖励任务中预期奖励被扣下（挫折）与奖励兑现的对比，事件相关、逐试次结果反馈（Abler et al. 2005）。同类其他具体范式：EMO-FRUST-002
+    以游戏中随机忽略玩家输入诱发挫折，组块设计、连续游戏画面（准则 2、3）。'
+first_source:
+  citation: Abler B, Walter H, Erk S. Neural correlates of frustration. NeuroReport. 2005;16(7):669-672.
+  doi: 10.1097/00001756-200505120-00003
+  year: 2005
+  verified: false
+interop:
+  bids_task: frustration
+notes: 'earliest seen; origin not established. Abler et al. 2005 (OpenAlex record; Crossref request was rate-limited) is
+  the earliest neuroimaging frustration study found; the abstract (PubMed) describes the omission-versus-receipt contrast
+  and the right anterior insula / right ventral prefrontal result but not the trial timing, so phase durations are left
+  empty. Behavioural frustration manipulations (blocked goals, rigged failure) are much older and their first description
+  was not searched (D-031). Distinct from EMO-STRESS (social-evaluative stress) and from the reward-anticipation contrast
+  of EMO-MID. [curator_e sprint 7, 2026-10-17] bibliography confirmed (OpenAlex, 2026-10-17).'
+status: draft
+contributors:
+- curator_e

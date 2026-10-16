@@ -1,0 +1,72 @@
+schema_version: "0.2"
+id: PER-SMMN-001
+class: PER-SMMN
+name:
+  en: Somatosensory (vibrotactile) oddball for the mismatch negativity
+  zh: 体感（振动触觉）oddball 失匹配负波
+aliases:
+- somatosensory mismatch negativity
+- sMMN
+- tactile MMN
+- vibrotactile oddball (passive)
+family: perception
+bci_category:
+- none
+recording_modality:
+- EEG
+- MEG
+stimulus_modality:
+- somatosensory
+markers:
+- MK.MMN
+description:
+  en: >-
+    A stream of frequent standard vibrotactile stimuli is delivered to a finger, and infrequent deviants differ in
+    vibration frequency or in the stimulated site, while the participant attends elsewhere (for example reads or ignores
+    the stimuli). Deviants elicit a mismatch response over somatosensory and fronto-central areas at about 100-250 ms,
+    the tactile counterpart of the auditory MMN; its dependence on the stimulation rate is examined as well.
+  zh: 向手指施加高频出现的标准振动触觉刺激，低频偏差刺激在振动频率或刺激部位上不同，被试注意其他事物（如阅读或忽略刺激）。偏差刺激在体感区与额中央区约 100–250 ms 诱发失匹配响应，是听觉 MMN 的触觉对应物；同时考察其对刺激速率的依赖。
+trial_structure:
+  phases:
+  - name: stimulus
+    note: brief vibrotactile burst to a finger; durations and inter-stimulus intervals not read in the source (fast and
+      slow rates were compared)
+  typical_trials: deviant probability typically 10-20% (common practice; not read in the source)
+  conditions:
+  - standard
+  - frequency deviant
+  - location deviant
+protocol:
+  n_classes: 2
+  classes:
+  - standard
+  - deviant
+  cue: vibrotactile stimulus stream to the fingers, stimuli ignored
+  stimulus_coding: oddball with infrequent deviants in vibration frequency or stimulation site
+  paradigm_timing: synchronous
+  feedback: none
+  distinguishing: >-
+    标准配置（最早发表，即 first_source）：手指振动触觉刺激流中插入频率或部位不同的低频偏差，被试忽略刺激，记录体感失匹配响应（Kekoni et al. 1997）。
+first_source:
+  citation: >-
+    Kekoni J, Hämäläinen H, Saarinen M, Gröhn J, Reinikainen K, Lehtokoski A, Näätänen R. Rate effect and mismatch responses
+    in the somatosensory system: ERP-recordings in humans. Biological Psychology. 1997;46(2):125-142.
+  doi: 10.1016/S0301-0511(97)05249-6
+  year: 1997
+  verified: false
+interop:
+  bids_task: smmn
+notes: >-
+  [curator_a sprint 7, 2026-10-17] New class from the sprint 7 gap list (Cognitive Atlas trm_566db10532583). Placement:
+  kept as a separate class by the same rule that keeps PER-VMMN apart from PER-MMN (D-041: different sensory channel ->
+  different marker with a different generator -> different paradigm). If draft D-060 (modality change = criterion 2 within
+  a class) is confirmed and the maintainer prefers that reading, this file becomes a PER-MMN concrete paradigm
+  (proposals.csv). MK.MMN is used as the closest marker; a somatosensory MMN marker (MK.sMMN) is requested in
+  marker_requests.csv. Stimulus description from an abstract record in the CORE aggregator that matches this paper
+  (mechanical vibratory stimuli for the ERP recordings, deviants in site or vibration frequency); the match and the exact
+  stimulus parameters need a full-text check. Electrical
+  finger-stimulation variants (location deviants, used in MEG) are parameter-level here only if the marker is the same;
+  this is left to the maintainer. bibliography confirmed (Crossref, 2026-10-17).
+status: draft
+contributors:
+- curator_a

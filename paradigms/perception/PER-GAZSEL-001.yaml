@@ -1,0 +1,75 @@
+schema_version: '0.2'
+id: PER-GAZSEL-001
+class: PER-GAZSEL
+name:
+  en: Intentional versus spontaneous fixations in a gaze-controlled game
+  zh: 注视控制游戏中的有意注视与自发注视
+aliases:
+- eye-brain-computer interface
+- EBCI
+- gaze-based selection intention
+- Midas touch problem
+- control-on versus control-off fixations
+family: perception
+bci_category:
+- passive
+recording_modality:
+- EEG
+stimulus_modality:
+- visual
+- motor_execution
+markers:
+- MK.FRP
+- MK.CNV
+description:
+  en: Participants play a computer game using only their eyes, making moves by dwelling with the gaze on game elements, while EEG and gaze are recorded together. Fixation-related potentials of fixations used to issue a
+    command (control-on) are compared with those of spontaneous fixations made while inspecting the screen (control-off);
+    a slow parieto-occipital negativity appears only for intentional fixations and allows single-trial detection of the
+    intention to select, a way around the Midas touch problem of gaze interfaces.
+  zh: 被试仅用眼睛玩电脑游戏，通过注视停留在游戏元素上来走棋，同时记录脑电与眼动。比较用于发出指令的注视（控制态）与浏览画面时的自发注视（非控制态）的注视相关电位；只有有意注视出现缓慢的顶枕负波，可在单试次水平检测选择意图，用以解决注视界面的"点石成金"（Midas touch）问题。
+trial_structure:
+  phases:
+  - name: free visual inspection
+    note: spontaneous fixations (control-off)
+  - name: intentional dwell on game element
+    note: fixation used as a command (control-on); dwell threshold not stated in the text that was read
+  - name: fixation-locked EEG window
+    duration_ms: 200-500
+    note: analysis window after fixation onset used for classification
+  conditions:
+  - intentional (control) fixations
+  - spontaneous fixations
+protocol:
+  n_classes: 2
+  classes:
+  - intentional fixation (control-on)
+  - spontaneous fixation (control-off)
+  cue: computer game controlled by gaze dwell; no external cue
+  stimulus_coding: fixation-locked epochs labelled by whether the fixation issued a command
+  paradigm_timing: asynchronous
+  feedback: discrete
+  distinguishing: 标准配置（最早发表，即 first_source）：仅用注视操作的电脑游戏中，比较用于发出指令的注视与自发注视的注视相关电位，自定步调，游戏步骤即离散反馈（Shishkin et al. 2016）。
+first_source:
+  citation: 'Shishkin SL, Nuzhdin YO, Svirin EP, Trofimov AG, Fedorova AA, Kozyrskiy BL, Velichkovsky BM. EEG negativity
+    in fixations used for gaze-based control: toward converting intentions into actions with an eye-brain-computer interface.
+    Frontiers in Neuroscience. 2016;10:528.'
+  doi: 10.3389/fnins.2016.00528
+  year: 2016
+  verified: false
+interop:
+  bids_task: gazeselection
+notes: '[curator_a sprint 7, 2026-10-17] New class from the sprint 7 gap list (rank 6). Overlap check: LAN-READ uses fixation-related
+  potentials for reading only; MOT-SACC records saccade-related activity, not command intention; no class covers intentional
+  versus spontaneous fixations. first_source: Shishkin et al. 2016, read from the publisher full text: 8 healthy participants,
+  13-channel classifier on 200-500 ms post-fixation segments; slow negative wave over parieto-occipital sites in control-on
+  fixations of every participant; specificity 0.90 and sensitivity 0.38 for first fixations. The authors describe the
+  wave as similar to, but not identical with, the stimulus-preceding negativity of feedback expectation. Markers: MK.FRP
+  (indexes intent selection); MK.CNV is the closest registry marker for the expectancy negativity, because MK.SPN in the
+  registry is the symmetry-related sustained posterior negativity, not the stimulus-preceding negativity (marker request
+  filed). Precursor: Zander et al. 2010 (Int J Hum Comput Interact, doi 10.1080/10447318.2011.535752) combined gaze pointing
+  with a separate BCI command for selection; that is a hybrid gaze-BCI (D-022) rather than detection of intention from
+  the fixation itself, so it is not taken as the origin. The game name and dwell threshold were not given in the text that
+  was read. bibliography confirmed (OpenAlex, 2026-10-17; Crossref request rate-limited)'
+status: draft
+contributors:
+- curator_a

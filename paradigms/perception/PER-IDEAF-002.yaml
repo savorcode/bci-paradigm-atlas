@@ -1,0 +1,74 @@
+schema_version: '0.2'
+id: PER-IDEAF-002
+class: PER-IDEAF
+name:
+  en: Auditory alarm oddball during a simulated landing decision task
+  zh: 模拟着陆决策任务中的听觉警报 oddball
+aliases:
+- inattentional deafness to auditory alarms
+- cockpit alarm detection
+- dual-task auditory alarm oddball
+family: perception
+bci_category:
+- passive
+recording_modality:
+- EEG
+stimulus_modality:
+- visual
+- auditory
+- cognitive_task
+markers:
+- MK.P3b
+- MK.N1_auditory
+description:
+  en: On each trial participants watch a short video of a landing approach on a simplified flight display and decide whether
+    to land; the display signals low load (normal indicators) or high load (degraded aircraft). During the video a standard
+    tone or, less often, a slightly higher deviant tone (the alarm) is played, and alarms must be reported after the landing
+    response. Missed alarms rise from about 3 % in an alarm-only control to about 22 % and 32 % under low and high load,
+    and the parietal P300 to the alarm shrinks with load and predicts the miss rate.
+  zh: 每个试次中，被试观看简化飞行显示器上一段着陆进近视频，并决定是否着陆；显示器提示低负荷（指示正常）或高负荷（飞机性能下降）。视频期间播放标准音，或较少出现的略高的偏差音（警报），被试须在着陆反应之后报告警报。漏报警报的比例从仅听警报对照条件的约 3% 升至低、高负荷下的约 22% 与 32%；警报诱发的顶区 P300 随负荷减小，并可预测漏报率。
+trial_structure:
+  phases:
+  - name: landing video
+    duration_ms: 2000-4500
+    note: tone presented between 500 ms after onset and 500 ms before the end; continuous white noise at 50 dB SPL
+  - name: tone
+    duration_ms: 100
+    note: standard 1900 Hz (p = 0.8) or deviant alarm 1950 Hz (p = 0.2), 50 dB SPL
+  - name: response window
+    duration_ms: 2000
+    note: land or go around, then report the alarm
+  typical_trials: 400 dual-task trials (about 40 min) and 200 control trials (about 20 min)
+  conditions:
+  - control (alarm detection only)
+  - dual task, low load
+  - dual task, high load
+protocol:
+  n_classes: 3
+  classes:
+  - control
+  - low load
+  - high load
+  cue: landing-approach video on a primary flight display with standard and deviant alarm tones
+  stimulus_coding: auditory oddball (standard and deviant alarm tones) embedded in an operational decision task
+  paradigm_timing: synchronous
+  feedback: none
+  distinguishing: 准则 2：刺激为嵌入操作任务的听觉警报 oddball（重复的标准音与偏差音），而非 PER-IDEAF-001 关键试次中的单个意外声音；准则 3：每个试次均有警报判断，负荷在试次间随机交错（Giraudet et al. 2015）。
+first_source:
+  citation: Giraudet L, St-Louis ME, Scannella S, Causse M. P300 event-related potential as an indicator of inattentional
+    deafness? PLoS ONE. 2015;10(2):e0118556.
+  doi: 10.1371/journal.pone.0118556
+  year: 2015
+  verified: false
+interop:
+  bids_task: inattentionaldeafness
+notes: '[curator_a sprint 7, 2026-10-17] Second concrete paradigm of PER-IDEAF, the passive-BCI configuration. Protocol read
+  from the open-access full text of Giraudet et al. 2015: 15 analysed participants (16 recruited); a rare visual alarm (p
+  = 0.1, 150 ms red circle) was also included and never coincided with a deviant tone; N100 at Fz did not change with load,
+  whereas the P300 at Pz fell from about 6.1 microvolts (control) to 1.6 (low load) and -0.8 (high load); the miss rate correlated
+  with P300 amplitude under low load (r = -0.79). The inter-stimulus interval is not specified in the article. The review
+  by Alimardani & Hiraki 2020 (Front Robot AI) lists inattentional deafness among passive-BCI targets. bibliography confirmed
+  (Crossref, 2026-10-17)'
+status: draft
+contributors:
+- curator_a

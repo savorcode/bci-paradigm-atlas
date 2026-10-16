@@ -1,0 +1,74 @@
+schema_version: "0.2"
+id: SSR-BINB-001
+class: SSR-BINB
+name:
+  en: Binaural beat stimulation
+  zh: 双耳拍频刺激
+aliases:
+- binaural beats
+- binaural beat entrainment
+- dichotic beat stimulation
+family: steady_state
+bci_category:
+- none
+recording_modality:
+- EEG
+stimulus_modality:
+- auditory
+markers:
+- MK.ASSR
+description:
+  en: >-
+    Two pure tones of slightly different frequency are presented separately to the two ears through headphones (for example
+    400 Hz to one ear and 410 Hz to the other). The difference frequency is not present in either ear and arises only from
+    binaural interaction in the brainstem, where it is heard as a beat. EEG is recorded during minutes of listening and
+    analysed for a steady-state response or a change in spectral power at the beat frequency, usually compared with
+    monaural beats (both tones mixed in each ear) or with the carrier tones alone.
+  zh: >-
+    用耳机分别向两耳呈现频率略有不同的两个纯音（如一耳 400 Hz、另一耳 410 Hz）。差频在任一耳中都不存在，只由脑干的双耳交互产生，被听成拍。在数分钟的聆听中记录脑电，分析拍频处的稳态响应或频谱功率变化，通常与单耳拍（两音在每耳中混合）或仅载波音对照比较。
+trial_structure:
+  phases:
+  - name: baseline
+    duration_ms: 60000-300000
+    note: approximate range in later EEG studies, not from the first source
+  - name: binaural beat exposure
+    duration_ms: 60000-1800000
+    note: carriers typically 200-500 Hz, beat frequencies in the delta to gamma range
+  - name: post-stimulation
+    duration_ms: 60000-300000
+  conditions:
+  - binaural beat
+  - monaural beat
+  - carrier tones without beat / silence
+protocol:
+  n_classes: 2
+  classes:
+  - binaural beat
+  - control (monaural beat or carriers only)
+  cue: dichotic pure tones with a small frequency offset
+  stimulus_coding: beat frequency equal to the interaural frequency difference, generated only centrally
+  paradigm_timing: block
+  feedback: none
+  distinguishing: >-
+    标准配置（最早发表，即 first_source）：两耳分别呈现频率略有差异的纯音，听者听到只在中枢产生的拍（Oster 1973），以单耳拍或仅载波为对照。
+first_source:
+  citation: 'Oster G. Auditory beats in the brain. Scientific American. 1973;229(4):94-102.'
+  doi: 10.1038/scientificamerican1073-94
+  year: 1973
+  verified: false
+interop:
+  bids_task: binauralbeats
+notes: >-
+  [curator_b sprint 7, 2026-10-17] New class from the sprint 7 gap list (systematic review, doi:10.1371/journal.pone.0286023).
+  Closest existing class SSR-ASSR, whose tones are physically amplitude-modulated; here the beat exists only after binaural
+  interaction, and SSR-BEAT concerns musical rhythm. Origin (D-031): Oster 1973 is a magazine article that describes the
+  stimulus and its use, and is used as the standard reference; the phenomenon was reported in the 19th century (Dove,
+  1839, not retrieved). Flag for maintainer review as weak_origin. Neural recording reference (not necessarily the first):
+  Schwarz & Taylor 2005, auditory steady-state responses to binaural and monaural beats (doi:10.1016/j.clinph.2004.09.014).
+  Ingendoh, Posny & Heine 2023 (systematic review) report inconsistent evidence that binaural beats entrain brain
+  oscillations, which is why MK.ASSR (the beat-frequency steady-state response) is used rather than
+  MK.oscillatory_entrainment. Phase durations are typical ranges, not values from the first source. bibliography
+  confirmed (Crossref, 2026-10-17).
+status: draft
+contributors:
+- curator_b

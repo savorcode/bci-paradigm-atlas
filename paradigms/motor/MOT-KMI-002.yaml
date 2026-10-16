@@ -1,0 +1,75 @@
+schema_version: '0.2'
+id: MOT-KMI-002
+class: MOT-KMI
+name:
+  en: Imagined force load of one hand with trial feedback
+  zh: 单手力量负荷想象（试次反馈）
+aliases:
+- force motor imagery
+- kinetic motor imagery
+- imagined force levels
+- force-load BCI
+family: motor
+bci_category:
+- active
+recording_modality:
+- EEG
+stimulus_modality:
+- mental_imagery
+- visual
+markers:
+- MK.SMR_ERD
+description:
+  en: Participants imagine clenching the right hand isometrically at a high load (30 % of maximal voluntary contraction),
+    a low load (10 %) or stay relaxed, after first performing the same contractions. The hand and the action are the same
+    for every class, which differ only in the imagined force; the stronger mu/beta ERD over the contralateral sensorimotor
+    cortex for the higher load is classified, and in online sessions the decoded class is announced after each trial.
+  zh: 被试先实际完成同样的收缩，再想象右手以高负荷（最大随意收缩的 30%）或低负荷（10%）做等长握拳，或保持放松。各类别的手和动作相同，只在想象的力量上不同；对侧感觉运动皮层 mu/β ERD 在高负荷时更强，据此分类；在线会话中每个试次后以语音告知解码结果。
+trial_structure:
+  phases:
+  - name: word cue (load)
+    duration_ms: 2000
+  - name: execution
+    duration_ms: 6000
+    note: calibration sessions only; actual clench at the cued load
+  - name: rest
+    duration_ms: 4000
+  - name: imagery
+    duration_ms: 6000
+  - name: rest
+    duration_ms: 4000
+  - name: voice feedback
+    note: online sessions; classifier result announced after each imagery trial
+  typical_trials: 2 blocks of 10 trials per two-class session; 48 trials (16 per class) in the three-class online session
+  conditions:
+  - high load (30 % MVC)
+  - low load (10 % MVC)
+  - relaxed (0 % MVC)
+protocol:
+  n_classes: 3
+  classes:
+  - high force load
+  - low force load
+  - relaxed
+  cue: written word naming the load, followed by a white circle during execution or imagery
+  stimulus_coding: same hand and action; classes differ in imagined isometric force
+  paradigm_timing: synchronous
+  feedback: discrete
+  distinguishing: 准则 1：类别为力量负荷（高/低/放松），不同于 MOT-KMI-001 的速度（快/慢）；准则 4：在线会话每个试次后给离散语音反馈，而 -001 无反馈（Wang et al. 2017）。
+first_source:
+  citation: 'Wang K, Wang Z, Guo Y, He F, Qi H, Xu M, Ming D. A brain-computer interface driven by imagining different force
+    loads on a single hand: an online feasibility study. Journal of NeuroEngineering and Rehabilitation. 2017;14(1):93.'
+  doi: 10.1186/s12984-017-0307-1
+  year: 2017
+  verified: false
+interop:
+  bids_task: forceimagery
+notes: '[curator_b sprint 7, 2026-10-17] Second concrete paradigm of MOT-KMI. Protocol read from the full text of Wang et
+  al. 2017: 11 healthy participants; sessions 1-3 two-class (high vs low), session 4 relaxed trials, session 5 online three-class
+  (mean 70.9 %, chance 33.3 %); 60-channel EEG, multi-class CSP and linear SVM; EMG of the wrist extensor confirmed the
+  absence of contraction during imagery. The paper reviews earlier and conflicting evidence on force and ERD (Gwin & Ferris,
+  Nakayashiki et al., Chakarov et al.), which was not retrieved here. Wang et al. is not necessarily the earliest force-imagery
+  study; it is the earliest online force-imagery BCI found this sprint. bibliography confirmed (Crossref, 2026-10-17)'
+status: draft
+contributors:
+- curator_b
