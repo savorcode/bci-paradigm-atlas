@@ -809,8 +809,8 @@
   - 手语理解与 LAN-SC-002 重复，未新建。
 - **理由**：补齐经典认知范式与可读出神经信号的刺激范式；写入型范式待统一规则后再收录，避免与已确认决策冲突。
 
-### D-079 第六冲刺的词表、标记物申请与具体范式提议（草案，待负责人确认）
-> 状态：草案，待负责人确认
+### D-079 第六冲刺的词表、标记物申请与具体范式提议（已确认（专家裁定，负责人授权，2026-10-17））
+> 状态：已确认（专家裁定，负责人授权，2026-10-17）
 - **词表申请 12 条**（暂挂最近 ID，见 `curation/work/sprint6/markers_*/vocab_requests.csv`）：脑区 BR.retrosplenial、BR.piriform_cortex、BR.PIVC、BR.auditory_brainstem、BR.MCC、BR.frontal_operculum；构念 CN.scene_perception、CN.interference_resolution、CN.olfactory_imagery、CN.vestibular_perception、CN.effective_connectivity、CN.basal_ganglia_stimulation_response。
 - **标记物申请 6 条**（`paradigms_P*/marker_requests.csv`）：MK.startle_blink（需新增外周反射类标记物类型）、MK.prestimulus_alpha_phase、MK.auditory_spatial_ERP、MK.P2p_numerical_distance、MK.cortical_stimulation_evoked_response、MK.afterdischarge。
 - **具体范式提议**（`paradigms_P*/proposals.csv`）：MOT-ATT-004 脑–脊髓接口行走、MOT-MI-012 足部想象脑开关驱动 FES、卒中 BCI-FES 康复、两个 `Hybrid:` 变体、MEM-CSPAN-003、PER-CROWD-002、CTL-NUM-003；PER-ODD-008 的源头可前移到 2010 年的 AMUSE 论文。
@@ -820,4 +820,14 @@
   - 其余构念申请与现有构念重叠较多，先不新增。
   - 标记物申请与具体范式提议在下一轮逐条处理。
   - 写入型范式（ICMS、光幻视、电刺激定位）在 schema 0.3 中讨论。
+- **执行（第七冲刺）**：新增脑区 BR.retrosplenial、BR.piriform_cortex、BR.PIVC（上位 BR.parietal_cortex，因 OP2 位于顶盖）、BR.auditory_brainstem，构念 CN.scene_perception、CN.olfactory_imagery、CN.vestibular_perception（均无 Cognitive Atlas 对应）；4 个标记物的关联改挂新 ID。新增标记物 MK.startle_blink（新标记物类型 `peripheral_physiology`）、MK.prestimulus_alpha_phase、MK.auditory_spatial_ERP、MK.P2p_numerical_distance，并替换相应范式的暂挂标记物；MK.cortical_stimulation_evoked_response 与 MK.afterdischarge 随写入型范式暂缓。具体范式：新建 MOT-ATT-004（脑–脊髓接口行走）、MOT-ATT-005（卒中 BCI-FES 康复）、MOT-MI-012（足部想象脑开关驱动 FES）、MEM-CSPAN-003、PER-CROWD-002、CTL-NUM-003；混合 BCI 变体写入 SSR-SSVEP-001、MOT-MI-001、PER-ODD-001、SSR-SSVEP-008；PER-ODD-008 源头不变（2010 年论文为离线分析，准则 4 不同），已记入 notes。
+
+## 二十四、新一轮范式收集（第七冲刺）
+
+### D-080 缺口分析与第七冲刺新增 24 个范式类（已确认（专家裁定，负责人授权，2026-10-17））
+> 状态：已确认（专家裁定，负责人授权，2026-10-17）
+- **缺口分析**：逐条比对 Cognitive Atlas 任务目录（857 项中取回并判定 852 项）、MOABB / BNCI Horizon 数据集清单、部分 OpenNeuro 任务名与 3 篇近年综述。551 项描述实验范式的条目中 481 项（87%）已被图谱覆盖；其余整理为 54 个合格候选（核心 8、相关 12、基础 34），只有行为读出或属于问卷的 316 项另表记录。结果见 `curation/work/sprint7/gap/`。
+- **本轮新建**（按族均衡、核心 8 个）：MOT-BRAKE 紧急制动意图、MOT-KMI 力量 / 速度想象、MOT-SWAL 吞咽（执行与想象）、MOT-SATT 自生刺激感觉衰减、PER-GAZSEL 注视选择意图、PER-IDEAF 非注意聋、PER-MUSAT 复调音乐选择性注意、PER-FBA 基于特征的注意、PER-SURR 视觉周边抑制、PER-TONIC 持续性疼痛、PER-SMMN 体感失匹配负波、SSR-BINB 双耳拍频、STM-TACEP 机械触觉诱发电位、STA-PROBE 无关探测刺激负荷评估、STA-GAME 电子游戏、STA-RESP 呼吸激发、EMO-CREAC 线索反应、EMO-FRUST 挫折诱发、MEM-VTWM 振动触觉工作记忆、SOC-DECEP 指令性欺骗、ERR-PROTO 原型类别学习、CTL-NEGP 负启动、CTL-BEADS 抽珠任务、LAN-DISC 语篇连贯。共 36 个具体范式。
+- **待定**：PER-SMMN、STM-TACEP 也可分别作为 PER-MMN、STM-SEP 的具体范式（取决于 D-060）；MOT-SATT 与 MOT-IB 部分重叠；新的标记物申请 7 条（`paradigms_Q*/marker_requests.csv`）与 PER-TONIC-003 等提议留待下一轮。
+- **影响**：范式类 284 → 308，有效具体范式 427 → 469（含 D-079 新建的 6 个）。
 
