@@ -1,0 +1,80 @@
+schema_version: '0.2'
+id: STM-RTMS-001
+class: STM-RTMS
+name:
+  en: Conventional repetitive TMS with pre/post excitability read-out
+  zh: 常规重复经颅磁刺激及前后兴奋性测量
+aliases:
+- rTMS
+- repetitive transcranial magnetic stimulation
+- rapid-rate TMS
+- high-frequency rTMS
+- low-frequency rTMS
+- rTMS-EEG
+family: stimulation
+bci_category:
+- none
+recording_modality:
+- EEG
+stimulus_modality:
+- magnetic_stimulation
+markers:
+- MK.TEP
+description:
+  en: >-
+    Trains of TMS pulses at a fixed rate (low frequency, about 1 Hz, or high frequency, 5 Hz and above) are applied to a
+    cortical target, usually the hand area of motor cortex, at an intensity defined relative to the motor threshold.
+    Cortical excitability is measured before and at intervals after the trains, classically as the amplitude of single-pulse
+    motor evoked potentials and, with TMS-compatible EEG, as the amplitude of TMS-evoked potentials, and compared with sham
+    or a control site. Effects that outlast the train are taken as plasticity-like changes.
+  zh: >-
+    以固定频率（低频约 1 Hz，或 5 Hz 及以上的高频）向皮层靶点（通常为运动皮层手区）施加 TMS 脉冲串，强度按运动阈值设定。在刺激串之前及之后若干时间点测量皮层兴奋性：
+    经典方法为单脉冲运动诱发电位幅度，使用兼容 TMS 的脑电时为 TMS 诱发电位幅度，并与伪刺激或对照部位比较。超出刺激串持续的效应被视为类可塑性改变。
+trial_structure:
+  phases:
+  - name: baseline read-out
+    note: single TMS pulses (MEP and/or TEP) before conditioning
+  - name: rTMS conditioning
+    note: trains at a fixed rate; frequency, intensity, train length and number of trains vary between studies
+  - name: post-stimulation read-out
+    note: single-pulse MEP / TEP repeated at intervals after the trains
+  conditions:
+  - active rTMS
+  - sham or control-site rTMS
+protocol:
+  n_classes: 2
+  classes:
+  - active rTMS
+  - sham / control
+  cue: none
+  stimulus_coding: regular fixed-frequency pulse trains (low- or high-frequency)
+  paradigm_timing: block
+  feedback: none
+  distinguishing: >-
+    标准配置（最早发表，即 first_source）：以固定频率的规则 TMS 脉冲串作为条件刺激，在刺激前后以单脉冲读出兴奋性（Pascual-Leone et al. 1994，MEP 读出，D-031）。
+    Standard configuration (earliest published): regular fixed-frequency rTMS trains with single-pulse read-out before and
+    after. Sibling STM-RTMS-002 differs by stimulus coding (criterion 2: patterned theta-burst stimulation).
+first_source:
+  citation: >-
+    Pascual-Leone A, Valls-Solé J, Wassermann EM, Hallett M. Responses to rapid-rate transcranial magnetic stimulation of
+    the human motor cortex. Brain. 1994;117(4):847-858.
+  doi: 10.1093/brain/117.4.847
+  year: 1994
+  verified: false
+interop:
+  bids_task: rtms
+notes: >-
+  [curator_b sprint 6, 2026-10-16] first_source: Pascual-Leone et al. 1994 characterised MEP responses during and after
+  rapid-rate trains over human motor cortex and is the standard early reference for rTMS effects on motor cortex
+  excitability; the read-out is MEP (EMG), which D-031 accepts for the origin. Earlier rTMS use for speech arrest is a
+  possible precursor (not retrieved; maintainer to check). First neural recording: Esser SK, Huber R, Massimini M,
+  Peterson MJ, Ferrarelli F, Tononi G. A direct demonstration of cortical LTP in humans: a combined TMS/EEG study. Brain
+  Research Bulletin. 2006;69(1):86-94. doi:10.1016/j.brainresbull.2005.11.003 (OpenAlex gives publication year 2005, the
+  online year; volume 69 is the 2006 print volume, to confirm) - by its title, LTP-like potentiation after rTMS
+  measured with combined TMS/EEG; rTMS parameters not yet read in full text. Differences from existing classes: STM-TEP uses single pulses without
+  conditioning; STM-PAS pairs peripheral nerve stimulation with TMS; STM-PHTMS triggers pulses on EEG phase; STM-TMSFMRI
+  records BOLD during TMS. Parameter ranges (frequency, intensity, number of pulses) were not extracted from the full
+  texts and are left out of trial_structure. bibliography confirmed (Crossref, 2026-10-16)
+status: draft
+contributors:
+- curator_b

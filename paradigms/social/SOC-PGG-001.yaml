@@ -1,0 +1,80 @@
+schema_version: '0.2'
+id: SOC-PGG-001
+class: SOC-PGG
+name:
+  en: Public goods game (voluntary contribution, no punishment)
+  zh: 公共物品博弈（自愿贡献，无惩罚）
+aliases:
+- public goods game
+- PGG
+- voluntary contribution mechanism
+- VCM
+- linear public goods game
+- free-rider problem experiment
+family: social
+bci_category:
+- none
+recording_modality:
+- fMRI
+- EEG
+stimulus_modality:
+- visual
+markers:
+- MK.FRN
+- MK.BOLD_striatum_reward
+description:
+  en: Each member of a small group receives an endowment and decides privately how much to keep and how much to invest
+    in a group account. The group account is multiplied and shared equally among all members, so that the group earns most
+    if everyone contributes fully while each individual earns most by free riding. Contributions, and reactions to the
+    revealed contributions of others, measure cooperation.
+  zh: 小组中每名成员获得一笔初始资金，私下决定保留多少、向小组账户投入多少。小组账户金额被放大后在全体成员间平分，因此全员足额投入时小组收益最高，而个人搭便车时个人收益最高。投入额以及对他人投入结果的反应用于度量合作。
+trial_structure:
+  phases:
+  - name: contribution decision
+    duration_ms: self-paced
+    note: allocation of the endowment between private and group account
+  - name: outcome
+    note: group total and own payoff shown; duration not recorded here
+  conditions:
+  - own contribution level
+  - others' contribution level (revealed at outcome)
+protocol:
+  n_classes: 1
+  classes:
+  - contribution to the group account
+  cue: endowment and payoff rule; decision screen (questionnaire in the first source)
+  stimulus_coding: continuous contribution amount; marginal per-capita return below 1 and group size as parameters
+  paradigm_timing: synchronous
+  feedback: discrete
+  distinguishing: 标准配置（最早发表，即 first_source）：小组成员私下在私人账户与公共账户之间分配资金，公共账户放大后平分，无惩罚阶段（Marwell & Ames 1979）。与 SOC-PGG-002（贡献后加同伴惩罚阶段，准则
+    3）区别。
+first_source:
+  citation: 'Marwell G, Ames RE. Experiments on the provision of public goods. I. Resources, interest, group size, and the
+    free-rider problem. American Journal of Sociology. 1979;84(6):1335-1360.'
+  doi: 10.1086/226937
+  year: 1979
+  verified: false
+variants:
+- name: Repeated rounds with fixed groups (partner matching) and feedback after each round
+  source:
+    citation: Fehr E, Gächter S. Cooperation and punishment in public goods experiments. American Economic Review. 2000;90(4):980-994.
+    doi: 10.1257/aer.90.4.980
+    year: 2000
+    verified: false
+  note: The no-punishment rounds of Fehr & Gächter 2000 serve as the repeated baseline; contributions decline over rounds.
+interop:
+  bids_task: publicgoods
+notes: 'Sources: Marwell & Ames 1979 (first_source; among the earliest controlled public goods experiments; whether it
+  is the very first is not established, earlier work on the free-rider problem should be assessed); Fehr & Gächter 2000
+  (repeated design and punishment, first_source of SOC-PGG-002); Krajbich, Camerer, Ledyard & Rangel 2009 Science 326(5952):596-599,
+  doi:10.1126/science.1177302 (fMRI measures of value used to implement an efficient public goods mechanism; BCI-related
+  key reference, not the standard game). Bibliographic data from the Crossref API (Marwell 1979, Fehr 2000) and the OpenAlex
+  API (Krajbich 2009). Markers MK.FRN and MK.BOLD_striatum_reward are taken over from SOC-TRUST by analogy (outcome of
+  others'' cooperative choices); no EEG or fMRI study of the standard public goods game was retrieved in this sprint, so
+  both links need evidence. Overlap: SOC-TRUST lists ''public goods game (related)'' as an alias; it has no public goods
+  concrete paradigm, and the n-player group-account structure differs from dyadic trust and prisoner''s dilemma games,
+  so a separate class is proposed and the alias should be removed from SOC-TRUST when this class is merged. Phase durations
+  are not given because the first source used a questionnaire procedure. [curator_e sprint 6, 2026-10-16]'
+status: draft
+contributors:
+- curator_e

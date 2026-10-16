@@ -1,0 +1,105 @@
+schema_version: '0.2'
+id: STA-SD-001
+class: STA-SD
+name:
+  en: Total sleep deprivation with repeated waking EEG
+  zh: 完全睡眠剥夺与重复清醒脑电测量
+aliases:
+- sleep deprivation
+- total sleep deprivation
+- TSD
+- sustained wakefulness
+- extended wakefulness
+- constant routine
+family: state
+bci_category:
+- passive
+- none
+recording_modality:
+- EEG
+- fMRI
+stimulus_modality:
+- resting_state
+- visual
+markers:
+- MK.theta_drowsiness
+- MK.slow_wave
+description:
+  en: Participants are kept awake for one or more nights under supervision, and short resting EEG recordings, vigilance
+    tests and sleepiness ratings are repeated at fixed times of prolonged wakefulness and compared with a rested condition.
+    Theta and low-alpha power of the waking EEG increase progressively with time awake, and slow-wave activity rises in
+    the subsequent recovery sleep, reflecting homeostatic sleep pressure.
+  zh: 被试在监督下保持一夜或多夜不睡，在长时间清醒的固定时间点重复进行简短静息脑电记录、警觉测试和困倦评分，并与正常睡眠条件比较。清醒脑电的
+    θ 和低 α 功率随清醒时间逐渐升高，随后的恢复睡眠中慢波活动增加，反映稳态睡眠压力。
+trial_structure:
+  phases:
+  - name: baseline night
+    note: normal sleep before the deprivation period (or a separate rested session)
+  - name: sustained wakefulness
+    duration_ms: about 144000000
+    note: about 40 h under constant routine in Cajochen et al. 1995; durations differ across studies
+  - name: waking EEG recording
+    duration_ms: 240000
+    note: repeated at fixed times (3, 10, 27 and 34 h awake in Cajochen et al. 1995)
+  - name: recovery sleep
+    note: polysomnography of recovery sleep (Borbély et al. 1981)
+  conditions:
+  - rested
+  - sleep-deprived
+protocol:
+  n_classes: 2
+  classes:
+  - rested
+  - sleep-deprived
+  cue: none (state manipulation); repeated resting EEG and vigilance tests
+  stimulus_coding: hours of continuous wakefulness
+  paradigm_timing: block
+  feedback: none
+  distinguishing: 标准配置（最早发表，即 first_source）：完全睡眠剥夺（连续一夜以上不睡），与正常睡眠对比，并在清醒期间重复测量（Patrick & Gilbert 1896 为最早的实验性睡眠剥夺研究；脑电配置见 variants 和
+    notes）。
+first_source:
+  citation: 'Patrick GTW, Gilbert JA. Studies from the psychological laboratory of the University of Iowa: On the effects
+    of loss of sleep. Psychological Review. 1896;3(5):469-483.'
+  doi: 10.1037/h0075739
+  year: 1896
+  verified: false
+variants:
+- name: Sleep deprivation with spectral analysis of recovery sleep EEG
+  source:
+    citation: 'Borbély AA, Baumann F, Brandeis D, Strauch I, Lehmann D. Sleep deprivation: Effect on sleep stages and EEG
+      power density in man. Electroencephalography and Clinical Neurophysiology. 1981;51(5):483-493.'
+    doi: 10.1016/0013-4694(81)90225-x
+    year: 1981
+    verified: false
+  note: Recovery-sleep EEG power density compared with baseline sleep; deprivation length not recorded here (abstract
+    not available).
+- name: 40-h constant routine with waking EEG at 3, 10, 27 and 34 h
+  source:
+    citation: Cajochen C, Brunner DP, Kräuchi K, Graw P, Wirz-Justice A. Power density in theta/alpha frequencies of the
+      waking EEG progressively increases during sustained wakefulness. Sleep. 1995;18(10):890-894.
+    doi: 10.1093/sleep/18.10.890
+    year: 1995
+    verified: false
+  note: Nine women; 4-min waking EEG at each time point; 6.25-9.0 Hz power rose progressively and correlated with subjective
+    fatigue.
+datasets:
+- name: A resting-state EEG dataset for sleep deprivation (OpenNeuro ds004902; Xiang et al. 2024, Scientific Data 11:427,
+    doi:10.1038/s41597-024-03268-2)
+  url: https://openneuro.org/datasets/ds004902
+  identifier: 10.18112/openneuro.ds004902.v1.0.4
+  subjects: 71
+interop:
+  bids_task: rest
+notes: 'Sources: Patrick & Gilbert 1896 (first_source; commonly cited as the first experimental study of sleep loss; content
+  not checked, no abstract in the Crossref or OpenAlex records); Borbély et al. 1981 (recovery-sleep EEG; basis of MK.slow_wave);
+  Cajochen et al. 1995 (waking EEG theta/alpha increase; basis of MK.theta_drowsiness; abstract via the OpenAlex API). Bibliographic
+  data from the Crossref API, except Cajochen 1995 (OpenAlex). Dataset: Xiang et al. 2024 (Crossref API record; eyes-open
+  resting EEG in a sleep-deprivation session and a normal-sleep session, with PVT, PANAS and Stanford Sleepiness Scale);
+  the OpenNeuro accession is taken from the article''s data citation, 71 subjects confirmed by the EEGDash listing of ds004902.
+  The number of hours awake in that dataset was not available from the records. The same dataset is listed without URL
+  under STA-REST-001; the maintainer may keep it there as well. Partial sleep restriction (several nights of shortened
+  sleep) changes the condition set and would be a separate serial number (criterion 1); no source retrieved yet. Related:
+  STA-PVT (vigilance test used as the outcome measure), STA-SLP (sleep staging), STA-DRV. [curator_e sprint 6, 2026-10-16]'
+status: draft
+contributors:
+- curator_e

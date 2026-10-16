@@ -1,0 +1,221 @@
+# Sprint 6, group P3 (emotion, social, language and state): new paradigm classes for the maintainer to merge into
+# paradigms/_classes.yaml. Curators: curator_e (EMO, SOC, STA), curator_d (LAN), 2026-10-16.
+# 冲刺 6 P3 组新增范式类，待维护者合入 paradigms/_classes.yaml。
+# Not created (see worklog.md): LAN-SIGN (covered by LAN-SC-002). Renamed: SOC-CONV -> SOC-DIAL.
+- id: EMO-STARTLE
+  name:
+    en: Affect-modulated startle reflex
+    zh: 情绪调制惊跳反射
+  family: emotion
+  description:
+    en: A brief loud acoustic probe is presented while participants view or imagine emotional material. The startle eyeblink
+      is potentiated during unpleasant and attenuated during pleasant foregrounds relative to neutral ones, and the probe-evoked
+      P3 is reduced during emotionally arousing foregrounds of either valence.
+    zh: 被试观看或想象情绪材料时给出短促响亮的听觉探测刺激。与中性背景相比，惊跳眨眼反射在不愉快背景下增强、在愉快背景下减弱；探测刺激诱发的 P3 在两种效价的高唤醒背景下均减小。
+  markers:
+  - MK.P3a
+  first_source:
+    citation: 'Vrana SR, Spence EL, Lang PJ. The startle probe response: A new measure of emotion? Journal of Abnormal Psychology.
+      1988;97(4):487-491.'
+    doi: 10.1037/0021-843x.97.4.487
+    year: 1988
+    verified: false
+  aliases:
+  - affective startle modulation
+  - emotion-modulated startle
+  - startle probe paradigm
+  - startle reflex modulation
+  - probe P3
+  notes: New class, sprint 6 (P3). Class source is that of EMO-STARTLE-001. The startle eyeblink EMG has no registry marker;
+    MK.P3a used as closest neural marker (marker request MK.startle_blink). [curator_e sprint 6, 2026-10-16]
+  status: draft
+  contributors:
+  - curator_e
+- id: EMO-AAT
+  name:
+    en: Approach-avoidance task
+    zh: 趋近–回避任务
+  family: emotion
+  description:
+    en: 'Participants respond to emotional or disorder-relevant stimuli with arm movements toward the body (approach: pull)
+      or away from it (avoidance: push), either by stimulus valence or by an irrelevant feature, and sometimes with a zoom
+      effect that makes the stimulus appear to come closer or move away. Faster compatible than incompatible responses index
+      automatic approach-avoidance tendencies.'
+    zh: 被试以朝向身体（趋近：拉）或远离身体（回避：推）的手臂动作对情绪或与障碍相关的刺激作反应，依据刺激效价或与内容无关的特征，有时配合使刺激看似靠近或远离的缩放效果。相容反应快于不相容反应，反映自动的趋近–回避倾向。
+  markers:
+  - MK.frontal_alpha_asymmetry
+  first_source:
+    citation: Solarz AK. Latency of instrumental responses as a function of compatibility with the meaning of eliciting verbal
+      signs. Journal of Experimental Psychology. 1960;59(4):239-245.
+    doi: 10.1037/h0047274
+    year: 1960
+    verified: false
+  aliases:
+  - approach-avoidance task
+  - AAT
+  - push-pull task
+  - stimulus-response compatibility task (approach/avoidance)
+  - arm flexion/extension task
+  - zoom AAT
+  - joystick AAT
+  - implicit approach-avoidance task
+  - irrelevant-feature AAT
+  notes: New class, sprint 6 (P3). Class source is that of EMO-AAT-001; EMO-AAT-002 is the joystick zoom version (Rinck &
+    Becker 2007). Marker MK.frontal_alpha_asymmetry is the closest available; evidence still to be searched. [curator_e sprint
+    6, 2026-10-16]
+  status: draft
+  contributors:
+  - curator_e
+- id: SOC-DIAL
+  name:
+    en: Natural dialogue and conversational turn-taking
+    zh: 自然对话与话轮交替
+  family: social
+  description:
+    en: Two partners converse freely, taking turns, while the brains of both are recorded simultaneously (hyperscanning) or
+      while one participant answers questions in a conversational exchange. Dialogue is contrasted with monologue and with
+      conditions without visual contact; face-to-face dialogue increases inter-brain synchrony, notably in the left inferior
+      frontal cortex.
+    zh: 两名同伴轮流发言、自由交谈，同时记录双方脑活动（超扫描），或由一名被试在对话式交流中回答问题。对话与独白及无视觉接触条件对比；面对面对话增强脑间同步，尤其在左侧额下回。
+  markers:
+  - MK.interbrain_synchrony
+  first_source:
+    citation: Jiang J, Dai B, Peng D, Zhu C, Liu L, Lu C. Neural synchronization during face-to-face communication. Journal
+      of Neuroscience. 2012;32(45):16064-16069.
+    doi: 10.1523/jneurosci.2926-12.2012
+    year: 2012
+    verified: false
+  aliases:
+  - conversational turn-taking
+  - natural dialogue hyperscanning
+  - face-to-face communication
+  - dialogue hyperscanning
+  - verbal communication hyperscanning
+  notes: New class, sprint 6 (P3); provisional ID SOC-CONV renamed SOC-DIAL to avoid confusion with SOC-CONF. Class source
+    is that of SOC-DIAL-001. [curator_e sprint 6, 2026-10-16]
+  status: draft
+  contributors:
+  - curator_e
+- id: SOC-PGG
+  name:
+    en: Public goods game
+    zh: 公共物品博弈
+  family: social
+  description:
+    en: Members of a small group each decide how much of an endowment to invest in a group account that is multiplied and
+      shared equally, so that full contribution is collectively best and free riding individually best. Contributions, reactions
+      to others' contributions and, in some versions, costly punishment of other members measure cooperation and norm enforcement.
+    zh: 小组成员各自决定把多少初始资金投入小组账户，该账户被放大后平分，因此全员足额投入对集体最优、搭便车对个人最优。投入额、对他人投入的反应以及部分版本中对其他成员的代价性惩罚用于度量合作与规范维护。
+  markers:
+  - MK.FRN
+  - MK.BOLD_striatum_reward
+  first_source:
+    citation: Marwell G, Ames RE. Experiments on the provision of public goods. I. Resources, interest, group size, and the
+      free-rider problem. American Journal of Sociology. 1979;84(6):1335-1360.
+    doi: 10.1086/226937
+    year: 1979
+    verified: false
+  aliases:
+  - public goods game
+  - PGG
+  - voluntary contribution mechanism
+  - VCM
+  - linear public goods game
+  - free-rider problem experiment
+  - public goods game with punishment
+  - costly punishment public goods game
+  - altruistic punishment
+  notes: New class, sprint 6 (P3). Class source is that of SOC-PGG-001. Markers taken over from SOC-TRUST by analogy; evidence
+    still to be searched. When merged, the alias 'public goods game (related)' should be removed from SOC-TRUST. [curator_e
+    sprint 6, 2026-10-16]
+  status: draft
+  contributors:
+  - curator_e
+- id: LAN-RA
+  name:
+    en: Reading aloud and word naming
+    zh: 朗读与词命名
+  family: language
+  description:
+    en: Written words and nonwords are read aloud one at a time as quickly as possible, and naming latency to voice onset
+      is measured. Frequency, lexicality and spelling-sound regularity effects index print-to-speech conversion; reading aloud
+      engages left-lateralised language and speech-motor regions.
+    zh: 逐个尽快读出书面词和假词，测量到发声开始的命名潜伏期。词频、词汇性和拼写—发音规则性效应反映文字到语音的转换；朗读激活左侧化的语言和言语运动脑区。
+  markers:
+  - MK.BOLD_language_network
+  first_source:
+    citation: Forster KI, Chambers SM. Lexical access and naming time. Journal of Verbal Learning and Verbal Behavior. 1973;12(6):627-635.
+    doi: 10.1016/s0022-5371(73)80042-8
+    year: 1973
+    verified: false
+  aliases:
+  - reading aloud
+  - word naming
+  - naming task
+  - speeded naming
+  - oral reading of words and pseudowords
+  notes: New class, sprint 6 (P3). Class source is that of LAN-RA-001. Distinct from LAN-OVS (articulatory decoding for speech
+    neuroprostheses) and LAN-PN (picture naming). [curator_d sprint 6, 2026-10-16]
+  status: draft
+  contributors:
+  - curator_d
+- id: STA-FAT
+  name:
+    en: Mental fatigue (time-on-task)
+    zh: 心理疲劳（任务时长效应）
+  family: state
+  description:
+    en: A demanding cognitive task is performed continuously for a long period (typically two hours or more) without rest,
+      and EEG, performance and subjective fatigue are compared between early and late time on task. Fatigue is accompanied
+      by rising theta and lower-alpha power and declining attention- and preparation-related ERPs, which passive BCIs use
+      to detect mental fatigue.
+    zh: 连续长时间（通常两小时以上）不休息地完成高要求认知任务，比较任务早期与晚期的脑电、作业表现和主观疲劳。疲劳伴随 θ 和低 α 功率升高以及注意与准备相关 ERP 减弱，被动式脑机接口据此检测心理疲劳。
+  markers:
+  - MK.frontal_midline_theta
+  - MK.alpha_posterior
+  first_source:
+    citation: 'Lorist MM, Klein M, Nieuwenhuis S, de Jong R, Mulder G, Meijman TF. Mental fatigue and task control: Planning
+      and preparation. Psychophysiology. 2000;37(5):614-625.'
+    doi: 10.1111/1469-8986.3750614
+    year: 2000
+    verified: false
+  aliases:
+  - mental fatigue
+  - time-on-task effect
+  - cognitive fatigue
+  - fatigue induction by prolonged task performance
+  notes: New class, sprint 6 (P3). Class source is that of STA-FAT-001 (earliest EEG/ERP protocol retrieved; origin of the
+    behavioural time-on-task approach not established). [curator_e sprint 6, 2026-10-16]
+  status: draft
+  contributors:
+  - curator_e
+- id: STA-SD
+  name:
+    en: Sleep deprivation
+    zh: 睡眠剥夺
+  family: state
+  description:
+    en: Participants are kept awake for one or more nights, and repeated resting EEG, vigilance tests and sleepiness ratings
+      are compared with a rested condition, sometimes together with recovery-sleep recordings. Waking theta/low-alpha power
+      increases with time awake and slow-wave activity rises in recovery sleep, reflecting homeostatic sleep pressure.
+    zh: 被试保持一夜或多夜不睡，重复进行静息脑电、警觉测试和困倦评分，并与正常睡眠条件比较，有时还记录恢复睡眠。清醒 θ／低 α 功率随清醒时间升高，恢复睡眠中慢波活动增加，反映稳态睡眠压力。
+  markers:
+  - MK.theta_drowsiness
+  - MK.slow_wave
+  first_source:
+    citation: 'Patrick GTW, Gilbert JA. Studies from the psychological laboratory of the University of Iowa: On the effects
+      of loss of sleep. Psychological Review. 1896;3(5):469-483.'
+    doi: 10.1037/h0075739
+    year: 1896
+    verified: false
+  aliases:
+  - sleep deprivation
+  - total sleep deprivation
+  - TSD
+  - sustained wakefulness
+  - extended wakefulness
+  - constant routine
+  notes: New class, sprint 6 (P3). Class source is that of STA-SD-001. [curator_e sprint 6, 2026-10-16]
+  status: draft
+  contributors:
+  - curator_e

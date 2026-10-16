@@ -1,0 +1,86 @@
+schema_version: '0.2'
+id: STM-ESM-001
+class: STM-ESM
+name:
+  en: Electrical stimulation mapping of sensorimotor cortex
+  zh: 感觉运动皮层电刺激功能定位
+aliases:
+- ESM
+- electrical stimulation mapping
+- cortical stimulation mapping
+- direct cortical stimulation
+- DCS
+- motor mapping
+- sensory mapping
+family: stimulation
+bci_category:
+- none
+recording_modality:
+- ECoG
+- sEEG
+stimulus_modality:
+- electrical_stimulation
+markers:
+- MK.CCEP
+- MK.high_gamma
+description:
+  en: >-
+    In patients undergoing epilepsy or tumour surgery, pairs of cortical sites are stimulated, intraoperatively or through
+    implanted subdural or depth electrodes, with short trains of 50- or 60-Hz current pulses whose intensity is raised step
+    by step. The examiner records evoked movements and the patient's reports of sensations (positive responses) or
+    interruption of ongoing movement (negative responses) for each site, while the ECoG is watched for afterdischarges. The
+    result is a map of motor and somatosensory representation used to plan resection.
+  zh: >-
+    在接受癫痫或肿瘤手术的患者中，于术中或经植入的硬膜下/深部电极，以 50 或 60 Hz 电流脉冲短串刺激成对皮层部位，强度逐级提高。检查者逐个部位记录诱发运动及患者报告的感觉（阳性反应）
+    或进行中动作的中断（阴性反应），同时监测皮层脑电中的后放电。结果是用于规划切除范围的运动与体感代表区图谱。
+trial_structure:
+  phases:
+  - name: stimulation train
+    duration_ms: 1000-2000
+    note: conventional train length for sensorimotor sites (Ritaccio et al. 2018); biphasic constant-current pulses at 50 Hz (Europe) or 60 Hz (North America)
+  - name: response observation
+    note: examiner notes movement; patient reports sensation; ECoG checked for afterdischarges
+  - name: inter-train interval
+    note: current increased in steps at the same site until a response, afterdischarges or the maximum is reached
+  conditions:
+  - stimulated electrode pair
+  - current intensity
+protocol:
+  n_classes: 3
+  classes:
+  - positive motor response
+  - positive sensory response
+  - no response
+  cue: none (stimulation delivered by the examiner)
+  stimulus_coding: bipolar 50/60-Hz pulse trains, current titrated per site
+  paradigm_timing: synchronous
+  feedback: none
+  distinguishing: >-
+    标准配置（最早发表，即 first_source）：逐对部位施加 50/60 Hz 电刺激短串，记录诱发运动与感觉报告，绘制感觉运动代表区（Penfield & Boldrey 1937）。
+    Standard configuration (earliest published): site-by-site trains with observation of evoked movement and reported
+    sensation (Penfield & Boldrey 1937). Sibling STM-ESM-002 differs by condition set and trial structure (criteria 1 and 3:
+    a language task is performed during stimulation and errors or arrest are scored against unstimulated trials).
+first_source:
+  citation: >-
+    Penfield W, Boldrey E. Somatic motor and sensory representation in the cerebral cortex of man as studied by electrical
+    stimulation. Brain. 1937;60(4):389-443.
+  doi: 10.1093/brain/60.4.389
+  year: 1937
+  verified: false
+interop:
+  bids_task: esm
+notes: >-
+  [curator_b sprint 6, 2026-10-16] Class created on the sprint 6 assignment; candidate STM-ECS-001 (the same paradigm) had
+  been excluded under D-010 (behavioural read-out, inclusion criterion 3), so the maintainer must record a decision that
+  supersedes D-010 before merging; the old candidate ID STM-ECS-001 stays void (see worklog). first_source: Penfield &
+  Boldrey 1937 is the first large systematic human series and the standard origin. The review of Ritaccio et al. 2018
+  (doi:10.1097/WNP.0000000000000440) credits earlier single human cases (Bartholow 1874; Sciamanna 1882) and series by
+  Krause and Foerster; no records were retrieved for those, so they are listed here only as candidate precursors. Train
+  length and pulse frequency in trial_structure are from Ritaccio et al. 2018. Markers: ESM itself is read out
+  behaviourally. MK.CCEP is listed because single-pulse stimulation through the same electrodes is the recorded counterpart
+  (STM-CCEP), and MK.high_gamma because task-related ECoG high-gamma mapping is the established passive alternative that is
+  validated against ESM (Ritaccio et al. 2018); neither is evoked by the 50-Hz trains themselves. A marker for
+  stimulation-induced afterdischarges is requested (marker_requests.csv). bibliography confirmed (Crossref, 2026-10-16)
+status: draft
+contributors:
+- curator_b

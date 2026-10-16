@@ -1,0 +1,169 @@
+# Sprint 6, group P1 (writing-in, stimulation and motor): new paradigm classes for the maintainer to merge into
+# paradigms/_classes.yaml. Curator: curator_b, 2026-10-16.
+# 冲刺 6 P1 组新增范式类，待维护者合入 paradigms/_classes.yaml。
+# Not created (see worklog.md and proposals.csv): STM-SCS, MOT-FES, MOT-HYB.
+- id: STM-ICMS
+  name:
+    en: Intracortical microstimulation of somatosensory cortex (artificial touch)
+    zh: 体感皮层皮层内微刺激（人工触觉）
+  family: stimulation
+  description:
+    en: Trains of charge-balanced current pulses are delivered through microelectrodes implanted in the hand area of
+      primary somatosensory cortex. The evoked sensations are localised on the hand and characterised psychophysically
+      (detection threshold, intensity), and in bidirectional BCIs the stimulation is driven in closed loop by sensors on a
+      robotic hand to provide artificial touch during intracortical BCI control.
+    zh: 经植入初级体感皮层手区的微电极施加电荷平衡电流脉冲串。诱发感觉在手上定位并以心理物理方法刻画（检测阈值、强度）；在双向脑机接口中，刺激由机械手传感器闭环驱动，在皮层内脑机接口控制中提供人工触觉。
+  markers:
+  - MK.motor_cortical_spiking
+  first_source:
+    citation: Flesher SN, Collinger JL, Foldes ST, Weiss JM, Downey JE, Tyler-Kabara EC, Bensmaia SJ, Schwartz AB, Boninger
+      ML, Gaunt RA. Intracortical microstimulation of human somatosensory cortex. Science Translational Medicine.
+      2016;8(361).
+    doi: 10.1126/scitranslmed.aaf8083
+    year: 2016
+    verified: false
+  aliases:
+  - ICMS
+  - intracortical microstimulation
+  - artificial somatosensory feedback
+  - artificial touch
+  - bidirectional BCI
+  notes: '[curator_b sprint 6, 2026-10-16] Concrete paradigms: STM-ICMS-001 (open-loop percept mapping and psychophysics),
+    STM-ICMS-002 (closed-loop tactile feedback during robotic-arm control). Reinstates the candidate excluded under D-009;
+    needs a superseding decision before merge. No registry marker indexes ICMS-evoked activity; MK.motor_cortical_spiking
+    is the closest (decoding signal of the bidirectional configuration) and a new marker is requested. Review: Bensmaia
+    & Miller 2014 (doi:10.1038/nrn3724). bibliography confirmed (Crossref, 2026-10-16)'
+  status: draft
+  contributors:
+  - curator_b
+- id: STM-PHOS
+  name:
+    en: Electrical stimulation of visual cortex evoking phosphenes (cortical visual prosthesis)
+    zh: 视皮层电刺激诱发光幻视（皮层视觉假体）
+  family: stimulation
+  description:
+    en: Electrodes on or in occipital visual cortex are stimulated with short trains of current pulses, singly or in
+      sequences, and the participant reports the presence, position and appearance of the evoked phosphenes or identifies
+      the letter or shape traced by a sequence. The phosphene map and form perception are the basis of cortical visual
+      prostheses for blind people.
+    zh: 以短串电流脉冲单独或按序刺激枕叶视皮层表面或皮层内的电极，被试报告诱发光幻视的有无、位置与外观，或识别序列所勾画的字母或形状。光幻视图谱与形状知觉是盲人皮层视觉假体的基础。
+  markers:
+  - MK.BOLD_visual_cortex
+  first_source:
+    citation: Brindley GS, Lewin WS. The sensations produced by electrical stimulation of the visual cortex. The Journal
+      of Physiology. 1968;196(2):479-493.
+    doi: 10.1113/jphysiol.1968.sp008519
+    year: 1968
+    verified: false
+  aliases:
+  - phosphene mapping
+  - visual cortical prosthesis
+  - cortical visual prosthesis
+  - electrical stimulation of visual cortex
+  - dynamic current steering
+  notes: '[curator_b sprint 6, 2026-10-16] Concrete paradigms: STM-PHOS-001 (single-electrode phosphene mapping),
+    STM-PHOS-002 (dynamic sequential stimulation for form vision, Beauchamp et al. 2020). Foerster (1929) is named in
+    historical reviews as the first report of stimulation-evoked phosphenes (no record retrieved). MK.BOLD_visual_cortex is
+    the closest existing marker only; a marker for stimulation-evoked activity is requested. TMS phosphenes are not
+    included. bibliography confirmed (Crossref, 2026-10-16)'
+  status: draft
+  contributors:
+  - curator_b
+- id: STM-RTMS
+  name:
+    en: Repetitive TMS and theta-burst stimulation (plasticity induction)
+    zh: 重复经颅磁刺激与 theta 爆发刺激（可塑性诱导）
+  family: stimulation
+  description:
+    en: Trains of TMS pulses, either at a regular fixed rate or in theta-burst patterns, are applied to a cortical target
+      (usually motor cortex), and excitability is compared before and after conditioning with single-pulse read-outs -
+      motor evoked potentials and, with TMS-compatible EEG, TMS-evoked potentials - against sham. Facilitation or
+      depression that outlasts the conditioning is taken as a plasticity-like after-effect.
+    zh: 以固定频率的规则脉冲串或 theta 爆发模式向皮层靶点（通常为运动皮层）施加 TMS，在条件刺激前后以单脉冲读出（运动诱发电位；使用兼容 TMS 的脑电时为 TMS 诱发电位）比较兴奋性，并与伪刺激对照。超出条件刺激持续的易化或抑制被视为类可塑性后效应。
+  markers:
+  - MK.TEP
+  first_source:
+    citation: Pascual-Leone A, Valls-Solé J, Wassermann EM, Hallett M. Responses to rapid-rate transcranial magnetic
+      stimulation of the human motor cortex. Brain. 1994;117(4):847-858.
+    doi: 10.1093/brain/117.4.847
+    year: 1994
+    verified: false
+  aliases:
+  - rTMS
+  - repetitive transcranial magnetic stimulation
+  - TBS
+  - theta burst stimulation
+  - cTBS
+  - iTBS
+  notes: '[curator_b sprint 6, 2026-10-16] Concrete paradigms: STM-RTMS-001 (regular fixed-frequency trains, Pascual-Leone
+    et al. 1994), STM-RTMS-002 (theta-burst, Huang et al. 2005). Origin is an MEP study (D-031). First neural recording:
+    Esser et al. 2006, Brain Research Bulletin 69(1):86-94, doi:10.1016/j.brainresbull.2005.11.003. Distinct from STM-TEP
+    (single pulses), STM-PAS (paired peripheral and cortical stimulation), STM-PHTMS (EEG-phase-triggered pulses) and
+    STM-TMSFMRI (concurrent BOLD). bibliography confirmed (Crossref, 2026-10-16)'
+  status: draft
+  contributors:
+  - curator_b
+- id: STM-TRNS
+  name:
+    en: Transcranial random noise stimulation
+    zh: 经颅随机噪声刺激
+  family: stimulation
+  description:
+    en: A weak alternating current with randomly varying amplitude and frequency (noise spectrum up to several hundred
+      hertz) is applied through scalp electrodes for several minutes and compared with sham; excitability is read out
+      before and after stimulation with TMS motor evoked potentials or EEG band power.
+    zh: 通过头皮电极施加数分钟幅度与频率随机变化的弱交流电（噪声频谱最高可达数百赫兹），并与伪刺激比较；刺激前后以 TMS 运动诱发电位或脑电频段功率读出兴奋性。
+  markers:
+  - MK.tES_power_aftereffect
+  first_source:
+    citation: Terney D, Chaieb L, Moliadze V, Antal A, Paulus W. Increasing human brain excitability by transcranial
+      high-frequency random noise stimulation. Journal of Neuroscience. 2008;28(52):14147-14155.
+    doi: 10.1523/JNEUROSCI.4248-08.2008
+    year: 2008
+    verified: false
+  aliases:
+  - tRNS
+  - transcranial random noise stimulation
+  - hf-tRNS
+  notes: '[curator_b sprint 6, 2026-10-16] Concrete paradigm: STM-TRNS-001. Origin is an MEP study (D-031); EEG evidence
+    for band-power after-effects is mixed (Ke et al. 2024, doi:10.31083/j.jin2303059). MK.tES_power_aftereffect should
+    name tRNS in its description. Review: Antal & Herrmann 2016 (doi:10.1155/2016/3616807). bibliography confirmed
+    (OpenAlex, 2026-10-16)'
+  status: draft
+  contributors:
+  - curator_b
+- id: STM-ESM
+  name:
+    en: Electrical stimulation mapping of cortex
+    zh: 皮层电刺激功能定位
+  family: stimulation
+  description:
+    en: Through intraoperative or implanted subdural / depth electrodes, cortical sites are stimulated one at a time with
+      short 50- or 60-Hz trains of increasing current while the ECoG is monitored for afterdischarges. Evoked movements and
+      sensations, or disruption of an ongoing task such as object naming, identify motor, sensory and language cortex
+      before resective surgery.
+    zh: 经术中或植入的硬膜下/深部电极，以逐步增加电流的 50 或 60 Hz 短串逐个刺激皮层部位，同时监测皮层脑电中的后放电。诱发的运动与感觉，或对进行中任务（如物体命名）的干扰，
+      在切除手术前确定运动、感觉与语言皮层。
+  markers:
+  - MK.CCEP
+  - MK.high_gamma
+  first_source:
+    citation: Penfield W, Boldrey E. Somatic motor and sensory representation in the cerebral cortex of man as studied by
+      electrical stimulation. Brain. 1937;60(4):389-443.
+    doi: 10.1093/brain/60.4.389
+    year: 1937
+    verified: false
+  aliases:
+  - ESM
+  - electrical stimulation mapping
+  - cortical stimulation mapping
+  - direct cortical stimulation
+  - language mapping
+  notes: '[curator_b sprint 6, 2026-10-16] Concrete paradigms: STM-ESM-001 (sensorimotor mapping, Penfield & Boldrey
+    1937), STM-ESM-002 (language mapping during naming, Ojemann et al. 1989). Corresponds to the candidate STM-ECS-001
+    excluded under D-010 (ID stays void); needs a superseding decision before merge. Read-out is behavioural; MK.CCEP and
+    MK.high_gamma are the closest recorded counterparts, and an afterdischarge marker is requested. Review: Ritaccio et
+    al. 2018 (doi:10.1097/WNP.0000000000000440). bibliography confirmed (Crossref, 2026-10-16)'
+  status: draft
+  contributors:
+  - curator_b

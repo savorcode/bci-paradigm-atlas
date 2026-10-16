@@ -1,0 +1,82 @@
+schema_version: '0.2'
+id: CTL-TMT-001
+class: CTL-TMT
+name:
+  en: Trail Making Test, Parts A and B
+  zh: 连线测验 A、B 部分
+aliases:
+- Trail Making Test
+- TMT
+- TMT-A
+- TMT-B
+- Trails A and B
+family: control
+bci_category:
+- none
+recording_modality:
+- fNIRS
+stimulus_modality:
+- visual
+- motor_execution
+markers:
+- MK.HbO_prefrontal
+description:
+  en: In Part A the participant draws a line connecting 25 encircled numbers in ascending order; in Part B the line alternates
+    between 13 numbers and 12 letters (1-A-2-B ... 13). The examiner points out errors immediately and the participant corrects
+    them, so errors add to the completion time, which is the score for each part.
+  zh: A 部分中被试用一条线按升序连接 25 个圆圈中的数字；B 部分在 13 个数字和 12 个字母之间交替连接（1-A-2-B……13）。施测者当即指出错误，由被试改正，因此错误计入完成时间；每部分的得分即完成时间。
+trial_structure:
+  phases:
+  - name: Part A sample
+    duration_ms: self-paced
+    note: short practice sheet
+  - name: Part A
+    duration_ms: self-paced
+    note: numbers 1-25; timed
+  - name: Part B sample
+    duration_ms: self-paced
+  - name: Part B
+    duration_ms: self-paced
+    note: 1-13 and A-L alternating; timed; often discontinued after 5 min (Bowie & Harvey 2006, to be checked)
+  typical_trials: 1 per part
+  conditions:
+  - Part A (numbers)
+  - Part B (numbers and letters alternating)
+protocol:
+  n_classes: 2
+  classes:
+  - Part A
+  - Part B
+  cue: printed sheet with encircled numbers (A) or numbers and letters (B)
+  stimulus_coding: sequential connection; B alternates between two sequences
+  paradigm_timing: block
+  feedback: discrete
+  distinguishing: 标准配置（最早发表，即 first_source）：纸笔版 A（数字 1–25）与 B（数字/字母交替）两部分计时（Reitan 1958）。计算机化或 fNIRS/fMRI 改编版仅改呈现方式与参数，记入
+    variants。
+first_source:
+  citation: Reitan RM. Validity of the Trail Making Test as an indicator of organic brain damage. Perceptual and Motor Skills.
+    1958;8(3):271-276.
+  doi: 10.2466/pms.1958.8.3.271
+  year: 1958
+  verified: false
+variants:
+- name: TMT during multichannel fNIRS
+  source:
+    citation: Fujiki R, Morita, Sato, Shoji, Uchimura N, Inoue, Kamada, Kato. Reduced prefrontal cortex activation using the
+      Trail Making Test in schizophrenia. Neuropsychiatric Disease and Treatment. 2013;9:675. (Crossref and OpenAlex records
+      give most co-authors by family name only)
+    doi: 10.2147/NDT.S43137
+    year: 2013
+    verified: false
+  note: Parts A and B performed during prefrontal fNIRS; patients with schizophrenia showed smaller prefrontal oxygenation
+    increases and reduced lateralisation in Part B.
+interop:
+  bids_task: trailmaking
+notes: Reitan 1958 (Crossref) used as first source; the test predates it (Army Individual Test Battery, 1944; Partington's
+  Pathways Test), but no record of those was retrieved. Administration details (25 circles; 1-13 and A-L; immediate error
+  correction) follow Bowie & Harvey 2006 (Crossref), Nature Protocols; the 5-minute discontinuation rule is to be checked.
+  Feedback recorded as discrete because the examiner flags each error. Fujiki et al. 2013 (Crossref and OpenAlex records incomplete
+  for co-author given names) supports MK.HbO_prefrontal. No public dataset verified. [curator_c sprint 6, 2026-10-16]
+status: draft
+contributors:
+- curator_c

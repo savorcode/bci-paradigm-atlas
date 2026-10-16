@@ -1,0 +1,95 @@
+schema_version: '0.2'
+id: STM-ICMS-001
+class: STM-ICMS
+name:
+  en: Intracortical microstimulation of somatosensory cortex - percept mapping and psychophysics
+  zh: 体感皮层皮层内微刺激——知觉定位与心理物理测量
+aliases:
+- ICMS
+- intracortical microstimulation
+- S1 microstimulation
+- artificial somatosensory feedback
+- ICMS percept mapping
+family: stimulation
+bci_category:
+- none
+recording_modality:
+- intracortical
+stimulus_modality:
+- electrical_stimulation
+markers:
+- MK.motor_cortical_spiking
+description:
+  en: >-
+    In a person with microelectrode arrays implanted in the hand area of primary somatosensory cortex, short trains of
+    charge-balanced current pulses are delivered through single electrodes. The participant reports where on the hand the
+    evoked sensation is felt and what it feels like, and standard psychophysical tasks measure detection thresholds
+    (two-interval forced choice), perceived intensity as a function of amplitude (magnitude estimation) and discrimination
+    of amplitude differences. The outcome is a map of projected fields and their stability over months, used to set up
+    artificial touch for a bidirectional BCI.
+  zh: >-
+    在初级体感皮层手区植入微电极阵列的被试中，经单个电极施加短串电荷平衡电流脉冲。被试报告诱发感觉在手上的位置及其性质，并以标准心理物理任务测定检测阈值（双间隔迫选）、
+    知觉强度随电流幅度的变化（量值估计）以及幅度差别辨别。结果是投射野图谱及其数月内的稳定性，用于为双向脑机接口设置人工触觉。
+trial_structure:
+  phases:
+  - name: observation window 1
+    duration_ms: 1000
+    note: two-interval forced choice; the stimulus train falls randomly in one of the two windows
+  - name: variable delay
+  - name: observation window 2
+    duration_ms: 1000
+  - name: response
+    note: participant reports which window contained the stimulus, or reports location / quality / intensity on survey trials
+  typical_trials: 20 responses per amplitude per electrode (detection); 6 repetitions per amplitude (magnitude estimation)
+  conditions:
+  - stimulated electrode
+  - stimulus amplitude
+protocol:
+  n_classes: 2
+  classes:
+  - interval containing the stimulus train
+  - empty interval
+  cue: 1-s, 100-Hz train of charge-balanced, cathodal-first pulses through one electrode (detection and survey trials)
+  stimulus_coding: single-electrode trains; amplitude varied by staircase (one-up three-down) or method of constant stimuli
+  paradigm_timing: synchronous
+  feedback: none
+  distinguishing: >-
+    标准配置（最早发表，即 first_source）：经单个电极的 1 s、100 Hz 微刺激串，开环心理物理测量（知觉定位调查、双间隔迫选检测阈值、量值估计）（Flesher et al. 2016）。
+    Standard configuration (earliest published): open-loop single-electrode ICMS with percept-location surveys and
+    psychophysics, no motor decoding. Sibling STM-ICMS-002 differs by feedback (criterion 4: ICMS delivered in closed loop
+    from robotic-hand sensors during BCI control) and trial structure (criterion 3: functional task trials).
+first_source:
+  citation: >-
+    Flesher SN, Collinger JL, Foldes ST, Weiss JM, Downey JE, Tyler-Kabara EC, Bensmaia SJ, Schwartz AB, Boninger ML,
+    Gaunt RA. Intracortical microstimulation of human somatosensory cortex. Science Translational Medicine. 2016;8(361).
+  doi: 10.1126/scitranslmed.aaf8083
+  year: 2016
+  verified: false
+variants:
+- name: Stimulation frequency range (25-300 Hz) instead of the 100-Hz standard train
+  source:
+    citation: >-
+      Flesher SN, Collinger JL, Foldes ST, Weiss JM, Downey JE, Tyler-Kabara EC, Bensmaia SJ, Schwartz AB, Boninger ML,
+      Gaunt RA. Intracortical microstimulation of human somatosensory cortex. Science Translational Medicine. 2016;8(361).
+    doi: 10.1126/scitranslmed.aaf8083
+    year: 2016
+    verified: false
+  note: parameter-level variation within the same single-electrode coding scheme
+interop:
+  bids_task: icms
+notes: >-
+  [curator_b sprint 6, 2026-10-16] Class reinstated on the sprint 6 assignment; candidate STM-ICMS-001 had been excluded
+  under D-009 (inclusion criterion 3), so the maintainer must record a decision that supersedes D-009 before merging (see
+  worklog). first_source: Flesher et al. 2016 is described as the first report of ICMS of human somatosensory cortex
+  (two arrays in area 1 of the postcentral gyrus, one participant with spinal cord injury). Stimulation parameters and task
+  design in the protocol block (1-s, 100-Hz trains; cathodal phase 200 us, anodal phase 400 us at half amplitude, 100-us
+  interphase; amplitude limited to 100 uA; two-interval forced choice with one-up three-down tracking; magnitude estimation
+  10-80 uA) were taken from the authors' manuscript posted on the lab site, where several units are misprinted (mA/ms for
+  uA/us); check against the published version. Animal precursors (ICMS in non-human primates) are out of scope. Marker:
+  no registry marker indexes ICMS-evoked activity; the paper analyses no stimulation-evoked neural responses (units recorded
+  only for signal-quality checks). MK.motor_cortical_spiking is the closest registry marker because the same implant is used
+  for motor decoding in the bidirectional configuration (STM-ICMS-002); a new marker is requested in marker_requests.csv.
+  Review: Bensmaia & Miller 2014 (doi:10.1038/nrn3724). bibliography confirmed (Crossref, 2026-10-16)
+status: draft
+contributors:
+- curator_b

@@ -1,0 +1,73 @@
+schema_version: '0.2'
+id: MEM-CSPAN-001
+class: MEM-CSPAN
+name:
+  en: Reading span
+  zh: 阅读广度
+aliases:
+- reading span
+- reading span task
+- RSPAN
+- Daneman-Carpenter task
+family: memory
+bci_category:
+- none
+recording_modality:
+- EEG
+stimulus_modality:
+- visual
+markers:
+- MK.alpha_posterior
+description:
+  en: Participants read aloud a series of unrelated sentences presented one at a time and, at the end of the set, recall the
+    final word of each sentence in order. Set size increases from two to six sentences; the reading span is the largest set
+    size at which recall is reliably correct. Reading span correlated strongly with reading comprehension, unlike simple word
+    span.
+  zh: 被试逐句朗读一系列互不相关的句子，在一组结束时按顺序回忆每句的最后一个词。每组句子数从 2 增至 6；阅读广度为能稳定正确回忆的最大组大小。与简单词语广度不同，阅读广度与阅读理解高度相关。
+trial_structure:
+  phases:
+  - name: sentence (read aloud)
+    duration_ms: self-paced
+    note: one sentence per card/screen
+  - name: next sentence
+    duration_ms: self-paced
+    note: repeated for set size 2-6
+  - name: recall of sentence-final words
+    duration_ms: self-paced
+    note: in serial order
+  typical_trials: 3 sets per set size (set sizes 2-6)
+  conditions:
+  - set size 2
+  - set size 3
+  - set size 4
+  - set size 5
+  - set size 6
+protocol:
+  n_classes: 5
+  classes:
+  - set size 2
+  - set size 3
+  - set size 4
+  - set size 5
+  - set size 6
+  cue: written sentences read aloud; final words to remember
+  stimulus_coding: processing = sentence reading; storage = sentence-final words
+  paradigm_timing: synchronous
+  feedback: none
+  distinguishing: 标准配置（最早发表，即 first_source）：朗读句子并记住句末词，组大小 2–6，按序回忆（Daneman 与 Carpenter 1980）。同类其他具体范式：MEM-CSPAN-002 运算广度（加工任务为算式核对，准则
+    2）。
+first_source:
+  citation: Daneman M, Carpenter PA. Individual differences in working memory and reading. Journal of Verbal Learning and
+    Verbal Behavior. 1980;19(4):450-466.
+  doi: 10.1016/S0022-5371(80)90312-6
+  year: 1980
+  verified: false
+interop:
+  bids_task: readingspan
+notes: Daneman & Carpenter 1980 (OpenAlex record; Crossref rate-limited). Set sizes 2-6 with three sets per size and the comprehension
+  correlation are from general knowledge of the paper and the Conway et al. 2005 user's guide (Crossref); to be checked against
+  the full text. Marker MK.alpha_posterior is inferred from the operation span EEG study (Scharinger et al. 2017) and has
+  not been shown for reading span. No public dataset verified. [curator_d sprint 6, 2026-10-16]
+status: draft
+contributors:
+- curator_d

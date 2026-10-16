@@ -1,0 +1,69 @@
+schema_version: '0.2'
+id: EMO-AAT-002
+class: EMO-AAT
+name:
+  en: Joystick approach-avoidance task with zoom feedback (irrelevant-feature version)
+  zh: 带缩放反馈的摇杆趋近–回避任务（无关特征版本）
+aliases:
+- zoom AAT
+- joystick AAT
+- implicit approach-avoidance task
+- irrelevant-feature AAT
+family: emotion
+bci_category:
+- none
+recording_modality:
+- EEG
+- fMRI
+stimulus_modality:
+- visual
+- motor_execution
+markers:
+- MK.frontal_alpha_asymmetry
+description:
+  en: Pictures of feared or neutral objects are shown, and participants pull or push a joystick according to a feature
+    unrelated to content, such as the picture format (landscape or portrait). Pulling enlarges the picture and pushing
+    shrinks it, giving the visual impression of approaching or withdrawing. Faster pulling than pushing for a stimulus
+    category indexes an implicit approach tendency, and the reverse an avoidance tendency.
+  zh: 呈现令人恐惧或中性物体的图片，被试按与内容无关的特征（如图片为横幅或竖幅）拉或推摇杆。拉动使图片放大、推动使图片缩小，形成接近或远离的视觉感受。对某类刺激拉比推快表示内隐趋近倾向，反之为回避倾向。
+trial_structure:
+  phases:
+  - name: picture
+    duration_ms: until response
+    note: picture size changes continuously with joystick displacement until it disappears at full push or pull
+  - name: inter-trial interval
+    note: duration not recorded here; to be taken from the first source
+  conditions:
+  - feared pictures, pull
+  - feared pictures, push
+  - neutral pictures, pull
+  - neutral pictures, push
+protocol:
+  n_classes: 4
+  classes:
+  - feared stimulus, approach (pull)
+  - feared stimulus, avoid (push)
+  - neutral stimulus, approach (pull)
+  - neutral stimulus, avoid (push)
+  cue: pictures (spiders and neutral objects in the first source); response assigned by picture format, not by content
+  stimulus_coding: content (feared / neutral) crossed with movement direction; irrelevant-feature instruction
+  paradigm_timing: synchronous
+  feedback: continuous
+  distinguishing: 准则 2;4：提示由按效价指示（EMO-AAT-001）改为按与内容无关的图片格式指示（内隐版本）；摇杆位移连续控制图片缩放，形成连续视觉反馈（Rinck & Becker 2007）。
+first_source:
+  citation: Rinck M, Becker ES. Approach and avoidance in fear of spiders. Journal of Behavior Therapy and Experimental
+    Psychiatry. 2007;38(2):105-120.
+  doi: 10.1016/j.jbtep.2006.10.001
+  year: 2007
+  verified: false
+interop:
+  bids_task: approachavoidance
+notes: 'Sources: Rinck & Becker 2007 (first_source of this configuration; bibliographic data from the Crossref API). The
+  zoom feature and the format-based instruction are described from the curator''s knowledge of the standard version and
+  must be checked against the full text. Numbered separately from EMO-AAT-001 because both the cue/instruction (criterion
+  2) and the feedback mode (criterion 4) change; this joystick version is the one most widely used in clinical and training
+  (cognitive bias modification) research. Marker: as for EMO-AAT-001, MK.frontal_alpha_asymmetry is the closest marker;
+  no neural study of this version was retrieved in this sprint. [curator_e sprint 6, 2026-10-16]'
+status: draft
+contributors:
+- curator_e

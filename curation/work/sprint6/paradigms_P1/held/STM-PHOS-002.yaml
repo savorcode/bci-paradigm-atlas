@@ -1,0 +1,81 @@
+schema_version: '0.2'
+id: STM-PHOS-002
+class: STM-PHOS
+name:
+  en: Dynamic sequential stimulation of visual cortex for form vision
+  zh: 视皮层动态序列刺激产生形状视觉
+aliases:
+- dynamic current steering
+- dynamic stimulation of visual cortex
+- phosphene letter tracing
+- form vision by cortical stimulation
+family: stimulation
+bci_category:
+- none
+recording_modality:
+- ECoG
+stimulus_modality:
+- electrical_stimulation
+markers:
+- MK.BOLD_visual_cortex
+description:
+  en: >-
+    Instead of stimulating several visual cortex electrodes at once, which tends to produce isolated spots of light,
+    electrodes are stimulated one after another in a sequence whose phosphene positions trace the outline of a letter or
+    shape. Participants (sighted patients with subdural occipital electrodes and a blind participant with an implanted
+    neurostimulator) first learn the sequences by drawing what they see, and then identify the presented form in a forced
+    choice among a small set of letters or shapes.
+  zh: >-
+    不同时刺激多个视皮层电极（这往往只产生孤立光点），而是按顺序依次刺激，各电极光幻视的位置连成字母或形状的轮廓。被试（植入枕叶硬膜下电极的视力正常患者与一名植入神经刺激器的盲人）
+    先通过描画所见学习这些序列，再在少数字母或形状中迫选识别所呈现的形状。
+trial_structure:
+  phases:
+  - name: ready cue
+  - name: dynamic stimulation sequence
+    duration_ms: about 1300
+    note: >-
+      per-electrode trains of 50-200 ms with 50-125 ms gaps in sighted participants (2000-ms gaps in the blind participant);
+      200-Hz biphasic pulses, 0.1 ms per phase
+  - name: report
+    note: verbal forced-choice identification, or drawing on a touchscreen
+  typical_trials: 23 forced-choice presentations (one participant); 28 drawing trials (7 shapes x 4) in the blind participant
+  conditions:
+  - letters or shapes (3-5 alternatives)
+protocol:
+  n_classes: 4
+  classes:
+  - letter / shape 1
+  - letter / shape 2
+  - letter / shape 3
+  - letter / shape 4
+  cue: sequence of electrode stimulations tracing a letter or shape
+  stimulus_coding: dynamic sequential (temporally ordered) multi-electrode stimulation, including virtual electrodes by current steering
+  paradigm_timing: synchronous
+  feedback: none
+  distinguishing: >-
+    准则 2 与 1（相对 STM-PHOS-001）：以时间顺序依次刺激多个电极、勾画形状轮廓的动态编码，取代单电极刺激；条件集为字母/形状的迫选识别，而非单个光幻视的检测与定位。
+    Criterion 2 vs STM-PHOS-001: dynamic sequential multi-electrode coding that traces a form instead of single-electrode
+    stimulation; criterion 1: forced-choice set of letters or shapes instead of detection and localisation of one phosphene
+    (Beauchamp et al. 2020).
+first_source:
+  citation: >-
+    Beauchamp MS, Oswalt D, Sun P, Foster BL, Magnotti JF, Niketeghad S, Pouratian N, Bosking WH, Yoshor D. Dynamic
+    stimulation of visual cortex produces form vision in sighted and blind humans. Cell. 2020;181(4):774-783.e5.
+  doi: 10.1016/j.cell.2020.04.033
+  year: 2020
+  verified: false
+interop:
+  bids_task: phosphene
+notes: >-
+  [curator_b sprint 6, 2026-10-16] Parameters in trial_structure and protocol are from the bioRxiv preprint of this study
+  (Beauchamp et al. 2018, "Dynamic electrical stimulation of sites in visual cortex produces form vision in sighted and
+  blind humans", doi:10.1101/462697; Crossref links it as preprint of the Cell paper) and should be checked against the
+  published methods: four sighted epilepsy patients (subdural 4x4 or 6x4 research grids over occipital cortex) and one
+  blind participant (two four-contact strips of a responsive neurostimulation system); 4-alternative forced choice, 15/23
+  correct in one participant. The preprint reports that simultaneous stimulation of five electrodes produced only isolated
+  phosphenes and no shapes. n_classes = 4 follows the 4-alternative test; the number of forms is a parameter (3-5 in the
+  preprint). Marker: as for STM-PHOS-001, MK.BOLD_visual_cortex is the closest existing marker only (request in
+  marker_requests.csv). bibliography confirmed (Crossref, 2026-10-16)
+status: draft
+contributors:
+- curator_b

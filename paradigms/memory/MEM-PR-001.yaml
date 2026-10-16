@@ -1,0 +1,88 @@
+schema_version: '0.2'
+id: MEM-PR-001
+class: MEM-PR
+name:
+  en: Sperling tone-cued partial report
+  zh: Sperling 声音提示部分报告
+aliases:
+- partial report
+- Sperling paradigm
+- iconic memory
+- tone-cued partial report
+family: memory
+bci_category:
+- none
+recording_modality:
+- fMRI
+stimulus_modality:
+- visual
+- auditory
+markers:
+- MK.BOLD_frontoparietal
+- MK.BOLD_visual_cortex
+description:
+  en: A 3 x 4 array of letters is flashed briefly. On partial-report trials a high, middle or low tone immediately after the
+    display indicates which row to report; on whole-report trials all letters are reported. About 4.3 letters are reported
+    under whole report, whereas partial report implies about 9 letters are available; the advantage disappears when the tone
+    is delayed by roughly 300 ms or more.
+  zh: 短暂闪现 3×4 字母阵列。部分报告试次中，阵列消失后立即出现高、中或低音，指示报告哪一行；整体报告试次中报告全部字母。整体报告约能报告 4.3 个字母，而部分报告推算约有 9 个字母可用；当提示音延迟约 300 ms 或以上时，这一优势消失。
+trial_structure:
+  phases:
+  - name: fixation
+    duration_ms: self-paced
+    note: pre-exposure field
+  - name: letter array
+    duration_ms: 50
+    note: typical; Sperling varied exposure between 15 and 500 ms (secondary source)
+  - name: cue delay
+    duration_ms: 0-1000
+    note: tone after display offset; advantage gone beyond ~300 ms
+  - name: tone cue
+    duration_ms: brief
+    note: high/middle/low tone = top/middle/bottom row
+  - name: written report
+    duration_ms: self-paced
+  conditions:
+  - whole report
+  - 'partial report: top row'
+  - 'partial report: middle row'
+  - 'partial report: bottom row'
+protocol:
+  n_classes: 3
+  classes:
+  - top row
+  - middle row
+  - bottom row
+  cue: auditory tone (high/middle/low) after a brief letter array
+  stimulus_coding: tone pitch codes the row to report; cue delay varied
+  paradigm_timing: synchronous
+  feedback: none
+  distinguishing: 标准配置（最早发表，即 first_source）：3×4 字母阵列短暂呈现，阵列后以高/中/低音提示报告某一行，与整体报告比较（Sperling 1960）。
+first_source:
+  citation: 'Sperling G. The information available in brief visual presentations. Psychological Monographs: General and Applied.
+    1960;74(11):1-29.'
+  doi: 10.1037/h0093759
+  year: 1960
+  verified: false
+variants:
+- name: Hemifield postcue with Landolt-circle counting (fMRI)
+  source:
+    citation: Ruff CC, Kristjansson A, Driver J. Readout from iconic memory and selective spatial attention involve similar
+      neural processes. Psychological Science. 2007;18(10):901-909.
+    doi: 10.1111/j.1467-9280.2007.01998.x
+    year: 2007
+    verified: false
+  note: Six Landolt circles (three per hemifield) for 50 ms; an auditory tone 200 ms after (postcue) or before (precue) the
+    display indicates the hemifield to report; the cued hemifield's gapped targets are counted. Same tone-cued selection scheme;
+    cue set reduced to two hemifields.
+interop:
+  bids_task: partialreport
+notes: 'Sperling 1960 (Crossref). Array size, tone cue, whole-report and partial-report figures and the ~300 ms decay are
+  taken from a secondary description of the 1960 experiments found by web search (Phillips, ''Perception and iconic memory'');
+  the full monograph was not seen. Ruff et al. 2007 (OpenAlex record lists the authors in a different order; published order
+  used) supports both markers: postcue readout and precued attention modulated contralateral lateral occipital cortex and
+  engaged a common frontoparietal network. The Ruff configuration (two cue classes) may deserve its own serial number (criterion
+  1); kept as a variant pending maintainer decision. No public dataset verified. [curator_d sprint 6, 2026-10-16]'
+status: draft
+contributors:
+- curator_d

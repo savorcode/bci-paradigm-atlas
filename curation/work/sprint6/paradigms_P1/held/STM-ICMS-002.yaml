@@ -1,0 +1,81 @@
+schema_version: '0.2'
+id: STM-ICMS-002
+class: STM-ICMS
+name:
+  en: Closed-loop ICMS tactile feedback during intracortical BCI control of a robotic arm
+  zh: 皮层内脑机接口控制机械臂时的闭环 ICMS 触觉反馈
+aliases:
+- bidirectional BCI
+- bidirectional intracortical BCI
+- ICMS tactile feedback
+- artificial touch
+- sensorimotor BCI with ICMS feedback
+family: stimulation
+bci_category:
+- active
+recording_modality:
+- intracortical
+stimulus_modality:
+- electrical_stimulation
+- visual
+markers:
+- MK.motor_cortical_spiking
+description:
+  en: >-
+    A participant with tetraplegia controls a robotic arm and hand through an intracortical BCI decoding motor cortex firing
+    rates, while torque sensors in the robotic fingers drive microstimulation of electrodes in somatosensory cortex whose
+    projected fields lie on the corresponding fingers. Stimulation amplitude follows the measured finger torque in real time,
+    so the participant feels contact and grip force. Performance on clinical grasp-and-transfer tasks is compared between
+    blocks with and without ICMS feedback.
+  zh: >-
+    四肢瘫被试通过解码运动皮层放电率的皮层内脑机接口控制机械臂与机械手，机械手指上的扭矩传感器驱动体感皮层相应电极的微刺激，这些电极的投射野位于对应手指。刺激幅度实时跟随测得的手指扭矩，
+    使被试感到接触与握力。比较有、无 ICMS 反馈区组在临床抓取—转移任务中的表现。
+trial_structure:
+  phases:
+  - name: reach
+  - name: grasp
+    note: ICMS active while finger torque exceeds threshold; amplitude updated every 20 ms
+  - name: transport and release
+  typical_trials: 27 ARAT trials per session (9 objects x 3 attempts); 20 two-minute object-transfer trials per condition
+  conditions:
+  - with ICMS feedback
+  - without ICMS feedback (vision only)
+protocol:
+  n_classes: 2
+  classes:
+  - ICMS tactile feedback on
+  - ICMS tactile feedback off
+  cue: objects of the Action Research Arm Test (ARAT) and an object-transfer task
+  stimulus_coding: >-
+    finger torque (0.1-0.5 Nm) mapped linearly to stimulation amplitude (14-64 uA) at 100 pulses/s on electrodes with
+    finger-specific projected fields
+  paradigm_timing: continuous
+  feedback: continuous
+  distinguishing: >-
+    准则 4 与 3（相对 STM-ICMS-001）：ICMS 在脑机接口控制中由机械手扭矩传感器闭环驱动，提供连续触觉反馈；试次为功能性抓取—转移任务，而非开环心理物理试次。
+    Criterion 4 vs STM-ICMS-001: ICMS is delivered in closed loop as continuous tactile feedback from robotic-hand torque
+    sensors during intracortical BCI control (Flesher et al. 2021); criterion 3: functional-task trials instead of
+    two-interval psychophysics.
+first_source:
+  citation: >-
+    Flesher SN, Downey JE, Weiss JM, Hughes CL, Herrera AJ, Tyler-Kabara EC, Boninger ML, Collinger JL, Gaunt RA. A
+    brain-computer interface that evokes tactile sensations improves robotic arm control. Science. 2021;372(6544):831-836.
+  doi: 10.1126/science.abd0380
+  year: 2021
+  verified: false
+interop:
+  bids_task: icmsfeedback
+notes: >-
+  [curator_b sprint 6, 2026-10-16] Bidirectional configuration of the reinstated STM-ICMS class (D-009 conflict, see
+  worklog). Task numbers in trial_structure and protocol (ARAT 27 trials per session, torque 0.1-0.5 Nm mapped to 14-64 uA,
+  100 pulses/s, 20-ms update, four sessions with and four matched sessions without ICMS, two 88-channel arrays in M1 for a
+  5-DoF velocity decoder) come from the bioRxiv preprint of this study (Flesher et al. 2019, "Restored tactile
+  sensation improves neuroprosthetic arm control", doi:10.1101/653428; Crossref links it as preprint of the Science
+  paper), not yet checked against the published version. The published abstract reports that grasp time was roughly halved with ICMS feedback. Decoding uses
+  motor cortical spiking (MK.motor_cortical_spiking, established in MOT-CURSOR and MOT-GRASP); no marker for the
+  stimulation-evoked activity exists (request in marker_requests.csv). Relation to MOT-GRASP-001 and MOT-CURSOR-001, whose
+  notes mention ICMS feedback as background: this file is the stimulation-side record of that configuration; the motor
+  decoding protocols stay in the motor family. bibliography confirmed (Crossref, 2026-10-16)
+status: draft
+contributors:
+- curator_b

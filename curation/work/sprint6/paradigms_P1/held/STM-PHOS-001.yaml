@@ -1,0 +1,94 @@
+schema_version: '0.2'
+id: STM-PHOS-001
+class: STM-PHOS
+name:
+  en: Single-electrode visual cortex stimulation with phosphene mapping
+  zh: 视皮层单电极刺激与光幻视定位
+aliases:
+- phosphene mapping
+- visual cortical prosthesis
+- cortical visual prosthesis
+- electrical stimulation of visual cortex
+- V1 microstimulation
+family: stimulation
+bci_category:
+- none
+recording_modality:
+- intracortical
+- ECoG
+stimulus_modality:
+- electrical_stimulation
+markers:
+- MK.BOLD_visual_cortex
+description:
+  en: >-
+    Electrodes on the surface of, or inserted into, occipital visual cortex are stimulated one at a time with short trains
+    of current pulses in a blind (or, during epilepsy monitoring, sighted) participant. The participant reports whether a
+    phosphene, a small spot of light, is seen, and indicates its position in the visual field and its size and appearance.
+    Thresholds are found by raising the current across trials, and the positions of the phosphenes evoked from the
+    different electrodes form the map that a visual prosthesis uses to present patterns.
+  zh: >-
+    对盲人（或癫痫监测期间的视力正常者）枕叶视皮层表面或皮层内的电极逐一施加短串电流脉冲。被试报告是否看到光幻视（小光点），并指出其在视野中的位置、大小与外观。
+    通过跨试次提高电流测定阈值；各电极诱发的光幻视位置构成视觉假体呈现图形所用的图谱。
+trial_structure:
+  phases:
+  - name: fixation / auditory ready cue
+  - name: stimulation train
+    duration_ms: 200-300
+    note: screening trains in the ECoG study of Beauchamp et al. (preprint); train parameters differ between implants
+  - name: report
+    note: verbal yes/no detection, then drawing or pointing to the phosphene location and outline
+  conditions:
+  - stimulated electrode
+  - current amplitude
+protocol:
+  n_classes: 1
+  classes:
+  - single-electrode stimulation (one electrode per trial)
+  cue: train of biphasic current pulses through one electrode over visual cortex
+  stimulus_coding: one electrode per trial; current raised across trials until a phosphene is reported
+  paradigm_timing: synchronous
+  feedback: none
+  distinguishing: >-
+    标准配置（最早发表，即 first_source）：逐个电极刺激视皮层，被试报告光幻视有无、位置与外观（Brindley & Lewin 1968）。
+    Standard configuration (earliest published): one electrode stimulated per trial, phosphene detection and localisation
+    (Brindley & Lewin 1968). Sibling STM-PHOS-002 differs by stimulus coding (criterion 2: dynamic sequential multi-electrode
+    stimulation tracing a form) and condition set (criterion 1: letters / shapes discriminated by forced choice).
+first_source:
+  citation: >-
+    Brindley GS, Lewin WS. The sensations produced by electrical stimulation of the visual cortex. The Journal of
+    Physiology. 1968;196(2):479-493.
+  doi: 10.1113/jphysiol.1968.sp008519
+  year: 1968
+  verified: false
+variants:
+- name: Intracortical 96-channel microelectrode array in occipital cortex of a blind volunteer (multi-electrode thresholds)
+  source:
+    citation: >-
+      Fernández E, Alfaro A, Soto-Sánchez C, Gonzalez-Lopez P, Lozano AM, Peña S, Grima MD, Rodil A, Gómez B, Chen X,
+      Roelfsema PR, Rolston JD, Davis TS, Normann RA. Visual percepts evoked with an intracortical 96-channel
+      microelectrode array inserted in human occipital cortex. Journal of Clinical Investigation. 2021;131(23):e151331.
+    doi: 10.1172/JCI151331
+    year: 2021
+    verified: false
+  note: >-
+    electrode type and count change (penetrating array instead of surface electrodes); mean single-electrode threshold
+    66.8 +/- 36.5 uA; simultaneous stimulation of several electrodes lowered thresholds; array explanted after about 6 months
+interop:
+  bids_task: phosphene
+notes: >-
+  [curator_b sprint 6, 2026-10-16] first_source: Brindley & Lewin 1968 is the first implanted visual cortical prosthesis
+  (surface electrode array with implanted receivers, blind volunteer) and the standard origin of the paradigm. Historical
+  reviews found by web search name Foerster (1929) as the first to report phosphenes from electrical stimulation of the
+  exposed occipital pole during surgery; no bibliographic record was retrieved, so it is not cited (candidate precursor for
+  the maintainer). The 1968 implant had no recording function: the brain-recording requirement (inclusion criterion 1) is
+  met by the later implementations, which record through the same electrodes (Fernández et al. 2021, intracortical; the
+  ECoG electrodes of Beauchamp et al. 2020, see STM-PHOS-002). Hence recording_modality lists intracortical and ECoG.
+  Marker: the read-out of this paradigm is perceptual; no registry marker indexes stimulation-evoked visual cortex activity.
+  MK.BOLD_visual_cortex is used as the closest existing marker for visual cortex engagement and does not describe a
+  measurement made in these studies; a new marker is requested (marker_requests.csv). TMS-induced phosphenes (phosphene
+  threshold) are a magnetic-stimulation configuration and are not covered here. Train duration in trial_structure is from
+  the bioRxiv preprint of Beauchamp et al. (doi:10.1101/462697). bibliography confirmed (Crossref, 2026-10-16)
+status: draft
+contributors:
+- curator_b

@@ -1,0 +1,91 @@
+schema_version: '0.2'
+id: MEM-CSPAN-002
+class: MEM-CSPAN
+name:
+  en: Operation span (OSPAN)
+  zh: 运算广度（OSPAN）
+aliases:
+- operation span
+- OSPAN
+- automated operation span
+- Aospan
+- operation-word span
+family: memory
+bci_category:
+- none
+recording_modality:
+- EEG
+stimulus_modality:
+- visual
+markers:
+- MK.alpha_posterior
+- MK.frontal_midline_theta
+description:
+  en: Each episode pairs a simple arithmetic equation to verify (for example 'Is (2 x 3) + 1 = 8?') with an item to remember
+    (a word in the original version, a letter in the automated version). After a set of equation-item pairs the items are
+    recalled in order. The span score is the number of items recalled in the correct position, and equation accuracy is monitored
+    to ensure the processing task is performed.
+  zh: 每个单元由一道待核对的简单算式（如“(2×3)+1=8 是否正确？”）和一个待记项目（原版为单词，自动化版为字母）组成。一组算式–项目单元结束后按顺序回忆项目。广度分数为在正确位置回忆的项目数，同时监测算式正确率以确保完成加工任务。
+trial_structure:
+  phases:
+  - name: equation verification
+    duration_ms: individual limit
+    note: 'automated version: time limit = practice mean + 2.5 SD (Unsworth et al. 2005; to be checked)'
+  - name: to-be-remembered letter
+    duration_ms: 800
+    note: automated version (to be checked)
+  - name: repeat for set size
+    note: set sizes 3-7 in the automated version; 2-6 words in the original
+  - name: ordered recall
+    duration_ms: self-paced
+    note: letter matrix click-recall in the automated version
+  typical_trials: 15 sets (3 per set size 3-7) in the automated version
+  conditions:
+  - set size 3
+  - set size 4
+  - set size 5
+  - set size 6
+  - set size 7
+protocol:
+  n_classes: 5
+  classes:
+  - set size 3
+  - set size 4
+  - set size 5
+  - set size 6
+  - set size 7
+  cue: arithmetic equations to verify interleaved with words or letters to remember
+  stimulus_coding: processing = equation verification; storage = words (original) or letters (automated)
+  paradigm_timing: synchronous
+  feedback: none
+  distinguishing: 与 MEM-CSPAN-001 的区别：加工任务为算式核对而非朗读句子（准则 2）。源头：Turner 与 Engle 1989。自动化版（Unsworth 等 2005）暂记入 variants；其每组反馈可能构成准则
+    4，已在 proposals.csv 提请维护者决定是否另立序号。
+first_source:
+  citation: Turner ML, Engle RW. Is working memory capacity task dependent? Journal of Memory and Language. 1989;28(2):127-154.
+  doi: 10.1016/0749-596X(89)90040-5
+  year: 1989
+  verified: false
+variants:
+- name: Automated operation span (Aospan)
+  source:
+    citation: Unsworth N, Heitz RP, Schrock JC, Engle RW. An automated version of the operation span task. Behavior Research
+      Methods. 2005;37(3):498-505.
+    doi: 10.3758/BF03192720
+    year: 2005
+    verified: false
+  note: Computer-administered, letters instead of words, individual time limit for the equations, set sizes 3-7, recall by
+    clicking letters in a matrix; feedback on recall and equation accuracy after each set.
+interop:
+  bids_task: operationspan
+  cognitive_atlas_task: trm_4c40d10cd776e
+notes: 'Turner & Engle 1989 (Crossref). Set sizes and timing in trial_structure follow the automated version (Unsworth et
+  al. 2005, Crossref); the 800 ms letter duration and mean + 2.5 SD time limit are from general knowledge of that paper and
+  are to be checked. Feedback recorded as none for the 1989 procedure (not confirmed from the full text); the automated version
+  gives recall and math-accuracy feedback after each set, which may justify a separate serial number (criterion 4; see proposals.csv).
+  Example equation and set range also appear in the HED task description of the operation span task. Scharinger et al. 2017
+  (Crossref) recorded EEG during an operation span task: prolonged parietal alpha effects and smaller frontal theta increases
+  than n-back, supporting both markers (theta weaker). Conway et al. 2005 is the methodological review. Cognitive Atlas term
+  trm_4c40d10cd776e (operation span task). No public dataset verified. [curator_d sprint 6, 2026-10-16]'
+status: draft
+contributors:
+- curator_d

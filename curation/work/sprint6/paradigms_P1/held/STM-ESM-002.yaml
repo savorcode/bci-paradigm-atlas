@@ -1,0 +1,76 @@
+schema_version: '0.2'
+id: STM-ESM-002
+class: STM-ESM
+name:
+  en: Electrical stimulation mapping of language cortex during object naming
+  zh: 物体命名任务中的语言皮层电刺激定位
+aliases:
+- language mapping
+- cortical language mapping
+- naming during cortical stimulation
+- speech arrest mapping
+family: stimulation
+bci_category:
+- none
+recording_modality:
+- ECoG
+- sEEG
+stimulus_modality:
+- electrical_stimulation
+- visual
+markers:
+- MK.CCEP
+- MK.high_gamma
+description:
+  en: >-
+    While the patient names pictures of objects shown one at a time (or reads, counts or answers questions), stimulation
+    trains are delivered to one cortical site at a time, timed to the onset of a picture, at a current just below the
+    afterdischarge threshold. Naming errors, anomia or speech arrest on stimulated trials, compared with unstimulated
+    trials, mark essential language sites, which are spared at resection.
+  zh: >-
+    患者逐张为物体图片命名（或朗读、计数、回答问题）时，于图片出现时向某一皮层部位施加刺激串，电流略低于后放电阈值。与未刺激试次相比，刺激试次中出现的命名错误、
+    命名不能或言语中断标记必需语言区，切除时予以保留。
+trial_structure:
+  phases:
+  - name: picture onset with stimulation
+    note: train delivered with the picture and through the response window (exact onset relative to the picture to be checked in Ojemann et al. 1989); language trains are usually 10 s or less (Ritaccio et al. 2018)
+  - name: naming response
+    note: correct naming, error, anomia or arrest scored
+  - name: unstimulated control trials
+    note: interleaved trials without stimulation
+  conditions:
+  - stimulated naming trial
+  - unstimulated naming trial
+protocol:
+  n_classes: 2
+  classes:
+  - naming with stimulation
+  - naming without stimulation
+  cue: line drawings / pictures of objects to be named
+  stimulus_coding: 50/60-Hz pulse trains time-locked to picture onset at sub-afterdischarge current
+  paradigm_timing: synchronous
+  feedback: none
+  distinguishing: >-
+    准则 1 与 3（相对 STM-ESM-001）：刺激期间被试执行语言任务（图片命名），以刺激与未刺激命名试次的对比为条件集，试次与图片呈现锁时；而非观察诱发运动与感觉（Ojemann et al. 1989）。
+    Criteria 1 and 3 vs STM-ESM-001: a language task is performed during stimulation, the condition set is stimulated vs
+    unstimulated naming trials and trials are locked to picture onset, instead of observing evoked movement and sensation
+    (Ojemann et al. 1989).
+first_source:
+  citation: >-
+    Ojemann G, Ojemann J, Lettich E, Berger M. Cortical language localization in left, dominant hemisphere: an electrical
+    stimulation mapping investigation in 117 patients. Journal of Neurosurgery. 1989;71(3):316-326.
+  doi: 10.3171/jns.1989.71.3.0316
+  year: 1989
+  verified: false
+interop:
+  bids_task: esmnaming
+notes: >-
+  [curator_b sprint 6, 2026-10-16] first_source: Ojemann et al. 1989 is the standard reference for naming-based
+  stimulation mapping of language cortex (117 patients); whether an earlier paper by the same group introduced the
+  object-naming procedure was not checked (origin candidate only). Ritaccio et al. 2018 (doi:10.1097/WNP.0000000000000440)
+  notes that naming alone misses a substantial share of language sites, so centres add reading, comprehension and
+  spontaneous speech; these task substitutions are parameter-level and can be added as variants. Markers as in
+  STM-ESM-001 (closest only). bibliography confirmed (Crossref, 2026-10-16)
+status: draft
+contributors:
+- curator_b

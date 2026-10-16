@@ -1,0 +1,81 @@
+schema_version: '0.2'
+id: PER-TIME-001
+class: PER-TIME
+name:
+  en: Temporal order judgement (TOJ)
+  zh: 时间顺序判断（TOJ）
+aliases:
+- temporal order judgement
+- temporal order judgment
+- TOJ
+- which-first judgement
+family: perception
+bci_category:
+- none
+recording_modality:
+- EEG
+- MEG
+stimulus_modality:
+- visual
+- auditory
+- somatosensory
+markers:
+- MK.alpha_posterior
+description:
+  en: Two brief stimuli, presented in the same or in different sense modalities (light flashes, clicks, vibrotactile pulses),
+    are separated by a variable SOA. The observer reports which stimulus came first (two-alternative forced choice). The proportion
+    of 'first' responses as a function of SOA gives the just noticeable difference and the point of subjective simultaneity;
+    Hirsh and Sherrick found similar order thresholds of about 20 ms across modality pairings.
+  zh: 在同一或不同感觉通道呈现两个短暂刺激（闪光、咔嗒声、振动触觉脉冲），二者间隔可变的 SOA。被试报告哪个刺激先出现（二选一迫选）。“先出现”反应比例随 SOA 的变化给出最小可觉差和主观同时点；Hirsh 与 Sherrick 发现不同通道组合的顺序阈值相近，约
+    20 ms。
+trial_structure:
+  phases:
+  - name: fixation / warning
+    duration_ms: 500-1000
+    note: typical; not specified in the retrieved records
+  - name: stimulus pair
+    duration_ms: SOA 0-200
+    note: two brief stimuli; SOA sampled by method of constant stimuli or staircase; thresholds near 20 ms
+  - name: response
+    duration_ms: self-paced
+    note: which came first (2AFC)
+  typical_trials: 10-40 per SOA
+  conditions:
+  - stimulus A first
+  - stimulus B first
+protocol:
+  n_classes: 2
+  classes:
+  - A first
+  - B first
+  cue: pairs of brief stimuli (flash, click or vibrotactile pulse) within or across modalities
+  stimulus_coding: SOA varied; response = order of the two stimuli
+  paradigm_timing: synchronous
+  feedback: none
+  distinguishing: 标准配置（最早发表，即 first_source）：两个短暂刺激以可变 SOA 呈现，被试判断哪个先出现（二选一）。同类其他具体范式：PER-TIME-002 同时性判断（反应类别不同，准则 1）。
+first_source:
+  citation: Hirsh IJ, Sherrick CE. Perceived order in different sense modalities. Journal of Experimental Psychology. 1961;62(5):423-432.
+  doi: 10.1037/h0045283
+  year: 1961
+  verified: false
+variants:
+- name: Neural framing of order judgements by posterior alpha phase
+  source:
+    citation: Varela FJ, Toro A, John ER, Schwartz EL. Perceptual framing and cortical alpha rhythm. Neuropsychologia. 1981;19(5):675-686.
+      (first author spelled 'Valera' in the Crossref record)
+    doi: 10.1016/0028-3932(81)90005-1
+    year: 1981
+    verified: false
+  note: Stimulus pairs triggered at different phases of the occipital alpha rhythm; same two-stimulus judgement with EEG-locked
+    timing (a parameter-level change).
+interop:
+  bids_task: temporalorder
+notes: 'Hirsh & Sherrick 1961 (Crossref record) is the earliest retrieved record of the order-judgement task across modalities;
+  the ~20 ms threshold is quoted from a secondary summary (Seminars in Hearing 2004 retrospective) found by web search, the
+  full text was not seen. Phase durations are typical values, not from the first source. Marker: MK.alpha_posterior is the
+  closest registry marker for the alpha-phase framing account (Varela et al. 1981); no registry marker indexes order judgement
+  directly (see marker_requests.csv). Vroomen & Keetels 2010 review the TOJ/SJ methods. No public dataset verified. [curator_a
+  sprint 6, 2026-10-16]'
+status: draft
+contributors:
+- curator_a
