@@ -1,0 +1,94 @@
+schema_version: '0.2'
+id: MEM-CSPAN-003
+class: MEM-CSPAN
+name:
+  en: Automated operation span with per-set feedback (Aospan)
+  zh: 带每组反馈的自动化运算广度（Aospan）
+aliases:
+- automated operation span
+- Aospan
+- automated OSPAN
+family: memory
+bci_category:
+- none
+recording_modality:
+- EEG
+stimulus_modality:
+- visual
+markers:
+- MK.alpha_posterior
+- MK.frontal_midline_theta
+description:
+  en: >-
+    The task is computer-administered and self-contained. After practice of letter span, of the arithmetic alone (which sets
+    an individual time limit for the equations) and of combined trials, each episode shows an arithmetic operation to solve
+    and verify, followed by a letter to remember for 800 ms. After a set of three to seven episodes the participant recalls
+    the letters in order by clicking them in a 4 x 3 letter matrix. After each set the computer shows how many letters were
+    recalled correctly, and the running percentage of correct equations is shown during recall, with the instruction to keep
+    equation accuracy at or above 85%.
+  zh: >-
+    任务完全由计算机施测。先分别练习字母广度、单独的算术（据此确定每人的算式时限）以及组合试次；正式任务中每个单元先呈现一道需求解并核对的算式，再呈现一个待记字母（800 ms）。
+    一组 3 至 7 个单元结束后，被试在 4×3 字母矩阵中按顺序点击回忆字母。每组结束后计算机显示本组正确回忆的字母数，回忆时同时显示累计算式正确率，并要求算式正确率保持在 85% 以上。
+trial_structure:
+  phases:
+  - name: equation (solve, then verify the presented answer)
+    duration_ms: individual limit
+    note: mean of the math practice + 2.5 SD
+  - name: to-be-remembered letter
+    duration_ms: 800
+  - name: repeat for set size
+    note: set sizes 3-7
+  - name: ordered recall
+    duration_ms: self-paced
+    note: clicking letters in a 4 x 3 matrix; untimed
+  - name: feedback
+    duration_ms: 2000
+    note: letters recalled correctly in the set; math accuracy percentage shown in red during recall
+  typical_trials: 15 sets (3 per set size 3-7; 75 letters and 75 equations)
+  conditions:
+  - set size 3
+  - set size 4
+  - set size 5
+  - set size 6
+  - set size 7
+protocol:
+  n_classes: 5
+  classes:
+  - set size 3
+  - set size 4
+  - set size 5
+  - set size 6
+  - set size 7
+  cue: arithmetic operations to verify interleaved with letters to remember; letter-matrix recall
+  stimulus_coding: processing = equation verification under an individual time limit; storage = letters
+  paradigm_timing: synchronous
+  feedback: discrete
+  distinguishing: >-
+    Criterion 4 vs MEM-CSPAN-002: feedback after each set (letters recalled correctly; running equation accuracy with an 85%
+    criterion) instead of no feedback in the 1989 procedure. The change of storage items (letters instead of words) and of
+    recall mode (matrix clicking instead of written recall) are further cue/stimulus differences (criterion 2). Vs
+    MEM-CSPAN-001: criteria 2 and 4. D-057 re-check: the set-size range (3-7 vs 2-6) and the individual time limit alone would
+    be parameters; the feedback mode is the criterion that warrants the serial number.
+first_source:
+  citation: >-
+    Unsworth N, Heitz RP, Schrock JC, et al. An automated version of the operation span task. Behav Res Methods.
+    2005;37(3):498-505.
+  doi: 10.3758/BF03192720
+  year: 2005
+  verified: false
+interop:
+  bids_task: operationspan
+  cognitive_atlas_task: trm_4c40d10cd776e
+notes: >-
+  Unsworth et al. 2005 (Crossref record; procedure from the publisher's full text: feedback after recall on the number of
+  letters correctly recalled, math accuracy percentage in red, 85% criterion, 800 ms letters, time limit = practice mean +
+  2.5 SD, set sizes 3-7 with three sets each, 4 x 3 letter matrix, untimed recall). Moved from a variant of MEM-CSPAN-002
+  (D-079). That the 1989 procedure gave no feedback is still taken from the MEM-CSPAN-002 record and has not been confirmed
+  from the Turner & Engle full text; if it did give feedback, this file reduces to a criterion-2 difference only, which still
+  holds. Markers: Scharinger et al. 2017 (EEG during an operation span task, see MEM-CSPAN-002 notes) supports both class
+  markers for operation span; whether that study used the automated version was not checked. Cognitive Atlas term
+  trm_4c40d10cd776e (operation span task) is shared with MEM-CSPAN-002. No public dataset verified.
+  [curator_d sprint 7, 2026-10-17]
+status: draft
+contributors:
+- curator_d

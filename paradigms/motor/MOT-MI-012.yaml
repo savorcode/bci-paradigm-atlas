@@ -1,0 +1,68 @@
+schema_version: '0.2'
+id: MOT-MI-012
+class: MOT-MI
+name:
+  en: Foot motor imagery brain switch triggering FES of hand grasp
+  zh: 足部运动想象脑开关触发手抓握功能性电刺激
+aliases:
+- thought-controlled FES
+- MI-triggered functional electrical stimulation
+- beta burst brain switch for grasp
+family: motor
+bci_category:
+- active
+recording_modality:
+- EEG
+stimulus_modality:
+- mental_imagery
+- electrical_stimulation
+markers:
+- MK.SMR_ERD
+description:
+  en: >-
+    A participant with tetraplegia imagines foot movement to produce bursts of beta oscillations in the EEG. When the
+    band-power of the beta activity crosses a threshold, a trigger is sent to a functional electrical stimulation system
+    on the paralysed forearm and hand, and each trigger advances the stimulation to the next phase of a grasp sequence, so
+    that the patient can grasp an object with the paralysed hand. The FES-produced hand movement is the feedback of each
+    detection.
+  zh: >-
+    四肢瘫被试通过想象足部动作在脑电中产生 β 振荡爆发。当 β 活动的频带功率超过阈值时，向瘫痪前臂与手部的功能性电刺激系统发送触发信号，每次触发使刺激进入抓握序列的下一阶段，
+    使患者能用瘫痪的手抓取物体。由 FES 产生的手部动作即为每次检测的反馈。
+trial_structure:
+  conditions:
+  - foot motor imagery (beta burst)
+  - no imagery
+protocol:
+  n_classes: 2
+  classes:
+  - foot motor imagery
+  - rest
+  cue: imagery of foot movement; cue and pacing of the 2003 sessions to be checked
+  stimulus_coding: beta band-power threshold detection; each detection advances one phase of the FES grasp sequence
+  feedback: discrete
+  distinguishing: >-
+    Criterion 4 vs MOT-MI-004: same class set (foot imagery vs rest, detected from beta activity) but each detection drives
+    functional electrical stimulation that produces a phase of hand grasp (discrete feedback through the stimulated movement)
+    instead of no feedback. Vs MOT-MI-001: criteria 1 and 4.
+first_source:
+  citation: >-
+    Pfurtscheller G, Müller GR, Pfurtscheller J, et al. 'Thought' – control of functional electrical stimulation to restore
+    hand grasp in a patient with tetraplegia. Neurosci Lett. 2003;351(1):33-36.
+  doi: 10.1016/S0304-3940(03)00947-9
+  year: 2003
+  verified: false
+interop:
+  bids_task: motorimagery
+notes: >-
+  Pfurtscheller et al. 2003 (Crossref record, no abstract). The abstract was not retrieved (bibliographic databases showed
+  metadata only; one repository summary states that the patient generated bursts of beta oscillations by imagination of
+  foot movement). Threshold detection of band-passed and squared beta activity from one EEG channel and the four-phase grasp
+  sequence are taken from the abstract of the follow-up paper by the same group (Pfurtscheller et al. 2005, EURASIP Journal
+  on Advances in Signal Processing, asynchronous operation; DOI not retrieved from Crossref, not cited), and must be checked
+  against the 2003 full text, together with whether the 2003 sessions were cue-paced (paradigm_timing left out). The
+  asynchronous 2005 operation would be a separate serial number (criterion 3). This 2003 paper predates the first_source of
+  MOT-MI-004 (Pfurtscheller & Solis-Escalante 2009); suggested note for MOT-MI-004 recorded in the sprint 7 change list.
+  Replaces the provisional class MOT-FES (D-079). No public dataset verified. [curator_b sprint 7, 2026-10-17]
+status: draft
+contributors:
+- curator_b

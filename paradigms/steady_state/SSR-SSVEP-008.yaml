@@ -40,6 +40,16 @@ first_source:
   doi: 10.1155/2009/864564
   year: 2009
   verified: false
+variants:
+- name: "Hybrid: P300 + SSVEP control-state detection (PER-ODD-001)"
+  source:
+    citation: Panicker RC, Puthusserypady S, Sun Y. An asynchronous P300 BCI with SSVEP-based control state detection. IEEE
+      Trans Biomed Eng. 2011;58(6):1781-1788.
+    doi: 10.1109/TBME.2011.2116018
+    year: 2011
+    verified: false
+  note: Cross-family hybrid marker (D-022), not a parameter variant. Asynchronous P300 selection in which an SSVEP elicited by
+    the stimuli detects whether the user is in a control state; details beyond the title and bibliographic record were not read.
 interop:
   bids_task: ssvep
 notes: 'Leads: web search S2A28 [=R1280]; Zhang Z, Deng Z. A two-stage state recognition method for asynchronous SSVEP-based
@@ -48,7 +58,7 @@ notes: 'Leads: web search S2A28 [=R1280]; Zhang Z, Deng Z. A two-stage state rec
   Origin to be located by the maintainer (D-032). New in sprint 2. [curator_e sprint 3, 2026-10-05] candidate origin found
   by bibliographic search (OpenAlex, 2026-10-05); content unverified. [maintainer sprint 3, 2026-10-07] bibliography confirmed
   (OpenAlex, 2026-10-05; origin candidate, content unverified). [maintainer sprint 3, 2026-10-07, D-073] origin candidate
-  recalled, record confirmed via OpenAlex.'
+  recalled, record confirmed via OpenAlex. [curator_a sprint 7, 2026-10-17] D-022 hybrid variant added for the DTU lead noted above (Panicker et al. 2011, Crossref record); mirrored on PER-ODD-001.'
 status: draft
 contributors:
 - curator_a

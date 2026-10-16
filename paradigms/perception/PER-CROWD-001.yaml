@@ -55,15 +55,6 @@ first_source:
   doi: 10.1038/226177a0
   year: 1970
   verified: false
-variants:
-- name: Vernier target with flanking lines of equal or longer length (EEG)
-  source:
-    citation: Chicherov V, Plomp G, Herzog MH. Neural correlates of visual crowding. NeuroImage. 2014;93:23-31.
-    doi: 10.1016/j.neuroimage.2014.02.021
-    year: 2014
-    verified: false
-  note: Same target/flanker logic with a vernier offset discrimination; grouping of equal-length flankers increases crowding.
-    Recorded with high-density EEG (N1 suppression). Parameter-level change of target type within the same flanker scheme.
 interop:
   bids_task: crowding
 notes: Bouma 1970 (Crossref) gives the critical spacing of about half the eccentricity; the procedural details of the 1970
@@ -71,7 +62,8 @@ notes: Bouma 1970 (Crossref) gives the critical spacing of about half the eccent
   and Whitney & Levi 2011 are the standard reviews. Chicherov et al. 2014 (OpenAlex record; Crossref rate-limited) supports
   the marker MK.N1_visual. The vernier configuration was put in variants because the trial structure and flanker manipulation
   are the same; the maintainer may prefer a separate serial number (criterion 2, stimulus type). No public dataset verified.
-  [curator_a sprint 6, 2026-10-16]
+  [curator_a sprint 6, 2026-10-16] The vernier configuration is now PER-CROWD-002 (criteria 1 and 2, vernier offset target
+  and flanker-length conditions; D-079) and its variant entry was removed here. [curator_a sprint 7, 2026-10-17]
 status: draft
 contributors:
 - curator_a
