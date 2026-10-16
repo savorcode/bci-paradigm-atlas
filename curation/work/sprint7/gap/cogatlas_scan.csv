@@ -1,0 +1,853 @@
+cogatlas_id,task_name,decision,atlas_class_or_candidate,note
+trm_5667451917a34,2-stage decision task,covered,ERR-TS,
+trm_5667441c338a7,2nd-order rule acquisition,candidate,CTL-HRULE,gap candidate (gap_candidates.csv)
+trm_523c7a0a73cf5,aberrant behavior checklist - community,excluded,,"questionnaire, rating scale, interview or standardized test battery"
+trm_4ebd44cd88360,abstract/concrete judgment: bilingual,covered,LAN-SEMD,
+trm_4f24126c22011,abstract/concrete task,covered,LAN-SEMD,
+trm_551f151f7347e,acquired equivalence,covered,MEM-AI,
+tsk_4a57abb94981d,action imitation task,covered,SOC-IMIT,
+tsk_4a57abb949846,action observation task,covered,MOT-OBS,
+trm_551b15af981c6,action-perception loop,candidate,MOT-SATT,gap candidate (gap_candidates.csv)
+trm_4c8989e1f3df7,acupuncture task,candidate,STM-ACUP,gap candidate (gap_candidates.csv)
+trm_56674e49d15e9,Adaptation of marshmellow test,excluded,,behavioural/neuropsychological test without an established neural read-out
+trm_56674133b666c,adaptive n-back task,covered,MEM-NBK,
+trm_523df616da8a6,adolescent symptom inventory,excluded,,"questionnaire, rating scale, interview or standardized test battery"
+trm_5586ff878155d,Adult ADHD Clinical Diagnostic Scale,excluded,,"questionnaire, rating scale, interview or standardized test battery"
+trm_55a6a79b55c8b,Adult ADHD Self-Report Scale,excluded,,"questionnaire, rating scale, interview or standardized test battery"
+tsk_4a57abb949858,adult attachment interview,excluded,,"questionnaire, rating scale, interview or standardized test battery"
+trm_523ca67b786d5,adult behavior checklist,excluded,,"questionnaire, rating scale, interview or standardized test battery"
+trm_56a2a665baeb1,Adult's Penn Word Memory Test Delayed Memory,excluded,,"questionnaire, rating scale, interview or standardized test battery"
+tsk_STbROQuOk0Qo5,Aesthetic Exprience Questionnaire (AEQ),excluded,,"questionnaire, rating scale, interview or standardized test battery"
+trm_4da88b8b60ffb,alternating runs paradigm,covered,CTL-SW,
+trm_502abd109f255,ambiguous figure task,covered,PER-BR,
+trm_5798fa39b4315,American National Adult Reading Test,excluded,,behavioural/neuropsychological test without an established neural read-out
+trm_4f244f0286947,analogical reasoning task,covered,CTL-ANAL,
+trm_5667488d52ccc,Angling Risk Task,covered,CTL-MIXG,
+tsk_zhAW4G31jTPrw,Angling Risk Task – Always Sunny,covered,CTL-MIXG,
+trm_4da88bd4412da,animal naming task,covered,LAN-VF,
+trm_551f0857e1db8,ANT task,covered,CTL-ANT,
+tsk_4a57abb949869,antisaccade/prosaccade task,covered,CTL-AS,
+tsk_L1akyyjEGdiUs,Anxiety Sensitivity Index - 3 (ASI-3),excluded,,"questionnaire, rating scale, interview or standardized test battery"
+trm_502ad907e3299,apparent verticality judgment,excluded,,behavioural/neuropsychological test without an established neural read-out
+trm_50f5822624e53,articulatory suppression task,covered,MEM-DS,
+trm_4f244a88013ae,artificial grammar learning task,covered,LAN-AGL,
+trm_553ec64e6cb1b,associative memory encoding task,covered,MEM-PA,
+trm_56a2a8d78dd39,Ataxia,excluded,,behavioural/neuropsychological test without an established neural read-out
+trm_50df0d8dc717b,attention bias,covered,EMO-DOT,
+trm_4da6304c9aa23,attention networks test,covered,CTL-ANT,
+trm_4f241614d4a25,attention switching task,covered,CTL-SW,
+trm_551f06a08dcc4,attentional blink paradigm,covered,PER-AB,
+tsk_YrmQX6rtPeujt,attribute amnesia,excluded,,behavioural/neuropsychological test without an established neural read-out
+trm_5550e5011ce10,audio narrative,covered,LAN-NAT,
+tsk_4a57abb949889,audio-visual target detection task,covered,PER-ODD,
+trm_551b1b6f6a262,auditory masking task,covered,PER-AMASK,
+trm_551b1460e89a3,auditory scene perception,covered,PER-STREAM,
+trm_4f240e7f989f8,auditory temporal discrimination task,candidate,PER-GAPD,gap candidate (gap_candidates.csv)
+trm_525d847e2bd0b,autism diagnostic interview - revised,excluded,,"questionnaire, rating scale, interview or standardized test battery"
+trm_4da891a546d8c,autism diagnostic observation schedule,excluded,,"questionnaire, rating scale, interview or standardized test battery"
+trm_51d6fe3f3942f,autism spectrum quotient,excluded,,"questionnaire, rating scale, interview or standardized test battery"
+trm_4f244d2a54e27,autobiographical memory task,covered,EMO-AUTO,
+trm_4c40d2a93ea15,AX-CPT task,covered,CTL-CPT,
+trm_515495b718cd6,AX-DPX,covered,CTL-CPT,
+trm_4a3fd79d09b6d,backward masking,covered,PER-MASK,
+tsk_4a57abb94989b,backward digit span task,covered,MEM-DS,
+trm_4d559bcd67c18,balloon analogue risk task,covered,CTL-MIXG,
+trm_55a6a8e81b7f4,Barratt Impulsiveness Scale,excluded,,"questionnaire, rating scale, interview or standardized test battery"
+trm_523e10cad0ce6,battelle developmental inventory,excluded,,"questionnaire, rating scale, interview or standardized test battery"
+trm_553e77887abc7,Becker-Degroot-Marschak (BDM) procedure,covered,CTL-VBC,
+trm_523f58d91f2c0,beery-buktenica developmental test of visual-motor integration,excluded,,behavioural/neuropsychological test without an established neural read-out
+trm_56a9137d9dce1,behavioral approach/inhibition systems,excluded,,"questionnaire, rating scale, interview or standardized test battery"
+trm_4d54b8361e93e,behavioral investment allocation strategy,covered,CTL-VBC,
+tsk_4a57abb9498ab,behavioral rating inventory of executive function,excluded,,"questionnaire, rating scale, interview or standardized test battery"
+tsk_4a57abb9498bc,Benton facial recognition test,covered,PER-FACE,
+trm_5696a599bfcb6,Bickel Titrator,covered,CTL-DD,
+trm_523f5c17d7edb,big five questionnaire,excluded,,"questionnaire, rating scale, interview or standardized test battery"
+trm_50f72fafa53ec,big/little circle,generic,,"umbrella label, design manipulation or method rather than a paradigm"
+trm_4f244f997615c,bimanual coordination task,covered,MOT-BIMAN,
+trm_58a5d31f5c72d,Biological Motion Perception (Passive Viewing) Paradigm,covered,SOC-BIO,
+trm_4f245326e2eaf,biological motion task,covered,SOC-BIO,
+trm_579640ddba2c0,Birkbeck Reversible Sentence Comprehension Test,excluded,,behavioural/neuropsychological test without an established neural read-out
+tsk_4a57abb9498ce,Birmingham object recognition battery,excluded,,"questionnaire, rating scale, interview or standardized test battery"
+trm_5519c4bb1d1ee,Bistability,generic,,"umbrella label, design manipulation or method rather than a paradigm"
+trm_553fce5d21da7,Bistable percept paradigm,covered,PER-BR,
+trm_4b7497a289534,block design test,excluded,,behavioural/neuropsychological test without an established neural read-out
+tsk_4a57abb9498df,block tapping test,covered,MEM-SWM,
+trm_551f0757982bc,Blocked channel-selection task,generic,,"umbrella label, design manipulation or method rather than a paradigm"
+trm_5879199fde201,body image self-reflection task,covered,MEM-SRE,
+tsk_4a57abb9498ef,boston naming test,covered,LAN-PN,
+tsk_ovuQxhbAPPMLs,Boston Naming Test,covered,LAN-PN,
+trm_4c898a20eb254,braille reading task,candidate,LAN-BRAIL,gap candidate (gap_candidates.csv)
+trm_4c898a680e424,breath-holding,candidate,STA-RESP,gap candidate (gap_candidates.csv)
+trm_55a6a52537c2b,Brief Psychiatric Rating Scale,excluded,,"questionnaire, rating scale, interview or standardized test battery"
+tsk_NrSniDhXY2NKm,Brief Risk-Resilience Index for Screening (BRISC),excluded,,"questionnaire, rating scale, interview or standardized test battery"
+trm_56a915461cd91,brief self control scale,excluded,,"questionnaire, rating scale, interview or standardized test battery"
+trm_52405b6f7ebe9,brief symptom inventory,excluded,,"questionnaire, rating scale, interview or standardized test battery"
+trm_4da88c5302e06,Brixton spatial anticipation test,excluded,,behavioural/neuropsychological test without an established neural read-out
+trm_523dfd5b7a9f1,broad autism phenotype questionnaire,excluded,,"questionnaire, rating scale, interview or standardized test battery"
+trm_524055ac4fecf,broader phenotype autism symptom scale,excluded,,"questionnaire, rating scale, interview or standardized test battery"
+trm_4da6331cdeeb5,California Verbal Learning Test,covered,MEM-FR,
+tsk_4a57abb949900,California Verbal Learning Test-II,covered,MEM-FR,
+tsk_4a57abb949912,Cambridge Face Memory Test,covered,MEM-CFMT,
+trm_4d54b2cc0f943,Cambridge Gambling Task,covered,CTL-MIXG,
+trm_4da880ff8fd4a,Cambridge Neuropsychological Test Automated Battery,excluded,,"questionnaire, rating scale, interview or standardized test battery"
+trm_4f242042e5805,Cambridge risk task,covered,CTL-MIXG,
+trm_4e6a2f61b17b0,capsaicin-evoked pain,candidate,PER-TONIC,gap candidate (gap_candidates.csv)
+trm_4da88bff0507c,CatBat task,excluded,,behavioural/neuropsychological test without an established neural read-out
+trm_4f24112057e90,categorization task,candidate,ERR-PROTO,gap candidate (gap_candidates.csv)
+tsk_4a57abb949923,category fluency test,covered,LAN-VF,
+tsk_37y3EdRertJba,CAToon (cognitive and affective Theory of Mind Cartoon Task),covered,SOC-TOM,
+trm_4da86c6808ddd,Cattell's Culture Fair Intelligence Test,excluded,,behavioural/neuropsychological test without an established neural read-out
+trm_5258346e72223,Center for Epidemiologic Studies Depression Scale,excluded,,"questionnaire, rating scale, interview or standardized test battery"
+tsk_iSDZtD6pTyB2c,center of mass approximation,excluded,,behavioural/neuropsychological test without an established neural read-out
+trm_5154906cbead5,Change Detection Task,covered,MEM-CD,
+trm_57c0c015b603c,Chapman Infrequency Scale,excluded,,"questionnaire, rating scale, interview or standardized test battery"
+trm_57c0c570473d3,Chapman Magical Ideation Scale,excluded,,"questionnaire, rating scale, interview or standardized test battery"
+trm_57c0c146e0019,Chapman Perceptual Aberration Scale,excluded,,"questionnaire, rating scale, interview or standardized test battery"
+trm_57c0c1af018a5,Chapman Physical Anhedonia Scale,excluded,,"questionnaire, rating scale, interview or standardized test battery"
+trm_57c0c186b07d4,Chapman Social Anhedonia Scale,excluded,,"questionnaire, rating scale, interview or standardized test battery"
+trm_4c898a8fd3afb,chewing/swallowing,candidate,MOT-SWAL,gap candidate (gap_candidates.csv)
+tsk_l7ApDPhpQkcmT,Chicken Game task,candidate,SOC-MPG,gap candidate (gap_candidates.csv)
+trm_524b4a402c87e,Child Behavior Checklist,excluded,,"questionnaire, rating scale, interview or standardized test battery"
+trm_5255c99be1e53,Children's Communication Checklist,excluded,,"questionnaire, rating scale, interview or standardized test battery"
+trm_52167db323438,Children's Memory Scale,excluded,,"questionnaire, rating scale, interview or standardized test battery"
+trm_525c56680c13c,Children's Psychiatric Rating Scale,excluded,,"questionnaire, rating scale, interview or standardized test battery"
+trm_52602c143d3a9,Children's Yale-Brown Obsessive Compulsive Scale,excluded,,"questionnaire, rating scale, interview or standardized test battery"
+trm_4b843655d5d75,chimeric animal Stroop task,covered,CTL-STR,
+tsk_4a57abb949934,choice reaction time task,covered,MOT-RT,
+trm_4d55a2bbcfdff,choice task between risky and non-risky options,covered,CTL-MIXG,
+trm_4ebc9d2e397f2,classification probe without feedback,covered,ERR-PCL,
+tsk_4a57abb9499a8,Clinical Evaluation of Language Fundamentals-3,excluded,,behavioural/neuropsychological test without an established neural read-out
+trm_5798d2693915d,clock drawing task,excluded,,behavioural/neuropsychological test without an established neural read-out
+trm_56675359b663a,Cognitive Reflection Test,excluded,,behavioural/neuropsychological test without an established neural read-out
+trm_551b0c616de16,coherent motion,covered,CTL-PDM,
+trm_55217860a9dea,Coherent/Incoherent discourse distinction task,candidate,LAN-DISC,gap candidate (gap_candidates.csv)
+trm_4e6a44ee854f8,cold pressor test,candidate,PER-TONIC,gap candidate (gap_candidates.csv)
+trm_4e664d3718e1b,cold stimulation,candidate,PER-THERM,gap candidate (gap_candidates.csv)
+trm_4f244c1f6b53f,color naming task,covered,LAN-PN,
+trm_4da633fe917c4,Color Trails Test,covered,CTL-TMT,
+tsk_4a57abb9499b8,color-discrimination task,covered,CTL-PDM,
+trm_4b1968619b00b,color-word stroop task,covered,CTL-STR,
+trm_5542841f3dcd5,color-word stroop with task switching,covered,CTL-STR,
+trm_5667492c555b7,Columbia Card Task,covered,CTL-MIXG,
+trm_52718631bc934,Communication and Symbolic Behavior Scales Development Profile,excluded,,"questionnaire, rating scale, interview or standardized test battery"
+tsk_eDRFWNl1ktVsf,Compensatory Tracking Task,covered,MOT-TRACK,
+trm_4da86ad02b3ea,complex span test,covered,MEM-CSPAN,
+trm_553fd2fc7a648,complex trait judgment task,covered,MEM-SRE,
+trm_526027c99b726,Comprehensive Test of Phonological Processing,excluded,,behavioural/neuropsychological test without an established neural read-out
+trm_4cacf3fbc503b,conditional stop signal task,covered,CTL-SST,
+trm_4f24194bce29f,conjunction search task,covered,PER-VS,
+trm_525c4cb94bfff,Conners 3rd Edition,excluded,,"questionnaire, rating scale, interview or standardized test battery"
+trm_524b563fb87c8,Conners Comprehensive Behavior Rating Scales,excluded,,"questionnaire, rating scale, interview or standardized test battery"
+trm_553fc858cacc5,consensus decision-making task,covered,SOC-CONF,
+tsk_LURJ93Bk1echa,Consideration of Future Consequences Scale,excluded,,"questionnaire, rating scale, interview or standardized test battery"
+tsk_3ICXMd8R3ekcb,contextual bandit,covered,ERR-BANDIT,
+trm_4f24492504ca0,contextual cueing task,covered,PER-CTXC,
+trm_553e73e29cf7d,contextual semantic priming task,covered,LAN-SEMD,
+trm_57c0c34e61fdf,Continuous Performance Task,covered,CTL-CPT,
+trm_551f0c294ce23,Continuous Performance Test - AX version,covered,CTL-CPT,
+tsk_4a57abb9499c7,continuous recognition paradigm,covered,MEM-ON,
+tsk_zaClbCwuCeWt2,Continuous Tapping Task,covered,MOT-ME,
+trm_5519c85ed1e8d,contour integration task,candidate,PER-CONTI,gap candidate (gap_candidates.csv)
+trm_551b0bb59173d,contour interpolation task,candidate,PER-CONTI,gap candidate (gap_candidates.csv)
+trm_502be67697201,contrast detection task,covered,CTL-PDM,
+trm_551efdcd10677,contrast sensitivity test,covered,CTL-PDM,
+tsk_mUMzkG2xVn82g,Convex Time Budgets,covered,CTL-DD,
+trm_4fbd2ac1cd035,copying task,excluded,,behavioural/neuropsychological test without an established neural read-out
+trm_5521752956bb2,Corpus analysis,generic,,"umbrella label, design manipulation or method rather than a paradigm"
+tsk_r8koF3we48jcA,correlated bandits,covered,ERR-BANDIT,
+trm_4da881dace79c,Corsi Blocks,covered,MEM-SWM,
+trm_50240427b4c1b,counterconditioning,covered,ERR-INST,
+trm_4da631be60291,counting Stroop task,covered,CTL-STR,
+trm_4c898b02722d2,Counting/Calculation,covered,IMG-MA,
+tsk_QEgcdL3G9d3fp,Couple Coercion Scale,excluded,,"questionnaire, rating scale, interview or standardized test battery"
+tsk_zj7EaCdOZ1dae,Couples Conflict Task,covered,SOC-DIAL,
+trm_4f240d346320c,covert naming task,covered,LAN-PN,
+trm_5346927710e88,Covert verb generation task,covered,LAN-VG,
+trm_512e7621189ad,criteria task,generic,,"umbrella label, design manipulation or method rather than a paradigm"
+trm_551b0e17c6c76,cross modality,generic,,"umbrella label, design manipulation or method rather than a paradigm"
+trm_553e77e53497d,cue approach task,excluded,,behavioural/neuropsychological test without an established neural read-out
+tsk_9UB5vNDvAKzYw,cue-based expectancy paradigm combining emotion regulation task,candidate,PER-PLAC,gap candidate (gap_candidates.csv)
+tsk_kQEU3vjgDNcJP,cue-based expectation task,candidate,PER-PLAC,gap candidate (gap_candidates.csv)
+trm_4c898b29660b0,cued explicit recognition,covered,MEM-ON,
+tsk_4a57abb9499d5,cups task,covered,CTL-MIXG,
+trm_4f24189031a4a,cyberball task,covered,SOC-CYB,
+trm_eDDTJCIrL19Qj,Daily Inventory of Stressful Events (DISE),excluded,,"questionnaire, rating scale, interview or standardized test battery"
+trm_4c898b4b463aa,deception task,candidate,SOC-DECEP,gap candidate (gap_candidates.csv)
+trm_4c898b8c2d071,deductive reasoning task,covered,CTL-SYLL,
+trm_5023ef8eab626,delay conditioning,candidate,ERR-EYEBL,gap candidate (gap_candidates.csv)
+trm_566748c929afc,Delay Discounting Titration,covered,CTL-DD,
+trm_5736095d91380,delayed intention task,covered,MEM-PM,
+tsk_4a57abb9499e3,delayed match to sample task,covered,MEM-DMS,
+trm_4fba85a597ca9,delayed memory task,covered,MEM-DMS,
+tsk_4a57abb9499f1,delayed nonmatch to sample task,covered,MEM-DMS,
+tsk_4a57abb9499ff,delayed recall test,covered,MEM-ON,
+trm_4dadbdd0b2b8c,delayed response task,covered,MEM-DMS,
+trm_4e8dd3831f0cc,deterministic classification,covered,ERR-PCL,
+trm_5519c2d8d7b1d,Deviance Detection,covered,PER-ODD,
+trm_4d559d2703bae,devil's task,covered,CTL-BART,
+trm_4da87e9c79847,dichotic listening task,covered,PER-AAD,
+trm_55a6a95f66508,Dickman Impulsivity Inventory,excluded,,"questionnaire, rating scale, interview or standardized test battery"
+trm_56674d6aa9faf,Dietary Decisions Task,covered,CTL-VBC,
+trm_5272806688e63,Differential Ability Scales,excluded,,"questionnaire, rating scale, interview or standardized test battery"
+trm_4da89077f19ae,digit cancellation task,excluded,,behavioural/neuropsychological test without an established neural read-out
+tsk_4a57abb949a0d,digit span task,covered,MEM-DS,
+tsk_4a57abb949a25,digit/symbol coding test,excluded,,behavioural test; held under D-023
+trm_566747c3d757f,Dimensions task,covered,CTL-SW,
+trm_4da87f383435b,directed forgetting task,covered,MEM-DF,
+trm_55217a446eb3b,Discourse content questions,generic,,"umbrella label, design manipulation or method rather than a paradigm"
+trm_551f07a281283,Distraction paradigm (capture),covered,PER-ADDS,
+trm_4c898bbab4fd4,divided auditory attention,covered,PER-AAD,
+tsk_wmFvpdB0Y6UYl,Donation task,covered,SOC-DICT,
+tsk_4a57abb949a33,doors and people test,excluded,,behavioural/neuropsychological test without an established neural read-out
+trm_5696abecf2569,DOSPERT,excluded,,"questionnaire, rating scale, interview or standardized test battery"
+trm_4f244ad7dcde7,dot motion task,covered,CTL-PDM,
+trm_4da86c2a70a7d,dot pattern expectancy task,covered,CTL-CPT,
+trm_4c898be57fcbc,drawing,covered,MOT-HW,
+trm_4fbd2e5614028,drawing from memory task,excluded,,behavioural/neuropsychological test without an established neural read-out
+trm_4e5e7ac84c2e5,dual sensitization,covered,ERR-INST,
+trm_4da634216ebbc,dual-task paradigm,covered,CTL-DT,
+trm_4ebc98cc77e7b,dual-task weather prediction,covered,CTL-DT,
+trm_56a9166421494,duckworth's short grit scale,excluded,,"questionnaire, rating scale, interview or standardized test battery"
+trm_5298e7a465b41,Early Childhood Behavioral Questionnaire,excluded,,"questionnaire, rating scale, interview or standardized test battery"
+trm_5298ed1336e43,Early Development Interview (EDI),excluded,,"questionnaire, rating scale, interview or standardized test battery"
+trm_4da8911e715e3,Early Social and Communication Scales,excluded,,"questionnaire, rating scale, interview or standardized test battery"
+trm_56aac5f6e4702,Eating questionnaire,excluded,,"questionnaire, rating scale, interview or standardized test battery"
+trm_4c898c0786246,eating/drinking,candidate,MOT-SWAL,gap candidate (gap_candidates.csv)
+trm_57c0bf6b14b90,Eckblad and Chapman's Hypomanic Personality Scale,excluded,,"questionnaire, rating scale, interview or standardized test battery"
+tsk_c6667oSpAnrBT,Ecological Momentary Assessment of Stressful Events,excluded,,"questionnaire, rating scale, interview or standardized test battery"
+tsk_4a57abb949a41,Edinburgh Handedness Inventory,excluded,,"questionnaire, rating scale, interview or standardized test battery"
+trm_4e68e08950157,electric stimulation,covered,STM-SEP,
+trm_4b749b8829eee,embedded figures test,excluded,,behavioural/neuropsychological test without an established neural read-out
+trm_551efd8a98162,emotion expression identification,covered,EMO-IAPS,
+tsk_A1AEVp7clZsCB,Emotion Identification Task,covered,EMO-IAPS,
+trm_550b5b066d37b,emotion processing fMRI task paradigm,covered,EMO-IAPS,
+trm_50f734f86b11a,Emotion Recognition Task,covered,EMO-FACE,
+trm_56bbead1a7ed4,Emotion Regulation Questionnaire,excluded,,"questionnaire, rating scale, interview or standardized test battery"
+tsk_EeJGKBAbpHkIm,Emotion Regulation Strategies Scale,excluded,,"questionnaire, rating scale, interview or standardized test battery"
+trm_56bbea82c12bb,Emotion Regulation Task,covered,EMO-REG,
+trm_5873d0be34b8f,emotional localizer fMRI task paradigm,covered,EMO-IAPS,
+trm_4da890594742a,emotional regulation task,covered,EMO-REG,
+trm_4c898c33ee5f8,encoding task,covered,MEM-SME,
+tsk_wiCMUNujvVRCR,Enumeration task,candidate,CTL-ENUM,gap candidate (gap_candidates.csv)
+trm_4c898c8bf1b4f,episodic recall,covered,MEM-ON,
+trm_59ed1f7a0ac9c,episodic recombination paradigm,covered,MEM-AI,
+tsk_4a57abb949a4f,Eriksen flanker task,covered,CTL-FLK,
+tsk_nzi0bkdoO8a23,error awareness task,covered,ERR-AWARE,
+trm_5262c98a09546,Expressive One Word-Picture Vocabulary Test,excluded,,behavioural/neuropsychological test without an established neural read-out
+trm_5298f15fe0fcf,Expressive One-Word Picture Vocabulary Test,excluded,,behavioural/neuropsychological test without an established neural read-out
+trm_52602e2e0c43b,Expressive Vocabulary Test,excluded,,behavioural/neuropsychological test without an established neural read-out
+tsk_4a57abb949a5d,extradimensional shift task,covered,CTL-SW,
+trm_55217b48995ce,Eye tracking paradigms,candidate,PER-GAZSEL,gap candidate (gap_candidates.csv)
+trm_55a6ae8f44ac3,Eysenck Personality Questionnaire,excluded,,"questionnaire, rating scale, interview or standardized test battery"
+trm_551efdfd1a356,Face Identification task,covered,PER-FACE,
+trm_4f24247912761,face matching task,covered,PER-FACE,
+trm_4c898cb4ada49,face monitor/discrimination,covered,PER-FACE,
+tsk_4a57abb949a6a,face n-back task,covered,MEM-NBK,
+trm_4f2421a62cdf8,face working memory task,covered,MEM-DMS,
+tsk_xQrUFIhZsBUFE,Facial Expression Display Task,covered,EMO-IAPS,
+tsk_02fiuOOFboHmh,facial expression observation,covered,PER-FACE,
+tsk_JaF5u33GgYRT3,Facial Expression Observing Task,covered,EMO-IAPS,
+tsk_4HuWbAQzF0tgZ,facial expression of emotion,covered,PER-FACE,
+trm_5090b32d6b376,facial recognition task,covered,PER-FACE,
+tsk_4a57abb949a78,Fagerstrom Test for Nicotine Dependence,excluded,,behavioural/neuropsychological test without an established neural read-out
+trm_4f2456027809f,false belief task,covered,SOC-TOM,
+trm_5845a809e30d5,False Belief task,covered,SOC-TOM,
+trm_4f241fe40a950,fame judgment task,covered,PER-FACE,
+trm_59cd03eeeab30,Fictitious event ordering,candidate,MEM-RECJ,gap candidate (gap_candidates.csv)
+trm_551b0d687ee33,figure ground task,candidate,PER-FIGGR,gap candidate (gap_candidates.csv)
+trm_4c898da401420,film viewing,covered,PER-NAT,
+trm_4c898f079d05e,finger tapping task,covered,MOT-ME,
+trm_4f24226fa2903,Fitts task,excluded,,behavioural/neuropsychological test without an established neural read-out
+trm_56ab12e0f1a61,Five Facet Mindfulness Questionnaire,excluded,,"questionnaire, rating scale, interview or standardized test battery"
+tsk_qBdQueJHSouuF,Five-Trial Adjusting Delay Discounting Task,covered,CTL-DD,
+trm_4c898f72228f3,fixation task,covered,STA-REST,
+trm_4c898f8f297ac,flashing checkerboard,covered,PER-RET,
+trm_4c898fad429ed,flexion/extension,covered,MOT-ME,
+tsk_qsprWaphqkwim,fMRI Facial Emotion Paradigm,covered,EMO-FACE,
+tsk_ORAzdOO86kNfM,fMRI localizer for the frontotemporal language system,covered,LAN-LOC,
+trm_5798cb6027f28,following commands,covered,IMG-CMD,
+tsk_rjSJbUa5Jk2Mb,Food viewing (passive),candidate,EMO-CREAC,gap candidate (gap_candidates.csv)
+trm_4fbd2dc0273d9,foreshortened view task,covered,PER-CAT,
+tsk_4a57abb949a85,forward digit span task,covered,MEM-DS,
+trm_4c898fc6722f4,free word list recall,covered,MEM-FR,
+tsk_m9ZOG13yjvsPV,Frustration in Timed Backwards Math,candidate,EMO-FRUST,gap candidate (gap_candidates.csv)
+trm_553e85265f51e,functional localizer fMRI tasks,generic,,"umbrella label, design manipulation or method rather than a paradigm"
+tsk_5UPYiqtoX3yUf,Future Events Structured Interview,excluded,,"questionnaire, rating scale, interview or standardized test battery"
+tsk_gskvlEiCHg899,Future Orientation Scale of the Time Perspective Survey (child version),excluded,,"questionnaire, rating scale, interview or standardized test battery"
+trm_56a915fe77945,future time perspective questionnaire,excluded,,"questionnaire, rating scale, interview or standardized test battery"
+trm_550b5c1a7f4db,gambling fMRI task paradigm,covered,ERR-GAM,
+trm_4f24496a80587,gambling task,covered,ERR-GAM,
+trm_551b14d7d5882,gating,covered,PER-GATE,
+trm_4f241c8d4a75c,gender discrimination task,covered,PER-FACE,
+trm_4f24237f2ed47,general knowledge task,covered,LAN-SEMD,
+tsk_BuPIiFcjBo2aX,Generalization of Instrumental Avoidance Task,candidate,ERR-AVOID,gap candidate (gap_candidates.csv)
+tsk_p7cabUkVvQPBS,Generalized Self-Efficacy Scale,excluded,,"questionnaire, rating scale, interview or standardized test battery"
+trm_4da890f978492,Glasgow Coma Scale,excluded,,"questionnaire, rating scale, interview or standardized test battery"
+trm_4f241d7adf14e,global-local task,covered,PER-NAVON,
+trm_569d6eef27433,gm Paradigm,covered,PER-LG,
+tsk_k6MaDfNGbHqDx,Go-No-Go Zoo Task,covered,CTL-GNG,
+tsk_tTKd4o04KpUDA,Go-NoGo fMRI paradigm,covered,CTL-GNG,
+tsk_4a57abb949a93,go/no-go task,covered,CTL-GNG,
+tsk_7f8coV4TPvTeZ,Godin Leisure-Time Exercise Questionnaire,excluded,,"questionnaire, rating scale, interview or standardized test battery"
+trm_50f741a965470,Graded Naming Test,covered,LAN-PN,
+trm_4c898ff0bea97,grasping task,covered,MOT-GRASP,
+tsk_4a57abb949aa1,Gray Oral Reading Test - 4,excluded,,behavioural/neuropsychological test without an established neural read-out
+trm_5887c029d46f4,Gustatory stimulation with liquid tastes or flavors,covered,PER-GEP,
+trm_529911569b592,Halstead-Reitan Battery,excluded,,"questionnaire, rating scale, interview or standardized test battery"
+trm_559e2af1cc0ce,Hamilton Psychiatric Rating Scale for Depression,excluded,,"questionnaire, rating scale, interview or standardized test battery"
+trm_586fd907e4fc6,hand chirality recognition,covered,IMG-ROT,
+trm_586fd8a2c77ca,hand side recognition,covered,IMG-ROT,
+trm_4da88c205b16b,haptic illusion task,excluded,,behavioural/neuropsychological test without an established neural read-out
+trm_4da88c904862b,Hayling sentence completion test,candidate,CTL-HAYL,gap candidate (gap_candidates.csv)
+trm_4e5662373bc89,heat sensitization/adaptation,candidate,PER-TONIC,gap candidate (gap_candidates.csv)
+trm_4e550887d92de,heat stimulation,covered,PER-LEP,
+trm_58335e885873f,Hidden State Decision Making Task,covered,ERR-TS,
+trm_5696bb7166121,hierarchical rule task,candidate,CTL-HRULE,gap candidate (gap_candidates.csv)
+tsk_EaAMakeLSEYxm,Hierarchical Task,candidate,CTL-HRULE,gap candidate (gap_candidates.csv)
+trm_56674f71483b0,Holt and Laury Risk Titrator,covered,CTL-MIXG,
+tsk_4a57abb949aae,Hooper visual organization test,excluded,,behavioural/neuropsychological test without an established neural read-out
+trm_55a6a860a7088,Hopkins Symptom Checklist,excluded,,"questionnaire, rating scale, interview or standardized test battery"
+trm_586fd4fd8754a,horizontal checkerboard,covered,PER-RET,
+trm_50b40bca8cf83,Hungry Donkey Task,excluded,,behavioural/neuropsychological test without an established neural read-out
+trm_55a6c92db12b0,Hypomanic Personality Scale,excluded,,"questionnaire, rating scale, interview or standardized test battery"
+trm_56a91e3e982f9,I7 impulsiveness and venturesomeness questionnaire,excluded,,"questionnaire, rating scale, interview or standardized test battery"
+trm_5798d0fbe2bd1,ideational praxis task,candidate,MOT-PANT,gap candidate (gap_candidates.csv)
+trm_5667436296862,image monitoring,generic,,"umbrella label, design manipulation or method rather than a paradigm"
+trm_4c899005b11d5,imagined movement,covered,MOT-MI,
+trm_4c89903149aeb,imagined objects/scenes,covered,IMG-VIS,
+trm_4fba857ad04ac,immediate memory task,covered,MEM-DMS,
+tsk_4a57abb949abc,immediate recall test,covered,MEM-ON,
+tsk_H2hu4WmHYl8Tu,Immersive Virtual Reality Assay for Target: Regulation of Cognition (Behavioral and Self-Report),excluded,,"questionnaire, rating scale, interview or standardized test battery"
+tsk_Sgb6i1nFqMVjQ,Immersive Virtual Reality Assay for Target: Regulation of Emotion (Behavioral and Self-Report),excluded,,"questionnaire, rating scale, interview or standardized test battery"
+tsk_ZaJZLqgqcXCLq,Immersive Virtual Reality Assay for Target: Regulation of Self-Reflection (Behavioral and Self-Report),excluded,,"questionnaire, rating scale, interview or standardized test battery"
+trm_50b6660b1b847,Implicit Association Task,covered,SOC-IAT,
+trm_565a2e79b22f2,incentive modulated antisaccade task,covered,CTL-AS,
+trm_50df0dd9d0b6f,Incidental encoding task,covered,MEM-SME,
+trm_4d8a48e403c78,inductive reasoning aptitude,covered,CTL-RAVEN,
+trm_50f73d557c967,Information Sampling Task,candidate,CTL-BEADS,gap candidate (gap_candidates.csv)
+trm_4f2414059baa8,instrumental learning task,covered,ERR-INST,
+trm_551b17b190582,intensity for somatosensory stimulation,covered,STM-SEP,
+trm_5667476fc14dd,Inter-dimensional/Extra-dimensional Shift Task,covered,CTL-SW,
+trm_551f0713a5a17,Inter-modal selective attention task,candidate,PER-INTMOD,gap candidate (gap_candidates.csv)
+trm_4eb1f3a8ec119,intermodal preferential looking paradigm,excluded,,behavioural/neuropsychological test without an established neural read-out
+tsk_3KF7rOdrBGivs,Internal menu choice task,excluded,,behavioural/neuropsychological test without an established neural read-out
+tsk_nHhIFQgl91Nkc,Internal Self-Efficacy Task,excluded,,behavioural/neuropsychological test without an established neural read-out
+tsk_4a57abb949aca,International Affective Picture System,covered,EMO-IAPS,
+tsk_QlXQe5gup7UFj,International Physical Activity Questionnaire – Short Form (IPAQ-SF),excluded,,"questionnaire, rating scale, interview or standardized test battery"
+tsk_Rpfz9hVRPtUcq,Interoceptive Attentiveness fMRI Task,covered,PER-HBD,
+tsk_YShVp2KOuWrSS,Interval Estimation Task,candidate,PER-TIMING,gap candidate (gap_candidates.csv)
+tsk_4a57abb949ad7,intradimensional shift task,covered,CTL-SW,
+tsk_4a57abb949ae5,Iowa Gambling Task,covered,CTL-IGT,
+tsk_4a57abb949af3,Ishihara plates for color blindness,excluded,,behavioural/neuropsychological test without an established neural read-out
+trm_4c8990480ad0f,isometric force,covered,MOT-FORCE,
+trm_4da869646e5d1,item recognition task,covered,MEM-SB,
+trm_529ce04b778b6,Joint Attention / Social and Nonsocial Orienting Task,covered,SOC-GAZE,
+trm_529ce3d22be3e,Judgment of Line Orientation Task,excluded,,behavioural/neuropsychological test without an established neural read-out
+tsk_4a57abb949b00,Kanizsa figures,covered,PER-IC,
+trm_529ce6ecb35f8,Kaufman Brief Intelligence Test,excluded,,behavioural/neuropsychological test without an established neural read-out
+trm_4c40d4054f38b,keep-track task,covered,MEM-NBK,
+tsk_OA90UJX5qwTyc,Kessler Psychological Distress Scale (K6+),excluded,,"questionnaire, rating scale, interview or standardized test battery"
+trm_56bbee951f161,Kirby Delay Discounting Task,covered,CTL-DD,
+trm_5346938eed092,Landmark task,candidate,PER-LINEB,gap candidate (gap_candidates.csv)
+trm_550b54a8b30f4,language processing fMRI task paradigm,covered,LAN-LOC,
+tsk_KVUZHlsv8pesh,Language Rule Learning,covered,LAN-AGL,
+trm_551b0c0a742d2,lateral facilitation,generic,,"umbrella label, design manipulation or method rather than a paradigm"
+trm_5262cb3d852c0,Leiter International Performance Scale,excluded,,"questionnaire, rating scale, interview or standardized test battery"
+trm_4fbd2b16e7aff,length match task,covered,CTL-PDM,
+trm_4f241001dfcee,letter case judgment task,covered,LAN-VWFA,
+trm_4da86c8bb3b04,letter comparison task,covered,LAN-VWFA,
+tsk_4a57abb949b0e,letter fluency test,covered,LAN-VF,
+tsk_PNUOMlNOAajsT,letter matching task,covered,LAN-VWFA,
+trm_5696a9cfe45b1,letter memory,covered,MEM-NBK,
+tsk_4a57abb949b1c,letter n-back task,covered,MEM-NBK,
+tsk_4a57abb949b2b,letter naming task,covered,LAN-PN,
+trm_4c3e0a9576c3b,letter number sequencing,covered,MEM-DS,
+tsk_4a57abb949b38,lexical decision task,covered,LAN-LDT,
+trm_55217a9f473f0,Listening and reading task,generic,,"umbrella label, design manipulation or method rather than a paradigm"
+trm_4c40d1d16071e,listening span task,covered,MEM-CSPAN,
+trm_4f24258b51e2c,living-nonliving task,covered,LAN-SEMD,
+trm_5176cf9d3d512,living/nonliving judgment on mirror-reversed and plain-text words,covered,LAN-SEMD,
+trm_551b1004bc652,local computation,generic,,"umbrella label, design manipulation or method rather than a paradigm"
+trm_4f24154867d84,logical reasoning task,covered,CTL-SYLL,
+trm_529d087705bfa,Loneliness Rating Scale,excluded,,"questionnaire, rating scale, interview or standardized test battery"
+trm_4da891794859f,MacArthur Communicative Development Inventories,excluded,,behavioural/neuropsychological test without an established neural read-out
+trm_552181d7be45e,Manipulation of coherence and cohesion,candidate,LAN-DISC,gap candidate (gap_candidates.csv)
+trm_55218116cbf40,Manipulation of individual words,generic,,"umbrella label, design manipulation or method rather than a paradigm"
+trm_551efeacb9deb,Manipulation of ISI,generic,,"umbrella label, design manipulation or method rather than a paradigm"
+trm_55217e77441b0,Manipulation of language and non-verbal behaviors,generic,,"umbrella label, design manipulation or method rather than a paradigm"
+trm_55492d262a847,Manipulation of predictability,generic,,"umbrella label, design manipulation or method rather than a paradigm"
+trm_55217d7fbfdba,Manipulation of predictability and acceptability,generic,,"umbrella label, design manipulation or method rather than a paradigm"
+trm_50f852c084fde,match to sample visual search,covered,MEM-DMS,
+trm_4da87b8bf1511,matching familiar figures test,excluded,,behavioural/neuropsychological test without an established neural read-out
+tsk_4a57abb949b46,matching pennies game,candidate,SOC-MPG,gap candidate (gap_candidates.csv)
+tsk_4a57abb949b54,Maudsley Obsessive Compulsive Inventory,excluded,,"questionnaire, rating scale, interview or standardized test battery"
+trm_51a637dfeffd5,McGurk effect,covered,PER-MSI,
+trm_56a2a74ab3ef6,Measured Emotion Differentiation Test,excluded,,behavioural/neuropsychological test without an established neural read-out
+trm_4e5d07565b68e,mechanical stimulation,candidate,STM-TACEP,gap candidate (gap_candidates.csv)
+trm_4fb4175126374,meditation task,covered,STA-MED,
+tsk_mFS3uwUMAhXxe,Memory encoding task,covered,MEM-SME,
+trm_4f2457d94fd93,memory guided saccade task,covered,MOT-SACC,
+trm_4da869e68b5c4,memory span test,covered,MEM-DS,
+trm_4f24179122380,mental arithmetic task,covered,IMG-MA,
+trm_4f240edf92865,mental imagery task,covered,IMG-VIS,
+trm_4c8990810541d,mental rotation task,covered,IMG-ROT,
+tsk_xxVr20Bf4zyme,Mental time travel task,covered,MEM-EFT,
+trm_4f241ab50513b,mentalizing task,covered,SOC-TOM,
+trm_4b9568b2865c2,MicroCog,excluded,,behavioural/neuropsychological test without an established neural read-out
+trm_4c89909cc1f33,micturition task,candidate,PER-BLADR,gap candidate (gap_candidates.csv)
+trm_56abcba3df89b,Mindful Attention and Awareness Scale,excluded,,"questionnaire, rating scale, interview or standardized test battery"
+tsk_zfiXINJdIc1DM,Mindstrong for Regulation of Cognition,excluded,,"questionnaire, rating scale, interview or standardized test battery"
+tsk_kBYLTvZx59uOC,Mindstrong for Regulation of Emotion,excluded,,"questionnaire, rating scale, interview or standardized test battery"
+tsk_aojKzJ2tvdhGZ,Mindstrong for Regulation of Self-Focused Reflection,excluded,,"questionnaire, rating scale, interview or standardized test battery"
+tsk_4a57abb949bb1,Mini Mental State Examination,excluded,,"questionnaire, rating scale, interview or standardized test battery"
+trm_4fbd2d71adf87,minimal feature match task,covered,CTL-PDM,
+trm_55a6c80b2c1d6,Minnesota Multiphasic Personality Inventory,excluded,,"questionnaire, rating scale, interview or standardized test battery"
+trm_5176cf2c19e89,mirror reading task,covered,LAN-RA,
+trm_4f244a67d5b17,mirror tracing task,covered,MOT-MIRR,
+trm_4e8dd3dfd9fff,mixed event-related probe,generic,,"umbrella label, design manipulation or method rather than a paradigm"
+trm_4cacee4a1d875,mixed gambles task,covered,CTL-MIXG,
+tsk_RXmB56vrYW66T,Mnemonic similarity task,covered,MEM-MST,
+trm_4da891d43240c,modified Erickson Scale of Communication Attitudes,excluded,,"questionnaire, rating scale, interview or standardized test battery"
+trm_4f23fc8c42d28,monetary incentive delay task,covered,EMO-MID,
+trm_57964b8a66aed,Montreal Cognitive Assessment,excluded,,"questionnaire, rating scale, interview or standardized test battery"
+trm_57ebe6583f52d,Moral Dilemma Task,covered,SOC-MORAL,
+trm_553fc63a54ae6,motion discrimination task,covered,CTL-PDM,
+trm_5536be03400e7,Motion processing,generic,,"umbrella label, design manipulation or method rather than a paradigm"
+tsk_uzbPk1YB47Iqd,motivational go/no-go learning task,covered,ERR-OGNG,
+trm_550b53d7dd674,motor fMRI task paradigm,covered,MOT-ME,
+trm_50f72e93ea9e3,Motor Screening Task,excluded,,behavioural/neuropsychological test without an established neural read-out
+trm_56bbe45003cf7,Motor Selective Stop Signal Task,covered,CTL-SST,
+tsk_4a57abb949bbf,motor sequencing task,covered,MOT-MSL,
+trm_5975f939336c0,motorphotic,generic,,"umbrella label, design manipulation or method rather than a paradigm"
+trm_55217bd86ee12,Mouse tracking paradigms,generic,,"umbrella label, design manipulation or method rather than a paradigm"
+tsk_jbg1oF4D9OTkO,movie watching task,covered,PER-NAT,
+trm_5262d6d7b2097,Mullen Scales of Early Learning,excluded,,"questionnaire, rating scale, interview or standardized test battery"
+trm_5535623c2536a,Muller-Lyer Illusion,candidate,PER-VILL,gap candidate (gap_candidates.csv)
+trm_4f244fee7d195,multi-attribute decision making task,covered,CTL-VBC,
+trm_553eb28436233,multi-attribute reward-guided decision task,covered,CTL-VBC,
+trm_558c324478d22,Multi-class n-back task,covered,MEM-NBK,
+trm_558c33e7714ba,multi-object localizer task,covered,PER-CAT,
+trm_5696b61ff253e,multi-source interference task,covered,CTL-MSIT,
+tsk_2wRB9XpiA4xMN,Multidimensional Assessment of Interoceptive Awareness,excluded,,"questionnaire, rating scale, interview or standardized test battery"
+trm_55a6aa62c54f8,Multidimensional Personality Questionnaire,excluded,,"questionnaire, rating scale, interview or standardized test battery"
+tsk_tp1574mCRYbWD,Multidimensional Personality Questionnaire: Control vs. Impulsivity Scale,excluded,,"questionnaire, rating scale, interview or standardized test battery"
+trm_5696c2c063222,Multiplication task,covered,IMG-MA,
+trm_4f2419c4a1646,multisource interference task,covered,CTL-MSIT,
+trm_551b0cdcde976,multistability,generic,,"umbrella label, design manipulation or method rather than a paradigm"
+trm_4c8990b07a037,music comprehension/production,covered,LAN-MUS,
+tsk_4a57abb949bcd,n-back task,covered,MEM-NBK,
+trm_4c8990c87035d,naming (covert),covered,LAN-PN,
+trm_4c8990e187dc7,naming (overt),covered,LAN-PN,
+trm_552174863d51e,Naming tasks,generic,,"umbrella label, design manipulation or method rather than a paradigm"
+tsk_tlatUto2tMCYC,Narrative-based Pain Empathy Task,covered,SOC-PAIN,
+trm_5798f94752841,NART-R,excluded,,behavioural/neuropsychological test without an established neural read-out
+trm_5798f5c57048d,National Adult Reading Test,excluded,,behavioural/neuropsychological test without an established neural read-out
+trm_4f241173868a3,navigation task,covered,MEM-NAV,
+trm_4f244d64e45bc,negative priming task,candidate,CTL-NEGP,gap candidate (gap_candidates.csv)
+trm_597249e1ec9d3,network traversal task,covered,MEM-NAV,
+tsk_UwGwPHdQkMJqi,NIH Self-Efficacy Scale,excluded,,"questionnaire, rating scale, interview or standardized test battery"
+trm_50eb69a57bc96,NIH Toolbox 2-Minute Walk Endurance Test,excluded,,"questionnaire, rating scale, interview or standardized test battery"
+trm_50eb585f62f24,NIH Toolbox 4-Meter Walk Gait Speed Test,excluded,,"questionnaire, rating scale, interview or standardized test battery"
+trm_50eb4d3d96ff8,NIH Toolbox 9-Hole Pegboard Dexterity Test,excluded,,"questionnaire, rating scale, interview or standardized test battery"
+trm_50eb115b6c476,NIH Toolbox Dimensional Change Card Sort Test,excluded,,"questionnaire, rating scale, interview or standardized test battery"
+trm_50f38098952cb,NIH Toolbox Dynamic Visual Acuity Test,excluded,,"questionnaire, rating scale, interview or standardized test battery"
+trm_50f3c003327c4,NIH Toolbox General Life Satisfaction Survey,excluded,,"questionnaire, rating scale, interview or standardized test battery"
+trm_50eb51c2cd9fe,NIH Toolbox Grip Strength Test,excluded,,"questionnaire, rating scale, interview or standardized test battery"
+trm_50f37767e2958,NIH Toolbox Hearing Handicap Inventory,excluded,,"questionnaire, rating scale, interview or standardized test battery"
+trm_50f374718a91c,NIH Toolbox Hearing Threshold Test,excluded,,"questionnaire, rating scale, interview or standardized test battery"
+trm_50eb17385e9a6,NIH Toolbox List Sorting Working Memory Test,excluded,,"questionnaire, rating scale, interview or standardized test battery"
+trm_50f5bfef58abb,NIH Toolbox Meaning and Purpose Survey,excluded,,"questionnaire, rating scale, interview or standardized test battery"
+trm_50f383e76e03b,NIH Toolbox Odor Identification Test,excluded,,"questionnaire, rating scale, interview or standardized test battery"
+trm_50eb3b2d1de11,NIH Toolbox Oral Reading Recognition Test,excluded,,"questionnaire, rating scale, interview or standardized test battery"
+trm_50eb461d446e1,NIH Toolbox Oral Symbol Digit Test,excluded,,"questionnaire, rating scale, interview or standardized test battery"
+trm_50f385a8269ce,NIH Toolbox Pain Intensity Survey,excluded,,"questionnaire, rating scale, interview or standardized test battery"
+trm_50f3862422509,NIH Toolbox Pain Interference Survey,excluded,,"questionnaire, rating scale, interview or standardized test battery"
+trm_4da88cb222308,NIH Toolbox Picture Sequence Memory Test,excluded,,"questionnaire, rating scale, interview or standardized test battery"
+trm_50eb0dc6668e1,NIH Toolbox Picture Vocabulary Test,excluded,,"questionnaire, rating scale, interview or standardized test battery"
+trm_50f3bc06cae36,NIH Toolbox Positive Affect Survey,excluded,,"questionnaire, rating scale, interview or standardized test battery"
+trm_50eb54d78841b,NIH Toolbox Standing Balance Test,excluded,,"questionnaire, rating scale, interview or standardized test battery"
+trm_50f379c6c9ea9,NIH Toolbox Taste Intensity Test,excluded,,"questionnaire, rating scale, interview or standardized test battery"
+trm_50f37f231aa4c,NIH Toolbox Vision-Related Quality of Life Survey,excluded,,"questionnaire, rating scale, interview or standardized test battery"
+trm_50f37caf81432,NIH Toolbox Visual Acuity Test,excluded,,"questionnaire, rating scale, interview or standardized test battery"
+trm_50eb0a01bfd05,NIH Toolbox Words-in Noise Test,excluded,,"questionnaire, rating scale, interview or standardized test battery"
+tsk_4a57abb949bdb,nine-hole peg test,excluded,,behavioural/neuropsychological test without an established neural read-out
+trm_4d55997cd3edb,non-choice task,covered,CTL-VBC,
+tsk_xFpgex9zOvlOu,Non-instrumental information seeking task,candidate,CTL-CURIO,gap candidate (gap_candidates.csv)
+trm_4c8990f59266f,non-painful electrical stimulation,covered,STM-SEP,
+trm_4c89910b7f8bc,non-painful thermal stimulation,candidate,PER-THERM,gap candidate (gap_candidates.csv)
+trm_55295382db2c5,non-spatial cuing paradigm,candidate,PER-FBA,gap candidate (gap_candidates.csv)
+trm_4da88b17b985b,nonword repetition task,covered,LAN-RA,
+trm_551eff0fdab74,Novelty detection task,covered,PER-ODD,
+trm_502420a682976,NPU-threat test,covered,EMO-THREAT,
+trm_553ec40d44c51,Numerical Working Memory Task,covered,IMG-MA,
+trm_4f2457454e458,numerosity estimation task,candidate,CTL-ENUM,gap candidate (gap_candidates.csv)
+trm_4da88bb3c2462,object alternation task,covered,ERR-INST,
+trm_551b107c5c111,object classification,generic,,"umbrella label, design manipulation or method rather than a paradigm"
+trm_4fbd2c18e1dd9,object decision task,covered,PER-CAT,
+trm_4ebd477ab5a11,object n-back,covered,MEM-NBK,
+trm_4f2448d02d4d9,object naming task,covered,LAN-PN,
+trm_4ebd47b8bab6b,object one-back task,covered,MEM-NBK,
+trm_551b0ee81fb6b,object perception task,generic,,"umbrella label, design manipulation or method rather than a paradigm"
+trm_553fbba5d5327,Object Rating Task,generic,,"umbrella label, design manipulation or method rather than a paradigm"
+trm_551b0f2b930ab,object recognition task,generic,,"umbrella label, design manipulation or method rather than a paradigm"
+trm_4f2421c391b83,object working memory task,covered,MEM-DMS,
+tsk_4a57abb949be9,object-discrimination task,covered,PER-CAT,
+trm_4c3e0add96550,oculomotor delayed response,covered,MOT-SACC,
+trm_4f2452adb7d23,odd-even task,covered,IMG-MA,
+tsk_4a57abb949bf6,oddball task,covered,PER-ODD,
+trm_4c89912c79030,olfactory monitoring/discrimination,covered,PER-OLF,
+trm_50f84bbdcfa4e,One Touch Stockings of Cambridge,covered,CTL-TOL,
+trm_50240f06af135,operant task,covered,ERR-INST,
+trm_4c40d10cd776e,operation span task,covered,MEM-CSPAN,
+tsk_pmvG0R2l7APPE,optogenetic stimulation,nonhuman,,animal method
+trm_4fbd2b4bb165c,orientation match task,covered,CTL-PDM,
+trm_5798d7ba0197d,orientation test,excluded,,behavioural/neuropsychological test without an established neural read-out
+trm_4c89913f80802,orthographic discrimination,covered,LAN-VWFA,
+trm_4f24250e0137e,orthographic task,covered,LAN-VWFA,
+tsk_i6bcjHSADB30O,Other evaluation task,covered,MEM-SRE,
+trm_4fbd2b964d3ec,overlapping figures task,covered,CTL-PDM,
+trm_534690b0e9dc5,Overt word repetition,covered,LAN-RA,
+tsk_GxjZBNiJorj1K,P300 BCI,covered,PER-ODD,
+trm_4da87fb28978e,Paced Auditory Serial Addition Test,covered,IMG-MA,
+trm_4c8991c5beb0a,pain monitor/discrimination task,covered,PER-LEP,
+tsk_vbkfbu486lzDr,Pain-matrix narrative localizer,covered,SOC-PAIN,
+trm_4da88a2a63d97,paired associate learning,covered,MEM-PA,
+trm_4c8991e6e8597,paired associate recall,covered,MEM-PA,
+tsk_4a57abb949c04,pantomime task,candidate,MOT-PANT,gap candidate (gap_candidates.csv)
+trm_551b06cf9783b,Parallel/serial search,covered,PER-VS,
+tsk_dwOdvcER9RnBx,Parent Cognition Scale,excluded,,"questionnaire, rating scale, interview or standardized test battery"
+tsk_alz5hjlUXp4WY,Parent-Child Coercion Scale,excluded,,"questionnaire, rating scale, interview or standardized test battery"
+tsk_HJI7NLY38yZgx,Parent-Child Interaction Protocol,covered,SOC-DIAL,
+tsk_m9ORBitZNadcZ,Parent-Rated Stress (NIH Perceived Stress Scale),excluded,,"questionnaire, rating scale, interview or standardized test battery"
+trm_4f24572cb42e4,parity judgment task,covered,IMG-MA,
+tsk_4a57abb949ce9,Parrott Scale,excluded,,"questionnaire, rating scale, interview or standardized test battery"
+trm_50b65ef129e23,Partial Report Procedure,covered,MEM-PR,
+trm_4f241fd47f16b,passive avoidance task,candidate,ERR-AVOID,gap candidate (gap_candidates.csv)
+trm_4c8991fadfe01,passive listening,covered,LAN-NAT,
+trm_4c899211a965c,passive viewing,covered,PER-NAT,
+tsk_Y0LwjRqYtJSQO,Patient health questionnaire (PHQ-9),excluded,,"questionnaire, rating scale, interview or standardized test battery"
+trm_4da86cb034ff6,pattern comparison task,excluded,,"questionnaire, rating scale, interview or standardized test battery"
+trm_4c898acd1f28e,pavlovian conditioning task,covered,EMO-FC,
+trm_5262d903ae91d,PDD Behavior Inventory,excluded,,"questionnaire, rating scale, interview or standardized test battery"
+trm_5266bebe14d2e,Peabody Picture Vocabulary Test,excluded,,behavioural/neuropsychological test without an established neural read-out
+tsk_osfnJ7DNe8DB0,Pearlin Mastery Scale,excluded,,"questionnaire, rating scale, interview or standardized test battery"
+trm_50b55d8a6da00,PEBL Perceptual Vigilance Task,covered,STA-PVT,
+trm_50f9952c2311a,Penn Conditional Exclusion Test,excluded,,"questionnaire, rating scale, interview or standardized test battery"
+trm_4b4a537644d76,Penn continuous performance task,excluded,,"questionnaire, rating scale, interview or standardized test battery"
+trm_56a2a6ce24586,Penn Emotion Recognition Task,excluded,,"questionnaire, rating scale, interview or standardized test battery"
+trm_50f99e56117fe,Penn Face Memory Test,excluded,,"questionnaire, rating scale, interview or standardized test battery"
+trm_56a2a622cdfbd,Penn Facial Memory Test Delayed Memory,excluded,,"questionnaire, rating scale, interview or standardized test battery"
+trm_569fc84bd541d,Penn Fractal N-Back,excluded,,"questionnaire, rating scale, interview or standardized test battery"
+trm_56a2a5f8315c5,Penn Matrix Reasoning Test,excluded,,"questionnaire, rating scale, interview or standardized test battery"
+trm_56a2abffcfae3,Penn Motor Praxis,excluded,,"questionnaire, rating scale, interview or standardized test battery"
+trm_56a2a6ad6edee,Penn Visual Object Learning Test,excluded,,"questionnaire, rating scale, interview or standardized test battery"
+trm_56a2a98785453,Penn Visual Object Learning Test Delayed Memory,excluded,,"questionnaire, rating scale, interview or standardized test battery"
+trm_5696e10fcd36a,Penn Vocabulary Test,excluded,,"questionnaire, rating scale, interview or standardized test battery"
+trm_50f998dcbfcc8,Penn Word Memory Test,excluded,,"questionnaire, rating scale, interview or standardized test battery"
+trm_56a2a7750ffd0,Penn's Logical Reasoning Test,excluded,,behavioural/neuropsychological test without an established neural read-out
+trm_551b05e03be48,perceptual closure task,candidate,PER-CLOS,gap candidate (gap_candidates.csv)
+trm_553ebfc390256,perceptual discrimination task,covered,CTL-PDM,
+trm_551b0e6b88363,perceptual organization,generic,,"umbrella label, design manipulation or method rather than a paradigm"
+trm_4e6114e7b1ff2,phasic pain stimulation,covered,PER-LEP,
+trm_4f24479b0db8f,phoneme detection task,covered,LAN-PHA,
+trm_4f241be43458e,phonemic fluency task,covered,LAN-VF,
+trm_4f2414a1bab77,phonetic discrimination task,covered,LAN-PHA,
+trm_4c89922cb6402,phonological discrimination,covered,LAN-PHA,
+trm_4f241b751c5a0,phonological task,covered,LAN-PHA,
+trm_5206bf053acf4,Piaget's Water Jar Task,excluded,,behavioural/neuropsychological test without an established neural read-out
+tsk_4a57abb949cfb,picture naming task,covered,LAN-PN,
+trm_4dadbfd771a54,picture-word Stroop test,covered,CTL-STR,
+trm_4c89924414c69,pitch/monitor discrimination,candidate,PER-PITCH,gap candidate (gap_candidates.csv)
+trm_5585c83d15fad,Pittsburgh Sleep Quality Index,excluded,,"questionnaire, rating scale, interview or standardized test battery"
+tsk_U9gDp8utahAfO,Pittsburgh Stress Battery,excluded,,"questionnaire, rating scale, interview or standardized test battery"
+tsk_Jb7hdmvDY3rLV,pleasantness rating task,candidate,EMO-AEST,gap candidate (gap_candidates.csv)
+trm_5696b316c220a,Plus-minus,covered,CTL-SW,
+tsk_zMlmDcfxjld0K,point subtraction aggression paradigm,candidate,EMO-AGGR,gap candidate (gap_candidates.csv)
+trm_4c89926767870,pointing task,covered,MOT-REACH,
+trm_4da87fdd7820e,Porteus maze test,excluded,,behavioural/neuropsychological test without an established neural read-out
+trm_4fbd2b6fd33c5,position of gap match task,covered,CTL-PDM,
+tsk_4a57abb949d09,Positive and Negative Affect Scale,excluded,,"questionnaire, rating scale, interview or standardized test battery"
+tsk_bc6vIpoShChdF,Positive and Negative Affect Schedule (PANAS)- Child Version,excluded,,"questionnaire, rating scale, interview or standardized test battery"
+tsk_pl4uqVGM1uj3Z,Positive and Negative Images Task,covered,EMO-IAPS,
+tsk_4a57abb949d17,Posner cueing task,covered,PER-CUE,
+trm_553e6b8e33da4,predictive-inference helicopter task,covered,ERR-CHGPT,
+trm_5266bc6473fd8,Preschool Language Scale,excluded,,"questionnaire, rating scale, interview or standardized test battery"
+tsk_KRl3zbyaJcKWM,prisoner's dilemma (PD),covered,SOC-TRUST,
+trm_4cacf22a22d80,Probabilistic classification task,covered,ERR-PCL,
+trm_4d54b61a14a14,Probabilistic gambling task,covered,CTL-MIXG,
+trm_4da6318f7381b,probabilistic reversal learning task,covered,ERR-PRL,
+trm_5667483dcc371,Probabilistic Selection Task,covered,ERR-PSEL,
+trm_4f241325579c6,problem solving task,covered,CTL-RAT,
+trm_4f244860c702c,prospective memory task,covered,MEM-PM,
+tsk_VokAidevRX1Vs,prospective sequential decision making task,covered,ERR-TS,
+trm_4f24550fc5f38,prototype distortion task,candidate,ERR-PROTO,gap candidate (gap_candidates.csv)
+tsk_4a57abb949d25,pseudoword naming task,covered,LAN-PN,
+trm_51c453f64d2a6,psychological refractory period (PRP) paradigm,covered,CTL-DT,
+trm_502985b4baaed,psychophysics task,generic,,"umbrella label, design manipulation or method rather than a paradigm"
+trm_4da88b63787d6,pursuit rotor task,covered,MOT-TRACK,
+tsk_GdteOhkqZJLYg,Pursuit Tracking Task,covered,MOT-TRACK,
+tsk_4a57abb949d32,pyramids and palm trees task,covered,LAN-SEMD,
+trm_4f2417d4a63ae,random number generation task,covered,CTL-RNG,
+trm_4b86c2e871b14,rapid automatized naming test,covered,LAN-PN,
+tsk_QN7TaO3lQgQpv,Rapid Marital Interaction Coding System (RMICS),excluded,,"questionnaire, rating scale, interview or standardized test battery"
+trm_4b86dbcd8ff78,rapid serial object transformation,excluded,,behavioural/neuropsychological test without an established neural read-out
+tsk_4a57abb949879,rapid serial visual presentation task,covered,PER-ODD,
+trm_50f8516279419,Rapid Visual Information Processing,covered,CTL-CPT,
+trm_4f24211a03b07,Raven's Advanced Progressive Matrices,covered,CTL-RAVEN,
+tsk_SJ4Q7gOYfy25Y,Raven's Progressive Matrices Test,covered,CTL-RAVEN,
+trm_551efd39a74dd,Re-entrant processing,generic,,"umbrella label, design manipulation or method rather than a paradigm"
+trm_50f84e8ab7af8,Reaction Time,covered,MOT-RT,
+trm_4c8a82ba8a538,reading (covert),covered,LAN-RA,
+trm_4c8a82eeaa58f,reading (overt),covered,LAN-RA,
+trm_4c40d168898db,reading span task,covered,MEM-CSPAN,
+trm_4f2420b042165,reappraisal task,covered,EMO-REG,
+trm_4f2411c91ae5e,recall test,covered,MEM-ON,
+trm_4f241fb95918f,recency judgment task,candidate,MEM-RECJ,gap candidate (gap_candidates.csv)
+tsk_zcuAj6VrsFmfV,Reciprocal Artwork Evaluation Task,candidate,EMO-AEST,gap candidate (gap_candidates.csv)
+trm_4c8a830dec136,recitation/repetition (covert),covered,LAN-RA,
+trm_4c8a8329cb8ff,recitation/repetition (overt),covered,LAN-RA,
+tsk_4a57abb949d40,recognition memory test,covered,MEM-ON,
+trm_5519c329eb334,Regularity and Change Detection,candidate,PER-REGTR,gap candidate (gap_candidates.csv)
+trm_565a31fa6f444,regulated heat stimulation,covered,PER-LEP,
+trm_550b5a47aa23e,relational processing fMRI task paradigm,covered,CTL-ANAL,
+trm_4f2454dfca337,relational reasoning task,covered,CTL-ANAL,
+tsk_dn4ejmrGGaUAZ,Relative Reinforcing Efficacy Purchase Task,excluded,,behavioural/neuropsychological test without an established neural read-out
+trm_4da63146f12d7,remember/know task,covered,MEM-ON,
+tsk_ZMTNk4Oce5b2j,Remote Associates Test,covered,CTL-RAT,
+trm_4da88b3b0cbcc,response mapping task,generic,,"umbrella label, design manipulation or method rather than a paradigm"
+trm_54e69c642d89b,rest eyes closed,covered,STA-REST,
+trm_4c8a834779883,rest eyes open,covered,STA-REST,
+trm_558c4d3105abf,retinotopic mapping task,covered,PER-RET,
+trm_551b0fd03d7d8,retinotopic representation,generic,,"umbrella label, design manipulation or method rather than a paradigm"
+trm_4da87f81bc2c8,retrieval-induced forgetting task,covered,MEM-RIF,
+tsk_4a57abb949d4e,reversal learning task,covered,ERR-PRL,
+trm_5181fb7bf350b,reversal weather prediction,covered,ERR-PRL,
+trm_4da88ae0f2952,Rey Auditory Verbal Learning Task,covered,MEM-FR,
+trm_4da880396c76b,Rey-Ostereith Complex Figure Test,excluded,,behavioural/neuropsychological test without an established neural read-out
+trm_4da8914987ee2,Reynell Developmental Language Scales,excluded,,"questionnaire, rating scale, interview or standardized test battery"
+trm_4d949c5b0e380,rhyme verification task,covered,LAN-PHA,
+tsk_22KTtBdDDjZrU,Risk Preferences Task,covered,CTL-MIXG,
+tsk_d9vPgovlo7aJU,risky decision-making under social influence,covered,CTL-MIXG,
+tsk_4a57abb949d5b,risky gains task,covered,CTL-MIXG,
+tsk_wPIAFIkSlX3Tm,risky lotteries task,covered,CTL-MIXG,
+trm_4da8885b33375,Rivermead Behavioural Memory Test,excluded,,behavioural/neuropsychological test without an established neural read-out
+trm_58ab8a6131c5a,route learning,covered,MEM-NAV,
+trm_566db10532583,roving somatosensory oddball task,candidate,PER-SMMN,gap candidate (gap_candidates.csv)
+trm_4e5bb14d814a8,rubber hand illusion,covered,PER-BOI,
+trm_551f0b18d7ca0,Running Memory,covered,MEM-NBK,
+trm_4b75ea4ddd896,same-different task,covered,CTL-PDM,
+tsk_4a57abb949d69,Salthouse and Babcock Listening Span task,covered,MEM-CSPAN,
+trm_55a6a36d9c3f9,Scale for the Assessment of Negative Symptoms,excluded,,"questionnaire, rating scale, interview or standardized test battery"
+trm_55a6cffbcb5f7,Scale for the Assessment of Positive Symptoms,excluded,,"questionnaire, rating scale, interview or standardized test battery"
+trm_4da6327154fd4,scene recognition task,candidate,PER-SCENE,gap candidate (gap_candidates.csv)
+trm_56ac06bac9334,Selection-Optimization-Compensation (SOC) questionnaire,excluded,,"questionnaire, rating scale, interview or standardized test battery"
+tsk_4a57abb949d76,selective attention task,generic,,"umbrella label, design manipulation or method rather than a paradigm"
+tsk_29IL64WzhiO9u,Self evaluation task,covered,MEM-SRE,
+trm_551b153bc78fc,self monitoring task,generic,,"umbrella label, design manipulation or method rather than a paradigm"
+trm_4c40d325977f0,self ordered pointing task,covered,MEM-SWM,
+trm_56a91ed5f1ccc,self regulation questionnaire,excluded,,"questionnaire, rating scale, interview or standardized test battery"
+tsk_4a57abb949d84,semantic anomaly judgement task,covered,LAN-SEMD,
+tsk_4a57abb949d92,semantic association task,covered,LAN-SEMD,
+trm_4f2412d4c3b88,semantic classification task,covered,LAN-SEMD,
+trm_4f240cb09f8e5,semantic decision task,covered,LAN-SEMD,
+trm_4f241bd52b509,semantic fluency task,covered,LAN-SEMD,
+trm_4f241c0737cc0,semantic memory task,covered,LAN-SEMD,
+trm_4f240d7664628,semantic relatedness task,covered,LAN-SEMD,
+trm_4f241b50caaf7,semantic task,covered,LAN-SEMD,
+trm_526943e3cbaaf,Sensory Profile,excluded,,behavioural/neuropsychological test without an established neural read-out
+tsk_4a57abb949d9f,sentence completion test,covered,LAN-SEMD,
+trm_4f241e8a01052,sentence-picture matching task,covered,LAN-SEMD,
+trm_5521807e50549,Sentence/discourse content test,generic,,"umbrella label, design manipulation or method rather than a paradigm"
+trm_558c35979a284,Sentence/nonword language localizer,covered,LAN-LOC,
+trm_551f0cc82ed49,Sequence encoding,covered,MEM-FR,
+trm_4c8a83cac75f5,sequence recall/learning,covered,MEM-FR,
+trm_551f103b3edeb,Sequence reproduction,covered,MEM-FR,
+trm_4e8a0dd29ec7b,sequential shape matching,covered,MEM-DMS,
+trm_4f241c735e7f6,serial reaction time task,covered,MOT-SRT,
+tsk_4a57abb949dad,set-shifting task,covered,CTL-SW,
+trm_4f2456932f11b,shadowing task,candidate,LAN-SHADOW,gap candidate (gap_candidates.csv)
+trm_5696c3fa0061a,Shift Task,covered,CTL-SW,
+trm_56a2b7c08a279,Short Penn Continuous Performance Test-Number and Letter Version,excluded,,"questionnaire, rating scale, interview or standardized test battery"
+trm_4f24239cc239e,short-term memory task,covered,MEM-DMS,
+tsk_HfEOU5RLqcxAD,SIDES Affect Dysregulation Scale (Child-Reported),excluded,,"questionnaire, rating scale, interview or standardized test battery"
+tsk_4a57abb949dbb,Simon task,covered,CTL-SIM,
+tsk_4a57abb949dc8,simple reaction time task,covered,MOT-RT,
+trm_551f0b9654d23,Simple span task,covered,MEM-DS,
+trm_55c686e0824e8,Single item food choice task,covered,CTL-VBC,
+trm_4ebc728326a13,single-task weather prediction,covered,ERR-PCL,
+trm_4fbd2af083332,size match task,covered,CTL-PDM,
+trm_553e88a66b676,social bargaining fMRI task,covered,SOC-UG,
+trm_550b557e5f90e,social cognition (theory of mind) fMRI task paradigm,covered,SOC-TOM,
+trm_521687032f822,Social Communication Questionnaire,excluded,,"questionnaire, rating scale, interview or standardized test battery"
+trm_525c4a78089ad,Social Competence Questionnaire,excluded,,"questionnaire, rating scale, interview or standardized test battery"
+tsk_Ncknr0soiM4IV,social decision-making task,covered,SOC-CONF,
+trm_553fbbf79ebc5,social influence for food preferences task,covered,SOC-CONF,
+tsk_ec4xbqynlG1uR,Social influence on emotion task,covered,SOC-CONF,
+trm_553eb45e2b709,social judgment of faces task,candidate,SOC-TRAIT,gap candidate (gap_candidates.csv)
+trm_4f2453ce33f16,social judgment task,covered,SOC-CONF,
+trm_5873d014bcfc8,Social localizer fMRI task paradigm,covered,SOC-TOM,
+trm_58c80c3376c95,Social Norm Processing Task,covered,SOC-UG,
+trm_5208fe678c652,Social Responsiveness Scale,excluded,,"questionnaire, rating scale, interview or standardized test battery"
+tsk_4a57abb949dd6,source memory test,covered,MEM-SRC,
+trm_50df1c0d946b8,Space Fortress,candidate,STA-GAME,gap candidate (gap_candidates.csv)
+trm_50df1dd534ff2,Space Fortress with Oddball,candidate,STA-PROBE,gap candidate (gap_candidates.csv)
+tsk_4a57abb949de3,span/supra-span test,covered,MEM-DS,
+trm_551f0634b2607,Spatial cuing paradigm,covered,PER-CUE,
+trm_4dadbe225bdf1,spatial delayed response task,covered,MEM-SWM,
+trm_5873ce8e77d1d,spatial localizer fMRI task paradigm,generic,,"umbrella label, design manipulation or method rather than a paradigm"
+trm_4c8a83f27ac55,spatial location/discrimination,generic,,"umbrella label, design manipulation or method rather than a paradigm"
+tsk_4a57abb949df1,spatial n-back task,covered,MEM-NBK,
+trm_50f733d7305a1,Spatial Recognition Memory,covered,MEM-SWM,
+trm_4da86b539924c,spatial span test,covered,MEM-SWM,
+trm_558c36935a0e9,spatial working memory localizer task,covered,MEM-SWM,
+trm_4f2453b806fe1,spatial working memory task,covered,MEM-SWM,
+trm_5519c3eaa3fb7,Speech Detection,covered,PER-AMASK,
+trm_4f24135453d65,spelling task,excluded,,behavioural/neuropsychological test without an established neural read-out
+tsk_4a57abb949dfe,Spielberger's State-Trait Anxiety Questionnaire,excluded,,"questionnaire, rating scale, interview or standardized test battery"
+trm_5873cd1c9d4c4,standard localizer fMRI task paradigm,generic,,"umbrella label, design manipulation or method rather than a paradigm"
+trm_56bbe12994926,Stanford Leisure-Time Activity Categorical Item,excluded,,"questionnaire, rating scale, interview or standardized test battery"
+trm_526af65b16c82,Stanford-Binet Intelligence Scales,excluded,,"questionnaire, rating scale, interview or standardized test battery"
+tsk_FV3SD73LtdfUc,State-Trait Anger Expression Inventory-2 (STAXI-2),excluded,,"questionnaire, rating scale, interview or standardized test battery"
+tsk_4a57abb949e0c,Sternberg delayed recognition task,covered,MEM-SB,
+trm_56674c7c2fa4f,Sternberg Directed Forgetting,covered,MEM-DF,
+trm_551f0a8b5ba2c,Sternberg Item Recognition Task,covered,MEM-SB,
+trm_56674987c8f0c,Sternberg Recent Probes,covered,MEM-RPT,
+trm_56a9123fe580f,stimulus selective stop signal task,covered,CTL-SST,
+trm_4da890cf99b9e,Stockings of Cambridge Task,covered,CTL-TOL,
+tsk_4a57abb949e1a,stop signal task,covered,CTL-SST,
+trm_558c3350c6a9f,Stop signal task with dot motion discrimination,covered,CTL-SST,
+trm_5181f83b77fa4,stop signal task with letter naming,covered,CTL-SST,
+trm_5181f863d24f4,stop signal task with pseudo word naming,covered,CTL-SST,
+trm_553fcbbe974ba,stop signal walking task with stroop,covered,CTL-SST,
+trm_4f2447dfa5947,stop-change task,covered,CTL-SST,
+tsk_4a57abb949e27,Stroop task,covered,CTL-STR,
+tsk_ZnDT4SbTZ2Bye,Stroop-like Arrows Task,covered,CTL-STR,
+tsk_4a57abb949e35,Structured Clinical Interview for Diagnostic and Statistical Manual of Mental Disorders (DSM-IV),excluded,,"questionnaire, rating scale, interview or standardized test battery"
+trm_4c8a840d6f969,subjective emotional picture discrimination,covered,EMO-IAPS,
+trm_552184243d7ab,Surface properties of object paradigms,generic,,"umbrella label, design manipulation or method rather than a paradigm"
+trm_4da86cfe8cf1b,sustained attention to response task,covered,CTL-SART,
+trm_50b66c50ca2ac,Symbol Counter Task,covered,MEM-NBK,
+tsk_4a57abb949e44,symbol-digit substitution,excluded,,behavioural test; held under D-023
+tsk_4a57abb949e5b,Symptom Checklist-90-Revised,excluded,,"questionnaire, rating scale, interview or standardized test battery"
+trm_5873e2469dd0d,synatcting and semantic fMRI task paradigm,covered,LAN-SEMD,
+trm_4e31d031bc8c2,synchrony judgment task,covered,PER-TIME,
+tsk_4a57abb949e7c,syntactic acceptability judgement task,covered,LAN-P600,
+trm_4c8a842512a33,syntactic discrimination,covered,LAN-P600,
+trm_4f244a453522b,syntactic task,covered,LAN-P600,
+trm_4c8a843d8d352,tactile monitor/discrimination,covered,PER-TACT,
+trm_534692ef3b5df,Tapping task,covered,MOT-ME,
+trm_4f242499b8952,target detection task,covered,PER-ODD,
+trm_566745bbf272a,task switching (3x2),covered,CTL-SW,
+tsk_n4koOyLJMyobG,task-set learning,covered,CTL-SW,
+tsk_4a57abb949e8a,task-switching,covered,CTL-SW,
+trm_55a6cb4f951ea,Temperament and Character Inventory,excluded,,"questionnaire, rating scale, interview or standardized test battery"
+tsk_4a57abb949e98,temporal discounting task,covered,CTL-DD,
+trm_4e31d69b7f422,temporal order judgment task,covered,PER-TIME,
+trm_56a919a478935,ten item personality questionnaire,excluded,,"questionnaire, rating scale, interview or standardized test battery"
+trm_52713c85c0bd2,Test of Adolescent and Adult Language,excluded,,behavioural/neuropsychological test without an established neural read-out
+trm_527138126fb20,Test of Early Language Development,excluded,,behavioural/neuropsychological test without an established neural read-out
+trm_527143a263937,Test of Language Development,excluded,,behavioural/neuropsychological test without an established neural read-out
+trm_4da86cdbd9eeb,test of variables of attention,covered,CTL-CPT,
+tsk_4a57abb949ea5,Test of Word Reading Efficiency,excluded,,behavioural/neuropsychological test without an established neural read-out
+trm_56a91a3082c31,theories of willpower scale,excluded,,"questionnaire, rating scale, interview or standardized test battery"
+trm_4c8a8467304e2,theory of mind task,covered,SOC-TOM,
+trm_4e5fcd75efb58,thermal grill illusion,candidate,PER-TGI,gap candidate (gap_candidates.csv)
+trm_54f93101b2fd8,think/no-think task,covered,MEM-TNT,
+tsk_lihqGPC9Y8ge0,Thirst perception,covered,PER-HBD,
+trm_50c0f3e6c596e,Time Wall,candidate,PER-TIMING,gap candidate (gap_candidates.csv)
+trm_55218536d1710,Time-series of response time,generic,,"umbrella label, design manipulation or method rather than a paradigm"
+tsk_4a57abb949eb3,Tobacco Craving Questionnaire,excluded,,"questionnaire, rating scale, interview or standardized test battery"
+trm_4ebc6a6b75ebf,tone counting,covered,PER-ODD,
+trm_5519c5f2ad56f,Tone Detection (JND),covered,PER-AEP,
+trm_5519c2645167e,Tone Matching,covered,PER-AEP,
+trm_4c8a84825c4e4,tone monitor/discrimination,covered,PER-ODD,
+trm_4e6112759926e,tonic pain stimulation,candidate,PER-TONIC,gap candidate (gap_candidates.csv)
+trm_4da87e7282f92,Tower of Hanoi,covered,CTL-TOL,
+trm_4da87e439c411,Tower of London,covered,CTL-TOL,
+trm_5696bcf1b5c64,Tower of London Imagine,covered,CTL-TOL,
+trm_4a3fd79d0b3d7,trace conditioning,candidate,ERR-EYEBL,gap candidate (gap_candidates.csv)
+tsk_4a57abb949ec0,Trail Making Test A and B,covered,CTL-TMT,
+trm_551f1491a2fe8,Transitive inference task,covered,MEM-AI,
+trm_56aa9833c4be2,treatment self-regulation questionnaire,excluded,,"questionnaire, rating scale, interview or standardized test battery"
+tsk_QyZsV96fiVlT1,tri-modal roving stimulus paradigm,candidate,PER-SMMN,gap candidate (gap_candidates.csv)
+tsk_Qa4kXAzvUyaGL,Trier Social Stress Test,covered,EMO-STRESS,
+tsk_uzol7erTzr9Ix,Trust game (TG),covered,SOC-TRUST,
+trm_55c691909c580,Two item food choice task,covered,CTL-VBC,
+tsk_Jdo0KE737b9N8,Two-Stage Task,covered,ERR-TS,
+trm_553e8882e3cb6,Ultimatum Game (UG),covered,SOC-UG,
+trm_4b86c473a7166,underlining test,excluded,,behavioural/neuropsychological test without an established neural read-out
+tsk_4a57abb949ece,Unified Parkinson's Disease Rating Scale,excluded,,"questionnaire, rating scale, interview or standardized test battery"
+trm_4f242172aea5d,updating task,covered,MEM-NBK,
+trm_56a91a92043bc,UPPS-P Impulsivity Scale,excluded,,"questionnaire, rating scale, interview or standardized test battery"
+trm_4da88ec6735ad,Uznadze haptic illusion task,excluded,,behavioural/neuropsychological test without an established neural read-out
+tsk_QM81yNuuioVho,value-based decision making,covered,CTL-VBC,
+trm_4af89b3a925ca,Vandenberg & Kuse Tasks,excluded,,behavioural/neuropsychological test without an established neural read-out
+trm_4f24183fe80c6,verb generation task,covered,LAN-VG,
+trm_552174d3b61fb,Verbal description of visual depiction,generic,,"umbrella label, design manipulation or method rather than a paradigm"
+trm_4f240f1c740da,verbal fluency task,covered,LAN-VF,
+tsk_ccTKYnmv7tOZY,Verbal Interference Test,excluded,,behavioural/neuropsychological test without an established neural read-out
+trm_4f2457a8b0bc8,verbal working memory task,covered,MEM-DMS,
+trm_5519c7f17de9f,Vernier discrimination task,covered,CTL-PDM,
+trm_586fd45d1bd21,vertical checkerboard,covered,PER-RET,
+trm_4c8a84afdd863,vibrotactile monitor/discrimination,candidate,MEM-VTWM,gap candidate (gap_candidates.csv)
+trm_4c8a84d4c4157,video games,candidate,STA-GAME,gap candidate (gap_candidates.csv)
+tsk_161qcskOyTlfY,Video-Mediated Affective Recall,covered,EMO-AUTO,
+trm_4da88a8e13f26,vigilance,covered,STA-PVT,
+trm_52717a95a3b03,Vineland Adaptive Behavior Scales,excluded,,"questionnaire, rating scale, interview or standardized test battery"
+tsk_2lU25qYLrwkfj,violation-of-expectation task,excluded,,behavioural/neuropsychological test without an established neural read-out
+tsk_4a57abb949edb,visual alignment task,covered,CTL-PDM,
+trm_50f7370ace495,Visual Analogue Scales,excluded,,"questionnaire, rating scale, interview or standardized test battery"
+trm_4c8a84f20dde2,visual attention task,generic,,"umbrella label, design manipulation or method rather than a paradigm"
+trm_551b0dc4e4359,visual illusion susceptibility,candidate,PER-VILL,gap candidate (gap_candidates.csv)
+trm_50f9daf1c3834,Visual Object Learning Test,excluded,,behavioural/neuropsychological test without an established neural read-out
+trm_4da886fc2bc46,Visual Patterns Test,excluded,,behavioural/neuropsychological test without an established neural read-out
+trm_4c8a85534241d,visual pursuit/tracking,covered,MOT-TRACK,
+trm_4f2447fe67fb9,visual search task,covered,PER-VS,
+tsk_1eLUszKc87tI1,Visual short term memory task,covered,MEM-DMS,
+tsk_NOaQmzjqHM4iO,Visual Statistical Learning,covered,LAN-SL,
+trm_55217c8179b00,Visual world paradigm,excluded,,behavioural/neuropsychological test without an established neural read-out
+trm_4f24108555294,visually guided saccade task,covered,MOT-SACC,
+tsk_iLPEMA3QRsS3K,Visuomotor rotation task,covered,ERR-ADAPT,
+tsk_4a57abb949ee9,visuospatial cueing task,covered,PER-CUE,
+trm_5696b180169bd,Volatile Bandit,covered,ERR-BANDIT,
+trm_5106f4dfe08b1,WAIS Arithmetic,excluded,,"questionnaire, rating scale, interview or standardized test battery"
+trm_5106f82530aff,WAIS Comprehension,excluded,,"questionnaire, rating scale, interview or standardized test battery"
+trm_5106eee90937a,WAIS Digit Span,excluded,,"questionnaire, rating scale, interview or standardized test battery"
+trm_51071fc87a61f,WAIS Object Assembly,excluded,,"questionnaire, rating scale, interview or standardized test battery"
+trm_51070ae889d95,WAIS Picture Arrangement,excluded,,"questionnaire, rating scale, interview or standardized test battery"
+trm_5107067241007,WAIS Picture Completion,excluded,,"questionnaire, rating scale, interview or standardized test battery"
+trm_510703e93367e,WAIS Similarities,excluded,,"questionnaire, rating scale, interview or standardized test battery"
+trm_5106f17025386,WAIS Vocabulary,excluded,,"questionnaire, rating scale, interview or standardized test battery"
+trm_5106eae236c21,WAIS-Information,excluded,,"questionnaire, rating scale, interview or standardized test battery"
+tsk_4a57abb949ef7,Warrington's Face/Word Recognition Test,covered,PER-FACE,
+trm_4f2449bdcb0b1,Wason card selection task,covered,CTL-WASON,
+trm_4b94affc43245,Wechsler Abbreviated Scale of Intelligence,excluded,,"questionnaire, rating scale, interview or standardized test battery"
+tsk_4a57abb949f12,Wechsler Adult Intelligence Scale - Revised,excluded,,"questionnaire, rating scale, interview or standardized test battery"
+tsk_4a57abb949f04,Wechsler Adult Intelligence Scale-Revised,excluded,,"questionnaire, rating scale, interview or standardized test battery"
+trm_4da6338803ed2,Wechsler Intelligence Scale for Children - Revised,excluded,,"questionnaire, rating scale, interview or standardized test battery"
+trm_4b94b12bf0eb2,Wechsler Memory Scale Fourth Edition,excluded,,"questionnaire, rating scale, interview or standardized test battery"
+trm_4c8a8575d1e55,whistling,covered,MOT-ME,
+trm_53c4465b0466f,why/how task,covered,SOC-TOM,
+trm_569989ef8cff4,willingness to wait task,excluded,,behavioural/neuropsychological test without an established neural read-out
+trm_4b86c55f3d5df,WISC-R Mazes,excluded,,"questionnaire, rating scale, interview or standardized test battery"
+tsk_4a57abb949f21,Wisconsin card sorting test,covered,CTL-SW,
+tsk_4a57abb949f2f,word attack,excluded,,behavioural/neuropsychological test without an established neural read-out
+trm_4f240fbdf1601,word comprehension task,covered,LAN-SEMD,
+trm_4da633dbb5817,word fluency test,covered,LAN-VF,
+tsk_4a57abb949f3d,word generation task,covered,LAN-VF,
+tsk_4a57abb949f4a,word identification,covered,LAN-RA,
+trm_4ebd482eba5b1,word one-back task,covered,MEM-NBK,
+trm_5798c6a933abc,word recognition task,covered,MEM-ON,
+trm_4c8a858da803d,word stem completion (covert),covered,MEM-RPRIM,
+trm_4c8a85a4564b2,word stem completion (overt),covered,MEM-RPRIM,
+trm_4f241ee9c4e37,word-picture matching task,covered,LAN-SEMD,
+trm_4b65e5e2ab3ca,word-picture verification task,covered,LAN-SEMD,
+trm_550b50095d4a3,working memory fMRI task paradigm,covered,MEM-DMS,
+trm_5696d061adfb5,WRAT-4 Math Computation,excluded,,"questionnaire, rating scale, interview or standardized test battery"
+trm_5696d0a4902df,WRAT-4 Word Reading,excluded,,"questionnaire, rating scale, interview or standardized test battery"
+trm_4c8a85c5c75eb,writing task,covered,MOT-HW,
+trm_59668f09db813,Yellow Light Game,excluded,,behavioural/neuropsychological test without an established neural read-out
+trm_558702243da12,Young Mania Rating Scale,excluded,,"questionnaire, rating scale, interview or standardized test battery"
+trm_56a91e92eab46,zimbardo time perspective inventory,excluded,,"questionnaire, rating scale, interview or standardized test battery"
+trm_4da89089ce0af,zoo map test,excluded,,behavioural/neuropsychological test without an established neural read-out
+trm_56abebfe9aaa3,Zuckerman Sensation Seeking Scale,excluded,,"questionnaire, rating scale, interview or standardized test battery"
