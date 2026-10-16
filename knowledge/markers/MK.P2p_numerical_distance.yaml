@@ -1,0 +1,87 @@
+schema_version: '0.2'
+id: MK.P2p_numerical_distance
+name:
+  en: Parietal P2p numerical distance effect
+  zh: 顶区 P2p 数值距离效应
+aliases:
+- P2p
+- parietal P2p
+- numerical distance effect (ERP)
+- numerical ratio effect (ERP)
+type: erp_component
+recording_modality:
+- EEG
+signature:
+  latency_ms: ~200-300 after number onset
+  polarity: positive; amplitude modulated by numerical distance (or ratio) between the compared quantities
+  topography: posterior parietal, often right-lateralized
+description:
+  en: Positive deflection over posterior parietal electrodes around 200-300 ms after a number or numerosity is shown, whose
+    amplitude depends on the numerical distance (for symbolic numbers) or ratio (for dot arrays) between the stimulus and
+    the comparison standard. Dehaene (1996) identified the distance effect at this latency in a larger/smaller-than-5 comparison
+    with digits and number words, which places magnitude comparison after notation-specific identification. The effect
+    has been reported in children and adults and for nonsymbolic numerosities.
+  zh: 呈现数字或数量后约 200–300 ms 在顶区后部电极出现的正波，其波幅取决于刺激与比较标准之间的数值距离（符号数字）或比率（点阵）。Dehaene（1996）在以
+    5 为标准、用阿拉伯数字和数字词进行的大小比较中，于该潜伏期发现距离效应，表明数量比较发生在依赖记数法的识别之后。该效应在儿童与成人以及非符号数量中均有报告。
+generators:
+- region: BR.IPS
+  evidence: C
+  relation: distance- or ratio-dependent P2p activity localizes to intraparietal regions; fMRI parietal activation in number
+    comparison decreases with numerical distance
+  sources:
+  - citation: 'Hyde DC, Spelke ES. Spatiotemporal dynamics of processing nonsymbolic number: an event-related potential source
+      localization study. Hum Brain Mapp. 2012;33(9):2189-2203.'
+    doi: 10.1002/hbm.21352
+    year: 2012
+    verified: false
+  - citation: 'Dehaene S. The organization of brain activations in number comparison: event-related potentials and the additive-factors
+      method. J Cogn Neurosci. 1996;8(1):47-68.'
+    doi: 10.1162/jocn.1996.8.1.47
+    year: 1996
+    verified: false
+  - citation: Pinel P, Dehaene S, Rivière D, et al. Modulation of parietal activation by semantic distance in a number comparison
+      task. NeuroImage. 2001;14(5):1013-1026.
+    doi: 10.1006/nimg.2001.0913
+    year: 2001
+    verified: false
+  - citation: Arsalidou M, Taylor MJ. Is 2+2=4? Meta-analyses of brain areas needed for numbers and calculations. NeuroImage.
+      2011;54(3):2382-2393.
+    doi: 10.1016/j.neuroimage.2010.10.009
+    year: 2011
+    verified: false
+  note: 'method: MEG/EEG source; ERP source localization places the P2p mainly in right intraparietal / temporo-parietal regions
+    (Hyde & Spelke 2012, nonsymbolic numbers; single study); Dehaene 1996 estimated bilateral parietal sources from scalp
+    topography; fMRI distance effects in IPS (Pinel 2001, same group as Dehaene 1996) and an fMRI meta-analysis of number
+    tasks (Arsalidou & Taylor 2011) converge but are indirect for the ERP. Graded C. Arsalidou & Taylor: OpenAlex gives
+    2010 (online); the issue is 2011.'
+indexes:
+- construct: CN.mental_arithmetic
+  evidence: B
+  relation: P2p amplitude varies with numerical distance (symbolic) or ratio (nonsymbolic) between compared quantities
+  sources:
+  - citation: 'Dehaene S. The organization of brain activations in number comparison: event-related potentials and the additive-factors
+      method. J Cogn Neurosci. 1996;8(1):47-68.'
+    doi: 10.1162/jocn.1996.8.1.47
+    year: 1996
+    verified: false
+  - citation: Temple E, Posner MI. Brain mechanisms of quantity are similar in 5-year-old children and adults. Proc Natl Acad
+      Sci U S A. 1998;95(13):7836-7841.
+    doi: 10.1073/pnas.95.13.7836
+    year: 1998
+    verified: false
+  - citation: 'Hyde DC, Spelke ES. Spatiotemporal dynamics of processing nonsymbolic number: an event-related potential source
+      localization study. Hum Brain Mapp. 2012;33(9):2189-2203.'
+    doi: 10.1002/hbm.21352
+    year: 2012
+    verified: false
+  note: The construct vocabulary has no numerical-magnitude construct; mapped to CN.mental_arithmetic (internal manipulation
+    of symbolic content) as the closest term. Three independent laboratories. The direction of the amplitude change differs
+    between tasks and studies and should be checked against the full texts. For Hyde & Spelke, OpenAlex gives 2011 (online);
+    the issue is 2012.
+notes: 'Sprint 7 (2026-10-17, curator_m): new marker approved under D-079, requested by CTL-NUM-001. Signature values follow
+  the latency windows reported across the cited studies (Hyde & Spelke 2012 analysed 260-300 ms) and are approximate.
+  Every DOI checked against its Crossref or OpenAlex record (see curation/work/sprint7/markers_new/); verified: false pending
+  full-text check.'
+status: draft
+contributors:
+- curator_m

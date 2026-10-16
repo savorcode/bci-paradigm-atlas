@@ -1446,8 +1446,7 @@ terms:
     zh: 以可变的刺激起始异步（SOA）呈现两个短暂刺激（同一或不同感觉通道：视觉、听觉、触觉），被试报告哪个先出现（时间顺序判断，TOJ）或二者是否同时（同时性判断，SJ）。由随 SOA 变化的心理测量函数得到最小可觉差和主观同时点；顺序阈值约
       20 ms 或更长。神经研究把知觉到的时间窗与后部 α 节律相联系，视听刺激对则与早期视听交互响应相联系。
   markers:
-  - MK.alpha_posterior
-  - MK.AV_interaction_ERP
+  - MK.prestimulus_alpha_phase
   first_source:
     citation: Hirsh IJ, Sherrick CE. Perceived order in different sense modalities. Journal of Experimental Psychology. 1961;62(5):423-432.
     doi: 10.1037/h0045283
@@ -1517,7 +1516,7 @@ terms:
     zh: 从不同方向呈现短暂声音（自由场中的扬声器或耳机渲染的虚拟声源），被试通过指向、报告位置或迫选判断报告感知到的方向。方位角定位依赖双耳时间差和强度差，仰角定位依赖频谱线索。神经研究显示后部听觉皮层参与声源位置加工；空间上分离的声源也被用作听觉脑机接口的刺激。
   markers:
   - MK.BOLD_auditory_cortex
-  - MK.N1_auditory
+  - MK.auditory_spatial_ERP
   first_source:
     citation: Lord Rayleigh. XII. On our perception of sound direction. The London, Edinburgh, and Dublin Philosophical Magazine
       and Journal of Science. 1907;13(74):214-232.
@@ -5590,6 +5589,7 @@ terms:
     zh: 被试观看或想象情绪材料时给出短促响亮的听觉探测刺激。与中性背景相比，惊跳眨眼反射在不愉快背景下增强、在愉快背景下减弱；探测刺激诱发的 P3 在两种效价的高唤醒背景下均减小。
   markers:
   - MK.P3a
+  - MK.startle_blink
   first_source:
     citation: 'Vrana SR, Spence EL, Lang PJ. The startle probe response: A new measure of emotion? Journal of Abnormal Psychology.
       1988;97(4):487-491.'
@@ -6653,6 +6653,7 @@ terms:
   markers:
   - MK.BOLD_frontoparietal
   - MK.LRP
+  - MK.P2p_numerical_distance
   first_source:
     citation: Moyer RS, Landauer TK. Time required for judgements of numerical inequality. Nature. 1967;215(5109):1519-1520.
     doi: 10.1038/2151519a0

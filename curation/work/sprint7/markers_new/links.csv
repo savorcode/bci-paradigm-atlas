@@ -1,0 +1,37 @@
+marker,link_type,target,evidence,method,doi,record_api,note
+MK.startle_blink,generator,BR.amygdala,B,lesion,10.1093/brain/119.6.1991,https://api.crossref.org/works/10.1093/brain/119.6.1991,affective modulation only; brainstem startle circuit has no region id
+MK.startle_blink,generator,BR.amygdala,B,lesion,10.1037/0735-7044.118.2.429,https://api.openalex.org/works/doi:10.1037/0735-7044.118.2.429,affective modulation only
+MK.startle_blink,index,CN.emotional_state,B,,10.1037/0021-843x.97.4.487,https://api.openalex.org/works/doi:10.1037/0021-843x.97.4.487,
+MK.startle_blink,index,CN.emotional_state,B,,10.1037/0033-295x.97.3.377,https://api.openalex.org/works/doi:10.1037/0033-295x.97.3.377,
+MK.startle_blink,index,CN.emotional_state,B,,10.1037/1528-3542.1.3.276,https://api.openalex.org/works/doi:10.1037/1528-3542.1.3.276,Crossref API fetch error; record taken from OpenAlex API
+MK.startle_blink,index,CN.threat_fear,B,,10.1111/j.1469-8986.1991.tb01999.x,https://api.crossref.org/works/10.1111/j.1469-8986.1991.tb01999.x,
+MK.startle_blink,index,CN.threat_fear,B,,10.1037/1528-3542.1.3.276,https://api.openalex.org/works/doi:10.1037/1528-3542.1.3.276,
+MK.startle_blink,index,CN.threat_fear,B,,10.1037/0735-7044.118.2.429,https://api.openalex.org/works/doi:10.1037/0735-7044.118.2.429,
+MK.startle_blink,index,CN.approach_motivation,C,,10.1037/0033-295x.97.3.377,https://api.openalex.org/works/doi:10.1037/0033-295x.97.3.377,
+MK.startle_blink,index,CN.approach_motivation,C,,10.1037/1528-3542.1.3.276,https://api.openalex.org/works/doi:10.1037/1528-3542.1.3.276,
+MK.startle_blink,index,CN.sensory_gating,B,,10.1007/s002130100810,https://api.crossref.org/works/10.1007/s002130100810,prepulse inhibition (review)
+MK.startle_blink,signature,,,,10.1111/j.1469-8986.2005.00271.x,https://api.openalex.org/works/doi:10.1111/j.1469-8986.2005.00271.x,measurement guidelines; cited in marker notes
+MK.prestimulus_alpha_phase,generator,BR.visual_cortex,C,scalp topography,10.1523/JNEUROSCI.3963-08.2009,https://api.openalex.org/works/doi:10.1523/JNEUROSCI.3963-08.2009,
+MK.prestimulus_alpha_phase,generator,BR.visual_cortex,C,scalp topography,10.1523/JNEUROSCI.1161-11.2011,https://api.openalex.org/works/doi:10.1523/JNEUROSCI.1161-11.2011,occipital TMS phosphenes depend on alpha phase
+MK.prestimulus_alpha_phase,index,CN.perceptual_organization,C,,10.1016/0028-3932(81)90005-1,https://api.crossref.org/works/10.1016/0028-3932(81)90005-1,first author spelled 'Valera' in record
+MK.prestimulus_alpha_phase,index,CN.perceptual_organization,C,,10.1016/j.neuroimage.2016.02.065,https://api.openalex.org/works/doi:10.1016/j.neuroimage.2016.02.065,
+MK.prestimulus_alpha_phase,index,CN.multisensory_integration,C,,10.1111/ejn.14186,https://api.openalex.org/works/doi:10.1111/ejn.14186,OpenAlex year 2018 (online); issue year 2019 cited
+MK.prestimulus_alpha_phase,index,CN.perceptual_awareness,C,,10.1523/JNEUROSCI.3963-08.2009,https://api.openalex.org/works/doi:10.1523/JNEUROSCI.3963-08.2009,
+MK.prestimulus_alpha_phase,index,CN.cortical_excitability,C,,10.1523/JNEUROSCI.1161-11.2011,https://api.openalex.org/works/doi:10.1523/JNEUROSCI.1161-11.2011,
+MK.auditory_spatial_ERP,generator,BR.STG,B,MEG/EEG source,10.1073/pnas.0510480103,https://api.openalex.org/works/doi:10.1073/pnas.0510480103,MEG-fMRI; posterior planum temporale / STG
+MK.auditory_spatial_ERP,generator,BR.STG,B,MEG/EEG source,10.1111/j.1460-9568.2006.05025.x,https://api.openalex.org/works/doi:10.1111/j.1460-9568.2006.05025.x,location MMN localized to posterior STG
+MK.auditory_spatial_ERP,generator,BR.STG,B,fMRI localization,10.1523/JNEUROSCI.23-13-05799.2003,https://api.openalex.org/works/doi:10.1523/JNEUROSCI.23-13-05799.2003,indirect for the ERP
+MK.auditory_spatial_ERP,generator,BR.STG,B,fMRI localization,10.1038/nn904,https://api.openalex.org/works/doi:10.1038/nn904,indirect for the ERP
+MK.auditory_spatial_ERP,index,CN.early_auditory,B,,10.1016/0028-3932(72)90063-2,https://api.openalex.org/works/doi:10.1016/0028-3932(72)90063-2,record has no abstract; content to be checked in full text
+MK.auditory_spatial_ERP,index,CN.early_auditory,B,,10.1152/jn.00424.2009,https://api.crossref.org/works/10.1152/jn.00424.2009,OpenAlex API returned 429; Crossref record used
+MK.auditory_spatial_ERP,index,CN.early_auditory,B,,10.1073/pnas.0510480103,https://api.openalex.org/works/doi:10.1073/pnas.0510480103,
+MK.auditory_spatial_ERP,index,CN.auditory_change,B,,10.1016/0013-4694(89)90192-2,https://api.openalex.org/works/doi:10.1016/0013-4694(89)90192-2,
+MK.auditory_spatial_ERP,index,CN.auditory_change,B,,10.1111/j.1460-9568.2006.05025.x,https://api.openalex.org/works/doi:10.1111/j.1460-9568.2006.05025.x,
+MK.auditory_spatial_ERP,index,CN.spatial_attention,C,,10.3758/BF03206172,https://api.crossref.org/works/10.3758/BF03206172,OpenAlex API returned 429; Crossref record used
+MK.P2p_numerical_distance,generator,BR.IPS,C,MEG/EEG source,10.1002/hbm.21352,https://api.openalex.org/works/doi:10.1002/hbm.21352,OpenAlex year 2011 (online); issue year 2012 cited
+MK.P2p_numerical_distance,generator,BR.IPS,C,scalp topography,10.1162/jocn.1996.8.1.47,https://api.crossref.org/works/10.1162/jocn.1996.8.1.47,
+MK.P2p_numerical_distance,generator,BR.IPS,C,fMRI localization,10.1006/nimg.2001.0913,https://api.crossref.org/works/10.1006/nimg.2001.0913,same group as Dehaene 1996; indirect for the ERP
+MK.P2p_numerical_distance,generator,BR.IPS,C,fMRI localization,10.1016/j.neuroimage.2010.10.009,https://api.openalex.org/works/doi:10.1016/j.neuroimage.2010.10.009,meta-analysis of number tasks; OpenAlex year 2010 (online); issue year 2011 cited
+MK.P2p_numerical_distance,index,CN.mental_arithmetic,B,,10.1162/jocn.1996.8.1.47,https://api.crossref.org/works/10.1162/jocn.1996.8.1.47,
+MK.P2p_numerical_distance,index,CN.mental_arithmetic,B,,10.1073/pnas.95.13.7836,https://api.openalex.org/works/doi:10.1073/pnas.95.13.7836,
+MK.P2p_numerical_distance,index,CN.mental_arithmetic,B,,10.1002/hbm.21352,https://api.openalex.org/works/doi:10.1002/hbm.21352,

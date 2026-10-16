@@ -19,7 +19,7 @@ stimulus_modality:
 - visual
 - auditory
 markers:
-- MK.AV_interaction_ERP
+- MK.prestimulus_alpha_phase
 description:
   en: A brief light and a brief sound are presented at a range of audiovisual SOAs (sound leading or lagging). The observer
     judges whether the two were simultaneous or not. The distribution of 'simultaneous' responses over SOA gives the point
@@ -60,9 +60,10 @@ interop:
   bids_task: simultaneity
 notes: Separate serial number because the response classes differ from TOJ (criterion 1). Stone et al. 2001 (Crossref) is
   the earliest retrieved record using the audiovisual SJ task; the SJ method is older and the true origin was not retrieved.
-  SOA range and phase durations are typical values (Vroomen & Keetels 2010 review), not taken from Stone et al. Marker MK.AV_interaction_ERP
-  is the closest registry marker for audiovisual timing; no study linking it to SJ was retrieved in this sprint. [curator_a
-  sprint 6, 2026-10-16]
+  SOA range and phase durations are typical values (Vroomen & Keetels 2010 review), not taken from Stone et al. Marker MK.prestimulus_alpha_phase
+  (added sprint 7, D-079; Ikumi et al. 2019 used the audiovisual SJ task) replaces the stand-in MK.AV_interaction_ERP,
+  for which no study linking it to SJ was retrieved. [curator_a sprint 6, 2026-10-16; marker updated curator_m sprint
+  7, 2026-10-17]
 status: draft
 contributors:
 - curator_a

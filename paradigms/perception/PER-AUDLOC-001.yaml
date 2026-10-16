@@ -20,7 +20,7 @@ stimulus_modality:
 - auditory
 markers:
 - MK.BOLD_auditory_cortex
-- MK.N1_auditory
+- MK.auditory_spatial_ERP
 description:
   en: Sounds are presented from sources at different azimuths (and elevations) around the listener, who reports the perceived
     direction of each sound. Rayleigh (1907) used such listening experiments to show that low-frequency direction depends
@@ -70,10 +70,10 @@ interop:
   bids_task: soundlocalization
 notes: 'Rayleigh 1907 (Crossref) is the earliest retrieved record; it is partly theoretical, and the listening procedures
   are not described here in detail, so the trial structure follows Makous & Middlebrooks 1990 (Crossref; noise-burst duration
-  from general knowledge of the paper, to be checked). Zatorre et al. 2002 (Crossref) supports MK.BOLD_auditory_cortex. MK.N1_auditory
-  is the closest EEG marker in the registry; no localization-specific marker exists (see marker_requests.csv). Overlap with
+  from general knowledge of the paper, to be checked). Zatorre et al. 2002 (Crossref) supports MK.BOLD_auditory_cortex. MK.auditory_spatial_ERP
+  (added sprint 7, D-079; N1/P2 location effects and location MMN) replaces the general stand-in MK.N1_auditory. Overlap with
   PER-ODD-008 (auditory spatial P300 BCI): Schreuder et al. 2010 (Crossref) is an earlier record of that BCI than its current
-  first_source (2011), noted in worklog for the owner of PER-ODD-008. No public dataset verified. [curator_a sprint 6, 2026-10-16]'
+  first_source (2011), noted in worklog for the owner of PER-ODD-008. No public dataset verified. [curator_a sprint 6, 2026-10-16; marker updated curator_m sprint 7, 2026-10-17]'
 status: draft
 contributors:
 - curator_a

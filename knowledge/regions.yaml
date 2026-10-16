@@ -699,6 +699,22 @@ terms:
   notes: Midbrain; no Brodmann, AAL3 or HCP-MMP1.0 label (AAL3 adds several brainstem nuclei but not the inferior colliculus),
     so atlas_refs omitted. Localise with a dedicated subcortical auditory atlas, e.g. the MNI-space atlas of Sitek et al.
     2019 built from histology, postmortem MRI and 7T fMRI.
+- id: BR.auditory_brainstem
+  en: auditory nerve and lower auditory brainstem
+  zh: 听神经与下位听觉脑干（耳蜗核、上橄榄复合体）
+  definition: Auditory nerve and the pontomedullary auditory nuclei, chiefly the cochlear nucleus and superior olivary complex,
+    below the inferior colliculus.
+  coordinate_space: MNI152
+  sources:
+  - citation: Sitek KR, Gulban OF, Calabrese E, et al. Mapping the human subcortical auditory system using histology, postmortem
+      MRI and in vivo MRI at 7T. eLife. 2019;8:e48932.
+    doi: 10.7554/eLife.48932
+    year: 2019
+    verified: false
+  notes: 'Atlas correspondence approximate. Brainstem; no Brodmann, AAL3 or HCP-MMP1.0 label, so atlas_refs omitted. Covers
+    the generators of ABR waves I-III; the lateral lemniscus and inferior colliculus belong to BR.inferior_colliculus. Localise
+    the cochlear nucleus and superior olivary complex with a dedicated subcortical auditory atlas such as Sitek et al. 2019.
+    No parent: the file has no brainstem macro region.'
 - id: BR.hippocampus
   en: hippocampus
   zh: 海马
@@ -1100,6 +1116,32 @@ terms:
     verified: false
   notes: Atlas correspondence approximate. AAL3 Cingulate_Post is smaller than most functional PCC definitions; posterior
     Cingulate_Mid often included.
+- id: BR.retrosplenial
+  en: retrosplenial cortex
+  zh: 压后皮层
+  definition: Cortex of the posterior cingulate isthmus wrapping behind the splenium of the corpus callosum (Brodmann areas
+    29 and 30), involved in spatial navigation and episodic memory.
+  atlas_refs:
+    brodmann:
+    - BA29
+    - BA30
+    hcp_mmp1:
+    - RSC
+  coordinate_space: MNI152
+  sources:
+  - &id001
+    citation: Glasser MF, Coalson TS, Robinson EC, et al. A multi-modal parcellation of human cerebral cortex. Nature. 2016;536(7615):171-178.
+    doi: 10.1038/nature18933
+    year: 2016
+    verified: false
+  - citation: Vann SD, Aggleton JP, Maguire EA. What does the retrosplenial cortex do? Nat Rev Neurosci. 2009;10(11):792-802.
+    doi: 10.1038/nrn2733
+    year: 2009
+    verified: false
+  notes: 'Atlas correspondence approximate. Defined as BA29/30 behind the splenium (Vann et al. 2009); distinct from BR.PCC
+    (BA23/31) and BR.precuneus. HCP-MMP RSC (retrosplenial complex) is the closest area. AAL3 has no retrosplenial label (the
+    region falls between Cingulate_Post, Precuneus and Calcarine), so aal3 is left out. No parent: the file has no limbic
+    or cingulate macro region.'
 - id: BR.dmPFC
   en: Dorsomedial prefrontal cortex
   zh: 背内侧前额叶
@@ -1389,6 +1431,34 @@ terms:
     year: 2016
     verified: false
   notes: Atlas correspondence approximate. SII mainly OP1/OP4; Rolandic_Oper also contains non-SII cortex.
+- id: BR.PIVC
+  en: parieto-insular vestibular cortex (parietal operculum OP2)
+  zh: 顶-岛前庭皮层（顶盖 OP2）
+  definition: Core multisensory vestibular cortex in the posterior parietal operculum at the junction with the posterior insula,
+    cytoarchitectonic area OP2 in humans.
+  parent: BR.parietal_cortex
+  atlas_refs:
+    aal3:
+    - Rolandic_Oper_L
+    - Rolandic_Oper_R
+    hcp_mmp1:
+    - OP2-3
+  coordinate_space: MNI152
+  sources:
+  - citation: Rolls ET, Huang CC, Lin CP, Feng J, Joliot M. Automated anatomical labelling atlas 3. NeuroImage. 2020;206:116189.
+    doi: 10.1016/j.neuroimage.2019.116189
+    year: 2020
+    verified: false
+  - *id001
+  - citation: zu Eulenburg P, Caspers S, Roski C, et al. Meta-analytical definition and functional connectivity of the human
+      vestibular cortex. NeuroImage. 2012;60(1):162-169.
+    doi: 10.1016/j.neuroimage.2011.12.032
+    year: 2012
+    verified: false
+  notes: Atlas correspondence approximate. Vestibular meta-analysis defines the core region as parietal operculum OP2 (zu
+    Eulenburg et al. 2012). Parent is BR.parietal_cortex rather than BR.insula because OP2 lies in the parietal operculum,
+    as does BR.SII; markers that only report 'posterior insula' stay on BR.posterior_insula. HCP-MMP OP2-3 is shared with
+    BR.SII; AAL3 Rolandic_Oper is low confidence (it also contains SII and other opercular cortex). No Brodmann area is assigned.
 - id: BR.OFC_lateral
   en: Lateral orbitofrontal cortex
   zh: 外侧眶额皮层
@@ -1420,3 +1490,23 @@ terms:
     year: 2016
     verified: false
   notes: Atlas correspondence approximate. BA47/12 lateral orbital; Frontal_Inf_Orb_2 also contains part of ventral IFG.
+- id: BR.piriform_cortex
+  en: piriform (primary olfactory) cortex
+  zh: 梨状皮层（初级嗅皮层）
+  definition: Three-layered primary olfactory cortex at the junction of the frontal and temporal lobes, receiving direct input
+    from the olfactory bulb.
+  atlas_refs:
+    hcp_mmp1:
+    - Pir
+  coordinate_space: MNI152
+  sources:
+  - *id001
+  - citation: Seubert J, Freiherr J, Djordjevic J, et al. Statistical localization of human olfactory cortex. NeuroImage.
+      2013;66:333-342.
+    doi: 10.1016/j.neuroimage.2012.10.030
+    year: 2013
+    verified: false
+  notes: 'Atlas correspondence approximate. Olfactory neuroimaging meta-analysis places the most consistent cluster in piriform
+    cortex extending into the amygdala (Seubert et al. 2013). HCP-MMP Pir (piriform cortex) is the closest area. No Brodmann
+    number in the human map; AAL3 Olfactory_L/R does not correspond to piriform cortex, so brodmann and aal3 are left out.
+    No parent: the region spans the frontal and temporal lobes.'
