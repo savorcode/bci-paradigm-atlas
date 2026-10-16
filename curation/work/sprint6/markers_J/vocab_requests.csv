@@ -1,0 +1,8 @@
+id_proposed,en,zh,parent_or_type,reason,example_marker
+BR.piriform_cortex,Piriform (primary olfactory) cortex,梨状皮层（初级嗅皮层）,region (parent BR.frontal_cortex or temporal),Core olfactory cluster has no id; BR.amygdala used as closest,MK.BOLD_olfactory_cortex
+BR.PIVC,Parieto-insular vestibular cortex / parietal operculum OP2,顶-岛前庭皮层（顶盖 OP2）,region (parent BR.insula),Core vestibular cortex has no id; BR.posterior_insula used as closest,MK.BOLD_vestibular_cortex
+BR.auditory_brainstem,Auditory nerve and lower auditory brainstem (cochlear nucleus; superior olivary complex),听神经与下位听觉脑干（耳蜗核、上橄榄复合体）,region,Generators of ABR waves I-III have no id; only wave V mapped (BR.inferior_colliculus),MK.ABR
+CN.interference_resolution,Interference resolution,干扰解决,CN.cognitive_control,Left IFG marker indexes resolution of proactive / semantic interference; CN.working_memory and CN.semantic_integration used as closest,MK.BOLD_left_IFG
+CN.olfactory_imagery,Olfactory imagery,嗅觉意象,CN.mental_imagery,Odour imagery link filed under root CN.mental_imagery,MK.BOLD_olfactory_cortex
+CN.vestibular_perception,Vestibular perception,前庭知觉,CN.perception,Vestibular cortex activation filed under CN.multisensory_integration,MK.BOLD_vestibular_cortex
+CN.effective_connectivity,Effective connectivity / pathway activation,有效连接与通路激活,CN.brain_state,Stimulation-evoked markers index connectivity of the stimulated pathway; CN.cortical_excitability and CN.language used as closest,MK.CCEP; MK.DBS_cortical_EP

@@ -1,4 +1,4 @@
-schema_version: "0.2"
+schema_version: '0.2'
 id: MK.BOLD_left_IFG
 name:
   en: Left inferior frontal gyrus BOLD (interference resolution)
@@ -10,15 +10,71 @@ type: hemodynamic
 recording_modality:
 - fMRI
 description:
-  en: >-
-    BOLD activity in left inferior frontal gyrus that increases when competing or recently relevant information
-    must be resolved, as for recent negative probes in item recognition. Its relation to the language-network marker
-    (MK.BOLD_language_network), which also covers left IFG, is pending maintainer review.
-  zh: >-
-    当需要解决竞争性或近期相关信息（如项目再认中的近期负探测项）时增强的左侧额下回 BOLD 活动。它与同样包含左侧额下回的语言网络标记物（MK.BOLD_language_network）的关系有待维护者审查。
-notes: >-
-  First-pass skeleton (curator_d, 2026-10-03). No signature is given for this hemodynamic marker; generators and
-  indexes will be added in the second pass. New marker requested by package D (see curation/work/pkg_D/marker_requests.csv).
+  en: BOLD activity in left inferior frontal gyrus that increases when competing or recently relevant information must be
+    resolved, as for recent negative probes in item recognition. Its relation to the language-network marker (MK.BOLD_language_network),
+    which also covers left IFG, is pending maintainer review.
+  zh: 当需要解决竞争性或近期相关信息（如项目再认中的近期负探测项）时增强的左侧额下回 BOLD 活动。它与同样包含左侧额下回的语言网络标记物（MK.BOLD_language_network）的关系有待维护者审查。
+notes: 'First-pass skeleton (curator_d, 2026-10-03). No signature is given for this hemodynamic marker; generators and indexes
+  will be added in the second pass. New marker requested by package D (see curation/work/pkg_D/marker_requests.csv). Sprint
+  6 (2026-10-16, curator J): generators and indexes curated; every DOI checked against its Crossref or OpenAlex record (see
+  curation/work/sprint6/markers_J/); verified: false pending full-text check.'
+generators:
+- region: BR.IFG
+  evidence: A
+  sources:
+  - citation: 'Nee DE, Wager TD, Jonides J. Interference resolution: insights from a meta-analysis of neuroimaging tasks.
+      Cogn Affect Behav Neurosci. 2007;7(1):1-17.'
+    doi: 10.3758/cabn.7.1.1
+    year: 2007
+    verified: false
+  - citation: Jonides J, Smith EE, Marshuetz C, et al. Inhibition in verbal working memory revealed by brain activation. Proc
+      Natl Acad Sci U S A. 1998;95(14):8410-8413.
+    doi: 10.1073/pnas.95.14.8410
+    year: 1998
+    verified: false
+  - citation: Nee DE, Jonides J, Berman MG. Neural mechanisms of proactive interference-resolution. Neuroimage. 2007;38(4):740-751.
+    doi: 10.1016/j.neuroimage.2007.07.066
+    year: 2007
+    verified: false
+  note: 'method: fMRI localization; measured region; meta-analysis of interference-resolution tasks shows a consistent left
+    IFG cluster (Nee et al. 2007), and recent-negative probes in item recognition reliably activate left IFG (Jonides et al.
+    1998; Nee, Jonides and Berman 2007).'
+indexes:
+- construct: CN.working_memory
+  evidence: A
+  relation: activation increases for recent negative probes in item recognition, i.e. with the need to resolve proactive interference
+    in working memory
+  sources:
+  - citation: 'Nee DE, Wager TD, Jonides J. Interference resolution: insights from a meta-analysis of neuroimaging tasks.
+      Cogn Affect Behav Neurosci. 2007;7(1):1-17.'
+    doi: 10.3758/cabn.7.1.1
+    year: 2007
+    verified: false
+  - citation: Jonides J, Smith EE, Marshuetz C, et al. Inhibition in verbal working memory revealed by brain activation. Proc
+      Natl Acad Sci U S A. 1998;95(14):8410-8413.
+    doi: 10.1073/pnas.95.14.8410
+    year: 1998
+    verified: false
+  - citation: Nee DE, Jonides J, Berman MG. Neural mechanisms of proactive interference-resolution. Neuroimage. 2007;38(4):740-751.
+    doi: 10.1016/j.neuroimage.2007.07.066
+    year: 2007
+    verified: false
+  note: Closest available construct; interference resolution is requested as a new term (see vocab requests).
+- construct: CN.semantic_integration
+  evidence: B
+  relation: activation increases with the demand to select among competing semantic alternatives
+  sources:
+  - citation: 'Thompson-Schill SL, D''Esposito M, Aguirre GK, et al. Role of left inferior prefrontal cortex in retrieval
+      of semantic knowledge: a reevaluation. Proc Natl Acad Sci U S A. 1997;94(26):14792-14797.'
+    doi: 10.1073/pnas.94.26.14792
+    year: 1997
+    verified: false
+  - citation: Badre D, Wagner AD. Left ventrolateral prefrontal cortex and the cognitive control of memory. Neuropsychologia.
+      2007;45(13):2883-2901.
+    doi: 10.1016/j.neuropsychologia.2007.06.015
+    year: 2007
+    verified: false
+  note: Closest available construct for semantic selection / controlled retrieval.
 status: draft
 contributors:
 - curator_d

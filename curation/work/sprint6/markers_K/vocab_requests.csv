@@ -1,0 +1,4 @@
+id_proposed,en,zh,parent_or_type,reason,example_marker
+CN.basal_ganglia_stimulation_response,basal ganglia network response to stimulation,基底节网络刺激响应,CN.brain_state,ERNA indexes subthalamic/pallidal circuit responsiveness to DBS (Sinclair 2018; Wiest 2020); mapped to CN.cortical_excitability as closest id,MK.ERNA
+BR.MCC,midcingulate cortex,中扣带回,region,LEP N2-P2 intracranial source in midcingulate cortex (Frot 2008); mapped to BR.dACC as closest id,MK.LEP
+BR.frontal_operculum,frontal operculum (primary gustatory area with anterior insula),额盖（初级味觉区）,region,GEP MEG sources at insula-frontal operculum transition (Kobayakawa 2008); mapped to BR.insula as closest id,MK.GEP

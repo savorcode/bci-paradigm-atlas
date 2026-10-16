@@ -1,4 +1,4 @@
-schema_version: "0.2"
+schema_version: '0.2'
 id: MK.SSSEP
 name:
   en: Steady-state somatosensory evoked potential
@@ -18,8 +18,79 @@ description:
   en: Steady-state response of somatosensory cortex at the frequency of a vibrotactile stimulus; its amplitude increases when
     attention is directed to the stimulated site.
   zh: 体感皮层在振动触觉刺激频率处产生的稳态响应；注意指向受刺激部位时波幅增加。
-notes: First-pass skeleton by package A (2026-10-03). No generators/indexes yet. Signature values are textbook-level approximations
-  and await source checking.
+generators:
+- region: BR.S1
+  evidence: B
+  sources:
+  - citation: 'Snyder AZ. Steady-state vibration evoked potentials: description of technique and characterization of responses.
+      Electroencephalogr Clin Neurophysiol. 1992;84(3):257-268.'
+    doi: 10.1016/0168-5597(92)90007-X
+    year: 1992
+    verified: false
+  - citation: Vakorin VA, Ross B, Doesburg SM, et al. Dominant patterns of information flow in the propagation of the neuromagnetic
+      somatosensory steady-state response. Front Neural Circuits. 2019;12:118.
+    doi: 10.3389/fncir.2018.00118
+    year: 2019
+    verified: false
+  note: 'method: MEG/EEG source; dipole modelling of the scalp response places generators in or near somatosensory cortex
+    (Snyder 1992); MEG source analysis identifies contralateral primary somatosensory cortex as the origin of the 23 Hz steady-state
+    response (Vakorin 2019).'
+- region: BR.SII
+  evidence: C
+  sources:
+  - citation: Vakorin VA, Ross B, Doesburg SM, et al. Dominant patterns of information flow in the propagation of the neuromagnetic
+      somatosensory steady-state response. Front Neural Circuits. 2019;12:118.
+    doi: 10.3389/fncir.2018.00118
+    year: 2019
+    verified: false
+  note: 'method: MEG/EEG source; MEG source analysis shows propagation of the steady-state response from S1 to contralateral
+    secondary somatosensory cortex; single study.'
+indexes:
+- construct: CN.somatosensation
+  evidence: B
+  relation: amplitude is largest for vibrotactile stimulation around 20-30 Hz and follows the stimulation frequency
+  sources:
+  - citation: 'Snyder AZ. Steady-state vibration evoked potentials: description of technique and characterization of responses.
+      Electroencephalogr Clin Neurophysiol. 1992;84(3):257-268.'
+    doi: 10.1016/0168-5597(92)90007-X
+    year: 1992
+    verified: false
+  - citation: Ahn S, Kim K, Jun SC. Steady-state somatosensory evoked potential for brain-computer interface-present and future.
+      Front Hum Neurosci. 2016;9:716.
+    doi: 10.3389/fnhum.2015.00716
+    year: 2016
+    verified: false
+- construct: CN.spatial_attention
+  evidence: B
+  relation: amplitude increases when attention is directed to the stimulated hand
+  sources:
+  - citation: Giabbiconi CM, Dancer C, Zopf R, et al. Selective spatial attention to left or right hand flutter sensation
+      modulates the steady-state somatosensory evoked potential. Cogn Brain Res. 2004;20(1):58-66.
+    doi: 10.1016/j.cogbrainres.2004.01.004
+    year: 2004
+    verified: false
+  - citation: 'Müller-Putz GR, Scherer R, Neuper C, et al. Steady-state somatosensory evoked potentials: suitable brain signals
+      for brain-computer interfaces? IEEE Trans Neural Syst Rehabil Eng. 2006;14(1):30-37.'
+    doi: 10.1109/TNSRE.2005.863842
+    year: 2006
+    verified: false
+- construct: CN.intent_selection
+  evidence: B
+  relation: attention-modulated SSSEP amplitude to left versus right stimulation is used to decode binary choices in BCIs
+  sources:
+  - citation: 'Müller-Putz GR, Scherer R, Neuper C, et al. Steady-state somatosensory evoked potentials: suitable brain signals
+      for brain-computer interfaces? IEEE Trans Neural Syst Rehabil Eng. 2006;14(1):30-37.'
+    doi: 10.1109/TNSRE.2005.863842
+    year: 2006
+    verified: false
+  - citation: Ahn S, Kim K, Jun SC. Steady-state somatosensory evoked potential for brain-computer interface-present and future.
+      Front Hum Neurosci. 2016;9:716.
+    doi: 10.3389/fnhum.2015.00716
+    year: 2016
+    verified: false
+notes: 'First-pass skeleton by package A (2026-10-03). No generators/indexes yet. Signature values are textbook-level approximations
+  and await source checking. Sprint 6 (2026-10-16, curator I): generators and indexes curated; every DOI checked against its
+  Crossref or OpenAlex record (see curation/work/sprint6/markers_I/); verified: false pending full-text check.'
 status: draft
 contributors:
 - curator_a

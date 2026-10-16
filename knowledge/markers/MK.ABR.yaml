@@ -1,4 +1,4 @@
-schema_version: "0.2"
+schema_version: '0.2'
 id: MK.ABR
 name:
   en: Auditory brainstem response (waves I-V)
@@ -21,8 +21,47 @@ description:
     along the auditory nerve and brainstem auditory pathway. Wave latencies and inter-peak intervals are used in hearing screening
     and neurodiagnosis.
   zh: 短声或短纯音后约 10 ms 内出现的一系列远场小波（I–V 波），依次由听神经和脑干听觉通路产生。各波潜伏期及波间期用于听力筛查和神经诊断。
-notes: First-pass skeleton by package A (2026-10-03). No generators/indexes yet. Signature values are textbook-level approximations
-  and await source checking.
+notes: 'First-pass skeleton by package A (2026-10-03). No generators/indexes yet. Signature values are textbook-level approximations
+  and await source checking. Sprint 6 (2026-10-16, curator J): generators and indexes curated; every DOI checked against its
+  Crossref or OpenAlex record (see curation/work/sprint6/markers_J/); verified: false pending full-text check.'
+generators:
+- region: BR.inferior_colliculus
+  evidence: B
+  sources:
+  - citation: 'Møller AR, Jannetta PJ, Møller MB. Neural generators of brainstem evoked potentials: results from human intracranial
+      recordings. Ann Otol Rhinol Laryngol. 1981;90(6):591-596.'
+    doi: 10.1177/000348948109000616
+    year: 1981
+    verified: false
+  - citation: 'Møller AR, Jannetta PJ. Interpretation of brainstem auditory evoked potentials: results from intracranial recordings
+      in humans. Scand Audiol. 1983;12(2):125-133.'
+    doi: 10.3109/01050398309076235
+    year: 1983
+    verified: false
+  - citation: Hashimoto I, Ishiyama Y, Yoshimoto T, et al. Brain-stem auditory-evoked potentials recorded directly from human
+      brain-stem and thalamus. Brain. 1981;104(4):841-859.
+    doi: 10.1093/brain/104.4.841
+    year: 1981
+    verified: false
+  note: 'method: intracranial; wave V recorded near the lateral lemniscus / inferior colliculus in human intracranial recordings
+    (Møller and Jannetta 1981, 1983) and in independent direct brainstem recordings (Hashimoto et al. 1981). Earlier waves
+    arise from auditory nerve, cochlear nucleus and superior olivary complex, which have no region id (see vocab requests).'
+indexes:
+- construct: CN.early_auditory
+  evidence: B
+  relation: wave V threshold and latency track peripheral and brainstem hearing sensitivity; thresholds approximate behavioural
+    pure-tone thresholds
+  sources:
+  - citation: Gorga MP, Johnson TA, Kaminski JR, et al. Using a combination of click- and tone burst-evoked auditory brain
+      stem response measurements to estimate pure-tone thresholds. Ear Hear. 2006;27(1):60-74.
+    doi: 10.1097/01.aud.0000194511.14740.9c
+    year: 2006
+    verified: false
+  - citation: 'Joint Committee on Infant Hearing. Year 2007 position statement: principles and guidelines for early hearing
+      detection and intervention programs. Pediatrics. 2007;120(4):898-921.'
+    doi: 10.1542/peds.2007-2333
+    year: 2007
+    verified: false
 status: draft
 contributors:
 - curator_a

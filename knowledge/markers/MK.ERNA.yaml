@@ -1,11 +1,82 @@
-schema_version: "0.2"
+schema_version: '0.2'
 id: MK.ERNA
-name: {en: Evoked resonant neural activity, zh: 诱发共振神经活动}
-aliases: [ERNA, DBS-evoked resonant activity]
+name:
+  en: Evoked resonant neural activity
+  zh: 诱发共振神经活动
+aliases:
+- ERNA
+- DBS-evoked resonant activity
 type: field_potential
-recording_modality: [other]
-signature: {frequency_hz: high-frequency (a few hundred Hz) decaying oscillation}
-description: {en: 'High-frequency, decaying oscillatory local field potential evoked in the subthalamic region by bursts of deep brain stimulation and recorded from non-stimulating contacts of the DBS lead. Its amplitude varies with electrode location and is studied as a marker for targeting.', zh: 深部脑刺激串在丘脑底核区域诱发、由 DBS 电极非刺激触点记录到的高频衰减振荡局部场电位。其幅度随电极位置变化，被研究作为靶点定位的标记。}
-notes: Signature values are textbook-level characteristics and await source checking (first pass, curator_b). Recorded from DBS leads; recording_modality 'other' per D-027 (DBS lead LFP). Generators and indexes to be added in the second pass.
+recording_modality:
+- other
+signature:
+  frequency_hz: high-frequency (a few hundred Hz) decaying oscillation
+description:
+  en: High-frequency, decaying oscillatory local field potential evoked in the subthalamic region by bursts of deep brain
+    stimulation and recorded from non-stimulating contacts of the DBS lead. Its amplitude varies with electrode location and
+    is studied as a marker for targeting.
+  zh: 深部脑刺激串在丘脑底核区域诱发、由 DBS 电极非刺激触点记录到的高频衰减振荡局部场电位。其幅度随电极位置变化，被研究作为靶点定位的标记。
+generators:
+- region: BR.STN
+  evidence: B
+  sources:
+  - citation: Sinclair NC, McDermott HJ, Bulluss KJ, et al. Subthalamic nucleus deep brain stimulation evokes resonant neural
+      activity. Ann Neurol. 2018;83(5):1027-1031.
+    doi: 10.1002/ana.25234
+    year: 2018
+    verified: false
+  - citation: Wiest C, Tinkhauser G, Pogosyan A, et al. Local field potential activity dynamics in response to deep brain
+      stimulation of the subthalamic nucleus in Parkinson's disease. Neurobiol Dis. 2020;143:105019.
+    doi: 10.1016/j.nbd.2020.105019
+    year: 2020
+    verified: false
+  note: 'method: intracranial; recorded from non-stimulating contacts of subthalamic DBS leads, largest on contacts within
+    the STN and absent outside it (Sinclair 2018); replicated by an independent group (Wiest 2020). Resonance may involve
+    the wider STN-pallidal circuit; region id refers to the recording site.'
+indexes:
+- construct: CN.cortical_excitability
+  evidence: B
+  relation: amplitude and frequency of the evoked oscillation vary with stimulation amplitude, ongoing stimulation and dopaminergic
+    therapy
+  sources:
+  - citation: Sinclair NC, McDermott HJ, Bulluss KJ, et al. Subthalamic nucleus deep brain stimulation evokes resonant neural
+      activity. Ann Neurol. 2018;83(5):1027-1031.
+    doi: 10.1002/ana.25234
+    year: 2018
+    verified: false
+  - citation: Sinclair NC, McDermott HJ, Fallon JB, et al. Deep brain stimulation for Parkinson's disease modulates high-frequency
+      evoked and spontaneous neural activity. Neurobiol Dis. 2019;130:104522.
+    doi: 10.1016/j.nbd.2019.104522
+    year: 2019
+    verified: false
+  - citation: Wiest C, Tinkhauser G, Pogosyan A, et al. Local field potential activity dynamics in response to deep brain
+      stimulation of the subthalamic nucleus in Parkinson's disease. Neurobiol Dis. 2020;143:105019.
+    doi: 10.1016/j.nbd.2020.105019
+    year: 2020
+    verified: false
+  note: Closest available construct; ERNA indexes subcortical (basal ganglia) responsiveness to stimulation rather than cortical
+    excitability. See vocab_requests.csv.
+- construct: CN.motor_execution
+  evidence: C
+  relation: contacts with largest amplitude coincide with clinically effective stimulation sites for motor symptoms
+  sources:
+  - citation: Sinclair NC, McDermott HJ, Bulluss KJ, et al. Subthalamic nucleus deep brain stimulation evokes resonant neural
+      activity. Ann Neurol. 2018;83(5):1027-1031.
+    doi: 10.1002/ana.25234
+    year: 2018
+    verified: false
+  - citation: Thevathasan W, Sinclair NC, Bulluss KJ, McDermott HJ. Tailoring subthalamic nucleus deep brain stimulation for
+      Parkinson's disease using evoked resonant neural activity. Front Hum Neurosci. 2020;14:71.
+    doi: 10.3389/fnhum.2020.00071
+    year: 2020
+    verified: false
+  note: Indirect link via clinical motor benefit of DBS targeting; Thevathasan 2020 is a perspective article from the same
+    group.
+notes: 'Signature values are textbook-level characteristics and await source checking (first pass, curator_b). Recorded from
+  DBS leads; recording_modality ''other'' per D-027 (DBS lead LFP). Generators and indexes to be added in the second pass.
+  Sprint 6 (2026-10-16, curator K): generators and indexes curated; every DOI checked against its Crossref or OpenAlex record
+  (see curation/work/sprint6/markers_K/); verified: false pending full-text check.'
 status: draft
-contributors: [maintainer, curator_b]
+contributors:
+- maintainer
+- curator_b

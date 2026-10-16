@@ -1,4 +1,4 @@
-schema_version: "0.2"
+schema_version: '0.2'
 id: MK.SCP
 name:
   en: Slow cortical potential
@@ -19,8 +19,59 @@ description:
     and positive shifts decreased cortical excitability. People can learn to regulate them with feedback, which was used in
     early BCIs.
   zh: 持续数百毫秒至数秒的皮层直流电位缓慢偏移；负向偏移反映皮层兴奋性升高，正向偏移反映降低。人可借助反馈学会调节它，早期脑机接口即基于此。
-notes: Signature values are textbook-level characteristics entered in the first pass and await source checking. Related negative
-  slow waves (MK.CNV, MK.MRCP) are separate registry entries.
+generators:
+- region: BR.premotor
+  evidence: C
+  sources:
+  - citation: Hinterberger T, Veit R, Wilhelm B, et al. Neuronal mechanisms underlying control of a brain-computer interface.
+      Eur J Neurosci. 2005;21(11):3169-3181.
+    doi: 10.1111/j.1460-9568.2005.04092.x
+    year: 2005
+    verified: false
+  note: 'method: EEG-fMRI; EEG recorded during fMRI while trained participants regulated SCPs; successful positivity control
+    was accompanied by frontal premotor deactivation and basal ganglia activation. SCPs are thought to arise from depolarisation
+    of apical dendrites in superficial cortical layers (Birbaumer 1990), so the vertex-maximal SCP reflects the underlying
+    frontocentral cortex; single study.'
+indexes:
+- construct: CN.self_regulation
+  evidence: B
+  relation: participants learn to produce voluntary negative or positive SCP shifts with feedback and reinforcement
+  sources:
+  - citation: Birbaumer N, Ghanayim N, Hinterberger T, et al. A spelling device for the paralysed. Nature. 1999;398(6725):297-298.
+    doi: 10.1038/18581
+    year: 1999
+    verified: false
+  - citation: 'Strehl U, Leins U, Goth G, et al. Self-regulation of slow cortical potentials: a new treatment for children
+      with attention-deficit/hyperactivity disorder. Pediatrics. 2006;118(5):e1530-e1540.'
+    doi: 10.1542/peds.2005-2478
+    year: 2006
+    verified: false
+  - citation: Hinterberger T, Veit R, Wilhelm B, et al. Neuronal mechanisms underlying control of a brain-computer interface.
+      Eur J Neurosci. 2005;21(11):3169-3181.
+    doi: 10.1111/j.1460-9568.2005.04092.x
+    year: 2005
+    verified: false
+- construct: CN.cortical_excitability
+  evidence: B
+  relation: negative shifts accompany increased, positive shifts decreased excitability of the underlying cortex
+  sources:
+  - citation: Birbaumer N, Elbert T, Canavan AG, et al. Slow potentials of the cerebral cortex and behavior. Physiol Rev.
+      1990;70(1):1-41.
+    doi: 10.1152/physrev.1990.70.1.1
+    year: 1990
+    verified: false
+- construct: CN.intent_selection
+  evidence: C
+  relation: self-produced SCP shifts select letters in a binary spelling device for locked-in patients
+  sources:
+  - citation: Birbaumer N, Ghanayim N, Hinterberger T, et al. A spelling device for the paralysed. Nature. 1999;398(6725):297-298.
+    doi: 10.1038/18581
+    year: 1999
+    verified: false
+notes: 'Signature values are textbook-level characteristics entered in the first pass and await source checking. Related negative
+  slow waves (MK.CNV, MK.MRCP) are separate registry entries. Sprint 6 (2026-10-16, curator I): generators and indexes curated;
+  every DOI checked against its Crossref or OpenAlex record (see curation/work/sprint6/markers_I/); verified: false pending
+  full-text check.'
 status: draft
 contributors:
 - maintainer

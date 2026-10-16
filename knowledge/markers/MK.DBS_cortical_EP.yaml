@@ -1,10 +1,58 @@
-schema_version: "0.2"
+schema_version: '0.2'
 id: MK.DBS_cortical_EP
-name: {en: DBS-evoked cortical potential, zh: 深部脑刺激诱发皮层电位}
-aliases: [DBS cortical evoked potential, cortical EP to DBS]
+name:
+  en: DBS-evoked cortical potential
+  zh: 深部脑刺激诱发皮层电位
+aliases:
+- DBS cortical evoked potential
+- cortical EP to DBS
 type: erp_component
-recording_modality: [EEG]
-description: {en: Cortical potential recorded with scalp EEG (or cortical electrodes) time-locked to single pulses or low-frequency trains of deep brain stimulation. Its components vary with the stimulated target and contact and are studied as indicators of the pathways activated by stimulation., zh: 以头皮脑电（或皮层电极）记录、与深部脑刺激单脉冲或低频串锁时的皮层电位。其成分随刺激靶点与触点而变化，用作刺激所激活通路的指标。}
-notes: No dedicated lead yet (STM-DBSEP-001 blocker); signature not filled. Generators and indexes to be added in the second pass.
+recording_modality:
+- EEG
+description:
+  en: Cortical potential recorded with scalp EEG (or cortical electrodes) time-locked to single pulses or low-frequency trains
+    of deep brain stimulation. Its components vary with the stimulated target and contact and are studied as indicators of
+    the pathways activated by stimulation.
+  zh: 以头皮脑电（或皮层电极）记录、与深部脑刺激单脉冲或低频串锁时的皮层电位。其成分随刺激靶点与触点而变化，用作刺激所激活通路的指标。
+notes: 'No dedicated lead yet (STM-DBSEP-001 blocker); signature not filled. Generators and indexes to be added in the second
+  pass. Sprint 6 (2026-10-16, curator J): generators and indexes curated; every DOI checked against its Crossref or OpenAlex
+  record (see curation/work/sprint6/markers_J/); verified: false pending full-text check.'
+generators:
+- region: BR.M1
+  evidence: B
+  sources:
+  - citation: Miocinovic S, de Hemptinne C, Chen W, et al. Cortical potentials evoked by subthalamic stimulation demonstrate
+      a short latency hyperdirect pathway in humans. J Neurosci. 2018;38(43):9129-9141.
+    doi: 10.1523/JNEUROSCI.1327-18.2018
+    year: 2018
+    verified: false
+  - citation: Walker HC, Huang H, Gonzalez CL, et al. Short latency activation of cortex during clinically effective subthalamic
+      deep brain stimulation for Parkinson's disease. Mov Disord. 2012;27(7):864-873.
+    doi: 10.1002/mds.25025
+    year: 2012
+    verified: false
+  note: 'method: intracranial; recording site; subthalamic stimulation evokes a short-latency (about 3 ms) potential over
+    motor/premotor cortex in ECoG, consistent with antidromic hyperdirect-pathway activation (Miocinovic et al. 2018); scalp
+    EEG shows short-latency frontal-central activation during effective STN stimulation (Walker et al. 2012). Applies to STN
+    DBS, the most studied target.'
+indexes:
+- construct: CN.cortical_excitability
+  evidence: B
+  relation: short-latency evoked potential amplitude increases with stimulation amplitude and is associated with clinically
+    effective contacts
+  sources:
+  - citation: Miocinovic S, de Hemptinne C, Chen W, et al. Cortical potentials evoked by subthalamic stimulation demonstrate
+      a short latency hyperdirect pathway in humans. J Neurosci. 2018;38(43):9129-9141.
+    doi: 10.1523/JNEUROSCI.1327-18.2018
+    year: 2018
+    verified: false
+  - citation: Walker HC, Huang H, Gonzalez CL, et al. Short latency activation of cortex during clinically effective subthalamic
+      deep brain stimulation for Parkinson's disease. Mov Disord. 2012;27(7):864-873.
+    doi: 10.1002/mds.25025
+    year: 2012
+    verified: false
+  note: Closest available construct; pathway activation / effective connectivity is requested as a new term.
 status: draft
-contributors: [maintainer, curator_b]
+contributors:
+- maintainer
+- curator_b

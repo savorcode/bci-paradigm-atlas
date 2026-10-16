@@ -1,11 +1,73 @@
-schema_version: "0.2"
+schema_version: '0.2'
 id: MK.BOLD_vestibular_cortex
-name: {en: Vestibular cortex BOLD, zh: 前庭皮层 BOLD}
-aliases: [parieto-insular vestibular cortex activation, PIVC BOLD]
+name:
+  en: Vestibular cortex BOLD
+  zh: 前庭皮层 BOLD
+aliases:
+- parieto-insular vestibular cortex activation
+- PIVC BOLD
 type: hemodynamic
-recording_modality: [fMRI]
-signature: {topography: 'posterior insula / parieto-insular vestibular cortex, temporoparietal regions'}
-description: {en: 'Haemodynamic response in multisensory vestibular cortex, centred on the posterior insula and parieto-insular region, during vestibular stimulation such as galvanic or caloric stimulation.', zh: 在直流电或冷热水等前庭刺激时，以后岛叶和顶-岛区域为中心的多感觉前庭皮层的血流动力学响应。}
-notes: Signature values are textbook-level characteristics and await source checking (first pass, curator_b). New marker requested by package B for STM-GVS-001 (marker_requests.csv); not yet in curation/registry/markers.csv. Generators and indexes to be added in the second pass.
+recording_modality:
+- fMRI
+signature:
+  topography: posterior insula / parieto-insular vestibular cortex, temporoparietal regions
+description:
+  en: Haemodynamic response in multisensory vestibular cortex, centred on the posterior insula and parieto-insular region,
+    during vestibular stimulation such as galvanic or caloric stimulation.
+  zh: 在直流电或冷热水等前庭刺激时，以后岛叶和顶-岛区域为中心的多感觉前庭皮层的血流动力学响应。
+notes: 'Signature values are textbook-level characteristics and await source checking (first pass, curator_b). New marker
+  requested by package B for STM-GVS-001 (marker_requests.csv); not yet in curation/registry/markers.csv. Generators and indexes
+  to be added in the second pass. Sprint 6 (2026-10-16, curator J): generators and indexes curated; every DOI checked against
+  its Crossref or OpenAlex record (see curation/work/sprint6/markers_J/); verified: false pending full-text check.'
+generators:
+- region: BR.posterior_insula
+  evidence: A
+  sources:
+  - citation: Lopez C, Blanke O, Mast FW. The human vestibular cortex revealed by coordinate-based activation likelihood estimation
+      meta-analysis. Neuroscience. 2012;212:159-179.
+    doi: 10.1016/j.neuroscience.2012.03.028
+    year: 2012
+    verified: false
+  - citation: zu Eulenburg P, Caspers S, Roski C, et al. Meta-analytical definition and functional connectivity of the human
+      vestibular cortex. Neuroimage. 2012;60(1):162-169.
+    doi: 10.1016/j.neuroimage.2011.12.032
+    year: 2012
+    verified: false
+  note: 'method: fMRI localization; measured region; vestibular stimulation meta-analyses converge on posterior insula / parietal
+    operculum (area OP2) as core vestibular cortex (Lopez et al. 2012; zu Eulenburg et al. 2012). OP2 and PIVC have no separate
+    region id (see vocab requests).'
+- region: BR.TPJ
+  evidence: B
+  sources:
+  - citation: Lopez C, Blanke O, Mast FW. The human vestibular cortex revealed by coordinate-based activation likelihood estimation
+      meta-analysis. Neuroscience. 2012;212:159-179.
+    doi: 10.1016/j.neuroscience.2012.03.028
+    year: 2012
+    verified: false
+  - citation: Bense S, Stephan T, Yousry TA, et al. Multisensory cortical signal increases and decreases during vestibular
+      galvanic stimulation (fMRI). J Neurophysiol. 2001;85(2):886-899.
+    doi: 10.1152/jn.2001.85.2.886
+    year: 2001
+    verified: false
+  note: 'method: fMRI localization; measured region; galvanic and caloric stimulation also activate superior temporal gyrus
+    / inferior parietal cortex around the temporo-parietal junction (Lopez et al. 2012; Bense et al. 2001).'
+indexes:
+- construct: CN.multisensory_integration
+  evidence: B
+  relation: activation increases in multisensory vestibular cortex during galvanic or caloric stimulation, with concurrent
+    decreases in visual and somatosensory cortex
+  sources:
+  - citation: Bense S, Stephan T, Yousry TA, et al. Multisensory cortical signal increases and decreases during vestibular
+      galvanic stimulation (fMRI). J Neurophysiol. 2001;85(2):886-899.
+    doi: 10.1152/jn.2001.85.2.886
+    year: 2001
+    verified: false
+  - citation: Lopez C, Blanke O, Mast FW. The human vestibular cortex revealed by coordinate-based activation likelihood estimation
+      meta-analysis. Neuroscience. 2012;212:159-179.
+    doi: 10.1016/j.neuroscience.2012.03.028
+    year: 2012
+    verified: false
+  note: No vestibular-perception construct exists; closest available id used (see vocab requests).
 status: draft
-contributors: [curator_b]
+contributors:
+- curator_b

@@ -1,11 +1,84 @@
-schema_version: "0.2"
+schema_version: '0.2'
 id: MK.BOLD_olfactory_cortex
-name: {en: Olfactory (piriform) cortex BOLD, zh: 嗅觉（梨状）皮层 BOLD}
-aliases: [piriform cortex activation]
+name:
+  en: Olfactory (piriform) cortex BOLD
+  zh: 嗅觉（梨状）皮层 BOLD
+aliases:
+- piriform cortex activation
 type: hemodynamic
-recording_modality: [fMRI]
-signature: {topography: 'piriform cortex, orbitofrontal cortex, insula'}
-description: {en: Haemodynamic response in primary olfactory (piriform) cortex and associated orbitofrontal and insular regions during odour perception or odour imagery., zh: 嗅觉知觉或气味想象时初级嗅觉（梨状）皮层及相关眶额、岛叶区域的血流动力学响应。}
-notes: Signature values are textbook-level characteristics and await source checking (first pass, curator_b). New marker requested by package B for IMG-OLF-001 (marker_requests.csv); not yet in curation/registry/markers.csv. Generators and indexes to be added in the second pass.
+recording_modality:
+- fMRI
+signature:
+  topography: piriform cortex, orbitofrontal cortex, insula
+description:
+  en: Haemodynamic response in primary olfactory (piriform) cortex and associated orbitofrontal and insular regions during
+    odour perception or odour imagery.
+  zh: 嗅觉知觉或气味想象时初级嗅觉（梨状）皮层及相关眶额、岛叶区域的血流动力学响应。
+notes: 'Signature values are textbook-level characteristics and await source checking (first pass, curator_b). New marker
+  requested by package B for IMG-OLF-001 (marker_requests.csv); not yet in curation/registry/markers.csv. Generators and indexes
+  to be added in the second pass. Sprint 6 (2026-10-16, curator J): generators and indexes curated; every DOI checked against
+  its Crossref or OpenAlex record (see curation/work/sprint6/markers_J/); verified: false pending full-text check.'
+generators:
+- region: BR.amygdala
+  evidence: A
+  sources:
+  - citation: Seubert J, Freiherr J, Djordjevic J, et al. Statistical localization of human olfactory cortex. Neuroimage.
+      2013;66:333-342.
+    doi: 10.1016/j.neuroimage.2012.10.030
+    year: 2013
+    verified: false
+  - citation: 'Sobel N, Prabhakaran V, Desmond JE, et al. Sniffing and smelling: separate subsystems in the human olfactory
+      cortex. Nature. 1998;392(6673):282-286.'
+    doi: 10.1038/32654
+    year: 1998
+    verified: false
+  note: 'method: fMRI localization; measured region; the olfactory meta-analysis places the most consistent cluster in piriform
+    cortex extending into the amygdala (Seubert et al. 2013; see also Sobel et al. 1998). Piriform cortex has no region id,
+    so the adjacent BR.amygdala is used (see vocab requests).'
+- region: BR.OFC_lateral
+  evidence: A
+  sources:
+  - citation: Seubert J, Freiherr J, Djordjevic J, et al. Statistical localization of human olfactory cortex. Neuroimage.
+      2013;66:333-342.
+    doi: 10.1016/j.neuroimage.2012.10.030
+    year: 2013
+    verified: false
+  note: 'method: fMRI localization; measured region; orbitofrontal clusters are consistently reported in the olfactory meta-analysis
+    (Seubert et al. 2013).'
+- region: BR.insula
+  evidence: A
+  sources:
+  - citation: Seubert J, Freiherr J, Djordjevic J, et al. Statistical localization of human olfactory cortex. Neuroimage.
+      2013;66:333-342.
+    doi: 10.1016/j.neuroimage.2012.10.030
+    year: 2013
+    verified: false
+  note: 'method: fMRI localization; measured region; insular clusters are consistently reported in the olfactory meta-analysis
+    (Seubert et al. 2013).'
+indexes:
+- construct: CN.chemosensation
+  evidence: A
+  relation: activation increases during odour presentation relative to odourless air
+  sources:
+  - citation: Seubert J, Freiherr J, Djordjevic J, et al. Statistical localization of human olfactory cortex. Neuroimage.
+      2013;66:333-342.
+    doi: 10.1016/j.neuroimage.2012.10.030
+    year: 2013
+    verified: false
+  - citation: 'Sobel N, Prabhakaran V, Desmond JE, et al. Sniffing and smelling: separate subsystems in the human olfactory
+      cortex. Nature. 1998;392(6673):282-286.'
+    doi: 10.1038/32654
+    year: 1998
+    verified: false
+- construct: CN.mental_imagery
+  evidence: C
+  relation: activation in primary olfactory cortex increases during odour imagery without an odour stimulus
+  sources:
+  - citation: Djordjevic J, Zatorre RJ, Petrides M, et al. Functional neuroimaging of odor imagery. Neuroimage. 2005;24(3):791-801.
+    doi: 10.1016/j.neuroimage.2004.09.035
+    year: 2005
+    verified: false
+  note: No olfactory-imagery construct exists; root CN.mental_imagery is used (see vocab requests).
 status: draft
-contributors: [curator_b]
+contributors:
+- curator_b

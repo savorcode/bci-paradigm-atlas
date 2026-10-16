@@ -1,0 +1,63 @@
+marker,link_type,target,evidence,method,doi,record_api,note
+MK.BOLD_stimulated_region,generator,BR.M1,B,fMRI localization,10.1523/ENEURO.0163-22.2022,https://api.crossref.org/works/10.1523/ENEURO.0163-22.2022,
+MK.BOLD_stimulated_region,generator,BR.M1,B,fMRI localization,10.3389/fpsyt.2022.825205,https://api.crossref.org/works/10.3389/fpsyt.2022.825205,
+MK.BOLD_stimulated_region,generator,BR.M1,B,fMRI localization,10.1007/s00221-008-1601-8,https://api.openalex.org/works/doi:10.1007/s00221-008-1601-8,Crossref API returned 429; record taken from OpenAlex API
+MK.BOLD_stimulated_region,index,CN.cortical_excitability,C,,10.1523/ENEURO.0163-22.2022,https://api.crossref.org/works/10.1523/ENEURO.0163-22.2022,
+MK.BOLD_stimulated_region,index,CN.cortical_excitability,C,,10.1007/s00221-008-1601-8,https://api.openalex.org/works/doi:10.1007/s00221-008-1601-8,Crossref API returned 429; record taken from OpenAlex API
+MK.AV_interaction_ERP,generator,BR.STG,C,intracranial,10.1523/JNEUROSCI.2875-08.2008,https://api.crossref.org/works/10.1523/JNEUROSCI.2875-08.2008,
+MK.AV_interaction_ERP,generator,BR.visual_cortex,C,scalp topography,10.1162/089892999563544,https://api.openalex.org/works/doi:10.1162/089892999563544,Crossref API returned 429; record taken from OpenAlex API
+MK.AV_interaction_ERP,generator,BR.visual_cortex,C,scalp topography,10.1016/S0926-6410(02)00066-6,https://api.crossref.org/works/10.1016/S0926-6410(02)00066-6,
+MK.AV_interaction_ERP,index,CN.multisensory_integration,B,,10.1162/089892999563544,https://api.openalex.org/works/doi:10.1162/089892999563544,Crossref API returned 429; record taken from OpenAlex API
+MK.AV_interaction_ERP,index,CN.multisensory_integration,B,,10.1016/S0926-6410(02)00066-6,https://api.crossref.org/works/10.1016/S0926-6410(02)00066-6,
+MK.AV_interaction_ERP,index,CN.multisensory_integration,B,,10.1007/s10548-014-0365-7,https://api.crossref.org/works/10.1007/s10548-014-0365-7,
+MK.AV_interaction_ERP,index,CN.attention_allocation,B,,10.1162/0898929054475172,https://api.crossref.org/works/10.1162/0898929054475172,
+MK.AV_interaction_ERP,index,CN.attention_allocation,B,,10.1016/j.tics.2010.06.008,https://api.crossref.org/works/10.1016/j.tics.2010.06.008,
+MK.BOLD_parahippocampal,generator,BR.parahippocampal,A,fMRI localization,10.1007/s11065-014-9247-8,https://api.crossref.org/works/10.1007/s11065-014-9247-8,
+MK.BOLD_parahippocampal,generator,BR.parahippocampal,A,fMRI localization,10.1016/j.tics.2008.07.004,https://api.crossref.org/works/10.1016/j.tics.2008.07.004,
+MK.BOLD_parahippocampal,generator,BR.precuneus,B,fMRI localization,10.1007/s11065-014-9247-8,https://api.crossref.org/works/10.1007/s11065-014-9247-8,
+MK.BOLD_parahippocampal,generator,BR.precuneus,B,fMRI localization,10.1016/j.tics.2008.07.004,https://api.crossref.org/works/10.1016/j.tics.2008.07.004,
+MK.BOLD_parahippocampal,index,CN.spatial_navigation,A,,10.1007/s11065-014-9247-8,https://api.crossref.org/works/10.1007/s11065-014-9247-8,
+MK.BOLD_parahippocampal,index,CN.spatial_navigation,A,,10.1038/nn.4656,https://api.crossref.org/works/10.1038/nn.4656,
+MK.BOLD_parahippocampal,index,CN.object_recognition,B,,10.1038/33402,https://api.crossref.org/works/10.1038/33402,
+MK.BOLD_parahippocampal,index,CN.object_recognition,B,,10.1016/j.tics.2008.07.004,https://api.crossref.org/works/10.1016/j.tics.2008.07.004,
+MK.BOLD_parahippocampal,index,CN.visual_imagery,C,,10.1162/08989290051137549,https://api.crossref.org/works/10.1162/08989290051137549,
+MK.BOLD_parahippocampal,index,CN.consciousness_level,B,,10.1126/science.1130197,https://api.crossref.org/works/10.1126/science.1130197,
+MK.BOLD_parahippocampal,index,CN.consciousness_level,B,,10.1056/NEJMoa0905370,https://api.crossref.org/works/10.1056/NEJMoa0905370,
+MK.BOLD_premotor_parietal,generator,BR.premotor,A,fMRI localization,10.1016/j.neuroimage.2009.12.112,https://api.crossref.org/works/10.1016/j.neuroimage.2009.12.112,
+MK.BOLD_premotor_parietal,generator,BR.premotor,A,fMRI localization,10.1016/j.neubiorev.2011.07.004,https://api.crossref.org/works/10.1016/j.neubiorev.2011.07.004,
+MK.BOLD_premotor_parietal,generator,BR.parietal_cortex,A,fMRI localization,10.1016/j.neuroimage.2009.12.112,https://api.crossref.org/works/10.1016/j.neuroimage.2009.12.112,
+MK.BOLD_premotor_parietal,generator,BR.parietal_cortex,A,fMRI localization,10.1016/j.neubiorev.2011.07.004,https://api.crossref.org/works/10.1016/j.neubiorev.2011.07.004,
+MK.BOLD_premotor_parietal,index,CN.social_perception,A,,10.1016/j.neuroimage.2009.12.112,https://api.crossref.org/works/10.1016/j.neuroimage.2009.12.112,
+MK.BOLD_premotor_parietal,index,CN.social_perception,A,,10.1016/j.neubiorev.2011.07.004,https://api.crossref.org/works/10.1016/j.neubiorev.2011.07.004,
+MK.BOLD_premotor_parietal,index,CN.self_processing,A,,10.1126/science.1097011,https://api.crossref.org/works/10.1126/science.1097011,
+MK.BOLD_premotor_parietal,index,CN.self_processing,A,,10.1016/j.neuroimage.2016.12.052,https://api.crossref.org/works/10.1016/j.neuroimage.2016.12.052,
+MK.BOLD_premotor_parietal,index,CN.motor_imagery,A,,10.1016/j.neubiorev.2013.03.017,https://api.crossref.org/works/10.1016/j.neubiorev.2013.03.017,
+MK.SCP,generator,BR.premotor,C,EEG-fMRI,10.1111/j.1460-9568.2005.04092.x,https://api.crossref.org/works/10.1111/j.1460-9568.2005.04092.x,
+MK.SCP,index,CN.self_regulation,B,,10.1038/18581,https://api.crossref.org/works/10.1038/18581,
+MK.SCP,index,CN.self_regulation,B,,10.1542/peds.2005-2478,https://api.crossref.org/works/10.1542/peds.2005-2478,
+MK.SCP,index,CN.self_regulation,B,,10.1111/j.1460-9568.2005.04092.x,https://api.crossref.org/works/10.1111/j.1460-9568.2005.04092.x,
+MK.SCP,index,CN.cortical_excitability,B,,10.1152/physrev.1990.70.1.1,https://api.crossref.org/works/10.1152/physrev.1990.70.1.1,
+MK.SCP,index,CN.intent_selection,C,,10.1038/18581,https://api.crossref.org/works/10.1038/18581,
+MK.SSSEP,generator,BR.S1,B,MEG/EEG source,10.1016/0168-5597(92)90007-X,https://api.crossref.org/works/10.1016/0168-5597(92)90007-X,
+MK.SSSEP,generator,BR.S1,B,MEG/EEG source,10.3389/fncir.2018.00118,https://api.crossref.org/works/10.3389/fncir.2018.00118,
+MK.SSSEP,generator,BR.SII,C,MEG/EEG source,10.3389/fncir.2018.00118,https://api.crossref.org/works/10.3389/fncir.2018.00118,
+MK.SSSEP,index,CN.somatosensation,B,,10.1016/0168-5597(92)90007-X,https://api.crossref.org/works/10.1016/0168-5597(92)90007-X,
+MK.SSSEP,index,CN.somatosensation,B,,10.3389/fnhum.2015.00716,https://api.openalex.org/works/doi:10.3389/fnhum.2015.00716,Crossref API returned 429; record taken from OpenAlex API
+MK.SSSEP,index,CN.spatial_attention,B,,10.1016/j.cogbrainres.2004.01.004,https://api.crossref.org/works/10.1016/j.cogbrainres.2004.01.004,
+MK.SSSEP,index,CN.spatial_attention,B,,10.1109/TNSRE.2005.863842,https://api.openalex.org/works/doi:10.1109/TNSRE.2005.863842,Crossref API returned 429; record taken from OpenAlex API
+MK.SSSEP,index,CN.intent_selection,B,,10.1109/TNSRE.2005.863842,https://api.openalex.org/works/doi:10.1109/TNSRE.2005.863842,Crossref API returned 429; record taken from OpenAlex API
+MK.SSSEP,index,CN.intent_selection,B,,10.3389/fnhum.2015.00716,https://api.openalex.org/works/doi:10.3389/fnhum.2015.00716,Crossref API returned 429; record taken from OpenAlex API
+MK.TEP,generator,BR.M1,B,MEG/EEG source,10.1097/00001756-199711100-00024,https://api.openalex.org/works/doi:10.1097/00001756-199711100-00024,Crossref API returned 429; record taken from OpenAlex API
+MK.TEP,generator,BR.M1,B,MEG/EEG source,10.1016/j.clinph.2019.01.001,https://api.crossref.org/works/10.1016/j.clinph.2019.01.001,
+MK.TEP,index,CN.cortical_excitability,B,,10.1097/00001756-199711100-00024,https://api.openalex.org/works/doi:10.1097/00001756-199711100-00024,Crossref API returned 429; record taken from OpenAlex API
+MK.TEP,index,CN.cortical_excitability,B,,10.1016/j.clinph.2019.01.001,https://api.crossref.org/works/10.1016/j.clinph.2019.01.001,
+MK.TEP,index,CN.consciousness_level,B,,10.1126/scitranslmed.3006294,https://api.crossref.org/works/10.1126/scitranslmed.3006294,
+MK.TEP,index,CN.consciousness_level,B,,10.1126/science.1117256,https://api.crossref.org/works/10.1126/science.1117256,
+MK.TEP,index,CN.sleep,C,,10.1126/science.1117256,https://api.crossref.org/works/10.1126/science.1117256,
+MK.oscillatory_entrainment,generator,BR.parietal_cortex,C,scalp topography,10.1016/j.cub.2011.05.049,https://api.crossref.org/works/10.1016/j.cub.2011.05.049,
+MK.oscillatory_entrainment,generator,BR.parietal_cortex,C,scalp topography,10.1371/journal.pone.0013766,https://api.crossref.org/works/10.1371/journal.pone.0013766,
+MK.oscillatory_entrainment,index,CN.neural_entrainment,B,,10.1016/j.cub.2011.05.049,https://api.crossref.org/works/10.1016/j.cub.2011.05.049,
+MK.oscillatory_entrainment,index,CN.neural_entrainment,B,,10.1016/j.cub.2013.12.041,https://api.crossref.org/works/10.1016/j.cub.2013.12.041,
+MK.oscillatory_entrainment,index,CN.neural_entrainment,B,,10.3389/fnhum.2013.00279,https://api.crossref.org/works/10.3389/fnhum.2013.00279,
+MK.oscillatory_entrainment,index,CN.cortical_idling,C,,10.1371/journal.pone.0013766,https://api.crossref.org/works/10.1371/journal.pone.0013766,
+MK.oscillatory_entrainment,index,CN.perceptual_awareness,C,,10.1016/j.cub.2013.12.041,https://api.crossref.org/works/10.1016/j.cub.2013.12.041,

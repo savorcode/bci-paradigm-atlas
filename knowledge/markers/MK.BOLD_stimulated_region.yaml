@@ -1,10 +1,64 @@
-schema_version: "0.2"
+schema_version: '0.2'
 id: MK.BOLD_stimulated_region
-name: {en: Hemodynamic response at the stimulated region, zh: 受刺激脑区血流动力学响应}
-aliases: [stimulation-evoked BOLD, target engagement BOLD]
+name:
+  en: Hemodynamic response at the stimulated region
+  zh: 受刺激脑区血流动力学响应
+aliases:
+- stimulation-evoked BOLD
+- target engagement BOLD
 type: hemodynamic
-recording_modality: [fMRI, fNIRS]
-description: {en: 'Change in BOLD or HbO signal at, and in regions connected to, the brain area targeted by non-invasive brain stimulation (e.g. TMS, tDCS, focused ultrasound). It is used to verify target engagement and to characterise network effects.', zh: 非侵入性脑刺激（如 TMS、tDCS、聚焦超声）作用靶区及其连接区域的 BOLD 或 HbO 信号变化，用于确认靶点作用并刻画网络效应。}
-notes: Generators and indexes to be added in the second pass.
+recording_modality:
+- fMRI
+- fNIRS
+description:
+  en: Change in BOLD or HbO signal at, and in regions connected to, the brain area targeted by non-invasive brain stimulation
+    (e.g. TMS, tDCS, focused ultrasound). It is used to verify target engagement and to characterise network effects.
+  zh: 非侵入性脑刺激（如 TMS、tDCS、聚焦超声）作用靶区及其连接区域的 BOLD 或 HbO 信号变化，用于确认靶点作用并刻画网络效应。
+generators:
+- region: BR.M1
+  evidence: B
+  sources:
+  - citation: 'Rafiei F, Rahnev D. TMS does not increase BOLD activity at the site of stimulation: a review of all concurrent
+      TMS-fMRI studies. eNeuro. 2022;9(4):ENEURO.0163-22.2022.'
+    doi: 10.1523/ENEURO.0163-22.2022
+    year: 2022
+    verified: false
+  - citation: 'Mizutani-Tiebel Y, Tik M, Chang KY, et al. Concurrent TMS-fMRI: technical challenges, developments, and overview
+      of previous studies. Front Psychiatry. 2022;13:825205.'
+    doi: 10.3389/fpsyt.2022.825205
+    year: 2022
+    verified: false
+  - citation: Bestmann S, Ruff CC, Blankenburg F, et al. Mapping causal interregional influences with concurrent TMS-fMRI.
+      Exp Brain Res. 2008;191(4):383-402.
+    doi: 10.1007/s00221-008-1601-8
+    year: 2008
+    verified: false
+  note: 'method: fMRI localization; generator is the stimulated region itself. Primary motor cortex is the most frequently
+    targeted site in concurrent TMS-fMRI and, with visual cortex, the only target where a local BOLD increase is consistently
+    reported; Rafiei & Rahnev 2022 (review of all concurrent TMS-fMRI studies) attribute that increase largely to movement
+    re-afference, and find no local increase for other targets. Remote (network) effects are more consistent than local ones.'
+indexes:
+- construct: CN.cortical_excitability
+  evidence: C
+  relation: BOLD in the targeted network changes with stimulation intensity and state; a local increase at the target is reliable
+    only for suprathreshold motor (and visual) cortex stimulation
+  sources:
+  - citation: 'Rafiei F, Rahnev D. TMS does not increase BOLD activity at the site of stimulation: a review of all concurrent
+      TMS-fMRI studies. eNeuro. 2022;9(4):ENEURO.0163-22.2022.'
+    doi: 10.1523/ENEURO.0163-22.2022
+    year: 2022
+    verified: false
+  - citation: Bestmann S, Ruff CC, Blankenburg F, et al. Mapping causal interregional influences with concurrent TMS-fMRI.
+      Exp Brain Res. 2008;191(4):383-402.
+    doi: 10.1007/s00221-008-1601-8
+    year: 2008
+    verified: false
+  note: Graded C because the systematic review argues local BOLD at non-motor targets does not track excitability; treat this
+    marker as a target-engagement check rather than an excitability index.
+notes: 'Generators and indexes to be added in the second pass. Sprint 6 (2026-10-16, curator I): generators and indexes curated;
+  every DOI checked against its Crossref or OpenAlex record (see curation/work/sprint6/markers_I/); verified: false pending
+  full-text check.'
 status: draft
-contributors: [maintainer, curator_b]
+contributors:
+- maintainer
+- curator_b

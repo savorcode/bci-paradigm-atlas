@@ -1,11 +1,82 @@
-schema_version: "0.2"
+schema_version: '0.2'
 id: MK.TEP
-name: {en: TMS-evoked potential, zh: TMS 诱发电位}
-aliases: [TEP, TMS-evoked EEG response]
+name:
+  en: TMS-evoked potential
+  zh: TMS 诱发电位
+aliases:
+- TEP
+- TMS-evoked EEG response
 type: erp_component
-recording_modality: [EEG]
-signature: {latency_ms: 'sequence of peaks over ~0-300 (e.g. N15, P30, N45, P60, N100, P180 for motor cortex)', topography: 'maximal near the stimulated site, then spreading'}
-description: {en: 'EEG response time-locked to a single TMS pulse, consisting of a sequence of positive and negative deflections that start near the stimulated site and spread to connected regions. Its amplitude and spread index cortical reactivity and effective connectivity.', zh: 与单个 TMS 脉冲锁时的脑电响应，由一系列正、负波组成，起始于受刺激部位附近并扩散到相连区域。其幅度与扩散反映皮层反应性与有效连接。}
-notes: Signature values are textbook-level characteristics and await source checking (first pass, curator_b). Must be separated from auditory and somatosensory responses to the TMS click and scalp sensation. Generators and indexes to be added in the second pass.
+recording_modality:
+- EEG
+signature:
+  latency_ms: sequence of peaks over ~0-300 (e.g. N15, P30, N45, P60, N100, P180 for motor cortex)
+  topography: maximal near the stimulated site, then spreading
+description:
+  en: EEG response time-locked to a single TMS pulse, consisting of a sequence of positive and negative deflections that start
+    near the stimulated site and spread to connected regions. Its amplitude and spread index cortical reactivity and effective
+    connectivity.
+  zh: 与单个 TMS 脉冲锁时的脑电响应，由一系列正、负波组成，起始于受刺激部位附近并扩散到相连区域。其幅度与扩散反映皮层反应性与有效连接。
+generators:
+- region: BR.M1
+  evidence: B
+  sources:
+  - citation: Ilmoniemi RJ, Virtanen J, Ruohonen J, et al. Neuronal responses to magnetic stimulation reveal cortical reactivity
+      and connectivity. Neuroreport. 1997;8(16):3537-3540.
+    doi: 10.1097/00001756-199711100-00024
+    year: 1997
+    verified: false
+  - citation: Tremblay S, Rogasch NC, Premoli I, et al. Clinical utility and prospective of TMS-EEG. Clin Neurophysiol. 2019;130(5):802-844.
+    doi: 10.1016/j.clinph.2019.01.001
+    year: 2019
+    verified: false
+  note: 'method: MEG/EEG source; generator is the stimulated region: early TEP peaks originate at the stimulation site and
+    then spread to connected areas (Ilmoniemi 1997 source maps); primary motor cortex is the most frequently stimulated and
+    best characterised site (Tremblay 2019). Other targets (e.g. DLPFC, premotor) produce site-specific TEPs.'
+indexes:
+- construct: CN.cortical_excitability
+  evidence: B
+  relation: early TEP amplitude increases with stimulation intensity and reflects local cortical reactivity; later peaks index
+    effective connectivity
+  sources:
+  - citation: Ilmoniemi RJ, Virtanen J, Ruohonen J, et al. Neuronal responses to magnetic stimulation reveal cortical reactivity
+      and connectivity. Neuroreport. 1997;8(16):3537-3540.
+    doi: 10.1097/00001756-199711100-00024
+    year: 1997
+    verified: false
+  - citation: Tremblay S, Rogasch NC, Premoli I, et al. Clinical utility and prospective of TMS-EEG. Clin Neurophysiol. 2019;130(5):802-844.
+    doi: 10.1016/j.clinph.2019.01.001
+    year: 2019
+    verified: false
+- construct: CN.consciousness_level
+  evidence: B
+  relation: complexity and spread of the TEP (perturbational complexity index) are reduced in sleep, anaesthesia and disorders
+    of consciousness
+  sources:
+  - citation: Casali AG, Gosseries O, Rosanova M, et al. A theoretically based index of consciousness independent of sensory
+      processing and behavior. Sci Transl Med. 2013;5(198):198ra105.
+    doi: 10.1126/scitranslmed.3006294
+    year: 2013
+    verified: false
+  - citation: Massimini M, Ferrarelli F, Huber R, et al. Breakdown of cortical effective connectivity during sleep. Science.
+      2005;309(5744):2228-2232.
+    doi: 10.1126/science.1117256
+    year: 2005
+    verified: false
+- construct: CN.sleep
+  evidence: C
+  relation: in NREM sleep the TEP becomes larger but stays local, reflecting a breakdown of effective connectivity
+  sources:
+  - citation: Massimini M, Ferrarelli F, Huber R, et al. Breakdown of cortical effective connectivity during sleep. Science.
+      2005;309(5744):2228-2232.
+    doi: 10.1126/science.1117256
+    year: 2005
+    verified: false
+notes: 'Signature values are textbook-level characteristics and await source checking (first pass, curator_b). Must be separated
+  from auditory and somatosensory responses to the TMS click and scalp sensation. Generators and indexes to be added in the
+  second pass. Sprint 6 (2026-10-16, curator I): generators and indexes curated; every DOI checked against its Crossref or
+  OpenAlex record (see curation/work/sprint6/markers_I/); verified: false pending full-text check.'
 status: draft
-contributors: [maintainer, curator_b]
+contributors:
+- maintainer
+- curator_b
