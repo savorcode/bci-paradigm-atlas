@@ -1,0 +1,101 @@
+schema_version: '0.2'
+id: MEM-VTWM-001
+class: MEM-VTWM
+name:
+  en: Vibrotactile frequency discrimination with working memory delay
+  zh: 带工作记忆延迟的振动触觉频率辨别
+aliases:
+- vibrotactile working memory
+- flutter frequency discrimination
+- two-interval vibrotactile frequency comparison
+- parametric working memory task
+- f1-f2 comparison task
+family: memory
+bci_category:
+- none
+recording_modality:
+- fMRI
+- EEG
+- MEG
+stimulus_modality:
+- somatosensory
+markers:
+- MK.SSSEP
+- MK.BOLD_frontoparietal
+description:
+  en: Two vibrotactile stimuli in the flutter range (about 10-35 Hz) are applied one after the other to a fingertip, separated
+    by a short delay. The participant keeps the frequency of the first stimulus (f1) in mind and decides whether the second
+    (f2) is higher or lower. Encoding activates primary somatosensory and ventral premotor cortex, retention engages ventrolateral
+    prefrontal cortex, and in EEG/MEG the retained frequency is reflected parametrically in prefrontal beta-band power.
+  zh: 在指尖先后施加两个扑动范围（约 10–35 Hz）的振动触觉刺激，中间隔一段短延迟。被试记住第一个刺激（f1）的频率，判断第二个刺激（f2）更高还是更低。编码期激活初级体感皮层和腹侧运动前区，保持期涉及腹外侧前额叶；在脑电/脑磁上，所保持的频率以参数方式反映在前额叶
+    β 频段功率中。
+trial_structure:
+  phases:
+  - name: fixation
+    duration_ms: 750-1250
+  - name: f1 (base stimulus)
+    duration_ms: 250
+    note: 15, 19, 23 or 27 Hz in the MEG protocol of von Lautz et al. 2017
+  - name: retention
+    duration_ms: 1000
+    note: delay length varies across studies
+  - name: f2 (comparison stimulus)
+    duration_ms: 250
+    note: f1 +/- 2 or 4 Hz
+  - name: delay
+    duration_ms: 1000
+  - name: response
+    note: report f2 > f1 or f2 < f1
+  typical_trials: 768 (six blocks of 128) in von Lautz et al. 2017
+  conditions:
+  - f2 higher than f1
+  - f2 lower than f1
+protocol:
+  n_classes: 2
+  classes:
+  - f2 > f1
+  - f2 < f1
+  cue: sequential vibrotactile flutter stimuli to the fingertip
+  stimulus_coding: parametric frequency of f1 (several base frequencies) with f2 offset up or down
+  paradigm_timing: synchronous
+  feedback: none
+  distinguishing: '标准配置（最早发表，即 first_source）：指尖先后两个振动触觉刺激，保持 f1 频率并判断 f2 高于或低于 f1，无反馈（人类首篇 Preuschhof et al. 2006，fMRI）。'
+first_source:
+  citation: Preuschhof C, Heekeren HR, Taskin B, Schubert T, Villringer A. Neural correlates of vibrotactile working memory
+    in the human brain. J Neurosci. 2006;26(51):13231-13239.
+  doi: 10.1523/JNEUROSCI.2767-06.2006
+  year: 2006
+  verified: false
+variants:
+- name: EEG version with parametric prefrontal beta during retention
+  source:
+    citation: Spitzer B, Wacker E, Blankenburg F. Oscillatory correlates of vibrotactile frequency processing in human working
+      memory. J Neurosci. 2010;30(12):4496-4502.
+    doi: 10.1523/JNEUROSCI.6041-09.2010
+    year: 2010
+    verified: false
+  note: Same two-interval comparison design recorded with EEG; recording modality is not a numbering criterion (D-060). Stimulation
+    evokes steady-state SEPs in S1, and beta (20-25 Hz) power over the inferior frontal gyrus scales with the retained f1.
+- name: MEG version with response-modality cues
+  source:
+    citation: von Lautz AH, Herding J, Ludwig S, Nierhaus T, Maess B, Villringer A, Blankenburg F. Gamma and beta oscillations
+      in human MEG encode the contents of vibrotactile working memory. Front Hum Neurosci. 2017;11:576.
+    doi: 10.3389/fnhum.2017.00576
+    year: 2017
+    verified: false
+  note: Adds pre-f1 and post-f2 cues that set the response modality (saccade or button); the comparison task is unchanged.
+    Source of the phase durations above.
+interop:
+  bids_task: vibrotactilewm
+notes: 'animal origin: the two-interval flutter comparison was developed in monkey single-unit studies (Romo and colleagues,
+  late 1990s, as summarised in the introduction of von Lautz et al. 2017; not retrieved and not cited). Per D-031 the first
+  human neural study is used as first_source: Preuschhof et al. 2006 (OpenAlex record; Crossref request was rate-limited),
+  whose abstract does not give frequencies or delay length. Phase durations are from von Lautz et al. 2017 (full text, Frontiers);
+  Spitzer et al. 2010 (OpenAlex record) supports the SSSEP and prefrontal beta findings. No registry marker covers parametric
+  prefrontal beta power during retention; MK.SSSEP (stimulus-locked S1 response) and MK.BOLD_frontoparietal (lateral prefrontal
+  and inferior parietal activity in Preuschhof 2006) are used, and a new marker is requested (marker_requests.csv). Differs
+  from MEM-DMS, which tests recognition of discrete items rather than a remembered quantity. [curator_d sprint 7, 2026-10-17]
+  bibliography confirmed (OpenAlex, 2026-10-17).'
+status: draft
+contributors:
+- curator_d

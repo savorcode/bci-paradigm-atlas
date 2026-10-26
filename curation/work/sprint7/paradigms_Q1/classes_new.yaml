@@ -1,0 +1,273 @@
+# Sprint 7, group Q1: new paradigm classes for the maintainer to merge into paradigms/_classes.yaml.
+# Curators: curator_a (perception), curator_b (motor), curator_e (state), 2026-10-17.
+# 冲刺 7 Q1 组新增范式类，待维护者合入 paradigms/_classes.yaml。
+# No duplicates found; see worklog.md for the overlap checks.
+- id: MOT-BRAKE
+  name:
+    en: Emergency braking intention during simulated driving
+    zh: 模拟驾驶紧急制动意图
+  family: motor
+  description:
+    en: Participants drive in a simulator behind a lead vehicle that brakes abruptly at unpredictable moments, and must brake
+      as fast as possible. EEG between the onset of the critical traffic event and the driver's pedal response, a P300-like
+      response to the event followed by a fronto-central movement-preparation negativity, is classified against normal driving
+      to detect the braking intention before the foot moves.
+    zh: 被试在模拟器中跟随前车行驶，前车在不可预测的时刻突然制动，被试须尽快制动。将关键交通事件出现至驾驶者踩踏板之间的脑电（对事件的类 P300 响应及随后的额中央运动准备负波）与正常驾驶时段分类，以便在脚部动作之前检测制动意图。
+  markers:
+  - MK.P3b
+  - MK.MRCP
+  first_source:
+    citation: Haufe S, Treder MS, Gugler MF, Sagebaum M, Curio G, Blankertz B. EEG potentials predict upcoming emergency brakings
+      during simulated driving. Journal of Neural Engineering. 2011;8(5):056001.
+    doi: 10.1088/1741-2560/8/5/056001
+    year: 2011
+    verified: false
+  aliases:
+  - emergency braking paradigm
+  - braking intention detection
+  - brain-based brake assistance
+  - pre-braking EEG prediction
+  notes: '[curator_b sprint 7, 2026-10-17] New class from the sprint 7 gap list. Concrete paradigms: MOT-BRAKE-001 (car following,
+    sudden lead-vehicle braking; BNCI 002-2016). Closest existing classes: MOT-MRCP (self-paced movement preparation) and
+    STA-DRV (drowsiness during driving); neither covers event-triggered intention detection inside continuous driving. Possible
+    -002: several braking situations (Kim et al. 2014). bibliography confirmed (Crossref, 2026-10-17)'
+  status: draft
+  contributors:
+  - curator_b
+- id: MOT-KMI
+  name:
+    en: Motor imagery of kinetic and kinematic parameters (force, speed)
+    zh: 运动参数想象（力量、速度）
+  family: motor
+  description:
+    en: Participants imagine the same movement of the same limb at different speeds or with different force loads. Because
+      the effector does not change, the decoded classes are movement parameters rather than body parts; imagined speed is
+      reflected in the timing of the movement-related cortical potential and imagined force in the strength of contralateral
+      mu/beta ERD.
+    zh: 被试想象同一肢体的同一动作，但速度或力量负荷不同。由于效应器不变，解码的类别是运动参数而非身体部位；想象速度体现在运动相关皮层电位的时程上，想象力量体现在对侧 mu/β ERD 的强度上。
+  markers:
+  - MK.MRCP
+  - MK.SMR_ERD
+  first_source:
+    citation: Gu Y, Farina D, Murguialday AR, Dremstrup K, Montoya P, Birbaumer N. Offline identification of imagined speed
+      of wrist movements in paralyzed ALS patients from single-trial EEG. Frontiers in Neuroscience. 2009;3:62.
+    doi: 10.3389/neuro.20.003.2009
+    year: 2009
+    verified: false
+  aliases:
+  - imagined movement speed
+  - speed motor imagery
+  - kinematic motor imagery
+  - force motor imagery
+  - kinetic motor imagery
+  - imagined force levels
+  - force-load BCI
+  notes: '[curator_b sprint 7, 2026-10-17] New class from the sprint 7 gap list. Concrete paradigms: MOT-KMI-001 (imagined
+    speed, fast vs slow; Gu et al. 2009), MOT-KMI-002 (imagined force load with trial feedback; Wang et al. 2017). Closest
+    existing class: MOT-MI, whose concrete paradigms are body-part class sets. Found through the review by Tai et al. 2024
+    (doi 10.3389/fnins.2023.1345961). bibliography confirmed (Crossref, 2026-10-17)'
+  status: draft
+  contributors:
+  - curator_b
+- id: MOT-SWAL
+  name:
+    en: Swallowing (executed and imagined)
+    zh: 吞咽（执行与想象）
+  family: motor
+  description:
+    en: Participants swallow small water boluses on cue, or imagine swallowing without moving, and the activity is compared
+      with rest or idle periods. Executed swallowing activates bilateral, often asymmetric, caudolateral sensorimotor cortex
+      with insula, premotor and cerebellar regions; imagined swallowing is detected from EEG for brain-computer interface
+      rehabilitation of dysphagia.
+    zh: 被试按提示吞咽少量水，或在不动的情况下想象吞咽，并与静息或空闲期比较。实际吞咽激活双侧（常不对称）中央沟下外侧感觉运动皮层以及岛叶、运动前区和小脑；吞咽想象可从脑电中检测，用于吞咽障碍的脑机接口康复。
+  markers:
+  - MK.BOLD_motor_network
+  - MK.BOLD_anterior_insula
+  - MK.SMR_ERD
+  first_source:
+    citation: Hamdy S, Rothwell JC, Brooks DJ, Bailey D, Aziz Q, Thompson DG. Identification of the cerebral loci processing
+      human swallowing with H2 15O PET activation. Journal of Neurophysiology. 1999;81(4):1917-1926.
+    doi: 10.1152/jn.1999.81.4.1917
+    year: 1999
+    verified: false
+  aliases:
+  - volitional swallowing
+  - swallowing task
+  - deglutition task
+  - swallow paradigm
+  - motor imagery of swallow
+  - MI-SW
+  - swallowing imagery BCI
+  notes: '[curator_b sprint 7, 2026-10-17] New class from the sprint 7 gap list. Concrete paradigms: MOT-SWAL-001 (cued volitional
+    water swallowing, PET; Hamdy et al. 1999), MOT-SWAL-002 (cued swallow imagery vs idle, EEG; Yang et al. 2014). Closest
+    existing class: MOT-ME (limb and finger execution); LAN speech classes cover articulation, not deglutition. bibliography
+    confirmed (Crossref, 2026-10-17)'
+  status: draft
+  contributors:
+  - curator_b
+- id: MOT-SATT
+  name:
+    en: Sensory attenuation of self-generated stimuli
+    zh: 自生刺激的感觉衰减
+  family: motor
+  description:
+    en: Identical stimuli are either triggered by the participant's own action (for example a button press) or delivered externally
+      with the same timing. Responses to self-generated stimuli are attenuated, most often measured as a smaller auditory
+      N1-P2, which is taken as evidence that the brain predicts and cancels the sensory consequences of its own actions.
+    zh: 相同的刺激或由被试自身动作（如按键）触发，或以相同时序由外部给出。自生刺激引起的响应减弱（最常见的是听觉 N1–P2 变小），被视为大脑预测并抵消自身动作感觉后果的证据。
+  markers:
+  - MK.N1_auditory
+  - MK.P2_auditory
+  first_source:
+    citation: Schafer EWP, Marcus MM. Self-stimulation alters human sensory brain responses. Science. 1973;181(4095):175-177.
+    doi: 10.1126/science.181.4095.175
+    year: 1973
+    verified: false
+  aliases:
+  - sensory attenuation
+  - self-generated sound suppression
+  - motor-auditory N1 suppression
+  - self-initiated versus externally initiated tones
+  - action-effect attenuation
+  notes: '[curator_b sprint 7, 2026-10-17] New class from the sprint 7 gap list. Concrete paradigms: MOT-SATT-001 (self- vs
+    externally delivered clicks and flashes; Schafer & Marcus 1973). Overlaps: MOT-IB lists N1 attenuation as a correlate
+    of intentional binding but measures perceived timing; LAN-SIS is the speech case; PER-OMIT records omitted self-triggered
+    sounds. Kept separate because the construct (sensory prediction of action effects, self vs external contrast) differs;
+    for maintainer review. Tactile version (Blakemore et al. 1998, doi 10.1038/2870) pending a somatosensory haemodynamic
+    marker. bibliography confirmed (Crossref, 2026-10-17)'
+  status: draft
+  contributors:
+  - curator_b
+- id: PER-GAZSEL
+  name:
+    en: Gaze-based selection intention (eye-brain-computer interface)
+    zh: 注视选择意图（眼–脑接口）
+  family: perception
+  description:
+    en: Participants control an interface with their gaze while EEG is recorded, and fixations used to issue commands are
+      compared with spontaneous fixations made while looking around. Fixation-related potentials of intentional fixations
+      show a slow parieto-occipital negativity, resembling an expectancy wave, which allows the intention to select to be
+      detected from the EEG and addresses the Midas touch problem of gaze interfaces.
+    zh: 被试用注视操作界面，同时记录脑电；比较用于发出指令的注视与四处浏览时的自发注视。有意注视的注视相关电位出现缓慢的顶枕负波（类似期待波），据此可从脑电检测选择意图，解决注视界面的"点石成金"问题。
+  markers:
+  - MK.FRP
+  - MK.CNV
+  first_source:
+    citation: 'Shishkin SL, Nuzhdin YO, Svirin EP, Trofimov AG, Fedorova AA, Kozyrskiy BL, Velichkovsky BM. EEG negativity
+      in fixations used for gaze-based control: toward converting intentions into actions with an eye-brain-computer interface.
+      Frontiers in Neuroscience. 2016;10:528.'
+    doi: 10.3389/fnins.2016.00528
+    year: 2016
+    verified: false
+  aliases:
+  - eye-brain-computer interface
+  - EBCI
+  - gaze-based selection intention
+  - Midas touch problem
+  - control-on versus control-off fixations
+  notes: '[curator_a sprint 7, 2026-10-17] New class from the sprint 7 gap list. Concrete paradigms: PER-GAZSEL-001 (gaze-controlled
+    game, intentional vs spontaneous fixations; Shishkin et al. 2016). Closest existing class: LAN-READ (fixation-related
+    potentials in reading). Marker MK.CNV is a stand-in for the expectancy negativity; a stimulus-preceding negativity marker
+    is requested. bibliography confirmed (OpenAlex, 2026-10-17)'
+  status: draft
+  contributors:
+  - curator_a
+- id: PER-IDEAF
+  name:
+    en: Inattentional deafness to auditory alarms under load
+    zh: 高负荷下的非注意聋（听觉警报漏报）
+  family: perception
+  description:
+    en: While participants perform a demanding visual or operational task, task-irrelevant or alarm sounds are presented and
+      their detection is tested. Under high load many sounds are missed; neural responses to the sounds, the early auditory
+      response around 100 ms and especially the later P3, are reduced, and the P3 to alarms predicts the miss rate, making
+      alarm detection a target for passive BCI in aviation and driving.
+    zh: 被试执行要求较高的视觉或操作任务时，呈现与任务无关的声音或警报声，并检测其是否被察觉。高负荷下许多声音被漏听；对声音的神经响应（约 100 ms 的早期听觉响应，尤其是之后的 P3）减弱，警报诱发的 P3 可预测漏报率，因而警报察觉成为航空与驾驶中被动式脑机接口的检测目标。
+  markers:
+  - MK.N1_auditory
+  - MK.P3b
+  first_source:
+    citation: Macdonald JSP, Lavie N. Visual perceptual load induces inattentional deafness. Attention, Perception, & Psychophysics.
+      2011;73(6):1780-1789.
+    doi: 10.3758/s13414-011-0144-4
+    year: 2011
+    verified: false
+  aliases:
+  - inattentional deafness
+  - load-induced deafness
+  - perceptual load and auditory awareness
+  - inattentional deafness to auditory alarms
+  - cockpit alarm detection
+  - dual-task auditory alarm oddball
+  notes: '[curator_a sprint 7, 2026-10-17] New class from the sprint 7 gap list. Concrete paradigms: PER-IDEAF-001 (critical-trial
+    tone under visual perceptual load; Macdonald & Lavie 2011, behavioural origin), PER-IDEAF-002 (auditory alarm oddball
+    in a simulated landing task; Giraudet et al. 2015). Closest existing classes: PER-IB (visual counterpart) and STA-PROBE
+    (ignored probes as a workload measure, without testing awareness). bibliography confirmed (Crossref, 2026-10-17)'
+  status: draft
+  contributors:
+  - curator_a
+- id: STA-PROBE
+  name:
+    en: Irrelevant-probe workload assessment
+    zh: 无关探测刺激工作负荷评估
+  family: state
+  description:
+    en: Task-irrelevant auditory probes are presented while participants perform a primary task at different levels of difficulty
+      and are told to ignore them. ERPs to the probes (N1, P2 and the probe P3) decrease as the primary task becomes more
+      demanding, providing a workload measure that does not require an extra response from the operator.
+    zh: 被试以不同难度执行主任务时呈现与任务无关的听觉探测刺激，并要求其忽略。主任务要求越高，探测刺激诱发的 ERP（N1、P2 与探测 P3）越小，从而提供一种无需操作者额外反应的负荷测量方法。
+  markers:
+  - MK.N1_auditory
+  - MK.P2_auditory
+  - MK.P3a
+  first_source:
+    citation: Kramer AF, Trejo LJ, Humphrey D. Assessment of mental workload with task-irrelevant auditory probes. Biological
+      Psychology. 1995;40(1-2):83-100.
+    doi: 10.1016/0301-0511(95)05108-2
+    year: 1995
+    verified: false
+  aliases:
+  - irrelevant-probe technique
+  - task-irrelevant auditory probes
+  - ignored auditory probes
+  - probe evoked potentials
+  - single-stimulus probe paradigm
+  - ignored single-tone probes
+  notes: '[curator_e sprint 7, 2026-10-17] New class from the sprint 7 gap list. Concrete paradigms: STA-PROBE-001 (ignored
+    two-tone oddball probes; Kramer et al. 1995), STA-PROBE-002 (single-stimulus ignored probes during video-game play; Allison
+    & Polich 2008). Closest existing classes: STA-MATB and MEM-NBK (workload manipulations without probes). Origin provisional:
+    earlier probe-evoked-potential work was not searched. bibliography confirmed (Crossref, 2026-10-17)'
+  status: draft
+  contributors:
+  - curator_e
+- id: STA-GAME
+  name:
+    en: Video-game play for engagement and workload
+    zh: 电子游戏任务（投入度与负荷）
+  family: state
+  description:
+    en: EEG is recorded while participants play video games, often compared with watching the game and with rest or across
+      difficulty levels. Game play increases frontal midline theta and reduces posterior alpha and central mu power, an index
+      of mental effort and engagement during an interactive, naturalistic task.
+    zh: 在被试玩电子游戏时记录脑电，常与观看游戏、静息或不同难度相比较。玩游戏时额中线 θ 增强，后部 α 与中央区 mu 功率降低，可作为交互式自然任务中心理努力与投入度的指标。
+  markers:
+  - MK.frontal_midline_theta
+  - MK.alpha_posterior
+  - MK.SMR_ERD
+  first_source:
+    citation: 'Pellouchoud E, Smith ME, McEvoy L, Gevins A. Mental effort-related EEG modulation during video-game play: comparison
+      between juvenile subjects with epilepsy and normal control subjects. Epilepsia. 1999;40(s4):38-43.'
+    doi: 10.1111/j.1528-1157.1999.tb00905.x
+    year: 1999
+    verified: false
+  aliases:
+  - video-game play
+  - video game task
+  - game-based workload
+  - game engagement EEG
+  notes: '[curator_e sprint 7, 2026-10-17] New class from the sprint 7 gap list. Concrete paradigms: STA-GAME-001 (play vs
+    watch vs rest; Pellouchoud et al. 1999). Closest existing class: STA-ENG (passive video and classroom learning). Game
+    play with ignored probe tones is STA-PROBE-002. bibliography confirmed (Crossref, 2026-10-17)'
+  status: draft
+  contributors:
+  - curator_e

@@ -1,0 +1,80 @@
+schema_version: '0.2'
+id: MOT-BRAKE-001
+class: MOT-BRAKE
+name:
+  en: Emergency braking intention during simulated car following
+  zh: 模拟跟车驾驶中的紧急制动意图
+aliases:
+- emergency braking paradigm
+- braking intention detection
+- brain-based brake assistance
+- pre-braking EEG prediction
+family: motor
+bci_category:
+- passive
+recording_modality:
+- EEG
+stimulus_modality:
+- visual
+- motor_execution
+markers:
+- MK.P3b
+- MK.MRCP
+description:
+  en: Participants drive a simulated car on a road and follow a computer-controlled lead vehicle closely. At unpredictable
+    moments the lead vehicle brakes abruptly, and the participant must brake as quickly as possible to avoid a collision.
+    EEG (together with leg EMG and pedal signals) is analysed in the interval between the onset of the lead vehicle's braking
+    and the driver's own pedal response, and is classified against normal-driving periods to detect the braking intention
+    before the foot moves.
+  zh: 被试在模拟器中驾驶汽车，紧跟一辆由计算机控制的前车行驶。前车在不可预测的时刻突然制动，被试须尽快踩下制动踏板以避免碰撞。分析前车开始制动至驾驶者踩踏板之间的脑电（同步记录腿部肌电与踏板信号），并与正常驾驶时段比较分类，以便在脚部动作之前检测出制动意图。
+trial_structure:
+  phases:
+  - name: car following (normal driving)
+    note: continuous driving behind the lead vehicle; interval between braking events is irregular (not stated in the dataset
+      description that was read; a later replication used 15-60 s)
+  - name: lead-vehicle braking onset
+    note: lead vehicle decelerates abruptly with brake lights; event marker car_brake
+  - name: driver response
+    note: EMG onset in the right leg (react_emg) and first brake-pedal deflection; reaction time stored per event
+  - name: lead vehicle holds slow speed, then accelerates again
+  typical_trials: three blocks of about 45 min each per participant
+  conditions:
+  - emergency braking
+  - normal driving
+protocol:
+  n_classes: 2
+  classes:
+  - emergency braking (pre-response interval)
+  - normal driving
+  cue: sudden braking of a lead vehicle in a driving simulator (brake lights and deceleration)
+  stimulus_coding: unpredictable single events embedded in continuous car following
+  paradigm_timing: continuous
+  feedback: none
+  distinguishing: 标准配置（最早发表，即 first_source）：模拟器中紧跟前车驾驶，前车在不可预测时刻突然制动，比较制动反应前的脑电与正常驾驶时段（Haufe et al. 2011），开环检测，无脑电反馈。
+first_source:
+  citation: Haufe S, Treder MS, Gugler MF, Sagebaum M, Curio G, Blankertz B. EEG potentials predict upcoming emergency brakings
+    during simulated driving. Journal of Neural Engineering. 2011;8(5):056001.
+  doi: 10.1088/1741-2560/8/5/056001
+  year: 2011
+  verified: false
+datasets:
+- name: BNCI Horizon 2020, 002-2016 Emergency braking during simulated driving (Haufe et al. 2011)
+  url: https://lampx.tugraz.at/~bci/database/002-2016/description.txt
+  subjects: 18
+interop:
+  bids_task: emergencybraking
+notes: '[curator_b sprint 7, 2026-10-17] New class from the sprint 7 gap list (rank 1, BNCI Horizon 2020). first_source:
+  Haufe et al. 2011, the reference publication of BNCI dataset 002-2016; its description (read 2026-10-17) gives 18 participants,
+  three blocks of about 45 min, 59 EEG channels referenced to the nose, EOG, tibialis anterior EMG and driving variables
+  (lead-vehicle brake, distance, pedals) at 200 Hz, with event markers car_brake, car_hold, react_emg and car_collision.
+  The original article was not read; the inter-event interval and the ERP details therefore come from secondary sources
+  and should be checked against it. Marker basis: a later replication (Liang et al. 2023, BioMed Eng OnLine 22:65, doi 10.1186/s12938-023-01129-4,
+  full text read; lead vehicle braking every 15-60 s, five 30-min sessions) describes a P300-like parieto-occipital positivity
+  attributed to the brake-light event and a fronto-central negative shift from about -400 ms before braking (movement preparation);
+  these are mapped to MK.P3b and MK.MRCP. No ERD analysis was reported there. Kim et al. 2014 (J Neural Eng, doi 10.1088/1741-2560/12/1/016001) extended the paradigm
+  to several braking situations (different triggering events, soft versus sharp braking); if those situations are adopted
+  as a fixed class set this would be a candidate -002 (criterion 1). A real-road version by the Berlin group exists but
+  was not retrieved this sprint. bibliography confirmed (Crossref, 2026-10-17)'
+status: draft
+contributors:
+- curator_b

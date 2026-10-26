@@ -1,0 +1,68 @@
+schema_version: "0.2"
+id: PER-MUSAT-002
+class: PER-MUSAT
+name:
+  en: Auditory attention decoding of a target instrument in continuous polyphonic music
+  zh: 连续复调音乐中目标乐器的听觉注意解码
+aliases:
+- MAD-EEG
+- music auditory attention decoding
+- instrument attention decoding
+family: perception
+bci_category:
+- reactive
+recording_modality:
+- EEG
+stimulus_modality:
+- auditory
+markers:
+- MK.speech_envelope_tracking
+description:
+  en: >-
+    Listeners hear polyphonic music mixtures without inserted deviants and attend to one named instrument. The attended
+    instrument is decoded from the continuous EEG, for example by reconstructing its audio envelope from the EEG and
+    comparing the reconstruction with the envelopes of all instruments in the mixture.
+  zh: 被试聆听不含插入偏差的复调音乐混音，注意其中指定的一件乐器。被注意的乐器从连续脑电中解码，例如由脑电重建其音频包络，并与混音中各乐器的包络比较。
+trial_structure:
+  phases:
+  - name: cue
+    note: target instrument indicated before each excerpt (method not read in the source)
+  - name: music excerpt
+    note: excerpt durations not read in the source
+  conditions:
+  - attended instrument
+  - unattended instrument(s)
+protocol:
+  n_classes: 2
+  classes:
+  - attended instrument
+  - unattended instrument(s)
+  cue: target instrument indicated before each polyphonic excerpt
+  stimulus_coding: no inserted deviants; decoding from the correlation of EEG with each instrument's audio envelope (stimulus
+    reconstruction)
+  paradigm_timing: continuous
+  feedback: none
+  distinguishing: >-
+    准则 2：刺激类型由含插入偏差乐句的多声部 oddball（PER-MUSAT-001）变为不含偏差的连续复调音乐，读出由偏差锁时 ERP 变为对乐器音频包络的追踪（Cantisani et al. 2019, MAD-EEG）。
+first_source:
+  citation: >-
+    Cantisani G, Trégoat G, Essid S, Richard G. MAD-EEG: an EEG dataset for decoding auditory attention to a target instrument
+    in polyphonic music. Proceedings of the Workshop on Speech, Music and Mind (SMM 2019). 2019:51-55.
+  doi: 10.21437/smm.2019-11
+  year: 2019
+  verified: false
+datasets:
+- name: 'MAD-EEG: an EEG dataset for decoding auditory attention to a target instrument in polyphonic music (Zenodo, v1.0.0)'
+  url: https://zenodo.org/record/4537751
+  subjects: 8
+interop:
+  bids_task: musicattention
+notes: >-
+  [curator_a sprint 7, 2026-10-17] Configuration taken from the OpenAlex record of the workshop paper and the Zenodo record
+  (20-channel EEG, 8 participants attending to one instrument in a music mixture); cue method and excerpt durations were
+  not read and are left open. Earliest continuous-music configuration found in this sprint; earlier work may exist.
+  MK.speech_envelope_tracking is the closest registry marker (envelope tracking of speech); a music-envelope generalisation
+  is requested in marker_requests.csv. bibliography confirmed (OpenAlex, 2026-10-17).
+status: draft
+contributors:
+- curator_a

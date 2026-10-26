@@ -50,7 +50,16 @@ interop:
 notes: 'Lead: MOABB dataset page BNCI2015_009 (S2A08 [=R1270]): 75 ms band-pass noise, 8 loudspeakers at 45 degree spacing,
   21 subjects. The 2011 paper is the dataset reference; an earlier AMUSE paper by the same group probably introduced the configuration
   (not seen; first_source provisional). Earlier auditory P300 BCIs exist (to be checked). New in sprint 2. [curator_e sprint
-  3, 2026-10-05] bibliography confirmed (Crossref, 2026-10-05).'
+  3, 2026-10-05] bibliography confirmed (Crossref, 2026-10-05). [curator_a sprint 7, 2026-10-17] Checked the earlier paper
+  by the same group, Schreuder M, Blankertz B, Tangermann M. A new auditory multi-class brain-computer interface paradigm:
+  spatial hearing as an informative cue. PLoS ONE. 2010;5(4):e9813. doi:10.1371/journal.pone.0009813 (Crossref record; full
+  text on the publisher''s site). It introduces the spatial auditory paradigm but was tested offline only ("So far, it has
+  only been tested offline"), with ten healthy subjects; its BCI conditions used the five frontal of eight loudspeakers with
+  a distinct 40 ms cue per speaker (noise with tone overlay) at 175 or 300 ms ISI, and a single-speaker control condition.
+  Because this configuration has no online feedback (criterion 4: none vs discrete), it is not the same configuration as
+  this file, and first_source stays with the 2011 online paper; the 2010 paper is recorded here as the earliest publication
+  of the spatial auditory P300 approach and could become the first_source of a separate offline concrete paradigm or of
+  the class if the maintainer prefers (D-062).'
 status: draft
 contributors:
 - curator_a

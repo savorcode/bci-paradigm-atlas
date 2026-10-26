@@ -1,0 +1,259 @@
+# Sprint 7, group Q3: new paradigm classes for the maintainer to merge into paradigms/_classes.yaml.
+# Curators: curator_c (ERR-PROTO, CTL-NEGP, CTL-BEADS), curator_d (MEM-VTWM, LAN-DISC), curator_e (EMO-CREAC, EMO-FRUST,
+# SOC-DECEP), 2026-10-17.
+# 冲刺 7 Q3 组新增范式类，待维护者合入 paradigms/_classes.yaml。
+# All eight provisional classes from the gap list were created; no duplicates found (see worklog.md).
+- id: EMO-CREAC
+  name:
+    en: Drug and food cue reactivity
+    zh: 成瘾物质与食物线索反应
+  family: emotion
+  description:
+    en: Participants who use a drug (or, in food versions, hungry or dieting participants) view cues related to the drug
+      or to palatable food and matched neutral cues, and rate their craving. Cue-evoked responses in striatal, limbic and
+      prefrontal regions track reported craving, and the P3 and late positive potential are larger for the craved cues. The
+      cue response is also the target signal of craving neurofeedback.
+    zh: 物质使用者（食物版本为饥饿或节食被试）观看与成瘾物质或美味食物相关的线索以及匹配的中性线索，并评定渴求。线索在纹状体、边缘系统和前额叶引起的反应与自评渴求相关，渴求线索诱发的 P3 和晚期正电位更大。线索反应也是渴求神经反馈的目标信号。
+  markers:
+  - MK.BOLD_striatum_reward
+  - MK.LPP
+  - MK.P3b
+  first_source:
+    citation: 'Grant S, London ED, Newlin DB, Villemagne VL, Liu X, Contoreggi C, Phillips RL, Kimes AS, Margolin A. Activation
+      of memory circuits during cue-elicited cocaine craving. Proc Natl Acad Sci U S A. 1996;93(21):12040-12045.'
+    doi: 10.1073/pnas.93.21.12040
+    year: 1996
+    verified: false
+  aliases:
+  - cue reactivity
+  - cue-reactivity paradigm
+  - drug cue exposure
+  - cue-elicited craving
+  - food cue reactivity
+  - craving neurofeedback
+  notes: '[curator_e sprint 7, 2026-10-17] Concrete paradigms: EMO-CREAC-001 (open-loop drug cue exposure), EMO-CREAC-002
+    (real-time fMRI craving neurofeedback, Li et al. 2013, doi:10.1111/j.1369-1600.2012.00449.x). first_source is the
+    earliest neural study seen; origin not established (weak_origin): behavioural cue-reactivity studies are older (Carter
+    & Tiffany 1999 meta-analysis, doi:10.1046/j.1360-0443.1999.9433273.x). Differs from EMO-IAPS: cues are defined by
+    their link to an individual''s craving, not by normative affective ratings. Food-cue picture viewing (OpenfMRI ds000157)
+    is a candidate further concrete paradigm. bibliography confirmed (Crossref, 2026-10-17)'
+  status: draft
+  contributors:
+  - curator_e
+- id: EMO-FRUST
+  name:
+    en: Frustration induction
+    zh: 挫折诱发
+  family: emotion
+  description:
+    en: An expected goal is blocked, for example by withholding an anticipated reward or by making a game ignore the player's
+      input, and brain activity in the frustrating condition is compared with the unblocked condition. Reward omission activates
+      the right anterior insula and ventral prefrontal cortex; in EEG, frustration changes affective band-power features
+      and degrades movement-related BCI features.
+    zh: 阻断预期目标，如扣下预期的奖励，或让游戏忽略玩家的输入，比较挫折条件与未受阻条件下的脑活动。奖励缺失激活右侧前脑岛和腹侧前额叶；在脑电上，挫折改变情绪相关频段功率特征，并使运动相关脑机接口特征变差。
+  markers:
+  - MK.BOLD_anterior_insula
+  - MK.affective_band_power
+  first_source:
+    citation: Abler B, Walter H, Erk S. Neural correlates of frustration. NeuroReport. 2005;16(7):669-672.
+    doi: 10.1097/00001756-200505120-00003
+    year: 2005
+    verified: false
+  aliases:
+  - frustration induction
+  - reward omission frustration
+  - frustrative nonreward
+  - Affective Pacman
+  - loss of control
+  notes: '[curator_e sprint 7, 2026-10-17] Concrete paradigms: EMO-FRUST-001 (omission of expected monetary reward, fMRI),
+    EMO-FRUST-002 (Affective Pacman with randomly ignored input, EEG; BNCI 007-2014 dataset; Reuderink et al. 2009, doi:10.1007/978-3-642-02315-6_23).
+    first_source is the earliest neuroimaging study seen; origin not established (weak_origin); behavioural frustration
+    manipulations are older. Differs from EMO-STRESS (social-evaluative stress) and EMO-MID (reward anticipation). bibliography
+    confirmed (OpenAlex, 2026-10-17)'
+  status: draft
+  contributors:
+  - curator_e
+- id: MEM-VTWM
+  name:
+    en: Vibrotactile frequency discrimination and working memory
+    zh: 振动触觉频率辨别与工作记忆
+  family: memory
+  description:
+    en: Two flutter-range vibrotactile stimuli are delivered one after the other to a fingertip; the participant holds the
+      first frequency in working memory and judges whether the second is higher or lower. The task probes parametric (quantity)
+      working memory. Stimulation evokes steady-state SEPs in primary somatosensory cortex, retention engages ventrolateral
+      prefrontal cortex, and prefrontal beta power scales with the remembered frequency.
+    zh: 在指尖先后施加两个扑动范围的振动触觉刺激；被试在工作记忆中保持第一个频率，判断第二个更高还是更低。该任务考察参数（数量）工作记忆。刺激在初级体感皮层诱发稳态体感诱发电位，保持期涉及腹外侧前额叶，前额叶 β 功率随所记频率变化。
+  markers:
+  - MK.SSSEP
+  - MK.BOLD_frontoparietal
+  first_source:
+    citation: Preuschhof C, Heekeren HR, Taskin B, Schubert T, Villringer A. Neural correlates of vibrotactile working memory
+      in the human brain. J Neurosci. 2006;26(51):13231-13239.
+    doi: 10.1523/JNEUROSCI.2767-06.2006
+    year: 2006
+    verified: false
+  aliases:
+  - vibrotactile working memory
+  - flutter frequency discrimination
+  - two-interval vibrotactile frequency comparison
+  - parametric working memory task
+  notes: '[curator_d sprint 7, 2026-10-17] Concrete paradigm: MEM-VTWM-001. Animal origin (monkey single-unit studies of
+    the same task, not retrieved); first human neural study used as first_source (D-031). Key references: Spitzer et al.
+    2010 (doi:10.1523/JNEUROSCI.6041-09.2010, EEG beta), von Lautz et al. 2017 (doi:10.3389/fnhum.2017.00576, MEG). Marker
+    request: MK.parametric_prefrontal_beta. Differs from MEM-DMS (item recognition). bibliography confirmed (OpenAlex, 2026-10-17)'
+  status: draft
+  contributors:
+  - curator_d
+- id: SOC-DECEP
+  name:
+    en: Instructed deception (lie versus truth)
+    zh: 指令性欺骗（说谎与说真话）
+  family: social
+  description:
+    en: Participants answer questions about themselves or about facts and are instructed, trial by trial or by block, to
+      answer truthfully or to lie. Lying is slower and, compared with truth telling, recruits dorsolateral and ventrolateral
+      prefrontal cortex, anterior cingulate cortex, anterior insula and parietal cortex, consistent with added executive
+      control. The contrast is the act of deceiving, not recognition of concealed information.
+    zh: 被试回答关于自身或事实的问题，并按逐试次或逐组块的指令如实回答或说谎。说谎反应较慢；与说真话相比，说谎时背外侧和腹外侧前额叶、前扣带回、前脑岛及顶叶活动增强，提示额外的执行控制。对比的是欺骗行为本身，而不是对隐藏信息的再认。
+  markers:
+  - MK.BOLD_dlPFC
+  - MK.BOLD_dACC
+  - MK.BOLD_anterior_insula
+  first_source:
+    citation: Spence SA, Farrow TFD, Herford AE, Wilkinson ID, Zheng Y, Woodruff PWR. Behavioural and functional anatomical
+      correlates of deception in humans. NeuroReport. 2001;12(13):2849-2853.
+    doi: 10.1097/00001756-200109170-00019
+    year: 2001
+    verified: false
+  aliases:
+  - instructed deception
+  - instructed lying
+  - lie versus truth task
+  - deception fMRI
+  notes: '[curator_e sprint 7, 2026-10-17] Concrete paradigm: SOC-DECEP-001. Review: Christ et al. 2009 ALE meta-analysis
+    (doi:10.1093/cercor/bhn189). Boundary: MEM-CIT (P300 concealed information test, alias "ERP lie detection") probes
+    recognition of hidden knowledge and stays separate; SOC-TOM covers understanding of others'' deception. bibliography
+    confirmed (Crossref, 2026-10-17)'
+  status: draft
+  contributors:
+  - curator_e
+- id: ERR-PROTO
+  name:
+    en: Category learning (prototype distortion)
+    zh: 范畴学习（原型扭曲）
+  family: error
+  description:
+    en: Participants learn categories from exemplars that are distortions of an unseen prototype, such as random dot patterns,
+      either through trial-by-trial feedback or by exposure without feedback, and then classify new items, old items and
+      the prototype. Category members reduce posterior occipital BOLD activity (perceptual fluency) and increase anterior
+      frontal activity compared with non-members.
+    zh: 被试从未见过的原型经扭曲生成的样例（如随机点阵）中学习范畴，学习方式为逐试次反馈或无反馈接触，随后对新样例、旧样例和原型分类。与非成员相比，范畴成员使后部枕叶 BOLD 活动降低（知觉流畅性）、前额极活动增强。
+  markers:
+  - MK.BOLD_visual_cortex
+  first_source:
+    citation: Posner MI, Keele SW. On the genesis of abstract ideas. J Exp Psychol. 1968;77(3, Pt.1):353-363.
+    doi: 10.1037/h0025953
+    year: 1968
+    verified: false
+  aliases:
+  - prototype distortion task
+  - dot-pattern classification
+  - Posner-Keele task
+  - A/not-A prototype task
+  - category learning
+  notes: '[curator_c sprint 7, 2026-10-17] Concrete paradigms: ERR-PROTO-001 (multi-category feedback learning, Posner &
+    Keele 1968, behavioural origin), ERR-PROTO-002 (A/not-A judgement after exposure, Reber et al. 1998, doi:10.1073/pnas.95.2.747,
+    source of the marker). Differs from ERR-PCL (probabilistic cue-outcome learning). Family error chosen as in the gap
+    list; memory is an alternative for the maintainer. bibliography confirmed (Crossref, 2026-10-17)'
+  status: draft
+  contributors:
+  - curator_c
+- id: CTL-NEGP
+  name:
+    en: Negative priming
+    zh: 负启动
+  family: control
+  description:
+    en: In a prime display the participant selects a target and ignores a distractor; in the following probe display the
+      former distractor may become the target. Responding to a previously ignored object is slower than responding after
+      an unrelated prime, indexing inhibition of distractors that carries over between trials. Ignored-repetition probes
+      elicit an enhanced N2.
+    zh: 启动画面中被试选择目标、忽略干扰物；随后的探测画面中，原先的干扰物可能成为目标。对先前被忽略物体的反应比无关启动后更慢，反映跨试次延续的干扰抑制。忽略重复的探测刺激诱发增大的 N2。
+  markers:
+  - MK.N2_frontocentral
+  first_source:
+    citation: 'Tipper SP. The negative priming effect: inhibitory priming by ignored objects. Q J Exp Psychol A. 1985;37(4):571-590.'
+    doi: 10.1080/14640748508400920
+    year: 1985
+    verified: false
+  aliases:
+  - negative priming
+  - negative priming paradigm
+  - ignored repetition
+  - identity negative priming
+  notes: '[curator_c sprint 7, 2026-10-17] Concrete paradigm: CTL-NEGP-001. Review: Fox 1995 (doi:10.3758/BF03210958).
+    Marker evidence: Frings & Groh-Bordin 2007 (doi:10.1016/j.brainres.2007.07.093, enhanced N200). Differs from CTL-FLK
+    and CTL-STR (within-trial conflict). bibliography confirmed (Crossref, 2026-10-17)'
+  status: draft
+  contributors:
+  - curator_c
+- id: CTL-BEADS
+  name:
+    en: Information sampling before decision (beads task)
+    zh: 决策前信息采样（珠子任务）
+  family: control
+  description:
+    en: Evidence (coloured beads drawn from one of two jars with opposite colour ratios) is shown one item at a time, and
+      the participant decides when to stop sampling and commit to a jar. The number of draws to decision measures evidence
+      seeking and the jumping-to-conclusions bias. Decisions to commit, compared with decisions to sample, activate insula,
+      striatum, anterior cingulate and parietal cortex.
+    zh: 逐个呈现证据（从两个颜色比例相反的罐子之一中取出的彩色珠子），由被试决定何时停止采样并判定罐子。决定前的抽取次数衡量证据寻求和"过早下结论"偏差。与继续采样的决定相比，作出判定时脑岛、纹状体、前扣带回和顶叶活动增强。
+  markers:
+  - MK.BOLD_anterior_insula
+  - MK.BOLD_frontoparietal
+  first_source:
+    citation: Huq SF, Garety PA, Hemsley DR. Probabilistic judgements in deluded and non-deluded subjects. Q J Exp Psychol
+      A. 1988;40(4):801-812.
+    doi: 10.1080/14640748808402300
+    year: 1988
+    verified: false
+  aliases:
+  - beads task
+  - draws to decision
+  - jumping to conclusions task
+  - urn task
+  notes: '[curator_c sprint 7, 2026-10-17] Concrete paradigm: CTL-BEADS-001. Neural reference: Furl & Averbeck 2011 (doi:10.1523/JNEUROSCI.4236-11.2011).
+    Differs from CTL-PDM (evidence at a fixed rate, no control over sampling). bibliography confirmed (Crossref, 2026-10-17)'
+  status: draft
+  contributors:
+  - curator_c
+- id: LAN-DISC
+  name:
+    en: Discourse coherence
+    zh: 语篇连贯
+  family: language
+  description:
+    en: Multi-sentence texts are presented in which a critical word is coherent or incoherent with the preceding discourse
+      while remaining acceptable within its own sentence. Discourse-incoherent words elicit an N400 effect with the same
+      time course and distribution as sentence-level anomalies, showing that the wider context is integrated as fast as
+      the local sentence.
+    zh: 呈现由多句组成的语篇，其中关键词与前文语篇连贯或不连贯，但在本句之内仍可接受。语篇不连贯的词诱发 N400 效应，其时程与分布与句内异常相同，说明更大范围的语境与句内语境同样快速地被整合。
+  markers:
+  - MK.N400
+  first_source:
+    citation: 'van Berkum JJA, Hagoort P, Brown CM. Semantic integration in sentences and discourse: evidence from the N400.
+      J Cogn Neurosci. 1999;11(6):657-671.'
+    doi: 10.1162/089892999563724
+    year: 1999
+    verified: false
+  aliases:
+  - discourse coherence
+  - discourse congruence N400
+  - discourse-level semantic integration
+  notes: '[curator_d sprint 7, 2026-10-17] Concrete paradigm: LAN-DISC-001. Possible earlier sibling: St George, Mannes
+    & Hoffman 1994 (title-dependent paragraph coherence; not retrieved). Differs from LAN-N400 and LAN-SC (single-sentence
+    manipulations). bibliography confirmed (Crossref, 2026-10-17)'
+  status: draft
+  contributors:
+  - curator_d

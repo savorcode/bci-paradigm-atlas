@@ -1,0 +1,64 @@
+schema_version: "0.2"
+id: STM-TACEP-002
+class: STM-TACEP
+name:
+  en: Air-jet (air-puff) tactile evoked potentials
+  zh: 气流喷射（气压脉冲）触觉诱发电位
+aliases:
+- air-puff stimulation
+- air-jet stimulation
+- pneumatic tactile stimulation
+family: stimulation
+bci_category:
+- none
+recording_modality:
+- EEG
+- MEG
+- fMRI
+stimulus_modality:
+- somatosensory
+markers:
+- MK.N140_somatosensory
+description:
+  en: >-
+    Short pulses of compressed air are delivered through a nozzle or a pneumatic membrane to the skin of the face, hand or
+    other body sites, so that touch is applied without a metal probe or current near the electrodes. Averaged cortical
+    responses are recorded from the scalp; because the device has no electrical or magnetic parts at the skin, the same
+    stimulation is used in MEG and fMRI for somatotopic mapping.
+  zh: 经喷嘴或气动膜向面部、手部或其他身体部位的皮肤施加短暂压缩空气脉冲，在电极附近没有金属探头和电流的情况下施加触觉。记录头皮平均皮层响应；由于皮肤处的装置不含电磁部件，同样的刺激也用于 MEG 和 fMRI 的躯体定位。
+trial_structure:
+  phases:
+  - name: air pulse
+    note: pulse duration and pressure not read in the source
+  - name: inter-stimulus interval
+    note: not read in the source
+  typical_trials: several hundred pulses per site, averaged
+  conditions:
+  - air-jet stimulation (face or body site)
+protocol:
+  n_classes: 1
+  classes:
+  - air-jet tactile pulse
+  cue: compressed-air pulse on the skin
+  stimulus_coding: repeated brief pneumatic stimuli, response averaged
+  paradigm_timing: synchronous
+  feedback: none
+  distinguishing: >-
+    准则 2：刺激类型由电磁机械叩击（STM-TACEP-001）变为压缩空气喷射（无接触探头），可用于面部及 MEG/fMRI 环境（Schieppati & Ducati 1984）。
+first_source:
+  citation: >-
+    Schieppati M, Ducati A. Short-latency cortical potentials evoked by tactile air-jet stimulation of body and face in man.
+    Electroencephalography and Clinical Neurophysiology. 1984;58(5):418-425.
+  doi: 10.1016/0013-4694(84)90138-x
+  year: 1984
+  verified: false
+interop:
+  bids_task: tactile
+notes: >-
+  [curator_b sprint 7, 2026-10-17] Earliest air-jet record found (Crossref title search). Often-cited later work on a
+  high-speed air-puff stimulator (Hashimoto 1987) could not be matched to a Crossref record and is not cited. Stimulus
+  parameters were not read. The fMRI/MEG use of pneumatic stimulation is stated as general practice and still needs a
+  reference. bibliography confirmed (Crossref, 2026-10-17).
+status: draft
+contributors:
+- curator_b

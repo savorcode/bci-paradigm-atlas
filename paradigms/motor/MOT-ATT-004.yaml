@@ -1,0 +1,90 @@
+schema_version: '0.2'
+id: MOT-ATT-004
+class: MOT-ATT
+name:
+  en: Brain-spine interface for walking (attempted leg movements drive epidural spinal cord stimulation)
+  zh: 脑–脊髓接口行走（尝试腿部运动驱动硬膜外脊髓刺激）
+aliases:
+- brain-spine interface
+- BSI
+- digital bridge
+family: motor
+bci_category:
+- active
+recording_modality:
+- ECoG
+stimulus_modality:
+- motor_execution
+- electrical_stimulation
+markers:
+- MK.SMR_ERD
+description:
+  en: >-
+    A participant with chronic incomplete cervical spinal cord injury carries two epidural ECoG implants over the left and
+    right sensorimotor cortex. The intention to move the hip, knee or ankle of either leg is decoded continuously from
+    time-frequency features of the cortical signals, and the decoded joint and amplitude modulate epidural electrical
+    stimulation of the lumbosacral spinal cord through a paddle lead, so that the attempted movement is executed by the
+    stimulated legs. The decoder is first calibrated on cued attempted joint movements while seated and is then used to stand,
+    walk, climb stairs and cross complex terrain.
+  zh: >-
+    慢性不完全性颈髓损伤被试在左右感觉运动皮层上方各植入一个硬膜外 ECoG 装置。从皮层信号的时频特征中连续解码其移动任一侧髋、膝或踝关节的意图，
+    解码出的关节与幅度经桨状电极调制腰骶脊髓的硬膜外电刺激，使尝试的动作由受刺激的下肢完成。解码器先在坐姿下以提示性尝试关节运动校准，之后用于站立、行走、上楼梯和通过复杂地形。
+trial_structure:
+  phases:
+  - name: calibration
+    note: cued attempted hip, knee and ankle movements of each leg while seated, followed by online adaptive calibration
+  - name: online control
+    duration_ms: continuous
+    note: predictions every 100 ms; stimulation commands sent to the pulse generator every 300 ms
+  conditions:
+  - rest
+  - left hip
+  - left knee
+  - left ankle
+  - right hip
+  - right knee
+  - right ankle
+protocol:
+  n_classes: 7
+  classes:
+  - rest
+  - left hip
+  - left knee
+  - left ankle
+  - right hip
+  - right knee
+  - right ankle
+  cue: cued attempted joint movements for calibration; self-initiated attempts during use
+  stimulus_coding: decoded joint selects the spinal stimulation program; decoded amplitude scales stimulation amplitude
+  paradigm_timing: continuous
+  feedback: continuous
+  distinguishing: >-
+    Criteria 1, 3 and 4 vs MOT-ATT-001: seven lower-limb joint states (rest plus hip, knee and ankle of each leg) instead of
+    attempted vs passive foot movement (criterion 1); continuous decoding instead of cue-paced trials (criterion 3); continuous
+    closed-loop control of epidural spinal cord stimulation that produces the attempted movement, instead of no feedback
+    (criterion 4). Vs MOT-ATT-003: criteria 1, 3, 4 (lower-limb joints, continuous decoding, stimulation-produced movement
+    instead of an icon). The spinal stimulation is the effector of the interface, not a stimulation-evoked brain response,
+    so the configuration stays in the MOT-ATT class.
+first_source:
+  citation: >-
+    Lorach H, Galvez A, Spagnolo V, et al. Walking naturally after spinal cord injury using a brain–spine interface. Nature.
+    2023;618(7963):126-133.
+  doi: 10.1038/s41586-023-06094-5
+  year: 2023
+  verified: false
+interop:
+  bids_task: attemptedmovement
+notes: >-
+  Lorach et al. 2023 (Crossref record). Configuration details from the publisher's full text: two 64-electrode implants
+  placed epidurally over the sensorimotor cortex (32 contacts per implant used), wavelet time-frequency features in bands up
+  to 200 Hz with movement information in the beta and gamma bands, a seven-state gated mixture-of-experts decoder, cued
+  attempted movements for calibration (some decoder updates also used motor imagery), stimulation through a 16-electrode
+  paddle lead over the lumbosacral dorsal root entry zones; one participant (C5/C6 incomplete injury). MK.SMR_ERD is the
+  class marker matching the beta-band information; the gamma-band information corresponds to MK.high_gamma, which is not
+  in the MOT-ATT class markers: proposed for addition to the class by the maintainer (class markers must include those of
+  each concrete paradigm). Replaces the provisional class STM-SCS (D-079). Neurorehabilitation with the interface improved
+  walking with the interface switched off (outcome, not part of the protocol). No public dataset verified.
+  [curator_b sprint 7, 2026-10-17]
+status: draft
+contributors:
+- curator_b

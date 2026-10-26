@@ -1,0 +1,85 @@
+schema_version: '0.2'
+id: MOT-SWAL-002
+class: MOT-SWAL
+name:
+  en: Cued motor imagery of swallowing versus idle
+  zh: 提示性吞咽运动想象（对比空闲）
+aliases:
+- motor imagery of swallow
+- MI-SW
+- swallowing imagery BCI
+family: motor
+bci_category:
+- active
+recording_modality:
+- EEG
+stimulus_modality:
+- mental_imagery
+- visual
+- auditory
+markers:
+- MK.SMR_ERD
+description:
+  en: After a warning tone and a fixation cross, an animated character either swallows (cue to imagine swallowing) or a filled
+    circle appears (cue to stay idle), and the participant imagines swallowing for 12 s without moving, or rests. Single-trial
+    EEG of the imagery period is classified against idle trials; the paradigm was developed for BCI-based dysphagia rehabilitation
+    after stroke, with tongue-protrusion imagery as a companion task.
+  zh: 提示音和注视十字之后，屏幕上的动画人物做吞咽动作（提示想象吞咽），或出现实心圆（提示保持空闲）；被试在 12 s 内不动地想象吞咽或保持静息。将想象期的单试次脑电与空闲试次分类；该范式为卒中后吞咽障碍的脑机接口康复而设计，并以伸舌想象作为配套任务。
+trial_structure:
+  phases:
+  - name: rest (progress bar)
+  - name: warning tone
+    duration_ms: 1000
+  - name: preparation (fixation cross)
+    duration_ms: 2000
+  - name: visual cue (animated swallow or circle)
+    duration_ms: 3000
+  - name: imagery or idle
+    duration_ms: 12000
+  - name: rest
+    duration_ms: 6000
+  typical_trials: 40 imagery and 40 idle trials per run; 2 runs per session
+  conditions:
+  - motor imagery of swallow
+  - idle
+protocol:
+  n_classes: 2
+  classes:
+  - motor imagery of swallowing
+  - idle
+  cue: animated character swallowing (imagery) or filled circle (idle), preceded by a tone and fixation cross
+  stimulus_coding: animated action cue
+  paradigm_timing: synchronous
+  feedback: none
+  distinguishing: 准则 1：类别集为吞咽想象/空闲，不同于 MOT-SWAL-001 的实际吞咽/静息；准则 2：提示为动画人物动作而非吞咽节律提示，任务为运动想象（Yang et al. 2014）。
+first_source:
+  citation: Yang H, Guan C, Chua KSG, Chok SS, Wang CC, Soon PK, Tang CKY, Ang KK. Detection of motor imagery of swallow
+    EEG signals based on the dual-tree complex wavelet transform and adaptive model selection. Journal of Neural Engineering.
+    2014;11(3):035016.
+  doi: 10.1088/1741-2560/11/3/035016
+  year: 2014
+  verified: false
+variants:
+- name: Motor imagery of tongue protrusion versus idle (companion task)
+  source:
+    citation: Yang H, Guan C, Chua KSG, Chok SS, Wang CC, Soon PK, Tang CKY, Ang KK. Detection of motor imagery of swallow
+      EEG signals based on the dual-tree complex wavelet transform and adaptive model selection. Journal of Neural Engineering.
+      2014;11(3):035016.
+    doi: 10.1088/1741-2560/11/3/035016
+    year: 2014
+    verified: false
+  note: Run in the same study with the same timing; tongue protrusion is an orofacial action rather than swallowing, so it
+    is recorded here only as a companion condition. If adopted as its own protocol it would need a number by criterion 1.
+interop:
+  bids_task: swallowimagery
+notes: '[curator_b sprint 7, 2026-10-17] Second concrete paradigm of MOT-SWAL. Protocol read from the authors'' full text
+  of Yang et al. 2014: 10 healthy participants (3 sessions) and one patient with severe dysphagia after brainstem haemorrhage;
+  34-channel EEG at 250 Hz with submental and infrahyoid EMG; dual-tree complex wavelet features and a linear SVM; mean
+  cross-validated accuracy 70.9 % (swallow imagery vs idle) in healthy participants and 66.4 % in the patient. The classifier
+  used wavelet power and phase features rather than an ERD analysis, so MK.SMR_ERD is the closest registry marker, not
+  a reported finding. The same group reported a conference version in 2012 (IEEE WCCI), and an fNIRS study of executed
+  and imagined swallowing (Kober & Wood 2014, NeuroImage) was found by web search but its record could not be retrieved
+  this sprint; priority for imagined swallowing should be checked against both. bibliography confirmed (Crossref, 2026-10-17)'
+status: draft
+contributors:
+- curator_b

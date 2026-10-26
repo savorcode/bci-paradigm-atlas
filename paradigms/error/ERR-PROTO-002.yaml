@@ -1,0 +1,61 @@
+schema_version: '0.2'
+id: ERR-PROTO-002
+class: ERR-PROTO
+name:
+  en: A/not-A prototype category judgement after exposure without feedback
+  zh: 无反馈接触后的"A/非 A"原型范畴判断
+aliases:
+- A/not-A prototype task
+- dot-pattern category learning (fMRI)
+- implicit category learning
+family: error
+bci_category:
+- none
+recording_modality:
+- fMRI
+stimulus_modality:
+- visual
+markers:
+- MK.BOLD_visual_cortex
+description:
+  en: Participants first study a set of dot patterns that are all distortions of one prototype, with no mention of a category
+    and no feedback. They then judge new dot patterns as belonging or not belonging to the category. Category members, compared
+    with non-members, reduce activity in posterior occipital cortex and increase activity in anterior frontal and right inferior
+    frontal cortex.
+  zh: 被试先观看一组均由同一原型扭曲而成的点阵，既不提及范畴也不给反馈；随后判断新点阵是否属于该范畴。与非成员相比，范畴成员使后部枕叶皮层活动降低，前额极和右侧额下回活动增强。
+trial_structure:
+  phases:
+  - name: exposure
+    note: 40 distortions of a single prototype studied without feedback
+  - name: test pattern
+    note: new dot pattern
+  - name: yes/no category judgement
+  conditions:
+  - category member (prototype or distortion)
+  - non-member (random pattern)
+protocol:
+  n_classes: 2
+  classes:
+  - member of category A
+  - not A
+  cue: random dot patterns
+  stimulus_coding: distortions of one prototype versus unrelated random patterns
+  paradigm_timing: block
+  feedback: none
+  distinguishing: '与 ERR-PROTO-001（标准配置：多范畴、逐试次反馈学习）相比，只有一个范畴，无反馈观看后作"是/否属于"判断（准则 1：类别集 A/非 A；准则 4：无反馈）；测试项按以成员为主和以非成员为主的组块交替（准则 3）。'
+first_source:
+  citation: Reber PJ, Stark CEL, Squire LR. Cortical areas supporting category learning identified using functional MRI.
+    Proc Natl Acad Sci U S A. 1998;95(2):747-750.
+  doi: 10.1073/pnas.95.2.747
+  year: 1998
+  verified: false
+interop:
+  bids_task: prototypeanota
+notes: 'Reber et al. 1998 (Crossref record with abstract): 40 study distortions, then yes/no category judgements on new patterns
+  during fMRI, in blocks alternating mostly members and mostly non-members; posterior occipital (BA 17/18) decrease, bilateral
+  BA 10 and right BA 44/47 increase for category members. Earliest seen for this configuration; the behavioural A/not-A version
+  may be older (not searched). Durations not given in the abstract. [curator_c sprint 7, 2026-10-17] bibliography confirmed
+  (Crossref, 2026-10-17).'
+status: draft
+contributors:
+- curator_c

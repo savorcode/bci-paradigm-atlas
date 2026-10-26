@@ -75,6 +75,13 @@ terms:
   parent: CN.object_recognition
   cognitive_atlas: trm_4a3fd79d0a300 (face perception)
   notes: 中文释义（范式工厂）：对面孔结构的专门化加工，相对其他物体类别在枕颞区诱发更大的 N170
+- id: CN.scene_perception
+  en: Scene perception
+  zh: 场景知觉
+  definition: Visual processing of places and scenes, including their spatial layout and navigational affordances, as distinct
+    from the recognition of discrete objects.
+  parent: CN.perception
+  notes: No Cognitive Atlas concept found under 'scene perception', 'scene recognition', 'place recognition' or 'scene'.
 - id: CN.auditory_change
   en: Auditory change detection
   zh: 听觉变化检测
@@ -257,6 +264,14 @@ terms:
   definition: Processing of touch, proprioception, temperature and pain from the body.
   parent: CN.perception
   cognitive_atlas: trm_4a3fd79d0b160 (somatosensation)
+- id: CN.vestibular_perception
+  en: Vestibular perception
+  zh: 前庭知觉
+  definition: Processing of head motion, orientation and gravity signalled by the vestibular organs, including vestibular
+    contributions to self-motion perception.
+  parent: CN.perception
+  notes: No Cognitive Atlas concept found under 'vestibular perception', 'vestibular sense', 'vestibular processing' or 'vestibular
+    function'.
 - id: CN.chemosensation
   en: Chemosensation
   zh: 嗅觉与味觉
@@ -422,6 +437,12 @@ terms:
   definition: Generation of an auditory representation, such as a tune or voice, in the absence of sound.
   parent: CN.mental_imagery
   cognitive_atlas: trm_4a3fd79d09a6c (auditory imagery)
+- id: CN.olfactory_imagery
+  en: Olfactory imagery
+  zh: 嗅觉意象
+  definition: Generation of an odour representation in the absence of an odour stimulus.
+  parent: CN.mental_imagery
+  notes: No Cognitive Atlas concept found under 'olfactory imagery', 'odor imagery' or 'olfactory memory'.
 - id: CN.mental_arithmetic
   en: Mental arithmetic
   zh: 心算与心理操作

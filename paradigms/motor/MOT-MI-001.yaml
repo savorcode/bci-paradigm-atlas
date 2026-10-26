@@ -73,6 +73,16 @@ datasets:
 - name: Cho2017 (MOABB; left/right hand MI)
   url: https://moabb.neurotechx.com/docs/dataset_summary.html
   subjects: 52
+variants:
+- name: "Hybrid: SSVEP + motor imagery (SSR-SSVEP-001)"
+  source:
+    citation: Allison BZ, Brunner C, Kaiser V, et al. Toward a hybrid brain–computer interface based on imagined movement
+      and visual attention. J Neural Eng. 2010;7(2):026007.
+    doi: 10.1088/1741-2560/7/2/026007
+    year: 2010
+    verified: false
+  note: Cross-family hybrid marker (D-022), not a parameter variant. Imagined hand movement combined with attention to flickering
+    visual stimuli; details beyond the title and bibliographic record were not read.
 interop:
   bids_task: motorimagery
 notes: >-
@@ -85,7 +95,7 @@ notes: >-
   -> MOT-MI-005. 'BNCI Horizon 2020 database' removed as a non-specific entry (individual BNCI sets are now attached to the
   matching concrete paradigms). Dataset 2b mixes screening and feedback sessions; only the screening sessions match this protocol
   (MOABB BNCI2014_004 page). [maintainer, sprint 2] Lead registered as R1291 (literature.csv). [maintainer, sprint 2] Lead
-  registered as R1293 (literature.csv). bibliography confirmed (OpenAlex, 2026-10-05)
+  registered as R1293 (literature.csv). bibliography confirmed (OpenAlex, 2026-10-05) [curator_b sprint 7, 2026-10-17] D-022 hybrid variant added (Allison et al. 2010, Crossref record); mirrored on SSR-SSVEP-001.
 status: draft
 contributors:
 - savorcode01

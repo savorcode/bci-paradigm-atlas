@@ -20,6 +20,7 @@ stimulus_modality:
 - visual
 markers:
 - MK.BOLD_frontoparietal
+- MK.P2p_numerical_distance
 description:
   en: Two digits from 1 to 9 are shown side by side and the participant presses the key on the side of the larger digit. Response
     time decreases as the numerical difference between the two digits increases, as for comparisons of physical magnitudes,
@@ -55,24 +56,14 @@ first_source:
   doi: 10.1038/2151519a0
   year: 1967
   verified: false
-variants:
-- name: Comparison of single numbers with a fixed standard (larger/smaller than 5), ERP
-  source:
-    citation: 'Dehaene S. The organization of brain activations in number comparison: event-related potentials and the additive-factors
-      method. Journal of Cognitive Neuroscience. 1996;8(1):47-68.'
-    doi: 10.1162/jocn.1996.8.1.47
-    year: 1996
-    verified: false
-  note: One number at a time compared with a fixed standard; ERP additive-factors design separating notation, distance and
-    response-hand effects. Same distance-effect logic.
 interop:
   bids_task: numbercomparison
 notes: Moyer & Landauer 1967 (Crossref) is the origin of the numerical distance effect. Phase durations are typical values;
   the 1967 paper's exact timing was not seen. Dehaene 1996 (Crossref) is the key ERP study (distance effect over parietal
-  electrodes; P2p not in the registry, see marker_requests.csv). MK.BOLD_frontoparietal is the closest registry marker for
-  intraparietal involvement; no fMRI study was retrieved in this sprint (a 2011 fMRI study of choice and distance effects
-  was found by web search but not retrieved as a record). Comparison with a fixed standard is kept as a variant; the maintainer
-  may prefer a new serial number (criterion 2). No public dataset verified. [curator_c sprint 6, 2026-10-16]
+  electrodes), now represented by MK.P2p_numerical_distance (added sprint 7, D-079). MK.BOLD_frontoparietal is kept for
+  the fMRI recordings, since Pinel et al. 2001 (NeuroImage 14(5):1013-1026, doi:10.1006/nimg.2001.0913, Crossref) report intraparietal
+  activation modulated by numerical distance in number comparison. Comparison with a fixed standard, formerly a variant here, is now
+  CTL-NUM-003 (criteria 1 and 2; D-079) [curator_c sprint 7, 2026-10-17]. No public dataset verified. [curator_c sprint 6, 2026-10-16; marker updated curator_m sprint 7, 2026-10-17]
 status: draft
 contributors:
 - curator_c

@@ -1,0 +1,92 @@
+schema_version: "0.2"
+id: PER-MUSAT-001
+class: PER-MUSAT
+name:
+  en: Multi-streamed musical oddball (attention to one instrument)
+  zh: 多声部音乐 oddball（注意其中一件乐器）
+aliases:
+- music BCI
+- multi-streamed oddball in polyphonic music
+- attention to instruments in polyphonic music
+- musical oddball BCI
+family: perception
+bci_category:
+- reactive
+recording_modality:
+- EEG
+stimulus_modality:
+- auditory
+markers:
+- MK.P3b
+description:
+  en: >-
+    Short clips of polyphonic music are played in which three instruments each repeat their own standard pattern and, at
+    random moments, play a deviant pattern (a bar-long variation); deviants of different instruments never overlap. A
+    visual cue names the target instrument, and the listener counts its deviants while ignoring the other two. ERPs to
+    deviants of the attended instrument (P300 and earlier auditory components) differ from those to unattended deviants,
+    so the attended instrument can be decoded from single-trial EEG.
+  zh: >-
+    播放多声部音乐短片：三件乐器各自重复其标准乐句，并在随机时刻演奏一小节长的偏差乐句，不同乐器的偏差互不重叠。屏幕提示目标乐器，被试数该乐器的偏差次数，忽略另外两件乐器。被注意乐器的偏差诱发的
+    ERP（P300 及更早的听觉成分）不同于未注意乐器的偏差，因此可用单试次脑电解码被注意的乐器。
+trial_structure:
+  phases:
+  - name: cue and preview
+    duration_ms: 2000
+    note: on-screen cue naming the target instrument, then its standard and deviant are played; the clip starts 2 s after
+      the fixation cross appears; the cue stays on screen
+  - name: music clip
+    duration_ms: 40000
+    note: 3-7 deviants per instrument, at random positions; tempo 120-130 BPM
+  - name: response
+    duration_ms: self-paced
+    note: number of target deviants typed on a keyboard
+  typical_trials: 210 clips in 10 blocks (mixed and solo blocks, each instrument cued for 7 clips per block)
+  conditions:
+  - attended instrument deviant
+  - unattended instrument deviant
+  - standard patterns
+protocol:
+  n_classes: 3
+  classes:
+  - instrument 1 attended (Synth-Pop bass / Jazz double bass)
+  - instrument 2 attended (Synth-Pop drums / Jazz piano)
+  - instrument 3 attended (Synth-Pop keyboard / Jazz flute)
+  cue: visual cue naming the target instrument, with an auditory preview of its standard and deviant
+  stimulus_coding: each instrument stream carries its own repeating standard and infrequent deviant patterns (multi-streamed
+    oddball); the target is identified from deviant-locked ERPs
+  paradigm_timing: synchronous
+  feedback: none
+  distinguishing: >-
+    标准配置（最早发表，即 first_source）：三件乐器的复调音乐短片（40 s），每件乐器各有标准与偏差乐句，视觉提示目标乐器，被试数目标偏差，离线解码被注意的乐器（Treder et al. 2014）。同类其他具体范式：PER-MUSAT-002
+    （无偏差的连续音乐，以刺激重建解码被注意乐器，准则 2）。
+first_source:
+  citation: >-
+    Treder MS, Purwins H, Miklody D, Sturm I, Blankertz B. Decoding auditory attention to instruments in polyphonic music
+    using single-trial EEG classification. Journal of Neural Engineering. 2014;11(2):026009.
+  doi: 10.1088/1741-2560/11/2/026009
+  year: 2014
+  verified: false
+variants:
+- name: Solo blocks (only the cued instrument plays)
+  source:
+    citation: >-
+      Treder MS, Purwins H, Miklody D, Sturm I, Blankertz B. Decoding auditory attention to instruments in polyphonic music
+      using single-trial EEG classification. Journal of Neural Engineering. 2014;11(2):026009.
+    doi: 10.1088/1741-2560/11/2/026009
+    year: 2014
+    verified: false
+  note: Control blocks within the same study; same instruments and deviants without the competing streams.
+interop:
+  bids_task: musicattention
+notes: >-
+  [curator_a sprint 7, 2026-10-17] New class from the sprint 7 gap list (BNCI catalogue). Closest existing class PER-AAD
+  (attention to concurrent speech streams, decoded from envelope tracking); PER-ODD is a single stream and PER-STREAM
+  measures segregation, not selective attention to an instrument. Protocol details (two music styles, 40 s clips, 3-7
+  deviants per instrument, visual cue with preview, counting task, 210 clips, 11 participants, mean offline accuracy 91%)
+  were taken from the authors' accepted manuscript in the Aalborg University repository and the Cardiff ORCA abstract.
+  No public dataset of this study was found (no data statement in the manuscript); the related public set MAD-EEG uses a
+  different configuration (PER-MUSAT-002). MK.P3b is the main marker; the early auditory components reported in the
+  abstract are not separately indexed. bibliography confirmed (Crossref, 2026-10-17).
+status: draft
+contributors:
+- curator_a

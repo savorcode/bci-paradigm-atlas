@@ -1,0 +1,81 @@
+schema_version: '0.2'
+id: CTL-BEADS-001
+class: CTL-BEADS
+name:
+  en: Beads task (draws to decision)
+  zh: 珠子任务（决策前抽取次数）
+aliases:
+- beads task
+- draws to decision
+- jumping to conclusions task
+- urn task
+- information sampling task
+family: control
+bci_category:
+- none
+recording_modality:
+- fMRI
+stimulus_modality:
+- visual
+markers:
+- MK.BOLD_anterior_insula
+- MK.BOLD_frontoparietal
+description:
+  en: Two jars contain beads of two colours in opposite proportions (for example 85:15 and 15:85). Beads are drawn one at
+    a time from a hidden jar and shown to the participant, who after each bead chooses either to see another bead or to commit
+    to which jar it comes from. The number of draws before deciding measures how much evidence is sought; few draws indicate
+    a jumping-to-conclusions bias. Choosing a jar rather than another draw activates insula, striatum, anterior cingulate
+    and parietal cortex, and parietal activity tracks the amount of evidence sought.
+  zh: 两个罐子装有两种颜色的珠子，比例相反（如 85:15 与 15:85）。从一个隐藏的罐子中逐颗取出珠子给被试看，每看一颗后被试选择再看一颗，或判定珠子来自哪个罐子。决定前的抽取次数衡量所寻求的证据量，次数少提示"过早下结论"偏差。与再抽一颗相比，判定罐子时脑岛、纹状体、前扣带回和顶叶活动增强，顶叶活动与寻求的证据量相关。
+trial_structure:
+  phases:
+  - name: bead presentation
+    note: one bead from the hidden jar; self-paced
+  - name: choice
+    note: draw another bead or decide on a jar
+  - name: decision
+    note: jar choice ends the sequence
+  typical_trials: one or a few sequences in clinical use; many sequences in imaging versions
+  conditions:
+  - draw decision
+  - jar decision
+protocol:
+  n_classes: 2
+  classes:
+  - jar A (mostly colour 1)
+  - jar B (mostly colour 2)
+  cue: sequential coloured beads drawn from a hidden jar
+  stimulus_coding: bead sequence sampled from the true jar; jar ratio sets evidence strength
+  paradigm_timing: asynchronous
+  feedback: none
+  distinguishing: '标准配置（最早发表，即 first_source）：两个比例相反的罐子，逐颗呈现珠子，被试自定何时停止抽取并判定罐子（draws to decision，Huq et al. 1988）。'
+first_source:
+  citation: Huq SF, Garety PA, Hemsley DR. Probabilistic judgements in deluded and non-deluded subjects. Q J Exp Psychol
+    A. 1988;40(4):801-812.
+  doi: 10.1080/14640748808402300
+  year: 1988
+  verified: false
+variants:
+- name: fMRI version with ratio and loss manipulation
+  source:
+    citation: Furl N, Averbeck BB. Parietal cortex and insula relate to evidence seeking relevant to reward-related decisions.
+      J Neurosci. 2011;31(48):17572-17582.
+    doi: 10.1523/JNEUROSCI.4236-11.2011
+    year: 2011
+    verified: false
+  note: Urn ratios 80/20 and 60/40 and potential losses for wrong decisions; sampling compared with a Bayesian ideal observer.
+    Jar choices versus draw choices activate insula, striatum, ACC and parietal cortex; parietal responses scale with evidence
+    sought.
+interop:
+  bids_task: beads
+notes: 'Huq et al. 1988 (Crossref record) introduced the draws-to-decision version used in delusion research; the 85:15 ratio
+  is the usual description of that study and was not checked in the full text. An earlier, related probability-inference task
+  is Phillips & Edwards 1966 (J Exp Psychol 72(3):346-354, LSE repository record, no DOI found), in which participants revise
+  probability estimates after a fixed sample rather than choosing when to stop; that precursor is noted, not used as origin.
+  Furl & Averbeck 2011 (Crossref record with abstract) supplies the neural markers; MK.BOLD_frontoparietal stands for the
+  parietal evidence-seeking response. A P3 to each draw (gap list) was not sourced. paradigm_timing asynchronous because the
+  participant decides when to stop sampling. Differs from CTL-PDM, where the evidence is presented at a fixed rate and the
+  participant does not control how much is sampled. [curator_c sprint 7, 2026-10-17] bibliography confirmed (Crossref, 2026-10-17).'
+status: draft
+contributors:
+- curator_c

@@ -1,0 +1,67 @@
+schema_version: '0.2'
+id: ERR-PROTO-001
+class: ERR-PROTO
+name:
+  en: Prototype-distortion category learning with feedback
+  zh: 有反馈的原型扭曲范畴学习
+aliases:
+- prototype distortion task
+- dot-pattern classification
+- dot pattern categorization
+- Posner-Keele task
+- category learning
+family: error
+bci_category:
+- none
+recording_modality:
+- fMRI
+stimulus_modality:
+- visual
+markers:
+- MK.BOLD_visual_cortex
+description:
+  en: Random dot patterns are generated as statistical distortions of a few prototype patterns, one prototype per category.
+    Participants learn to sort distortions into the categories with corrective feedback, without ever seeing the prototypes,
+    and are then tested on old distortions, new distortions and the unseen prototypes. The prototypes are classified as well
+    as or better than trained items, showing that an abstract category representation has been learned.
+  zh: 由少数原型点阵经统计扭曲生成随机点阵，每个范畴一个原型。被试在纠正性反馈下学习把扭曲样例归入各范畴，学习中从未见过原型；随后测试旧样例、新样例和未见过的原型。原型的分类成绩与训练样例相当或更好，说明被试习得了抽象的范畴表征。
+trial_structure:
+  phases:
+  - name: pattern presentation
+    note: one dot pattern per trial
+  - name: classification response
+  - name: feedback
+    note: correct category shown after each response during training
+  - name: transfer test
+    note: prototypes, old and new distortions classified without feedback
+  conditions:
+  - prototype
+  - old distortion
+  - new distortion
+protocol:
+  classes:
+  - category membership of each pattern (one class per prototype)
+  cue: random dot patterns distorted from category prototypes
+  stimulus_coding: statistical distortion levels of the prototype
+  paradigm_timing: synchronous
+  feedback: discrete
+  distinguishing: '标准配置（最早发表，即 first_source）：多个原型的扭曲点阵，逐试次纠正反馈下学习分类，再测原型与新旧样例（Posner & Keele 1968）。同类其他具体范式：ERR-PROTO-002
+    为无反馈观看单一范畴样例后作"是/否属于该范畴"判断（准则 1、4）。'
+first_source:
+  citation: Posner MI, Keele SW. On the genesis of abstract ideas. J Exp Psychol. 1968;77(3, Pt.1):353-363.
+  doi: 10.1037/h0025953
+  year: 1968
+  verified: false
+interop:
+  bids_task: prototype
+notes: 'Posner & Keele 1968 (Crossref record) is the classical origin of the dot-pattern prototype-distortion task; it is
+  behavioural (D-031 allows a behavioural first source). The training procedure (corrective feedback), the number of prototypes,
+  distortion levels and timing follow the usual account of the task and were not checked in the full text, so n_classes and phase durations are left empty. The neural marker comes from the A/not-A
+  configuration (ERR-PROTO-002, Reber et al. 1998): reduced posterior occipital BOLD for category members; no imaging study
+  of the feedback-training configuration was retrieved, and FRN or striatal markers for feedback-based category learning
+  (gap list) were not sourced in this round. Family: placed in error next to ERR-PCL (probabilistic classification learning)
+  as proposed by the gap analysis; maintainer may prefer memory. [curator_c sprint 7, 2026-10-17] bibliography confirmed
+  (Crossref, 2026-10-17).'
+status: draft
+contributors:
+- curator_c

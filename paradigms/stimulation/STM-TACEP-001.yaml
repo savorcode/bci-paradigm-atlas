@@ -1,0 +1,74 @@
+schema_version: "0.2"
+id: STM-TACEP-001
+class: STM-TACEP
+name:
+  en: Mechanical tap tactile evoked potentials
+  zh: 机械叩击触觉诱发电位
+aliases:
+- mechanical somatosensory evoked potentials
+- tactile evoked potentials
+- tap-evoked SEP
+family: stimulation
+bci_category:
+- none
+recording_modality:
+- EEG
+- MEG
+stimulus_modality:
+- somatosensory
+markers:
+- MK.N140_somatosensory
+description:
+  en: >-
+    Brief mechanical taps or skin indentations are delivered to a fingertip or other skin site by an electromechanical
+    stimulator, without electric current, while the participant rests. Averaged scalp responses show early components over
+    the contralateral somatosensory cortex and later components (P50, N140) that are smaller and later than the responses
+    to electrical nerve stimulation, because only cutaneous mechanoreceptors are activated.
+  zh: 以电磁机械刺激器在指尖或其他皮肤部位施加短暂叩击或皮肤压陷（不通电流），被试静息。平均头皮响应可见对侧体感皮层的早期成分及较晚的 P50、N140 等成分，因只激活皮肤机械感受器，其幅度较电刺激神经时小、潜伏期较长。
+trial_structure:
+  phases:
+  - name: mechanical tap
+    duration_ms: 1-20
+    note: approximate tap durations used by electromechanical stimulators; not read in the source
+  - name: inter-stimulus interval
+    duration_ms: 500-2000
+    note: approximate; the effect of presentation rate was studied by Pratt, Politoske & Starr 1980
+  typical_trials: several hundred taps per site, averaged
+  conditions:
+  - mechanical tap (finger or other skin site)
+protocol:
+  n_classes: 1
+  classes:
+  - mechanical tap
+  cue: electromechanical tap or indentation on the skin
+  stimulus_coding: repeated brief mechanical stimuli, response averaged
+  paradigm_timing: synchronous
+  feedback: none
+  distinguishing: >-
+    标准配置（最早发表，即 first_source）：以机械叩击刺激皮肤并平均头皮体感诱发响应（Larsson & Prevec 1970）。同类其他具体范式：STM-TACEP-002（气流喷射/气压脉冲刺激，准则 2）。
+first_source:
+  citation: >-
+    Larsson LE, Prevec TS. Somato-sensory response to mechanical stimulation as recorded in the human EEG.
+    Electroencephalography and Clinical Neurophysiology. 1970;28(2):162-172.
+  doi: 10.1016/0013-4694(70)90184-7
+  year: 1970
+  verified: false
+interop:
+  bids_task: tactile
+notes: >-
+  [curator_b sprint 7, 2026-10-17] New class from the sprint 7 gap list (Cognitive Atlas trm_4e5d07565b68e). Closest
+  existing classes: STM-SEP (electrical median-nerve stimulation, marker MK.SEP_N20), PER-TACT (attention to tactile
+  stimuli at one of several sites, MK.N140_somatosensory, MK.P3b), SSR-SSSEP (periodic vibration) and STM-VIB (tendon
+  vibration illusion). Kept as a separate class because the stimulus excites cutaneous mechanoreceptors without current
+  and the response profile differs (smaller, later early components); the same question as for PER-SMMN arises under
+  D-041 / D-060, and the maintainer may instead treat it as an STM-SEP concrete paradigm (criterion 2), see proposals.csv.
+  Larsson & Prevec 1970 is the earliest record found (title and bibliographic record only); earlier reports may exist.
+  Key references: Pratt, Politoske & Starr 1980 (effects of presentation rate on mechanically vs electrically evoked
+  potentials; doi:10.1016/0013-4694(80)90218-7; a 1979 Neurology abstract by the same group precedes it) and Kakigi &
+  Shibasaki 1984 (scalp topography of mechanically vs electrically evoked potentials; doi:10.1016/0168-5597(84)90019-4).
+  MK.N140_somatosensory is used as the closest marker; it is indexed for attention effects, and the early mechanical
+  components (P50) have no marker. Phase durations are approximate and need the full text. bibliography confirmed
+  (Crossref, 2026-10-17).
+status: draft
+contributors:
+- curator_b

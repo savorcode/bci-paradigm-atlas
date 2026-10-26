@@ -1,0 +1,77 @@
+schema_version: '0.2'
+id: MOT-KMI-001
+class: MOT-KMI
+name:
+  en: Imagined movement speed (fast versus slow) of one joint
+  zh: 单关节动作速度想象（快与慢）
+aliases:
+- imagined movement speed
+- speed motor imagery
+- kinematic motor imagery
+family: motor
+bci_category:
+- active
+recording_modality:
+- EEG
+stimulus_modality:
+- mental_imagery
+- visual
+markers:
+- MK.MRCP
+- MK.SMR_ERD
+description:
+  en: Participants repeatedly imagine the same movement of one joint (wrist extension in the first study) at either a fast
+    or a slow speed, in randomised order. The limb and the movement stay the same, so the classes differ only in the imagined
+    speed; single-trial EEG, mainly the movement-related cortical potential, is used to tell the two speeds apart.
+  zh: 被试以随机顺序反复想象同一关节的同一动作（首个研究为伸腕），速度为快或慢。肢体和动作不变，类别只在想象的速度上不同；用单试次脑电（主要是运动相关皮层电位）区分两种速度。
+trial_structure:
+  phases:
+  - name: cue
+    note: cue indicating the speed to imagine; timing not stated in the record that was read
+  - name: imagery
+    note: one imagined wrist extension at the cued speed
+  - name: rest
+  typical_trials: up to 100 per speed
+  conditions:
+  - fast imagined wrist extension
+  - slow imagined wrist extension
+protocol:
+  n_classes: 2
+  classes:
+  - fast
+  - slow
+  cue: cue indicating the speed of the imagined movement
+  stimulus_coding: same limb and movement; classes differ in imagined speed
+  paradigm_timing: synchronous
+  feedback: none
+  distinguishing: 标准配置（最早发表，即 first_source）：同一关节同一动作，仅想象速度（快/慢）不同的二分类，提示驱动，离线分析无反馈（Gu et al. 2009，ALS 患者伸腕）。同类 MOT-KMI-002 为力量负荷想象（准则 1）并有试次反馈（准则 4）。
+first_source:
+  citation: Gu Y, Farina D, Murguialday AR, Dremstrup K, Montoya P, Birbaumer N. Offline identification of imagined speed
+    of wrist movements in paralyzed ALS patients from single-trial EEG. Frontiers in Neuroscience. 2009;3:62.
+  doi: 10.3389/neuro.20.003.2009
+  year: 2009
+  verified: false
+variants:
+- name: Hand clenching at different speeds, imagined and executed (speed-ERD relation)
+  source:
+    citation: Yuan H, Perdoni C, He B. Relationship between speed and EEG activity during imagined and executed hand movements.
+      Journal of Neural Engineering. 2010;7(2):026001.
+    doi: 10.1088/1741-2560/7/2/026001
+    year: 2010
+    verified: false
+  note: Different effector (hand clench) and speeds; mu/beta ERD was related to the imagined speed. Kept as a parameter
+    variant because the class set (movement speeds of one effector) and cue-paced structure are the same; full text not read.
+interop:
+  bids_task: speedimagery
+notes: '[curator_b sprint 7, 2026-10-17] New class from the sprint 7 gap list (rank 5; found through the review by Tai et
+  al. 2024, Front Neurosci, doi 10.3389/fnins.2023.1345961). first_source: Gu et al. 2009 (four ALS patients imagined
+  wrist extensions at fast and slow speed, up to 100 repetitions per condition; speed was coded in the timing of the MRCP
+  peak negativity; mean single-trial misclassification about 30 %), read from the publisher full text page. The Crossref
+  and OpenAlex records list only the first author; the full author list and article number (62) were taken from the
+  publisher page. The same group published a study in healthy participants in the same year (Gu, Dremstrup & Farina,
+  Clin Neurophysiol 2009, doi 10.1016/j.clinph.2009.05.006); whether it used imagined or executed movements was not checked,
+  so priority between the two is open. Cue and imagery durations were not stated in what was read. bibliography confirmed
+  (Crossref, 2026-10-17)'
+status: draft
+contributors:
+- curator_b

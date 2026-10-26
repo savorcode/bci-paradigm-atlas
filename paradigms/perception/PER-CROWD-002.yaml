@@ -1,0 +1,74 @@
+schema_version: '0.2'
+id: PER-CROWD-002
+class: PER-CROWD
+name:
+  en: Vernier crowding with equal- vs longer-length flankers (high-density EEG)
+  zh: 等长与更长侧翼线的游标拥挤（高密度脑电）
+aliases:
+- vernier crowding
+- crowding and grouping
+- flanker length crowding
+family: perception
+bci_category:
+- none
+recording_modality:
+- EEG
+stimulus_modality:
+- visual
+markers:
+- MK.N1_visual
+description:
+  en: >-
+    A vernier (two vertical lines with a small horizontal offset) is presented in the periphery, flanked on both sides by
+    arrays of vertical lines, and the observer reports the offset direction. When the flanking lines have the same length as
+    the vernier, offset discrimination is strongly impaired; longer flanking lines reduce crowding because the vernier
+    segregates from the flankers. High-density EEG shows that the P1 follows the physical flanker length but not crowding,
+    whereas crowding appears as a suppression of the N1 after about 180 ms.
+  zh: >-
+    在周边视野呈现一个游标（两条有微小水平错位的竖线），其两侧为成列的竖线侧翼，被试报告错位方向。侧翼线与游标等长时，错位辨别严重受损；侧翼线更长时游标与侧翼分离，拥挤减弱。
+    高密度脑电显示 P1 随侧翼的物理长度变化而不反映拥挤，拥挤表现为约 180 ms 后 N1 的抑制。
+trial_structure:
+  phases:
+  - name: fixation
+    note: duration not taken from the source
+  - name: vernier with flanker arrays
+    note: brief peripheral presentation; exact duration and eccentricity to be checked
+  - name: response
+    duration_ms: self-paced
+    note: offset direction (left/right)
+  conditions:
+  - flankers of equal length to the vernier
+  - flankers longer than the vernier
+protocol:
+  n_classes: 2
+  classes:
+  - equal-length flankers
+  - longer flankers
+  cue: peripheral vernier flanked by arrays of vertical lines; offset discrimination
+  stimulus_coding: flanker length (grouping vs segregation of target and flankers)
+  paradigm_timing: synchronous
+  feedback: none
+  distinguishing: >-
+    Criteria 1 and 2 vs PER-CROWD-001: the target is a vernier whose offset is discriminated, with line flankers, instead of
+    a letter to identify among flanking letters (criterion 2, stimulus type); the contrasted conditions are flanker length
+    (grouping) instead of target alone vs flanked at varied spacing (criterion 1). D-057 re-check: this is not a parameter
+    change within the letter-crowding scheme, so it is kept as a separate serial number rather than a variant.
+first_source:
+  citation: >-
+    Chicherov V, Plomp G, Herzog MH. Neural correlates of visual crowding. NeuroImage. 2014;93:23-31.
+  doi: 10.1016/j.neuroimage.2014.02.021
+  year: 2014
+  verified: false
+interop:
+  bids_task: crowding
+notes: >-
+  Chicherov et al. 2014 (Crossref record; abstract read in a literature index: vernier flanked by arrays of vertical lines,
+  equal-length flankers impair offset discrimination, longer flankers reduce crowding, P1 tracks flanker length, crowding
+  as N1 suppression after 180 ms, inverse solutions in higher visual areas including lateral occipital cortex). Whether an
+  unflanked vernier condition and other flanker numbers were included, and the timing and eccentricity, were not seen and
+  are to be checked against the full text. Moved from a variant of PER-CROWD-001 (D-079). The vernier-flanker grouping
+  configuration was introduced in earlier behavioural work by the same group; that work was not retrieved in this sprint
+  and may become the first_source. No public dataset verified. [curator_a sprint 7, 2026-10-17]
+status: draft
+contributors:
+- curator_a

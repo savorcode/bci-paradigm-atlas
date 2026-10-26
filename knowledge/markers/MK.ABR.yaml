@@ -25,6 +25,27 @@ notes: 'First-pass skeleton by package A (2026-10-03). No generators/indexes yet
   and await source checking. Sprint 6 (2026-10-16, curator J): generators and indexes curated; every DOI checked against its
   Crossref or OpenAlex record (see curation/work/sprint6/markers_J/); verified: false pending full-text check.'
 generators:
+- region: BR.auditory_brainstem
+  evidence: B
+  sources:
+  - citation: 'Møller AR, Jannetta PJ, Møller MB. Neural generators of brainstem evoked potentials: results from human intracranial
+      recordings. Ann Otol Rhinol Laryngol. 1981;90(6):591-596.'
+    doi: 10.1177/000348948109000616
+    year: 1981
+    verified: false
+  - citation: 'Møller AR, Jannetta PJ. Interpretation of brainstem auditory evoked potentials: results from intracranial recordings
+      in humans. Scand Audiol. 1983;12(2):125-133.'
+    doi: 10.3109/01050398309076235
+    year: 1983
+    verified: false
+  - citation: Hashimoto I, Ishiyama Y, Yoshimoto T, et al. Brain-stem auditory-evoked potentials recorded directly from human
+      brain-stem and thalamus. Brain. 1981;104(4):841-859.
+    doi: 10.1093/brain/104.4.841
+    year: 1981
+    verified: false
+  note: 'method: intracranial; waves I-III arise from the auditory nerve and lower brainstem (cochlear nucleus, superior olivary
+    complex) in human intracranial recordings (Møller and Jannetta 1981, 1983) and direct brainstem recordings (Hashimoto
+    et al. 1981); the assignment of individual waves to nuclei differs between studies.'
 - region: BR.inferior_colliculus
   evidence: B
   sources:
@@ -45,7 +66,7 @@ generators:
     verified: false
   note: 'method: intracranial; wave V recorded near the lateral lemniscus / inferior colliculus in human intracranial recordings
     (Møller and Jannetta 1981, 1983) and in independent direct brainstem recordings (Hashimoto et al. 1981). Earlier waves
-    arise from auditory nerve, cochlear nucleus and superior olivary complex, which have no region id (see vocab requests).'
+    are mapped to BR.auditory_brainstem.'
 indexes:
 - construct: CN.early_auditory
   evidence: B

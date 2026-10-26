@@ -1446,8 +1446,7 @@ terms:
     zh: 以可变的刺激起始异步（SOA）呈现两个短暂刺激（同一或不同感觉通道：视觉、听觉、触觉），被试报告哪个先出现（时间顺序判断，TOJ）或二者是否同时（同时性判断，SJ）。由随 SOA 变化的心理测量函数得到最小可觉差和主观同时点；顺序阈值约
       20 ms 或更长。神经研究把知觉到的时间窗与后部 α 节律相联系，视听刺激对则与早期视听交互响应相联系。
   markers:
-  - MK.alpha_posterior
-  - MK.AV_interaction_ERP
+  - MK.prestimulus_alpha_phase
   first_source:
     citation: Hirsh IJ, Sherrick CE. Perceived order in different sense modalities. Journal of Experimental Psychology. 1961;62(5):423-432.
     doi: 10.1037/h0045283
@@ -1517,7 +1516,7 @@ terms:
     zh: 从不同方向呈现短暂声音（自由场中的扬声器或耳机渲染的虚拟声源），被试通过指向、报告位置或迫选判断报告感知到的方向。方位角定位依赖双耳时间差和强度差，仰角定位依赖频谱线索。神经研究显示后部听觉皮层参与声源位置加工；空间上分离的声源也被用作听觉脑机接口的刺激。
   markers:
   - MK.BOLD_auditory_cortex
-  - MK.N1_auditory
+  - MK.auditory_spatial_ERP
   first_source:
     citation: Lord Rayleigh. XII. On our perception of sound direction. The London, Edinburgh, and Dublin Philosophical Magazine
       and Journal of Science. 1907;13(74):214-232.
@@ -1536,6 +1535,237 @@ terms:
     (duplex theory, listening experiments on direction) taken as origin; the standard modern protocol is Makous & Middlebrooks
     1990. MK.BOLD_auditory_cortex after Zatorre et al. 2002; MK.N1_auditory provisional (no retrieved study linking N1 to
     localization judgements). [curator_a sprint 6, 2026-10-16]'
+  status: draft
+  contributors:
+  - curator_a
+- id: PER-GAZSEL
+  name:
+    en: Gaze-based selection intention (eye-brain-computer interface)
+    zh: 注视选择意图（眼–脑接口）
+  family: perception
+  description:
+    en: Participants control an interface with their gaze while EEG is recorded, and fixations used to issue commands are
+      compared with spontaneous fixations made while looking around. Fixation-related potentials of intentional fixations
+      show a slow parieto-occipital negativity, resembling an expectancy wave, which allows the intention to select to be
+      detected from the EEG and addresses the Midas touch problem of gaze interfaces.
+    zh: 被试用注视操作界面，同时记录脑电；比较用于发出指令的注视与四处浏览时的自发注视。有意注视的注视相关电位出现缓慢的顶枕负波（类似期待波），据此可从脑电检测选择意图，解决注视界面的"点石成金"问题。
+  markers:
+  - MK.FRP
+  - MK.CNV
+  first_source:
+    citation: 'Shishkin SL, Nuzhdin YO, Svirin EP, Trofimov AG, Fedorova AA, Kozyrskiy BL, Velichkovsky BM. EEG negativity
+      in fixations used for gaze-based control: toward converting intentions into actions with an eye-brain-computer interface.
+      Frontiers in Neuroscience. 2016;10:528.'
+    doi: 10.3389/fnins.2016.00528
+    year: 2016
+    verified: false
+  aliases:
+  - eye-brain-computer interface
+  - EBCI
+  - gaze-based selection intention
+  - Midas touch problem
+  - control-on versus control-off fixations
+  notes: '[curator_a sprint 7, 2026-10-17] New class from the sprint 7 gap list. Concrete paradigms: PER-GAZSEL-001 (gaze-controlled
+    game, intentional vs spontaneous fixations; Shishkin et al. 2016). Closest existing class: LAN-READ (fixation-related
+    potentials in reading). Marker MK.CNV is a stand-in for the expectancy negativity; a stimulus-preceding negativity marker
+    is requested. bibliography confirmed (OpenAlex, 2026-10-17)'
+  status: draft
+  contributors:
+  - curator_a
+- id: PER-IDEAF
+  name:
+    en: Inattentional deafness to auditory alarms under load
+    zh: 高负荷下的非注意聋（听觉警报漏报）
+  family: perception
+  description:
+    en: While participants perform a demanding visual or operational task, task-irrelevant or alarm sounds are presented and
+      their detection is tested. Under high load many sounds are missed; neural responses to the sounds, the early auditory
+      response around 100 ms and especially the later P3, are reduced, and the P3 to alarms predicts the miss rate, making
+      alarm detection a target for passive BCI in aviation and driving.
+    zh: 被试执行要求较高的视觉或操作任务时，呈现与任务无关的声音或警报声，并检测其是否被察觉。高负荷下许多声音被漏听；对声音的神经响应（约 100 ms 的早期听觉响应，尤其是之后的 P3）减弱，警报诱发的 P3 可预测漏报率，因而警报察觉成为航空与驾驶中被动式脑机接口的检测目标。
+  markers:
+  - MK.N1_auditory
+  - MK.P3b
+  first_source:
+    citation: Macdonald JSP, Lavie N. Visual perceptual load induces inattentional deafness. Attention, Perception, & Psychophysics.
+      2011;73(6):1780-1789.
+    doi: 10.3758/s13414-011-0144-4
+    year: 2011
+    verified: false
+  aliases:
+  - inattentional deafness
+  - load-induced deafness
+  - perceptual load and auditory awareness
+  - inattentional deafness to auditory alarms
+  - cockpit alarm detection
+  - dual-task auditory alarm oddball
+  notes: '[curator_a sprint 7, 2026-10-17] New class from the sprint 7 gap list. Concrete paradigms: PER-IDEAF-001 (critical-trial
+    tone under visual perceptual load; Macdonald & Lavie 2011, behavioural origin), PER-IDEAF-002 (auditory alarm oddball
+    in a simulated landing task; Giraudet et al. 2015). Closest existing classes: PER-IB (visual counterpart) and STA-PROBE
+    (ignored probes as a workload measure, without testing awareness). bibliography confirmed (Crossref, 2026-10-17)'
+  status: draft
+  contributors:
+  - curator_a
+- id: PER-MUSAT
+  name:
+    en: Selective attention to one instrument in polyphonic music
+    zh: 复调音乐中的乐器选择性注意
+  family: perception
+  description:
+    en: The listener hears polyphonic music with several concurrent instruments and attends to one instrument named by a cue.
+      The attended instrument is decoded from the EEG, either from ERPs (P300 and earlier auditory components) to deviant
+      patterns embedded in each instrument stream, or from tracking of the attended instrument's audio envelope in continuous
+      music. Used for music-based auditory BCIs.
+    zh: 被试聆听多件乐器同时演奏的复调音乐，注意提示所指定的一件乐器。被注意的乐器从脑电中解码：或依据各乐器声部中嵌入的偏差乐句所诱发的 ERP（P300 及更早的听觉成分），或依据连续音乐中对被注意乐器音频包络的追踪。用于基于音乐的听觉
+      BCI。
+  markers:
+  - MK.P3b
+  - MK.speech_envelope_tracking
+  first_source:
+    citation: Treder MS, Purwins H, Miklody D, Sturm I, Blankertz B. Decoding auditory attention to instruments in polyphonic
+      music using single-trial EEG classification. Journal of Neural Engineering. 2014;11(2):026009.
+    doi: 10.1088/1741-2560/11/2/026009
+    year: 2014
+    verified: false
+  aliases:
+  - music BCI
+  - multi-streamed oddball in polyphonic music
+  - attention to instruments in polyphonic music
+  - musical oddball BCI
+  - MAD-EEG
+  - music auditory attention decoding
+  notes: '[curator_a sprint 7, 2026-10-17] Concrete paradigms: PER-MUSAT-001 (multi-streamed musical oddball, Treder et al.
+    2014), PER-MUSAT-002 (continuous polyphonic music, envelope-based decoding, MAD-EEG, Cantisani et al. 2019). Closest existing
+    class PER-AAD (concurrent speech). MK.speech_envelope_tracking is a placeholder for music-envelope tracking (marker request).
+    bibliography confirmed (Crossref, 2026-10-17).'
+  status: draft
+  contributors:
+  - curator_a
+- id: PER-FBA
+  name:
+    en: Feature-based attention
+    zh: 基于特征的注意
+  family: perception
+  description:
+    en: Attention is directed to a visual feature (such as a colour or a direction of motion) rather than to a location. Two
+      feature-defined populations (for example red and blue dots, or two dot surfaces rotating in opposite directions) occupy
+      the same region and flicker at different frequencies; attending to one feature increases the SSVEP at that population's
+      frequency, which also allows a gaze-independent BCI with spatially overlapping targets.
+    zh: 注意指向某一视觉特征（如颜色或运动方向）而不是位置。两个以特征区分的刺激群（如红点与蓝点，或反向旋转的两个点面）占据同一区域并以不同频率闪烁；注意某一特征使该刺激群频率上的 SSVEP 增大，据此可构建目标在空间上重叠、不依赖注视的
+      BCI。
+  markers:
+  - MK.SSVEP
+  first_source:
+    citation: Müller MM, Andersen S, Trujillo NJ, Valdés-Sosa P, Malinowski P, Hillyard SA. Feature-selective attention enhances
+      color signals in early visual areas of the human brain. Proceedings of the National Academy of Sciences. 2006;103(38):14250-14254.
+    doi: 10.1073/pnas.0606668103
+    year: 2006
+    verified: false
+  aliases:
+  - feature-based attention
+  - feature-selective attention
+  - colour-selective attention
+  - overlapping dot fields SSVEP
+  - non-spatial visual attention BCI
+  notes: '[curator_a sprint 7, 2026-10-17] Concrete paradigms: PER-FBA-001 (overlapping red/blue dot fields, offline, Müller
+    et al. 2006), PER-FBA-002 (online BCI with two superimposed counter-rotating surfaces, Zhang et al. 2010). Closest existing
+    classes PER-CVA and PER-CUE (spatial attention). Origin to review: Saenz, Buracas & Boynton 2002 (fMRI, overlapping dot
+    fields, doi:10.1038/nn876) is earlier; animal origin not retrieved. bibliography confirmed (Crossref, 2026-10-17).'
+  status: draft
+  contributors:
+  - curator_a
+- id: PER-SURR
+  name:
+    en: Visual surround suppression
+    zh: 视觉周边抑制
+  family: perception
+  description:
+    en: The response to a central or foreground visual stimulus is measured with and without a surrounding pattern whose contrast
+      and orientation relation to the foreground are varied. A high-contrast surround reduces the perceived contrast of the
+      centre and the SSVEP at the foreground flicker frequency, most strongly when the surround matches the foreground, indexing
+      contextual suppression in visual cortex.
+    zh: 在有/无周边图案的条件下测量中央（前景）视觉刺激的响应，并改变周边对比度及其与前景的方向关系。高对比度周边降低中央的知觉对比度和前景闪烁频率上的 SSVEP，且周边与前景相同时降低最多，反映视皮层的情境抑制。
+  markers:
+  - MK.SSVEP
+  first_source:
+    citation: Chubb C, Sperling G, Solomon JA. Texture interactions determine perceived contrast. Proceedings of the National
+      Academy of Sciences. 1989;86(23):9631-9635.
+    doi: 10.1073/pnas.86.23.9631
+    year: 1989
+    verified: false
+  aliases:
+  - surround suppression
+  - contrast surround suppression
+  - centre-surround suppression
+  - surroundSupp
+  notes: '[curator_a sprint 7, 2026-10-17] Class origin behavioural (D-031): Chubb et al. 1989, perceived-contrast matching.
+    First neural recording: Vanegas MI, Blangero A, Kelly SP. Electrophysiological indices of surround suppression in humans.
+    J Neurophysiol 2015;113(4):1100-1109 (doi:10.1152/jn.00774.2014), the first source of PER-SURR-001. Public data: Healthy
+    Brain Network EEG (OpenNeuro ds005505 and later releases). bibliography confirmed (Crossref, 2026-10-17).'
+  status: draft
+  contributors:
+  - curator_a
+- id: PER-TONIC
+  name:
+    en: Tonic pain (cold pressor, sustained heat, capsaicin)
+    zh: 持续性疼痛（冷加压、持续热刺激、辣椒素）
+  family: perception
+  description:
+    en: A painful stimulus is maintained for minutes, for example by immersing a hand in ice water or by applying sustained
+      contact heat, and the ongoing pain is rated or simply endured. Brain activity is analysed as a sustained state (band
+      power such as prefrontal gamma and alpha suppression, or insular and cingulate BOLD) rather than as phasic evoked responses,
+      and is used for objective pain-state decoding.
+    zh: 疼痛刺激持续数分钟，如将手浸入冰水或施加持续的接触热刺激，被试对持续疼痛进行评分或只是忍受。脑活动作为持续状态分析（如前额 γ 功率与 α 抑制等频段功率，或岛叶、扣带回 BOLD），而不是作为阶段性诱发响应，用于客观的疼痛状态解码。
+  markers:
+  - MK.gamma_power
+  - MK.BOLD_anterior_insula
+  first_source:
+    citation: 'Hines EA, Brown GE. The cold pressor test for measuring the reactibility of the blood pressure: data concerning
+      571 normal and hypertensive subjects. American Heart Journal. 1936;11(1):1-9.'
+    doi: 10.1016/S0002-8703(36)90370-8
+    year: 1936
+    verified: false
+  aliases:
+  - tonic pain
+  - cold pressor test
+  - CPT
+  - ice-water immersion
+  - tonic heat pain
+  - sustained pain
+  notes: '[curator_a sprint 7, 2026-10-17] Concrete paradigms: PER-TONIC-001 (cold pressor, Hines & Brown 1936), PER-TONIC-002
+    (10 min tonic heat with continuous rating, Schulz et al. 2015). Origin is a cardiovascular test (D-031); first neural
+    recording not established. Closest existing classes PER-LEP (phasic) and SSR-NSSEP (periodic). Capsaicin configuration
+    not yet sourced. bibliography confirmed (OpenAlex, Crossref, 2026-10-17).'
+  status: draft
+  contributors:
+  - curator_a
+- id: PER-SMMN
+  name:
+    en: Somatosensory mismatch negativity
+    zh: 体感失匹配负波
+  family: perception
+  description:
+    en: Frequent standard tactile stimuli (vibrotactile or electrical) are interrupted by infrequent deviants that differ
+      in stimulation site, vibration frequency, duration or intensity, while the participant ignores them. Deviants elicit
+      a mismatch response over somatosensory and fronto-central areas at about 100-250 ms, the tactile counterpart of the
+      auditory and visual MMN.
+    zh: 在高频出现的标准触觉刺激（振动或电刺激）中插入在刺激部位、振动频率、时长或强度上不同的低频偏差刺激，被试忽略刺激。偏差刺激在体感区与额中央区约 100–250 ms 诱发失匹配响应，是听觉与视觉 MMN 的触觉对应物。
+  markers:
+  - MK.MMN
+  first_source:
+    citation: 'Kekoni J, Hämäläinen H, Saarinen M, Gröhn J, Reinikainen K, Lehtokoski A, Näätänen R. Rate effect and mismatch
+      responses in the somatosensory system: ERP-recordings in humans. Biological Psychology. 1997;46(2):125-142.'
+    doi: 10.1016/S0301-0511(97)05249-6
+    year: 1997
+    verified: false
+  aliases:
+  - somatosensory mismatch negativity
+  - sMMN
+  - tactile MMN
+  - vibrotactile oddball (passive)
+  notes: '[curator_a sprint 7, 2026-10-17] Concrete paradigm: PER-SMMN-001 (vibrotactile oddball, Kekoni et al. 1997). Separate
+    class by the PER-VMMN precedent (D-041); becomes a PER-MMN concrete paradigm if draft D-060 is applied instead (proposals.csv).
+    MK.MMN is a placeholder; MK.sMMN requested. bibliography confirmed (Crossref, 2026-10-17).'
   status: draft
   contributors:
   - curator_a
@@ -2279,6 +2509,142 @@ terms:
   contributors:
   - maintainer
   - curator_a
+- id: MOT-BRAKE
+  name:
+    en: Emergency braking intention during simulated driving
+    zh: 模拟驾驶紧急制动意图
+  family: motor
+  description:
+    en: Participants drive in a simulator behind a lead vehicle that brakes abruptly at unpredictable moments, and must brake
+      as fast as possible. EEG between the onset of the critical traffic event and the driver's pedal response, a P300-like
+      response to the event followed by a fronto-central movement-preparation negativity, is classified against normal driving
+      to detect the braking intention before the foot moves.
+    zh: 被试在模拟器中跟随前车行驶，前车在不可预测的时刻突然制动，被试须尽快制动。将关键交通事件出现至驾驶者踩踏板之间的脑电（对事件的类 P300 响应及随后的额中央运动准备负波）与正常驾驶时段分类，以便在脚部动作之前检测制动意图。
+  markers:
+  - MK.P3b
+  - MK.MRCP
+  first_source:
+    citation: Haufe S, Treder MS, Gugler MF, Sagebaum M, Curio G, Blankertz B. EEG potentials predict upcoming emergency brakings
+      during simulated driving. Journal of Neural Engineering. 2011;8(5):056001.
+    doi: 10.1088/1741-2560/8/5/056001
+    year: 2011
+    verified: false
+  aliases:
+  - emergency braking paradigm
+  - braking intention detection
+  - brain-based brake assistance
+  - pre-braking EEG prediction
+  notes: '[curator_b sprint 7, 2026-10-17] New class from the sprint 7 gap list. Concrete paradigms: MOT-BRAKE-001 (car following,
+    sudden lead-vehicle braking; BNCI 002-2016). Closest existing classes: MOT-MRCP (self-paced movement preparation) and
+    STA-DRV (drowsiness during driving); neither covers event-triggered intention detection inside continuous driving. Possible
+    -002: several braking situations (Kim et al. 2014). bibliography confirmed (Crossref, 2026-10-17)'
+  status: draft
+  contributors:
+  - curator_b
+- id: MOT-KMI
+  name:
+    en: Motor imagery of kinetic and kinematic parameters (force, speed)
+    zh: 运动参数想象（力量、速度）
+  family: motor
+  description:
+    en: Participants imagine the same movement of the same limb at different speeds or with different force loads. Because
+      the effector does not change, the decoded classes are movement parameters rather than body parts; imagined speed is
+      reflected in the timing of the movement-related cortical potential and imagined force in the strength of contralateral
+      mu/beta ERD.
+    zh: 被试想象同一肢体的同一动作，但速度或力量负荷不同。由于效应器不变，解码的类别是运动参数而非身体部位；想象速度体现在运动相关皮层电位的时程上，想象力量体现在对侧 mu/β ERD 的强度上。
+  markers:
+  - MK.MRCP
+  - MK.SMR_ERD
+  first_source:
+    citation: Gu Y, Farina D, Murguialday AR, Dremstrup K, Montoya P, Birbaumer N. Offline identification of imagined speed
+      of wrist movements in paralyzed ALS patients from single-trial EEG. Frontiers in Neuroscience. 2009;3:62.
+    doi: 10.3389/neuro.20.003.2009
+    year: 2009
+    verified: false
+  aliases:
+  - imagined movement speed
+  - speed motor imagery
+  - kinematic motor imagery
+  - force motor imagery
+  - kinetic motor imagery
+  - imagined force levels
+  - force-load BCI
+  notes: '[curator_b sprint 7, 2026-10-17] New class from the sprint 7 gap list. Concrete paradigms: MOT-KMI-001 (imagined
+    speed, fast vs slow; Gu et al. 2009), MOT-KMI-002 (imagined force load with trial feedback; Wang et al. 2017). Closest
+    existing class: MOT-MI, whose concrete paradigms are body-part class sets. Found through the review by Tai et al. 2024
+    (doi 10.3389/fnins.2023.1345961). bibliography confirmed (Crossref, 2026-10-17)'
+  status: draft
+  contributors:
+  - curator_b
+- id: MOT-SWAL
+  name:
+    en: Swallowing (executed and imagined)
+    zh: 吞咽（执行与想象）
+  family: motor
+  description:
+    en: Participants swallow small water boluses on cue, or imagine swallowing without moving, and the activity is compared
+      with rest or idle periods. Executed swallowing activates bilateral, often asymmetric, caudolateral sensorimotor cortex
+      with insula, premotor and cerebellar regions; imagined swallowing is detected from EEG for brain-computer interface
+      rehabilitation of dysphagia.
+    zh: 被试按提示吞咽少量水，或在不动的情况下想象吞咽，并与静息或空闲期比较。实际吞咽激活双侧（常不对称）中央沟下外侧感觉运动皮层以及岛叶、运动前区和小脑；吞咽想象可从脑电中检测，用于吞咽障碍的脑机接口康复。
+  markers:
+  - MK.BOLD_motor_network
+  - MK.BOLD_anterior_insula
+  - MK.SMR_ERD
+  first_source:
+    citation: Hamdy S, Rothwell JC, Brooks DJ, Bailey D, Aziz Q, Thompson DG. Identification of the cerebral loci processing
+      human swallowing with H2 15O PET activation. Journal of Neurophysiology. 1999;81(4):1917-1926.
+    doi: 10.1152/jn.1999.81.4.1917
+    year: 1999
+    verified: false
+  aliases:
+  - volitional swallowing
+  - swallowing task
+  - deglutition task
+  - swallow paradigm
+  - motor imagery of swallow
+  - MI-SW
+  - swallowing imagery BCI
+  notes: '[curator_b sprint 7, 2026-10-17] New class from the sprint 7 gap list. Concrete paradigms: MOT-SWAL-001 (cued volitional
+    water swallowing, PET; Hamdy et al. 1999), MOT-SWAL-002 (cued swallow imagery vs idle, EEG; Yang et al. 2014). Closest
+    existing class: MOT-ME (limb and finger execution); LAN speech classes cover articulation, not deglutition. bibliography
+    confirmed (Crossref, 2026-10-17)'
+  status: draft
+  contributors:
+  - curator_b
+- id: MOT-SATT
+  name:
+    en: Sensory attenuation of self-generated stimuli
+    zh: 自生刺激的感觉衰减
+  family: motor
+  description:
+    en: Identical stimuli are either triggered by the participant's own action (for example a button press) or delivered externally
+      with the same timing. Responses to self-generated stimuli are attenuated, most often measured as a smaller auditory
+      N1-P2, which is taken as evidence that the brain predicts and cancels the sensory consequences of its own actions.
+    zh: 相同的刺激或由被试自身动作（如按键）触发，或以相同时序由外部给出。自生刺激引起的响应减弱（最常见的是听觉 N1–P2 变小），被视为大脑预测并抵消自身动作感觉后果的证据。
+  markers:
+  - MK.N1_auditory
+  - MK.P2_auditory
+  first_source:
+    citation: Schafer EWP, Marcus MM. Self-stimulation alters human sensory brain responses. Science. 1973;181(4095):175-177.
+    doi: 10.1126/science.181.4095.175
+    year: 1973
+    verified: false
+  aliases:
+  - sensory attenuation
+  - self-generated sound suppression
+  - motor-auditory N1 suppression
+  - self-initiated versus externally initiated tones
+  - action-effect attenuation
+  notes: '[curator_b sprint 7, 2026-10-17] New class from the sprint 7 gap list. Concrete paradigms: MOT-SATT-001 (self- vs
+    externally delivered clicks and flashes; Schafer & Marcus 1973). Overlaps: MOT-IB lists N1 attenuation as a correlate
+    of intentional binding but measures perceived timing; LAN-SIS is the speech case; PER-OMIT records omitted self-triggered
+    sounds. Kept separate because the construct (sensory prediction of action effects, self vs external contrast) differs;
+    for maintainer review. Tactile version (Blakemore et al. 1998, doi 10.1038/2870) pending a somatosensory haemodynamic
+    marker. bibliography confirmed (Crossref, 2026-10-17)'
+  status: draft
+  contributors:
+  - curator_b
 - id: SSR-ASSR
   name:
     en: Auditory steady-state response (ASSR)
@@ -2685,6 +3051,35 @@ terms:
   status: draft
   contributors:
   - maintainer
+- id: SSR-BINB
+  name:
+    en: Binaural beat stimulation
+    zh: 双耳拍频刺激
+  family: steady_state
+  description:
+    en: Two pure tones with a small frequency difference are presented separately to the two ears, so that a beat at the difference
+      frequency arises only from binaural interaction in the brain. EEG is analysed for a steady-state response or a change
+      in power at the beat frequency, compared with monaural beats or carriers alone; evidence that binaural beats entrain
+      ongoing oscillations is inconsistent.
+    zh: 向两耳分别呈现频率略有差异的两个纯音，差频处的拍只由脑内的双耳交互产生。分析脑电在拍频处的稳态响应或功率变化，并与单耳拍或仅载波对照比较；双耳拍能否夹带进行中振荡的证据并不一致。
+  markers:
+  - MK.ASSR
+  first_source:
+    citation: Oster G. Auditory beats in the brain. Scientific American. 1973;229(4):94-102.
+    doi: 10.1038/scientificamerican1073-94
+    year: 1973
+    verified: false
+  aliases:
+  - binaural beats
+  - binaural beat entrainment
+  - dichotic beat stimulation
+  notes: '[curator_b sprint 7, 2026-10-17] Concrete paradigm: SSR-BINB-001. Oster 1973 is a magazine article used as the standard
+    reference (weak_origin candidate). Neural recording reference: Schwarz & Taylor 2005 (doi:10.1016/j.clinph.2004.09.014).
+    Systematic review: Ingendoh, Posny & Heine 2023 (doi:10.1371/journal.pone.0286023). Closest existing class SSR-ASSR. bibliography
+    confirmed (Crossref, 2026-10-17).'
+  status: draft
+  contributors:
+  - curator_b
 - id: ERR-AAF
   name:
     en: Pitch-shifted auditory feedback during vocalization
@@ -3245,6 +3640,37 @@ terms:
   contributors:
   - maintainer
   - curator_b
+- id: ERR-PROTO
+  name:
+    en: Category learning (prototype distortion)
+    zh: 范畴学习（原型扭曲）
+  family: error
+  description:
+    en: Participants learn categories from exemplars that are distortions of an unseen prototype, such as random dot patterns,
+      either through trial-by-trial feedback or by exposure without feedback, and then classify new items, old items and the
+      prototype. Category members reduce posterior occipital BOLD activity (perceptual fluency) and increase anterior frontal
+      activity compared with non-members.
+    zh: 被试从未见过的原型经扭曲生成的样例（如随机点阵）中学习范畴，学习方式为逐试次反馈或无反馈接触，随后对新样例、旧样例和原型分类。与非成员相比，范畴成员使后部枕叶 BOLD 活动降低（知觉流畅性）、前额极活动增强。
+  markers:
+  - MK.BOLD_visual_cortex
+  first_source:
+    citation: Posner MI, Keele SW. On the genesis of abstract ideas. J Exp Psychol. 1968;77(3, Pt.1):353-363.
+    doi: 10.1037/h0025953
+    year: 1968
+    verified: false
+  aliases:
+  - prototype distortion task
+  - dot-pattern classification
+  - Posner-Keele task
+  - A/not-A prototype task
+  - category learning
+  notes: '[curator_c sprint 7, 2026-10-17] Concrete paradigms: ERR-PROTO-001 (multi-category feedback learning, Posner & Keele
+    1968, behavioural origin), ERR-PROTO-002 (A/not-A judgement after exposure, Reber et al. 1998, doi:10.1073/pnas.95.2.747,
+    source of the marker). Differs from ERR-PCL (probabilistic cue-outcome learning). Family error chosen as in the gap list;
+    memory is an alternative for the maintainer. bibliography confirmed (Crossref, 2026-10-17)'
+  status: draft
+  contributors:
+  - curator_c
 - id: LAN-AGL
   name:
     en: Artificial grammar learning
@@ -4048,6 +4474,35 @@ terms:
   - oral reading of words and pseudowords
   notes: New class, sprint 6 (P3). Class source is that of LAN-RA-001. Distinct from LAN-OVS (articulatory decoding for speech
     neuroprostheses) and LAN-PN (picture naming). [curator_d sprint 6, 2026-10-16]
+  status: draft
+  contributors:
+  - curator_d
+- id: LAN-DISC
+  name:
+    en: Discourse coherence
+    zh: 语篇连贯
+  family: language
+  description:
+    en: Multi-sentence texts are presented in which a critical word is coherent or incoherent with the preceding discourse
+      while remaining acceptable within its own sentence. Discourse-incoherent words elicit an N400 effect with the same time
+      course and distribution as sentence-level anomalies, showing that the wider context is integrated as fast as the local
+      sentence.
+    zh: 呈现由多句组成的语篇，其中关键词与前文语篇连贯或不连贯，但在本句之内仍可接受。语篇不连贯的词诱发 N400 效应，其时程与分布与句内异常相同，说明更大范围的语境与句内语境同样快速地被整合。
+  markers:
+  - MK.N400
+  first_source:
+    citation: 'van Berkum JJA, Hagoort P, Brown CM. Semantic integration in sentences and discourse: evidence from the N400.
+      J Cogn Neurosci. 1999;11(6):657-671.'
+    doi: 10.1162/089892999563724
+    year: 1999
+    verified: false
+  aliases:
+  - discourse coherence
+  - discourse congruence N400
+  - discourse-level semantic integration
+  notes: '[curator_d sprint 7, 2026-10-17] Concrete paradigm: LAN-DISC-001. Possible earlier sibling: St George, Mannes &
+    Hoffman 1994 (title-dependent paragraph coherence; not retrieved). Differs from LAN-N400 and LAN-SC (single-sentence manipulations).
+    bibliography confirmed (Crossref, 2026-10-17)'
   status: draft
   contributors:
   - curator_d
@@ -5071,6 +5526,38 @@ terms:
   status: draft
   contributors:
   - curator_d
+- id: MEM-VTWM
+  name:
+    en: Vibrotactile frequency discrimination and working memory
+    zh: 振动触觉频率辨别与工作记忆
+  family: memory
+  description:
+    en: Two flutter-range vibrotactile stimuli are delivered one after the other to a fingertip; the participant holds the
+      first frequency in working memory and judges whether the second is higher or lower. The task probes parametric (quantity)
+      working memory. Stimulation evokes steady-state SEPs in primary somatosensory cortex, retention engages ventrolateral
+      prefrontal cortex, and prefrontal beta power scales with the remembered frequency.
+    zh: 在指尖先后施加两个扑动范围的振动触觉刺激；被试在工作记忆中保持第一个频率，判断第二个更高还是更低。该任务考察参数（数量）工作记忆。刺激在初级体感皮层诱发稳态体感诱发电位，保持期涉及腹外侧前额叶，前额叶 β 功率随所记频率变化。
+  markers:
+  - MK.SSSEP
+  - MK.BOLD_frontoparietal
+  first_source:
+    citation: Preuschhof C, Heekeren HR, Taskin B, Schubert T, Villringer A. Neural correlates of vibrotactile working memory
+      in the human brain. J Neurosci. 2006;26(51):13231-13239.
+    doi: 10.1523/JNEUROSCI.2767-06.2006
+    year: 2006
+    verified: false
+  aliases:
+  - vibrotactile working memory
+  - flutter frequency discrimination
+  - two-interval vibrotactile frequency comparison
+  - parametric working memory task
+  notes: '[curator_d sprint 7, 2026-10-17] Concrete paradigm: MEM-VTWM-001. Animal origin (monkey single-unit studies of the
+    same task, not retrieved); first human neural study used as first_source (D-031). Key references: Spitzer et al. 2010
+    (doi:10.1523/JNEUROSCI.6041-09.2010, EEG beta), von Lautz et al. 2017 (doi:10.3389/fnhum.2017.00576, MEG). Marker request:
+    MK.parametric_prefrontal_beta. Differs from MEM-DMS (item recognition). bibliography confirmed (OpenAlex, 2026-10-17)'
+  status: draft
+  contributors:
+  - curator_d
 - id: EMO-APRIME
   name:
     en: Affective (evaluative) priming
@@ -5590,6 +6077,7 @@ terms:
     zh: 被试观看或想象情绪材料时给出短促响亮的听觉探测刺激。与中性背景相比，惊跳眨眼反射在不愉快背景下增强、在愉快背景下减弱；探测刺激诱发的 P3 在两种效价的高唤醒背景下均减小。
   markers:
   - MK.P3a
+  - MK.startle_blink
   first_source:
     citation: 'Vrana SR, Spence EL, Lang PJ. The startle probe response: A new measure of emotion? Journal of Abnormal Psychology.
       1988;97(4):487-491.'
@@ -5639,6 +6127,78 @@ terms:
   notes: New class, sprint 6 (P3). Class source is that of EMO-AAT-001; EMO-AAT-002 is the joystick zoom version (Rinck &
     Becker 2007). Marker MK.frontal_alpha_asymmetry is the closest available; evidence still to be searched. [curator_e sprint
     6, 2026-10-16]
+  status: draft
+  contributors:
+  - curator_e
+- id: EMO-CREAC
+  name:
+    en: Drug and food cue reactivity
+    zh: 成瘾物质与食物线索反应
+  family: emotion
+  description:
+    en: Participants who use a drug (or, in food versions, hungry or dieting participants) view cues related to the drug or
+      to palatable food and matched neutral cues, and rate their craving. Cue-evoked responses in striatal, limbic and prefrontal
+      regions track reported craving, and the P3 and late positive potential are larger for the craved cues. The cue response
+      is also the target signal of craving neurofeedback.
+    zh: 物质使用者（食物版本为饥饿或节食被试）观看与成瘾物质或美味食物相关的线索以及匹配的中性线索，并评定渴求。线索在纹状体、边缘系统和前额叶引起的反应与自评渴求相关，渴求线索诱发的 P3 和晚期正电位更大。线索反应也是渴求神经反馈的目标信号。
+  markers:
+  - MK.BOLD_striatum_reward
+  - MK.LPP
+  - MK.P3b
+  - MK.BOLD_dACC
+  first_source:
+    citation: Grant S, London ED, Newlin DB, Villemagne VL, Liu X, Contoreggi C, Phillips RL, Kimes AS, Margolin A. Activation
+      of memory circuits during cue-elicited cocaine craving. Proc Natl Acad Sci U S A. 1996;93(21):12040-12045.
+    doi: 10.1073/pnas.93.21.12040
+    year: 1996
+    verified: false
+  aliases:
+  - cue reactivity
+  - cue-reactivity paradigm
+  - drug cue exposure
+  - cue-elicited craving
+  - food cue reactivity
+  - craving neurofeedback
+  notes: '[curator_e sprint 7, 2026-10-17] Concrete paradigms: EMO-CREAC-001 (open-loop drug cue exposure), EMO-CREAC-002
+    (real-time fMRI craving neurofeedback, Li et al. 2013, doi:10.1111/j.1369-1600.2012.00449.x). first_source is the earliest
+    neural study seen; origin not established (weak_origin): behavioural cue-reactivity studies are older (Carter & Tiffany
+    1999 meta-analysis, doi:10.1046/j.1360-0443.1999.9433273.x). Differs from EMO-IAPS: cues are defined by their link to
+    an individual''s craving, not by normative affective ratings. Food-cue picture viewing (OpenfMRI ds000157) is a candidate
+    further concrete paradigm. bibliography confirmed (Crossref, 2026-10-17)'
+  status: draft
+  contributors:
+  - curator_e
+- id: EMO-FRUST
+  name:
+    en: Frustration induction
+    zh: 挫折诱发
+  family: emotion
+  description:
+    en: An expected goal is blocked, for example by withholding an anticipated reward or by making a game ignore the player's
+      input, and brain activity in the frustrating condition is compared with the unblocked condition. Reward omission activates
+      the right anterior insula and ventral prefrontal cortex; in EEG, frustration changes affective band-power features and
+      degrades movement-related BCI features.
+    zh: 阻断预期目标，如扣下预期的奖励，或让游戏忽略玩家的输入，比较挫折条件与未受阻条件下的脑活动。奖励缺失激活右侧前脑岛和腹侧前额叶；在脑电上，挫折改变情绪相关频段功率特征，并使运动相关脑机接口特征变差。
+  markers:
+  - MK.BOLD_anterior_insula
+  - MK.affective_band_power
+  - MK.SMR_ERD
+  first_source:
+    citation: Abler B, Walter H, Erk S. Neural correlates of frustration. NeuroReport. 2005;16(7):669-672.
+    doi: 10.1097/00001756-200505120-00003
+    year: 2005
+    verified: false
+  aliases:
+  - frustration induction
+  - reward omission frustration
+  - frustrative nonreward
+  - Affective Pacman
+  - loss of control
+  notes: '[curator_e sprint 7, 2026-10-17] Concrete paradigms: EMO-FRUST-001 (omission of expected monetary reward, fMRI),
+    EMO-FRUST-002 (Affective Pacman with randomly ignored input, EEG; BNCI 007-2014 dataset; Reuderink et al. 2009, doi:10.1007/978-3-642-02315-6_23).
+    first_source is the earliest neuroimaging study seen; origin not established (weak_origin); behavioural frustration manipulations
+    are older. Differs from EMO-STRESS (social-evaluative stress) and EMO-MID (reward anticipation). bibliography confirmed
+    (OpenAlex, 2026-10-17)'
   status: draft
   contributors:
   - curator_e
@@ -6653,6 +7213,7 @@ terms:
   markers:
   - MK.BOLD_frontoparietal
   - MK.LRP
+  - MK.P2p_numerical_distance
   first_source:
     citation: Moyer RS, Landauer TK. Time required for judgements of numerical inequality. Nature. 1967;215(5109):1519-1520.
     doi: 10.1038/2151519a0
@@ -6672,6 +7233,65 @@ terms:
     with switched response mapping (SNARC; Dehaene et al. 1993). Markers are provisional: no registry marker indexes the parietal
     P2p distance effect (Dehaene 1996), so MK.BOLD_frontoparietal (intraparietal cortex) and MK.LRP (response-side effects
     in SNARC designs; no retrieved study yet) are used and a new marker is requested. [curator_c sprint 6, 2026-10-16]'
+  status: draft
+  contributors:
+  - curator_c
+- id: CTL-NEGP
+  name:
+    en: Negative priming
+    zh: 负启动
+  family: control
+  description:
+    en: In a prime display the participant selects a target and ignores a distractor; in the following probe display the former
+      distractor may become the target. Responding to a previously ignored object is slower than responding after an unrelated
+      prime, indexing inhibition of distractors that carries over between trials. Ignored-repetition probes elicit an enhanced
+      N2.
+    zh: 启动画面中被试选择目标、忽略干扰物；随后的探测画面中，原先的干扰物可能成为目标。对先前被忽略物体的反应比无关启动后更慢，反映跨试次延续的干扰抑制。忽略重复的探测刺激诱发增大的 N2。
+  markers:
+  - MK.N2_frontocentral
+  first_source:
+    citation: 'Tipper SP. The negative priming effect: inhibitory priming by ignored objects. Q J Exp Psychol A. 1985;37(4):571-590.'
+    doi: 10.1080/14640748508400920
+    year: 1985
+    verified: false
+  aliases:
+  - negative priming
+  - negative priming paradigm
+  - ignored repetition
+  - identity negative priming
+  notes: '[curator_c sprint 7, 2026-10-17] Concrete paradigm: CTL-NEGP-001. Review: Fox 1995 (doi:10.3758/BF03210958). Marker
+    evidence: Frings & Groh-Bordin 2007 (doi:10.1016/j.brainres.2007.07.093, enhanced N200). Differs from CTL-FLK and CTL-STR
+    (within-trial conflict). bibliography confirmed (Crossref, 2026-10-17)'
+  status: draft
+  contributors:
+  - curator_c
+- id: CTL-BEADS
+  name:
+    en: Information sampling before decision (beads task)
+    zh: 决策前信息采样（珠子任务）
+  family: control
+  description:
+    en: Evidence (coloured beads drawn from one of two jars with opposite colour ratios) is shown one item at a time, and
+      the participant decides when to stop sampling and commit to a jar. The number of draws to decision measures evidence
+      seeking and the jumping-to-conclusions bias. Decisions to commit, compared with decisions to sample, activate insula,
+      striatum, anterior cingulate and parietal cortex.
+    zh: 逐个呈现证据（从两个颜色比例相反的罐子之一中取出的彩色珠子），由被试决定何时停止采样并判定罐子。决定前的抽取次数衡量证据寻求和"过早下结论"偏差。与继续采样的决定相比，作出判定时脑岛、纹状体、前扣带回和顶叶活动增强。
+  markers:
+  - MK.BOLD_anterior_insula
+  - MK.BOLD_frontoparietal
+  first_source:
+    citation: Huq SF, Garety PA, Hemsley DR. Probabilistic judgements in deluded and non-deluded subjects. Q J Exp Psychol
+      A. 1988;40(4):801-812.
+    doi: 10.1080/14640748808402300
+    year: 1988
+    verified: false
+  aliases:
+  - beads task
+  - draws to decision
+  - jumping to conclusions task
+  - urn task
+  notes: '[curator_c sprint 7, 2026-10-17] Concrete paradigm: CTL-BEADS-001. Neural reference: Furl & Averbeck 2011 (doi:10.1523/JNEUROSCI.4236-11.2011).
+    Differs from CTL-PDM (evidence at a fixed rate, no control over sampling). bibliography confirmed (Crossref, 2026-10-17)'
   status: draft
   contributors:
   - curator_c
@@ -7703,6 +8323,39 @@ terms:
   status: draft
   contributors:
   - curator_e
+- id: SOC-DECEP
+  name:
+    en: Instructed deception (lie versus truth)
+    zh: 指令性欺骗（说谎与说真话）
+  family: social
+  description:
+    en: Participants answer questions about themselves or about facts and are instructed, trial by trial or by block, to answer
+      truthfully or to lie. Lying is slower and, compared with truth telling, recruits dorsolateral and ventrolateral prefrontal
+      cortex, anterior cingulate cortex, anterior insula and parietal cortex, consistent with added executive control. The
+      contrast is the act of deceiving, not recognition of concealed information.
+    zh: 被试回答关于自身或事实的问题，并按逐试次或逐组块的指令如实回答或说谎。说谎反应较慢；与说真话相比，说谎时背外侧和腹外侧前额叶、前扣带回、前脑岛及顶叶活动增强，提示额外的执行控制。对比的是欺骗行为本身，而不是对隐藏信息的再认。
+  markers:
+  - MK.BOLD_dlPFC
+  - MK.BOLD_dACC
+  - MK.BOLD_anterior_insula
+  first_source:
+    citation: Spence SA, Farrow TFD, Herford AE, Wilkinson ID, Zheng Y, Woodruff PWR. Behavioural and functional anatomical
+      correlates of deception in humans. NeuroReport. 2001;12(13):2849-2853.
+    doi: 10.1097/00001756-200109170-00019
+    year: 2001
+    verified: false
+  aliases:
+  - instructed deception
+  - instructed lying
+  - lie versus truth task
+  - deception fMRI
+  notes: '[curator_e sprint 7, 2026-10-17] Concrete paradigm: SOC-DECEP-001. Review: Christ et al. 2009 ALE meta-analysis
+    (doi:10.1093/cercor/bhn189). Boundary: MEM-CIT (P300 concealed information test, alias "ERP lie detection") probes recognition
+    of hidden knowledge and stays separate; SOC-TOM covers understanding of others'' deception. bibliography confirmed (Crossref,
+    2026-10-17)'
+  status: draft
+  contributors:
+  - curator_e
 - id: STA-ANES
   name:
     en: Anesthesia and level of consciousness
@@ -8231,6 +8884,105 @@ terms:
   status: draft
   contributors:
   - curator_e
+- id: STA-PROBE
+  name:
+    en: Irrelevant-probe workload assessment
+    zh: 无关探测刺激工作负荷评估
+  family: state
+  description:
+    en: Task-irrelevant auditory probes are presented while participants perform a primary task at different levels of difficulty
+      and are told to ignore them. ERPs to the probes (N1, P2 and the probe P3) decrease as the primary task becomes more
+      demanding, providing a workload measure that does not require an extra response from the operator.
+    zh: 被试以不同难度执行主任务时呈现与任务无关的听觉探测刺激，并要求其忽略。主任务要求越高，探测刺激诱发的 ERP（N1、P2 与探测 P3）越小，从而提供一种无需操作者额外反应的负荷测量方法。
+  markers:
+  - MK.N1_auditory
+  - MK.P2_auditory
+  - MK.P3a
+  first_source:
+    citation: Kramer AF, Trejo LJ, Humphrey D. Assessment of mental workload with task-irrelevant auditory probes. Biological
+      Psychology. 1995;40(1-2):83-100.
+    doi: 10.1016/0301-0511(95)05108-2
+    year: 1995
+    verified: false
+  aliases:
+  - irrelevant-probe technique
+  - task-irrelevant auditory probes
+  - ignored auditory probes
+  - probe evoked potentials
+  - single-stimulus probe paradigm
+  - ignored single-tone probes
+  notes: '[curator_e sprint 7, 2026-10-17] New class from the sprint 7 gap list. Concrete paradigms: STA-PROBE-001 (ignored
+    two-tone oddball probes; Kramer et al. 1995), STA-PROBE-002 (single-stimulus ignored probes during video-game play; Allison
+    & Polich 2008). Closest existing classes: STA-MATB and MEM-NBK (workload manipulations without probes). Origin provisional:
+    earlier probe-evoked-potential work was not searched. bibliography confirmed (Crossref, 2026-10-17)'
+  status: draft
+  contributors:
+  - curator_e
+- id: STA-GAME
+  name:
+    en: Video-game play for engagement and workload
+    zh: 电子游戏任务（投入度与负荷）
+  family: state
+  description:
+    en: EEG is recorded while participants play video games, often compared with watching the game and with rest or across
+      difficulty levels. Game play increases frontal midline theta and reduces posterior alpha and central mu power, an index
+      of mental effort and engagement during an interactive, naturalistic task.
+    zh: 在被试玩电子游戏时记录脑电，常与观看游戏、静息或不同难度相比较。玩游戏时额中线 θ 增强，后部 α 与中央区 mu 功率降低，可作为交互式自然任务中心理努力与投入度的指标。
+  markers:
+  - MK.frontal_midline_theta
+  - MK.alpha_posterior
+  - MK.SMR_ERD
+  first_source:
+    citation: 'Pellouchoud E, Smith ME, McEvoy L, Gevins A. Mental effort-related EEG modulation during video-game play: comparison
+      between juvenile subjects with epilepsy and normal control subjects. Epilepsia. 1999;40(s4):38-43.'
+    doi: 10.1111/j.1528-1157.1999.tb00905.x
+    year: 1999
+    verified: false
+  aliases:
+  - video-game play
+  - video game task
+  - game-based workload
+  - game engagement EEG
+  notes: '[curator_e sprint 7, 2026-10-17] New class from the sprint 7 gap list. Concrete paradigms: STA-GAME-001 (play vs
+    watch vs rest; Pellouchoud et al. 1999). Closest existing class: STA-ENG (passive video and classroom learning). Game
+    play with ignored probe tones is STA-PROBE-002. bibliography confirmed (Crossref, 2026-10-17)'
+  status: draft
+  contributors:
+  - curator_e
+- id: STA-RESP
+  name:
+    en: Respiratory challenge (hyperventilation, breath-hold)
+    zh: 呼吸激发（过度换气、屏气）
+  family: state
+  description:
+    en: A voluntary breathing manoeuvre changes arterial carbon dioxide and thereby cerebral blood flow and brain state. Hyperventilation
+      (hypocapnia) is a standard clinical-EEG activation procedure that produces a build-up of slow activity and can provoke
+      seizures; breath holding (hypercapnia) is a standard fMRI test of cerebrovascular reactivity that produces a widespread
+      BOLD increase.
+    zh: 通过有意的呼吸动作改变动脉二氧化碳，从而改变脑血流与脑状态。过度换气（低碳酸血症）是临床脑电的标准激发程序，使慢波逐渐增多并可诱发发作；屏气（高碳酸血症）是 fMRI 检测脑血管反应性的标准试验，使 BOLD 信号广泛升高。
+  markers:
+  - MK.slow_wave
+  - MK.HbO_prefrontal
+  first_source:
+    citation: Davis H. Factors affecting changes produced in electroencephalogram by standardized hyperventilation. Archives
+      of Neurology and Psychiatry. 1942;47(4):606.
+    doi: 10.1001/archneurpsyc.1942.02290040096005
+    year: 1942
+    verified: false
+  aliases:
+  - hyperventilation
+  - HV activation
+  - overbreathing test
+  - breath-hold task
+  - breath holding
+  - cerebrovascular reactivity mapping
+  notes: '[curator_e sprint 7, 2026-10-17] Concrete paradigms: STA-RESP-001 (hyperventilation EEG, Davis 1942), STA-RESP-002
+    (breath-hold fMRI, Kastrup et al. 1998). Both markers are closest placeholders (marker requests for hyperventilation-induced
+    slowing and cerebrovascular reactivity). Reviews: Salvati & Beenhakker 2019; Urback et al. 2017. bibliography confirmed
+    (Crossref, 2026-10-17).'
+  status: draft
+  contributors:
+  - curator_e
 - id: STM-ADBS
   name:
     en: Adaptive (closed-loop) deep brain stimulation
@@ -8747,6 +9499,38 @@ terms:
   notes: '[curator_b sprint 6, 2026-10-16] Concrete paradigm: STM-TRNS-001. Origin is an MEP study (D-031); EEG evidence for
     band-power after-effects is mixed (Ke et al. 2024, doi:10.31083/j.jin2303059). MK.tES_power_aftereffect should name tRNS
     in its description. Review: Antal & Herrmann 2016 (doi:10.1155/2016/3616807). bibliography confirmed (OpenAlex, 2026-10-16)'
+  status: draft
+  contributors:
+  - curator_b
+- id: STM-TACEP
+  name:
+    en: Mechanical tactile evoked potentials
+    zh: 机械触觉诱发电位
+  family: stimulation
+  description:
+    en: Brief mechanical stimuli without electric current (electromechanical taps, skin indentation, air jets or air puffs)
+      are applied to the skin of the fingers, hand, face or other sites, and the averaged cortical responses are recorded.
+      Mechanically evoked responses are smaller and later than those to electrical nerve stimulation because only cutaneous
+      mechanoreceptors are activated; pneumatic stimulation is also used for somatotopic mapping in MEG and fMRI.
+    zh: 以不含电流的短暂机械刺激（电磁叩击、皮肤压陷、气流喷射或气压脉冲）刺激手指、手、面部或其他部位的皮肤，记录平均皮层响应。因只激活皮肤机械感受器，机械诱发响应较电刺激神经时小、潜伏期较长；气动刺激也用于 MEG 和 fMRI 的躯体定位。
+  markers:
+  - MK.N140_somatosensory
+  first_source:
+    citation: Larsson LE, Prevec TS. Somato-sensory response to mechanical stimulation as recorded in the human EEG. Electroencephalography
+      and Clinical Neurophysiology. 1970;28(2):162-172.
+    doi: 10.1016/0013-4694(70)90184-7
+    year: 1970
+    verified: false
+  aliases:
+  - mechanical somatosensory evoked potentials
+  - tactile evoked potentials
+  - tap-evoked SEP
+  - air-puff stimulation
+  - air-jet stimulation
+  - pneumatic tactile stimulation
+  notes: '[curator_b sprint 7, 2026-10-17] Concrete paradigms: STM-TACEP-001 (mechanical taps, Larsson & Prevec 1970), STM-TACEP-002
+    (air-jet, Schieppati & Ducati 1984). Closest existing class STM-SEP (electrical, MK.SEP_N20); may be placed under STM-SEP
+    instead if D-060 is applied (proposals.csv). bibliography confirmed (Crossref, 2026-10-17).'
   status: draft
   contributors:
   - curator_b

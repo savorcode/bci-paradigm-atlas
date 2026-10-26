@@ -65,16 +65,6 @@ first_source:
   doi: 10.1016/0749-596X(89)90040-5
   year: 1989
   verified: false
-variants:
-- name: Automated operation span (Aospan)
-  source:
-    citation: Unsworth N, Heitz RP, Schrock JC, Engle RW. An automated version of the operation span task. Behavior Research
-      Methods. 2005;37(3):498-505.
-    doi: 10.3758/BF03192720
-    year: 2005
-    verified: false
-  note: Computer-administered, letters instead of words, individual time limit for the equations, set sizes 3-7, recall by
-    clicking letters in a matrix; feedback on recall and equation accuracy after each set.
 interop:
   bids_task: operationspan
   cognitive_atlas_task: trm_4c40d10cd776e
@@ -85,7 +75,11 @@ notes: 'Turner & Engle 1989 (Crossref). Set sizes and timing in trial_structure 
   Example equation and set range also appear in the HED task description of the operation span task. Scharinger et al. 2017
   (Crossref) recorded EEG during an operation span task: prolonged parietal alpha effects and smaller frontal theta increases
   than n-back, supporting both markers (theta weaker). Conway et al. 2005 is the methodological review. Cognitive Atlas term
-  trm_4c40d10cd776e (operation span task). No public dataset verified. [curator_d sprint 6, 2026-10-16]'
+  trm_4c40d10cd776e (operation span task). No public dataset verified. [curator_d sprint 6, 2026-10-16] The automated
+  version (Unsworth et al. 2005) is now MEM-CSPAN-003 (criterion 4: per-set feedback; D-079) and its variant entry was removed
+  here. The aliases "automated operation span" and "Aospan", the trial_structure values and the distinguishing sentence
+  about the automated version still describe it and should be moved or rewritten by the maintainer (fields outside this
+  sprint''s edit scope). [curator_d sprint 7, 2026-10-17]'
 status: draft
 contributors:
 - curator_d

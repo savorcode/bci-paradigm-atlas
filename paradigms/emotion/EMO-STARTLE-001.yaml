@@ -20,6 +20,7 @@ stimulus_modality:
 - visual
 - auditory
 markers:
+- MK.startle_blink
 - MK.P3a
 description:
   en: Participants view pleasant, neutral and unpleasant pictures, and on some trials a brief, loud burst of white noise
@@ -81,11 +82,11 @@ notes: 'Sources: Vrana, Spence & Lang 1988 (first_source; introduced the startle
   (committee guidelines for startle eyeblink EMG; source of the typical probe parameters); Schupp et al. 1997 (probe P3;
   supports MK.P3a). Bibliographic data from the Crossref API (Vrana 1988, Lang 1990) and the OpenAlex API (Blumenthal 2005,
   Schupp 1997; Crossref requests failed). The primary dependent measure, the startle eyeblink (orbicularis oculi EMG), is
-  not a neural marker and has no registry id; recording_modality ''other'' stands for that EMG, and MK.P3a is used as the
-  closest neural marker for the probe-evoked P3 (requested: MK.startle_blink, see marker_requests.csv). Durations in trial_structure
+  now represented by MK.startle_blink (added sprint 7, D-079; marker type peripheral_physiology); recording_modality ''other''
+  stands for that EMG. MK.P3a is kept for the probe-evoked P3 recorded in the EEG (Schupp et al. 1997). Durations in trial_structure
   are typical values of the standard protocol, not yet checked against the 1988 paper. Related: EMO-IAPS-001 (same picture
   sets without probe), EMO-THREAT-001 (instructed threat; startle-based threat-of-shock work is listed there as a gap).
-  [curator_e sprint 6, 2026-10-16]'
+  [curator_e sprint 6, 2026-10-16; marker updated curator_m sprint 7, 2026-10-17]'
 status: draft
 contributors:
 - curator_e

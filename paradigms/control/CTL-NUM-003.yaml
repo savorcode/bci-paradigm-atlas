@@ -1,0 +1,81 @@
+schema_version: '0.2'
+id: CTL-NUM-003
+class: CTL-NUM
+name:
+  en: Single-number comparison with a fixed standard (larger/smaller than 5), ERP
+  zh: 单个数字与固定标准比较（大于或小于 5），ERP
+aliases:
+- comparison to a standard
+- larger-smaller than 5 task
+- number comparison with a fixed standard
+family: control
+bci_category:
+- none
+recording_modality:
+- EEG
+stimulus_modality:
+- visual
+markers:
+- MK.P2p_numerical_distance
+description:
+  en: >-
+    One number at a time is shown, as an Arabic digit or as a written number word, and the participant classifies it as
+    larger or smaller than a memorised standard (5) by pressing a left or right key, with ERPs recorded from 64 scalp
+    electrodes. The design crosses notation, numerical distance from the standard and response hand (additive-factors
+    method), so that the scalp signatures and timing of number identification, magnitude comparison, response programming
+    and error correction can be separated; the distance effect appears over parietal electrodes at about 200-300 ms.
+  zh: >-
+    每次呈现一个数字（阿拉伯数字或书写的数字词），被试判断其大于还是小于记住的标准数 5，以左键或右键反应，同时从 64 个头皮电极记录 ERP。设计交叉了记数法、与标准数的数值距离和反应手（加因素法），
+    从而分离数字识别、数量比较、反应编程与错误纠正各阶段的头皮分布与时程；距离效应出现在约 200–300 ms 的顶区电极。
+trial_structure:
+  phases:
+  - name: fixation
+    note: duration not taken from the source
+  - name: number (digit or number word)
+    note: duration to be checked
+  - name: response
+    duration_ms: speeded
+    note: larger or smaller than 5, left or right key
+  conditions:
+  - larger than 5
+  - smaller than 5
+  - digit notation
+  - word notation
+  - close vs far from 5
+  - response-hand assignment
+protocol:
+  n_classes: 2
+  classes:
+  - larger than 5
+  - smaller than 5
+  cue: single Arabic digit or number word compared with a memorised standard
+  stimulus_coding: notation x distance from the standard x response hand (additive factors)
+  paradigm_timing: synchronous
+  feedback: none
+  distinguishing: >-
+    Criteria 1 and 2 vs CTL-NUM-001: one number compared with a fixed memorised standard instead of two digits shown side by
+    side (criterion 2, stimulus type), and the decision classes are larger vs smaller than the standard instead of which side
+    holds the larger digit (criterion 1); notation (digits and words) is a further stimulus factor. Vs CTL-NUM-002: criterion
+    1 (magnitude task instead of parity). D-057 re-check: the change is in the stimulus and the decision, not a parameter of
+    the pair-comparison task, so a separate serial number is used instead of the former variant.
+first_source:
+  citation: >-
+    Dehaene S. The organization of brain activations in number comparison: event-related potentials and the additive-factors
+    method. J Cogn Neurosci. 1996;8(1):47-68.
+  doi: 10.1162/jocn.1996.8.1.47
+  year: 1996
+  verified: false
+interop:
+  bids_task: numbercomparison
+notes: >-
+  Dehaene 1996 (Crossref record; abstract: classification of numbers as larger or smaller than 5, 64 electrodes, stages of
+  word and digit identification, magnitude comparison, response programming and error correction). The parietal distance
+  effect latency is taken from the MK.P2p_numerical_distance record, which cites this paper; the stimulus timing and the
+  exact factor levels were not seen and are to be checked against the full text. MK.P2p_numerical_distance is not yet in
+  the CTL-NUM class markers (class update pending with the maintainer, as for CTL-NUM-001). The comparison-to-a-standard
+  task itself is older than this ERP study (behavioural work on comparison with a standard, not retrieved); the first_source
+  may move to that work. Moved from a variant of CTL-NUM-001 (D-079). No public dataset verified.
+  [curator_c sprint 7, 2026-10-17]
+status: draft
+contributors:
+- curator_c

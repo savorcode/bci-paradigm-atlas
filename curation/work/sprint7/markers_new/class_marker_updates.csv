@@ -1,0 +1,5 @@
+class_id,add,remove
+PER-TIME,MK.prestimulus_alpha_phase,MK.alpha_posterior; MK.AV_interaction_ERP
+PER-AUDLOC,MK.auditory_spatial_ERP,MK.N1_auditory
+CTL-NUM,MK.P2p_numerical_distance,
+EMO-STARTLE,MK.startle_blink,

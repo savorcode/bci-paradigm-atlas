@@ -1,0 +1,84 @@
+schema_version: '0.2'
+id: STA-PROBE-002
+class: STA-PROBE
+name:
+  en: Single-stimulus ignored probe tones during video-game play
+  zh: 电子游戏中的单刺激被忽略探测音
+aliases:
+- single-stimulus probe paradigm
+- ignored single-tone probes
+family: state
+bci_category:
+- passive
+recording_modality:
+- EEG
+stimulus_modality:
+- auditory
+- naturalistic
+markers:
+- MK.N1_auditory
+- MK.P2_auditory
+- MK.P3a
+description:
+  en: While playing a first-person shooter game at increasing difficulty (view only, easy, medium, hard), players hear an
+    infrequent single tone at long random intervals and are told to ignore it; in later runs they count the tones instead.
+    The N1, P2, N2 and P3 to the tone become smaller with gameplay and with difficulty, giving a workload index from a single
+    stimulus type rather than an oddball sequence.
+  zh: 玩家在难度递增（仅观看、易、中、难）的第一人称射击游戏中，以较长的随机间隔听到偶发的单一纯音，并被告知忽略它；在之后的轮次中改为默数这些声音。纯音诱发的 N1、P2、N2 与 P3 随游戏进行和难度升高而减小，从单一刺激类型（而非 oddball 序列）得到负荷指标。
+trial_structure:
+  phases:
+  - name: game run (one difficulty level)
+    duration_ms: about 600000
+    note: about 10 min of EEG per run
+  - name: probe tone
+    duration_ms: 100
+    note: 1000 Hz, 95 dB SPL, 10 ms rise/fall, loudspeakers behind the player
+  - name: inter-probe interval
+    duration_ms: 6000-30000
+    note: random
+  typical_trials: 30 tones per run; 4 ignore runs followed by 4 count runs
+  conditions:
+  - view only
+  - easy (4 enemies)
+  - medium (10 enemies)
+  - hard (20 enemies)
+protocol:
+  n_classes: 4
+  classes:
+  - view only
+  - easy
+  - medium
+  - hard
+  cue: single infrequent 1000 Hz tone, ignored (or counted in later runs)
+  stimulus_coding: single-stimulus probe (no standard tones)
+  paradigm_timing: block
+  feedback: none
+  distinguishing: 准则 2：探测刺激为单一偶发纯音（单刺激范式），不同于 STA-PROBE-001 的双音 oddball 序列；准则 1：条件集为游戏难度四级（Allison & Polich 2008）。
+first_source:
+  citation: Allison BZ, Polich J. Workload assessment of computer gaming using a single-stimulus event-related potential
+    paradigm. Biological Psychology. 2008;77(3):277-283.
+  doi: 10.1016/j.biopsycho.2007.10.014
+  year: 2008
+  verified: false
+variants:
+- name: Single ignored probes during the Multi-Attribute Task Battery (MATB-II), single-trial workload classification
+  source:
+    citation: 'Roy RN, Bonnet S, Charbonnier S, Campagne A. Efficient workload classification based on ignored auditory
+      probes: a proof of concept. Frontiers in Human Neuroscience. 2016;10:519.'
+    doi: 10.3389/fnhum.2016.00519
+    year: 2016
+    verified: false
+  note: Same single-tone probe (1000 Hz, 100 ms, 65 dB SPL, random 6-30 s, at least 30 probes per 10-min block) during MATB-II
+    with two workload levels; probe ERPs classified with spatial filtering and FLDA (mean 90.5 %). Primary task and class
+    count differ, but probe coding and block structure are the same.
+interop:
+  bids_task: irrelevantprobe
+notes: '[curator_e sprint 7, 2026-10-17] Second concrete paradigm of STA-PROBE. Protocol read from the open-access full
+  text of Allison & Polich 2008: 14 experienced male players, Rainbow Six Rogue Spear Black Thorn, counterbalanced difficulty
+  within ignore and count blocks; the largest ERP differences were between viewing and playing, smaller ones between difficulty
+  levels; the authors recommend the ignore condition for workload monitoring. Single-stimulus ERPs as an alternative to
+  the oddball were introduced by Mertens & Polich 1997 (cited there; not retrieved). Roy et al. 2016 is the passive-BCI
+  use (variant). The same study is also a key reference for STA-GAME. bibliography confirmed (Crossref, 2026-10-17)'
+status: draft
+contributors:
+- curator_e

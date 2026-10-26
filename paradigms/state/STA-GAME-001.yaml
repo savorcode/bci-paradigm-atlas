@@ -1,0 +1,73 @@
+schema_version: '0.2'
+id: STA-GAME-001
+class: STA-GAME
+name:
+  en: Video-game play versus watching and rest
+  zh: 玩电子游戏与观看、静息对比
+aliases:
+- video-game play
+- video game task
+- game-based workload
+- game engagement EEG
+family: state
+bci_category:
+- passive
+recording_modality:
+- EEG
+stimulus_modality:
+- visual
+- motor_execution
+- naturalistic
+markers:
+- MK.frontal_midline_theta
+- MK.alpha_posterior
+- MK.SMR_ERD
+description:
+  en: EEG is recorded while participants play a video game, while they watch another person play the same game, and while
+    they sit quietly with eyes open. Playing increases frontal midline theta and reduces central mu power, and both playing
+    and watching reduce posterior alpha, the same pattern as with increased mental load in laboratory tasks; the contrast
+    serves as an index of mental effort and engagement during interactive play.
+  zh: 分别在被试玩电子游戏、观看他人玩同一游戏以及睁眼安静静坐时记录脑电。玩游戏时额中线 θ 增强、中央区 mu 功率降低，玩与观看时后部 α 均降低，与实验室任务中心理负荷增加的模式相同；这一对比可作为交互式游戏中心理努力与投入度的指标。
+trial_structure:
+  phases:
+  - name: game play
+  - name: watching another person play
+  - name: eyes-open rest
+  conditions:
+  - play
+  - watch
+  - rest
+protocol:
+  n_classes: 3
+  classes:
+  - play
+  - watch
+  - rest
+  cue: commercial video game on screen
+  stimulus_coding: naturalistic interactive game, compared with passive viewing and rest
+  paradigm_timing: block
+  feedback: continuous
+  distinguishing: 标准配置（最早发表，即 first_source）：玩电子游戏、观看他人游戏、睁眼静息三种组块对比，游戏本身提供连续视觉反馈（Pellouchoud et al. 1999）。
+first_source:
+  citation: 'Pellouchoud E, Smith ME, McEvoy L, Gevins A. Mental effort-related EEG modulation during video-game play: comparison
+    between juvenile subjects with epilepsy and normal control subjects. Epilepsia. 1999;40(s4):38-43.'
+  doi: 10.1111/j.1528-1157.1999.tb00905.x
+  year: 1999
+  verified: false
+interop:
+  bids_task: videogame
+notes: '[curator_e sprint 7, 2026-10-17] New class from the sprint 7 gap list (rank 19; Cognitive Atlas "video game"). Overlap
+  check: STA-ENG covers passive video and classroom learning (inter-subject correlation); STA-MATB is a fixed multitask
+  battery; ERR-ERRP-004 uses a simple video game only to insert execution errors. Here the game itself is the workload and
+  engagement manipulation. first_source: Pellouchoud et al. 1999 (abstract in the Crossref record: 14 children aged 9-15,
+  7 with seizure disorders; play, watch and eyes-open rest; frontal midline theta up during play, posterior alpha down
+  during playing and watching, central mu down during play; no group differences). The game name and block durations were
+  not given in the abstract. A skill-acquisition EEG study by the same group in the same year (Smith, McEvoy & Gevins 1999,
+  Cogn Brain Res, doi 10.1016/s0926-6410(98)00043-3) may also have used game practice; only its record was read, and
+  the Space Fortress game was designed for psychophysiological research earlier (Mane & Donchin 1989, not retrieved);
+  whether an earlier EEG study of game play exists remains open. Key reference for difficulty-graded play: Allison & Polich
+  2008 (first-person shooter with probe tones; see STA-PROBE-002). Game difficulty levels without probes, and the Space
+  Fortress protocol, are candidates for further numbers once sources are read. bibliography confirmed (Crossref, 2026-10-17)'
+status: draft
+contributors:
+- curator_e

@@ -1,0 +1,69 @@
+schema_version: '0.2'
+id: SOC-DECEP-001
+class: SOC-DECEP
+name:
+  en: Instructed lying to autobiographical questions
+  zh: 对自传性问题的指令性说谎
+aliases:
+- instructed deception
+- instructed lying
+- lie versus truth task
+- differentiation of deception paradigm
+- deception fMRI
+family: social
+bci_category:
+- passive
+recording_modality:
+- fMRI
+stimulus_modality:
+- visual
+markers:
+- MK.BOLD_dlPFC
+- MK.BOLD_dACC
+- MK.BOLD_anterior_insula
+description:
+  en: Participants answer simple yes/no questions about themselves or their recent activities and are cued on each trial
+    to answer either truthfully or with a lie. Deceptive answers are slower than truthful ones and, compared with truthful
+    answers, recruit ventrolateral and dorsolateral prefrontal cortex, anterior cingulate cortex and anterior insula. Unlike
+    the concealed information test, the contrast is the act of lying itself, not recognition of hidden knowledge.
+  zh: 被试回答关于自身或近期活动的简单是/否问题，每个试次由提示决定如实回答还是说谎。说谎反应比如实反应慢；与如实回答相比，说谎时腹外侧和背外侧前额叶、前扣带回及前脑岛的活动增强。与隐藏信息测验不同，这里对比的是说谎行为本身，而不是对隐藏知识的再认。
+trial_structure:
+  phases:
+  - name: question
+    note: yes/no autobiographical question with an instruction cue (truth or lie)
+  - name: response
+    note: yes/no button press
+  - name: inter-trial fixation
+  conditions:
+  - truthful answer
+  - deceptive answer
+protocol:
+  n_classes: 2
+  classes:
+  - lie
+  - truth
+  cue: autobiographical yes/no question with a trial-wise truth/lie instruction
+  stimulus_coding: instructed response (truth or lie) crossed with question
+  paradigm_timing: synchronous
+  feedback: none
+  distinguishing: '标准配置（最早发表，即 first_source）：对自传性是/否问题按逐试次提示如实回答或说谎，无反馈（Spence et al. 2001，fMRI）。'
+first_source:
+  citation: Spence SA, Farrow TFD, Herford AE, Wilkinson ID, Zheng Y, Woodruff PWR. Behavioural and functional anatomical
+    correlates of deception in humans. NeuroReport. 2001;12(13):2849-2853.
+  doi: 10.1097/00001756-200109170-00019
+  year: 2001
+  verified: false
+interop:
+  bids_task: deception
+notes: 'Spence et al. 2001 (Crossref record, no abstract in the record) is the earliest fMRI study of instructed lying found;
+  the same group published a conference abstract with a preliminary description the same year (NeuroImage 13:477, doi:10.1016/S1053-8119(01)91820-8,
+  seen in a Crossref listing only, not cited as a source). The trial description is kept at the level of the title and later
+  descriptions; question content, cue type and timing were not checked in the full text, so phase durations are left empty.
+  Christ et al. (Cerebral Cortex 19(7):1557-1566; 2009 on the publisher listing, 2008 in the OpenAlex record (online first); doi:10.1093/cercor/bhn189)
+  supports the markers: ALE meta-analysis of deception > truth showing dlPFC, posterior parietal, vlPFC, anterior insula and
+  ACC. ERP lie detection with the P300 belongs to MEM-CIT (concealed information) and is not covered here; N2/P3 differences
+  for deceptive responses (gap list) were not sourced in this round. [curator_e sprint 7, 2026-10-17] bibliography confirmed
+  (Crossref, 2026-10-17).'
+status: draft
+contributors:
+- curator_e

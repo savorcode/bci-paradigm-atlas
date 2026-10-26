@@ -1,0 +1,66 @@
+schema_version: "0.2"
+id: PER-TONIC-002
+class: PER-TONIC
+name:
+  en: Sustained tonic heat pain with continuous rating
+  zh: 持续热痛并连续评分
+aliases:
+- tonic heat pain
+- sustained heat pain
+- continuous pain rating
+family: perception
+bci_category:
+- passive
+- none
+recording_modality:
+- EEG
+stimulus_modality:
+- somatosensory
+markers:
+- MK.gamma_power
+description:
+  en: >-
+    A thermode applies painful heat to the skin of the hand for about 10 minutes while the participant continuously rates
+    the perceived pain intensity with a slider. Because perceived intensity fluctuates during constant or slowly varying
+    stimulation, EEG band power can be related separately to stimulus intensity and to the pain rating; prefrontal gamma
+    oscillations follow the subjective pain.
+  zh: 以热刺激器对手部皮肤施加约 10 分钟的疼痛热刺激，被试用滑杆连续评定疼痛强度。由于恒定或缓变刺激下主观强度会波动，脑电频段功率可分别与刺激强度和疼痛评分相关联；前额 γ 振荡随主观疼痛变化。
+trial_structure:
+  phases:
+  - name: tonic heat stimulation with continuous rating
+    duration_ms: 600000
+  - name: control (continuous rating of a visual signal or non-painful condition)
+    note: control condition details not read in the source
+  typical_trials: 1 run per condition
+  conditions:
+  - tonic painful heat
+  - control
+protocol:
+  n_classes: 2
+  classes:
+  - tonic heat pain
+  - control
+  cue: thermode heat to the dorsum of the hand; continuous slider rating
+  stimulus_coding: sustained contact heat with continuous subjective rating
+  paradigm_timing: continuous
+  feedback: none
+  distinguishing: >-
+    准则 2：刺激类型由冰水浸泡（PER-TONIC-001）变为接触式持续热刺激，并加入连续疼痛评分，使脑活动可与主观强度的时间过程对应（Schulz et al. 2015）。
+first_source:
+  citation: >-
+    Schulz E, May ES, Postorino M, Tiemann L, Nickel MM, Witkovsky V, Schmidt P, Gross J, Ploner M. Prefrontal gamma
+    oscillations encode tonic pain in humans. Cerebral Cortex. 2015;25(11):4407-4414.
+  doi: 10.1093/cercor/bhv043
+  year: 2015
+  verified: false
+interop:
+  bids_task: tonicpain
+notes: >-
+  [curator_a sprint 7, 2026-10-17] Stimulus duration (10 min), body site and continuous rating follow the commonly cited
+  design of Schulz et al. 2015; the record retrieved is bibliographic only, so these parameters and the control condition
+  need a full-text check. Earlier tonic-heat EEG studies are likely; this is the earliest configuration with continuous
+  rating found in this sprint, and the serial number rests on criterion 2. No public dataset was verified.
+  bibliography confirmed (Crossref, 2026-10-17).
+status: draft
+contributors:
+- curator_a

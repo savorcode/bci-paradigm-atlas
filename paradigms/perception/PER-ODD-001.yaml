@@ -53,6 +53,16 @@ first_source:
   doi: 10.1126/science.150.3700.1187
   year: 1965
   verified: false
+variants:
+- name: "Hybrid: P300 + SSVEP control-state detection (SSR-SSVEP-008)"
+  source:
+    citation: Panicker RC, Puthusserypady S, Sun Y. An asynchronous P300 BCI with SSVEP-based control state detection. IEEE
+      Trans Biomed Eng. 2011;58(6):1781-1788.
+    doi: 10.1109/TBME.2011.2116018
+    year: 2011
+    verified: false
+  note: Cross-family hybrid marker (D-022), not a parameter variant. Asynchronous P300 selection in which an SSVEP elicited by
+    the stimuli detects whether the user is in a control state; details beyond the title and bibliographic record were not read.
 interop:
   bids_task: oddball
 notes: 'Origin attribution under review. Sutton et al. (1965) first reported the late positive component in relation to stimulus
@@ -66,7 +76,7 @@ notes: 'Origin attribution under review. Sutton et al. (1965) first reported the
   target detection PER-ODD-004 (former variant, with the NITRC RSVP dataset), RSVP speller -005, checkerboard -006, single-item
   flashing -007, auditory spatial -008, tactile -009. The first_source (R0011) is kept for this configuration and for the
   class; the canonical two-stimulus design may be attributed to later work (to be checked). [curator_e sprint 3, 2026-10-05]
-  bibliography confirmed (Crossref, 2026-10-05).'
+  bibliography confirmed (Crossref, 2026-10-05). [curator_a sprint 7, 2026-10-17] D-022 hybrid variant added (Panicker et al. 2011, Crossref record); mirrored on SSR-SSVEP-008.'
 status: draft
 contributors:
 - savorcode01

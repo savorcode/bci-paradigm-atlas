@@ -1,0 +1,77 @@
+schema_version: "0.2"
+id: STA-RESP-001
+class: STA-RESP
+name:
+  en: Hyperventilation activation during EEG
+  zh: 脑电检查中的过度换气激发
+aliases:
+- hyperventilation
+- HV activation
+- overbreathing test
+- EEG activation procedure
+family: state
+bci_category:
+- none
+recording_modality:
+- EEG
+stimulus_modality:
+- motor_execution
+markers:
+- MK.slow_wave
+description:
+  en: >-
+    After a resting baseline with eyes closed, the participant breathes deeply and rapidly for a fixed period (typically 3
+    minutes) and then breathes normally during recovery. The fall in arterial carbon dioxide causes cerebral
+    vasoconstriction, and the EEG shows a build-up of high-amplitude slow (theta and delta) activity that resolves after
+    the end of overbreathing; in clinical EEG the procedure is used to provoke absence seizures and other abnormalities.
+  zh: 闭眼静息基线后，被试在固定时长（通常 3 分钟）内深而快地呼吸，随后在恢复期正常呼吸。动脉二氧化碳分压下降引起脑血管收缩，脑电出现高幅慢波（θ、δ）的逐渐增多，过度换气结束后消退；临床脑电用该程序诱发失神发作及其他异常。
+trial_structure:
+  phases:
+  - name: resting baseline (eyes closed)
+    duration_ms: 60000
+  - name: hyperventilation
+    duration_ms: 180000
+    note: 3 min in current clinical practice; the duration used in the first source was not read
+  - name: recovery
+    duration_ms: 60000-120000
+  typical_trials: 1 per recording
+  conditions:
+  - baseline
+  - hyperventilation
+  - recovery
+protocol:
+  n_classes: 3
+  classes:
+  - baseline
+  - hyperventilation
+  - post-hyperventilation recovery
+  cue: verbal instruction by the technologist
+  stimulus_coding: voluntary deep, rapid breathing (hypocapnia)
+  paradigm_timing: block
+  feedback: none
+  distinguishing: >-
+    标准配置（最早发表，即 first_source）：静息基线后标准化过度换气，再恢复，观察脑电慢波增多（Davis 1942）。同类其他具体范式：STA-RESP-002（屏气，记录血流动力学响应，准则 2）。
+first_source:
+  citation: >-
+    Davis H. Factors affecting changes produced in electroencephalogram by standardized hyperventilation. Archives of
+    Neurology and Psychiatry. 1942;47(4):606.
+  doi: 10.1001/archneurpsyc.1942.02290040096005
+  year: 1942
+  verified: false
+interop:
+  bids_task: hyperventilation
+notes: >-
+  [curator_e sprint 7, 2026-10-17] New class from the sprint 7 gap list (Cognitive Atlas trm_4c898a680e424). Closest
+  existing classes: STA-REST (no challenge), PER-RREP (evoked potential to inspiratory occlusion, a respiratory stimulus
+  rather than a breathing manoeuvre) and SSR-SSVEP-003 (clinical photic stimulation, the other standard EEG activation
+  procedure). Origin (D-031): Davis 1942 is the earliest record found that describes a standardised hyperventilation
+  procedure in EEG; the Crossref record lists one author (H. Davis) and a single first page. Hyperventilation was used to
+  provoke seizures before the EEG (1920s, not retrieved). Review: Salvati & Beenhakker 2019 (hyperventilation-triggered
+  seizures, mechanisms; doi:10.1016/j.brainres.2017.12.037). The 3 min duration is current clinical practice (British
+  Society for Clinical Neurophysiology guideline found by web search, no DOI). stimulus_modality motor_execution is the
+  closest taxonomy term for a voluntary breathing manoeuvre. MK.slow_wave (defined for sleep and anaesthesia) is the
+  closest marker for hyperventilation-induced slowing; a dedicated marker is requested in marker_requests.csv. No public
+  dataset verified. bibliography confirmed (Crossref, 2026-10-17).
+status: draft
+contributors:
+- curator_e

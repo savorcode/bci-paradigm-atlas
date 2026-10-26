@@ -1,0 +1,102 @@
+schema_version: '0.2'
+id: MK.prestimulus_alpha_phase
+name:
+  en: Prestimulus alpha phase predicting perception and temporal judgement
+  zh: 刺激前 α 相位对知觉与时间判断的预测
+aliases:
+- prestimulus alpha phase
+- pre-stimulus alpha phase
+- alpha phase dependence
+- perceptual framing by alpha
+- perceptual cycles
+type: oscillatory
+recording_modality:
+- EEG
+- MEG
+signature:
+  latency_ms: phase estimated in the ~0-300 ms before stimulus onset
+  frequency_hz: ~7-13 (one audiovisual study reports ~13)
+  topography: parieto-occipital / occipital
+description:
+  en: Phase of the ongoing alpha-band rhythm at, or shortly before, stimulus onset that predicts the perceptual outcome of
+    the trial. Whether two brief stimuli are seen as simultaneous or as two separate events, and whether a near-threshold
+    stimulus is detected, varies with the prestimulus phase independently of alpha power. It is read out from single-trial
+    phase (for example phase opposition or phase-outcome coupling), not from averaged power.
+  zh: 刺激呈现时或之前不久正在进行的 α 节律的相位，可预测该试次的知觉结果。两个短暂刺激被知觉为同时还是分离的两个事件、阈限附近刺激能否被觉察，都随刺激前相位而变化，且独立于
+    α 功率。该指标由单试次相位（如相位对立、相位—结果耦合）读出，而非平均功率。
+generators:
+- region: BR.visual_cortex
+  evidence: C
+  relation: phase effects are largest over occipital / parieto-occipital sites; the excitability of occipital cortex to TMS
+    (phosphene perception) depends on the alpha phase at the moment of the pulse
+  sources:
+  - citation: 'Mathewson KE, Gratton G, Fabiani M, et al. To see or not to see: prestimulus alpha phase predicts visual awareness.
+      J Neurosci. 2009;29(9):2725-2732.'
+    doi: 10.1523/JNEUROSCI.3963-08.2009
+    year: 2009
+    verified: false
+  - citation: Dugué L, Marqué P, VanRullen R. The phase of ongoing oscillations mediates the causal relation between brain
+      excitation and visual perception. J Neurosci. 2011;31(33):11889-11893.
+    doi: 10.1523/JNEUROSCI.1161-11.2011
+    year: 2011
+    verified: false
+  note: 'method: scalp topography; posterior scalp distribution of the phase effect (Mathewson 2009) and phase-dependent
+    phosphene induction by occipital TMS (Dugué 2011). No source or intracranial study of the phase effect was retrieved,
+    so the grade is capped at C. The generation of alpha itself is covered under MK.alpha_posterior.'
+indexes:
+- construct: CN.perceptual_organization
+  evidence: C
+  relation: two stimuli separated by a short interval are more often perceived as simultaneous (one temporal frame) at one
+    alpha phase and as asynchronous at the opposite phase
+  sources:
+  - citation: Varela FJ, Toro A, John ER, et al. Perceptual framing and cortical alpha rhythm. Neuropsychologia. 1981;19(5):675-686.
+    doi: 10.1016/0028-3932(81)90005-1
+    year: 1981
+    verified: false
+  - citation: Milton A, Pleydell-Pearce CW. The phase of pre-stimulus alpha oscillations influences the visual perception
+      of stimulus timing. NeuroImage. 2016;133:53-61.
+    doi: 10.1016/j.neuroimage.2016.02.065
+    year: 2016
+    verified: false
+  note: Temporal grouping of two flashes into one perceptual frame mapped to CN.perceptual_organization because the construct
+    vocabulary has no temporal-perception construct. First author spelled 'Valera' in the Crossref record of Varela et
+    al. 1981. Independent replication 35 years apart; earlier replication attempts were mixed, hence C.
+- construct: CN.multisensory_integration
+  evidence: C
+  relation: prestimulus phase (~13 Hz, ~200 ms before onset) differs between trials judged synchronous and asynchronous
+    in an audiovisual simultaneity judgement
+  sources:
+  - citation: Ikumi N, Torralba M, Ruzzoli M, et al. The phase of pre-stimulus brain oscillations correlates with cross-modal
+      synchrony perception. Eur J Neurosci. 2019;49(2):150-164.
+    doi: 10.1111/ejn.14186
+    year: 2019
+    verified: false
+  note: Single study; the frequency lies at the upper edge of the alpha band. OpenAlex lists online publication in 2018;
+    the issue is 2019.
+- construct: CN.perceptual_awareness
+  evidence: C
+  relation: detection of near-threshold (masked) visual targets varies with prestimulus alpha phase
+  sources:
+  - citation: 'Mathewson KE, Gratton G, Fabiani M, et al. To see or not to see: prestimulus alpha phase predicts visual awareness.
+      J Neurosci. 2009;29(9):2725-2732.'
+    doi: 10.1523/JNEUROSCI.3963-08.2009
+    year: 2009
+    verified: false
+  note: A second detection study (Busch, Dubois and VanRullen 2009) is widely cited but its record could not be retrieved
+    in this sprint, so the link rests on one retrieved study and stays at C.
+- construct: CN.cortical_excitability
+  evidence: C
+  relation: probability that an occipital TMS pulse evokes a phosphene depends on the alpha phase at pulse time
+  sources:
+  - citation: Dugué L, Marqué P, VanRullen R. The phase of ongoing oscillations mediates the causal relation between brain
+      excitation and visual perception. J Neurosci. 2011;31(33):11889-11893.
+    doi: 10.1523/JNEUROSCI.1161-11.2011
+    year: 2011
+    verified: false
+notes: 'Sprint 7 (2026-10-17, curator_m): new marker approved under D-079, requested by PER-TIME-001 and PER-TIME-002. Distinct
+  from MK.alpha_posterior, which indexes alpha power. Signature values are approximate ranges across the cited studies.
+  Every DOI checked against its Crossref or OpenAlex record (see curation/work/sprint7/markers_new/); verified: false pending
+  full-text check.'
+status: draft
+contributors:
+- curator_m

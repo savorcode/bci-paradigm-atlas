@@ -31,7 +31,7 @@ generators:
     verified: false
   note: 'method: fMRI localization; parahippocampal gyrus/place area is among the most consistent clusters in the fMRI meta-analysis
     of navigation (Boccia 2014) and in reviews of scene and navigation studies (Epstein 2008).'
-- region: BR.precuneus
+- region: BR.retrosplenial
   evidence: B
   sources:
   - citation: 'Boccia M, Nemmi F, Guariglia C. Neuropsychology of environmental navigation in humans: review and meta-analysis
@@ -43,8 +43,8 @@ generators:
     doi: 10.1016/j.tics.2008.07.004
     year: 2008
     verified: false
-  note: 'method: fMRI localization; retrosplenial / medial parietal cortex co-activates with parahippocampal cortex during
-    navigation; mapped to BR.precuneus because no retrosplenial id exists (requested as BR.retrosplenial).'
+  note: 'method: fMRI localization; retrosplenial cortex co-activates with parahippocampal cortex during navigation (Boccia
+    2014; Epstein 2008).'
 indexes:
 - construct: CN.spatial_navigation
   evidence: A
@@ -60,7 +60,7 @@ indexes:
     doi: 10.1038/nn.4656
     year: 2017
     verified: false
-- construct: CN.object_recognition
+- construct: CN.scene_perception
   evidence: B
   relation: responds more strongly to scenes and places than to faces or objects (scene perception)
   sources:
@@ -72,7 +72,6 @@ indexes:
     doi: 10.1016/j.tics.2008.07.004
     year: 2008
     verified: false
-  note: Scene perception mapped to CN.object_recognition; CN.scene_perception requested.
 - construct: CN.visual_imagery
   evidence: C
   relation: imagining places activates the parahippocampal place area selectively

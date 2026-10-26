@@ -1,0 +1,8 @@
+marker,link_type,old_id,new_id,kept_old,note
+MK.BOLD_parahippocampal,generator,BR.precuneus,BR.retrosplenial,no,"retrosplenial co-activation during navigation (Boccia 2014; Epstein 2008); evidence B and sources kept, placeholder sentence removed from note"
+MK.BOLD_parahippocampal,index,CN.object_recognition,CN.scene_perception,no,"scene selectivity of the PPA (Epstein & Kanwisher 1998; Epstein 2008); evidence B and relation kept, placeholder note removed"
+MK.BOLD_olfactory_cortex,generator,BR.amygdala,BR.piriform_cortex,no,"most consistent olfactory cluster is piriform cortex extending into the amygdala (Seubert 2013; Sobel 1998); evidence A kept, note rewritten"
+MK.BOLD_olfactory_cortex,index,CN.mental_imagery,CN.olfactory_imagery,no,"odour imagery activates primary olfactory cortex (Djordjevic 2005); evidence C and relation kept, placeholder note removed"
+MK.BOLD_vestibular_cortex,generator,BR.posterior_insula,BR.PIVC,no,"meta-analyses define core vestibular cortex as OP2 / posterior insula (Lopez 2012; zu Eulenburg 2012); evidence A kept, placeholder sentence removed"
+MK.BOLD_vestibular_cortex,index,CN.multisensory_integration,CN.vestibular_perception,no,"vestibular stimulation activates vestibular cortex (Bense 2001; Lopez 2012); evidence B and relation kept, placeholder note removed"
+MK.ABR,generator,(none),BR.auditory_brainstem,n/a,"new generator for waves I-III, evidence B (intracranial; Møller & Jannetta 1981, 1983; Hashimoto 1981, same sources as wave V); BR.inferior_colliculus kept for wave V, its note now points to the new id"

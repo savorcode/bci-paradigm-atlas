@@ -1,0 +1,94 @@
+schema_version: '0.2'
+id: EMO-CREAC-001
+class: EMO-CREAC
+name:
+  en: Drug cue reactivity (open loop)
+  zh: 成瘾物质线索反应（开环）
+aliases:
+- cue reactivity
+- cue-reactivity paradigm
+- drug cue exposure
+- cue-elicited craving
+- smoking cue reactivity
+- alcohol cue reactivity
+family: emotion
+bci_category:
+- passive
+recording_modality:
+- PET
+- fMRI
+- EEG
+stimulus_modality:
+- visual
+- naturalistic
+markers:
+- MK.BOLD_striatum_reward
+- MK.LPP
+- MK.P3b
+description:
+  en: People who use a drug (for example cocaine, nicotine or alcohol) are exposed to drug-related cues such as pictures,
+    videos or paraphernalia and to matched neutral cues, and rate their craving. Brain responses to drug cues are compared
+    with responses to neutral cues; there is no feedback. Drug cues increase activity in limbic, striatal and prefrontal
+    regions that tracks reported craving, and enlarge the P3 and late positive potential in the EEG.
+  zh: 物质使用者（如可卡因、尼古丁或酒精使用者）观看与该物质相关的线索（图片、录像或用具）以及匹配的中性线索，并评定渴求程度。比较物质线索与中性线索引起的脑反应，试次中不给反馈。物质线索使边缘系统、纹状体和前额叶活动增强，且与自评渴求相关；在脑电上表现为
+    P3 和晚期正电位增大。
+trial_structure:
+  phases:
+  - name: rest baseline
+    duration_ms: 132000
+    note: crosshair fixation at the start of each run (picture-block protocol of Li et al. 2013, cue runs)
+  - name: cue block
+    duration_ms: 22000
+    note: five pictures of one type (drug or neutral), 4400 ms each
+  - name: craving rating
+    duration_ms: 4000
+  - name: rest block
+    duration_ms: 22000
+    note: crosshair
+  typical_trials: about 5 drug and 5 neutral blocks per 10-min run
+  conditions:
+  - drug cue
+  - neutral cue
+  - rest
+protocol:
+  n_classes: 2
+  classes:
+  - drug-related cue
+  - neutral cue
+  cue: drug-related versus neutral pictures, videos or objects
+  stimulus_coding: block or event-related presentation of cue categories
+  paradigm_timing: block
+  feedback: none
+  distinguishing: '标准配置（最早发表，即 first_source）：物质使用者观看成瘾物质相关线索与中性线索并评定渴求，开环、无反馈（Grant et al. 1996，PET，可卡因线索）。同类其他具体范式：EMO-CREAC-002
+    在相同线索组块后给出渴求相关脑区活动的神经反馈（准则 4）。'
+first_source:
+  citation: 'Grant S, London ED, Newlin DB, Villemagne VL, Liu X, Contoreggi C, Phillips RL, Kimes AS, Margolin A. Activation
+    of memory circuits during cue-elicited cocaine craving. Proc Natl Acad Sci U S A. 1996;93(21):12040-12045.'
+  doi: 10.1073/pnas.93.21.12040
+  year: 1996
+  verified: false
+variants:
+- name: Cue category (smoking, alcohol, cocaine, heroin cues)
+  source:
+    citation: Carter BL, Tiffany ST. Meta-analysis of cue-reactivity in addiction research. Addiction. 1999;94(3):327-340.
+    doi: 10.1046/j.1360-0443.1999.9433273.x
+    year: 1999
+    verified: false
+  note: Parameter-level change of the substance depicted within the same drug-cue versus neutral-cue design; the meta-analysis
+    pools 41 studies across alcohol, heroin and cocaine (and smoking) cue reactivity.
+interop:
+  bids_task: cuereactivity
+notes: 'earliest seen; origin not established. Grant et al. 1996 (Crossref record) is the earliest neural recording of the
+  drug-cue versus neutral-cue design found in this round (PET, cocaine-related stimuli); behavioural and peripheral-physiological
+  cue-reactivity studies are older, as shown by the 41 studies pooled in Carter & Tiffany 1999 (Crossref record), and the
+  first laboratory cue-exposure procedure has not been identified (D-031: weak_origin). Trial timing is taken from the cue
+  runs of the picture-block protocol in Li et al. 2013 (Addiction Biology, doi:10.1111/j.1369-1600.2012.00449.x; see EMO-CREAC-002)
+  as a standard fMRI configuration; durations vary widely across studies. MK.LPP and MK.P3b: enhanced P3/LPP to substance
+  cues is reported in an ERP meta-analysis (Littel 2012 doctoral thesis, Erasmus University; no DOI, not cited as a source);
+  MK.BOLD_striatum_reward is the closest registry marker for the striatal and orbitofrontal cue response. Food-cue reactivity
+  in non-addicted participants (palatable versus non-food pictures; public set OpenfMRI ds000157, 30 participants) is a candidate
+  further concrete paradigm (criterion 1/2) once its first source is retrieved. [curator_e sprint 7, 2026-10-17] bibliography
+  confirmed (Crossref, 2026-10-17).'
+status: draft
+contributors:
+- curator_e

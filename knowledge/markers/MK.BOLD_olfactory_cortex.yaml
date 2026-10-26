@@ -19,7 +19,7 @@ notes: 'Signature values are textbook-level characteristics and await source che
   to be added in the second pass. Sprint 6 (2026-10-16, curator J): generators and indexes curated; every DOI checked against
   its Crossref or OpenAlex record (see curation/work/sprint6/markers_J/); verified: false pending full-text check.'
 generators:
-- region: BR.amygdala
+- region: BR.piriform_cortex
   evidence: A
   sources:
   - citation: Seubert J, Freiherr J, Djordjevic J, et al. Statistical localization of human olfactory cortex. Neuroimage.
@@ -33,8 +33,7 @@ generators:
     year: 1998
     verified: false
   note: 'method: fMRI localization; measured region; the olfactory meta-analysis places the most consistent cluster in piriform
-    cortex extending into the amygdala (Seubert et al. 2013; see also Sobel et al. 1998). Piriform cortex has no region id,
-    so the adjacent BR.amygdala is used (see vocab requests).'
+    cortex extending into the amygdala (Seubert et al. 2013; see also Sobel et al. 1998).'
 - region: BR.OFC_lateral
   evidence: A
   sources:
@@ -70,7 +69,7 @@ indexes:
     doi: 10.1038/32654
     year: 1998
     verified: false
-- construct: CN.mental_imagery
+- construct: CN.olfactory_imagery
   evidence: C
   relation: activation in primary olfactory cortex increases during odour imagery without an odour stimulus
   sources:
@@ -78,7 +77,6 @@ indexes:
     doi: 10.1016/j.neuroimage.2004.09.035
     year: 2005
     verified: false
-  note: No olfactory-imagery construct exists; root CN.mental_imagery is used (see vocab requests).
 status: draft
 contributors:
 - curator_b

@@ -1,0 +1,281 @@
+# Sprint 7, group Q2: new paradigm classes for the maintainer to merge into paradigms/_classes.yaml. 2026-10-17.
+# 冲刺 7 Q2 组新增范式类，待维护者合入 paradigms/_classes.yaml。
+# Contributors: curator_a (perception), curator_b (steady_state, stimulation), curator_e (state).
+- id: PER-MUSAT
+  name:
+    en: Selective attention to one instrument in polyphonic music
+    zh: 复调音乐中的乐器选择性注意
+  family: perception
+  description:
+    en: >-
+      The listener hears polyphonic music with several concurrent instruments and attends to one instrument named by a
+      cue. The attended instrument is decoded from the EEG, either from ERPs (P300 and earlier auditory components) to
+      deviant patterns embedded in each instrument stream, or from tracking of the attended instrument's audio envelope
+      in continuous music. Used for music-based auditory BCIs.
+    zh: >-
+      被试聆听多件乐器同时演奏的复调音乐，注意提示所指定的一件乐器。被注意的乐器从脑电中解码：或依据各乐器声部中嵌入的偏差乐句所诱发的 ERP（P300 及更早的听觉成分），或依据连续音乐中对被注意乐器音频包络的追踪。用于基于音乐的听觉 BCI。
+  markers:
+  - MK.P3b
+  - MK.speech_envelope_tracking
+  first_source:
+    citation: >-
+      Treder MS, Purwins H, Miklody D, Sturm I, Blankertz B. Decoding auditory attention to instruments in polyphonic
+      music using single-trial EEG classification. Journal of Neural Engineering. 2014;11(2):026009.
+    doi: 10.1088/1741-2560/11/2/026009
+    year: 2014
+    verified: false
+  aliases:
+  - music BCI
+  - multi-streamed oddball in polyphonic music
+  - attention to instruments in polyphonic music
+  - musical oddball BCI
+  - MAD-EEG
+  - music auditory attention decoding
+  notes: '[curator_a sprint 7, 2026-10-17] Concrete paradigms: PER-MUSAT-001 (multi-streamed musical oddball, Treder
+    et al. 2014), PER-MUSAT-002 (continuous polyphonic music, envelope-based decoding, MAD-EEG, Cantisani et al. 2019).
+    Closest existing class PER-AAD (concurrent speech). MK.speech_envelope_tracking is a placeholder for music-envelope
+    tracking (marker request). bibliography confirmed (Crossref, 2026-10-17).'
+  status: draft
+  contributors:
+  - curator_a
+- id: PER-FBA
+  name:
+    en: Feature-based attention
+    zh: 基于特征的注意
+  family: perception
+  description:
+    en: >-
+      Attention is directed to a visual feature (such as a colour or a direction of motion) rather than to a location.
+      Two feature-defined populations (for example red and blue dots, or two dot surfaces rotating in opposite
+      directions) occupy the same region and flicker at different frequencies; attending to one feature increases the
+      SSVEP at that population's frequency, which also allows a gaze-independent BCI with spatially overlapping targets.
+    zh: >-
+      注意指向某一视觉特征（如颜色或运动方向）而不是位置。两个以特征区分的刺激群（如红点与蓝点，或反向旋转的两个点面）占据同一区域并以不同频率闪烁；注意某一特征使该刺激群频率上的
+      SSVEP 增大，据此可构建目标在空间上重叠、不依赖注视的 BCI。
+  markers:
+  - MK.SSVEP
+  first_source:
+    citation: >-
+      Müller MM, Andersen S, Trujillo NJ, Valdés-Sosa P, Malinowski P, Hillyard SA. Feature-selective attention enhances
+      color signals in early visual areas of the human brain. Proceedings of the National Academy of Sciences.
+      2006;103(38):14250-14254.
+    doi: 10.1073/pnas.0606668103
+    year: 2006
+    verified: false
+  aliases:
+  - feature-based attention
+  - feature-selective attention
+  - colour-selective attention
+  - overlapping dot fields SSVEP
+  - non-spatial visual attention BCI
+  notes: '[curator_a sprint 7, 2026-10-17] Concrete paradigms: PER-FBA-001 (overlapping red/blue dot fields, offline,
+    Müller et al. 2006), PER-FBA-002 (online BCI with two superimposed counter-rotating surfaces, Zhang et al. 2010).
+    Closest existing classes PER-CVA and PER-CUE (spatial attention). Origin to review: Saenz, Buracas & Boynton 2002
+    (fMRI, overlapping dot fields, doi:10.1038/nn876) is earlier; animal origin not retrieved. bibliography confirmed
+    (Crossref, 2026-10-17).'
+  status: draft
+  contributors:
+  - curator_a
+- id: PER-SURR
+  name:
+    en: Visual surround suppression
+    zh: 视觉周边抑制
+  family: perception
+  description:
+    en: >-
+      The response to a central or foreground visual stimulus is measured with and without a surrounding pattern whose
+      contrast and orientation relation to the foreground are varied. A high-contrast surround reduces the perceived
+      contrast of the centre and the SSVEP at the foreground flicker frequency, most strongly when the surround matches
+      the foreground, indexing contextual suppression in visual cortex.
+    zh: 在有/无周边图案的条件下测量中央（前景）视觉刺激的响应，并改变周边对比度及其与前景的方向关系。高对比度周边降低中央的知觉对比度和前景闪烁频率上的 SSVEP，且周边与前景相同时降低最多，反映视皮层的情境抑制。
+  markers:
+  - MK.SSVEP
+  first_source:
+    citation: >-
+      Chubb C, Sperling G, Solomon JA. Texture interactions determine perceived contrast. Proceedings of the National
+      Academy of Sciences. 1989;86(23):9631-9635.
+    doi: 10.1073/pnas.86.23.9631
+    year: 1989
+    verified: false
+  aliases:
+  - surround suppression
+  - contrast surround suppression
+  - centre-surround suppression
+  - surroundSupp
+  notes: '[curator_a sprint 7, 2026-10-17] Class origin behavioural (D-031): Chubb et al. 1989, perceived-contrast
+    matching. First neural recording: Vanegas MI, Blangero A, Kelly SP. Electrophysiological indices of surround
+    suppression in humans. J Neurophysiol 2015;113(4):1100-1109 (doi:10.1152/jn.00774.2014), the first source of
+    PER-SURR-001. Public data: Healthy Brain Network EEG (OpenNeuro ds005505 and later releases). bibliography
+    confirmed (Crossref, 2026-10-17).'
+  status: draft
+  contributors:
+  - curator_a
+- id: PER-TONIC
+  name:
+    en: Tonic pain (cold pressor, sustained heat, capsaicin)
+    zh: 持续性疼痛（冷加压、持续热刺激、辣椒素）
+  family: perception
+  description:
+    en: >-
+      A painful stimulus is maintained for minutes, for example by immersing a hand in ice water or by applying sustained
+      contact heat, and the ongoing pain is rated or simply endured. Brain activity is analysed as a sustained state
+      (band power such as prefrontal gamma and alpha suppression, or insular and cingulate BOLD) rather than as phasic
+      evoked responses, and is used for objective pain-state decoding.
+    zh: 疼痛刺激持续数分钟，如将手浸入冰水或施加持续的接触热刺激，被试对持续疼痛进行评分或只是忍受。脑活动作为持续状态分析（如前额 γ 功率与 α 抑制等频段功率，或岛叶、扣带回 BOLD），而不是作为阶段性诱发响应，用于客观的疼痛状态解码。
+  markers:
+  - MK.gamma_power
+  - MK.BOLD_anterior_insula
+  first_source:
+    citation: >-
+      Hines EA, Brown GE. The cold pressor test for measuring the reactibility of the blood pressure: data concerning 571
+      normal and hypertensive subjects. American Heart Journal. 1936;11(1):1-9.
+    doi: 10.1016/S0002-8703(36)90370-8
+    year: 1936
+    verified: false
+  aliases:
+  - tonic pain
+  - cold pressor test
+  - CPT
+  - ice-water immersion
+  - tonic heat pain
+  - sustained pain
+  notes: '[curator_a sprint 7, 2026-10-17] Concrete paradigms: PER-TONIC-001 (cold pressor, Hines & Brown 1936),
+    PER-TONIC-002 (10 min tonic heat with continuous rating, Schulz et al. 2015). Origin is a cardiovascular test
+    (D-031); first neural recording not established. Closest existing classes PER-LEP (phasic) and SSR-NSSEP
+    (periodic). Capsaicin configuration not yet sourced. bibliography confirmed (OpenAlex, Crossref, 2026-10-17).'
+  status: draft
+  contributors:
+  - curator_a
+- id: PER-SMMN
+  name:
+    en: Somatosensory mismatch negativity
+    zh: 体感失匹配负波
+  family: perception
+  description:
+    en: >-
+      Frequent standard tactile stimuli (vibrotactile or electrical) are interrupted by infrequent deviants that differ in
+      stimulation site, vibration frequency, duration or intensity, while the participant ignores them. Deviants elicit a
+      mismatch response over somatosensory and fronto-central areas at about 100-250 ms, the tactile counterpart of the
+      auditory and visual MMN.
+    zh: 在高频出现的标准触觉刺激（振动或电刺激）中插入在刺激部位、振动频率、时长或强度上不同的低频偏差刺激，被试忽略刺激。偏差刺激在体感区与额中央区约 100–250 ms 诱发失匹配响应，是听觉与视觉 MMN 的触觉对应物。
+  markers:
+  - MK.MMN
+  first_source:
+    citation: >-
+      Kekoni J, Hämäläinen H, Saarinen M, Gröhn J, Reinikainen K, Lehtokoski A, Näätänen R. Rate effect and mismatch
+      responses in the somatosensory system: ERP-recordings in humans. Biological Psychology. 1997;46(2):125-142.
+    doi: 10.1016/S0301-0511(97)05249-6
+    year: 1997
+    verified: false
+  aliases:
+  - somatosensory mismatch negativity
+  - sMMN
+  - tactile MMN
+  - vibrotactile oddball (passive)
+  notes: '[curator_a sprint 7, 2026-10-17] Concrete paradigm: PER-SMMN-001 (vibrotactile oddball, Kekoni et al. 1997).
+    Separate class by the PER-VMMN precedent (D-041); becomes a PER-MMN concrete paradigm if draft D-060 is applied
+    instead (proposals.csv). MK.MMN is a placeholder; MK.sMMN requested. bibliography confirmed (Crossref, 2026-10-17).'
+  status: draft
+  contributors:
+  - curator_a
+- id: SSR-BINB
+  name:
+    en: Binaural beat stimulation
+    zh: 双耳拍频刺激
+  family: steady_state
+  description:
+    en: >-
+      Two pure tones with a small frequency difference are presented separately to the two ears, so that a beat at the
+      difference frequency arises only from binaural interaction in the brain. EEG is analysed for a steady-state
+      response or a change in power at the beat frequency, compared with monaural beats or carriers alone; evidence that
+      binaural beats entrain ongoing oscillations is inconsistent.
+    zh: 向两耳分别呈现频率略有差异的两个纯音，差频处的拍只由脑内的双耳交互产生。分析脑电在拍频处的稳态响应或功率变化，并与单耳拍或仅载波对照比较；双耳拍能否夹带进行中振荡的证据并不一致。
+  markers:
+  - MK.ASSR
+  first_source:
+    citation: 'Oster G. Auditory beats in the brain. Scientific American. 1973;229(4):94-102.'
+    doi: 10.1038/scientificamerican1073-94
+    year: 1973
+    verified: false
+  aliases:
+  - binaural beats
+  - binaural beat entrainment
+  - dichotic beat stimulation
+  notes: '[curator_b sprint 7, 2026-10-17] Concrete paradigm: SSR-BINB-001. Oster 1973 is a magazine article used as the
+    standard reference (weak_origin candidate). Neural recording reference: Schwarz & Taylor 2005
+    (doi:10.1016/j.clinph.2004.09.014). Systematic review: Ingendoh, Posny & Heine 2023 (doi:10.1371/journal.pone.0286023).
+    Closest existing class SSR-ASSR. bibliography confirmed (Crossref, 2026-10-17).'
+  status: draft
+  contributors:
+  - curator_b
+- id: STM-TACEP
+  name:
+    en: Mechanical tactile evoked potentials
+    zh: 机械触觉诱发电位
+  family: stimulation
+  description:
+    en: >-
+      Brief mechanical stimuli without electric current (electromechanical taps, skin indentation, air jets or air puffs)
+      are applied to the skin of the fingers, hand, face or other sites, and the averaged cortical responses are
+      recorded. Mechanically evoked responses are smaller and later than those to electrical nerve stimulation because
+      only cutaneous mechanoreceptors are activated; pneumatic stimulation is also used for somatotopic mapping in MEG and
+      fMRI.
+    zh: 以不含电流的短暂机械刺激（电磁叩击、皮肤压陷、气流喷射或气压脉冲）刺激手指、手、面部或其他部位的皮肤，记录平均皮层响应。因只激活皮肤机械感受器，机械诱发响应较电刺激神经时小、潜伏期较长；气动刺激也用于 MEG 和 fMRI 的躯体定位。
+  markers:
+  - MK.N140_somatosensory
+  first_source:
+    citation: >-
+      Larsson LE, Prevec TS. Somato-sensory response to mechanical stimulation as recorded in the human EEG.
+      Electroencephalography and Clinical Neurophysiology. 1970;28(2):162-172.
+    doi: 10.1016/0013-4694(70)90184-7
+    year: 1970
+    verified: false
+  aliases:
+  - mechanical somatosensory evoked potentials
+  - tactile evoked potentials
+  - tap-evoked SEP
+  - air-puff stimulation
+  - air-jet stimulation
+  - pneumatic tactile stimulation
+  notes: '[curator_b sprint 7, 2026-10-17] Concrete paradigms: STM-TACEP-001 (mechanical taps, Larsson & Prevec 1970),
+    STM-TACEP-002 (air-jet, Schieppati & Ducati 1984). Closest existing class STM-SEP (electrical, MK.SEP_N20); may be
+    placed under STM-SEP instead if D-060 is applied (proposals.csv). bibliography confirmed (Crossref, 2026-10-17).'
+  status: draft
+  contributors:
+  - curator_b
+- id: STA-RESP
+  name:
+    en: Respiratory challenge (hyperventilation, breath-hold)
+    zh: 呼吸激发（过度换气、屏气）
+  family: state
+  description:
+    en: >-
+      A voluntary breathing manoeuvre changes arterial carbon dioxide and thereby cerebral blood flow and brain state.
+      Hyperventilation (hypocapnia) is a standard clinical-EEG activation procedure that produces a build-up of slow
+      activity and can provoke seizures; breath holding (hypercapnia) is a standard fMRI test of cerebrovascular
+      reactivity that produces a widespread BOLD increase.
+    zh: 通过有意的呼吸动作改变动脉二氧化碳，从而改变脑血流与脑状态。过度换气（低碳酸血症）是临床脑电的标准激发程序，使慢波逐渐增多并可诱发发作；屏气（高碳酸血症）是 fMRI 检测脑血管反应性的标准试验，使 BOLD 信号广泛升高。
+  markers:
+  - MK.slow_wave
+  - MK.HbO_prefrontal
+  first_source:
+    citation: >-
+      Davis H. Factors affecting changes produced in electroencephalogram by standardized hyperventilation. Archives of
+      Neurology and Psychiatry. 1942;47(4):606.
+    doi: 10.1001/archneurpsyc.1942.02290040096005
+    year: 1942
+    verified: false
+  aliases:
+  - hyperventilation
+  - HV activation
+  - overbreathing test
+  - breath-hold task
+  - breath holding
+  - cerebrovascular reactivity mapping
+  notes: '[curator_e sprint 7, 2026-10-17] Concrete paradigms: STA-RESP-001 (hyperventilation EEG, Davis 1942),
+    STA-RESP-002 (breath-hold fMRI, Kastrup et al. 1998). Both markers are closest placeholders (marker requests for
+    hyperventilation-induced slowing and cerebrovascular reactivity). Reviews: Salvati & Beenhakker 2019; Urback et al.
+    2017. bibliography confirmed (Crossref, 2026-10-17).'
+  status: draft
+  contributors:
+  - curator_e

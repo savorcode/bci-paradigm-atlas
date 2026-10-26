@@ -1,0 +1,87 @@
+schema_version: "0.2"
+id: PER-SURR-001
+class: PER-SURR
+name:
+  en: Centre-surround SSVEP surround suppression
+  zh: 中央–周边 SSVEP 周边抑制
+aliases:
+- surround suppression
+- contrast surround suppression
+- centre-surround suppression
+- surroundSupp
+family: perception
+bci_category:
+- none
+recording_modality:
+- EEG
+stimulus_modality:
+- visual
+markers:
+- MK.SSVEP
+description:
+  en: >-
+    Flickering foreground patches (for example peripheral disks of a grating) are shown with or without a surrounding
+    background pattern, and the contrast of the foreground and the relation between foreground and surround (for example
+    parallel or orthogonal orientation) are varied while the participant fixates. The SSVEP at the foreground flicker
+    frequency is reduced when a high-contrast surround is present, most strongly when the surround matches the foreground,
+    giving an electrophysiological index of contextual (surround) suppression.
+  zh: >-
+    呈现闪烁的前景区域（如外周的光栅圆盘），带或不带周围背景图案，并在被试注视中央时改变前景对比度及前景与周边的关系（如方向平行或正交）。存在高对比度周边时，前景闪烁频率上的
+    SSVEP 降低，且周边与前景相同时降低最多，构成情境（周边）抑制的电生理指标。
+trial_structure:
+  phases:
+  - name: fixation and flicker
+    note: foreground flicker at a fixed frequency (25 Hz in the Healthy Brain Network implementation); trial durations not
+      read in the first source
+  - name: run
+    duration_ms: about 216000
+    note: Healthy Brain Network implementation, two runs of about 3.6 min each
+  conditions:
+  - no surround
+  - surround parallel to foreground
+  - surround orthogonal to foreground
+  - foreground contrast levels
+protocol:
+  n_classes: 3
+  classes:
+  - no surround
+  - parallel surround
+  - orthogonal surround
+  cue: none (passive viewing with fixation)
+  stimulus_coding: frequency-tagged flickering foreground; surround present or absent with varied orientation relation and
+    foreground contrast
+  paradigm_timing: synchronous
+  feedback: none
+  distinguishing: >-
+    标准配置（最早发表的脑电配置，即 first_source）：闪烁的前景配以有/无周边背景，改变前景对比度及前景与周边的方向关系，以前景频率上的 SSVEP 度量周边抑制（Vanegas et al. 2015）。范式类源头 Chubb
+    et al. 1989 为行为学对比度匹配任务，未单列具体范式（见 notes）。
+first_source:
+  citation: >-
+    Vanegas MI, Blangero A, Kelly SP. Electrophysiological indices of surround suppression in humans. Journal of
+    Neurophysiology. 2015;113(4):1100-1109.
+  doi: 10.1152/jn.00774.2014
+  year: 2015
+  verified: false
+datasets:
+- name: HBN-EEG (Healthy Brain Network EEG), Release 1, surround suppression task (OpenNeuro ds005505; further releases
+    on OpenNeuro and NEMAR)
+  url: https://openneuro.org/datasets/ds005505
+  identifier: ds005505
+interop:
+  bids_task: surroundSupp
+notes: >-
+  [curator_a sprint 7, 2026-10-17] New class from the sprint 7 gap list (OpenNeuro, Healthy Brain Network task set).
+  Closest existing class SSR-SSVEP (no surround manipulation); PER-CROWD concerns identification of flanked targets, not
+  contrast suppression. Class origin (D-031): Chubb, Sperling & Solomon 1989 (behavioural; perceived contrast of a central
+  texture reduced by a high-contrast surround; doi:10.1073/pnas.86.23.9631). First neural recording of this configuration
+  taken as Vanegas et al. 2015 (the earliest scalp EEG study found; earlier neural work not searched). The HBN task is
+  described in Langer et al. 2017 (doi:10.1038/sdata.2017.40) and in the HBN-EEG preprint (Shirazi et al. 2024,
+  doi:10.1101/2024.10.03.615261): four flashing peripheral disks on a contrasting background, 25 Hz, two runs of about
+  3.6 min, factors stimulus condition, foreground contrast and background presence. The class set above (no / parallel /
+  orthogonal surround) follows that factor structure and should be checked against the full text of Vanegas et al. 2015.
+  ds005505 was identified as an HBN-EEG release on its NEMAR page; the OpenNeuro page could not be rendered, so the
+  release-to-task mapping is unchecked. bibliography confirmed (Crossref, 2026-10-17; OpenAlex for Langer 2017 and
+  Shirazi 2024).
+status: draft
+contributors:
+- curator_a

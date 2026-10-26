@@ -1,0 +1,71 @@
+schema_version: '0.2'
+id: EMO-FRUST-002
+class: EMO-FRUST
+name:
+  en: Frustrating game with ignored input (Affective Pacman)
+  zh: 输入被随机忽略的挫折游戏（Affective Pacman）
+aliases:
+- Affective Pacman
+- AffPac
+- loss of control frustration
+family: emotion
+bci_category:
+- passive
+recording_modality:
+- EEG
+stimulus_modality:
+- visual
+- motor_execution
+- naturalistic
+markers:
+- MK.affective_band_power
+- MK.SMR_ERD
+description:
+  en: Participants play a Pacman game in which left and right index-finger key presses turn the moving Pacman by 90 degrees.
+    In frustration blocks a proportion of the key presses is randomly ignored, so the game lags and control is lost; normal
+    blocks respond to every press. Valence, arousal and dominance are self-rated between blocks. EEG is compared between frustration
+    and normal blocks, both as an affective state and as a source of change in movement-related (ERD) BCI features.
+  zh: 被试玩 Pacman 游戏，以左、右食指按键使持续移动的 Pacman 转向 90°。在挫折组块中，部分按键被随机忽略，游戏迟滞、失去控制；正常组块中每次按键都有响应。组块之间自评效价、唤醒度和支配感。比较挫折组块与正常组块的脑电，既作为情绪状态，也考察其对运动相关（ERD）脑机接口特征的影响。
+trial_structure:
+  phases:
+  - name: normal game block
+  - name: frustration game block
+    note: key presses randomly ignored
+  - name: self-assessment
+    note: valence, arousal and dominance ratings
+  conditions:
+  - normal control
+  - frustration (ignored input)
+protocol:
+  n_classes: 2
+  classes:
+  - normal game play
+  - frustration (input randomly ignored)
+  cue: interactive game display
+  stimulus_coding: block-wise manipulation of input reliability
+  paradigm_timing: block
+  feedback: continuous
+  distinguishing: '与 EMO-FRUST-001（标准配置：奖励缺失）相比，挫折由游戏中随机忽略玩家输入造成（准则 2：刺激类型为交互游戏），组块设计（准则 3），游戏画面即连续反馈（准则 4）。'
+first_source:
+  citation: 'Reuderink B, Nijholt A, Poel M. Affective Pacman: a frustrating game for brain-computer interface experiments.
+    In: Intelligent Technologies for Interactive Entertainment (INTETAIN 2009). Lecture Notes of the Institute for Computer
+    Sciences, Social Informatics and Telecommunications Engineering. 2009:221-227.'
+  doi: 10.1007/978-3-642-02315-6_23
+  year: 2009
+  verified: false
+datasets:
+- name: BNCI Horizon 2020 database 007-2014, Affective Pacman (AffPac)
+  url: https://lampx.tugraz.at/~bci/database/007-2014/description.pdf
+  subjects: 10
+interop:
+  bids_task: affectivepacman
+notes: 'Game, manipulation and self-report design taken from the BNCI 007-2014 dataset description (Reuderink 2014), which
+  cites Reuderink et al. 2009 (Crossref record) as the paradigm paper and Reuderink, Poel & Nijholt 2011 (IEEE TNSRE 19(6):628-637,
+  doi:10.1109/TNSRE.2011.2166562, Crossref record) for the effect of loss of control on movement BCIs. The description gives
+  no block durations, so phase durations are left empty. 12 participants were recorded; 10 are in the public release. 32-channel
+  EEG plus EOG, EMG and physiology at 512 Hz. MK.affective_band_power is the closest registry marker for the frustration
+  state; MK.SMR_ERD is the movement-BCI feature studied in the 2011 paper. [curator_e sprint 7, 2026-10-17] bibliography
+  confirmed (Crossref, 2026-10-17).'
+status: draft
+contributors:
+- curator_e

@@ -1,0 +1,75 @@
+schema_version: '0.2'
+id: MOT-SATT-001
+class: MOT-SATT
+name:
+  en: Self-delivered versus externally delivered stimuli (auditory and visual evoked potentials)
+  zh: 自给与外给刺激对比（听觉、视觉诱发电位）
+aliases:
+- sensory attenuation
+- self-generated sound suppression
+- motor-auditory N1 suppression
+- self-initiated versus externally initiated tones
+- action-effect attenuation
+family: motor
+bci_category:
+- none
+recording_modality:
+- EEG
+- MEG
+stimulus_modality:
+- auditory
+- visual
+- motor_execution
+markers:
+- MK.N1_auditory
+- MK.P2_auditory
+description:
+  en: Participants deliver brief clicks (or flashes) to themselves by pressing a button, and in a separate condition the same
+    stimuli are delivered by the apparatus with the same timing. Evoked potentials to self-delivered stimuli are smaller than
+    to externally delivered ones, and the difference (sensory attenuation, mainly of the N1-P2 complex for sounds) is taken
+    as a sign that the brain predicts the sensory consequences of its own actions.
+  zh: 被试按键给自己呈现短促的咔嗒声（或闪光）；在另一条件中，由仪器以相同时序呈现同样的刺激。自给刺激诱发的电位小于外给刺激（对声音主要是 N1–P2 复合波），这一差异（感觉衰减）被视为大脑预测自身动作感觉后果的表现。
+trial_structure:
+  phases:
+  - name: self-delivered block
+    note: participant presses a button that triggers the stimulus
+  - name: externally delivered block
+    note: the same stimuli are delivered by the apparatus at the timing of the participant's presses
+  conditions:
+  - self-delivered stimuli
+  - externally delivered stimuli
+protocol:
+  n_classes: 2
+  classes:
+  - self-delivered
+  - externally delivered
+  cue: clicks or light flashes triggered by the participant's button press or by the apparatus
+  stimulus_coding: identical stimuli, contrasted by who initiates them
+  paradigm_timing: block
+  feedback: none
+  distinguishing: 标准配置（最早发表，即 first_source）：同样的短促声/闪光由被试按键自给或由仪器以相同时序外给，比较两者的诱发电位（Schafer & Marcus 1973）。
+first_source:
+  citation: Schafer EWP, Marcus MM. Self-stimulation alters human sensory brain responses. Science. 1973;181(4095):175-177.
+  doi: 10.1126/science.181.4095.175
+  year: 1973
+  verified: false
+interop:
+  bids_task: selfgenerated
+notes: '[curator_b sprint 7, 2026-10-17] New class from the sprint 7 gap list (rank 14; Cognitive Atlas "sensory attenuation").
+  Overlap check: MOT-IB (intentional binding) also lists N1 attenuation to self-caused tones, but its construct is the perceived
+  timing of action and outcome (Libet-clock or interval judgements), whereas this class contrasts self- and externally initiated
+  stimuli without a timing judgement; LAN-SIS covers the speech-specific case (speaking-induced suppression) and PER-OMIT
+  the response to an expected but omitted self-triggered sound. Kept as a separate class because the construct (sensory
+  prediction of action effects) and the comparison differ; the maintainer may prefer to treat MOT-IB and MOT-SATT as siblings
+  under one class. first_source: Schafer & Marcus 1973 (only the title and the bibliographic record were read; the click and
+  flash conditions follow the usual description of this study and must be checked against the article). Key reference:
+  Hughes, Desantis & Waszak 2013 (Psychol Bull, doi 10.1037/a0028566), a review of the mechanisms of intentional binding
+  and sensory attenuation, cited for the distinction between the two effects (record only). Exact stimulus timing of the original was
+  not read. A tactile configuration exists: self-produced versus externally produced touch (Blakemore, Wolpert & Frith
+  1998, Nat Neurosci, doi 10.1038/2870; fMRI, reduced somatosensory cortex response); it would be MOT-SATT-002 by criterion
+  2 (D-060), but no registry marker fits its haemodynamic finding (see marker_requests), so it is not built this sprint.
+  The modern contingent design with a motor-only control condition (motor-auditory, auditory-only, motor-only) is the usual
+  protocol in EEG studies and may need its own number once a source is retrieved. bibliography confirmed (Crossref, 2026-10-17)'
+status: draft
+contributors:
+- curator_b

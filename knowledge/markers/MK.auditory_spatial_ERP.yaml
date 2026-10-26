@@ -1,0 +1,113 @@
+schema_version: '0.2'
+id: MK.auditory_spatial_ERP
+name:
+  en: Location-specific auditory cortical response (sound location processing)
+  zh: 声源位置特异的听觉皮层响应
+aliases:
+- auditory spatial ERP
+- location MMN
+- spatial MMN
+- N1 location adaptation
+- N1 release from adaptation by spatial separation
+- ITD-change response
+type: erp_component
+recording_modality:
+- EEG
+- MEG
+signature:
+  latency_ms: ~100-250 (N1/P2 effects ~100-200; location MMN ~100-200 after change onset)
+  polarity: N1 more negative and MMN negative with larger spatial separation or location change
+  topography: fronto-central at the scalp; sources in posterior superior temporal gyrus / planum temporale
+description:
+  en: Auditory cortical evoked responses whose amplitude depends on sound location. It covers (1) the N1/P2 to a sound whose
+    amplitude recovers from adaptation as its location (or interaural time difference) differs more from the preceding
+    sound, (2) the mismatch negativity to infrequent changes in sound location, which grows with the size of the change,
+    and (3) the spatial gradient of attention effects on these components. Location-specific responses are generated
+    mainly in posterior auditory cortex (planum temporale, posterior superior temporal gyrus), the putative auditory 'where'
+    pathway.
+  zh: 波幅随声源位置变化的听皮层诱发响应。包括：（1）N1/P2——当前声音与前一个声音的位置（或双耳时间差）差异越大，其从适应中恢复的波幅越大；（2）对低频声源位置变化的失匹配负波，其波幅随位置变化幅度增大；（3）这些成分上注意效应的空间梯度。位置特异响应主要产生于听皮层后部（颞平面、颞上回后部），即假设中的听觉“where”通路。
+generators:
+- region: BR.STG
+  evidence: B
+  relation: location-dependent responses localize to posterior superior temporal gyrus / planum temporale
+  sources:
+  - citation: Ahveninen J, Jääskeläinen IP, Raij T, et al. Task-modulated "what" and "where" pathways in human auditory cortex.
+      Proc Natl Acad Sci U S A. 2006;103(39):14608-14613.
+    doi: 10.1073/pnas.0510480103
+    year: 2006
+    verified: false
+  - citation: 'Deouell LY, Parnes A, Pickard N, et al. Spatial location is accurately tracked by human auditory sensory memory:
+      evidence from the mismatch negativity. Eur J Neurosci. 2006;24(5):1488-1494.'
+    doi: 10.1111/j.1460-9568.2006.05025.x
+    year: 2006
+    verified: false
+  - citation: Warren JD, Griffiths TD. Distinct mechanisms for processing spatial sequences and pitch sequences in the human
+      auditory brain. J Neurosci. 2003;23(13):5799-5804.
+    doi: 10.1523/JNEUROSCI.23-13-05799.2003
+    year: 2003
+    verified: false
+  - citation: Zatorre RJ, Bouffard MA, Ahad PA, et al. Where is 'where' in the human auditory cortex? Nat Neurosci. 2002;5(9):905-909.
+    doi: 10.1038/nn904
+    year: 2002
+    verified: false
+  note: 'method: MEG/EEG source; MEG-fMRI source estimates place the location-selective response in posterior planum temporale
+    and posterior STG (Ahveninen 2006) and the location MMN in posterior STG (Deouell 2006); fMRI studies localize spatial
+    processing to planum temporale (Warren & Griffiths 2003; Zatorre 2002, indirect for the ERP). Planum temporale has
+    no separate id; BR.STG used.'
+indexes:
+- construct: CN.early_auditory
+  evidence: B
+  relation: N1 amplitude increases with the spatial separation (or interaural time difference change) between successive
+    sounds, and is larger for outward than inward ITD changes
+  sources:
+  - citation: Butler RA. The influence of spatial separation of sound sources on the auditory evoked response. Neuropsychologia.
+      1972;10(2):219-225.
+    doi: 10.1016/0028-3932(72)90063-2
+    year: 1972
+    verified: false
+  - citation: Magezi DA, Krumbholz K. Evidence for opponent-channel coding of interaural time differences in human auditory
+      cortex. J Neurophysiol. 2010;104(4):1997-2007.
+    doi: 10.1152/jn.00424.2009
+    year: 2010
+    verified: false
+  - citation: Ahveninen J, Jääskeläinen IP, Raij T, et al. Task-modulated "what" and "where" pathways in human auditory cortex.
+      Proc Natl Acad Sci U S A. 2006;103(39):14608-14613.
+    doi: 10.1073/pnas.0510480103
+    year: 2006
+    verified: false
+  note: Sound location has no dedicated construct; mapped to CN.early_auditory (cortical processing of acoustic features).
+    The Butler 1972 record has no abstract; the separation effect is stated from the curator's reading and needs a full-text
+    check.
+- construct: CN.auditory_change
+  evidence: B
+  relation: MMN is elicited by infrequent changes of sound location and its amplitude grows roughly linearly with the size
+    of the change
+  sources:
+  - citation: Paavilainen P, Karlsson ML, Reinikainen K, et al. Mismatch negativity to change in spatial location of an auditory
+      stimulus. Electroencephalogr Clin Neurophysiol. 1989;73(2):129-141.
+    doi: 10.1016/0013-4694(89)90192-2
+    year: 1989
+    verified: false
+  - citation: 'Deouell LY, Parnes A, Pickard N, et al. Spatial location is accurately tracked by human auditory sensory memory:
+      evidence from the mismatch negativity. Eur J Neurosci. 2006;24(5):1488-1494.'
+    doi: 10.1111/j.1460-9568.2006.05025.x
+    year: 2006
+    verified: false
+- construct: CN.spatial_attention
+  evidence: C
+  relation: attention effects on the auditory ERP fall off gradually with distance from the attended loudspeaker location
+    in free field
+  sources:
+  - citation: 'Teder-Sälejärvi WA, Hillyard SA. The gradient of spatial auditory attention in free field: an event-related
+      potential study. Percept Psychophys. 1998;60(7):1228-1242.'
+    doi: 10.3758/BF03206172
+    year: 1998
+    verified: false
+  note: Single study retrieved. First author spelled 'Teder-Säläjärvi' in the Crossref record.
+notes: 'Sprint 7 (2026-10-17, curator_m): new marker approved under D-079, requested by PER-AUDLOC-001. An umbrella marker
+  for location effects on the auditory N1/P2 and MMN; the general components remain MK.N1_auditory, MK.P2_auditory and
+  MK.MMN. Every DOI checked against its Crossref or OpenAlex record (see curation/work/sprint7/markers_new/); verified:
+  false pending full-text check.'
+status: draft
+contributors:
+- curator_m

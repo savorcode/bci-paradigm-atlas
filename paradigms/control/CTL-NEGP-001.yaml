@@ -1,0 +1,87 @@
+schema_version: '0.2'
+id: CTL-NEGP-001
+class: CTL-NEGP
+name:
+  en: Identity negative priming with overlapping pictures
+  zh: 重叠图片的身份负启动
+aliases:
+- negative priming
+- negative priming paradigm
+- ignored repetition
+- distractor-to-target priming
+- identity negative priming
+family: control
+bci_category:
+- none
+recording_modality:
+- EEG
+stimulus_modality:
+- visual
+markers:
+- MK.N2_frontocentral
+description:
+  en: Each trial is a prime display followed by a probe display. In the prime, two overlapping line drawings are shown in
+    different colours and the participant names the one in the target colour while ignoring the other. When the probe target
+    is the object that was ignored in the prime (ignored repetition), naming is slower than after an unrelated prime; repeating
+    the attended object speeds naming. In the EEG, ignored-repetition probes elicit an enhanced N2.
+  zh: 每个试次由启动画面和探测画面组成。启动画面中两幅不同颜色的线条图重叠呈现，被试说出目标颜色的那一幅，忽略另一幅。若探测画面的目标正是启动画面中被忽略的物体（忽略重复），命名比无关启动后更慢；重复被注意的物体则使命名加快。脑电上，忽略重复的探测刺激诱发增大的
+    N2。
+trial_structure:
+  phases:
+  - name: prime display
+    note: two overlapping drawings in different colours; name the target-coloured one
+  - name: prime-probe interval
+    duration_ms: 1000
+    note: probe follows one second after the prime in experiment 1 (shorter in experiment 2)
+  - name: probe display
+    note: name the target-coloured drawing
+  conditions:
+  - ignored repetition
+  - attended repetition
+  - control (unrelated)
+protocol:
+  n_classes: 3
+  classes:
+  - ignored repetition (probe target = prime distractor)
+  - attended repetition (probe target = prime target)
+  - control (unrelated prime)
+  cue: colour-defined target among two overlapping line drawings
+  stimulus_coding: prime-probe relation between ignored and selected objects
+  paradigm_timing: synchronous
+  feedback: none
+  distinguishing: '标准配置（最早发表，即 first_source）：重叠线条图的启动–探测对，按颜色选择命名目标，比较忽略重复、注意重复与无关对照（Tipper 1985）。'
+first_source:
+  citation: 'Tipper SP. The negative priming effect: inhibitory priming by ignored objects. Q J Exp Psychol A. 1985;37(4):571-590.'
+  doi: 10.1080/14640748508400920
+  year: 1985
+  verified: false
+variants:
+- name: Visual identity negative priming with EEG
+  source:
+    citation: Frings C, Groh-Bordin C. Electrophysiological correlates of visual identity negative priming. Brain Res. 2007;1176:82-91.
+    doi: 10.1016/j.brainres.2007.07.093
+    year: 2007
+    verified: false
+  note: Identity negative priming with ERP recording; an enhanced N200 when the previous distractor becomes the target, interpreted
+    as stronger response conflict. Stimulus details of this study were not read; listed as a variant until its configuration
+    is checked.
+- name: Categorical negative priming (semantically related ignored prime)
+  source:
+    citation: 'Tipper SP. The negative priming effect: inhibitory priming by ignored objects. Q J Exp Psychol A. 1985;37(4):571-590.'
+    doi: 10.1080/14640748508400920
+    year: 1985
+    verified: false
+  note: Experiment 3 of the first source; the probe is a category member of the ignored prime rather than the same object.
+interop:
+  bids_task: negativepriming
+notes: 'Tipper 1985 (Crossref record with abstract) named the effect and introduced the overlapping-picture procedure; prime-probe
+  interval from the abstract (one second in experiment 1). Earlier reports of slowed responding to previously ignored items
+  in Stroop lists exist but were not retrieved. Fox 1995 (Psychon Bull Rev 2(2):145-173, doi:10.3758/BF03210958; OpenAlex
+  search record, per-DOI requests rate-limited) is the standard review. Marker: Frings & Groh-Bordin 2007 (Crossref record;
+  abstract via the Rhineland-Palatinate research portal) report an enhanced N200 on ignored-repetition trials; MK.N2_frontocentral
+  is the registry marker for conflict-related N2. Differs from CTL-FLK and CTL-STR, which measure conflict within a trial;
+  negative priming measures carry-over inhibition of an ignored distractor across trials. [curator_c sprint 7, 2026-10-17]
+  bibliography confirmed (Crossref, 2026-10-17).'
+status: draft
+contributors:
+- curator_c

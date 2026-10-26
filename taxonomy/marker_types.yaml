@@ -8,3 +8,4 @@ terms:
   - {id: single_unit, en: Single-unit or multi-unit activity, zh: 单 / 多神经元放电}
   - {id: field_potential, en: Local field potential or high-gamma activity, zh: 局部场电位或高 gamma 活动}
   - {id: connectivity, en: Functional connectivity pattern, zh: 功能连接模式}
+  - {id: peripheral_physiology, en: "Peripheral physiological response (reflex EMG, skin conductance, cardiac)", zh: 外周生理响应（反射肌电、皮电、心率）}

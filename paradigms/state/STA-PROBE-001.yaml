@@ -1,0 +1,70 @@
+schema_version: '0.2'
+id: STA-PROBE-001
+class: STA-PROBE
+name:
+  en: Ignored auditory oddball probes during a primary task of varied difficulty
+  zh: 不同难度主任务中的被忽略听觉 oddball 探测音
+aliases:
+- irrelevant-probe technique
+- task-irrelevant auditory probes
+- ignored auditory probes
+- probe evoked potentials
+family: state
+bci_category:
+- passive
+recording_modality:
+- EEG
+stimulus_modality:
+- auditory
+- cognitive_task
+markers:
+- MK.N1_auditory
+- MK.P2_auditory
+- MK.P3a
+description:
+  en: Participants perform a demanding primary task at low and high difficulty while a sequence of frequent and rare tones
+    (an oddball sequence) is played that they are told to ignore. Event-related potentials to the ignored probes, mainly
+    the early components, become smaller as the primary task becomes harder, so the probe response indexes mental workload
+    without an additional task for the operator.
+  zh: 被试以低、高两种难度执行要求较高的主任务，同时播放由高频与低频出现的纯音组成的 oddball 序列，并被告知忽略这些声音。主任务越难，被忽略探测音诱发的事件相关电位（主要是早期成分）越小，因此探测响应可在不给操作者增加额外任务的情况下反映心理负荷。
+trial_structure:
+  phases:
+  - name: primary task block (low or high difficulty)
+    note: probes are interleaved with the ongoing task; probe timing of the original was not read
+  - name: ignored probe tone
+    note: frequent (standard) or rare (deviant) tone, no response required
+  conditions:
+  - low primary-task difficulty
+  - high primary-task difficulty
+protocol:
+  n_classes: 2
+  classes:
+  - low workload
+  - high workload
+  cue: task-irrelevant tones in an oddball sequence (frequent and rare pitch)
+  stimulus_coding: two-tone oddball probe sequence
+  paradigm_timing: block
+  feedback: none
+  distinguishing: 标准配置（最早发表，即 first_source）：主任务分低、高难度组块，同时播放需忽略的双音 oddball 探测序列，比较探测音 ERP（Kramer, Trejo & Humphrey 1995）。同类 STA-PROBE-002 为单刺激探测（准则 2）。
+first_source:
+  citation: Kramer AF, Trejo LJ, Humphrey D. Assessment of mental workload with task-irrelevant auditory probes. Biological
+    Psychology. 1995;40(1-2):83-100.
+  doi: 10.1016/0301-0511(95)05108-2
+  year: 1995
+  verified: false
+interop:
+  bids_task: irrelevantprobe
+notes: '[curator_e sprint 7, 2026-10-17] New class from the sprint 7 gap list (rank 4; Cognitive Atlas "irrelevant probe task").
+  Overlap check: STA-MATB and MEM-NBK manipulate workload but record only the primary task; PER-ODD asks for attention
+  to the oddball; here the probes are ignored and serve only as a measurement channel. first_source: Kramer et al. 1995;
+  the abstract was not available in the Crossref or OpenAlex records. The two-tone oddball design and the finding that
+  mainly the early ERP components to ignored probes track workload are taken from two later papers that cite it (Allison
+  & Polich 2008, Biol Psychol, doi 10.1016/j.biopsycho.2007.10.014; Roy et al. 2016, Front Hum Neurosci, doi 10.3389/fnhum.2016.00519);
+  the primary task, tone parameters and probe interval of the original must be checked against the article. Probe-evoked
+  potentials as an index of processing load go back earlier (secondary-task and probe work of the 1970s-1980s, for example
+  by Papanicolaou and colleagues), which was not searched; the origin is therefore provisional. Marker choice: N1 and P2
+  to the probes; MK.P3a stands for the probe P3 because the probes are task-irrelevant. bibliography confirmed (Crossref,
+  2026-10-17)'
+status: draft
+contributors:
+- curator_e

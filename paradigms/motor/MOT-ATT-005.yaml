@@ -1,0 +1,88 @@
+schema_version: '0.2'
+id: MOT-ATT-005
+class: MOT-ATT
+name:
+  en: BCI-actuated FES of the paretic hand for stroke rehabilitation (attempted hand extension)
+  zh: 脑机接口驱动瘫痪手功能性电刺激的卒中康复（尝试伸手）
+aliases:
+- BCI-FES
+- brain-actuated functional electrical stimulation
+- BCI-FES stroke rehabilitation
+family: motor
+bci_category:
+- active
+recording_modality:
+- EEG
+stimulus_modality:
+- motor_execution
+- electrical_stimulation
+- visual
+markers:
+- MK.SMR_ERD
+description:
+  en: >-
+    Chronic stroke survivors with arm paresis are cued to attempt to extend the fingers and wrist of the affected hand. Mu
+    and beta band features over the sensorimotor cortex, mainly of the lesioned hemisphere, are accumulated until a decoder
+    confidence threshold is reached, and each detection triggers functional electrical stimulation of the finger extensor
+    muscle, which opens the hand. A trial without detection times out. In the controlled study a sham group received the same
+    stimulation delivered at random times, not driven by brain activity.
+  zh: >-
+    存在上肢瘫痪的慢性卒中患者按提示尝试伸展患侧手的手指与腕。累积感觉运动皮层（主要为病灶侧半球）的 mu 与 β 频带特征，直至解码器置信度达到阈值；每次检测触发指总伸肌的功能性电刺激，
+    使手张开。未检测到意图的试次超时结束。在对照研究中，假刺激组接受相同的电刺激，但刺激时刻随机，不由脑活动驱动。
+trial_structure:
+  phases:
+  - name: preparation cue
+    duration_ms: 3000
+    note: calibration runs
+  - name: start cue
+    duration_ms: 1000
+  - name: attempt or rest
+    duration_ms: 4000
+    note: calibration; in therapy runs the active period lasts up to 7 s and ends with FES on detection or a time-out
+  - name: stop cue
+    duration_ms: 2000
+  - name: inter-trial interval
+    duration_ms: 3000-4500
+  typical_trials: 3-8 runs of 15 attempts per session, 10 sessions
+  conditions:
+  - attempted extension of the affected hand
+  - rest
+protocol:
+  n_classes: 2
+  classes:
+  - attempted finger and wrist extension of the affected hand
+  - rest
+  cue: visual cues
+  stimulus_coding: evidence accumulation to a confidence threshold; each detection triggers FES of the extensor digitorum
+    communis
+  paradigm_timing: synchronous
+  feedback: discrete
+  distinguishing: >-
+    Placed in MOT-ATT, not MOT-MI, because patients attempt the movement (full text: asked to attempt to extend the affected
+    hand); by the D-057 class rule the attempt of a paretic limb is the MOT-ATT mechanism. Criteria 1 and 4 vs MOT-ATT-001:
+    attempted hand extension vs rest instead of attempted vs passive foot movement; each detection triggers FES that opens
+    the hand (discrete feedback through stimulated movement) instead of no feedback. Vs MOT-ATT-003: criteria 1 and 4 (one
+    unilateral hand class instead of five arm and hand classes; FES instead of an on-screen icon). The sham-FES group is a
+    control arm of the study, not a class of the protocol, and does not count as criterion 1.
+first_source:
+  citation: >-
+    Biasiucci A, Leeb R, Iturrate I, et al. Brain-actuated functional electrical stimulation elicits lasting arm motor recovery
+    after stroke. Nat Commun. 2018;9(1):2421.
+  doi: 10.1038/s41467-018-04673-z
+  year: 2018
+  verified: false
+interop:
+  bids_task: attemptedmovement
+notes: >-
+  Biasiucci et al. 2018 (Crossref record). Configuration from the publisher's full text: 16 EEG electrodes over the
+  sensorimotor cortex; features in the mu (10-12 Hz) and beta (18-24 Hz) bands selected per patient; Gaussian classifier with
+  evidence accumulation; FES on the extensor digitorum communis only; 27 patients (14 BCI-FES, 13 sham-FES), 10 sessions over
+  5 weeks. FES parameters are in the supplementary methods (not read). This is the earliest controlled BCI-FES study whose
+  record could be retrieved in this sprint; earlier smaller controlled comparisons of motor-imagery BCI-FES with FES alone
+  were seen in web search results but no record could be retrieved, so first_source may move once they are checked (they
+  would belong to MOT-MI if the patients imagined rather than attempted). Related protocol: MOT-MRCP-003 (MRCP detection
+  triggering peripheral nerve stimulation). Replaces the provisional class MOT-FES (D-079). No public dataset verified.
+  [curator_b sprint 7, 2026-10-17]
+status: draft
+contributors:
+- curator_b

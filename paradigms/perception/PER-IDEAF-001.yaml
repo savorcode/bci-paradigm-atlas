@@ -1,0 +1,79 @@
+schema_version: '0.2'
+id: PER-IDEAF-001
+class: PER-IDEAF
+name:
+  en: Inattentional deafness under visual perceptual load (critical-trial tone)
+  zh: 视觉知觉负荷下的非注意聋（关键试次声音）
+aliases:
+- inattentional deafness
+- load-induced deafness
+- perceptual load and auditory awareness
+family: perception
+bci_category:
+- none
+recording_modality:
+- MEG
+- EEG
+stimulus_modality:
+- visual
+- auditory
+markers:
+- MK.N1_auditory
+- MK.P3b
+description:
+  en: Participants perform a visual task at low or high perceptual load, and on a critical trial an unexpected task-irrelevant
+    tone is presented together with the visual display; afterwards they are asked whether they heard anything. Many more
+    participants miss the tone under high visual load. Neural versions with repeated irrelevant tones show that high visual
+    load reduces the early auditory response (about 100 ms) and the later P3 to the tones.
+  zh: 被试在低或高知觉负荷下完成视觉任务，在关键试次中与视觉画面同时呈现一个意外的、与任务无关的声音，随后询问是否听到任何声音。高视觉负荷下漏听的人明显更多。采用重复无关声音的神经测量版本显示，高视觉负荷会减弱对声音的早期听觉响应（约 100 ms）和之后的 P3。
+trial_structure:
+  phases:
+  - name: visual task trials (low or high perceptual load)
+  - name: critical trial
+    note: unexpected tone presented with the visual display
+  - name: awareness question
+    note: participants report whether they heard a sound
+  conditions:
+  - low visual perceptual load
+  - high visual perceptual load
+protocol:
+  n_classes: 2
+  classes:
+  - low perceptual load
+  - high perceptual load
+  cue: visual task display; unexpected task-irrelevant tone on the critical trial
+  stimulus_coding: single unexpected tone, awareness probed by question
+  paradigm_timing: synchronous
+  feedback: none
+  distinguishing: 标准配置（最早发表，即 first_source）：视觉任务分低、高知觉负荷，关键试次呈现意外声音并随后询问是否听到（Macdonald & Lavie 2011）。同类 PER-IDEAF-002 为高负荷操作任务中的听觉警报 oddball（准则 2、3）。
+first_source:
+  citation: Macdonald JSP, Lavie N. Visual perceptual load induces inattentional deafness. Attention, Perception, & Psychophysics.
+    2011;73(6):1780-1789.
+  doi: 10.3758/s13414-011-0144-4
+  year: 2011
+  verified: false
+variants:
+- name: Repeated irrelevant tones on half of the visual-search trials, MEG
+  source:
+    citation: 'Molloy K, Griffiths TD, Chait M, Lavie N. Inattentional deafness: visual load leads to time-specific suppression
+      of auditory evoked responses. The Journal of Neuroscience. 2015;35(49):16046-16054.'
+    doi: 10.1523/jneurosci.2931-15.2015
+    year: 2015
+    verified: false
+  note: Low- versus high-load visual search with irrelevant tones on a random 50 % of trials; high load reduced the auditory
+    response around 100 ms (superior temporal sulcus, posterior middle temporal gyrus) and the later P3 to the tones (abstract
+    from the Crossref record). Tones are repeated rather than a single critical tone, which may justify its own number (criterion
+    3) when the protocol is read in full.
+interop:
+  bids_task: inattentionaldeafness
+notes: '[curator_a sprint 7, 2026-10-17] New class from the sprint 7 gap list (rank 7; review Alimardani & Hiraki 2020, Front
+  Robot AI, doi 10.3389/frobt.2020.00125). Overlap check: PER-IB is the visual counterpart (unnoticed visual patterns);
+  STA-PROBE uses ignored probes to measure workload but does not test whether they are perceived; this class targets the
+  failure to perceive an auditory event under load. first_source: Macdonald & Lavie 2011, chosen as the paper that introduced
+  load-induced inattentional deafness (record only; abstract not available, so the critical-trial procedure is described
+  in general terms and stimulus timings are left out). The original is behavioural; the markers come from Molloy et al.
+  2015 (MEG, variant) and Giraudet et al. 2015 (EEG, PER-IDEAF-002), as with PER-IB, whose origin is also behavioural.
+  bibliography confirmed (Crossref, 2026-10-17)'
+status: draft
+contributors:
+- curator_a

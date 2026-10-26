@@ -20,7 +20,7 @@ stimulus_modality:
 - auditory
 - somatosensory
 markers:
-- MK.alpha_posterior
+- MK.prestimulus_alpha_phase
 description:
   en: Two brief stimuli, presented in the same or in different sense modalities (light flashes, clicks, vibrotactile pulses),
     are separated by a variable SOA. The observer reports which stimulus came first (two-alternative forced choice). The proportion
@@ -72,10 +72,10 @@ interop:
   bids_task: temporalorder
 notes: 'Hirsh & Sherrick 1961 (Crossref record) is the earliest retrieved record of the order-judgement task across modalities;
   the ~20 ms threshold is quoted from a secondary summary (Seminars in Hearing 2004 retrospective) found by web search, the
-  full text was not seen. Phase durations are typical values, not from the first source. Marker: MK.alpha_posterior is the
-  closest registry marker for the alpha-phase framing account (Varela et al. 1981); no registry marker indexes order judgement
-  directly (see marker_requests.csv). Vroomen & Keetels 2010 review the TOJ/SJ methods. No public dataset verified. [curator_a
-  sprint 6, 2026-10-16]'
+  full text was not seen. Phase durations are typical values, not from the first source. Marker: MK.prestimulus_alpha_phase
+  (added sprint 7, D-079) covers the alpha-phase framing account (Varela et al. 1981; Milton & Pleydell-Pearce 2016) and
+  replaces the stand-in MK.alpha_posterior, which indexes alpha power rather than phase. Vroomen & Keetels 2010 review the TOJ/SJ methods. No public dataset verified. [curator_a
+  sprint 6, 2026-10-16; marker updated curator_m sprint 7, 2026-10-17]'
 status: draft
 contributors:
 - curator_a

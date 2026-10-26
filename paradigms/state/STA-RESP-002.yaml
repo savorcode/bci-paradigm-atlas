@@ -1,0 +1,72 @@
+schema_version: "0.2"
+id: STA-RESP-002
+class: STA-RESP
+name:
+  en: Breath-hold challenge for cerebrovascular reactivity
+  zh: 屏气激发（脑血管反应性）
+aliases:
+- breath-hold task
+- breath holding
+- BH-CVR
+- cerebrovascular reactivity mapping
+family: state
+bci_category:
+- none
+recording_modality:
+- fMRI
+- fNIRS
+stimulus_modality:
+- motor_execution
+markers:
+- MK.HbO_prefrontal
+description:
+  en: >-
+    Blocks of normal breathing alternate with cued breath holds of a fixed duration (often after an expiration), repeated
+    several times during a functional scan. The rise in arterial carbon dioxide during each hold dilates cerebral vessels
+    and produces a widespread increase in the BOLD (or oxygenated haemoglobin) signal, whose amplitude and delay map
+    regional cerebrovascular reactivity without inhaled gases.
+  zh: 正常呼吸组块与按提示进行的固定时长屏气（常在呼气后）交替，在功能扫描中重复数次。每次屏气时动脉二氧化碳升高使脑血管扩张，产生广泛的 BOLD（或氧合血红蛋白）信号升高，其幅度与延迟可在不吸入气体的情况下绘制区域脑血管反应性。
+trial_structure:
+  phases:
+  - name: paced or normal breathing
+    duration_ms: 30000-60000
+  - name: breath hold
+    duration_ms: 15000-30000
+    note: approximate range; values of the first source not read
+  - name: recovery
+    duration_ms: 30000-60000
+  typical_trials: 4-8 breath-hold blocks per run
+  conditions:
+  - breath hold
+  - normal breathing
+protocol:
+  n_classes: 2
+  classes:
+  - breath hold
+  - normal breathing
+  cue: visual or verbal cue to hold and release the breath
+  stimulus_coding: voluntary apnoea (hypercapnia) in a block design
+  paradigm_timing: block
+  feedback: none
+  distinguishing: >-
+    准则 2：激发方式由过度换气（低碳酸血症，STA-RESP-001）变为屏气（高碳酸血症），读出由脑电慢波变为血流动力学响应；另含准则 3：多次重复的组块设计（Kastrup et al. 1998）。
+first_source:
+  citation: >-
+    Kastrup A, Li TQ, Takahashi A, Glover GH, Moseley ME. Functional magnetic resonance imaging of regional cerebral blood
+    oxygenation changes during breath holding. Stroke. 1998;29(12):2641-2645.
+  doi: 10.1161/01.STR.29.12.2641
+  year: 1998
+  verified: false
+interop:
+  bids_task: breathhold
+notes: >-
+  [curator_e sprint 7, 2026-10-17] Earliest breath-hold BOLD study found; earlier breath-hold studies with other readouts
+  (transcranial Doppler) were not searched. Review: Urback, MacIntosh & Goldstein 2017 (systematic review of breath-hold
+  CVR fMRI; doi:10.1016/j.neubiorev.2017.05.003). Phase durations are approximate ranges, not values from the first
+  source. MK.HbO_prefrontal is the only hemodynamic registry marker that is not tied to a cognitive task; it is used as
+  the closest marker, and a global cerebrovascular-reactivity marker is requested in marker_requests.csv. fNIRS is listed
+  because breath-hold challenges are also run with fNIRS; no reference for that was retrieved in this sprint. No public
+  dataset verified. bibliography confirmed (Crossref, 2026-10-17).
+status: draft
+contributors:
+- curator_e
