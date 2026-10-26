@@ -1,11 +1,101 @@
-schema_version: "0.2"
+schema_version: '0.2'
 id: MK.CCEP
-name: {en: Cortico-cortical evoked potential, zh: 皮层-皮层诱发电位}
-aliases: [CCEP, SPES response]
+name:
+  en: Cortico-cortical evoked potential
+  zh: 皮层-皮层诱发电位
+aliases:
+- CCEP
+- SPES response
 type: erp_component
-recording_modality: [ECoG, sEEG]
-signature: {latency_ms: N1 ~10-50; N2 ~50-300, polarity: early negative N1 followed by slower N2, topography: sites connected to the stimulated contact pair}
-description: {en: Evoked response recorded at intracranial contacts distant from a site stimulated with single electrical pulses. Its early component (N1) is commonly taken to reflect direct cortico-cortical connections and the later component (N2) indirect or local recurrent activity., zh: 以单个电脉冲刺激某一部位时，在远隔颅内触点记录到的诱发响应。早期成分（N1）通常被认为反映直接的皮层-皮层连接，晚期成分（N2）反映间接或局部回返活动。}
-notes: Signature values are textbook-level characteristics and await source checking (first pass, curator_b). Generators and indexes to be added in the second pass.
+recording_modality:
+- ECoG
+- sEEG
+signature:
+  latency_ms: N1 ~10-50; N2 ~50-300
+  polarity: early negative N1 followed by slower N2
+  topography: sites connected to the stimulated contact pair
+description:
+  en: Evoked response recorded at intracranial contacts distant from a site stimulated with single electrical pulses. Its
+    early component (N1) is commonly taken to reflect direct cortico-cortical connections and the later component (N2) indirect
+    or local recurrent activity.
+  zh: 以单个电脉冲刺激某一部位时，在远隔颅内触点记录到的诱发响应。早期成分（N1）通常被认为反映直接的皮层-皮层连接，晚期成分（N2）反映间接或局部回返活动。
+notes: 'Signature values are textbook-level characteristics and await source checking (first pass, curator_b). Generators
+  and indexes to be added in the second pass. Sprint 6 (2026-10-16, curator J): generators and indexes curated; every DOI
+  checked against its Crossref or OpenAlex record (see curation/work/sprint6/markers_J/); verified: false pending full-text
+  check.'
+generators:
+- region: BR.STG
+  evidence: B
+  sources:
+  - citation: 'Matsumoto R, Nair DR, LaPresto E, et al. Functional connectivity in the human language system: a cortico-cortical
+      evoked potential study. Brain. 2004;127(10):2316-2330.'
+    doi: 10.1093/brain/awh246
+    year: 2004
+    verified: false
+  - citation: Yamao Y, Matsumoto R, Kikuchi T, et al. Intraoperative brain mapping by cortico-cortical evoked potential. Front
+      Hum Neurosci. 2021;15:635453.
+    doi: 10.3389/fnhum.2021.635453
+    year: 2021
+    verified: false
+  - citation: Trébaul L, Deman P, Tuyisenge V, et al. Probabilistic functional tractography of the human cortex revisited.
+      Neuroimage. 2018;181:414-429.
+    doi: 10.1016/j.neuroimage.2018.07.039
+    year: 2018
+    verified: false
+  note: 'method: intracranial; recording site; stimulation of anterior language cortex evokes N1 responses in posterior superior
+    temporal language cortex (Matsumoto et al. 2004; reviewed in Yamao et al. 2021), and cortex-wide atlases confirm that
+    responses depend on the connected region (Trébaul et al. 2018). Generator location depends on the stimulated pair.'
+- region: BR.IFG
+  evidence: B
+  sources:
+  - citation: 'Matsumoto R, Nair DR, LaPresto E, et al. Functional connectivity in the human language system: a cortico-cortical
+      evoked potential study. Brain. 2004;127(10):2316-2330.'
+    doi: 10.1093/brain/awh246
+    year: 2004
+    verified: false
+  - citation: Yamao Y, Matsumoto R, Kikuchi T, et al. Intraoperative brain mapping by cortico-cortical evoked potential. Front
+      Hum Neurosci. 2021;15:635453.
+    doi: 10.3389/fnhum.2021.635453
+    year: 2021
+    verified: false
+  - citation: Trébaul L, Deman P, Tuyisenge V, et al. Probabilistic functional tractography of the human cortex revisited.
+      Neuroimage. 2018;181:414-429.
+    doi: 10.1016/j.neuroimage.2018.07.039
+    year: 2018
+    verified: false
+  note: 'method: intracranial; recording site; stimulation of posterior temporal language cortex evokes responses in inferior
+    frontal language cortex (Matsumoto et al. 2004; Yamao et al. 2021; Trébaul et al. 2018).'
+indexes:
+- construct: CN.cortical_excitability
+  evidence: B
+  relation: early and delayed responses to single-pulse stimulation are larger or more frequent in epileptogenic cortex
+  sources:
+  - citation: Valentin A, Anderson M, Alarcon G, et al. Responses to single pulse electrical stimulation identify epileptogenesis
+      in the human brain in vivo. Brain. 2002;125(8):1709-1718.
+    doi: 10.1093/brain/awf187
+    year: 2002
+    verified: false
+  - citation: Keller CJ, Honey CJ, Mégevand P, et al. Mapping human brain networks with cortico-cortical evoked potentials.
+      Philos Trans R Soc Lond B Biol Sci. 2014;369(1653):20130528.
+    doi: 10.1098/rstb.2013.0528
+    year: 2014
+    verified: false
+- construct: CN.language
+  evidence: B
+  relation: N1 responses map bidirectional connections between anterior and posterior language areas
+  sources:
+  - citation: 'Matsumoto R, Nair DR, LaPresto E, et al. Functional connectivity in the human language system: a cortico-cortical
+      evoked potential study. Brain. 2004;127(10):2316-2330.'
+    doi: 10.1093/brain/awh246
+    year: 2004
+    verified: false
+  - citation: Yamao Y, Matsumoto R, Kikuchi T, et al. Intraoperative brain mapping by cortico-cortical evoked potential. Front
+      Hum Neurosci. 2021;15:635453.
+    doi: 10.3389/fnhum.2021.635453
+    year: 2021
+    verified: false
+  note: Both sources from one group; the true index is effective connectivity, requested as a new term (see vocab requests).
 status: draft
-contributors: [maintainer, curator_b]
+contributors:
+- maintainer
+- curator_b

@@ -1,4 +1,4 @@
-schema_version: "0.2"
+schema_version: '0.2'
 id: MK.GEP
 name:
   en: Gustatory evoked potential
@@ -13,8 +13,51 @@ recording_modality:
 description:
   en: Event-related potential to the onset of a taste stimulus delivered without tactile or thermal cues, with long latencies.
   zh: 在无触觉或温度线索的条件下，对味觉刺激起始产生的长潜伏期事件相关电位。
-notes: First-pass skeleton by package A (2026-10-03). No generators/indexes yet. New marker requested by package A (curation/work/pkg_A/marker_requests.csv);
-  not yet in curation/registry/markers.csv.
+generators:
+- region: BR.insula
+  evidence: B
+  sources:
+  - citation: Mizoguchi C. Gustatory evoked cortical activity in humans studied by simultaneous EEG and MEG recording. Chem
+      Senses. 2002;27(7):629-634.
+    doi: 10.1093/chemse/27.7.629
+    year: 2002
+    verified: false
+  - citation: Kobayakawa T, Saito S, Gotow N, Ogawa H. Representation of salty taste stimulus concentrations in the primary
+      gustatory area in humans. Chemosens Percept. 2008;1(4):227-234.
+    doi: 10.1007/s12078-008-9030-4
+    year: 2008
+    verified: false
+  - citation: Veldhuizen MG, Albrecht J, Zelano C, et al. Identification of human gustatory cortex by activation likelihood
+      estimation. Hum Brain Mapp. 2011;32(12):2256-2266.
+    doi: 10.1002/hbm.21188
+    year: 2011
+    verified: false
+  note: 'method: MEG/EEG source; MEG dipoles for taste onset localise to the primary gustatory area at the insula-frontal
+    operculum transition (Mizoguchi 2002; Kobayakawa 2008); an ALE meta-analysis of taste fMRI places gustatory cortex in
+    the insula (Veldhuizen 2011, indirect for the ERP itself). Frontal operculum has no separate id.'
+indexes:
+- construct: CN.chemosensation
+  evidence: B
+  relation: amplitude increases with taste stimulus concentration, is reduced in taste disorders, and carries taste quality
+    information
+  sources:
+  - citation: Kobayakawa T, Saito S, Gotow N, Ogawa H. Representation of salty taste stimulus concentrations in the primary
+      gustatory area in humans. Chemosens Percept. 2008;1(4):227-234.
+    doi: 10.1007/s12078-008-9030-4
+    year: 2008
+    verified: false
+  - citation: Hummel T, Genow A, Landis BN. Clinical assessment of human gustatory function using event related potentials.
+      J Neurol Neurosurg Psychiatry. 2009;81(4):459-464.
+    doi: 10.1136/jnnp.2009.183699
+    year: 2009
+    verified: false
+  - citation: Crouzet SM, Busch NA, Ohla K. Taste quality decoding parallels taste sensations. Curr Biol. 2015;25(7):890-896.
+    doi: 10.1016/j.cub.2015.01.057
+    year: 2015
+    verified: false
+notes: 'First-pass skeleton by package A (2026-10-03). No generators/indexes yet. New marker requested by package A (curation/work/pkg_A/marker_requests.csv);
+  not yet in curation/registry/markers.csv. Sprint 6 (2026-10-16, curator K): generators and indexes curated; every DOI checked
+  against its Crossref or OpenAlex record (see curation/work/sprint6/markers_K/); verified: false pending full-text check.'
 status: draft
 contributors:
 - curator_a

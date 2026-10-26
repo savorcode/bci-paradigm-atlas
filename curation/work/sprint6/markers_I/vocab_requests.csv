@@ -1,0 +1,3 @@
+id_proposed,en,zh,parent_or_type,reason,example_marker
+BR.retrosplenial,Retrosplenial cortex (BA29/30),压后皮层,region,Core navigation-network node distinct from precuneus and PCC; currently mapped to BR.precuneus,MK.BOLD_parahippocampal
+CN.scene_perception,Scene perception,场景知觉,CN.perception,Place/scene selectivity of the parahippocampal place area is not object recognition; currently mapped to CN.object_recognition,MK.BOLD_parahippocampal

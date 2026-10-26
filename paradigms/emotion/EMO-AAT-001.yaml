@@ -1,0 +1,91 @@
+schema_version: '0.2'
+id: EMO-AAT-001
+class: EMO-AAT
+name:
+  en: Approach-avoidance task with lever push and pull (compatibility design)
+  zh: 推拉杠杆的趋近–回避任务（相容性设计）
+aliases:
+- approach-avoidance task
+- AAT
+- push-pull task
+- stimulus-response compatibility task (approach/avoidance)
+- arm flexion/extension task
+family: emotion
+bci_category:
+- none
+recording_modality:
+- EEG
+- fMRI
+stimulus_modality:
+- visual
+- motor_execution
+markers:
+- MK.frontal_alpha_asymmetry
+description:
+  en: Positive and negative words (or pictures) are presented one at a time, and participants move a lever either toward
+    the body (pull, approach) or away from it (push, avoidance). In compatible blocks positive stimuli are pulled and negative
+    stimuli pushed; in incompatible blocks the mapping is reversed. Faster responses in compatible blocks index automatic
+    approach-avoidance tendencies.
+  zh: 逐个呈现积极或消极的词语（或图片），被试将杠杆拉向身体（拉，趋近）或推离身体（推，回避）。相容组块中积极刺激拉、消极刺激推；不相容组块中映射相反。相容组块中反应更快，反映自动的趋近–回避倾向。
+trial_structure:
+  phases:
+  - name: stimulus
+    duration_ms: until response
+    note: word on screen until the lever movement is completed
+  - name: inter-trial interval
+    note: duration not recorded here; to be taken from the first source
+  conditions:
+  - compatible block (pull positive, push negative)
+  - incompatible block (push positive, pull negative)
+protocol:
+  n_classes: 4
+  classes:
+  - positive stimulus, approach (pull)
+  - negative stimulus, avoid (push)
+  - positive stimulus, avoid (push)
+  - negative stimulus, approach (pull)
+  cue: emotionally valenced words (later also pictures); response mapping instructed per block
+  stimulus_coding: valence x movement direction, blocked compatible vs incompatible mapping; relevant-feature instruction
+    (respond to valence)
+  paradigm_timing: synchronous
+  feedback: none
+  distinguishing: 标准配置（最早发表，即 first_source）：按刺激效价指示推或拉杠杆，相容组块与不相容组块对比，无视觉缩放反馈（Solarz 1960；计算机化版本 Chen & Bargh 1999）。与 EMO-AAT-002（摇杆缩放反馈、对无关特征反应，准则
+    2;4）区别。
+first_source:
+  citation: Solarz AK. Latency of instrumental responses as a function of compatibility with the meaning of eliciting verbal
+    signs. Journal of Experimental Psychology. 1960;59(4):239-245.
+  doi: 10.1037/h0047274
+  year: 1960
+  verified: false
+variants:
+- name: Computerised lever version with evaluative instruction (positive/negative words)
+  source:
+    citation: 'Chen M, Bargh JA. Consequences of automatic evaluation: Immediate behavioral predispositions to approach or
+      avoid the stimulus. Personality and Social Psychology Bulletin. 1999;25(2):215-224.'
+    doi: 10.1177/0146167299025002007
+    year: 1999
+    verified: false
+  note: Same compatibility design and lever movements; computer-presented words and response-latency recording.
+- name: Joystick push/pull to emotional faces during fMRI
+  source:
+    citation: Roelofs K, Minelli A, Mars RB, van Peer J, Toni I. On the neural control of social emotional behavior. Social
+      Cognitive and Affective Neuroscience. 2009;4(1):50-58.
+    doi: 10.1093/scan/nsn036
+    year: 2009
+    verified: false
+  note: Happy and angry faces with affect-congruent and affect-incongruent push/pull instructions in the scanner; no zoom
+    feedback (to be checked against the full text).
+interop:
+  bids_task: approachavoidance
+notes: 'Sources: Solarz 1960 (first_source; earliest lever push/pull compatibility study with valenced words); Chen & Bargh
+  1999 (widely cited computerised version); Roelofs et al. 2009 (fMRI version with emotional faces); Rinck & Becker 2007
+  (joystick zoom version, first_source of EMO-AAT-002). All bibliographic data from the Crossref API. Marker choice: no
+  registry marker indexes approach-avoidance compatibility specifically; MK.frontal_alpha_asymmetry (approach/withdrawal
+  motivation) is used as the closest marker, and the fMRI findings of Roelofs et al. 2009 (ventrolateral prefrontal control
+  of incongruent responses) are not yet represented by a registry marker. No EEG study of the AAT was retrieved in this
+  sprint, so the marker link needs evidence. Phase durations not given because they were not available from the retrieved
+  records. Related: EMO-DOT-001 (attentional bias), SOC-IAT-001 (association compatibility design). [curator_e sprint 6,
+  2026-10-16]'
+status: draft
+contributors:
+- curator_e

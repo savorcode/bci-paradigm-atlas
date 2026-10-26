@@ -1,0 +1,65 @@
+schema_version: '0.2'
+id: SOC-PGG-002
+class: SOC-PGG
+name:
+  en: Public goods game with peer punishment
+  zh: 带同伴惩罚的公共物品博弈
+aliases:
+- public goods game with punishment
+- costly punishment public goods game
+- altruistic punishment
+family: social
+bci_category:
+- none
+recording_modality:
+- fMRI
+- EEG
+stimulus_modality:
+- visual
+markers:
+- MK.FRN
+- MK.BOLD_striatum_reward
+description:
+  en: Groups play repeated public goods rounds, and after the contributions of all members are revealed each player can
+    spend some of their own earnings to reduce the earnings of other members. The punishment stage sustains high contributions
+    over rounds, whereas contributions decline in the same game without punishment.
+  zh: 小组进行多轮公共物品博弈；所有成员的投入额公布后，每名玩家可以花费自己的部分收益来减少其他成员的收益。惩罚阶段使投入额在多轮中保持较高水平，而无惩罚时投入额逐轮下降。
+trial_structure:
+  phases:
+  - name: contribution decision
+    duration_ms: self-paced
+  - name: contribution feedback
+    note: individual contributions of the other group members shown
+  - name: punishment decision
+    duration_ms: self-paced
+    note: costly punishment points assigned to each other member
+  - name: payoff feedback
+  typical_trials: 10 rounds per condition (to be checked against the first source)
+  conditions:
+  - with punishment stage
+  - without punishment stage
+protocol:
+  n_classes: 2
+  classes:
+  - rounds with punishment opportunity
+  - rounds without punishment opportunity
+  cue: decision screens for contribution and punishment
+  stimulus_coding: continuous contribution and punishment amounts
+  paradigm_timing: synchronous
+  feedback: discrete
+  distinguishing: 准则 3：每轮在贡献与结果之间加入同伴惩罚阶段，并与无惩罚轮次对比，试次结构由一阶段变为两阶段（Fehr & Gächter 2000）。
+first_source:
+  citation: Fehr E, Gächter S. Cooperation and punishment in public goods experiments. American Economic Review. 2000;90(4):980-994.
+  doi: 10.1257/aer.90.4.980
+  year: 2000
+  verified: false
+interop:
+  bids_task: publicgoods
+notes: 'Sources: Fehr & Gächter 2000 (first_source; bibliographic data from the Crossref API). Group size, endowment and
+  number of rounds are not recorded here because they were not checked against the article. Numbered separately from SOC-PGG-001
+  under criterion 3 (an added decision stage changes the trial structure). Markers as for SOC-PGG-001, by analogy; the neural
+  literature on punishment decisions (also related to SOC-TPP third-party punishment) still has to be searched. [curator_e
+  sprint 6, 2026-10-16]'
+status: draft
+contributors:
+- curator_e

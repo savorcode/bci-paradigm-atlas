@@ -1,11 +1,82 @@
-schema_version: "0.2"
+schema_version: '0.2'
 id: MK.oscillatory_entrainment
-name: {en: Oscillatory entrainment by rhythmic stimulation, zh: 节律刺激引起的节律夹带}
-aliases: [entrainment, phase alignment to stimulation]
+name:
+  en: Oscillatory entrainment by rhythmic stimulation
+  zh: 节律刺激引起的节律夹带
+aliases:
+- entrainment
+- phase alignment to stimulation
 type: oscillatory
-recording_modality: [EEG]
-signature: {frequency_hz: stimulation frequency}
-description: {en: 'Phase alignment of ongoing brain oscillations to an external rhythmic drive, such as transcranial alternating current, observed as increased phase locking or power at the stimulation frequency during stimulation.', zh: 进行中的脑节律与外部节律性驱动（如经颅交流电）的相位对齐，表现为刺激期间刺激频率处相位锁定或功率增强。}
-notes: Signature values are textbook-level characteristics and await source checking (first pass, curator_b). Measurement during tACS is confounded by stimulation artefacts. Generators and indexes to be added in the second pass.
+recording_modality:
+- EEG
+signature:
+  frequency_hz: stimulation frequency
+description:
+  en: Phase alignment of ongoing brain oscillations to an external rhythmic drive, such as transcranial alternating current,
+    observed as increased phase locking or power at the stimulation frequency during stimulation.
+  zh: 进行中的脑节律与外部节律性驱动（如经颅交流电）的相位对齐，表现为刺激期间刺激频率处相位锁定或功率增强。
+generators:
+- region: BR.parietal_cortex
+  evidence: C
+  sources:
+  - citation: Thut G, Veniero D, Romei V, et al. Rhythmic TMS causes local entrainment of natural oscillatory signatures.
+      Curr Biol. 2011;21(14):1176-1185.
+    doi: 10.1016/j.cub.2011.05.049
+    year: 2011
+    verified: false
+  - citation: Zaehle T, Rach S, Herrmann CS. Transcranial alternating current stimulation enhances individual alpha activity
+      in human EEG. PLoS One. 2010;5(11):e13766.
+    doi: 10.1371/journal.pone.0013766
+    year: 2010
+    verified: false
+  note: 'method: scalp topography; generator is the stimulated region; the cited studies stimulate parietal or parieto-occipital
+    cortex at alpha frequency (rhythmic TMS over parietal cortex, Thut 2011; occipito-parietal tACS, Zaehle 2010), and entrained
+    activity is maximal near the stimulated site. Helfrich 2014 used an occipital montage. Choice of region reflects the cited
+    studies, not a fixed generator.'
+indexes:
+- construct: CN.neural_entrainment
+  evidence: B
+  relation: phase locking and power at the stimulation frequency increase during rhythmic stimulation when it matches the
+    intrinsic rhythm
+  sources:
+  - citation: Thut G, Veniero D, Romei V, et al. Rhythmic TMS causes local entrainment of natural oscillatory signatures.
+      Curr Biol. 2011;21(14):1176-1185.
+    doi: 10.1016/j.cub.2011.05.049
+    year: 2011
+    verified: false
+  - citation: Helfrich RF, Schneider TR, Rach S, et al. Entrainment of brain oscillations by transcranial alternating current
+      stimulation. Curr Biol. 2014;24(3):333-339.
+    doi: 10.1016/j.cub.2013.12.041
+    year: 2014
+    verified: false
+  - citation: 'Herrmann CS, Rach S, Neuling T, et al. Transcranial alternating current stimulation: a review of the underlying
+      mechanisms and modulation of cognitive processes. Front Hum Neurosci. 2013;7:279.'
+    doi: 10.3389/fnhum.2013.00279
+    year: 2013
+    verified: false
+- construct: CN.cortical_idling
+  evidence: C
+  relation: alpha power is enhanced after alpha-frequency tACS
+  sources:
+  - citation: Zaehle T, Rach S, Herrmann CS. Transcranial alternating current stimulation enhances individual alpha activity
+      in human EEG. PLoS One. 2010;5(11):e13766.
+    doi: 10.1371/journal.pone.0013766
+    year: 2010
+    verified: false
+- construct: CN.perceptual_awareness
+  evidence: C
+  relation: visual detection performance varies with the phase of the entrained alpha rhythm
+  sources:
+  - citation: Helfrich RF, Schneider TR, Rach S, et al. Entrainment of brain oscillations by transcranial alternating current
+      stimulation. Curr Biol. 2014;24(3):333-339.
+    doi: 10.1016/j.cub.2013.12.041
+    year: 2014
+    verified: false
+notes: 'Signature values are textbook-level characteristics and await source checking (first pass, curator_b). Measurement
+  during tACS is confounded by stimulation artefacts. Generators and indexes to be added in the second pass. Sprint 6 (2026-10-16,
+  curator I): generators and indexes curated; every DOI checked against its Crossref or OpenAlex record (see curation/work/sprint6/markers_I/);
+  verified: false pending full-text check.'
 status: draft
-contributors: [maintainer, curator_b]
+contributors:
+- maintainer
+- curator_b

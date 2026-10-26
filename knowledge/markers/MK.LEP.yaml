@@ -1,4 +1,4 @@
-schema_version: "0.2"
+schema_version: '0.2'
 id: MK.LEP
 name:
   en: Laser-evoked potentials (N2-P2)
@@ -17,8 +17,90 @@ description:
   en: Evoked potentials to brief radiant heat pulses that selectively activate skin nociceptors, dominated by a vertex negative-positive
     N2-P2 complex preceded by a smaller lateralised N1.
   zh: 由选择性激活皮肤伤害感受器的短暂辐射热脉冲诱发的电位，以顶部负—正 N2–P2 复合波为主，其前有较小的偏侧化 N1。
-notes: First-pass skeleton by package A (2026-10-03). No generators/indexes yet. Signature values are textbook-level approximations
-  and await source checking.
+generators:
+- region: BR.SII
+  evidence: A
+  sources:
+  - citation: Frot M. Dual representation of pain in the operculo-insular cortex in humans. Brain. 2003;126(2):438-450.
+    doi: 10.1093/brain/awg032
+    year: 2003
+    verified: false
+  - citation: Frot M, Mauguière F, Magnin M, García-Larrea L. Parallel processing of nociceptive A-delta inputs in SII and
+      midcingulate cortex in humans. J Neurosci. 2008;28(4):944-952.
+    doi: 10.1523/JNEUROSCI.2934-07.2008
+    year: 2008
+    verified: false
+  - citation: 'García-Larrea L, Frot M, Valeriani M. Brain generators of laser-evoked potentials: from dipoles to functional
+      significance. Neurophysiol Clin. 2003;33(6):279-292.'
+    doi: 10.1016/j.neucli.2003.10.008
+    year: 2003
+    verified: false
+  note: 'method: intracranial; N1/N2 components recorded directly from the opercular SII region (Frot 2003, Frot 2008), consistent
+    with dipole and MEG source models from several laboratories reviewed in García-Larrea 2003.'
+- region: BR.posterior_insula
+  evidence: B
+  sources:
+  - citation: Frot M. Dual representation of pain in the operculo-insular cortex in humans. Brain. 2003;126(2):438-450.
+    doi: 10.1093/brain/awg032
+    year: 2003
+    verified: false
+  - citation: 'García-Larrea L, Frot M, Valeriani M. Brain generators of laser-evoked potentials: from dipoles to functional
+      significance. Neurophysiol Clin. 2003;33(6):279-292.'
+    doi: 10.1016/j.neucli.2003.10.008
+    year: 2003
+    verified: false
+  note: 'method: intracranial; parallel responses from the posterior insula alongside SII (Frot 2003; reviewed in García-Larrea
+    2003).'
+- region: BR.dACC
+  evidence: B
+  sources:
+  - citation: Frot M, Mauguière F, Magnin M, García-Larrea L. Parallel processing of nociceptive A-delta inputs in SII and
+      midcingulate cortex in humans. J Neurosci. 2008;28(4):944-952.
+    doi: 10.1523/JNEUROSCI.2934-07.2008
+    year: 2008
+    verified: false
+  - citation: 'García-Larrea L, Frot M, Valeriani M. Brain generators of laser-evoked potentials: from dipoles to functional
+      significance. Neurophysiol Clin. 2003;33(6):279-292.'
+    doi: 10.1016/j.neucli.2003.10.008
+    year: 2003
+    verified: false
+  note: 'method: intracranial; the vertex N2-P2 involves midcingulate cortex (Frot 2008; García-Larrea 2003). Region is midcingulate
+    rather than dorsal anterior cingulate; closest available id, see vocab_requests.csv.'
+indexes:
+- construct: CN.somatosensation
+  evidence: A
+  relation: amplitude decreases with lesions of the nociceptive (A-delta/spinothalamic) pathway; used to assess nociceptive
+    function
+  sources:
+  - citation: 'Cruccu G, Sommer C, Anand P, et al. EFNS guidelines on neuropathic pain assessment: revised 2009. Eur J Neurol.
+      2010;17(8):1010-1018.'
+    doi: 10.1111/j.1468-1331.2010.02969.x
+    year: 2010
+    verified: false
+  - citation: 'García-Larrea L, Frot M, Valeriani M. Brain generators of laser-evoked potentials: from dipoles to functional
+      significance. Neurophysiol Clin. 2003;33(6):279-292.'
+    doi: 10.1016/j.neucli.2003.10.008
+    year: 2003
+    verified: false
+  note: Cruccu 2010 is an evidence-graded clinical guideline based on systematic literature review.
+- construct: CN.orienting
+  evidence: B
+  relation: N2-P2 amplitude tracks stimulus saliency and is reduced by repetition, also for non-nociceptive salient stimuli
+  sources:
+  - citation: 'Iannetti GD, Hughes NP, Lee MC, Mouraux A. Determinants of laser-evoked EEG responses: pain perception or stimulus
+      saliency? J Neurophysiol. 2008;100(2):815-828.'
+    doi: 10.1152/jn.00097.2008
+    year: 2008
+    verified: false
+  - citation: Mouraux A, Iannetti GD. Nociceptive laser-evoked brain potentials do not reflect nociceptive-specific neural
+      activity. J Neurophysiol. 2009;101(6):3258-3269.
+    doi: 10.1152/jn.91181.2008
+    year: 2009
+    verified: false
+  note: Same group; consistent findings across experiments and modalities.
+notes: 'First-pass skeleton by package A (2026-10-03). No generators/indexes yet. Signature values are textbook-level approximations
+  and await source checking. Sprint 6 (2026-10-16, curator K): generators and indexes curated; every DOI checked against its
+  Crossref or OpenAlex record (see curation/work/sprint6/markers_K/); verified: false pending full-text check.'
 status: draft
 contributors:
 - curator_a

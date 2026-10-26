@@ -1,0 +1,79 @@
+schema_version: '0.2'
+id: STM-RTMS-002
+class: STM-RTMS
+name:
+  en: Theta-burst stimulation (continuous / intermittent) with pre/post excitability read-out
+  zh: theta 爆发刺激（连续/间歇）及前后兴奋性测量
+aliases:
+- TBS
+- theta burst stimulation
+- cTBS
+- iTBS
+- continuous theta burst stimulation
+- intermittent theta burst stimulation
+family: stimulation
+bci_category:
+- none
+recording_modality:
+- EEG
+stimulus_modality:
+- magnetic_stimulation
+markers:
+- MK.TEP
+description:
+  en: >-
+    Bursts of three TMS pulses at 50 Hz are repeated at 5 Hz (theta rhythm) over motor cortex at a low intensity relative
+    to the active motor threshold. Delivered without pause (continuous TBS, cTBS) the bursts depress, and delivered in
+    short trains separated by pauses (intermittent TBS, iTBS) they facilitate, the amplitude of motor evoked potentials
+    for tens of minutes; an intermediate pattern serves as a control. With TMS-compatible EEG the same before/after design
+    is read out through TMS-evoked potentials.
+  zh: >-
+    在运动皮层以相对主动运动阈值较低的强度，施加由 3 个 50 Hz TMS 脉冲组成、以 5 Hz（θ 节律）重复的爆发。不间断施加（连续 TBS，cTBS）时运动诱发电位幅度被抑制，
+    以短串加间歇施加（间歇 TBS，iTBS）时被易化，效应持续数十分钟；中间模式用作对照。使用兼容 TMS 的脑电时，同样的前后设计以 TMS 诱发电位读出。
+trial_structure:
+  phases:
+  - name: baseline read-out
+    note: single-pulse MEP (or TEP) before conditioning
+  - name: theta-burst conditioning
+    duration_ms: 40000 (cTBS) or 190000 (iTBS)
+    note: >-
+      cTBS: uninterrupted bursts, 600 pulses; iTBS: 2-s trains every 10 s, 600 pulses; 3 pulses at 50 Hz per burst,
+      bursts at 5 Hz, 80% of active motor threshold (standard values of Huang et al. 2005; check against full text)
+  - name: post-stimulation read-out
+    note: single-pulse MEP / TEP at intervals up to about 60 min
+  conditions:
+  - cTBS
+  - iTBS
+  - intermediate TBS (control)
+protocol:
+  n_classes: 3
+  classes:
+  - continuous TBS
+  - intermittent TBS
+  - intermediate TBS
+  cue: none
+  stimulus_coding: patterned stimulation - 50-Hz triplets repeated at 5 Hz, continuous or intermittent
+  paradigm_timing: block
+  feedback: none
+  distinguishing: >-
+    准则 2（相对 STM-RTMS-001）：条件刺激为成簇的 theta 爆发模式（50 Hz 三联脉冲以 5 Hz 重复，连续或间歇），而非固定频率的规则脉冲串（Huang et al. 2005）。
+    Criterion 2 vs STM-RTMS-001: patterned theta-burst coding (50-Hz triplets at 5 Hz, continuous vs intermittent) instead
+    of regular fixed-frequency trains (Huang et al. 2005).
+first_source:
+  citation: >-
+    Huang YZ, Edwards MJ, Rounis E, Bhatia KP, Rothwell JC. Theta burst stimulation of the human motor cortex. Neuron.
+    2005;45(2):201-206.
+  doi: 10.1016/j.neuron.2004.12.033
+  year: 2005
+  verified: false
+interop:
+  bids_task: tbs
+notes: >-
+  [curator_b sprint 6, 2026-10-16] first_source Huang et al. 2005 (MEP read-out; D-031). The burst parameters in
+  trial_structure are the widely used standard values attributed to this paper and are to be checked against its full
+  text. No EEG study of theta-burst after-effects was retrieved in this sprint; MK.TEP is assigned by analogy with the
+  rTMS-EEG read-out of STM-RTMS-001 (Esser et al. 2006, see that file), and a "First neural recording:" line is still
+  open. bibliography confirmed (Crossref, 2026-10-16)
+status: draft
+contributors:
+- curator_b

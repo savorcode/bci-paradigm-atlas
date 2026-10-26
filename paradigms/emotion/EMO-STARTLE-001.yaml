@@ -1,0 +1,91 @@
+schema_version: '0.2'
+id: EMO-STARTLE-001
+class: EMO-STARTLE
+name:
+  en: Affect-modulated startle during picture viewing
+  zh: 图片观看中的情绪调制惊跳反射
+aliases:
+- affective startle modulation
+- emotion-modulated startle
+- startle probe paradigm
+- startle reflex modulation
+- probe P3
+family: emotion
+bci_category:
+- none
+recording_modality:
+- EEG
+- other
+stimulus_modality:
+- visual
+- auditory
+markers:
+- MK.P3a
+description:
+  en: Participants view pleasant, neutral and unpleasant pictures, and on some trials a brief, loud burst of white noise
+    (the startle probe) is presented while the picture is on the screen. The eyeblink component of the startle reflex,
+    measured from the orbicularis oculi EMG, is larger during unpleasant and smaller during pleasant pictures than during
+    neutral ones; in the EEG, the P3 evoked by the probe is smaller during emotionally arousing pictures of either valence.
+  zh: 被试观看愉快、中性和不愉快的图片，部分试次在图片呈现期间给出短促而响亮的白噪声（惊跳探测刺激）。以眼轮匝肌肌电测量的惊跳眨眼反射在不愉快图片时比中性图片大、在愉快图片时比中性图片小；在脑电中，探测刺激诱发的
+    P3 在两种效价的高唤醒图片期间均减小。
+trial_structure:
+  phases:
+  - name: picture viewing
+    duration_ms: 6000
+    note: typical value in the standard protocol; to be checked against the first source
+  - name: startle probe
+    duration_ms: 50
+    note: white noise burst presented during picture viewing at an unpredictable latency, on a subset of trials; about
+      95-105 dB(A) with near-instantaneous rise time (typical values, see Blumenthal et al. 2005 guidelines)
+  - name: inter-trial interval
+    duration_ms: 10000-20000
+    note: typical range; to be checked against the first source
+  typical_trials: 36-54 pictures, about two thirds with a probe
+  conditions:
+  - pleasant pictures
+  - neutral pictures
+  - unpleasant pictures
+protocol:
+  n_classes: 3
+  classes:
+  - pleasant pictures
+  - neutral pictures
+  - unpleasant pictures
+  cue: affective pictures (slides) with an acoustic white-noise startle probe during viewing
+  stimulus_coding: picture valence (pleasant / neutral / unpleasant); probe on a subset of trials at varied latency
+  paradigm_timing: synchronous
+  feedback: none
+  distinguishing: 标准配置（最早发表，即 first_source）：观看愉快、中性、不愉快图片，图片期间给出听觉白噪声惊跳探测刺激，以眨眼反射幅度为主要因变量（Vrana, Spence & Lang 1988）。
+first_source:
+  citation: 'Vrana SR, Spence EL, Lang PJ. The startle probe response: A new measure of emotion? Journal of Abnormal Psychology.
+    1988;97(4):487-491.'
+  doi: 10.1037/0021-843x.97.4.487
+  year: 1988
+  verified: false
+variants:
+- name: Probe P3 recorded together with the blink reflex (EEG)
+  source:
+    citation: 'Schupp HT, Cuthbert BN, Bradley MM, Birbaumer N, Lang PJ. Probe P3 and blinks: Two measures of affective startle
+      modulation. Psychophysiology. 1997;34(1):1-6.'
+    doi: 10.1111/j.1469-8986.1997.tb02409.x
+    year: 1997
+    verified: false
+  note: Same picture-viewing configuration; the ERP to the probe is analysed in addition to the blink. Probe P3 is mainly
+    modulated by arousal (smaller during pleasant and unpleasant than neutral pictures), and the modulation persists into
+    a later imagery period.
+interop:
+  bids_task: affectivestartle
+notes: 'Sources: Vrana, Spence & Lang 1988 (first_source; introduced the startle probe as a measure of picture-evoked emotion);
+  Lang, Bradley & Cuthbert 1990 Psychological Review 97(3):377-395, doi:10.1037/0033-295x.97.3.377 (motivational priming
+  account of the valence effect; review); Blumenthal et al. 2005 Psychophysiology 42(1):1-15, doi:10.1111/j.1469-8986.2005.00271.x
+  (committee guidelines for startle eyeblink EMG; source of the typical probe parameters); Schupp et al. 1997 (probe P3;
+  supports MK.P3a). Bibliographic data from the Crossref API (Vrana 1988, Lang 1990) and the OpenAlex API (Blumenthal 2005,
+  Schupp 1997; Crossref requests failed). The primary dependent measure, the startle eyeblink (orbicularis oculi EMG), is
+  not a neural marker and has no registry id; recording_modality ''other'' stands for that EMG, and MK.P3a is used as the
+  closest neural marker for the probe-evoked P3 (requested: MK.startle_blink, see marker_requests.csv). Durations in trial_structure
+  are typical values of the standard protocol, not yet checked against the 1988 paper. Related: EMO-IAPS-001 (same picture
+  sets without probe), EMO-THREAT-001 (instructed threat; startle-based threat-of-shock work is listed there as a gap).
+  [curator_e sprint 6, 2026-10-16]'
+status: draft
+contributors:
+- curator_e

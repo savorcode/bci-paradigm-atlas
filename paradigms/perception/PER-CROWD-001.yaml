@@ -1,0 +1,77 @@
+schema_version: '0.2'
+id: PER-CROWD-001
+class: PER-CROWD
+name:
+  en: Peripheral letter crowding
+  zh: 周边字母拥挤
+aliases:
+- visual crowding
+- crowding
+- letter crowding
+- Bouma's law
+- critical spacing
+family: perception
+bci_category:
+- none
+recording_modality:
+- EEG
+stimulus_modality:
+- visual
+markers:
+- MK.N1_visual
+description:
+  en: While fixating centrally, the observer identifies a letter presented briefly at a peripheral eccentricity, either alone
+    or flanked by other letters at different spacings. Recognition drops when flankers lie within about half the eccentricity
+    of the target (Bouma 1970). The critical spacing, measured as a function of eccentricity, defines the 'uncrowded window'
+    of object recognition (Pelli & Tillman 2008).
+  zh: 被试注视中央，识别短暂呈现于周边某一离心度的字母；目标字母单独呈现，或两侧以不同间距放置其他字母。当侧翼字母距目标小于约一半离心度时识别率下降（Bouma 1970）。随离心度测得的临界间距界定了物体识别的“非拥挤窗口”（Pelli
+    与 Tillman 2008）。
+trial_structure:
+  phases:
+  - name: fixation
+    duration_ms: 500-1000
+    note: typical
+  - name: target with or without flankers
+    duration_ms: <200
+    note: brief exposure to prevent saccades to the target; exact value not taken from the first source
+  - name: response
+    duration_ms: self-paced
+    note: target identification
+  conditions:
+  - target alone
+  - flanked target (spacing varied)
+protocol:
+  n_classes: 2
+  classes:
+  - target alone
+  - target with flankers
+  cue: peripheral letter target with flanking letters at variable spacing
+  stimulus_coding: target-flanker spacing and eccentricity varied
+  paradigm_timing: synchronous
+  feedback: none
+  distinguishing: 标准配置（最早发表，即 first_source）：周边字母目标，单独或有侧翼字母，间距可变，测量识别率与临界间距（Bouma 1970）。
+first_source:
+  citation: Bouma H. Interaction effects in parafoveal letter recognition. Nature. 1970;226(5241):177-178.
+  doi: 10.1038/226177a0
+  year: 1970
+  verified: false
+variants:
+- name: Vernier target with flanking lines of equal or longer length (EEG)
+  source:
+    citation: Chicherov V, Plomp G, Herzog MH. Neural correlates of visual crowding. NeuroImage. 2014;93:23-31.
+    doi: 10.1016/j.neuroimage.2014.02.021
+    year: 2014
+    verified: false
+  note: Same target/flanker logic with a vernier offset discrimination; grouping of equal-length flankers increases crowding.
+    Recorded with high-density EEG (N1 suppression). Parameter-level change of target type within the same flanker scheme.
+interop:
+  bids_task: crowding
+notes: Bouma 1970 (Crossref) gives the critical spacing of about half the eccentricity; the procedural details of the 1970
+  paper were not seen (the repository page shows the abstract only), so durations are typical values. Pelli & Tillman 2008
+  and Whitney & Levi 2011 are the standard reviews. Chicherov et al. 2014 (OpenAlex record; Crossref rate-limited) supports
+  the marker MK.N1_visual. The vernier configuration was put in variants because the trial structure and flanker manipulation
+  are the same; the maintainer may prefer a separate serial number (criterion 2, stimulus type). No public dataset verified.
+  [curator_a sprint 6, 2026-10-16]
+status: draft
+contributors:
+- curator_a

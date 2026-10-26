@@ -1,0 +1,78 @@
+schema_version: '0.2'
+id: CTL-NUM-001
+class: CTL-NUM
+name:
+  en: Digit magnitude comparison (numerical distance effect)
+  zh: 数字大小比较（数值距离效应）
+aliases:
+- number comparison
+- numerical comparison
+- magnitude comparison
+- numerical distance effect
+- symbolic distance effect
+family: control
+bci_category:
+- none
+recording_modality:
+- EEG
+- fMRI
+stimulus_modality:
+- visual
+markers:
+- MK.BOLD_frontoparietal
+description:
+  en: Two digits from 1 to 9 are shown side by side and the participant presses the key on the side of the larger digit. Response
+    time decreases as the numerical difference between the two digits increases, as for comparisons of physical magnitudes,
+    which suggests that digits are converted to an analogue magnitude before comparison.
+  zh: 并排呈现两个 1–9 的数字，被试按下较大数字一侧的按键。反应时随两数差值增大而缩短，与物理量比较类似，提示数字在比较前被转换为模拟量表征。
+trial_structure:
+  phases:
+  - name: fixation / warning
+    duration_ms: 500-1000
+    note: typical
+  - name: digit pair
+    duration_ms: until response
+  - name: response
+    duration_ms: speeded
+    note: key on the side of the larger digit
+  conditions:
+  - numerical distance 1-8
+  - larger digit left
+  - larger digit right
+protocol:
+  n_classes: 2
+  classes:
+  - larger on left
+  - larger on right
+  cue: pair of Arabic digits (1-9)
+  stimulus_coding: numerical distance between the two digits varied
+  paradigm_timing: synchronous
+  feedback: none
+  distinguishing: 标准配置（最早发表，即 first_source）：并排两个一位数，选出较大者，反应时随数值距离下降（Moyer 与 Landauer 1967）。同类其他具体范式：CTL-NUM-002 奇偶判断 SNARC（任务与反应映射不同，准则
+    1）。
+first_source:
+  citation: Moyer RS, Landauer TK. Time required for judgements of numerical inequality. Nature. 1967;215(5109):1519-1520.
+  doi: 10.1038/2151519a0
+  year: 1967
+  verified: false
+variants:
+- name: Comparison of single numbers with a fixed standard (larger/smaller than 5), ERP
+  source:
+    citation: 'Dehaene S. The organization of brain activations in number comparison: event-related potentials and the additive-factors
+      method. Journal of Cognitive Neuroscience. 1996;8(1):47-68.'
+    doi: 10.1162/jocn.1996.8.1.47
+    year: 1996
+    verified: false
+  note: One number at a time compared with a fixed standard; ERP additive-factors design separating notation, distance and
+    response-hand effects. Same distance-effect logic.
+interop:
+  bids_task: numbercomparison
+notes: Moyer & Landauer 1967 (Crossref) is the origin of the numerical distance effect. Phase durations are typical values;
+  the 1967 paper's exact timing was not seen. Dehaene 1996 (Crossref) is the key ERP study (distance effect over parietal
+  electrodes; P2p not in the registry, see marker_requests.csv). MK.BOLD_frontoparietal is the closest registry marker for
+  intraparietal involvement; no fMRI study was retrieved in this sprint (a 2011 fMRI study of choice and distance effects
+  was found by web search but not retrieved as a record). Comparison with a fixed standard is kept as a variant; the maintainer
+  may prefer a new serial number (criterion 2). No public dataset verified. [curator_c sprint 6, 2026-10-16]
+status: draft
+contributors:
+- curator_c

@@ -1,4 +1,4 @@
-schema_version: "0.2"
+schema_version: '0.2'
 id: MK.BOLD_posterior_insula
 name:
   en: Posterior insula BOLD
@@ -14,8 +14,63 @@ description:
   en: Task-evoked BOLD signal change in the posterior insular cortex. It increases to slow, gentle stroking that activates
     C-tactile afferents, and to other interoceptive and thermal-pain stimulation.
   zh: 后岛叶皮层的任务诱发 BOLD 信号变化。对激活 C 触觉传入纤维的缓慢轻柔抚触，以及其他内感受和温度/疼痛刺激，响应增强。
-notes: Signature values are textbook-level characteristics entered in the first pass and await source checking. New marker
+notes: 'Signature values are textbook-level characteristics entered in the first pass and await source checking. New marker
   requested by package E for EMO-TOUCH-001 (see curation/work/pkg_E/marker_requests.csv); distinct from MK.BOLD_anterior_insula.
+  Sprint 6 (2026-10-16, curator J): generators and indexes curated; every DOI checked against its Crossref or OpenAlex record
+  (see curation/work/sprint6/markers_J/); verified: false pending full-text check.'
+generators:
+- region: BR.posterior_insula
+  evidence: A
+  sources:
+  - citation: 'Kurth F, Zilles K, Fox PT, et al. A link between the systems: functional differentiation and integration within
+      the human insula revealed by meta-analysis. Brain Struct Funct. 2010;214(5-6):519-534.'
+    doi: 10.1007/s00429-010-0255-z
+    year: 2010
+    verified: false
+  - citation: Morrison I. ALE meta-analysis reveals dissociable networks for affective and discriminative aspects of touch.
+      Hum Brain Mapp. 2016;37(4):1308-1320.
+    doi: 10.1002/hbm.23103
+    year: 2016
+    verified: false
+  note: 'method: fMRI localization; measured region; insula meta-analysis identifies a sensorimotor zone in mid-posterior
+    insula (Kurth et al. 2010), and the touch meta-analysis finds posterior insula for affective (C-tactile) touch (Morrison
+    2016).'
+indexes:
+- construct: CN.somatosensation
+  evidence: A
+  relation: activation increases with slow, gentle stroking (C-tactile touch) and scales with thermal pain intensity
+  sources:
+  - citation: Morrison I. ALE meta-analysis reveals dissociable networks for affective and discriminative aspects of touch.
+      Hum Brain Mapp. 2016;37(4):1308-1320.
+    doi: 10.1002/hbm.23103
+    year: 2016
+    verified: false
+  - citation: Olausson H, Lamarre Y, Backlund H, et al. Unmyelinated tactile afferents signal touch and project to insular
+      cortex. Nat Neurosci. 2002;5(9):900-904.
+    doi: 10.1038/nn896
+    year: 2002
+    verified: false
+  - citation: Segerdahl AR, Mezue M, Okell TW, et al. The dorsal posterior insula subserves a fundamental role in human pain.
+      Nat Neurosci. 2015;18(4):499-500.
+    doi: 10.1038/nn.3969
+    year: 2015
+    verified: false
+- construct: CN.interoception
+  evidence: B
+  relation: activation reflects primary interoceptive input (temperature, pain, affective touch) from lamina I spinothalamic
+    pathways
+  sources:
+  - citation: 'Craig AD. How do you feel? Interoception: the sense of the physiological condition of the body. Nat Rev Neurosci.
+      2002;3(8):655-666.'
+    doi: 10.1038/nrn894
+    year: 2002
+    verified: false
+  - citation: Olausson H, Lamarre Y, Backlund H, et al. Unmyelinated tactile afferents signal touch and project to insular
+      cortex. Nat Neurosci. 2002;5(9):900-904.
+    doi: 10.1038/nn896
+    year: 2002
+    verified: false
+  note: Narrative review plus one primary study; graded B.
 status: draft
 contributors:
 - curator_e

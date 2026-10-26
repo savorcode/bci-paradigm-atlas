@@ -11,6 +11,7 @@ generators or indexes (with the first source of each link). Rebuild it after atl
 from __future__ import annotations
 
 import csv
+import hashlib
 import json
 import re
 from collections import Counter
@@ -49,6 +50,18 @@ def short_source(src: dict) -> list[str]:
     author = re.split(r"[ ,.]", c.strip(), maxsplit=1)[0]
     journals = re.findall(r"([A-Z][^.;:?!]{1,60}?)\.?\s+\d{4}[;.,]", c)
     return [f"{author} {src.get('year', '')}".strip(), (journals[-1].strip() if journals else "")[:42], src.get("doi", "")]
+
+
+def stamp_assets() -> None:
+    """Add a content hash to the CSS/JS/data references so browsers fetch new files after each update."""
+    web = ROOT / "website"
+    for name, page in (("story-data.json", "story.js"), ("story.css", "index.html"), ("story.js", "index.html")):
+        digest = hashlib.sha1((web / name).read_bytes().replace(b"\r\n", b"\n")).hexdigest()[:8]
+        path = web / page
+        text = path.read_text(encoding="utf-8")
+        new = re.sub(r"\./" + re.escape(name) + r"(\?v=[0-9a-f]+)?", f"./{name}?v={digest}", text)
+        if new != text:
+            path.write_text(new, encoding="utf-8")
 
 
 def main() -> int:
@@ -98,6 +111,7 @@ def main() -> int:
     }
     out = ROOT / "website" / "story-data.json"
     out.write_text(json.dumps(data, ensure_ascii=False, separators=(",", ":")) + "\n", encoding="utf-8")
+    stamp_assets()
     print(f"{len(active)} paradigms, {len(markers)} linked markers, {data['S']['links']} links -> {out.relative_to(ROOT)}")
     return 0
 

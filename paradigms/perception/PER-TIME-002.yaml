@@ -1,0 +1,68 @@
+schema_version: '0.2'
+id: PER-TIME-002
+class: PER-TIME
+name:
+  en: Audiovisual simultaneity judgement (SJ)
+  zh: 视听同时性判断（SJ）
+aliases:
+- simultaneity judgement
+- simultaneity judgment
+- SJ
+- audiovisual synchrony judgement
+- temporal binding window
+family: perception
+bci_category:
+- none
+recording_modality:
+- EEG
+stimulus_modality:
+- visual
+- auditory
+markers:
+- MK.AV_interaction_ERP
+description:
+  en: A brief light and a brief sound are presented at a range of audiovisual SOAs (sound leading or lagging). The observer
+    judges whether the two were simultaneous or not. The distribution of 'simultaneous' responses over SOA gives the point
+    of subjective simultaneity, which Stone et al. found to differ reliably between individuals, and the width of the temporal
+    binding window.
+  zh: 以一系列视听 SOA（声音领先或落后）呈现短暂光刺激和短暂声音，被试判断二者是否同时。“同时”反应在各 SOA 上的分布给出主观同时点（Stone 等发现其在个体间稳定地不同）以及时间整合窗的宽度。
+trial_structure:
+  phases:
+  - name: fixation
+    duration_ms: 500-1000
+    note: typical
+  - name: light-sound pair
+    duration_ms: SOA -250 to +250
+    note: typical range; sound-leading and light-leading SOAs
+  - name: response
+    duration_ms: self-paced
+    note: simultaneous vs not simultaneous
+  conditions:
+  - simultaneous
+  - not simultaneous
+protocol:
+  n_classes: 2
+  classes:
+  - simultaneous
+  - not simultaneous
+  cue: brief light flash and brief sound at variable audiovisual SOA
+  stimulus_coding: SOA varied; response = synchrony judgement
+  paradigm_timing: synchronous
+  feedback: none
+  distinguishing: 与 PER-TIME-001 的区别：反应类别为“同时 / 不同时”而非“哪个先”（准则 1），并限定为视听刺激对（准则 2）。源头：Stone 等 2001（检索到的最早可引用的视听 SJ 记录）。
+first_source:
+  citation: 'Stone JV, Hunkin NM, Porrill J, Wood R, Keeler V, Beanland M, Port M, Porter NR. When is now? Perception of simultaneity.
+    Proceedings of the Royal Society of London. Series B: Biological Sciences. 2001;268(1462):31-38.'
+  doi: 10.1098/rspb.2000.1326
+  year: 2001
+  verified: false
+interop:
+  bids_task: simultaneity
+notes: Separate serial number because the response classes differ from TOJ (criterion 1). Stone et al. 2001 (Crossref) is
+  the earliest retrieved record using the audiovisual SJ task; the SJ method is older and the true origin was not retrieved.
+  SOA range and phase durations are typical values (Vroomen & Keetels 2010 review), not taken from Stone et al. Marker MK.AV_interaction_ERP
+  is the closest registry marker for audiovisual timing; no study linking it to SJ was retrieved in this sprint. [curator_a
+  sprint 6, 2026-10-16]
+status: draft
+contributors:
+- curator_a

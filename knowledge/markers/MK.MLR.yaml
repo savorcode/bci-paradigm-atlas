@@ -1,4 +1,4 @@
-schema_version: "0.2"
+schema_version: '0.2'
 id: MK.MLR
 name:
   en: Auditory middle-latency response
@@ -19,8 +19,83 @@ description:
   en: Auditory evoked waves between about 10 and 80 ms (Na, Pa, Nb, Pb) that follow the brainstem response and precede the
     N1, attributed to thalamo-cortical and primary auditory cortex activity.
   zh: 介于约 10–80 ms 之间的听觉诱发波（Na、Pa、Nb、Pb），位于脑干响应之后、N1 之前，归因于丘脑—皮层及初级听皮层活动。
-notes: First-pass skeleton by package A (2026-10-03). No generators/indexes yet. Signature values are textbook-level approximations
+generators:
+- region: BR.A1
+  evidence: A
+  sources:
+  - citation: 'Liégeois-Chauvel C, Musolino A, Badier JM, et al. Evoked potentials recorded from the auditory cortex in man:
+      evaluation and topography of the middle latency components. Electroencephalogr Clin Neurophysiol. 1994;92(3):204-214.'
+    doi: 10.1016/0168-5597(94)90064-7
+    year: 1994
+    verified: false
+  - citation: Yvert B. Multiple supratemporal sources of magnetic and electric auditory evoked middle latency components in
+      humans. Cereb Cortex. 2001;11(5):411-423.
+    doi: 10.1093/cercor/11.5.411
+    year: 2001
+    verified: false
+  - citation: Kraus N, Özdamar Ö, Hier D, et al. Auditory middle latency responses (MLRs) in patients with cortical lesions.
+      Electroencephalogr Clin Neurophysiol. 1982;54(3):275-287.
+    doi: 10.1016/0013-4694(82)90177-8
+    year: 1982
+    verified: false
+  note: 'method: intracranial; Pa/Nb recorded directly from Heschl gyrus (Liégeois-Chauvel 1994), supported by MEG/EEG source
+    models (Yvert 2001) and temporal-lobe lesion effects (Kraus 1982) from independent laboratories.'
+- region: BR.thalamus
+  evidence: C
+  sources:
+  - citation: Kraus N, Özdamar Ö, Hier D, et al. Auditory middle latency responses (MLRs) in patients with cortical lesions.
+      Electroencephalogr Clin Neurophysiol. 1982;54(3):275-287.
+    doi: 10.1016/0013-4694(82)90177-8
+    year: 1982
+    verified: false
+  - citation: 'Erwin RJ, Buchwald JS. Midlatency auditory evoked responses: differential effects of sleep in the human. Electroencephalogr
+      Clin Neurophysiol. 1986;65(5):383-392.'
+    doi: 10.1016/0168-5597(86)90017-1
+    year: 1986
+    verified: false
+  note: 'method: lesion; vertex Pa can persist after unilateral temporal lesions (Kraus 1982) and the Pb/P1 shows sleep-state
+    dependence suggesting thalamic/reticular contribution (Erwin and Buchwald 1986). Indirect evidence.'
+indexes:
+- construct: CN.early_auditory
+  evidence: B
+  relation: Na-Pa components reflect early cortical encoding of sound onset in primary auditory cortex
+  sources:
+  - citation: 'Liégeois-Chauvel C, Musolino A, Badier JM, et al. Evoked potentials recorded from the auditory cortex in man:
+      evaluation and topography of the middle latency components. Electroencephalogr Clin Neurophysiol. 1994;92(3):204-214.'
+    doi: 10.1016/0168-5597(94)90064-7
+    year: 1994
+    verified: false
+  - citation: Yvert B. Multiple supratemporal sources of magnetic and electric auditory evoked middle latency components in
+      humans. Cereb Cortex. 2001;11(5):411-423.
+    doi: 10.1093/cercor/11.5.411
+    year: 2001
+    verified: false
+- construct: CN.consciousness_level
+  evidence: B
+  relation: Pa/Nb amplitude decreases and latency increases with anaesthetic depth and loss of consciousness
+  sources:
+  - citation: Thornton C, Sharpe RM. Evoked responses in anaesthesia. Br J Anaesth. 1998;81(5):771-781.
+    doi: 10.1093/bja/81.5.771
+    year: 1998
+    verified: false
+  - citation: Plourde G. Auditory evoked potentials. Best Pract Res Clin Anaesthesiol. 2006;20(1):129-139.
+    doi: 10.1016/j.bpa.2005.07.012
+    year: 2006
+    verified: false
+  note: Two narrative reviews; graded B.
+- construct: CN.sleep
+  evidence: C
+  relation: the Pb (P1) component decreases in slow-wave sleep while Pa is relatively preserved
+  sources:
+  - citation: 'Erwin RJ, Buchwald JS. Midlatency auditory evoked responses: differential effects of sleep in the human. Electroencephalogr
+      Clin Neurophysiol. 1986;65(5):383-392.'
+    doi: 10.1016/0168-5597(86)90017-1
+    year: 1986
+    verified: false
+notes: 'First-pass skeleton by package A (2026-10-03). No generators/indexes yet. Signature values are textbook-level approximations
   and await source checking. New marker requested by package A (curation/work/pkg_A/marker_requests.csv); not yet in curation/registry/markers.csv.
+  Sprint 6 (2026-10-16, curator K): generators and indexes curated; every DOI checked against its Crossref or OpenAlex record
+  (see curation/work/sprint6/markers_K/); verified: false pending full-text check.'
 status: draft
 contributors:
 - curator_a

@@ -1,0 +1,55 @@
+marker,link_type,target,evidence,method,doi,record_api,note
+MK.tES_power_aftereffect,generator,BR.visual_cortex,C,scalp topography,10.1371/journal.pone.0013766,Crossref API,the stimulated region; alpha-tACS aftereffect studies most often stimulate poste
+MK.tES_power_aftereffect,generator,BR.visual_cortex,C,scalp topography,10.3389/fnhum.2016.00245,Crossref API,the stimulated region; alpha-tACS aftereffect studies most often stimulate poste
+MK.tES_power_aftereffect,generator,BR.visual_cortex,C,scalp topography,10.1016/j.brs.2014.12.004,Crossref API,the stimulated region; alpha-tACS aftereffect studies most often stimulate poste
+MK.tES_power_aftereffect,index,CN.cortical_excitability,B,,10.1371/journal.pone.0013766,Crossref API,power in the stimulated band increases after stimulation relative to sham and ca
+MK.tES_power_aftereffect,index,CN.cortical_excitability,B,,10.3389/fnhum.2016.00245,Crossref API,power in the stimulated band increases after stimulation relative to sham and ca
+MK.tES_power_aftereffect,index,CN.cortical_excitability,B,,10.1016/j.brs.2014.12.004,Crossref API,power in the stimulated band increases after stimulation relative to sham and ca
+MK.tES_power_aftereffect,index,CN.neural_entrainment,C,,10.1016/j.brs.2014.12.004,Crossref API,post-stimulation power increase does not require phase continuity with the stimu
+MK.ABR,generator,BR.inferior_colliculus,B,intracranial,10.1177/000348948109000616,Crossref API,wave V recorded near the lateral lemniscus / inferior colliculus in human intrac
+MK.ABR,generator,BR.inferior_colliculus,B,intracranial,10.3109/01050398309076235,Crossref API,wave V recorded near the lateral lemniscus / inferior colliculus in human intrac
+MK.ABR,generator,BR.inferior_colliculus,B,intracranial,10.1093/brain/104.4.841,OpenAlex API,wave V recorded near the lateral lemniscus / inferior colliculus in human intrac
+MK.ABR,index,CN.early_auditory,B,,10.1097/01.aud.0000194511.14740.9c,OpenAlex API,wave V threshold and latency track peripheral and brainstem hearing sensitivity;
+MK.ABR,index,CN.early_auditory,B,,10.1542/peds.2007-2333,OpenAlex API,wave V threshold and latency track peripheral and brainstem hearing sensitivity;
+MK.BOLD_left_IFG,generator,BR.IFG,A,fMRI localization,10.3758/cabn.7.1.1,Crossref API,measured region; meta-analysis of interference-resolution tasks shows a consiste
+MK.BOLD_left_IFG,generator,BR.IFG,A,fMRI localization,10.1073/pnas.95.14.8410,Crossref API,measured region; meta-analysis of interference-resolution tasks shows a consiste
+MK.BOLD_left_IFG,generator,BR.IFG,A,fMRI localization,10.1016/j.neuroimage.2007.07.066,Crossref API,measured region; meta-analysis of interference-resolution tasks shows a consiste
+MK.BOLD_left_IFG,index,CN.working_memory,A,,10.3758/cabn.7.1.1,Crossref API,"activation increases for recent negative probes in item recognition, i.e. with t"
+MK.BOLD_left_IFG,index,CN.working_memory,A,,10.1073/pnas.95.14.8410,Crossref API,"activation increases for recent negative probes in item recognition, i.e. with t"
+MK.BOLD_left_IFG,index,CN.working_memory,A,,10.1016/j.neuroimage.2007.07.066,Crossref API,"activation increases for recent negative probes in item recognition, i.e. with t"
+MK.BOLD_left_IFG,index,CN.semantic_integration,B,,10.1073/pnas.94.26.14792,Crossref API,activation increases with the demand to select among competing semantic alternat
+MK.BOLD_left_IFG,index,CN.semantic_integration,B,,10.1016/j.neuropsychologia.2007.06.015,OpenAlex API,activation increases with the demand to select among competing semantic alternat
+MK.BOLD_olfactory_cortex,generator,BR.amygdala,A,fMRI localization,10.1016/j.neuroimage.2012.10.030,Crossref API,measured region; the olfactory meta-analysis places the most consistent cluster 
+MK.BOLD_olfactory_cortex,generator,BR.amygdala,A,fMRI localization,10.1038/32654,Crossref API,measured region; the olfactory meta-analysis places the most consistent cluster 
+MK.BOLD_olfactory_cortex,generator,BR.OFC_lateral,A,fMRI localization,10.1016/j.neuroimage.2012.10.030,Crossref API,measured region; orbitofrontal clusters are consistently reported in the olfacto
+MK.BOLD_olfactory_cortex,generator,BR.insula,A,fMRI localization,10.1016/j.neuroimage.2012.10.030,Crossref API,measured region; insular clusters are consistently reported in the olfactory met
+MK.BOLD_olfactory_cortex,index,CN.chemosensation,A,,10.1016/j.neuroimage.2012.10.030,Crossref API,activation increases during odour presentation relative to odourless air
+MK.BOLD_olfactory_cortex,index,CN.chemosensation,A,,10.1038/32654,Crossref API,activation increases during odour presentation relative to odourless air
+MK.BOLD_olfactory_cortex,index,CN.mental_imagery,C,,10.1016/j.neuroimage.2004.09.035,Crossref API,activation in primary olfactory cortex increases during odour imagery without an
+MK.BOLD_posterior_insula,generator,BR.posterior_insula,A,fMRI localization,10.1007/s00429-010-0255-z,OpenAlex API,measured region; insula meta-analysis identifies a sensorimotor zone in mid-post
+MK.BOLD_posterior_insula,generator,BR.posterior_insula,A,fMRI localization,10.1002/hbm.23103,Crossref API,measured region; insula meta-analysis identifies a sensorimotor zone in mid-post
+MK.BOLD_posterior_insula,index,CN.somatosensation,A,,10.1002/hbm.23103,Crossref API,"activation increases with slow, gentle stroking (C-tactile touch) and scales wit"
+MK.BOLD_posterior_insula,index,CN.somatosensation,A,,10.1038/nn896,OpenAlex API,"activation increases with slow, gentle stroking (C-tactile touch) and scales wit"
+MK.BOLD_posterior_insula,index,CN.somatosensation,A,,10.1038/nn.3969,OpenAlex API,"activation increases with slow, gentle stroking (C-tactile touch) and scales wit"
+MK.BOLD_posterior_insula,index,CN.interoception,B,,10.1038/nrn894,OpenAlex API,"activation reflects primary interoceptive input (temperature, pain, affective to"
+MK.BOLD_posterior_insula,index,CN.interoception,B,,10.1038/nn896,OpenAlex API,"activation reflects primary interoceptive input (temperature, pain, affective to"
+MK.BOLD_vestibular_cortex,generator,BR.posterior_insula,A,fMRI localization,10.1016/j.neuroscience.2012.03.028,OpenAlex API,measured region; vestibular stimulation meta-analyses converge on posterior insu
+MK.BOLD_vestibular_cortex,generator,BR.posterior_insula,A,fMRI localization,10.1016/j.neuroimage.2011.12.032,Crossref API,measured region; vestibular stimulation meta-analyses converge on posterior insu
+MK.BOLD_vestibular_cortex,generator,BR.TPJ,B,fMRI localization,10.1016/j.neuroscience.2012.03.028,OpenAlex API,measured region; galvanic and caloric stimulation also activate superior tempora
+MK.BOLD_vestibular_cortex,generator,BR.TPJ,B,fMRI localization,10.1152/jn.2001.85.2.886,OpenAlex API,measured region; galvanic and caloric stimulation also activate superior tempora
+MK.BOLD_vestibular_cortex,index,CN.multisensory_integration,B,,10.1152/jn.2001.85.2.886,OpenAlex API,activation increases in multisensory vestibular cortex during galvanic or calori
+MK.BOLD_vestibular_cortex,index,CN.multisensory_integration,B,,10.1016/j.neuroscience.2012.03.028,OpenAlex API,activation increases in multisensory vestibular cortex during galvanic or calori
+MK.CCEP,generator,BR.STG,B,intracranial,10.1093/brain/awh246,OpenAlex API,recording site; stimulation of anterior language cortex evokes N1 responses in p
+MK.CCEP,generator,BR.STG,B,intracranial,10.3389/fnhum.2021.635453,OpenAlex API,recording site; stimulation of anterior language cortex evokes N1 responses in p
+MK.CCEP,generator,BR.STG,B,intracranial,10.1016/j.neuroimage.2018.07.039,OpenAlex API,recording site; stimulation of anterior language cortex evokes N1 responses in p
+MK.CCEP,generator,BR.IFG,B,intracranial,10.1093/brain/awh246,OpenAlex API,recording site; stimulation of posterior temporal language cortex evokes respons
+MK.CCEP,generator,BR.IFG,B,intracranial,10.3389/fnhum.2021.635453,OpenAlex API,recording site; stimulation of posterior temporal language cortex evokes respons
+MK.CCEP,generator,BR.IFG,B,intracranial,10.1016/j.neuroimage.2018.07.039,OpenAlex API,recording site; stimulation of posterior temporal language cortex evokes respons
+MK.CCEP,index,CN.cortical_excitability,B,,10.1093/brain/awf187,Crossref API; OpenAlex API,early and delayed responses to single-pulse stimulation are larger or more frequ
+MK.CCEP,index,CN.cortical_excitability,B,,10.1098/rstb.2013.0528,OpenAlex API,early and delayed responses to single-pulse stimulation are larger or more frequ
+MK.CCEP,index,CN.language,B,,10.1093/brain/awh246,OpenAlex API,N1 responses map bidirectional connections between anterior and posterior langua
+MK.CCEP,index,CN.language,B,,10.3389/fnhum.2021.635453,OpenAlex API,N1 responses map bidirectional connections between anterior and posterior langua
+MK.DBS_cortical_EP,generator,BR.M1,B,intracranial,10.1523/JNEUROSCI.1327-18.2018,Crossref API,recording site; subthalamic stimulation evokes a short-latency (about 3 ms) pote
+MK.DBS_cortical_EP,generator,BR.M1,B,intracranial,10.1002/mds.25025,OpenAlex API,recording site; subthalamic stimulation evokes a short-latency (about 3 ms) pote
+MK.DBS_cortical_EP,index,CN.cortical_excitability,B,,10.1523/JNEUROSCI.1327-18.2018,Crossref API,short-latency evoked potential amplitude increases with stimulation amplitude an
+MK.DBS_cortical_EP,index,CN.cortical_excitability,B,,10.1002/mds.25025,OpenAlex API,short-latency evoked potential amplitude increases with stimulation amplitude an

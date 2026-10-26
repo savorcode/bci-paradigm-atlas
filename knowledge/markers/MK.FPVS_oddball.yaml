@@ -1,4 +1,4 @@
-schema_version: "0.2"
+schema_version: '0.2'
 id: MK.FPVS_oddball
 name:
   en: FPVS oddball-frequency response
@@ -18,8 +18,89 @@ description:
   en: Response at the oddball presentation frequency and its harmonics in fast periodic visual stimulation, distinct from
     the base-frequency response; it is present only if the brain discriminates the oddball stimuli from the base stimuli.
   zh: 快速周期视觉刺激中，在 oddball 呈现频率及其谐波处出现、区别于基频响应的反应；只有当大脑将 oddball 刺激与基础刺激区分开时才会出现。
-notes: First-pass skeleton by package A (2026-10-03). No generators/indexes yet. Signature values are textbook-level approximations
-  and await source checking.
+generators:
+- region: BR.FFA
+  evidence: B
+  sources:
+  - citation: Jonas J, Jacques C, Liu-Shuang J, et al. A face-selective ventral occipito-temporal map of the human brain with
+      intracerebral potentials. Proc Natl Acad Sci U S A. 2016;113(28).
+    doi: 10.1073/pnas.1522033113
+    year: 2016
+    verified: false
+  - citation: 'Gao X, Gentile F, Rossion B. Fast periodic stimulation (FPS): a highly effective approach in fMRI brain mapping.
+      Brain Struct Funct. 2018;223(5):2433-2454.'
+    doi: 10.1007/s00429-018-1630-4
+    year: 2018
+    verified: false
+  note: 'method: intracranial; face-selective oddball-frequency responses on intracerebral contacts concentrate in the lateral
+    fusiform gyrus (Jonas 2016), matching fMRI fast periodic stimulation maps (Gao 2018). Same research group across modalities.'
+- region: BR.OFA
+  evidence: B
+  sources:
+  - citation: Jonas J, Jacques C, Liu-Shuang J, et al. A face-selective ventral occipito-temporal map of the human brain with
+      intracerebral potentials. Proc Natl Acad Sci U S A. 2016;113(28).
+    doi: 10.1073/pnas.1522033113
+    year: 2016
+    verified: false
+  - citation: 'Gao X, Gentile F, Rossion B. Fast periodic stimulation (FPS): a highly effective approach in fMRI brain mapping.
+      Brain Struct Funct. 2018;223(5):2433-2454.'
+    doi: 10.1007/s00429-018-1630-4
+    year: 2018
+    verified: false
+  note: 'method: intracranial; additional face-selective oddball responses in the right inferior occipital gyrus (Jonas 2016)
+    and fMRI FPS localisation of OFA (Gao 2018).'
+indexes:
+- construct: CN.face_perception
+  evidence: B
+  relation: oddball-frequency amplitude reflects face-selective (face vs object) and face-identity discrimination
+  sources:
+  - citation: Rossion B, Torfs K, Jacques C, Liu-Shuang J. Fast periodic presentation of natural images reveals a robust face-selective
+      electrophysiological response in the human brain. J Vis. 2015;15(1):18.
+    doi: 10.1167/15.1.18
+    year: 2015
+    verified: false
+  - citation: Liu-Shuang J, Norcia AM, Rossion B. An objective index of individual face discrimination in the right occipito-temporal
+      cortex by means of fast periodic oddball stimulation. Neuropsychologia. 2013;52:57-72.
+    doi: 10.1016/j.neuropsychologia.2013.10.022
+    year: 2013
+    verified: false
+  - citation: Rossion B, Retter TL, Liu-Shuang J. Understanding human individuation of unfamiliar faces with oddball fast
+      periodic visual stimulation and electroencephalography. Eur J Neurosci. 2020;52(10):4283-4344.
+    doi: 10.1111/ejn.14865
+    year: 2020
+    verified: false
+  note: Primary studies plus a narrative review, largely from one group.
+- construct: CN.perceptual_discrimination
+  evidence: B
+  relation: response appears only when oddball stimuli are discriminated from base stimuli and scales with discriminability
+  sources:
+  - citation: Liu-Shuang J, Norcia AM, Rossion B. An objective index of individual face discrimination in the right occipito-temporal
+      cortex by means of fast periodic oddball stimulation. Neuropsychologia. 2013;52:57-72.
+    doi: 10.1016/j.neuropsychologia.2013.10.022
+    year: 2013
+    verified: false
+  - citation: Rossion B, Retter TL, Liu-Shuang J. Understanding human individuation of unfamiliar faces with oddball fast
+      periodic visual stimulation and electroencephalography. Eur J Neurosci. 2020;52(10):4283-4344.
+    doi: 10.1111/ejn.14865
+    year: 2020
+    verified: false
+  - citation: 'Peykarjou S. Frequency tagging with infants: the visual oddball paradigm. Front Psychol. 2022;13:1015611.'
+    doi: 10.3389/fpsyg.2022.1015611
+    year: 2022
+    verified: false
+  note: Peykarjou 2022 systematically reviews visual oddball frequency-tagging studies in infants.
+- construct: CN.object_recognition
+  evidence: C
+  relation: category-selective oddball responses (faces among objects) generalise across natural image variability
+  sources:
+  - citation: Rossion B, Torfs K, Jacques C, Liu-Shuang J. Fast periodic presentation of natural images reveals a robust face-selective
+      electrophysiological response in the human brain. J Vis. 2015;15(1):18.
+    doi: 10.1167/15.1.18
+    year: 2015
+    verified: false
+notes: 'First-pass skeleton by package A (2026-10-03). No generators/indexes yet. Signature values are textbook-level approximations
+  and await source checking. Sprint 6 (2026-10-16, curator K): generators and indexes curated; every DOI checked against its
+  Crossref or OpenAlex record (see curation/work/sprint6/markers_K/); verified: false pending full-text check.'
 status: draft
 contributors:
 - curator_a

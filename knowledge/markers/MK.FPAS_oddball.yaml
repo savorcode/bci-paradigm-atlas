@@ -1,4 +1,4 @@
-schema_version: "0.2"
+schema_version: '0.2'
 id: MK.FPAS_oddball
 name:
   en: FPAS oddball-frequency response
@@ -15,8 +15,50 @@ description:
   en: Response at the periodic oddball frequency in fast periodic auditory stimulation, distinct from the base-rate response;
     it indicates discrimination of the oddball sound category.
   zh: 快速周期听觉刺激中在周期性 oddball 频率处出现、区别于基础速率响应的反应，表明对 oddball 声音类别的辨别。
-notes: First-pass skeleton by package A (2026-10-03). No generators/indexes yet. Signature values are textbook-level approximations
+generators:
+- region: BR.STG
+  evidence: C
+  sources:
+  - citation: Barbero FM, Calce RP, Talwar S, Rossion B, Collignon O. Fast periodic auditory stimulation reveals a robust
+      categorical response to voices in the human brain. eNeuro. 2021;8(3):ENEURO.0471-20.2021.
+    doi: 10.1523/ENEURO.0471-20.2021
+    year: 2021
+    verified: false
+  - citation: Calce RP, Rekow D, Barbero FM, et al. Voice categorization in the four-month-old human brain. Curr Biol. 2023;34(1):46-55.e4.
+    doi: 10.1016/j.cub.2023.11.042
+    year: 2023
+    verified: false
+  note: 'method: MEG/EEG source; beamformer source estimate over right superior/middle temporal cortex without individual
+    MRI (Barbero 2021), plus bilateral temporal scalp topography in adults and infants (Calce 2023). Localisation is approximate.'
+indexes:
+- construct: CN.voice_perception
+  evidence: C
+  relation: oddball-frequency response is present when voices are inserted periodically among non-vocal sounds and reduced
+    for acoustically scrambled voices
+  sources:
+  - citation: Barbero FM, Calce RP, Talwar S, Rossion B, Collignon O. Fast periodic auditory stimulation reveals a robust
+      categorical response to voices in the human brain. eNeuro. 2021;8(3):ENEURO.0471-20.2021.
+    doi: 10.1523/ENEURO.0471-20.2021
+    year: 2021
+    verified: false
+  - citation: Calce RP, Rekow D, Barbero FM, et al. Voice categorization in the four-month-old human brain. Curr Biol. 2023;34(1):46-55.e4.
+    doi: 10.1016/j.cub.2023.11.042
+    year: 2023
+    verified: false
+  note: Both studies from the same group; graded C pending independent replication.
+- construct: CN.perceptual_discrimination
+  evidence: C
+  relation: response emerges only if the oddball category is discriminated from the base stimuli and generalises across exemplars
+  sources:
+  - citation: Barbero FM, Calce RP, Talwar S, Rossion B, Collignon O. Fast periodic auditory stimulation reveals a robust
+      categorical response to voices in the human brain. eNeuro. 2021;8(3):ENEURO.0471-20.2021.
+    doi: 10.1523/ENEURO.0471-20.2021
+    year: 2021
+    verified: false
+notes: 'First-pass skeleton by package A (2026-10-03). No generators/indexes yet. Signature values are textbook-level approximations
   and await source checking. New marker requested by package A (curation/work/pkg_A/marker_requests.csv); not yet in curation/registry/markers.csv.
+  Sprint 6 (2026-10-16, curator K): generators and indexes curated; every DOI checked against its Crossref or OpenAlex record
+  (see curation/work/sprint6/markers_K/); verified: false pending full-text check.'
 status: draft
 contributors:
 - curator_a

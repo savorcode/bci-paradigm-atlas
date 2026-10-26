@@ -1,0 +1,83 @@
+# Sprint 6 markers_K search log (curator K)
+
+Date: 2026-10-16. Web search calls used: 15 of 25. Record look-ups via the Crossref API and the OpenAlex API; frequent HTTP 429 rate limits from both (see entries). PubMed/PMC pages returned a browser check and gave no content.
+
+- web search (S01) "fast periodic auditory stimulation oddball EEG voice categorization Barbero eNeuro" -> eNeuro 8(3) ENEURO.0471-20.2021 found
+- web search (S02) "evoked resonant neural activity subthalamic nucleus DBS ERNA localization" -> Thevathasan 2020 Front Hum Neurosci review; Wiest 2023 pdf
+- web search (S03) "gustatory evoked potentials insula source MEG Kobayakawa Mizoguchi" -> no direct record; leads only
+- web search (S04) "fixation-related potential lambda response source localization visual cortex" -> PubMed 12822598 lead
+- Crossref API https://api.crossref.org/works/10.1523/ENEURO.0471-20.2021 -> 429
+- HTTP request PMC PMC7059818 -> redirect, then captcha
+- HTTP request PubMed 12822598 -> redirect, then captcha
+- OpenAlex API https://api.openalex.org/works/doi:10.1523/ENEURO.0471-20.2021 -> 429
+- web search (S05) "Sinclair 2018 Ann Neurol ERNA doi" -> repository pages
+- web search (S06) "Jonas 2016 PNAS face-selective map intracerebral FPVS" -> PMC4948344
+- web search (S07) "Frot Mauguiere Garcia-Larrea parallel processing SII midcingulate" -> HAL inserm-00232553
+- web search (S08) "Liegeois-Chauvel 1994 MLR intracerebral" -> leads
+- Crossref API https://api.crossref.org/works/10.1002/ana.25295 -> record is a different paper (Tamilia 2018 ripple onset); candidate DOI rejected
+- Crossref API search bibliographic Sinclair ERNA -> 10.1002/ana.25234 OK; 10.3389/fnhum.2020.00071 OK (Thevathasan 2020)
+- Crossref API search Wiest ERNA dynamics -> irrelevant results
+- Crossref API search Wiest 2020 LFP dynamics -> irrelevant results
+- Crossref API search evoked resonant Wiest -> 429
+- OpenAlex API https://api.openalex.org/works/doi:10.1016/j.nbd.2020.105019 -> OK Wiest 2020 NBD 143:105019
+- Crossref API https://api.crossref.org/works/10.1073/pnas.1522033113 -> OK Jonas 2016 PNAS 113(28), no page range in record
+- OpenAlex API https://api.openalex.org/works/doi:10.1016/j.neuropsychologia.2013.10.022 -> OK Liu-Shuang 2013 (record year) Neuropsychologia 52:57-72
+- Crossref API https://api.crossref.org/works/10.1111/ejn.14865 -> OK Rossion 2020 EJN 52(10):4283-4344
+- OpenAlex API https://api.openalex.org/works/doi:10.1167/15.1.18 -> OK Rossion 2015 J Vis 15(1):18
+- Crossref API https://api.crossref.org/works/10.1007/s00429-018-1630-4 -> OK Gao 2018 BSF 223(5):2433-2454
+- HTTP request eneuro.org article page ENEURO.0471-20.2021 -> metadata + content (Barbero 2021)
+- web search (S09) "frequency-tagging auditory oddball periodic EEG infants" -> Peykarjou 2022 lead; voices at four months lead
+- web search (S10) ""fast periodic auditory stimulation" oddball 2022-2024" -> few new leads
+- Crossref API https://api.crossref.org/works/10.3389/fpsyg.2022.1015611 -> OK Peykarjou 2022 Front Psychol 13:1015611 (systematic review, visual oddball frequency tagging in infants)
+- Crossref API search voices four months -> 429
+- OpenAlex API search voices four months -> OK Calce 2023 Curr Biol 34(1):46-55.e4 10.1016/j.cub.2023.11.042
+- Crossref API https://api.crossref.org/works/10.1016/j.neucli.2003.10.008 -> fetch error
+- OpenAlex API https://api.openalex.org/works/doi:10.1523/JNEUROSCI.2934-07.2008 -> OK Frot 2008 J Neurosci 28(4):944-952
+- OpenAlex API https://api.openalex.org/works/doi:10.1016/j.neucli.2003.10.008 -> OK Garcia-Larrea 2003 Neurophysiol Clin 33(6):279-292
+- Crossref API https://api.crossref.org/works/10.1152/jn.00097.2008 -> OK Iannetti 2008 J Neurophysiol 100(2):815-828
+- OpenAlex API https://api.openalex.org/works/doi:10.1111/j.1468-1331.2010.02969.x -> OK Cruccu 2010 Eur J Neurol 17(8):1010-1018
+- Crossref API https://api.crossref.org/works/10.1016/j.neuroscience.2004.10.035 -> 429
+- OpenAlex API https://api.openalex.org/works/doi:10.1016/j.neuroscience.2004.10.035 -> 429
+- OpenAlex API https://api.openalex.org/works/doi:10.1093/brain/awg032 -> OK Frot 2003 Brain 126(2):438-450; record lists only first author
+- Crossref API https://api.crossref.org/works/10.1093/brain/awg032 -> OK, record lists first author only (Frot M)
+- OpenAlex API https://api.openalex.org/works/doi:10.1016/0168-5597(94)90064-7 -> OK Liegeois-Chauvel 1994 EEG Clin Neurophysiol 92(3):204-214
+- Crossref API https://api.crossref.org/works/10.1093/cercor/11.5.411 -> OK Yvert 2001 Cereb Cortex 11(5):411-423, one author in record
+- OpenAlex API https://api.openalex.org/works/doi:10.1093/cercor/11.5.411 -> same, one authorship entry
+- OpenAlex API https://api.openalex.org/works/doi:10.1016/0013-4694(82)90177-8 -> OK Kraus 1982 54(3):275-287
+- Crossref API https://api.crossref.org/works/10.1093/bja/81.5.771 -> OK Thornton & Sharpe 1998 BJA 81(5):771-781
+- OpenAlex API https://api.openalex.org/works/doi:10.1016/j.bpa.2005.07.012 -> OK Plourde 2006 20(1):129-139
+- OpenAlex API https://api.openalex.org/works/doi:10.1016/0168-5597(86)90017-1 -> OK Erwin & Buchwald 1986 65(5):383-392
+- Crossref API https://api.crossref.org/works/10.1113/jphysiol.1977.sp012025 -> OK Desmedt & Robertson 1977 271(3):761-782
+- OpenAlex API https://api.openalex.org/works/doi:10.1111/j.1469-8986.1995.tb01229.x -> OK Garcia-Larrea 1995 Psychophysiology 32(6):526-537
+- Crossref API https://api.crossref.org/works/10.1007/s00221-003-1437-1 -> 429
+- OpenAlex API https://api.openalex.org/works/doi:10.1007/s00221-003-1437-1 -> OK Eimer & Forster 2003 EBR 151(1):24-31
+- OpenAlex API https://api.openalex.org/works/doi:10.1016/0168-5597(92)90083-Y -> fetch error (candidate DOI not resolved; not used)
+- OpenAlex API https://api.openalex.org/works/doi:10.1093/cercor/9.8.854 -> OK Frot 1999 Cereb Cortex 9(8):854-863, one author in record
+- web search (S11) "somatosensory N140 generator SII intracranial/source" -> general leads
+- web search (S12) "Allison McCarthy Wood 1992 long-latency SEP cortical surface scalp" -> leads
+- OpenAlex API search (long title) -> fetch error
+- OpenAlex API search Allison long-latency SEP -> 10.1016/0168-5597(92)90082-m
+- OpenAlex API https://api.openalex.org/works/doi:10.1016/0168-5597(92)90082-m -> 429
+- Crossref API https://api.crossref.org/works/10.1016/0168-5597(92)90082-M -> OK Allison 1992 84(4):301-314
+- OpenAlex API https://api.openalex.org/works/doi:10.1037/a0023885 -> OK Dimigen 2011 JEP Gen 140(4):552-572
+- Crossref API https://api.crossref.org/works/10.1167/12.7.4 -> 429
+- OpenAlex API https://api.openalex.org/works/doi:10.1167/12.7.4 -> 429 (Kamienkowski 2012 dropped)
+- OpenAlex API https://api.openalex.org/works/doi:10.1167/13.3.17 -> 429
+- Crossref API https://api.crossref.org/works/10.1167/13.3.17 -> OK Brouwer 2013 J Vis 13(3):17
+- OpenAlex API https://api.openalex.org/works/doi:10.3758/CABN.3.1.46 -> OK Kazai & Yagi 2003 CABN 3(1):46-56
+- OpenAlex API https://api.openalex.org/works/doi:10.1016/j.neuroimage.2013.12.006 -> OK Kaunitz 2013 NeuroImage 89:297-305
+- web search (S13) "FRP N400 natural reading predictability Kretzschmar/Degno" -> Kretzschmar 2015 lead
+- OpenAlex API https://api.openalex.org/works/doi:10.1037/xlm0000128 -> OK Kretzschmar 2015 JEP LMC 41(6):1648-1662
+- OpenAlex API https://api.openalex.org/works/doi:10.1093/chemse/24.2.201 -> 429
+- Crossref API https://api.crossref.org/works/10.1093/chemse/24.2.201 -> 429 (Kobayakawa 1999 dropped; record never retrieved)
+- OpenAlex API https://api.openalex.org/works/doi:10.1016/j.cub.2015.01.057 -> OK Crouzet 2015 Curr Biol 25(7):890-896
+- OpenAlex API https://api.openalex.org/works/doi:10.1093/chemse/27.7.629 -> OK Mizoguchi 2002 Chem Senses 27(7):629-634, one author in record
+- OpenAlex API https://api.openalex.org/works/doi:10.1002/hbm.21188 -> OK Veldhuizen 2011 HBM 32(12):2256-2266
+- web search (S14) "Hummel Genow Landis 2010 gustatory ERP doi" -> JNNP 81(4):459 lead
+- web search (S15) "gustatory evoked magnetic fields insula frontal operculum Kobayakawa" -> Springer 10.1007/s12078-008-9030-4 lead
+- OpenAlex API https://api.openalex.org/works/doi:10.1007/s12078-008-9030-4 -> OK Kobayakawa 2008 Chemosens Percept 1(4):227-234
+- OpenAlex API https://api.openalex.org/works/doi:10.1136/jnnp.2009.183699 -> OK Hummel 2009 (record year) JNNP 81(4):459-464
+- Crossref API search Barbero voices -> 429
+- OpenAlex API search fast periodic auditory categorical voices -> OK Barbero 2021 eNeuro 8(3) 10.1523/eneuro.0471-20.2021
+- OpenAlex API https://api.openalex.org/works/doi:10.1016/j.nbd.2019.104522 -> OK Sinclair 2019 NBD 130:104522
+- OpenAlex API https://api.openalex.org/works/doi:10.1152/jn.91181.2008 -> OK Mouraux & Iannetti 2009 J Neurophysiol 101(6):3258-3269

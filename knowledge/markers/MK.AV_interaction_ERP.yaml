@@ -1,4 +1,4 @@
-schema_version: "0.2"
+schema_version: '0.2'
 id: MK.AV_interaction_ERP
 name:
   en: Early audiovisual interaction ERP
@@ -16,7 +16,70 @@ description:
     alone (additive model). Non-zero differences, including in early latency ranges, are taken as evidence of multisensory
     interaction.
   zh: 视听联合刺激 ERP 与单独听觉、单独视觉刺激 ERP 之和之间的差异（加性模型）。差异不为零（包括在早期潜伏期）被视为多感觉交互的证据。
-notes: First-pass skeleton by package A (2026-10-03). No generators/indexes yet.
+generators:
+- region: BR.STG
+  evidence: C
+  sources:
+  - citation: 'Besle J, Fischer C, Bidet-Caulet A, et al. Visual activation and audiovisual interactions in the auditory cortex
+      during speech perception: intracranial recordings in humans. J Neurosci. 2008;28(52):14301-14310.'
+    doi: 10.1523/JNEUROSCI.2875-08.2008
+    year: 2008
+    verified: false
+  note: 'method: intracranial; depth recordings in epilepsy patients show AV-(A+V) interactions in auditory cortex (Heschl
+    gyrus and adjacent superior temporal cortex) during audiovisual speech; single study.'
+- region: BR.visual_cortex
+  evidence: C
+  sources:
+  - citation: 'Giard MH, Peronnet F. Auditory-visual integration during multimodal object recognition in humans: a behavioral
+      and electrophysiological study. J Cogn Neurosci. 1999;11(5):473-490.'
+    doi: 10.1162/089892999563544
+    year: 1999
+    verified: false
+  - citation: 'Molholm S, Ritter W, Murray MM, et al. Multisensory auditory-visual interactions during early sensory processing
+      in humans: a high-density electrical mapping study. Cogn Brain Res. 2002;14(1):115-128.'
+    doi: 10.1016/S0926-6410(02)00066-6
+    year: 2002
+    verified: false
+  note: 'method: scalp topography; early (<100 ms) interaction effects over posterior (occipital/parieto-occipital) scalp,
+    attributed to visual cortex by current-density and topographic mapping; scalp-level evidence capped at C.'
+indexes:
+- construct: CN.multisensory_integration
+  evidence: B
+  relation: the AV-(A+V) difference departs from zero (super- or sub-additive) when auditory and visual inputs are integrated,
+    beginning as early as 40-100 ms
+  sources:
+  - citation: 'Giard MH, Peronnet F. Auditory-visual integration during multimodal object recognition in humans: a behavioral
+      and electrophysiological study. J Cogn Neurosci. 1999;11(5):473-490.'
+    doi: 10.1162/089892999563544
+    year: 1999
+    verified: false
+  - citation: 'Molholm S, Ritter W, Murray MM, et al. Multisensory auditory-visual interactions during early sensory processing
+      in humans: a high-density electrical mapping study. Cogn Brain Res. 2002;14(1):115-128.'
+    doi: 10.1016/S0926-6410(02)00066-6
+    year: 2002
+    verified: false
+  - citation: 'Stevenson RA, Ghose D, Fister JK, et al. Identifying and quantifying multisensory integration: a tutorial review.
+      Brain Topogr. 2014;27(6):707-730.'
+    doi: 10.1007/s10548-014-0365-7
+    year: 2014
+    verified: false
+- construct: CN.attention_allocation
+  evidence: B
+  relation: early interaction effects are larger when both modalities are attended than when one is ignored
+  sources:
+  - citation: 'Talsma D, Woldorff MG. Selective attention and multisensory integration: multiple phases of effects on the
+      evoked brain activity. J Cogn Neurosci. 2005;17(7):1098-1114.'
+    doi: 10.1162/0898929054475172
+    year: 2005
+    verified: false
+  - citation: Talsma D, Senkowski D, Soto-Faraco S, et al. The multifaceted interplay between attention and multisensory integration.
+      Trends Cogn Sci. 2010;14(9):400-410.
+    doi: 10.1016/j.tics.2010.06.008
+    year: 2010
+    verified: false
+notes: 'First-pass skeleton by package A (2026-10-03). No generators/indexes yet. Sprint 6 (2026-10-16, curator I): generators
+  and indexes curated; every DOI checked against its Crossref or OpenAlex record (see curation/work/sprint6/markers_I/); verified:
+  false pending full-text check.'
 status: draft
 contributors:
 - curator_a

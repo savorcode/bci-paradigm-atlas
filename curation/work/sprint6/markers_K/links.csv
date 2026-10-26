@@ -1,0 +1,68 @@
+marker,link_type,target,evidence,method,doi,record_api,note
+MK.ERNA,generator,BR.STN,B,intracranial,10.1002/ana.25234,https://api.crossref.org/works?query.bibliographic=... (Crossref API search; DOI 10.1002/ana.25234),
+MK.ERNA,generator,BR.STN,B,intracranial,10.1016/j.nbd.2020.105019,https://api.openalex.org/works/doi:10.1016/j.nbd.2020.105019,
+MK.ERNA,index,CN.cortical_excitability,B,,10.1002/ana.25234,https://api.crossref.org/works?query.bibliographic=... (Crossref API search; DOI 10.1002/ana.25234),Closest available construct; ERNA indexes subcortical (basal ganglia) responsiveness to stimulation rather than cortical excitability. See vocab_requests.csv.
+MK.ERNA,index,CN.cortical_excitability,B,,10.1016/j.nbd.2019.104522,https://api.openalex.org/works/doi:10.1016/j.nbd.2019.104522,Closest available construct; ERNA indexes subcortical (basal ganglia) responsiveness to stimulation rather than cortical excitability. See vocab_requests.csv.
+MK.ERNA,index,CN.cortical_excitability,B,,10.1016/j.nbd.2020.105019,https://api.openalex.org/works/doi:10.1016/j.nbd.2020.105019,Closest available construct; ERNA indexes subcortical (basal ganglia) responsiveness to stimulation rather than cortical excitability. See vocab_requests.csv.
+MK.ERNA,index,CN.motor_execution,C,,10.1002/ana.25234,https://api.crossref.org/works?query.bibliographic=... (Crossref API search; DOI 10.1002/ana.25234),Indirect link via clinical motor benefit of DBS targeting; Thevathasan 2020 is a perspective article from the same group.
+MK.ERNA,index,CN.motor_execution,C,,10.3389/fnhum.2020.00071,https://api.crossref.org/works?query.bibliographic=... (Crossref API search; DOI 10.3389/fnhum.2020.00071),Indirect link via clinical motor benefit of DBS targeting; Thevathasan 2020 is a perspective article from the same group.
+MK.FPAS_oddball,generator,BR.STG,C,MEG/EEG source,10.1523/ENEURO.0471-20.2021,https://api.openalex.org/works?search=... (OpenAlex API search; DOI 10.1523/ENEURO.0471-20.2021),
+MK.FPAS_oddball,generator,BR.STG,C,MEG/EEG source,10.1016/j.cub.2023.11.042,https://api.openalex.org/works?search=... (OpenAlex API search; DOI 10.1016/j.cub.2023.11.042),
+MK.FPAS_oddball,index,CN.voice_perception,C,,10.1523/ENEURO.0471-20.2021,https://api.openalex.org/works?search=... (OpenAlex API search; DOI 10.1523/ENEURO.0471-20.2021),Both studies from the same group; graded C pending independent replication.
+MK.FPAS_oddball,index,CN.voice_perception,C,,10.1016/j.cub.2023.11.042,https://api.openalex.org/works?search=... (OpenAlex API search; DOI 10.1016/j.cub.2023.11.042),Both studies from the same group; graded C pending independent replication.
+MK.FPAS_oddball,index,CN.perceptual_discrimination,C,,10.1523/ENEURO.0471-20.2021,https://api.openalex.org/works?search=... (OpenAlex API search; DOI 10.1523/ENEURO.0471-20.2021),
+MK.FPVS_oddball,generator,BR.FFA,B,intracranial,10.1073/pnas.1522033113,https://api.crossref.org/works/10.1073/pnas.1522033113,
+MK.FPVS_oddball,generator,BR.FFA,B,intracranial,10.1007/s00429-018-1630-4,https://api.crossref.org/works/10.1007/s00429-018-1630-4,
+MK.FPVS_oddball,generator,BR.OFA,B,intracranial,10.1073/pnas.1522033113,https://api.crossref.org/works/10.1073/pnas.1522033113,
+MK.FPVS_oddball,generator,BR.OFA,B,intracranial,10.1007/s00429-018-1630-4,https://api.crossref.org/works/10.1007/s00429-018-1630-4,
+MK.FPVS_oddball,index,CN.face_perception,B,,10.1167/15.1.18,https://api.openalex.org/works/doi:10.1167/15.1.18,"Primary studies plus a narrative review, largely from one group."
+MK.FPVS_oddball,index,CN.face_perception,B,,10.1016/j.neuropsychologia.2013.10.022,https://api.openalex.org/works/doi:10.1016/j.neuropsychologia.2013.10.022,"Primary studies plus a narrative review, largely from one group."
+MK.FPVS_oddball,index,CN.face_perception,B,,10.1111/ejn.14865,https://api.crossref.org/works/10.1111/ejn.14865,"Primary studies plus a narrative review, largely from one group."
+MK.FPVS_oddball,index,CN.perceptual_discrimination,B,,10.1016/j.neuropsychologia.2013.10.022,https://api.openalex.org/works/doi:10.1016/j.neuropsychologia.2013.10.022,Peykarjou 2022 systematically reviews visual oddball frequency-tagging studies in infants.
+MK.FPVS_oddball,index,CN.perceptual_discrimination,B,,10.1111/ejn.14865,https://api.crossref.org/works/10.1111/ejn.14865,Peykarjou 2022 systematically reviews visual oddball frequency-tagging studies in infants.
+MK.FPVS_oddball,index,CN.perceptual_discrimination,B,,10.3389/fpsyg.2022.1015611,https://api.crossref.org/works/10.3389/fpsyg.2022.1015611,Peykarjou 2022 systematically reviews visual oddball frequency-tagging studies in infants.
+MK.FPVS_oddball,index,CN.object_recognition,C,,10.1167/15.1.18,https://api.openalex.org/works/doi:10.1167/15.1.18,
+MK.FRP,generator,BR.visual_cortex,C,scalp topography,10.3758/CABN.3.1.46,https://api.openalex.org/works/doi:10.3758/CABN.3.1.46,
+MK.FRP,generator,BR.visual_cortex,C,scalp topography,10.1037/a0023885,https://api.openalex.org/works/doi:10.1037/a0023885,
+MK.FRP,index,CN.early_visual,B,,10.3758/CABN.3.1.46,https://api.openalex.org/works/doi:10.3758/CABN.3.1.46,
+MK.FRP,index,CN.early_visual,B,,10.1037/a0023885,https://api.openalex.org/works/doi:10.1037/a0023885,
+MK.FRP,index,CN.semantic_integration,B,,10.1037/a0023885,https://api.openalex.org/works/doi:10.1037/a0023885,
+MK.FRP,index,CN.semantic_integration,B,,10.1037/xlm0000128,https://api.openalex.org/works/doi:10.1037/xlm0000128,
+MK.FRP,index,CN.target_selection,B,,10.1167/13.3.17,https://api.crossref.org/works/10.1167/13.3.17,
+MK.FRP,index,CN.target_selection,B,,10.1016/j.neuroimage.2013.12.006,https://api.openalex.org/works/doi:10.1016/j.neuroimage.2013.12.006,
+MK.FRP,index,CN.intent_selection,C,,10.1167/13.3.17,https://api.crossref.org/works/10.1167/13.3.17,
+MK.GEP,generator,BR.insula,B,MEG/EEG source,10.1093/chemse/27.7.629,https://api.openalex.org/works/doi:10.1093/chemse/27.7.629,
+MK.GEP,generator,BR.insula,B,MEG/EEG source,10.1007/s12078-008-9030-4,https://api.openalex.org/works/doi:10.1007/s12078-008-9030-4,
+MK.GEP,generator,BR.insula,B,MEG/EEG source,10.1002/hbm.21188,https://api.openalex.org/works/doi:10.1002/hbm.21188,
+MK.GEP,index,CN.chemosensation,B,,10.1007/s12078-008-9030-4,https://api.openalex.org/works/doi:10.1007/s12078-008-9030-4,
+MK.GEP,index,CN.chemosensation,B,,10.1136/jnnp.2009.183699,https://api.openalex.org/works/doi:10.1136/jnnp.2009.183699,
+MK.GEP,index,CN.chemosensation,B,,10.1016/j.cub.2015.01.057,https://api.openalex.org/works/doi:10.1016/j.cub.2015.01.057,
+MK.LEP,generator,BR.SII,A,intracranial,10.1093/brain/awg032,https://api.crossref.org/works/10.1093/brain/awg032,
+MK.LEP,generator,BR.SII,A,intracranial,10.1523/JNEUROSCI.2934-07.2008,https://api.openalex.org/works/doi:10.1523/JNEUROSCI.2934-07.2008,
+MK.LEP,generator,BR.SII,A,intracranial,10.1016/j.neucli.2003.10.008,https://api.openalex.org/works/doi:10.1016/j.neucli.2003.10.008,
+MK.LEP,generator,BR.posterior_insula,B,intracranial,10.1093/brain/awg032,https://api.crossref.org/works/10.1093/brain/awg032,
+MK.LEP,generator,BR.posterior_insula,B,intracranial,10.1016/j.neucli.2003.10.008,https://api.openalex.org/works/doi:10.1016/j.neucli.2003.10.008,
+MK.LEP,generator,BR.dACC,B,intracranial,10.1523/JNEUROSCI.2934-07.2008,https://api.openalex.org/works/doi:10.1523/JNEUROSCI.2934-07.2008,
+MK.LEP,generator,BR.dACC,B,intracranial,10.1016/j.neucli.2003.10.008,https://api.openalex.org/works/doi:10.1016/j.neucli.2003.10.008,
+MK.LEP,index,CN.somatosensation,A,,10.1111/j.1468-1331.2010.02969.x,https://api.openalex.org/works/doi:10.1111/j.1468-1331.2010.02969.x,Cruccu 2010 is an evidence-graded clinical guideline based on systematic literature review.
+MK.LEP,index,CN.somatosensation,A,,10.1016/j.neucli.2003.10.008,https://api.openalex.org/works/doi:10.1016/j.neucli.2003.10.008,Cruccu 2010 is an evidence-graded clinical guideline based on systematic literature review.
+MK.LEP,index,CN.orienting,B,,10.1152/jn.00097.2008,https://api.crossref.org/works/10.1152/jn.00097.2008,Same group; consistent findings across experiments and modalities.
+MK.LEP,index,CN.orienting,B,,10.1152/jn.91181.2008,https://api.openalex.org/works/doi:10.1152/jn.91181.2008,Same group; consistent findings across experiments and modalities.
+MK.MLR,generator,BR.A1,A,intracranial,10.1016/0168-5597(94)90064-7,https://api.openalex.org/works/doi:10.1016/0168-5597(94)90064-7,
+MK.MLR,generator,BR.A1,A,intracranial,10.1093/cercor/11.5.411,https://api.crossref.org/works/10.1093/cercor/11.5.411,
+MK.MLR,generator,BR.A1,A,intracranial,10.1016/0013-4694(82)90177-8,https://api.openalex.org/works/doi:10.1016/0013-4694(82)90177-8,
+MK.MLR,generator,BR.thalamus,C,lesion,10.1016/0013-4694(82)90177-8,https://api.openalex.org/works/doi:10.1016/0013-4694(82)90177-8,
+MK.MLR,generator,BR.thalamus,C,lesion,10.1016/0168-5597(86)90017-1,https://api.openalex.org/works/doi:10.1016/0168-5597(86)90017-1,
+MK.MLR,index,CN.early_auditory,B,,10.1016/0168-5597(94)90064-7,https://api.openalex.org/works/doi:10.1016/0168-5597(94)90064-7,
+MK.MLR,index,CN.early_auditory,B,,10.1093/cercor/11.5.411,https://api.crossref.org/works/10.1093/cercor/11.5.411,
+MK.MLR,index,CN.consciousness_level,B,,10.1093/bja/81.5.771,https://api.crossref.org/works/10.1093/bja/81.5.771,Two narrative reviews; graded B.
+MK.MLR,index,CN.consciousness_level,B,,10.1016/j.bpa.2005.07.012,https://api.openalex.org/works/doi:10.1016/j.bpa.2005.07.012,Two narrative reviews; graded B.
+MK.MLR,index,CN.sleep,C,,10.1016/0168-5597(86)90017-1,https://api.openalex.org/works/doi:10.1016/0168-5597(86)90017-1,
+MK.N140_somatosensory,generator,BR.SII,B,intracranial,10.1016/0168-5597(92)90082-M,https://api.crossref.org/works/10.1016/0168-5597(92)90082-M,
+MK.N140_somatosensory,generator,BR.SII,B,intracranial,10.1093/cercor/9.8.854,https://api.openalex.org/works/doi:10.1093/cercor/9.8.854,
+MK.N140_somatosensory,generator,BR.frontal_cortex,C,intracranial,10.1016/0168-5597(92)90082-M,https://api.crossref.org/works/10.1016/0168-5597(92)90082-M,
+MK.N140_somatosensory,index,CN.spatial_attention,B,,10.1113/jphysiol.1977.sp012025,https://api.crossref.org/works/10.1113/jphysiol.1977.sp012025,
+MK.N140_somatosensory,index,CN.spatial_attention,B,,10.1111/j.1469-8986.1995.tb01229.x,https://api.openalex.org/works/doi:10.1111/j.1469-8986.1995.tb01229.x,
+MK.N140_somatosensory,index,CN.spatial_attention,B,,10.1007/s00221-003-1437-1,https://api.openalex.org/works/doi:10.1007/s00221-003-1437-1,
+MK.N140_somatosensory,index,CN.somatosensation,B,,10.1016/0168-5597(92)90082-M,https://api.crossref.org/works/10.1016/0168-5597(92)90082-M,
+MK.N140_somatosensory,index,CN.somatosensation,B,,10.1111/j.1469-8986.1995.tb01229.x,https://api.openalex.org/works/doi:10.1111/j.1469-8986.1995.tb01229.x,

@@ -1,4 +1,4 @@
-schema_version: "0.2"
+schema_version: '0.2'
 id: MK.N140_somatosensory
 name:
   en: Somatosensory N140
@@ -18,8 +18,68 @@ description:
   en: Negative component of the somatosensory ERP around 140 ms with a bilateral fronto-central distribution; it is enhanced
     for stimuli at the attended body location.
   zh: 体感 ERP 中约 140 ms 的负成分，呈双侧额中央分布；被注意身体部位的刺激使其增强。
-notes: First-pass skeleton by package A (2026-10-03). No generators/indexes yet. Signature values are textbook-level approximations
-  and await source checking.
+generators:
+- region: BR.SII
+  evidence: B
+  sources:
+  - citation: Allison T, McCarthy G, Wood CC. The relationship between human long-latency somatosensory evoked potentials
+      recorded from the cortical surface and from the scalp. Electroencephalogr Clin Neurophysiol. 1992;84(4):301-314.
+    doi: 10.1016/0168-5597(92)90082-M
+    year: 1992
+    verified: false
+  - citation: Frot M. Timing and spatial distribution of somatosensory responses recorded in the upper bank of the sylvian
+      fissure (SII area) in humans. Cereb Cortex. 1999;9(8):854-863.
+    doi: 10.1093/cercor/9.8.854
+    year: 1999
+    verified: false
+  note: 'method: intracranial; cortical surface and intracerebral recordings link long-latency somatosensory responses to
+    the SII region of the upper sylvian bank (Allison 1992; Frot 1999).'
+- region: BR.frontal_cortex
+  evidence: C
+  sources:
+  - citation: Allison T, McCarthy G, Wood CC. The relationship between human long-latency somatosensory evoked potentials
+      recorded from the cortical surface and from the scalp. Electroencephalogr Clin Neurophysiol. 1992;84(4):301-314.
+    doi: 10.1016/0168-5597(92)90082-M
+    year: 1992
+    verified: false
+  note: 'method: intracranial; Allison 1992 relates part of the scalp N140 to frontal sources. Single study.'
+indexes:
+- construct: CN.spatial_attention
+  evidence: B
+  relation: amplitude increases for tactile stimuli at the attended body location
+  sources:
+  - citation: Desmedt JE, Robertson D. Differential enhancement of early and late components of the cerebral somatosensory
+      evoked potentials during forced-paced cognitive tasks in man. J Physiol. 1977;271(3):761-782.
+    doi: 10.1113/jphysiol.1977.sp012025
+    year: 1977
+    verified: false
+  - citation: 'García-Larrea L, Lukaszewicz AC, Mauguière F. Somatosensory responses during selective spatial attention: the
+      N120-to-N140 trasition. Psychophysiology. 1995;32(6):526-537.'
+    doi: 10.1111/j.1469-8986.1995.tb01229.x
+    year: 1995
+    verified: false
+  - citation: Eimer M, Forster B. Modulations of early somatosensory ERP components by transient and sustained spatial attention.
+      Exp Brain Res. 2003;151(1):24-31.
+    doi: 10.1007/s00221-003-1437-1
+    year: 2003
+    verified: false
+- construct: CN.somatosensation
+  evidence: B
+  relation: long-latency component of the cortical somatosensory response to tactile/electrical stimulation
+  sources:
+  - citation: Allison T, McCarthy G, Wood CC. The relationship between human long-latency somatosensory evoked potentials
+      recorded from the cortical surface and from the scalp. Electroencephalogr Clin Neurophysiol. 1992;84(4):301-314.
+    doi: 10.1016/0168-5597(92)90082-M
+    year: 1992
+    verified: false
+  - citation: 'García-Larrea L, Lukaszewicz AC, Mauguière F. Somatosensory responses during selective spatial attention: the
+      N120-to-N140 trasition. Psychophysiology. 1995;32(6):526-537.'
+    doi: 10.1111/j.1469-8986.1995.tb01229.x
+    year: 1995
+    verified: false
+notes: 'First-pass skeleton by package A (2026-10-03). No generators/indexes yet. Signature values are textbook-level approximations
+  and await source checking. Sprint 6 (2026-10-16, curator K): generators and indexes curated; every DOI checked against its
+  Crossref or OpenAlex record (see curation/work/sprint6/markers_K/); verified: false pending full-text check.'
 status: draft
 contributors:
 - curator_a

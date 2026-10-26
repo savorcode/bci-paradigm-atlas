@@ -1,0 +1,65 @@
+schema_version: '0.2'
+id: CTL-NUM-002
+class: CTL-NUM
+name:
+  en: Parity judgement with response mapping switch (SNARC)
+  zh: 反应映射交换的奇偶判断（SNARC）
+aliases:
+- SNARC
+- SNARC effect
+- spatial-numerical association of response codes
+- parity judgement
+- parity judgment task
+family: control
+bci_category:
+- none
+recording_modality:
+- EEG
+stimulus_modality:
+- visual
+markers:
+- MK.LRP
+description:
+  en: Single digits are shown and the participant judges whether each is odd or even with a left or right key; the assignment
+    of parity to hands is reversed between blocks. Although magnitude is irrelevant to the task, small numbers are answered
+    faster with the left hand and large numbers with the right hand (spatial-numerical association of response codes).
+  zh: 逐个呈现数字，被试用左键或右键判断其奇偶；奇偶与左右手的对应在组块之间互换。尽管数量与任务无关，小数用左手、大数用右手反应更快（空间–数字反应编码联合，SNARC）。
+trial_structure:
+  phases:
+  - name: fixation
+    duration_ms: 500-1000
+    note: typical
+  - name: digit
+    duration_ms: until response
+  - name: response
+    duration_ms: speeded
+    note: odd/even, left or right key
+  conditions:
+  - odd-left/even-right block
+  - odd-right/even-left block
+  - small numbers
+  - large numbers
+protocol:
+  n_classes: 2
+  classes:
+  - odd
+  - even
+  cue: single Arabic digit
+  stimulus_coding: parity-to-hand mapping reversed between blocks; magnitude task-irrelevant
+  paradigm_timing: synchronous
+  feedback: none
+  distinguishing: 与 CTL-NUM-001 的区别：任务为奇偶判断（类别集为奇/偶，准则 1），反应手映射分组块互换；数量与任务无关，测量 SNARC 效应。源头：Dehaene、Bossini 与 Giraux 1993。
+first_source:
+  citation: 'Dehaene S, Bossini S, Giraux P. The mental representation of parity and number magnitude. Journal of Experimental
+    Psychology: General. 1993;122(3):371-396.'
+  doi: 10.1037/0096-3445.122.3.371
+  year: 1993
+  verified: false
+interop:
+  bids_task: snarc
+notes: 'Dehaene et al. 1993 (Crossref) introduced the SNARC effect with parity judgements. Phase durations are typical values.
+  MK.LRP is a provisional marker: response-hand effects of number magnitude are commonly measured with the lateralized readiness
+  potential, but no such study was retrieved in this sprint. No public dataset verified. [curator_c sprint 6, 2026-10-16]'
+status: draft
+contributors:
+- curator_c

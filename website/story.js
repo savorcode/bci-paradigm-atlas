@@ -7,7 +7,7 @@ const Neuri=(()=>{
   const S={
     zh:{hello:"嗨！我是小脑瓜 Neuri，在我背后的大脑上划一划试试～",top:"往下滑，我们一起玩三个脑机小游戏！",
       play:"看到粉色就戳屏幕，我帮你把脑电平均出来！",net:"点任意一个小圆点，看看信号从哪个脑区来～",
-      dots:"404 颗豆豆，每颗都是一个实验，抽一颗试试？",factory:"告诉我想测什么，工厂马上开工！",
+      dots:"这里每颗豆豆都是一个实验，抽一颗试试？",factory:"告诉我想测什么，工厂马上开工！",
       hit:["抓到啦！","好快！","漂亮～","P3b 又长高了一点！"],oops:["哎呀，那是蓝色的～","别急别急～"],
       done:"完成！看右边，平均后的 P3b 冒出来了 🎉",typed:"你用眼神打出了「{c}」！",bci:"B-C-I！你用目光拼出了脑机接口 🎉",
       goal:"进门啦！你的想象力满分 🎉",factoryGo:"叮！「{c}」的实验方案出炉～",pick:"这是「{c}」，看看它连着谁～",
@@ -15,7 +15,7 @@ const Neuri=(()=>{
       facts:["小知识：人脑大约有 860 亿个神经元。","小知识：第一台 P300 拼写器 1988 年就出现了。","小知识：想象左手时，右侧运动皮层的 μ 节律会变弱，这叫 ERD。","小知识：图谱里每条连线都附了文献，点一下就能看到原文。","小知识：SSVEP 拼写器靠的是视觉皮层会跟着闪烁频率“共振”。"]},
     en:{hello:"Hi! I'm Neuri. Swipe across the brain behind me!",top:"Scroll down and let's play three BCI mini games!",
       play:"Tap the screen on pink and I'll average your EEG!",net:"Click any dot to see which region a signal comes from.",
-      dots:"404 beans, each one an experiment. Draw one?",factory:"Tell me what to measure and the factory starts!",
+      dots:"Every bean here is an experiment. Draw one?",factory:"Tell me what to measure and the factory starts!",
       hit:["Got it!","So fast!","Nice!","The P3b grew a bit!"],oops:["Oops, that one was blue.","Easy, easy."],
       done:"Done! The averaged P3b popped up on the right 🎉",typed:"You typed “{c}” with your eyes!",bci:"B-C-I! You spelled it with your gaze 🎉",
       goal:"In the gate! Full marks for imagination 🎉",factoryGo:"Ding! A plan for “{c}” is ready.",pick:"This is “{c}”. See what it connects to.",
@@ -110,12 +110,12 @@ const Neuri=(()=>{
   }
   return {init,say,cheer,tx,setLang(l){ lang=l; if(heroBub) bubble(heroBub,tx("hello")); if(gBub) bubble(gBub,tx(section==="top"?"top":section)); }};
 })();
-fetch("./story-data.json").then(r=>{ if(!r.ok) throw new Error(r.status); return r.json(); }).then(boot).catch(err=>{ console.error(err); const m=document.getElementById("loadErr"); if(m) m.hidden=false; });
+fetch("./story-data.json?v=8baab16b").then(r=>{ if(!r.ok) throw new Error(r.status); return r.json(); }).then(boot).catch(err=>{ console.error(err); const m=document.getElementById("loadErr"); if(m) m.hidden=false; });
 function boot(DATA){
 
 const T = {
 zh:{brand:"脑机范式图谱",tag:"开放数据 · 每条连线都有出处",
- h1:'<span class="nw">让大脑开口说话的</span> <span class="nw"><span class="num">404</span> 个<span class="hl">小游戏</span></span>',
+ h1:'<span class="nw">让大脑开口说话的</span> <span class="nw"><span class="num">{P}</span> 个<span class="hl">小游戏</span></span>',
  lede:"脑机接口靠“范式”和大脑对话：一个精心设计的小任务，让大脑发出能被读出来的信号。图谱把范式、信号、脑区和心理过程连成一张有出处的网。",
  mini:["个具体范式","种神经信号","条有出处的连线"],go1:"▶ 先玩一局",go2:"看知识网络",stageHint:"在大脑上划一划，让神经元放电",
  lobes:{frontal:"额叶",central:"中央区",parietal:"顶叶",temporal:"颞叶",occipital:"枕叶",deep:"深部",cerebellum:"小脑"},
@@ -134,14 +134,14 @@ zh:{brand:"脑机范式图谱",tag:"开放数据 · 每条连线都有出处",
  caps:["脑区","神经信号","心理过程"],gen:"来源脑区",idx:"反映的心理过程",usedIn:"出现在 {n} 个范式中",linkedM:"与它相连的信号",all:"选择一个信号…",
  types:{erp_component:"事件相关电位",oscillatory:"节律变化",steady_state:"稳态响应",hemodynamic:"血流信号",single_unit:"神经元放电",field_potential:"场电位",connectivity:"脑区间连接"},
  region:"脑区",construct:"心理过程",
- l3k:"全图谱",l3h:"12 个家族，404 个范式",l3p:"每个圆点是一个可以复现的具体范式。点一点，或者随机抽一个。",rand:"🎲 随机抽一个",
+ l3k:"全图谱",l3h:"12 个家族，{P} 个范式",l3p:"每个圆点是一个可以复现的具体范式。点一点，或者随机抽一个。",rand:"🎲 随机抽一个",
  sigs:"会引出的信号（点击查看网络）",noSig:"这个范式的信号还在整理",statL:["范式类","神经信号","文献"],allFam:"全部",
  l4k:"范式工厂试运行",l4h:"说出想测什么，图谱帮你挑信号和范式",l4p:"这是范式工厂的第一步：从图谱里找到能反映这个心理过程、证据最硬的信号，再挑出能引出它们的范式，拼成一个试次结构。",
  pick:"选一个心理过程",st1:"你想测",st2:"能反映它的信号",st3:"能引出信号的范式",st4:"一个试次长这样",nSig:"图谱里有 {n} 个信号能反映它，亮起的是它们的来源脑区",mEmpty:"图谱里还没有反映它的信号",clickSig:"点信号可在知识网络里查看",
  tl:{fix:"注视",cue:"提示",stim:"刺激",resp:"反应",fb:"反馈",rest:"休息",task:"任务",flick:"闪烁"},tlNote:"按{t}的典型时长示意；真实工厂会按设备、导联和总时长生成完整方案。",
  endH:"数据全部开源，欢迎一起补充",cta1:"在 GitHub 上浏览 ↗",cta2:"参与贡献 ↗",f1:"思维刻度 SavorCode 发起并维护 · 脑机范式图谱",classic:"完整范式目录（可检索）",f2:"代码 Apache-2.0 · 数据 CC BY 4.0",ms:"毫秒"},
 en:{brand:"BCI Paradigm Atlas",tag:"Open data · every link is cited",
- h1:'<span class="num">404</span> little <span class="hl">games</span> that make the brain talk',
+ h1:'<span class="num">{P}</span> little <span class="hl">games</span> that make the brain talk',
  lede:"Brain–computer interfaces talk to the brain through paradigms: small, carefully designed tasks that make the brain produce a readable signal. The atlas links paradigms, signals, brain regions and mental processes into one cited network.",
  mini:["concrete paradigms","neural signals","cited links"],go1:"▶ Play a round",go2:"Explore the network",stageHint:"Swipe across the brain to fire some neurons",
  lobes:{frontal:"Frontal",central:"Central",parietal:"Parietal",temporal:"Temporal",occipital:"Occipital",deep:"Deep",cerebellum:"Cerebellum"},
@@ -160,7 +160,7 @@ en:{brand:"BCI Paradigm Atlas",tag:"Open data · every link is cited",
  caps:["Regions","Signals","Processes"],gen:"Generated in",idx:"Reflects",usedIn:"Used in {n} paradigms",linkedM:"Linked signals",all:"Pick a signal…",
  types:{erp_component:"Event-related potential",oscillatory:"Rhythm change",steady_state:"Steady-state response",hemodynamic:"Blood-flow signal",single_unit:"Neuron firing",field_potential:"Field potential",connectivity:"Connectivity"},
  region:"Brain region",construct:"Mental process",
- l3k:"The whole atlas",l3h:"12 families, 404 paradigms",l3p:"Each dot is a concrete, reproducible paradigm. Click one, or draw one at random.",rand:"🎲 Random pick",
+ l3k:"The whole atlas",l3h:"12 families, {P} paradigms",l3p:"Each dot is a concrete, reproducible paradigm. Click one, or draw one at random.",rand:"🎲 Random pick",
  sigs:"Signals it evokes (click for the network)",noSig:"Signals for this paradigm are still being curated",statL:["Paradigm classes","Neural signals","Papers"],allFam:"All",
  l4k:"Paradigm Factory test run",l4h:"Say what you want to measure; the atlas picks signals and paradigms",l4p:"This is the factory's first step: find the signals that reflect the process with the strongest evidence, pick paradigms that evoke them, and lay out a trial.",
  pick:"Pick a mental process",st1:"You want to measure",st2:"Signals that reflect it",st3:"Paradigms that evoke them",st4:"One trial looks like this",nSig:"{n} signals in the atlas reflect it; their source regions light up",mEmpty:"No signal in the atlas reflects this yet",clickSig:"Click a signal to see it in the network",
@@ -507,7 +507,7 @@ $("csel").addEventListener("change",e=>{curC=e.target.value; renderFactory(true)
 function applyLang(){
   Neuri.setLang(lang);
   document.documentElement.lang=lang==="zh"?"zh-CN":"en";
-  document.querySelectorAll("[data-i]").forEach(el=>{ const v=L()[el.dataset.i]; if(typeof v==="string"){ el.hasAttribute("data-html")?el.innerHTML=v:el.textContent=v; } });
+  document.querySelectorAll("[data-i]").forEach(el=>{ let v=L()[el.dataset.i]; if(typeof v==="string"){ v=v.replace("{P}",fmt(DATA.S.paradigms)); el.hasAttribute("data-html")?el.innerHTML=v:el.textContent=v; } });
   $("lang").textContent=lang==="zh"?"EN":"中文";
   const S=DATA.S; $("mini").innerHTML=[S.paradigms,S.markers,S.links].map((v,i)=>`<span><b>${fmt(v)}</b>${L().mini[i]}</span>`).join("");
   $("oddGo").textContent=odd.timer?t("stop"):(odd.count?t("again"):t("start"));

@@ -1,11 +1,107 @@
-schema_version: "0.2"
+schema_version: '0.2'
 id: MK.BOLD_parahippocampal
-name: {en: Parahippocampal / navigation network BOLD, zh: 海马旁回/导航网络 BOLD}
-aliases: [navigation network activation, PPA/parahippocampal activation]
+name:
+  en: Parahippocampal / navigation network BOLD
+  zh: 海马旁回/导航网络 BOLD
+aliases:
+- navigation network activation
+- PPA/parahippocampal activation
 type: hemodynamic
-recording_modality: [fMRI, fNIRS]
-signature: {topography: 'parahippocampal gyrus, retrosplenial cortex, posterior parietal cortex'}
-description: {en: 'Haemodynamic response in the parahippocampal gyrus together with retrosplenial and posterior parietal regions during real or imagined spatial navigation, such as imagining walking through one''s home.', zh: 真实或想象的空间导航（如想象在家中行走）时，海马旁回及压后皮层、后顶叶区域的血流动力学响应。}
-notes: Signature values are textbook-level characteristics and await source checking (first pass, curator_b). Includes spatial navigation imagery (D-008). Generators and indexes to be added in the second pass.
+recording_modality:
+- fMRI
+- fNIRS
+signature:
+  topography: parahippocampal gyrus, retrosplenial cortex, posterior parietal cortex
+description:
+  en: Haemodynamic response in the parahippocampal gyrus together with retrosplenial and posterior parietal regions during
+    real or imagined spatial navigation, such as imagining walking through one's home.
+  zh: 真实或想象的空间导航（如想象在家中行走）时，海马旁回及压后皮层、后顶叶区域的血流动力学响应。
+generators:
+- region: BR.parahippocampal
+  evidence: A
+  sources:
+  - citation: 'Boccia M, Nemmi F, Guariglia C. Neuropsychology of environmental navigation in humans: review and meta-analysis
+      of fMRI studies in healthy participants. Neuropsychol Rev. 2014;24(2):236-251.'
+    doi: 10.1007/s11065-014-9247-8
+    year: 2014
+    verified: false
+  - citation: Epstein RA. Parahippocampal and retrosplenial contributions to human spatial navigation. Trends Cogn Sci. 2008;12(10):388-396.
+    doi: 10.1016/j.tics.2008.07.004
+    year: 2008
+    verified: false
+  note: 'method: fMRI localization; parahippocampal gyrus/place area is among the most consistent clusters in the fMRI meta-analysis
+    of navigation (Boccia 2014) and in reviews of scene and navigation studies (Epstein 2008).'
+- region: BR.precuneus
+  evidence: B
+  sources:
+  - citation: 'Boccia M, Nemmi F, Guariglia C. Neuropsychology of environmental navigation in humans: review and meta-analysis
+      of fMRI studies in healthy participants. Neuropsychol Rev. 2014;24(2):236-251.'
+    doi: 10.1007/s11065-014-9247-8
+    year: 2014
+    verified: false
+  - citation: Epstein RA. Parahippocampal and retrosplenial contributions to human spatial navigation. Trends Cogn Sci. 2008;12(10):388-396.
+    doi: 10.1016/j.tics.2008.07.004
+    year: 2008
+    verified: false
+  note: 'method: fMRI localization; retrosplenial / medial parietal cortex co-activates with parahippocampal cortex during
+    navigation; mapped to BR.precuneus because no retrosplenial id exists (requested as BR.retrosplenial).'
+indexes:
+- construct: CN.spatial_navigation
+  evidence: A
+  relation: activation increases during real, virtual or imagined navigation through familiar environments
+  sources:
+  - citation: 'Boccia M, Nemmi F, Guariglia C. Neuropsychology of environmental navigation in humans: review and meta-analysis
+      of fMRI studies in healthy participants. Neuropsychol Rev. 2014;24(2):236-251.'
+    doi: 10.1007/s11065-014-9247-8
+    year: 2014
+    verified: false
+  - citation: 'Epstein RA, Patai EZ, Julian JB, et al. The cognitive map in humans: spatial navigation and beyond. Nat Neurosci.
+      2017;20(11):1504-1513.'
+    doi: 10.1038/nn.4656
+    year: 2017
+    verified: false
+- construct: CN.object_recognition
+  evidence: B
+  relation: responds more strongly to scenes and places than to faces or objects (scene perception)
+  sources:
+  - citation: Epstein R, Kanwisher N. A cortical representation of the local visual environment. Nature. 1998;392(6676):598-601.
+    doi: 10.1038/33402
+    year: 1998
+    verified: false
+  - citation: Epstein RA. Parahippocampal and retrosplenial contributions to human spatial navigation. Trends Cogn Sci. 2008;12(10):388-396.
+    doi: 10.1016/j.tics.2008.07.004
+    year: 2008
+    verified: false
+  note: Scene perception mapped to CN.object_recognition; CN.scene_perception requested.
+- construct: CN.visual_imagery
+  evidence: C
+  relation: imagining places activates the parahippocampal place area selectively
+  sources:
+  - citation: O'Craven KM, Kanwisher N. Mental imagery of faces and places activates corresponding stimulus-specific brain
+      regions. J Cogn Neurosci. 2000;12(6):1013-1023.
+    doi: 10.1162/08989290051137549
+    year: 2000
+    verified: false
+- construct: CN.consciousness_level
+  evidence: B
+  relation: task-appropriate activation during instructed spatial-navigation imagery reveals command following (covert awareness)
+    in patients with disorders of consciousness
+  sources:
+  - citation: Owen AM, Coleman MR, Boly M, et al. Detecting awareness in the vegetative state. Science. 2006;313(5792):1402.
+    doi: 10.1126/science.1130197
+    year: 2006
+    verified: false
+  - citation: Monti MM, Vanhaudenhuyse A, Coleman MR, et al. Willful modulation of brain activity in disorders of consciousness.
+      N Engl J Med. 2010;362(7):579-589.
+    doi: 10.1056/NEJMoa0905370
+    year: 2010
+    verified: false
+  note: Both studies from overlapping consortia; the 2010 study is a larger independent cohort.
+notes: 'Signature values are textbook-level characteristics and await source checking (first pass, curator_b). Includes spatial
+  navigation imagery (D-008). Generators and indexes to be added in the second pass. Sprint 6 (2026-10-16, curator I): generators
+  and indexes curated; every DOI checked against its Crossref or OpenAlex record (see curation/work/sprint6/markers_I/); verified:
+  false pending full-text check.'
 status: draft
-contributors: [maintainer, curator_b]
+contributors:
+- maintainer
+- curator_b

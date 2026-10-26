@@ -1,0 +1,91 @@
+schema_version: '0.2'
+id: STM-TRNS-001
+class: STM-TRNS
+name:
+  en: Transcranial random noise stimulation with pre/post read-out
+  zh: 经颅随机噪声刺激及前后测量
+aliases:
+- tRNS
+- transcranial random noise stimulation
+- hf-tRNS
+- high-frequency random noise stimulation
+family: stimulation
+bci_category:
+- none
+recording_modality:
+- EEG
+stimulus_modality:
+- electrical_stimulation
+markers:
+- MK.tES_power_aftereffect
+description:
+  en: >-
+    A weak alternating current whose amplitude and frequency vary randomly (white-noise spectrum up to several hundred
+    hertz) is applied for several minutes through scalp electrodes, typically over motor cortex, and compared with sham.
+    Cortical excitability is measured before and at intervals after stimulation, originally with single-pulse TMS motor
+    evoked potentials; in EEG studies resting or task EEG band power is compared before and after stimulation.
+  zh: >-
+    通过头皮电极（通常位于运动皮层上方）施加数分钟弱交流电，其幅度与频率随机变化（白噪声频谱，最高可达数百赫兹），并与伪刺激比较。在刺激前及刺激后若干时间点测量皮层兴奋性：
+    最初以单脉冲 TMS 运动诱发电位测量；脑电研究比较刺激前后静息或任务脑电的频段功率。
+trial_structure:
+  phases:
+  - name: baseline read-out
+    note: single-pulse TMS MEPs (40 pulses per time point in the group's 2008 series) or resting EEG
+  - name: tRNS
+    duration_ms: 600000
+    note: 10 min over primary motor cortex in the group's 2008 series; 20 min in later EEG studies
+  - name: post-stimulation read-out
+    note: about 0, 5 and 10 min after stimulation, then every 10 min up to 60 min (MEP series)
+  conditions:
+  - active tRNS
+  - sham
+protocol:
+  n_classes: 2
+  classes:
+  - active tRNS
+  - sham
+  cue: none
+  stimulus_coding: random-noise current (amplitude and frequency drawn randomly; spectrum up to 640 Hz)
+  paradigm_timing: block
+  feedback: none
+  distinguishing: >-
+    标准配置（最早发表，即 first_source）：运动皮层上 10 min 随机噪声电流，刺激前后以单脉冲 TMS 读出兴奋性（Terney et al. 2008，MEP 读出，D-031）。
+    Standard configuration (earliest published): 10-min random-noise current over motor cortex with pre/post single-pulse
+    read-out (Terney et al. 2008). No sibling protocol yet.
+first_source:
+  citation: >-
+    Terney D, Chaieb L, Moliadze V, Antal A, Paulus W. Increasing human brain excitability by transcranial high-frequency
+    random noise stimulation. Journal of Neuroscience. 2008;28(52):14147-14155.
+  doi: 10.1523/JNEUROSCI.4248-08.2008
+  year: 2008
+  verified: false
+variants:
+- name: Resting-state EEG read-out after 20 min tRNS over frontal and occipital sites
+  source:
+    citation: >-
+      Ke SC, Lo YH, Tseng P. No frequency-specific effect of transcranial random noise stimulation on resting EEG. Journal
+      of Integrative Neuroscience. 2024;23(3):59.
+    doi: 10.31083/j.jin2303059
+    year: 2024
+    verified: false
+  note: >-
+    parameter-level change (duration, montage Fp1/Fp2 and Oz, read-out by resting EEG); 49 participants, active vs sham;
+    no frequency-specific change in theta, alpha, beta or gamma power
+interop:
+  bids_task: trns
+notes: >-
+  [curator_b sprint 6, 2026-10-16] first_source Terney et al. 2008 (MEP read-out, D-031). Timing of the MEP read-out (40
+  test pulses per time point, about 0, 5, 10 min and then every 10 min up to 60 min, changes of 20-50% after motor cortex
+  but not premotor stimulation) is taken from a 2008 conference abstract by the same group (Moliadze et al., Bernstein
+  Symposium 2008, Frontiers event abstract; no bibliographic record retrieved, so it is not
+  cited as a source); stimulation intensity and the low/high-frequency split of the noise spectrum are to be read from the full
+  text of Terney et al. Marker: MK.tES_power_aftereffect is the registry marker for band-power change after transcranial
+  electrical stimulation; its description names tACS and tDCS only and should be extended to tRNS, and the EEG evidence is
+  mixed (Ke et al. 2024 found no frequency-specific effect on resting EEG and argue that effects depend on ongoing task
+  activity). First neural recording: not established in this sprint. Mechanisms review: Antal A, Herrmann CS. Transcranial
+  alternating current and random noise stimulation: possible mechanisms. Neural Plasticity. 2016;2016:1-12.
+  doi:10.1155/2016/3616807. Distinct from STM-TDCS (constant current) and STM-TACS (single sinusoidal frequency).
+  bibliography confirmed (OpenAlex, 2026-10-16)
+status: draft
+contributors:
+- curator_b

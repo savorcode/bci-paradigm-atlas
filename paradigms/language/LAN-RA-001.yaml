@@ -1,0 +1,86 @@
+schema_version: '0.2'
+id: LAN-RA-001
+class: LAN-RA
+name:
+  en: Single-word reading aloud (word naming)
+  zh: 单词朗读（词命名）
+aliases:
+- reading aloud
+- word naming
+- naming task
+- speeded naming
+- oral reading of words and pseudowords
+family: language
+bci_category:
+- none
+recording_modality:
+- fMRI
+- PET
+- EEG
+- MEG
+stimulus_modality:
+- visual
+- motor_execution
+markers:
+- MK.BOLD_language_network
+description:
+  en: Written words and pronounceable nonwords are shown one at a time, and participants read each one aloud as quickly
+    as possible; naming latency is measured from stimulus onset to voice onset. Effects of word frequency, lexicality and
+    spelling-sound regularity on latency are used to study how print is converted to speech, and reading aloud engages
+    left-lateralised language and speech-motor regions.
+  zh: 逐个呈现书面词和可发音的假词，被试尽快将其读出；命名潜伏期从刺激出现测到发声开始。词频、词汇性和拼写—发音规则性对潜伏期的影响用于研究文字如何转换为语音；朗读激活左侧化的语言和言语运动脑区。
+trial_structure:
+  phases:
+  - name: fixation
+    note: duration not recorded here
+  - name: word
+    duration_ms: until voice onset
+    note: voice key records naming latency
+  - name: inter-trial interval
+    note: duration not recorded here
+  conditions:
+  - high-frequency words
+  - low-frequency words
+  - pronounceable nonwords
+protocol:
+  n_classes: 3
+  classes:
+  - high-frequency words
+  - low-frequency words
+  - nonwords
+  cue: single printed letter strings
+  stimulus_coding: lexicality and word frequency
+  paradigm_timing: synchronous
+  feedback: none
+  distinguishing: 标准配置（最早发表，即 first_source）：单个书面词与假词出声朗读，以声控键测命名潜伏期，比较词频与词汇性效应（Forster & Chambers 1973）。
+first_source:
+  citation: Forster KI, Chambers SM. Lexical access and naming time. Journal of Verbal Learning and Verbal Behavior. 1973;12(6):627-635.
+  doi: 10.1016/s0022-5371(73)80042-8
+  year: 1973
+  verified: false
+variants:
+- name: PET reading aloud of visually presented words versus passive viewing
+  source:
+    citation: Petersen SE, Fox PT, Posner MI, Mintun M, Raichle ME. Positron emission tomographic studies of the cortical
+      anatomy of single-word processing. Nature. 1988;331(6157):585-589.
+    doi: 10.1038/331585a0
+    year: 1988
+    verified: false
+  note: Hierarchical subtraction design (fixation, passive word viewing, reading aloud, verb generation); the reading-aloud
+    minus viewing contrast isolates output/articulation. Block design; may warrant its own serial number (criterion 3)
+    if the maintainer prefers.
+interop:
+  bids_task: readaloud
+notes: 'Sources: Forster & Chambers 1973 (first_source; standard single-word naming paradigm compared with lexical decision);
+  Petersen et al. 1988 (first neuroimaging study including a reading-aloud condition). Both from the Crossref API. Cattell
+  (1886) measured reading times for lists of words and letters and is often named as the historical precursor; that record
+  was not retrieved and is not cited. Overlap check: LAN-OVS (overt/attempted speech production) also involves reading
+  prompted words aloud, but its markers and purpose are articulatory decoding for speech neuroprostheses (MK.high_gamma,
+  MK.motor_cortical_spiking); LAN-RA covers the psycholinguistic print-to-speech task with latency effects. LAN-PN (picture
+  naming) is the pictorial counterpart; LAN-LDT-001 is the comparison task in the first source. MK.BOLD_language_network
+  is the closest marker; a reading-specific marker (left ventral occipitotemporal / VWFA) is handled under LAN-VWFA.
+  Fixation and interval durations not recorded because they were not checked against the article. [curator_d sprint 6,
+  2026-10-16]'
+status: draft
+contributors:
+- curator_d

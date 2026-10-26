@@ -1,4 +1,4 @@
-schema_version: "0.2"
+schema_version: '0.2'
 id: MK.FRP
 name:
   en: Fixation-related potential
@@ -13,14 +13,83 @@ recording_modality:
 signature:
   topography: early lambda response maximal over occipital sites
 description:
-  en: >-
-    EEG response time-locked to the onset of an eye fixation during free viewing or reading, analogous to a stimulus-locked
-    ERP. It contains an early occipital lambda response related to the new visual input and later components, such
-    as the N400, that are modulated by properties of the fixated word.
+  en: EEG response time-locked to the onset of an eye fixation during free viewing or reading, analogous to a stimulus-locked
+    ERP. It contains an early occipital lambda response related to the new visual input and later components, such as the
+    N400, that are modulated by properties of the fixated word.
   zh: 在自由观看或阅读过程中以眼睛注视起始为锁时点的 EEG 响应，类似以刺激为锁时点的 ERP。它包含与新视觉输入有关的早期枕区 λ 响应，以及受被注视词属性调制的较晚成分（如 N400）。
-notes: >-
-  First-pass skeleton (curator_d, 2026-10-03). Signature values are textbook-level approximations that await source
-  checking; generators and indexes will be added in the second pass.
+generators:
+- region: BR.visual_cortex
+  evidence: C
+  sources:
+  - citation: Kazai K, Yagi A. Comparison between the lambda response of eye-fixation-related potentials and the P100 component
+      of pattern-reversal visual evoked potentials. Cogn Affect Behav Neurosci. 2003;3(1):46-56.
+    doi: 10.3758/CABN.3.1.46
+    year: 2003
+    verified: false
+  - citation: 'Dimigen O, Sommer W, Hohlfeld A, et al. Coregistration of eye movements and EEG in natural reading: analyses
+      and review. J Exp Psychol Gen. 2011;140(4):552-572.'
+    doi: 10.1037/a0023885
+    year: 2011
+    verified: false
+  note: 'method: scalp topography; the occipital lambda response resembles the pattern-reversal P100 in topography and stimulus
+    dependence (Kazai and Yagi 2003; review in Dimigen 2011), implying occipital visual cortex. Scalp evidence only, so graded
+    C.'
+indexes:
+- construct: CN.early_visual
+  evidence: B
+  relation: lambda response amplitude varies with the visual input at the new fixation (e.g., contrast and spatial frequency)
+  sources:
+  - citation: Kazai K, Yagi A. Comparison between the lambda response of eye-fixation-related potentials and the P100 component
+      of pattern-reversal visual evoked potentials. Cogn Affect Behav Neurosci. 2003;3(1):46-56.
+    doi: 10.3758/CABN.3.1.46
+    year: 2003
+    verified: false
+  - citation: 'Dimigen O, Sommer W, Hohlfeld A, et al. Coregistration of eye movements and EEG in natural reading: analyses
+      and review. J Exp Psychol Gen. 2011;140(4):552-572.'
+    doi: 10.1037/a0023885
+    year: 2011
+    verified: false
+- construct: CN.semantic_integration
+  evidence: B
+  relation: fixation-locked N400 amplitude decreases with word predictability during natural reading
+  sources:
+  - citation: 'Dimigen O, Sommer W, Hohlfeld A, et al. Coregistration of eye movements and EEG in natural reading: analyses
+      and review. J Exp Psychol Gen. 2011;140(4):552-572.'
+    doi: 10.1037/a0023885
+    year: 2011
+    verified: false
+  - citation: 'Kretzschmar F, Schlesewsky M, Staub A. Dissociating word frequency and predictability effects in reading: evidence
+      from coregistration of eye movements and EEG. J Exp Psychol Learn Mem Cogn. 2015;41(6):1648-1662.'
+    doi: 10.1037/xlm0000128
+    year: 2015
+    verified: false
+- construct: CN.target_selection
+  evidence: B
+  relation: late positive FRP amplitude is larger for fixations on search targets than on non-targets
+  sources:
+  - citation: Brouwer AM, Reuderink B, Vincent J, et al. Distinguishing between target and nontarget fixations in a visual
+      search task using fixation-related potentials. J Vis. 2013;13(3):17.
+    doi: 10.1167/13.3.17
+    year: 2013
+    verified: false
+  - citation: 'Kaunitz L, Kamienkowski JE, Varatharajah A, et al. Looking for a face in the crowd: fixation-related potentials
+      in an eye-movement visual search task. NeuroImage. 2013;89:297-305.'
+    doi: 10.1016/j.neuroimage.2013.12.006
+    year: 2013
+    verified: false
+- construct: CN.intent_selection
+  evidence: C
+  relation: single-trial target vs non-target fixation classification supports gaze-based selection
+  sources:
+  - citation: Brouwer AM, Reuderink B, Vincent J, et al. Distinguishing between target and nontarget fixations in a visual
+      search task using fixation-related potentials. J Vis. 2013;13(3):17.
+    doi: 10.1167/13.3.17
+    year: 2013
+    verified: false
+notes: 'First-pass skeleton (curator_d, 2026-10-03). Signature values are textbook-level approximations that await source
+  checking; generators and indexes will be added in the second pass. Sprint 6 (2026-10-16, curator K): generators and indexes
+  curated; every DOI checked against its Crossref or OpenAlex record (see curation/work/sprint6/markers_K/); verified: false
+  pending full-text check.'
 status: draft
 contributors:
 - maintainer

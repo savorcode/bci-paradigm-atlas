@@ -1,11 +1,81 @@
-schema_version: "0.2"
+schema_version: '0.2'
 id: MK.tES_power_aftereffect
-name: {en: Band-power aftereffect of transcranial electrical stimulation, zh: 经颅电刺激后功率改变}
-aliases: [tACS aftereffect, tDCS-induced power change]
+name:
+  en: Band-power aftereffect of transcranial electrical stimulation
+  zh: 经颅电刺激后功率改变
+aliases:
+- tACS aftereffect
+- tDCS-induced power change
 type: oscillatory
-recording_modality: [EEG]
-signature: {frequency_hz: stimulated band (e.g. alpha for alpha-tACS)}
-description: {en: 'Change in EEG band power (typically an increase in the stimulated band for tACS, or polarity-dependent changes for tDCS) measured after transcranial electrical stimulation relative to pre-stimulation or sham.', zh: 经颅电刺激后相对于刺激前或伪刺激测得的脑电频段功率改变（tACS 通常为刺激频段功率升高，tDCS 为依极性而定的变化）。}
-notes: Signature values are textbook-level characteristics and await source checking (first pass, curator_b). Generators and indexes to be added in the second pass.
+recording_modality:
+- EEG
+signature:
+  frequency_hz: stimulated band (e.g. alpha for alpha-tACS)
+description:
+  en: Change in EEG band power (typically an increase in the stimulated band for tACS, or polarity-dependent changes for tDCS)
+    measured after transcranial electrical stimulation relative to pre-stimulation or sham.
+  zh: 经颅电刺激后相对于刺激前或伪刺激测得的脑电频段功率改变（tACS 通常为刺激频段功率升高，tDCS 为依极性而定的变化）。
+notes: 'Signature values are textbook-level characteristics and await source checking (first pass, curator_b). Generators
+  and indexes to be added in the second pass. Sprint 6 (2026-10-16, curator J): generators and indexes curated; every DOI
+  checked against its Crossref or OpenAlex record (see curation/work/sprint6/markers_J/); verified: false pending full-text
+  check.'
+generators:
+- region: BR.visual_cortex
+  evidence: C
+  sources:
+  - citation: Zaehle T, Rach S, Herrmann CS. Transcranial alternating current stimulation enhances individual alpha activity
+      in human EEG. PLoS One. 2010;5(11):e13766.
+    doi: 10.1371/journal.pone.0013766
+    year: 2010
+    verified: false
+  - citation: Kasten FH, Dowsett J, Herrmann CS. Sustained aftereffect of α-tACS lasts up to 70 min after stimulation. Front
+      Hum Neurosci. 2016;10:245.
+    doi: 10.3389/fnhum.2016.00245
+    year: 2016
+    verified: false
+  - citation: Vossen A, Gross J, Thut G. Alpha power increase after transcranial alternating current stimulation at alpha
+      frequency (α-tACS) reflects plastic changes rather than entrainment. Brain Stimul. 2015;8(3):499-508.
+    doi: 10.1016/j.brs.2014.12.004
+    year: 2015
+    verified: false
+  note: 'method: scalp topography; the stimulated region; alpha-tACS aftereffect studies most often stimulate posterior (parieto-occipital
+    / Cz-Oz) cortex and measure the alpha increase at posterior electrodes (Zaehle et al. 2010; Kasten et al. 2016; Vossen
+    et al. 2015). The location depends on montage, so this entry stands for the stimulated region in the dominant alpha-tACS
+    design.'
+indexes:
+- construct: CN.cortical_excitability
+  evidence: B
+  relation: power in the stimulated band increases after stimulation relative to sham and can outlast stimulation by up to
+    about 70 min
+  sources:
+  - citation: Zaehle T, Rach S, Herrmann CS. Transcranial alternating current stimulation enhances individual alpha activity
+      in human EEG. PLoS One. 2010;5(11):e13766.
+    doi: 10.1371/journal.pone.0013766
+    year: 2010
+    verified: false
+  - citation: Kasten FH, Dowsett J, Herrmann CS. Sustained aftereffect of α-tACS lasts up to 70 min after stimulation. Front
+      Hum Neurosci. 2016;10:245.
+    doi: 10.3389/fnhum.2016.00245
+    year: 2016
+    verified: false
+  - citation: Vossen A, Gross J, Thut G. Alpha power increase after transcranial alternating current stimulation at alpha
+      frequency (α-tACS) reflects plastic changes rather than entrainment. Brain Stimul. 2015;8(3):499-508.
+    doi: 10.1016/j.brs.2014.12.004
+    year: 2015
+    verified: false
+  note: Zaehle 2010 and Kasten 2016 come from one laboratory; Vossen 2015 is an independent replication.
+- construct: CN.neural_entrainment
+  evidence: C
+  relation: post-stimulation power increase does not require phase continuity with the stimulation train, suggesting plastic
+    change rather than sustained entrainment
+  sources:
+  - citation: Vossen A, Gross J, Thut G. Alpha power increase after transcranial alternating current stimulation at alpha
+      frequency (α-tACS) reflects plastic changes rather than entrainment. Brain Stimul. 2015;8(3):499-508.
+    doi: 10.1016/j.brs.2014.12.004
+    year: 2015
+    verified: false
+  note: Single study; the relation is a dissociation from entrainment rather than a direct index of it.
 status: draft
-contributors: [maintainer, curator_b]
+contributors:
+- maintainer
+- curator_b

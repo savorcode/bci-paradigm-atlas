@@ -1432,6 +1432,113 @@ terms:
   contributors:
   - maintainer
   - curator_e
+- id: PER-TIME
+  name:
+    en: Temporal order and simultaneity judgement
+    zh: 时间顺序判断与同时性判断
+  family: perception
+  description:
+    en: Two brief stimuli (within or across vision, hearing and touch) are presented with a variable stimulus onset asynchrony
+      (SOA), and the observer reports which came first (temporal order judgement, TOJ) or whether they were simultaneous (simultaneity
+      judgement, SJ). Psychometric functions over SOA give the just noticeable difference and the point of subjective simultaneity;
+      order thresholds are about 20 ms or more. Neural studies relate the perceived temporal frame to ongoing posterior alpha
+      activity and, for audiovisual pairs, to early audiovisual interaction responses.
+    zh: 以可变的刺激起始异步（SOA）呈现两个短暂刺激（同一或不同感觉通道：视觉、听觉、触觉），被试报告哪个先出现（时间顺序判断，TOJ）或二者是否同时（同时性判断，SJ）。由随 SOA 变化的心理测量函数得到最小可觉差和主观同时点；顺序阈值约
+      20 ms 或更长。神经研究把知觉到的时间窗与后部 α 节律相联系，视听刺激对则与早期视听交互响应相联系。
+  markers:
+  - MK.alpha_posterior
+  - MK.AV_interaction_ERP
+  first_source:
+    citation: Hirsh IJ, Sherrick CE. Perceived order in different sense modalities. Journal of Experimental Psychology. 1961;62(5):423-432.
+    doi: 10.1037/h0045283
+    year: 1961
+    verified: false
+  aliases:
+  - temporal order judgement
+  - temporal order judgment
+  - TOJ
+  - simultaneity judgement
+  - simultaneity judgment
+  - SJ
+  - audiovisual synchrony judgement
+  - point of subjective simultaneity
+  - temporal binding window
+  notes: 'New class, sprint 6 (group P2). -001 = TOJ (Hirsh & Sherrick 1961, earliest retrieved record of the task); -002
+    = audiovisual SJ (Stone et al. 2001). Origin of the SJ task itself is older (19th-century psychophysics) but no citable
+    record was retrieved. Marker links are provisional: MK.alpha_posterior after Varela et al. 1981 (perceptual framing and
+    alpha phase); MK.AV_interaction_ERP for audiovisual pairs (-002). [curator_a sprint 6, 2026-10-16]'
+  status: draft
+  contributors:
+  - curator_a
+- id: PER-CROWD
+  name:
+    en: Visual crowding
+    zh: 视觉拥挤效应
+  family: perception
+  description:
+    en: A target (a letter, grating or vernier) is presented in the periphery, alone or surrounded by flanking objects at
+      varying target-flanker spacing. Identification or discrimination of the target is impaired when flankers fall within
+      a critical spacing of roughly half the target eccentricity (Bouma's law), although the target remains visible. In EEG,
+      crowding appears as a suppression of the posterior N1 rather than of the P1.
+    zh: 在周边视野呈现目标（字母、光栅或游标），单独呈现或被距离不等的侧翼物体包围。当侧翼落在约为目标离心度一半的临界间距内时（Bouma 定律），目标虽仍可见，但识别或辨别能力下降。在脑电中，拥挤效应表现为后部 N1 的抑制，而 P1
+      不受影响。
+  markers:
+  - MK.N1_visual
+  first_source:
+    citation: Bouma H. Interaction effects in parafoveal letter recognition. Nature. 1970;226(5241):177-178.
+    doi: 10.1038/226177a0
+    year: 1970
+    verified: false
+  aliases:
+  - visual crowding
+  - crowding
+  - flanker crowding
+  - Bouma's law
+  - critical spacing
+  - lateral masking (peripheral)
+  notes: 'New class, sprint 6 (group P2). Not the Eriksen flanker task (response conflict, CTL-FLK): here flankers impair
+    recognition, not response selection. Earlier observations (Korte 1923, Ehlers 1936) are cited in reviews but no records
+    were retrieved; Bouma 1970 is taken as the standard origin. Marker MK.N1_visual from Chicherov et al. 2014 (N1 suppression
+    from ~180 ms, P1 unaffected). [curator_a sprint 6, 2026-10-16]'
+  status: draft
+  contributors:
+  - curator_a
+- id: PER-AUDLOC
+  name:
+    en: Sound localization (spatial hearing)
+    zh: 声源定位（空间听觉）
+  family: perception
+  description:
+    en: Brief sounds are presented from different directions (loudspeakers in free field or virtual sources rendered through
+      headphones) and the listener reports the perceived direction by pointing, naming a position or a forced-choice judgement.
+      Localization relies on interaural time and level differences for azimuth and on spectral cues for elevation. Neural
+      studies show sound location processing in posterior auditory cortex; spatially distinct sound sources are also used
+      as stimuli in auditory BCIs.
+    zh: 从不同方向呈现短暂声音（自由场中的扬声器或耳机渲染的虚拟声源），被试通过指向、报告位置或迫选判断报告感知到的方向。方位角定位依赖双耳时间差和强度差，仰角定位依赖频谱线索。神经研究显示后部听觉皮层参与声源位置加工；空间上分离的声源也被用作听觉脑机接口的刺激。
+  markers:
+  - MK.BOLD_auditory_cortex
+  - MK.N1_auditory
+  first_source:
+    citation: Lord Rayleigh. XII. On our perception of sound direction. The London, Edinburgh, and Dublin Philosophical Magazine
+      and Journal of Science. 1907;13(74):214-232.
+    doi: 10.1080/14786440709463595
+    year: 1907
+    verified: false
+  aliases:
+  - sound localization
+  - sound localisation
+  - auditory localization
+  - spatial hearing
+  - auditory spatial localization
+  - duplex theory
+  notes: 'New class, sprint 6 (group P2). Overlap: auditory spatial P300 BCIs (AMUSE) are already registered as PER-ODD-008;
+    passive location-deviant MMN is part of PER-MMN-003. This class covers the active localization judgement. Rayleigh 1907
+    (duplex theory, listening experiments on direction) taken as origin; the standard modern protocol is Makous & Middlebrooks
+    1990. MK.BOLD_auditory_cortex after Zatorre et al. 2002; MK.N1_auditory provisional (no retrieved study linking N1 to
+    localization judgements). [curator_a sprint 6, 2026-10-16]'
+  status: draft
+  contributors:
+  - curator_a
 - id: MOT-ATT
   name:
     en: Attempted movement
@@ -3916,6 +4023,34 @@ terms:
   contributors:
   - maintainer
   - curator_c
+- id: LAN-RA
+  name:
+    en: Reading aloud and word naming
+    zh: 朗读与词命名
+  family: language
+  description:
+    en: Written words and nonwords are read aloud one at a time as quickly as possible, and naming latency to voice onset
+      is measured. Frequency, lexicality and spelling-sound regularity effects index print-to-speech conversion; reading aloud
+      engages left-lateralised language and speech-motor regions.
+    zh: 逐个尽快读出书面词和假词，测量到发声开始的命名潜伏期。词频、词汇性和拼写—发音规则性效应反映文字到语音的转换；朗读激活左侧化的语言和言语运动脑区。
+  markers:
+  - MK.BOLD_language_network
+  first_source:
+    citation: Forster KI, Chambers SM. Lexical access and naming time. Journal of Verbal Learning and Verbal Behavior. 1973;12(6):627-635.
+    doi: 10.1016/s0022-5371(73)80042-8
+    year: 1973
+    verified: false
+  aliases:
+  - reading aloud
+  - word naming
+  - naming task
+  - speeded naming
+  - oral reading of words and pseudowords
+  notes: New class, sprint 6 (P3). Class source is that of LAN-RA-001. Distinct from LAN-OVS (articulatory decoding for speech
+    neuroprostheses) and LAN-PN (picture naming). [curator_d sprint 6, 2026-10-16]
+  status: draft
+  contributors:
+  - curator_d
 - id: MEM-CD
   name:
     en: Change detection
@@ -4828,6 +4963,114 @@ terms:
   contributors:
   - maintainer
   - curator_c
+- id: MEM-PR
+  name:
+    en: Partial report (iconic memory)
+    zh: 部分报告（图像记忆）
+  family: memory
+  description:
+    en: A brief array of letters or shapes is followed by a cue indicating which part of the array to report. Because performance
+      on the cued part exceeds what whole report predicts, more items are briefly available than can be reported, and the
+      advantage decays within a few hundred milliseconds of display offset, which defines a high-capacity, short-lived visual
+      store (iconic memory). Imaging shows that readout from iconic memory recruits frontoparietal attention regions and modulates
+      occipital cortex contralateral to the cued side.
+    zh: 短暂呈现字母或图形阵列，随后出现提示，指出应报告阵列中的哪一部分。由于对被提示部分的成绩高于整体报告所能推算的水平，说明短时间内可用的项目多于可报告的项目；这一优势在阵列消失后数百毫秒内衰减，由此界定一个容量大、持续短的视觉存储（图像记忆）。成像研究显示，从图像记忆中读取信息会调用额顶注意区域，并调制提示侧对侧的枕叶皮层。
+  markers:
+  - MK.BOLD_frontoparietal
+  - MK.BOLD_visual_cortex
+  first_source:
+    citation: 'Sperling G. The information available in brief visual presentations. Psychological Monographs: General and
+      Applied. 1960;74(11):1-29.'
+    doi: 10.1037/h0093759
+    year: 1960
+    verified: false
+  aliases:
+  - partial report
+  - partial-report paradigm
+  - Sperling paradigm
+  - iconic memory
+  - whole report vs partial report
+  - postcue
+  notes: 'New class, sprint 6 (group P2). Related but distinct: MEM-CD (change detection, visual working memory; retro-cue
+    variants) tests a later, capacity-limited store. Markers from Ruff et al. 2007 (fMRI; OpenAlex record, Crossref rate-limited).
+    [curator_d sprint 6, 2026-10-16]'
+  status: draft
+  contributors:
+  - curator_d
+- id: MEM-AI
+  name:
+    en: Associative inference (AB-BC-AC)
+    zh: 联想推理（AB-BC-AC）
+  family: memory
+  description:
+    en: Participants learn overlapping pairs that share an element (A-B and B-C), together with non-overlapping control pairs,
+      and are then tested on the directly learned pairs and on the never-studied indirect relation A-C. Correct inference
+      requires flexible use of related memories across episodes. Hippocampal activity during encoding and test, and medial
+      prefrontal involvement, predict successful inference.
+    zh: 被试学习共享一个元素的重叠配对（A-B 与 B-C）以及非重叠的对照配对，随后测试直接学过的配对和从未学过的间接关系 A-C。正确推理要求跨情节灵活使用相关记忆。编码与测试阶段的海马活动以及内侧前额叶的参与可预测推理成功。
+  markers:
+  - MK.BOLD_hippocampus
+  - MK.BOLD_mPFC
+  first_source:
+    citation: Preston AR, Shrager Y, Dudukovic NM, Gabrieli JDE. Hippocampal contribution to the novel use of relational information
+      in declarative memory. Hippocampus. 2004;14(2):148-152.
+    doi: 10.1002/hipo.20009
+    year: 2004
+    verified: false
+  aliases:
+  - associative inference
+  - associative inference task
+  - AB-BC-AC
+  - transitive association
+  - cross-episode binding
+  - memory integration
+  notes: 'New class, sprint 6 (group P2). Distinct from MEM-PA (paired-associate learning: direct pairs only) because the
+    defining test is the indirect A-C inference. Bunsey & Eichenbaum 1996 introduced the transitive association design (odour
+    pairs in rats, with a human comparison); Preston et al. 2004 is the first retrieved human fMRI use of the AB-BC-AC task
+    with object pairs and is taken as first source for the human paradigm (D-031: the task procedure, not the species of origin).
+    Transitive inference over ordered premises (A>B>C) is a related but different task and is not covered here. [curator_d
+    sprint 6, 2026-10-16]'
+  status: draft
+  contributors:
+  - curator_d
+- id: MEM-CSPAN
+  name:
+    en: Complex span (working memory capacity)
+    zh: 复杂广度（工作记忆容量）
+  family: memory
+  description:
+    en: Each item to be remembered is interleaved with a processing task (reading a sentence, verifying an arithmetic equation),
+      and after a set of two to seven processing-storage episodes the to-be-remembered items are recalled in order. The span
+      score indexes working memory capacity under concurrent processing and predicts reading comprehension and fluid abilities.
+      During the task, EEG shows load-related changes of posterior alpha and frontal theta power.
+    zh: 每个待记项目与一个加工任务（朗读句子、核对算式）交替出现；在 2 至 7 个“加工–存储”单元组成的一组之后，按顺序回忆待记项目。广度分数反映同时加工条件下的工作记忆容量，可预测阅读理解和流体能力。任务中脑电表现为与负荷相关的后部
+      α 与额部 θ 功率变化。
+  markers:
+  - MK.alpha_posterior
+  - MK.frontal_midline_theta
+  first_source:
+    citation: Daneman M, Carpenter PA. Individual differences in working memory and reading. Journal of Verbal Learning and
+      Verbal Behavior. 1980;19(4):450-466.
+    doi: 10.1016/S0022-5371(80)90312-6
+    year: 1980
+    verified: false
+  aliases:
+  - complex span
+  - complex span task
+  - working memory span
+  - reading span
+  - RSPAN
+  - operation span
+  - OSPAN
+  - automated operation span
+  - symmetry span
+  notes: 'New class, sprint 6 (group P2); short ID changed from the provisional MEM-OSPAN to MEM-CSPAN so that reading span
+    (the earliest complex span task, -001) and operation span (-002) share one class. Distinct from MEM-DS (simple digit span,
+    no interleaved processing). Markers after Scharinger et al. 2017 (operation span with EEG: prolonged parietal alpha effects;
+    frontal theta strongest in n-back), so frontal theta is a weaker link. [curator_d sprint 6, 2026-10-16]'
+  status: draft
+  contributors:
+  - curator_d
 - id: EMO-APRIME
   name:
     en: Affective (evaluative) priming
@@ -5335,6 +5578,70 @@ terms:
   contributors:
   - maintainer
   - curator_d
+- id: EMO-STARTLE
+  name:
+    en: Affect-modulated startle reflex
+    zh: 情绪调制惊跳反射
+  family: emotion
+  description:
+    en: A brief loud acoustic probe is presented while participants view or imagine emotional material. The startle eyeblink
+      is potentiated during unpleasant and attenuated during pleasant foregrounds relative to neutral ones, and the probe-evoked
+      P3 is reduced during emotionally arousing foregrounds of either valence.
+    zh: 被试观看或想象情绪材料时给出短促响亮的听觉探测刺激。与中性背景相比，惊跳眨眼反射在不愉快背景下增强、在愉快背景下减弱；探测刺激诱发的 P3 在两种效价的高唤醒背景下均减小。
+  markers:
+  - MK.P3a
+  first_source:
+    citation: 'Vrana SR, Spence EL, Lang PJ. The startle probe response: A new measure of emotion? Journal of Abnormal Psychology.
+      1988;97(4):487-491.'
+    doi: 10.1037/0021-843x.97.4.487
+    year: 1988
+    verified: false
+  aliases:
+  - affective startle modulation
+  - emotion-modulated startle
+  - startle probe paradigm
+  - startle reflex modulation
+  - probe P3
+  notes: New class, sprint 6 (P3). Class source is that of EMO-STARTLE-001. The startle eyeblink EMG has no registry marker;
+    MK.P3a used as closest neural marker (marker request MK.startle_blink). [curator_e sprint 6, 2026-10-16]
+  status: draft
+  contributors:
+  - curator_e
+- id: EMO-AAT
+  name:
+    en: Approach-avoidance task
+    zh: 趋近–回避任务
+  family: emotion
+  description:
+    en: 'Participants respond to emotional or disorder-relevant stimuli with arm movements toward the body (approach: pull)
+      or away from it (avoidance: push), either by stimulus valence or by an irrelevant feature, and sometimes with a zoom
+      effect that makes the stimulus appear to come closer or move away. Faster compatible than incompatible responses index
+      automatic approach-avoidance tendencies.'
+    zh: 被试以朝向身体（趋近：拉）或远离身体（回避：推）的手臂动作对情绪或与障碍相关的刺激作反应，依据刺激效价或与内容无关的特征，有时配合使刺激看似靠近或远离的缩放效果。相容反应快于不相容反应，反映自动的趋近–回避倾向。
+  markers:
+  - MK.frontal_alpha_asymmetry
+  first_source:
+    citation: Solarz AK. Latency of instrumental responses as a function of compatibility with the meaning of eliciting verbal
+      signs. Journal of Experimental Psychology. 1960;59(4):239-245.
+    doi: 10.1037/h0047274
+    year: 1960
+    verified: false
+  aliases:
+  - approach-avoidance task
+  - AAT
+  - push-pull task
+  - stimulus-response compatibility task (approach/avoidance)
+  - arm flexion/extension task
+  - zoom AAT
+  - joystick AAT
+  - implicit approach-avoidance task
+  - irrelevant-feature AAT
+  notes: New class, sprint 6 (P3). Class source is that of EMO-AAT-001; EMO-AAT-002 is the joystick zoom version (Rinck &
+    Becker 2007). Marker MK.frontal_alpha_asymmetry is the closest available; evidence still to be searched. [curator_e sprint
+    6, 2026-10-16]
+  status: draft
+  contributors:
+  - curator_e
 - id: CTL-AMBIG
   name:
     en: Decision under risk versus ambiguity
@@ -6295,6 +6602,79 @@ terms:
   contributors:
   - maintainer
   - curator_b
+- id: CTL-TMT
+  name:
+    en: Trail Making Test
+    zh: 连线测验
+  family: control
+  description:
+    en: 'A paper-and-pencil (or computerised) test in which the participant connects encircled targets in order as fast as
+      possible: numbers 1-25 in Part A, and alternating numbers and letters (1-A-2-B ...) in Part B. Completion time indexes
+      visual search and processing speed (A) and set shifting (B), and the B-A difference isolates the switching cost. It
+      is widely used as a clinical marker of brain damage, and fNIRS shows prefrontal oxygenation increases during the test,
+      especially Part B.'
+    zh: 纸笔（或计算机化）测验：被试尽快按顺序连接圆圈中的目标，A 部分为数字 1–25，B 部分为数字与字母交替（1-A-2-B……）。完成时间反映视觉搜索与加工速度（A）以及定势转换（B），B−A 差值分离出转换代价。该测验被广泛用作脑损伤的临床指标；fNIRS
+      显示测验中前额叶氧合增加，B 部分尤为明显。
+  markers:
+  - MK.HbO_prefrontal
+  first_source:
+    citation: Reitan RM. Validity of the Trail Making Test as an indicator of organic brain damage. Perceptual and Motor Skills.
+      1958;8(3):271-276.
+    doi: 10.2466/pms.1958.8.3.271
+    year: 1958
+    verified: false
+  aliases:
+  - Trail Making Test
+  - TMT
+  - TMT-A
+  - TMT-B
+  - Trails A and B
+  - Partington's Pathways Test
+  notes: 'New class, sprint 6 (group P2). Related: CTL-SW (task switching) shares the set-shifting construct but is a cued
+    RT paradigm; TMT is a self-paced timed test. Origin: the test derives from Partington''s Pathways Test and was part of
+    the Army Individual Test Battery (1944); neither has a retrievable record, so Reitan 1958 (validation study) is used as
+    the standard first source (D-031). Marker after Fujiki et al. 2013 (fNIRS). [curator_c sprint 6, 2026-10-16]'
+  status: draft
+  contributors:
+  - curator_c
+- id: CTL-NUM
+  name:
+    en: Number comparison and SNARC
+    zh: 数量比较与 SNARC 效应
+  family: control
+  description:
+    en: 'Participants make speeded judgements about digits: which of two numbers is larger, whether a number is larger or
+      smaller than a standard, or whether it is odd or even. Response times fall as the numerical distance between the numbers
+      grows (distance effect), and in parity judgements small numbers are answered faster with the left hand and large numbers
+      with the right hand (SNARC effect), indicating a spatially oriented magnitude representation. ERP studies localise distance
+      effects to parietal activity around 200 ms and parietal (intraparietal) cortex is engaged in fMRI.'
+    zh: 被试对数字做快速判断：两个数中哪个更大、某数大于还是小于标准数、或某数是奇数还是偶数。反应时随两数的数值距离增大而缩短（距离效应）；在奇偶判断中，小数用左手、大数用右手反应更快（SNARC 效应），表明数量表征具有空间方向性。ERP
+      研究把距离效应定位于约 200 ms 的顶区活动，fMRI 中顶叶（顶内沟）皮层参与。
+  markers:
+  - MK.BOLD_frontoparietal
+  - MK.LRP
+  first_source:
+    citation: Moyer RS, Landauer TK. Time required for judgements of numerical inequality. Nature. 1967;215(5109):1519-1520.
+    doi: 10.1038/2151519a0
+    year: 1967
+    verified: false
+  aliases:
+  - number comparison
+  - numerical comparison
+  - magnitude comparison
+  - numerical distance effect
+  - symbolic distance effect
+  - SNARC
+  - SNARC effect
+  - spatial-numerical association of response codes
+  - parity judgement
+  notes: 'New class, sprint 6 (group P2). -001 = paired digit comparison (Moyer & Landauer 1967); -002 = parity judgement
+    with switched response mapping (SNARC; Dehaene et al. 1993). Markers are provisional: no registry marker indexes the parietal
+    P2p distance effect (Dehaene 1996), so MK.BOLD_frontoparietal (intraparietal cortex) and MK.LRP (response-side effects
+    in SNARC designs; no retrieved study yet) are used and a new marker is requested. [curator_c sprint 6, 2026-10-16]'
+  status: draft
+  contributors:
+  - curator_c
 - id: IMG-AUD
   name:
     en: Auditory imagery
@@ -7258,6 +7638,71 @@ terms:
   contributors:
   - maintainer
   - curator_d
+- id: SOC-DIAL
+  name:
+    en: Natural dialogue and conversational turn-taking
+    zh: 自然对话与话轮交替
+  family: social
+  description:
+    en: Two partners converse freely, taking turns, while the brains of both are recorded simultaneously (hyperscanning) or
+      while one participant answers questions in a conversational exchange. Dialogue is contrasted with monologue and with
+      conditions without visual contact; face-to-face dialogue increases inter-brain synchrony, notably in the left inferior
+      frontal cortex.
+    zh: 两名同伴轮流发言、自由交谈，同时记录双方脑活动（超扫描），或由一名被试在对话式交流中回答问题。对话与独白及无视觉接触条件对比；面对面对话增强脑间同步，尤其在左侧额下回。
+  markers:
+  - MK.interbrain_synchrony
+  first_source:
+    citation: Jiang J, Dai B, Peng D, Zhu C, Liu L, Lu C. Neural synchronization during face-to-face communication. Journal
+      of Neuroscience. 2012;32(45):16064-16069.
+    doi: 10.1523/jneurosci.2926-12.2012
+    year: 2012
+    verified: false
+  aliases:
+  - conversational turn-taking
+  - natural dialogue hyperscanning
+  - face-to-face communication
+  - dialogue hyperscanning
+  - verbal communication hyperscanning
+  notes: New class, sprint 6 (P3); provisional ID SOC-CONV renamed SOC-DIAL to avoid confusion with SOC-CONF. Class source
+    is that of SOC-DIAL-001. [curator_e sprint 6, 2026-10-16]
+  status: draft
+  contributors:
+  - curator_e
+- id: SOC-PGG
+  name:
+    en: Public goods game
+    zh: 公共物品博弈
+  family: social
+  description:
+    en: Members of a small group each decide how much of an endowment to invest in a group account that is multiplied and
+      shared equally, so that full contribution is collectively best and free riding individually best. Contributions, reactions
+      to others' contributions and, in some versions, costly punishment of other members measure cooperation and norm enforcement.
+    zh: 小组成员各自决定把多少初始资金投入小组账户，该账户被放大后平分，因此全员足额投入对集体最优、搭便车对个人最优。投入额、对他人投入的反应以及部分版本中对其他成员的代价性惩罚用于度量合作与规范维护。
+  markers:
+  - MK.FRN
+  - MK.BOLD_striatum_reward
+  first_source:
+    citation: Marwell G, Ames RE. Experiments on the provision of public goods. I. Resources, interest, group size, and the
+      free-rider problem. American Journal of Sociology. 1979;84(6):1335-1360.
+    doi: 10.1086/226937
+    year: 1979
+    verified: false
+  aliases:
+  - public goods game
+  - PGG
+  - voluntary contribution mechanism
+  - VCM
+  - linear public goods game
+  - free-rider problem experiment
+  - public goods game with punishment
+  - costly punishment public goods game
+  - altruistic punishment
+  notes: New class, sprint 6 (P3). Class source is that of SOC-PGG-001. Markers taken over from SOC-TRUST by analogy; evidence
+    still to be searched. When merged, the alias 'public goods game (related)' should be removed from SOC-TRUST. [curator_e
+    sprint 6, 2026-10-16]
+  status: draft
+  contributors:
+  - curator_e
 - id: STA-ANES
   name:
     en: Anesthesia and level of consciousness
@@ -7726,6 +8171,66 @@ terms:
   - maintainer
   - curator_e
   - curator_d
+- id: STA-FAT
+  name:
+    en: Mental fatigue (time-on-task)
+    zh: 心理疲劳（任务时长效应）
+  family: state
+  description:
+    en: A demanding cognitive task is performed continuously for a long period (typically two hours or more) without rest,
+      and EEG, performance and subjective fatigue are compared between early and late time on task. Fatigue is accompanied
+      by rising theta and lower-alpha power and declining attention- and preparation-related ERPs, which passive BCIs use
+      to detect mental fatigue.
+    zh: 连续长时间（通常两小时以上）不休息地完成高要求认知任务，比较任务早期与晚期的脑电、作业表现和主观疲劳。疲劳伴随 θ 和低 α 功率升高以及注意与准备相关 ERP 减弱，被动式脑机接口据此检测心理疲劳。
+  markers:
+  - MK.frontal_midline_theta
+  - MK.alpha_posterior
+  first_source:
+    citation: 'Lorist MM, Klein M, Nieuwenhuis S, de Jong R, Mulder G, Meijman TF. Mental fatigue and task control: Planning
+      and preparation. Psychophysiology. 2000;37(5):614-625.'
+    doi: 10.1111/1469-8986.3750614
+    year: 2000
+    verified: false
+  aliases:
+  - mental fatigue
+  - time-on-task effect
+  - cognitive fatigue
+  - fatigue induction by prolonged task performance
+  notes: New class, sprint 6 (P3). Class source is that of STA-FAT-001 (earliest EEG/ERP protocol retrieved; origin of the
+    behavioural time-on-task approach not established). [curator_e sprint 6, 2026-10-16]
+  status: draft
+  contributors:
+  - curator_e
+- id: STA-SD
+  name:
+    en: Sleep deprivation
+    zh: 睡眠剥夺
+  family: state
+  description:
+    en: Participants are kept awake for one or more nights, and repeated resting EEG, vigilance tests and sleepiness ratings
+      are compared with a rested condition, sometimes together with recovery-sleep recordings. Waking theta/low-alpha power
+      increases with time awake and slow-wave activity rises in recovery sleep, reflecting homeostatic sleep pressure.
+    zh: 被试保持一夜或多夜不睡，重复进行静息脑电、警觉测试和困倦评分，并与正常睡眠条件比较，有时还记录恢复睡眠。清醒 θ／低 α 功率随清醒时间升高，恢复睡眠中慢波活动增加，反映稳态睡眠压力。
+  markers:
+  - MK.theta_drowsiness
+  - MK.slow_wave
+  first_source:
+    citation: 'Patrick GTW, Gilbert JA. Studies from the psychological laboratory of the University of Iowa: On the effects
+      of loss of sleep. Psychological Review. 1896;3(5):469-483.'
+    doi: 10.1037/h0075739
+    year: 1896
+    verified: false
+  aliases:
+  - sleep deprivation
+  - total sleep deprivation
+  - TSD
+  - sustained wakefulness
+  - extended wakefulness
+  - constant routine
+  notes: New class, sprint 6 (P3). Class source is that of STA-SD-001. [curator_e sprint 6, 2026-10-16]
+  status: draft
+  contributors:
+  - curator_e
 - id: STM-ADBS
   name:
     en: Adaptive (closed-loop) deep brain stimulation
@@ -8183,3 +8688,65 @@ terms:
   contributors:
   - maintainer
   - curator_a
+- id: STM-RTMS
+  name:
+    en: Repetitive TMS and theta-burst stimulation (plasticity induction)
+    zh: 重复经颅磁刺激与 theta 爆发刺激（可塑性诱导）
+  family: stimulation
+  description:
+    en: Trains of TMS pulses, either at a regular fixed rate or in theta-burst patterns, are applied to a cortical target
+      (usually motor cortex), and excitability is compared before and after conditioning with single-pulse read-outs - motor
+      evoked potentials and, with TMS-compatible EEG, TMS-evoked potentials - against sham. Facilitation or depression that
+      outlasts the conditioning is taken as a plasticity-like after-effect.
+    zh: 以固定频率的规则脉冲串或 theta 爆发模式向皮层靶点（通常为运动皮层）施加 TMS，在条件刺激前后以单脉冲读出（运动诱发电位；使用兼容 TMS 的脑电时为 TMS 诱发电位）比较兴奋性，并与伪刺激对照。超出条件刺激持续的易化或抑制被视为类可塑性后效应。
+  markers:
+  - MK.TEP
+  first_source:
+    citation: Pascual-Leone A, Valls-Solé J, Wassermann EM, Hallett M. Responses to rapid-rate transcranial magnetic stimulation
+      of the human motor cortex. Brain. 1994;117(4):847-858.
+    doi: 10.1093/brain/117.4.847
+    year: 1994
+    verified: false
+  aliases:
+  - rTMS
+  - repetitive transcranial magnetic stimulation
+  - TBS
+  - theta burst stimulation
+  - cTBS
+  - iTBS
+  notes: '[curator_b sprint 6, 2026-10-16] Concrete paradigms: STM-RTMS-001 (regular fixed-frequency trains, Pascual-Leone
+    et al. 1994), STM-RTMS-002 (theta-burst, Huang et al. 2005). Origin is an MEP study (D-031). First neural recording: Esser
+    et al. 2006, Brain Research Bulletin 69(1):86-94, doi:10.1016/j.brainresbull.2005.11.003. Distinct from STM-TEP (single
+    pulses), STM-PAS (paired peripheral and cortical stimulation), STM-PHTMS (EEG-phase-triggered pulses) and STM-TMSFMRI
+    (concurrent BOLD). bibliography confirmed (Crossref, 2026-10-16)'
+  status: draft
+  contributors:
+  - curator_b
+- id: STM-TRNS
+  name:
+    en: Transcranial random noise stimulation
+    zh: 经颅随机噪声刺激
+  family: stimulation
+  description:
+    en: A weak alternating current with randomly varying amplitude and frequency (noise spectrum up to several hundred hertz)
+      is applied through scalp electrodes for several minutes and compared with sham; excitability is read out before and
+      after stimulation with TMS motor evoked potentials or EEG band power.
+    zh: 通过头皮电极施加数分钟幅度与频率随机变化的弱交流电（噪声频谱最高可达数百赫兹），并与伪刺激比较；刺激前后以 TMS 运动诱发电位或脑电频段功率读出兴奋性。
+  markers:
+  - MK.tES_power_aftereffect
+  first_source:
+    citation: Terney D, Chaieb L, Moliadze V, Antal A, Paulus W. Increasing human brain excitability by transcranial high-frequency
+      random noise stimulation. Journal of Neuroscience. 2008;28(52):14147-14155.
+    doi: 10.1523/JNEUROSCI.4248-08.2008
+    year: 2008
+    verified: false
+  aliases:
+  - tRNS
+  - transcranial random noise stimulation
+  - hf-tRNS
+  notes: '[curator_b sprint 6, 2026-10-16] Concrete paradigm: STM-TRNS-001. Origin is an MEP study (D-031); EEG evidence for
+    band-power after-effects is mixed (Ke et al. 2024, doi:10.31083/j.jin2303059). MK.tES_power_aftereffect should name tRNS
+    in its description. Review: Antal & Herrmann 2016 (doi:10.1155/2016/3616807). bibliography confirmed (OpenAlex, 2026-10-16)'
+  status: draft
+  contributors:
+  - curator_b

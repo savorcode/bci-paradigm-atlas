@@ -1,0 +1,80 @@
+schema_version: '0.2'
+id: MEM-AI-001
+class: MEM-AI
+name:
+  en: Associative inference with overlapping object pairs
+  zh: 重叠物体配对联想推理
+aliases:
+- associative inference
+- AB-BC-AC
+- AB-BC inference
+- cross-episode binding
+family: memory
+bci_category:
+- none
+recording_modality:
+- fMRI
+stimulus_modality:
+- visual
+markers:
+- MK.BOLD_hippocampus
+- MK.BOLD_mPFC
+description:
+  en: 'Participants study pairs of visual items in which A-B and B-C pairs share item B, alongside non-overlapping X-Y pairs.
+    At test, a cue item is shown with two choices: direct trials probe A-B, B-C and X-Y, and inference trials ask which item
+    goes with A through the shared B (A-C). Hippocampal activation is greater for inference than for direct trials.'
+  zh: 被试学习视觉项目配对，其中 A-B 与 B-C 共享项目 B，另有不重叠的 X-Y 配对。测试时呈现一个线索项目和两个选项：直接试次考查 A-B、B-C 与 X-Y，推理试次要求选出经共享 B 与 A 相联的项目（A-C）。推理试次的海马激活高于直接试次。
+trial_structure:
+  phases:
+  - name: study pair
+    duration_ms: 3000
+    note: 'Zeithamova & Preston 2010: each pair 3 s, shown once'
+  - name: judgement of learning
+    duration_ms: 1000
+  - name: test (cue + two choices)
+    duration_ms: 4000
+    note: two-alternative forced choice; AC tested before its AB and BC pairs
+  typical_trials: 72 AB + 72 BC + 72 XY pairs (Zeithamova & Preston 2010)
+  conditions:
+  - direct AB
+  - direct BC
+  - direct XY
+  - inference AC
+protocol:
+  n_classes: 2
+  classes:
+  - direct (studied pair)
+  - inference (AC)
+  cue: visual object pairs; test cue with two choice objects
+  stimulus_coding: overlapping AB/BC pairs vs non-overlapping XY pairs
+  paradigm_timing: synchronous
+  feedback: none
+  distinguishing: 标准配置（最早发表，即 first_source）：学习共享元素的 AB、BC 配对，测试直接配对与未学过的 AC 推理（Preston 等 2004，人类 fMRI）。
+first_source:
+  citation: Preston AR, Shrager Y, Dudukovic NM, Gabrieli JDE. Hippocampal contribution to the novel use of relational information
+    in declarative memory. Hippocampus. 2004;14(2):148-152.
+  doi: 10.1002/hipo.20009
+  year: 2004
+  verified: false
+variants:
+- name: Single-exposure blocked encoding with non-overlapping XY controls
+  source:
+    citation: 'Zeithamova D, Preston AR. Flexible memories: differential roles for medial temporal lobe and prefrontal cortex
+      in cross-episode binding. The Journal of Neuroscience. 2010;30(44):14676-14684.'
+    doi: 10.1523/JNEUROSCI.3250-10.2010
+    year: 2010
+    verified: false
+  note: Pairs shown once (3 s) in blocks of 12, test after each scan with 2AFC trials of 4 s; parameter values used for trial_structure
+    above.
+interop:
+  bids_task: associativeinference
+notes: 'Preston et al. 2004 (Crossref) is the first source for the human task; Bunsey & Eichenbaum 1996 (OpenAlex record;
+  Crossref rate-limited) is the earlier rodent and human transitive association design and is recorded as a key reference.
+  Trial timing comes from Zeithamova & Preston 2010 (Crossref; methods read on PubMed Central): 72 AB, 72 BC and 72 XY pairs,
+  3 s per pair, 4 s test trials. Both markers rest on these two fMRI studies (hippocampus for inference; medial prefrontal
+  cortex for integration in Zeithamova & Preston 2010). A combined fMRI-fMRS inference dataset (MRC BNDU, Oxford) was found
+  but uses auditory-visual associations and outcome learning across three days, a different configuration, so it is not listed.
+  [curator_d sprint 6, 2026-10-16]'
+status: draft
+contributors:
+- curator_d

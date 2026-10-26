@@ -1,4 +1,4 @@
-schema_version: "0.2"
+schema_version: '0.2'
 id: MK.BOLD_premotor_parietal
 name:
   en: Premotor-parietal BOLD (action observation / body representation)
@@ -14,7 +14,78 @@ description:
   en: BOLD responses in ventral and dorsal premotor cortex and posterior parietal cortex during action observation and during
     multisensory illusions of body ownership.
   zh: 动作观察以及身体拥有感多感觉错觉期间，腹侧和背侧前运动皮层及后顶叶的 BOLD 响应。
-notes: First-pass skeleton by package A (2026-10-03). No generators/indexes yet.
+generators:
+- region: BR.premotor
+  evidence: A
+  sources:
+  - citation: Caspers S, Zilles K, Laird AR, et al. ALE meta-analysis of action observation and imitation in the human brain.
+      Neuroimage. 2010;50(3):1148-1167.
+    doi: 10.1016/j.neuroimage.2009.12.112
+    year: 2010
+    verified: false
+  - citation: 'Molenberghs P, Cunnington R, Mattingley JB. Brain regions with mirror properties: a meta-analysis of 125 human
+      fMRI studies. Neurosci Biobehav Rev. 2012;36(1):341-349.'
+    doi: 10.1016/j.neubiorev.2011.07.004
+    year: 2012
+    verified: false
+  note: 'method: fMRI localization; ventral and dorsal premotor cortex are core convergent clusters in ALE meta-analyses of
+    action observation and of regions with mirror properties.'
+- region: BR.parietal_cortex
+  evidence: A
+  sources:
+  - citation: Caspers S, Zilles K, Laird AR, et al. ALE meta-analysis of action observation and imitation in the human brain.
+      Neuroimage. 2010;50(3):1148-1167.
+    doi: 10.1016/j.neuroimage.2009.12.112
+    year: 2010
+    verified: false
+  - citation: 'Molenberghs P, Cunnington R, Mattingley JB. Brain regions with mirror properties: a meta-analysis of 125 human
+      fMRI studies. Neurosci Biobehav Rev. 2012;36(1):341-349.'
+    doi: 10.1016/j.neubiorev.2011.07.004
+    year: 2012
+    verified: false
+  note: 'method: fMRI localization; inferior and superior parietal lobule (including the intraparietal sulcus) are core convergent
+    clusters in the same meta-analyses.'
+indexes:
+- construct: CN.social_perception
+  evidence: A
+  relation: activation increases when observing (and imitating) others' actions
+  sources:
+  - citation: Caspers S, Zilles K, Laird AR, et al. ALE meta-analysis of action observation and imitation in the human brain.
+      Neuroimage. 2010;50(3):1148-1167.
+    doi: 10.1016/j.neuroimage.2009.12.112
+    year: 2010
+    verified: false
+  - citation: 'Molenberghs P, Cunnington R, Mattingley JB. Brain regions with mirror properties: a meta-analysis of 125 human
+      fMRI studies. Neurosci Biobehav Rev. 2012;36(1):341-349.'
+    doi: 10.1016/j.neubiorev.2011.07.004
+    year: 2012
+    verified: false
+- construct: CN.self_processing
+  evidence: A
+  relation: premotor and posterior parietal activation increases with the feeling of ownership in body-ownership illusions
+  sources:
+  - citation: Ehrsson HH, Spence C, Passingham RE. That's my hand! Activity in premotor cortex reflects feeling of ownership
+      of a limb. Science. 2004;305(5685):875-877.
+    doi: 10.1126/science.1097011
+    year: 2004
+    verified: false
+  - citation: Grivaz P, Blanke O, Serino A. Common and distinct brain regions processing multisensory bodily signals for peripersonal
+      space and body ownership. Neuroimage. 2017;147:602-618.
+    doi: 10.1016/j.neuroimage.2016.12.052
+    year: 2017
+    verified: false
+- construct: CN.motor_imagery
+  evidence: A
+  relation: premotor and parietal regions are consistently activated during motor imagery
+  sources:
+  - citation: 'Hétu S, Grégoire M, Saimpont A, et al. The neural network of motor imagery: an ALE meta-analysis. Neurosci
+      Biobehav Rev. 2013;37(5):930-949.'
+    doi: 10.1016/j.neubiorev.2013.03.017
+    year: 2013
+    verified: false
+notes: 'First-pass skeleton by package A (2026-10-03). No generators/indexes yet. Sprint 6 (2026-10-16, curator I): generators
+  and indexes curated; every DOI checked against its Crossref or OpenAlex record (see curation/work/sprint6/markers_I/); verified:
+  false pending full-text check.'
 status: draft
 contributors:
 - curator_a

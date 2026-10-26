@@ -1,0 +1,85 @@
+schema_version: '0.2'
+id: STA-FAT-001
+class: STA-FAT
+name:
+  en: Mental fatigue induced by prolonged task performance (time-on-task)
+  zh: 长时间任务诱发的心理疲劳（任务时长效应）
+aliases:
+- mental fatigue
+- time-on-task effect
+- cognitive fatigue
+- fatigue induction by prolonged task performance
+family: state
+bci_category:
+- passive
+recording_modality:
+- EEG
+stimulus_modality:
+- visual
+- motor_execution
+markers:
+- MK.frontal_midline_theta
+- MK.alpha_posterior
+description:
+  en: Participants perform a demanding cognitive task continuously for about two hours or more, without rest breaks, while
+    EEG, performance and subjective fatigue are recorded. Responses and ERPs in successive time-on-task intervals are compared
+    with those at the start; with growing fatigue, preparation and attention-related ERP components decline, errors increase,
+    and theta and lower-alpha power rise. The early-versus-late contrast is used to train passive BCI detectors of mental
+    fatigue.
+  zh: 被试在不休息的情况下连续完成高要求认知任务约两小时或更久，同时记录脑电、作业表现和主观疲劳。比较各任务时段与开始时的反应和
+    ERP：随着疲劳加重，准备与注意相关的 ERP 成分减弱，错误增加，θ 和低 α 功率升高。早期与晚期时段的对比用于训练检测心理疲劳的被动式脑机接口。
+trial_structure:
+  phases:
+  - name: practice
+  - name: continuous task performance
+    duration_ms: about 7200000
+    note: task switching with alternating tasks (switch every second trial) and varied response-stimulus intervals; no
+      rest breaks; mood and fatigue questionnaires before and after
+  conditions:
+  - early time on task
+  - late time on task
+protocol:
+  n_classes: 2
+  classes:
+  - early time on task
+  - late time on task
+  cue: carrier cognitive task (task switching in the first source)
+  stimulus_coding: elapsed time on task, analysed in successive intervals
+  paradigm_timing: continuous
+  feedback: none
+  distinguishing: 标准配置（最早发表，即 first_source）：连续约 2 小时任务切换、无休息，比较不同任务时段的行为与 ERP（Lorist et al. 2000）。载体任务的更换记为 variants（见 notes）。
+first_source:
+  citation: 'Lorist MM, Klein M, Nieuwenhuis S, de Jong R, Mulder G, Meijman TF. Mental fatigue and task control: Planning
+    and preparation. Psychophysiology. 2000;37(5):614-625.'
+  doi: 10.1111/1469-8986.3750614
+  year: 2000
+  verified: false
+variants:
+- name: 3-hour visual attention task with spectral EEG and ERPs
+  source:
+    citation: 'Boksem MAS, Meijman TF, Lorist MM. Effects of mental fatigue on attention: An ERP study. Cognitive Brain Research.
+      2005;25(1):107-116.'
+    doi: 10.1016/j.cogbrainres.2005.04.011
+    year: 2005
+    verified: false
+  note: 'Carrier task: two letters at four positions on two diagonals, respond to memory-set letters on the cued diagonal;
+    displays 50 ms, ISI 1000-1500 ms, 160 displays per block, 50 blocks (3 h) without pauses, analysed in four 45-min intervals;
+    17 participants. Theta and lower-alpha power increased with time on task (lower alpha correlated with aversion ratings),
+    N1 amplitude decreased and the N2b relevance effect disappeared (from the authors'' PDF).'
+interop:
+  bids_task: fatigue
+notes: 'Sources: Lorist et al. 2000 (first_source; earliest ERP study of time-on-task mental fatigue retrieved: continuous
+  task switching for about 2 h, decline of preparation and of ERP differences between repetition and switch trials; abstract
+  via the OpenAlex API); Boksem et al. 2005 (key reference and variant; protocol details from the authors'' PDF). Bibliographic
+  data from the Crossref API. Behavioural research on mental fatigue is much older; the origin of the time-on-task approach
+  is therefore not established and the first_source is the earliest EEG/ERP protocol found (D-031 practice). Numbering
+  decision: the defining manipulation is elapsed time on a demanding task; different carrier tasks are recorded as variants
+  rather than separate serial numbers, unless the maintainer decides otherwise. Markers: MK.frontal_midline_theta and MK.alpha_posterior
+  are used for the theta and lower-alpha increases reported by Boksem et al. 2005; MK.theta_drowsiness (sleepiness in monotonous
+  tasks) is related. Overlap checked: STA-DRV (monotonous driving drowsiness), STA-PVT (brief vigilance test), CTL-SART
+  and CTL-CPT (sustained attention tasks without a time-on-task contrast), STA-MATB (workload). None has the early-versus-late
+  time-on-task contrast as its defining manipulation. No public dataset verified in this sprint. [curator_e sprint 6,
+  2026-10-16]'
+status: draft
+contributors:
+- curator_e
